@@ -1,0 +1,11 @@
+# remove travis ci
+.travis.yml
+# remove gitlab ci
+.gitlab-ci.yml
+
+# remove doc (unify doc)
+docs/**
+
+# remove test (use integration test)
+test/**
+test
