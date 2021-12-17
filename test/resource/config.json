@@ -1,0 +1,7 @@
+{
+  "endpoint": "http://api-test.dev-cloudtower.smartx.com/",
+  "username": "root",
+  "password": "111111",
+  "usersource": "LOCAL",
+  "contentLanguage": "en-US"
+}
