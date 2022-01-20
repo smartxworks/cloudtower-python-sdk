@@ -7,6 +7,15 @@ from cloudtower_python_sdk.api.alert_api import AlertApi
 from cloudtower_python_sdk.api.alert_notifier_api import AlertNotifierApi
 from cloudtower_python_sdk.api.alert_rule_api import AlertRuleApi
 from cloudtower_python_sdk.api.application_api import ApplicationApi
+from cloudtower_python_sdk.api.backup_license_api import BackupLicenseApi
+from cloudtower_python_sdk.api.backup_package_api import BackupPackageApi
+from cloudtower_python_sdk.api.backup_plan_api import BackupPlanApi
+from cloudtower_python_sdk.api.backup_plan_execution_api import BackupPlanExecutionApi
+from cloudtower_python_sdk.api.backup_restore_execution_api import BackupRestoreExecutionApi
+from cloudtower_python_sdk.api.backup_restore_point_api import BackupRestorePointApi
+from cloudtower_python_sdk.api.backup_service_api import BackupServiceApi
+from cloudtower_python_sdk.api.backup_store_repository_api import BackupStoreRepositoryApi
+from cloudtower_python_sdk.api.backup_target_execution_api import BackupTargetExecutionApi
 from cloudtower_python_sdk.api.brick_topo_api import BrickTopoApi
 from cloudtower_python_sdk.api.cluster_api import ClusterApi
 from cloudtower_python_sdk.api.cluster_image_api import ClusterImageApi
@@ -32,7 +41,6 @@ from cloudtower_python_sdk.api.global_alert_rule_api import GlobalAlertRuleApi
 from cloudtower_python_sdk.api.global_settings_api import GlobalSettingsApi
 from cloudtower_python_sdk.api.graph_api import GraphApi
 from cloudtower_python_sdk.api.host_api import HostApi
-from cloudtower_python_sdk.api.image_connector_api import ImageConnectorApi
 from cloudtower_python_sdk.api.ipmi_api import IpmiApi
 from cloudtower_python_sdk.api.iscsi_api import IscsiApi
 from cloudtower_python_sdk.api.iscsi_connection_api import IscsiConnectionApi
@@ -43,6 +51,7 @@ from cloudtower_python_sdk.api.isolation_policy_api import IsolationPolicyApi
 from cloudtower_python_sdk.api.label_api import LabelApi
 from cloudtower_python_sdk.api.license_api import LicenseApi
 from cloudtower_python_sdk.api.log_collection_api import LogCollectionApi
+from cloudtower_python_sdk.api.log_service_config_api import LogServiceConfigApi
 from cloudtower_python_sdk.api.migrate_transmitter_api import MigrateTransmitterApi
 from cloudtower_python_sdk.api.namespace_group_api import NamespaceGroupApi
 from cloudtower_python_sdk.api.nfs_export_api import NfsExportApi
@@ -63,7 +72,6 @@ from cloudtower_python_sdk.api.snapshot_plan_api import SnapshotPlanApi
 from cloudtower_python_sdk.api.snapshot_plan_task_api import SnapshotPlanTaskApi
 from cloudtower_python_sdk.api.snmp_transport_api import SnmpTransportApi
 from cloudtower_python_sdk.api.snmp_trap_receiver_api import SnmpTrapReceiverApi
-from cloudtower_python_sdk.api.storage_policy_conector_api import StoragePolicyConectorApi
 from cloudtower_python_sdk.api.svt_image_api import SvtImageApi
 from cloudtower_python_sdk.api.system_audit_log_api import SystemAuditLogApi
 from cloudtower_python_sdk.api.task_api import TaskApi
