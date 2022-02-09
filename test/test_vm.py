@@ -64,7 +64,6 @@ class TestVm:
                 firmware=VmFirmware.BIOS,
                 vm_nics=[{
                     "connect_vlan_id": default_vlan.id,
-                    "local_id": ""
                 }],
                 vm_disks=VmDiskParams(
                     mount_cd_roms=[{
@@ -184,7 +183,7 @@ class TestVm:
                 id=running_vm.id
             )
         )
-        suspend_result = vm_api.resume_vm(vm_operate_params=operate_param)
+        suspend_result = vm_api.suspend_vm(vm_operate_params=operate_param)
         assert suspend_result is not None
         wait_task(suspend_result[0].task_id)
         resume_result = vm_api.resume_vm(vm_operate_params=operate_param)
