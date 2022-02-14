@@ -1,4 +1,4 @@
-from cloudtower_python_sdk.models import GetVmDisksConnectionRequestBody, GetVmDisksRequestBody, VmDiskWhereInput
+from cloudtower.models import GetVmDisksConnectionRequestBody, GetVmDisksRequestBody, VmDiskWhereInput
 
 
 class TestVmDisk:

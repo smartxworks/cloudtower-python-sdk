@@ -2,29 +2,29 @@
 
 Python 环境下的 Cloudtower SDK，适用于 2.7 和 3.4 及以上版本
 
-- [源码地址](https://github.com/Sczlog/cloudtower-python-sdk)
-- [下载地址](https://github.com/Sczlog/cloudtower-python-sdk/releases)
+- [源码地址](https://github.com/smartxworks/cloudtower-python-sdk)
+- [下载地址](https://github.com/smartxworks/cloudtower-python-sdk/releases)
 
 ## 安装
 
 - ### whl
 
   ```shell
-  pip install cloudtower_python_sdk-$VERSION-py2.py3-none-any.whl
+  pip install cloudtower_sdk-1.9.0-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf python-sdk-$VERSION.tar.gz
-  cd python-sdk-$VERSION
+  tar xvzf cloudtower-sdk-1.9.0.tar.gz
+  cd cloudtower-sdk-1.90.tar.gz
   python setup.py install
   ```
 
 - ### git 源码安装
 
   ```
-  git clone https://github.com/Sczlog/cloudtower-python-sdk.git
+  git clone https://github.com/smartxworks/cloudtower-python-sdk.git
   cd clodtower-python-sdk
   python setup.py install
   ```
@@ -32,12 +32,12 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 和 3.4 及以上版本
 - ### git pip 安装
 
   ```shell
-  pip install git+https://github.com/Sczlog/cloudtower-python-sdk.git
+  pip install git+https://github.com/smartxworks/cloudtower-python-sdk.git
   ```
 
 - ### pypi 安装
   ```shell
-  pip install cloudtower-python-sdk
+  pip install cloudtower-sdk
   ```
 
 ## 使用
@@ -47,8 +47,8 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 和 3.4 及以上版本
 #### 创建 `ApiClient` 实例
 
 ```py
- from cloudtower_python_sdk.configuration import Configuration
- from cloudtower_python_sdk import ApiClient
+ from cloudtower.configuration import Configuration
+ from cloudtower import ApiClient
 
  # 配置 operation-api endpoint
  configuration = Configuration(host="http://your.tower.com/v2/api")
@@ -59,15 +59,15 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 和 3.4 及以上版本
 #### 创建对应的 API 实例：
 
 ```py
- from cloudtower_python_sdk.api.vm_api import VmApi
+ from cloudtower.api.vm_api import VmApi
  vm_api = VmApi(client)
 ```
 
 ### 鉴权：
 
 ```py
- from cloudtower_python_sdk.api.user_api import UserApi
- from cloudtower_python_sdk.models import UserSource
+ from cloudtower.api.user_api import UserApi
+ from cloudtower.models import UserSource
  # 通过 UserApi 中的 login 方法来获得 token。
  user_api = UserApi(client)
  login_res = user_api.login({
@@ -84,7 +84,7 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 和 3.4 及以上版本
 
 ```py
 # 从 models package 中获取参数定义
-from cloudtower_python_sdk.models import GetVmsRequestBody,VmWhereInput
+from cloudtower.models import GetVmsRequestBody,VmWhereInput
 vms = vm_api.get_vms({
   "where": {
     "id": "vm_id"
@@ -98,7 +98,7 @@ vms = vm_api.get_vms({
 > 资源更新会产生相关的异步任务，若需要对该资源进行后续的操作或读取该资源字段，请在异步任务结束后再获取相关的资源字段。详见`通用指南`。
 
 ```py
-from cloudtower_python_sdk.models import VmStartParams
+from cloudtower.models import VmStartParams
 
 start_res = vm_api.start_vm({
   "where": {
@@ -142,7 +142,7 @@ start_res = vm_api.start_vm({
 | 500    | 异步任务内部错误 |
 
 ```py
-    from cloudtower_python_sdk.utils import wait_tasks
+    from cloudtower.utils import wait_tasks
     try:
      wait_tasks([res.task_id for res in start_res], api_client)
     except ApiException as e:
@@ -181,9 +181,9 @@ client.close()
 #### 获取所有虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api.vm_api import VmApi
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api.vm_api import VmApi
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -193,9 +193,9 @@ vms = vm_api.get_vms({})
 #### 分页获取虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api.vm_api import VmApi
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api.vm_api import VmApi
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -208,10 +208,10 @@ vms_from_51_to_100 = vm_api.get_vms({
 #### 获取所有已开机虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api.vm_api import VmApi
-from cloudtower_python_sdk.models import VmStatus
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api.vm_api import VmApi
+from cloudtower.models import VmStatus
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -227,9 +227,9 @@ running_vms = vm_api.get_vms(
 #### 获取名称或描述中包含特定字符串的虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api.vm_api import VmApi
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api.vm_api import VmApi
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -245,9 +245,9 @@ vms_name_contains = vm_api.get_vms(
 #### 获取所有 vcpu > n 的虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api.vm_api import VmApi
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api.vm_api import VmApi
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -265,10 +265,10 @@ vms_has_4_more_vcpu = vm_api.get_vms(
 #### 仅指定 id
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -293,16 +293,16 @@ created_vms = vm_api.get_vms({
 #### 配置与模板不同的虚拟盘参数
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.models import (
     VmCreateVmFromTemplateParamsDiskOperateModifyDisks,
     VmDiskParams,
     Bus,
     VmVolumeElfStoragePolicyType
 )
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -368,13 +368,13 @@ created_vms = vm_api.get_vms({
 #### 配置与模版不同的网卡参数
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.api import VmApi
+from cloudtower.models import (
     VmNicParams,
     VmNicModel
 )
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -408,14 +408,14 @@ created_vms = vm_api.get_vms({
 #### 简单创建
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.models import (
     VmStatus,
     VmFirmware,
     Bus
 )
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -463,14 +463,14 @@ created_vm = vm_api.get_vms({
 ##### CD-ROM 加载 ISO
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.models import (
     VmStatus,
     VmFirmware,
     Bus
 )
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -511,15 +511,15 @@ created_vm = vm_api.get_vms({
 ##### 挂载虚拟卷为虚拟盘
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import (
     VmStatus,
     VmFirmware,
     Bus
 )
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -561,16 +561,16 @@ created_vm = vm_api.get_vms({
 ##### 新增虚拟盘
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import (
     VmStatus,
     VmFirmware,
     Bus,
     VmVolumeElfStoragePolicyType
 )
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -616,17 +616,17 @@ created_vm = vm_api.get_vms({
 #### 创建时配置虚拟网卡
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import (
     VmStatus,
     VmFirmware,
     Bus,
     VmNicModel,
     VmVolumeElfStoragePolicyType
 )
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -676,10 +676,10 @@ created_vm = vm_api.get_vms({
 #### 编辑基本信息
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -713,10 +713,10 @@ updated_vm = vm_api.get_vms({
 ##### 添加 CD-ROM
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -747,10 +747,10 @@ updated_vm = vm_api.get_vms({
 ##### 删除 CD-ROM
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -778,11 +778,11 @@ updated_vm = vm_api.get_vms({
 ##### 添加新虚拟卷
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import Bus, VmVolumeElfStoragePolicyType
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import Bus, VmVolumeElfStoragePolicyType
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -821,11 +821,11 @@ updated_vm = vm_api.get_vms({
 ##### 挂载已存在虚拟卷为虚拟盘
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import Bus
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import Bus
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -860,11 +860,11 @@ updated_vm = vm_api.get_vms({
 ##### 卸载虚拟盘
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.models import Bus, VmVolumeElfStoragePolicyType
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.models import Bus, VmVolumeElfStoragePolicyType
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 vm_api = VmApi(api_client)
@@ -892,11 +892,11 @@ updated_vm = vm_api.get_vms({
 ##### 添加网卡
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.models import VmNicModel
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.models import VmNicModel
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -940,10 +940,10 @@ updated_vm = vm_api.get_vms({
 ##### 编辑网卡
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -975,10 +975,10 @@ updated_vm = vm_api.get_vms({
 ##### 移除网卡
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1006,10 +1006,10 @@ updated_vm = vm_api.get_vms({
 ##### 迁移至指定主机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1030,10 +1030,10 @@ wait_tasks([with_task_vm.task_id], api_client)
 ##### 自动调度到合适的主机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1055,10 +1055,10 @@ wait_tasks([with_task_vm.task_id], api_client)
 ##### 指定虚拟机开机，自动调度到合适的虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1077,10 +1077,10 @@ opened_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 批量虚拟机开机，自动调度到合适的虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1101,10 +1101,10 @@ opened_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 开机至指定主机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1128,10 +1128,10 @@ opened_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 指定虚拟机关机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1150,10 +1150,10 @@ closed_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 批量虚拟机关机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1175,10 +1175,10 @@ closed_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 强制关机指定虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1197,10 +1197,10 @@ closed_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 强制关机批量虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1223,10 +1223,10 @@ closed_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 重启指定虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1245,10 +1245,10 @@ restarted_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 重启批量虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1269,10 +1269,10 @@ restarted_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 重启指定虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1291,10 +1291,10 @@ restarted_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 强制重启批量虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1317,10 +1317,10 @@ restarted_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 暂停指定虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1339,10 +1339,10 @@ suspended_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 暂停批量虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1365,10 +1365,10 @@ suspended_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 恢复指定虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1387,10 +1387,10 @@ resumed_vm = vm_api.get_vms({"where": {"id": "vm_id"}})[0]
 ##### 恢复批量虚拟机
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1415,10 +1415,10 @@ resumed_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 ##### 移入回收站
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1439,10 +1439,10 @@ vm_moved_to_recycle_bin = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_
 ##### 从回收站恢复
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1463,10 +1463,10 @@ recovered_vms = vm_api.get_vms({"where": {"id_in": ["vm_id_1", "vm_id_2"]}})
 #### 永久删除
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import VmApi
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import VmApi
+from cloudtower.utils import wait_tasks
 
 api_client = ApiClient(Configuration(host="http://your.tower.com/v2/api"))
 
@@ -1487,15 +1487,15 @@ wait_tasks(tasks, api_client)
 ### 虚拟机备份
 
 ```py
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.api.vm_api import VmApi
-from cloudtower_python_sdk.api.vm_snapshot_api import VmSnapshotApi
-from cloudtower_python_sdk.api.iscsi_lun_snapshot_api import IscsiLunSnapshotApi
-from cloudtower_python_sdk.models import (
+from cloudtower import ApiClient
+from cloudtower.api.vm_api import VmApi
+from cloudtower.api.vm_snapshot_api import VmSnapshotApi
+from cloudtower.api.iscsi_lun_snapshot_api import IscsiLunSnapshotApi
+from cloudtower.models import (
     ConsistentType,
     VmToolsStatus
 )
-from cloudtower_python_sdk.utils import wait_tasks
+from cloudtower.utils import wait_tasks
 
 
 def create_vm_snapshot(
@@ -1564,9 +1564,9 @@ def create_vm_snapshot(
 ```py
 from functools import reduce
 from datetime import datetime, timedelta
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.configuration import Configuration
-from cloudtower_python_sdk.api import (
+from cloudtower import ApiClient
+from cloudtower.configuration import Configuration
+from cloudtower.api import (
     VmApi,
     ClusterApi,
     AlertApi,
@@ -1575,7 +1575,7 @@ from cloudtower_python_sdk.api import (
     ClusterSettingsApi,
     GlobalSettingsApi
 )
-from cloudtower_python_sdk.models import (
+from cloudtower.models import (
     SeverityEnum,
     ClusterType,
     ClusterWhereInput,

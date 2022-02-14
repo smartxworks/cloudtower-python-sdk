@@ -1,7 +1,7 @@
 import pytest
 import os
 import json
-from cloudtower_python_sdk.models import GetClustersRequestBody, ClusterWhereInput, GetVlansRequestBody, VlanWhereInput, VdsWhereInput
+from cloudtower.models import GetClustersRequestBody, ClusterWhereInput, GetVlansRequestBody, VlanWhereInput, VdsWhereInput
 
 
 @pytest.fixture(scope="session")

@@ -1,7 +1,7 @@
 import pytest
 
 import test.fixture.client
-from cloudtower_python_sdk.api.application_api import ApplicationApi
+from cloudtower.api.application_api import ApplicationApi
 
 @pytest.fixture(scope="session")
 def application_api(client):

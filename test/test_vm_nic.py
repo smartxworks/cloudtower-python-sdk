@@ -1,4 +1,4 @@
-from cloudtower_python_sdk.models import (
+from cloudtower.models import (
     GetVmNicsRequestBody,
     GetVmNicsConnectionRequestBody,
     VmNicWhereInput,

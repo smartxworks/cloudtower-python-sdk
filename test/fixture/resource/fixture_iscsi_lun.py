@@ -1,6 +1,6 @@
 import time
 import pytest
-from cloudtower_python_sdk.models import (
+from cloudtower.models import (
     IscsiLunCreationParams,
     IscsiLunDeletionParams,
     IscsiLunDeletionParamsData,

@@ -12,7 +12,7 @@
 import pathlib
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "cloudtower-python-sdk"
+NAME = "cloudtower-sdk"
 VERSION = "1.9.0"
 # To install the library, run the following
 #
@@ -31,7 +31,7 @@ setup(
     description="cloudtower sdk for python",
     author="Cloudtower developers",
     author_email="info@smartx.com",
-    url="https://github.com/Sczlog/cloudtower-python-sdk",
+    url="https://github.com/smartxworks/cloudtower-python-sdk",
     keywords=["OpenAPI", "OpenAPI-Generator", "Cloudtower APIs"],
     install_requires=REQUIRES,
     license="ISC",

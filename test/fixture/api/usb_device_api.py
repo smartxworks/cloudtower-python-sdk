@@ -1,7 +1,7 @@
 import pytest
 
 import test.fixture.client
-from cloudtower_python_sdk.api.usb_device_api import UsbDeviceApi
+from cloudtower.api.usb_device_api import UsbDeviceApi
 
 @pytest.fixture(scope="session")
 def usb_device_api(client):
