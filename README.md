@@ -1,4 +1,4 @@
-# cloudtower-python-sdk
+# cloudtower-sdk
 
 cloudtower operation API and SDK
 
@@ -19,15 +19,15 @@ Python 2.7 and 3.4+
 If the python package is hosted on a repository, you can install directly using:
 
 ```sh
-pip install git+https://github.com/Sczlog/cloudtower-python-sdk.git
+pip install git+https://github.com/smartxworks/cloudtower-python-sdk.git
 ```
 
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/Sczlog/cloudtower-python-sdk.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/smartxworks/cloudtower-python-sdk.git`)
 
 Then import the package:
 
 ```python
-import cloudtower_python_sdk
+import cloudtower
 ```
 
 ### Setuptools
@@ -43,7 +43,7 @@ python setup.py install --user
 Then import the package:
 
 ```python
-import cloudtower_python_sdk
+import cloudtower
 ```
 
 ## Getting Started
@@ -54,14 +54,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 from __future__ import print_function
 
 import time
-import cloudtower_python_sdk
-from cloudtower_python_sdk.rest import ApiException
+import cloudtower
+from cloudtower.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to /v2/api
+# Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = cloudtower_python_sdk.Configuration(
-    host = "/v2/api"
+configuration = cloudtower.Configuration(
+    host = "http://localhost"
 )
 
 # The client must configure the authentication and authorization parameters
@@ -77,10 +77,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 
 # Enter a context with an instance of the API client
-with cloudtower_python_sdk.ApiClient(configuration) as api_client:
+with cloudtower.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = cloudtower_python_sdk.AlertApi(api_client)
-    get_alerts_request_body = cloudtower_python_sdk.GetAlertsRequestBody() # GetAlertsRequestBody |
+    api_instance = cloudtower.AlertApi(api_client)
+    get_alerts_request_body = cloudtower.GetAlertsRequestBody() # GetAlertsRequestBody |
 content_language = 'en-US' # str |  (optional) (default to 'en-US')
 
     try:
@@ -100,5 +100,3 @@ content_language = 'en-US' # str |  (optional) (default to 'en-US')
 - **Location**: HTTP header
 
 ## Author
-
-Cloudtower developers

@@ -2,10 +2,10 @@ import pytest
 from os import path
 import json
 
-from cloudtower_python_sdk import ApiClient
-from cloudtower_python_sdk.api.user_api import UserApi
-from cloudtower_python_sdk.models import LoginInput, UserSource
-from cloudtower_python_sdk.configuration import Configuration
+from cloudtower import ApiClient
+from cloudtower.api.user_api import UserApi
+from cloudtower.models import LoginInput, UserSource
+from cloudtower.configuration import Configuration
 
 
 @pytest.fixture(scope="session")

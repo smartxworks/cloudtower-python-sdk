@@ -4,8 +4,8 @@ import os
 import time
 import glob
 
-from cloudtower_python_sdk.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, GetGlobalSettingsesRequestBody, GlobalRecycleBinUpdationParams
-from cloudtower_python_sdk.exceptions import ApiException
+from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, GetGlobalSettingsesRequestBody, GlobalRecycleBinUpdationParams
+from cloudtower.exceptions import ApiException
 
 TIMEOUT = 5 * 60
 

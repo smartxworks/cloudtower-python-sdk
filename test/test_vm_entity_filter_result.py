@@ -1,4 +1,4 @@
-from cloudtower_python_sdk.models import GetVmEntityFilterResultsConnectionRequestBody, GetVmEntityFilterResultsRequestBody, VmEntityFilterResultWhereInput
+from cloudtower.models import GetVmEntityFilterResultsConnectionRequestBody, GetVmEntityFilterResultsRequestBody, VmEntityFilterResultWhereInput
 
 
 class TestVmEntityFilter:

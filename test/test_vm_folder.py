@@ -1,6 +1,6 @@
 import pytest
 import time
-from cloudtower_python_sdk.models import (
+from cloudtower.models import (
     GetVmFoldersConnectionRequestBody,
     GetVmFoldersRequestBody,
     VmFolderWhereInput,
