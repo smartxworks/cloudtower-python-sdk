@@ -37,6 +37,6 @@ setup(
     license="ISC",
     packages=packages,
     include_package_data=True,
-    long_description=(pathlib.Path(__file__).parent / "examples.md").read_text(encoding="UTF-8"),
+    long_description=(pathlib.Path(__file__).parent / "README.md").read_text(encoding="UTF-8"),
     long_description_content_type="text/markdown"
 )
