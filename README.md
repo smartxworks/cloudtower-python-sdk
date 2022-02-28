@@ -346,7 +346,7 @@ with_task_vms = vm_api.create_vm_from_template([
                         "elf_image_id": "elf_image_id"
                     }
                 ],
-                "mout_disks": [
+                "mount_disks": [
                     {
                         "index": 1,
                         "bus": Bus.VIRTIO,
@@ -610,7 +610,7 @@ with_task_vm = vm_api.create_vm([
                 "boot": 0,
                 "bus": Bus.VIRTIO,
                 "vm_volume": {
-                    "elf_storage_policy": VmVolumeElfStoragePolicyTyp_2_THIN_PROVISION,
+                    "elf_storage_policy": VmVolumeElfStoragePolicyType._2_THIN_PROVISION,
                     "size": 10 * 1024 * 1024 * 1024,
                     "name": "new_volume_name"
                 }
@@ -1547,8 +1547,8 @@ def format_unit(base: int, units, step=1024):
         raise Exception("no unit provided")
     if base <= 0:
         return "0" + units[0]
-    for unit in units:
-        if base < step:
+    for idx, unit in enumerate(units):
+        if base < step or idx == len(units) - 1:
             return "{:.2f}{}".format(base, unit)
         base /= step
     return "{:.2f}{}".format(base, units[-1])
