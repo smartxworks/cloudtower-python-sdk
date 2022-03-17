@@ -292,6 +292,7 @@ vm_api = VmApi(api_client)
 with_task_vms = vm_api.create_vm_from_template([
     {
         "template_id": "template_id",
+        "cluster_id": "cluster_id",
         "name": "vm_name",
         "is_full_copy": False
     }
@@ -326,6 +327,7 @@ vm_api = VmApi(api_client)
 with_task_vms = vm_api.create_vm_from_template([
     {
         "template_id": "template_id",
+        "cluster_id": "cluster_id",
         "name": "vm_name",
         "is_full_copy": False,
         "disk_operate": {
@@ -341,14 +343,12 @@ with_task_vms = vm_api.create_vm_from_template([
             "new_disks":   {
                 "mount_cd_roms": [
                     {
-                        "index": 0,
                         "boot": 0,
                         "elf_image_id": "elf_image_id"
                     }
                 ],
                 "mount_disks": [
                     {
-                        "index": 1,
                         "bus": Bus.VIRTIO,
                         "boot": 1,
                         "vm_volume_id": "vm_volume_id"
@@ -363,7 +363,6 @@ with_task_vms = vm_api.create_vm_from_template([
                         },
                         "bus": Bus.IDE,
                         "boot": 3,
-                        "index": 3
                     }
                 ]
             }
@@ -393,6 +392,7 @@ vm_api = VmApi(api_client)
 with_task_vms = vm_api.create_vm_from_template([
     {
         "template_id": "template_id",
+        "cluster_id": "cluster_id",
         "name": "vm_name",
         "is_full_copy": False,
         "vm_nics": [
@@ -450,13 +450,11 @@ with_task_vm = vm_api.create_vm([
         ],
         "vm_disks": {
             "mount_disks": [{
-                "index": 0,
                 "boot": 0,
                 "bus": Bus.VIRTIO,
                 "vm_volume_id": "vm_volume_id"
             }],
             "mount_cd_roms": [{
-                "index": 1,
                 "boot": 1,
             }],
         }
@@ -506,7 +504,6 @@ with_task_vm = vm_api.create_vm([
         ],
         "vm_disks": {
             "mount_cd_roms": [{
-                "index": 0,
                 "boot": 0,
                 "elf_image_id": "elf_image_id"
             }],
@@ -555,10 +552,10 @@ with_task_vm = vm_api.create_vm([
         ],
         "vm_disks": {
             "mount_disks": [{
-                "index": 0,
                 "boot": 0,
                 "bus": Bus.VIRTIO,
-                "vm_volume_id": "vm_volume_id"
+                "vm_volume_id": "vm_volume_id",
+                "index": 0,
             }],
         }
     }
@@ -606,7 +603,6 @@ with_task_vm = vm_api.create_vm([
         ],
         "vm_disks": {
             "mount_new_create_disks": [{
-                "index": 0,
                 "boot": 0,
                 "bus": Bus.VIRTIO,
                 "vm_volume": {
@@ -664,13 +660,11 @@ with_task_vm = vm_api.create_vm([
         ],
         "vm_disks": {
             "mount_disks": [{
-                "index": 0,
                 "boot": 0,
                 "bus": Bus.VIRTIO,
                 "vm_volume_id": "vm_volume_id"
             }],
             "mount_cd_roms": [{
-                "index": 1,
                 "boot": 1,
             }],
         }
@@ -739,7 +733,6 @@ with_task_vm = vm_api.add_vm_cd_rom({
         "vm_cd_roms": [
             {
                 "elf_image_id": "elf_image_id",
-                "index": 0,
                 "boot": 0
             }
         ]
@@ -805,7 +798,6 @@ with_task_vm = vm_api.add_vm_disk({
                         "size": 40*1024*1024*1024,
                         "name": "new_volume_name"
                     },
-                    "index": 1,
                     "boot": 1,
                     "bus": Bus.VIRTIO,
                 }
@@ -841,7 +833,6 @@ with_task_vm = vm_api.add_vm_disk({
             "mount_disks": [
                 {
                     "vm_volume_id": "vm_volume_id",
-                    "index": 1,
                     "boot": 1,
                     "bus": Bus.VIRTIO,
                 }
@@ -1500,7 +1491,7 @@ def create_vm_snapshot(
 
     lun_snapshots = iscsi_lun_snapshot_api.get_iscsi_lun_snapshots({
         "where": {
-            "local_id_in": lun_snapshot_ids
+            "name_in": lun_snapshot_ids
         }
     })
 
