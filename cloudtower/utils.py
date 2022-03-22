@@ -3,6 +3,7 @@ from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus
 from cloudtower.exceptions import ApiException
 from cloudtower.api.task_api import TaskApi
 
+
 def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
     """wait_tasks  # noqa: E501
 
@@ -43,6 +44,7 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
                 if exit_on_error:
                     raise ApiException(500, "Task %s failed" % task.id)
                 else:
+                    ids.remove(task.id)
                     error_ids.append(task.id)
             elif task.status == TaskStatus.SUCCESSED:
                 ids.remove(task.id)
