@@ -120,7 +120,7 @@ def close_recycle_bin_if_open(global_settings_api, wait_task):
             ))
             wait_task(close_recycle_bin_result.task_id)
         return
-    yield open_recycle_bin
+    yield close_recycle_bin
     if origin is not None:
         # return global setting to its original state
         open_recycle_bin_result = global_settings_api.update_global_recycle_bin_setting(
