@@ -19,7 +19,7 @@ def login_info():
 @pytest.fixture(scope="session")
 def configuration():
     return Configuration(
-        host="http://api-test.dev-cloudtower.smartx.com/v2/api"
+        host="http://yinsw-terraform.dev-cloudtower.smartx.com/v2/api"
     )
 
 
