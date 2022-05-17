@@ -201,13 +201,13 @@ class TestVm:
         assert shutdown_result is not None
         wait_task(shutdown_result[0].task_id)
 
-    def test_force_shutdown_vm(self, vm_api, running_vm, wait_task):
+    def test_poweroff_vm(self, vm_api, running_vm, wait_task):
         force_shutdown_param = VmOperateParams(
             where=VmWhereInput(
                 id=running_vm.id
             )
         )
-        force_shutdown_result = vm_api.force_shut_down_vm(vm_operate_params=force_shutdown_param)
+        force_shutdown_result = vm_api.poweroff_vm(vm_operate_params=force_shutdown_param)
         assert force_shutdown_result is not None
         wait_task(force_shutdown_result[0].task_id)
 

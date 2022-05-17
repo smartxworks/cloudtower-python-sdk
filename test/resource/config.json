@@ -1,7 +1,7 @@
 {
-  "endpoint": "http://api-test.dev-cloudtower.smartx.com/",
+  "endpoint": "http://yinsw-terraform.dev-cloudtower.smartx.com/",
   "username": "root",
-  "password": "111111",
+  "password": "HC!r0cks",
   "usersource": "LOCAL",
   "contentLanguage": "en-US"
 }

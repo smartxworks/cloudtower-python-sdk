@@ -1,6 +1,6 @@
 # Cloudtower Python SDK
 
-Python 环境下的 Cloudtower SDK，适用于 3.7以上版本。
+Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 
 - [源码地址](https://github.com/smartxworks/cloudtower-python-sdk)
 - [下载地址](https://github.com/smartxworks/cloudtower-python-sdk/releases)
@@ -10,14 +10,14 @@ Python 环境下的 Cloudtower SDK，适用于 3.7以上版本。
 - ### whl
 
   ```shell
-  pip install cloudtower_sdk-1.9.0-py2.py3-none-any.whl
+  pip install cloudtower_sdk-1.10.0-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf cloudtower-sdk-1.9.0.tar.gz
-  cd cloudtower-sdk-1.90.tar.gz
+  tar xvzf cloudtower-sdk-1.10.0.tar.gz
+  cd cloudtower-sdk-1.10.0
   python setup.py install
   ```
 
@@ -25,7 +25,7 @@ Python 环境下的 Cloudtower SDK，适用于 3.7以上版本。
 
   ```
   git clone https://github.com/smartxworks/cloudtower-python-sdk.git
-  cd clodtower-python-sdk
+  cd cloudtower-python-sdk
   python setup.py install
   ```
 

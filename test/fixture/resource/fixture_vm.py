@@ -57,7 +57,7 @@ def stopped_vm(default_cluster, default_vlan, vm_api, wait_task, wait_entity_asy
     ))
     # close vm if vm is running
     if vm.status == VmStatus.RUNNING:
-        task_id = vm_api.force_shut_down_vm(vm_operate_params=VmOperateParams(
+        task_id = vm_api.poweroff_vm(vm_operate_params=VmOperateParams(
             where=vm_where_input
         ))[0].task_id
         wait_task(id=task_id)
@@ -112,7 +112,7 @@ def running_vm(default_cluster, default_vlan, vm_api, wait_task, wait_entity_asy
     ))
     # close vm if vm is running
     if vm.status == VmStatus.RUNNING:
-        task_id = vm_api.force_shut_down_vm(vm_operate_params=VmOperateParams(
+        task_id = vm_api.poweroff_vm(vm_operate_params=VmOperateParams(
             where=vm_where_input
         ))[0].task_id
         wait_task(id=task_id)
