@@ -10,14 +10,14 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 - ### whl
 
   ```shell
-  pip install cloudtower_sdk-1.10.0-py2.py3-none-any.whl
+  pip install cloudtower_sdk-2.0.0-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf cloudtower-sdk-1.10.0.tar.gz
-  cd cloudtower-sdk-1.10.0
+  tar xvzf cloudtower-sdk-2.0.0.tar.gz
+  cd cloudtower-sdk-2.0.0
   python setup.py install
   ```
 
