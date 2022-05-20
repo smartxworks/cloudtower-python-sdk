@@ -1,5 +1,11 @@
 # RELEASE NOTE
 
+## release 日期：2022-05-20
+
+v1.10.0.post1 release
+
+- bugfix: [Witness] 从 `Witness` 中移除了 `management_ip`
+
 ## release 日期：2022-05-17
 
 v1.10.0 release
