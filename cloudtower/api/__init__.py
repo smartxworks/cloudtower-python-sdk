@@ -15,8 +15,6 @@ from cloudtower.api.cluster_topo_api import ClusterTopoApi
 from cloudtower.api.cluster_upgrade_history_api import ClusterUpgradeHistoryApi
 from cloudtower.api.consistency_group_api import ConsistencyGroupApi
 from cloudtower.api.consistency_group_snapshot_api import ConsistencyGroupSnapshotApi
-from cloudtower.api.content_library_image_api import ContentLibraryImageApi
-from cloudtower.api.content_library_vm_template_api import ContentLibraryVmTemplateApi
 from cloudtower.api.datacenter_api import DatacenterApi
 from cloudtower.api.deploy_api import DeployApi
 from cloudtower.api.discovered_host_api import DiscoveredHostApi
@@ -42,7 +40,6 @@ from cloudtower.api.label_api import LabelApi
 from cloudtower.api.license_api import LicenseApi
 from cloudtower.api.log_collection_api import LogCollectionApi
 from cloudtower.api.log_service_config_api import LogServiceConfigApi
-from cloudtower.api.metrics_api import MetricsApi
 from cloudtower.api.namespace_group_api import NamespaceGroupApi
 from cloudtower.api.nfs_export_api import NfsExportApi
 from cloudtower.api.nfs_inode_api import NfsInodeApi

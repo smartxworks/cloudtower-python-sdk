@@ -2,13 +2,6 @@
 
 ## release 日期：2022-05-20
 
-v2.0.0 release
-
-- feature: 开放内容库相关 Api [ContentLibraryImage], [ContentLibraryVMTemplate]
-- feature: 新增 [Metric] 功能，用于查询资源性能指标
-
-## release 日期：2022-05-20
-
 v1.10.0.post1 release
 
 - bugfix: [Witness] 从 `Witness` 中移除了 `management_ip`
