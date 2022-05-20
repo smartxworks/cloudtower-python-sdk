@@ -41,7 +41,6 @@ class Witness(object):
         'data_ip': 'str',
         'id': 'str',
         'local_id': 'str',
-        'management_ip': 'str',
         'name': 'str',
         'system_data_capacity': 'int',
         'system_used_data_space': 'int',
@@ -56,7 +55,6 @@ class Witness(object):
         'data_ip': 'data_ip',
         'id': 'id',
         'local_id': 'local_id',
-        'management_ip': 'management_ip',
         'name': 'name',
         'system_data_capacity': 'system_data_capacity',
         'system_used_data_space': 'system_used_data_space',
@@ -74,7 +72,6 @@ class Witness(object):
         self._data_ip = None
         self._id = None
         self._local_id = None
-        self._management_ip = None
         self._name = None
         self._system_data_capacity = None
         self._system_used_data_space = None
@@ -92,8 +89,6 @@ class Witness(object):
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.local_id = kwargs.get("local_id", None)
-        if "management_ip" in kwargs:
-            self.management_ip = kwargs["management_ip"]
         if "name" in kwargs:
             self.name = kwargs["name"]
         if "system_data_capacity" in kwargs:
@@ -219,29 +214,6 @@ class Witness(object):
         """
 
         self._local_id = local_id
-
-    @property
-    def management_ip(self):
-        """Gets the management_ip of this Witness.  # noqa: E501
-
-
-        :return: The management_ip of this Witness.  # noqa: E501
-        :rtype: str
-        """
-        return self._management_ip
-
-    @management_ip.setter
-    def management_ip(self, management_ip):
-        """Sets the management_ip of this Witness.
-
-
-        :param management_ip: The management_ip of this Witness.  # noqa: E501
-        :type management_ip: str
-        """
-        if self.local_vars_configuration.client_side_validation and management_ip is None:  # noqa: E501
-            raise ValueError("Invalid value for `management_ip`, must not be `None`")  # noqa: E501
-
-        self._management_ip = management_ip
 
     @property
     def name(self):
