@@ -94,9 +94,9 @@ class Host(object):
         'total_data_capacity': 'int',
         'total_memory_bytes': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
-        'used_cpu_hz': 'int',
+        'used_cpu_hz': 'float',
         'used_data_space': 'int',
-        'used_memory_bytes': 'int',
+        'used_memory_bytes': 'float',
         'vm_num': 'int',
         'vmotion_ip': 'str',
         'vms': 'list[NestedVm]',
@@ -1646,7 +1646,7 @@ class Host(object):
 
 
         :return: The used_cpu_hz of this Host.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz
 
@@ -1656,7 +1656,7 @@ class Host(object):
 
 
         :param used_cpu_hz: The used_cpu_hz of this Host.  # noqa: E501
-        :type used_cpu_hz: int
+        :type used_cpu_hz: float
         """
 
         self._used_cpu_hz = used_cpu_hz
@@ -1690,7 +1690,7 @@ class Host(object):
 
 
         :return: The used_memory_bytes of this Host.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes
 
@@ -1700,7 +1700,7 @@ class Host(object):
 
 
         :param used_memory_bytes: The used_memory_bytes of this Host.  # noqa: E501
-        :type used_memory_bytes: int
+        :type used_memory_bytes: float
         """
 
         self._used_memory_bytes = used_memory_bytes
