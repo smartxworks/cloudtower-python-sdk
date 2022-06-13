@@ -122,14 +122,14 @@ class DatacenterWhereInput(object):
         'total_memory_bytes_lte': 'int',
         'total_memory_bytes_not': 'int',
         'total_memory_bytes_not_in': 'list[int]',
-        'used_cpu_hz': 'int',
-        'used_cpu_hz_gt': 'int',
-        'used_cpu_hz_gte': 'int',
-        'used_cpu_hz_in': 'list[int]',
-        'used_cpu_hz_lt': 'int',
-        'used_cpu_hz_lte': 'int',
-        'used_cpu_hz_not': 'int',
-        'used_cpu_hz_not_in': 'list[int]',
+        'used_cpu_hz': 'float',
+        'used_cpu_hz_gt': 'float',
+        'used_cpu_hz_gte': 'float',
+        'used_cpu_hz_in': 'list[float]',
+        'used_cpu_hz_lt': 'float',
+        'used_cpu_hz_lte': 'float',
+        'used_cpu_hz_not': 'float',
+        'used_cpu_hz_not_in': 'list[float]',
         'used_data_space': 'int',
         'used_data_space_gt': 'int',
         'used_data_space_gte': 'int',
@@ -138,14 +138,14 @@ class DatacenterWhereInput(object):
         'used_data_space_lte': 'int',
         'used_data_space_not': 'int',
         'used_data_space_not_in': 'list[int]',
-        'used_memory_bytes': 'int',
-        'used_memory_bytes_gt': 'int',
-        'used_memory_bytes_gte': 'int',
-        'used_memory_bytes_in': 'list[int]',
-        'used_memory_bytes_lt': 'int',
-        'used_memory_bytes_lte': 'int',
-        'used_memory_bytes_not': 'int',
-        'used_memory_bytes_not_in': 'list[int]',
+        'used_memory_bytes': 'float',
+        'used_memory_bytes_gt': 'float',
+        'used_memory_bytes_gte': 'float',
+        'used_memory_bytes_in': 'list[float]',
+        'used_memory_bytes_lt': 'float',
+        'used_memory_bytes_lte': 'float',
+        'used_memory_bytes_not': 'float',
+        'used_memory_bytes_not_in': 'list[float]',
         'vm_num': 'int',
         'vm_num_gt': 'int',
         'vm_num_gte': 'int',
@@ -2332,7 +2332,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz
 
@@ -2342,7 +2342,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz: The used_cpu_hz of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz: int
+        :type used_cpu_hz: float
         """
 
         self._used_cpu_hz = used_cpu_hz
@@ -2353,7 +2353,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_gt of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz_gt
 
@@ -2363,7 +2363,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_gt: The used_cpu_hz_gt of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_gt: int
+        :type used_cpu_hz_gt: float
         """
 
         self._used_cpu_hz_gt = used_cpu_hz_gt
@@ -2374,7 +2374,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_gte of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz_gte
 
@@ -2384,7 +2384,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_gte: The used_cpu_hz_gte of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_gte: int
+        :type used_cpu_hz_gte: float
         """
 
         self._used_cpu_hz_gte = used_cpu_hz_gte
@@ -2395,7 +2395,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_in of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._used_cpu_hz_in
 
@@ -2405,7 +2405,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_in: The used_cpu_hz_in of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_in: list[int]
+        :type used_cpu_hz_in: list[float]
         """
 
         self._used_cpu_hz_in = used_cpu_hz_in
@@ -2416,7 +2416,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_lt of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz_lt
 
@@ -2426,7 +2426,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_lt: The used_cpu_hz_lt of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_lt: int
+        :type used_cpu_hz_lt: float
         """
 
         self._used_cpu_hz_lt = used_cpu_hz_lt
@@ -2437,7 +2437,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_lte of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz_lte
 
@@ -2447,7 +2447,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_lte: The used_cpu_hz_lte of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_lte: int
+        :type used_cpu_hz_lte: float
         """
 
         self._used_cpu_hz_lte = used_cpu_hz_lte
@@ -2458,7 +2458,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_not of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz_not
 
@@ -2468,7 +2468,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_not: The used_cpu_hz_not of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_not: int
+        :type used_cpu_hz_not: float
         """
 
         self._used_cpu_hz_not = used_cpu_hz_not
@@ -2479,7 +2479,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_cpu_hz_not_in of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._used_cpu_hz_not_in
 
@@ -2489,7 +2489,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_cpu_hz_not_in: The used_cpu_hz_not_in of this DatacenterWhereInput.  # noqa: E501
-        :type used_cpu_hz_not_in: list[int]
+        :type used_cpu_hz_not_in: list[float]
         """
 
         self._used_cpu_hz_not_in = used_cpu_hz_not_in
@@ -2668,7 +2668,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes
 
@@ -2678,7 +2678,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes: The used_memory_bytes of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes: int
+        :type used_memory_bytes: float
         """
 
         self._used_memory_bytes = used_memory_bytes
@@ -2689,7 +2689,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_gt of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes_gt
 
@@ -2699,7 +2699,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_gt: The used_memory_bytes_gt of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_gt: int
+        :type used_memory_bytes_gt: float
         """
 
         self._used_memory_bytes_gt = used_memory_bytes_gt
@@ -2710,7 +2710,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_gte of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes_gte
 
@@ -2720,7 +2720,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_gte: The used_memory_bytes_gte of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_gte: int
+        :type used_memory_bytes_gte: float
         """
 
         self._used_memory_bytes_gte = used_memory_bytes_gte
@@ -2731,7 +2731,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_in of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._used_memory_bytes_in
 
@@ -2741,7 +2741,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_in: The used_memory_bytes_in of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_in: list[int]
+        :type used_memory_bytes_in: list[float]
         """
 
         self._used_memory_bytes_in = used_memory_bytes_in
@@ -2752,7 +2752,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_lt of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes_lt
 
@@ -2762,7 +2762,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_lt: The used_memory_bytes_lt of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_lt: int
+        :type used_memory_bytes_lt: float
         """
 
         self._used_memory_bytes_lt = used_memory_bytes_lt
@@ -2773,7 +2773,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_lte of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes_lte
 
@@ -2783,7 +2783,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_lte: The used_memory_bytes_lte of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_lte: int
+        :type used_memory_bytes_lte: float
         """
 
         self._used_memory_bytes_lte = used_memory_bytes_lte
@@ -2794,7 +2794,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_not of this DatacenterWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes_not
 
@@ -2804,7 +2804,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_not: The used_memory_bytes_not of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_not: int
+        :type used_memory_bytes_not: float
         """
 
         self._used_memory_bytes_not = used_memory_bytes_not
@@ -2815,7 +2815,7 @@ class DatacenterWhereInput(object):
 
 
         :return: The used_memory_bytes_not_in of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._used_memory_bytes_not_in
 
@@ -2825,7 +2825,7 @@ class DatacenterWhereInput(object):
 
 
         :param used_memory_bytes_not_in: The used_memory_bytes_not_in of this DatacenterWhereInput.  # noqa: E501
-        :type used_memory_bytes_not_in: list[int]
+        :type used_memory_bytes_not_in: list[float]
         """
 
         self._used_memory_bytes_not_in = used_memory_bytes_not_in

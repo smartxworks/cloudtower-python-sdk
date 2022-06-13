@@ -107,9 +107,9 @@ class Cluster(object):
         'total_memory_bytes': 'int',
         'type': 'ClusterType',
         'upgrade_tool_version': 'str',
-        'used_cpu_hz': 'int',
+        'used_cpu_hz': 'float',
         'used_data_space': 'int',
-        'used_memory_bytes': 'int',
+        'used_memory_bytes': 'float',
         'valid_data_space': 'int',
         'vcenter_account': 'NestedVcenterAccount',
         'vdses': 'list[NestedVds]',
@@ -1916,7 +1916,7 @@ class Cluster(object):
 
 
         :return: The used_cpu_hz of this Cluster.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_cpu_hz
 
@@ -1926,7 +1926,7 @@ class Cluster(object):
 
 
         :param used_cpu_hz: The used_cpu_hz of this Cluster.  # noqa: E501
-        :type used_cpu_hz: int
+        :type used_cpu_hz: float
         """
 
         self._used_cpu_hz = used_cpu_hz
@@ -1958,7 +1958,7 @@ class Cluster(object):
 
 
         :return: The used_memory_bytes of this Cluster.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._used_memory_bytes
 
@@ -1968,7 +1968,7 @@ class Cluster(object):
 
 
         :param used_memory_bytes: The used_memory_bytes of this Cluster.  # noqa: E501
-        :type used_memory_bytes: int
+        :type used_memory_bytes: float
         """
 
         self._used_memory_bytes = used_memory_bytes
