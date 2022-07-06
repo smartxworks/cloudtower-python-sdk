@@ -5,19 +5,20 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 - [源码地址](https://github.com/smartxworks/cloudtower-python-sdk)
 - [下载地址](https://github.com/smartxworks/cloudtower-python-sdk/releases)
 - [通用指南](https://cloudtower-api-doc.vercel.app)
+
 ## 安装
 
 - ### whl
 
   ```shell
-  pip install cloudtower_sdk-2.0.0-py2.py3-none-any.whl
+  pip install cloudtower_sdk-2.1.0-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf cloudtower-sdk-2.0.0.tar.gz
-  cd cloudtower-sdk-2.0.0
+  tar xvzf cloudtower-sdk-2.1.0.tar.gz
+  cd cloudtower-sdk-2.1.0
   python setup.py install
   ```
 
@@ -64,6 +65,17 @@ vm_api = VmApi(client)
 ```
 
 ### 鉴权
+
+> 可以通过 utils 中封装的登陆方法来鉴权 `ApiClient`
+
+```python
+from cloudtower.utils import wait_tasks, login
+conf = Configuration(host="http://api-test.dev-cloudtower.smartx.com/v2/api")
+api_client = ApiClient(conf)
+login(api_client, "your_username", "your_password") # 默认使用 LOCAL 作为 usersource
+```
+
+> 也可以直接将 token 应用置 `configuration` 的 `api_key` 中
 
 ```python
 from cloudtower.api.user_api import UserApi
