@@ -13,7 +13,7 @@ import pathlib
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "cloudtower-sdk"
-VERSION = "2.0.0.post1"
+VERSION = "2.1.0"
 # To install the library, run the following
 #
 # python setup.py install
