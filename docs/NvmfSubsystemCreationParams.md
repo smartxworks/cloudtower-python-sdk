@@ -1,0 +1,38 @@
+# NvmfSubsystemCreationParams
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**replica_num** | **int** |  | 
+**thin_provision** | **bool** |  | 
+**stripe_size** | **int** |  | 
+**stripe_num** | **int** |  | 
+**policy** | [**NvmfSubsystemPolicyType**](NvmfSubsystemPolicyType.md) |  | 
+**cluster_id** | **str** |  | 
+**name** | **str** |  | 
+**bps_wr_max_length** | **int** |  | [optional] 
+**bps_wr_max** | **int** |  | [optional] 
+**bps_rd_max_length** | **int** |  | [optional] 
+**bps_rd_max** | **int** |  | [optional] 
+**bps_max_length** | **int** |  | [optional] 
+**bps_max** | **int** |  | [optional] 
+**iops_wr_max_length** | **int** |  | [optional] 
+**iops_wr_max** | **int** |  | [optional] 
+**iops_rd_max_length** | **int** |  | [optional] 
+**iops_rd_max** | **int** |  | [optional] 
+**iops_max_length** | **int** |  | [optional] 
+**iops_max** | **int** |  | [optional] 
+**bps_wr** | **int** |  | [optional] 
+**bps_rd** | **int** |  | [optional] 
+**bps** | **int** |  | [optional] 
+**iops_wr** | **int** |  | [optional] 
+**iops_rd** | **int** |  | [optional] 
+**iops** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
+**nqn_whitelist** | **str** |  | [optional] 
+**ip_whitelist** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

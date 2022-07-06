@@ -1,0 +1,12 @@
+# VmMigrateAcrossClusterParams
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**data** | [**VmMigrateAcrossClusterParamsData**](VmMigrateAcrossClusterParamsData.md) |  | 
+**where** | [**VmWhereInput**](VmWhereInput.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

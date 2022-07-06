@@ -64,6 +64,7 @@ from cloudtower.api.snmp_transport_api import SnmpTransportApi
 from cloudtower.api.snmp_trap_receiver_api import SnmpTrapReceiverApi
 from cloudtower.api.svt_image_api import SvtImageApi
 from cloudtower.api.system_audit_log_api import SystemAuditLogApi
+from cloudtower.api.table_reporter_api import TableReporterApi
 from cloudtower.api.task_api import TaskApi
 from cloudtower.api.upload_task_api import UploadTaskApi
 from cloudtower.api.usb_device_api import UsbDeviceApi

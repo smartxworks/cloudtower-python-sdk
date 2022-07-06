@@ -1,7 +1,9 @@
 import time
-from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus
+from cloudtower.api_client import ApiClient
+from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, UserSource
 from cloudtower.exceptions import ApiException
 from cloudtower.api.task_api import TaskApi
+from cloudtower.api.user_api import UserApi
 
 
 def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
@@ -26,7 +28,6 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
     """
     task_api = TaskApi(api_client)
     start = time.time()
-    count = len(ids)
     error_ids = []
     while len(ids):
         now = time.time()
@@ -51,4 +52,26 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
     if len(error_ids):
         raise ApiException(500, "All Tasks failed" if len(
             error_ids) else "Tasks %s failed" % error_ids)
+    return
+
+
+def login(api_client: ApiClient, username, password, source=UserSource.LOCAL):
+    """login # noqa: E501
+    the method will try to login with provided username and password
+    :params api_client: (required) api client to set up login status
+    :type api_client: ApiClient
+    :param username: (required) username to login
+    :type username: str    
+    :param password: (required) password to login
+    :type password: str
+    :param source: login user's source, default is local
+    :type password: UserSource
+    """
+    user_api = UserApi(api_client)
+    login_res = user_api.login({
+        "username": username,
+        "password": password,
+        "source": source
+    })
+    api_client.configuration.api_key["Authorization"] = login_res.data.token
     return
