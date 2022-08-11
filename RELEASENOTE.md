@@ -1,5 +1,12 @@
 # RELEASE NOTE
 
+## release 日期 2022-08-12
+
+v2.2.0 release
+
+- feature:VmApi: [create_vm_from_content_library_template] 新增通过内容库模板创建虚拟机 api
+- bugfix: 正确生成嵌套类型的数字类型
+
 ## release 日期 2022-07-08
 
 v2.1.0 release
