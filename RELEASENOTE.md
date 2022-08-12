@@ -1,5 +1,28 @@
 # RELEASE NOTE
 
+## release 日期 2022-09-05
+
+v2.3.0 release
+
+- feature:VmVolumeSnapshotApi: [get_vm-volume-snapshots] 新增虚拟卷快照查询 api
+- feature:VmVolumeSnapshotApi: [create_vm_volume_snapshot] 新增创建虚拟卷快照 api
+- feature:VmVolumeSnapshotApi: [delete_vm_volume_snapshot] 新增删除虚拟卷快照 api
+- feature:VmVolumeApi: [clone_vm_volume] 新增克隆虚拟卷 api
+- feature:VmVolumeApi: [rebuild_vm_volume] 新增通过虚拟卷快照重建虚拟卷 api
+- feature:VmVolumeApi: [rollback_vm_volume] 新增回滚虚拟卷至指定虚拟卷快照 api
+- feature:VmVolumeApi: [update_vm_volume] 新增编辑虚拟卷 api
+- feature:UserApi: [get_my_info] 新增查询当前 client 对应用户 api
+- feature:VersionApi: [get_api_info] 新增查询当前 api 版本 api
+- feature:VmApi: 新增内容库镜像支持，[vm_cd_rom_params] 支持传入 `content_library_image_id` 来挂载内容库镜像
+- optimize: 优化 `WaitTask`, `WaitTasks` 方法，在没有搜索到对应 `taskId` 的情况下，尝试等待 task 被创建或直到超时
+
+## release 日期 2022-08-12
+
+v2.2.0 release
+
+- feature:VmApi: [create_vm_from_content_library_template] 新增通过内容库模板创建虚拟机 api
+- bugfix: 正确生成嵌套类型的数字类型
+
 ## release 日期 2022-07-08
 
 v2.1.0 release

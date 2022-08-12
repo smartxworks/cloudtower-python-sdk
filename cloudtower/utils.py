@@ -1,5 +1,4 @@
 import time
-from typing import overload
 from cloudtower.api_client import ApiClient
 from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, UserSource
 from cloudtower.exceptions import ApiException
@@ -76,11 +75,3 @@ def login(api_client: ApiClient, username, password, source=UserSource.LOCAL):
     })
     api_client.configuration.api_key["Authorization"] = login_res.data.token
     return
-
-
-def get_svt_image_version(path: str):
-    p = ""
-    with open(path, "rb") as file:
-        file.seek(32*1024+190)
-        p = file.read(128).decode("utf-8").strip()
-    return p
