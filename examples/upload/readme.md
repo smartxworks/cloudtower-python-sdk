@@ -27,6 +27,6 @@ def upload_svt_image(api_client: ApiClient, path: str):
 
 conf = Configuration(host="http://api-test.dev-cloudtower.smartx.com/v2/api")
 api_client = ApiClient(conf)
-login(api_client, "root", "HC!r0cks")
-upload_svt_image(api_client, 'D:\\SMTX_VMTOOLS_2_12_1_20210521153518.iso')
+login(api_client, "root", "password")
+upload_svt_image(api_client, 'path_to_iso')
 ```
