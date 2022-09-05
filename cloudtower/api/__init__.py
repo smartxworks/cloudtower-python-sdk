@@ -6,6 +6,7 @@ from __future__ import absolute_import
 from cloudtower.api.alert_api import AlertApi
 from cloudtower.api.alert_notifier_api import AlertNotifierApi
 from cloudtower.api.alert_rule_api import AlertRuleApi
+from cloudtower.api.api_info_api import ApiInfoApi
 from cloudtower.api.application_api import ApplicationApi
 from cloudtower.api.brick_topo_api import BrickTopoApi
 from cloudtower.api.cluster_api import ClusterApi
@@ -84,6 +85,7 @@ from cloudtower.api.vm_placement_group_api import VmPlacementGroupApi
 from cloudtower.api.vm_snapshot_api import VmSnapshotApi
 from cloudtower.api.vm_template_api import VmTemplateApi
 from cloudtower.api.vm_volume_api import VmVolumeApi
+from cloudtower.api.vm_volume_snapshot_api import VmVolumeSnapshotApi
 from cloudtower.api.vsphere_esxi_account_api import VsphereEsxiAccountApi
 from cloudtower.api.witness_api import WitnessApi
 from cloudtower.api.witness_service_api import WitnessServiceApi
