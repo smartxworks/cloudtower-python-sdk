@@ -7,6 +7,7 @@ cloudtower/api/__init__.py
 cloudtower/api/alert_api.py
 cloudtower/api/alert_notifier_api.py
 cloudtower/api/alert_rule_api.py
+cloudtower/api/api_info_api.py
 cloudtower/api/application_api.py
 cloudtower/api/brick_topo_api.py
 cloudtower/api/cluster_api.py
@@ -85,6 +86,7 @@ cloudtower/api/vm_placement_group_api.py
 cloudtower/api/vm_snapshot_api.py
 cloudtower/api/vm_template_api.py
 cloudtower/api/vm_volume_api.py
+cloudtower/api/vm_volume_snapshot_api.py
 cloudtower/api/vsphere_esxi_account_api.py
 cloudtower/api/witness_api.py
 cloudtower/api/witness_service_api.py
@@ -135,6 +137,8 @@ cloudtower/models/brick_topo_updation_params_data.py
 cloudtower/models/brick_topo_where_input.py
 cloudtower/models/bus.py
 cloudtower/models/cancel_upload_task_params.py
+cloudtower/models/clone_vm_volume_params.py
+cloudtower/models/clone_vm_volume_params_data.py
 cloudtower/models/cloud_init_net_work.py
 cloudtower/models/cloud_init_net_work_route.py
 cloudtower/models/cloud_init_network_type_enum.py
@@ -270,6 +274,7 @@ cloudtower/models/delete_vm_placement_group.py
 cloudtower/models/delete_vm_snapshot.py
 cloudtower/models/delete_vm_template.py
 cloudtower/models/delete_vm_volume.py
+cloudtower/models/delete_vm_volume_snapshot.py
 cloudtower/models/deploy.py
 cloudtower/models/deploy_connection.py
 cloudtower/models/deploy_order_by_input.py
@@ -503,6 +508,8 @@ cloudtower/models/get_vm_snapshots_request_body.py
 cloudtower/models/get_vm_templates_connection_request_body.py
 cloudtower/models/get_vm_templates_request_body.py
 cloudtower/models/get_vm_volume_metric_input.py
+cloudtower/models/get_vm_volume_snapshots_connection_request_body.py
+cloudtower/models/get_vm_volume_snapshots_request_body.py
 cloudtower/models/get_vm_volumes_connection_request_body.py
 cloudtower/models/get_vm_volumes_request_body.py
 cloudtower/models/get_vms_connection_request_body.py
@@ -724,6 +731,7 @@ cloudtower/models/nested_aggregate_vm_placement_group.py
 cloudtower/models/nested_aggregate_vm_snapshot.py
 cloudtower/models/nested_aggregate_vm_template.py
 cloudtower/models/nested_aggregate_vm_volume.py
+cloudtower/models/nested_aggregate_vm_volume_snapshot.py
 cloudtower/models/nested_aggregate_vsphere_esxi_account.py
 cloudtower/models/nested_aggregate_witness.py
 cloudtower/models/nested_aggregate_zone.py
@@ -1027,6 +1035,8 @@ cloudtower/models/update_passrod_security_params.py
 cloudtower/models/update_session_timeout_params.py
 cloudtower/models/update_vcenter_account_params.py
 cloudtower/models/update_vcenter_account_params_data.py
+cloudtower/models/update_vm_volume_params.py
+cloudtower/models/update_vm_volume_params_data.py
 cloudtower/models/update_vsphere_esxi_account_params.py
 cloudtower/models/update_vsphere_esxi_account_params_data.py
 cloudtower/models/upload_resource_type.py
@@ -1217,7 +1227,18 @@ cloudtower/models/vm_volume_creation_params.py
 cloudtower/models/vm_volume_deletion_params.py
 cloudtower/models/vm_volume_elf_storage_policy_type.py
 cloudtower/models/vm_volume_order_by_input.py
+cloudtower/models/vm_volume_rebuild_params.py
+cloudtower/models/vm_volume_rollback_params.py
+cloudtower/models/vm_volume_snapshot.py
+cloudtower/models/vm_volume_snapshot_connection.py
+cloudtower/models/vm_volume_snapshot_creation_params.py
+cloudtower/models/vm_volume_snapshot_deletion_params.py
+cloudtower/models/vm_volume_snapshot_order_by_input.py
+cloudtower/models/vm_volume_snapshot_type.py
+cloudtower/models/vm_volume_snapshot_where_input.py
+cloudtower/models/vm_volume_type.py
 cloudtower/models/vm_volume_where_input.py
+cloudtower/models/vm_volume_where_unique_input.py
 cloudtower/models/vm_where_input.py
 cloudtower/models/vm_where_unique_input.py
 cloudtower/models/vsphere_esxi_account.py
@@ -1274,6 +1295,7 @@ cloudtower/models/with_task_delete_vm_placement_group.py
 cloudtower/models/with_task_delete_vm_snapshot.py
 cloudtower/models/with_task_delete_vm_template.py
 cloudtower/models/with_task_delete_vm_volume.py
+cloudtower/models/with_task_delete_vm_volume_snapshot.py
 cloudtower/models/with_task_disk.py
 cloudtower/models/with_task_elf_image.py
 cloudtower/models/with_task_entity_filter.py
@@ -1318,6 +1340,7 @@ cloudtower/models/with_task_vm_placement_group.py
 cloudtower/models/with_task_vm_snapshot.py
 cloudtower/models/with_task_vm_template.py
 cloudtower/models/with_task_vm_volume.py
+cloudtower/models/with_task_vm_volume_snapshot.py
 cloudtower/models/with_task_vsphere_esxi_account_array.py
 cloudtower/models/witness.py
 cloudtower/models/witness_connection.py
