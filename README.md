@@ -55,6 +55,14 @@ configuration = Configuration(host="http://192.168.96.133/v2/api")
 client = ApiClient(configuration)
 ```
 
+> 如果需要使用 https，可以安装证书，或者忽略证书验证
+
+```python
+configuration = Configuration(host="https://192.168.96.133/v2/api")
+configuration.verify_ssl = False
+client = ApiClient(configuration)
+```
+
 #### 创建对应的 API 实例
 
 > 根据不同用途的操作创建相关的 API 实例，例如虚拟机相关操作需要创建一个 `VmApi`。
@@ -67,6 +75,7 @@ vm_api = VmApi(client)
 ### 鉴权
 
 > 可以通过 utils 中封装的登陆方法来鉴权 `ApiClient`
+
 ```python
 from cloudtower.utils import wait_tasks, login
 conf = Configuration(host="http://api-test.dev-cloudtower.smartx.com/v2/api")
@@ -75,6 +84,7 @@ login(api_client, "your_username", "your_password") # 默认使用 LOCAL 作为 
 ```
 
 > 也可以直接将 token 应用置 `configuration` 的 `api_key` 中
+
 ```python
 from cloudtower.api.user_api import UserApi
 from cloudtower.models import UserSource
