@@ -28,15 +28,19 @@ class NvmfNamespaceCreationParams(object):
         'namespace_id': 'int',
         'group_id': 'str',
         'is_shared': 'bool',
+        'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'replica_num': 'int',
         'nvmf_subsystem_id': 'str',
         'name': 'str',
         'bps_wr_max_length': 'int',
+        'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max': 'int',
         'bps_rd_max_length': 'int',
+        'bps_rd_max_unit': 'BPSUnit',
         'bps_rd_max': 'int',
         'bps_max_length': 'int',
+        'bps_max_unit': 'BPSUnit',
         'bps_max': 'int',
         'iops_wr_max_length': 'int',
         'iops_wr_max': 'int',
@@ -44,8 +48,11 @@ class NvmfNamespaceCreationParams(object):
         'iops_rd_max': 'int',
         'iops_max_length': 'int',
         'iops_max': 'int',
+        'bps_wr_unit': 'BPSUnit',
         'bps_wr': 'int',
+        'bps_rd_unit': 'BPSUnit',
         'bps_rd': 'int',
+        'bps_unit': 'BPSUnit',
         'bps': 'int',
         'iops_wr': 'int',
         'iops_rd': 'int',
@@ -57,15 +64,19 @@ class NvmfNamespaceCreationParams(object):
         'namespace_id': 'namespace_id',
         'group_id': 'group_id',
         'is_shared': 'is_shared',
+        'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'replica_num': 'replica_num',
         'nvmf_subsystem_id': 'nvmf_subsystem_id',
         'name': 'name',
         'bps_wr_max_length': 'bps_wr_max_length',
+        'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max': 'bps_wr_max',
         'bps_rd_max_length': 'bps_rd_max_length',
+        'bps_rd_max_unit': 'bps_rd_max_unit',
         'bps_rd_max': 'bps_rd_max',
         'bps_max_length': 'bps_max_length',
+        'bps_max_unit': 'bps_max_unit',
         'bps_max': 'bps_max',
         'iops_wr_max_length': 'iops_wr_max_length',
         'iops_wr_max': 'iops_wr_max',
@@ -73,8 +84,11 @@ class NvmfNamespaceCreationParams(object):
         'iops_rd_max': 'iops_rd_max',
         'iops_max_length': 'iops_max_length',
         'iops_max': 'iops_max',
+        'bps_wr_unit': 'bps_wr_unit',
         'bps_wr': 'bps_wr',
+        'bps_rd_unit': 'bps_rd_unit',
         'bps_rd': 'bps_rd',
+        'bps_unit': 'bps_unit',
         'bps': 'bps',
         'iops_wr': 'iops_wr',
         'iops_rd': 'iops_rd',
@@ -89,15 +103,19 @@ class NvmfNamespaceCreationParams(object):
         self._namespace_id = None
         self._group_id = None
         self._is_shared = None
+        self._assigned_size_unit = None
         self._assigned_size = None
         self._replica_num = None
         self._nvmf_subsystem_id = None
         self._name = None
         self._bps_wr_max_length = None
+        self._bps_wr_max_unit = None
         self._bps_wr_max = None
         self._bps_rd_max_length = None
+        self._bps_rd_max_unit = None
         self._bps_rd_max = None
         self._bps_max_length = None
+        self._bps_max_unit = None
         self._bps_max = None
         self._iops_wr_max_length = None
         self._iops_wr_max = None
@@ -105,8 +123,11 @@ class NvmfNamespaceCreationParams(object):
         self._iops_rd_max = None
         self._iops_max_length = None
         self._iops_max = None
+        self._bps_wr_unit = None
         self._bps_wr = None
+        self._bps_rd_unit = None
         self._bps_rd = None
+        self._bps_unit = None
         self._bps = None
         self._iops_wr = None
         self._iops_rd = None
@@ -120,6 +141,8 @@ class NvmfNamespaceCreationParams(object):
             self.group_id = kwargs["group_id"]
         if "is_shared" in kwargs:
             self.is_shared = kwargs["is_shared"]
+        if "assigned_size_unit" in kwargs:
+            self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "replica_num" in kwargs:
@@ -130,14 +153,20 @@ class NvmfNamespaceCreationParams(object):
             self.name = kwargs["name"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
+        if "bps_wr_max_unit" in kwargs:
+            self.bps_wr_max_unit = kwargs["bps_wr_max_unit"]
         if "bps_wr_max" in kwargs:
             self.bps_wr_max = kwargs["bps_wr_max"]
         if "bps_rd_max_length" in kwargs:
             self.bps_rd_max_length = kwargs["bps_rd_max_length"]
+        if "bps_rd_max_unit" in kwargs:
+            self.bps_rd_max_unit = kwargs["bps_rd_max_unit"]
         if "bps_rd_max" in kwargs:
             self.bps_rd_max = kwargs["bps_rd_max"]
         if "bps_max_length" in kwargs:
             self.bps_max_length = kwargs["bps_max_length"]
+        if "bps_max_unit" in kwargs:
+            self.bps_max_unit = kwargs["bps_max_unit"]
         if "bps_max" in kwargs:
             self.bps_max = kwargs["bps_max"]
         if "iops_wr_max_length" in kwargs:
@@ -152,10 +181,16 @@ class NvmfNamespaceCreationParams(object):
             self.iops_max_length = kwargs["iops_max_length"]
         if "iops_max" in kwargs:
             self.iops_max = kwargs["iops_max"]
+        if "bps_wr_unit" in kwargs:
+            self.bps_wr_unit = kwargs["bps_wr_unit"]
         if "bps_wr" in kwargs:
             self.bps_wr = kwargs["bps_wr"]
+        if "bps_rd_unit" in kwargs:
+            self.bps_rd_unit = kwargs["bps_rd_unit"]
         if "bps_rd" in kwargs:
             self.bps_rd = kwargs["bps_rd"]
+        if "bps_unit" in kwargs:
+            self.bps_unit = kwargs["bps_unit"]
         if "bps" in kwargs:
             self.bps = kwargs["bps"]
         if "iops_wr" in kwargs:
@@ -229,6 +264,27 @@ class NvmfNamespaceCreationParams(object):
         """
 
         self._is_shared = is_shared
+
+    @property
+    def assigned_size_unit(self):
+        """Gets the assigned_size_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The assigned_size_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._assigned_size_unit
+
+    @assigned_size_unit.setter
+    def assigned_size_unit(self, assigned_size_unit):
+        """Sets the assigned_size_unit of this NvmfNamespaceCreationParams.
+
+
+        :param assigned_size_unit: The assigned_size_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type assigned_size_unit: ByteUnit
+        """
+
+        self._assigned_size_unit = assigned_size_unit
 
     @property
     def assigned_size(self):
@@ -344,6 +400,27 @@ class NvmfNamespaceCreationParams(object):
         self._bps_wr_max_length = bps_wr_max_length
 
     @property
+    def bps_wr_max_unit(self):
+        """Gets the bps_wr_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_wr_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_max_unit
+
+    @bps_wr_max_unit.setter
+    def bps_wr_max_unit(self, bps_wr_max_unit):
+        """Sets the bps_wr_max_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_wr_max_unit: The bps_wr_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_wr_max_unit: BPSUnit
+        """
+
+        self._bps_wr_max_unit = bps_wr_max_unit
+
+    @property
     def bps_wr_max(self):
         """Gets the bps_wr_max of this NvmfNamespaceCreationParams.  # noqa: E501
 
@@ -386,6 +463,27 @@ class NvmfNamespaceCreationParams(object):
         self._bps_rd_max_length = bps_rd_max_length
 
     @property
+    def bps_rd_max_unit(self):
+        """Gets the bps_rd_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_rd_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_rd_max_unit
+
+    @bps_rd_max_unit.setter
+    def bps_rd_max_unit(self, bps_rd_max_unit):
+        """Sets the bps_rd_max_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_rd_max_unit: The bps_rd_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_rd_max_unit: BPSUnit
+        """
+
+        self._bps_rd_max_unit = bps_rd_max_unit
+
+    @property
     def bps_rd_max(self):
         """Gets the bps_rd_max of this NvmfNamespaceCreationParams.  # noqa: E501
 
@@ -426,6 +524,27 @@ class NvmfNamespaceCreationParams(object):
         """
 
         self._bps_max_length = bps_max_length
+
+    @property
+    def bps_max_unit(self):
+        """Gets the bps_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_max_unit
+
+    @bps_max_unit.setter
+    def bps_max_unit(self, bps_max_unit):
+        """Sets the bps_max_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_max_unit: The bps_max_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_max_unit: BPSUnit
+        """
+
+        self._bps_max_unit = bps_max_unit
 
     @property
     def bps_max(self):
@@ -575,6 +694,27 @@ class NvmfNamespaceCreationParams(object):
         self._iops_max = iops_max
 
     @property
+    def bps_wr_unit(self):
+        """Gets the bps_wr_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_wr_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_unit
+
+    @bps_wr_unit.setter
+    def bps_wr_unit(self, bps_wr_unit):
+        """Sets the bps_wr_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_wr_unit: The bps_wr_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_wr_unit: BPSUnit
+        """
+
+        self._bps_wr_unit = bps_wr_unit
+
+    @property
     def bps_wr(self):
         """Gets the bps_wr of this NvmfNamespaceCreationParams.  # noqa: E501
 
@@ -596,6 +736,27 @@ class NvmfNamespaceCreationParams(object):
         self._bps_wr = bps_wr
 
     @property
+    def bps_rd_unit(self):
+        """Gets the bps_rd_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_rd_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_rd_unit
+
+    @bps_rd_unit.setter
+    def bps_rd_unit(self, bps_rd_unit):
+        """Sets the bps_rd_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_rd_unit: The bps_rd_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_rd_unit: BPSUnit
+        """
+
+        self._bps_rd_unit = bps_rd_unit
+
+    @property
     def bps_rd(self):
         """Gets the bps_rd of this NvmfNamespaceCreationParams.  # noqa: E501
 
@@ -615,6 +776,27 @@ class NvmfNamespaceCreationParams(object):
         """
 
         self._bps_rd = bps_rd
+
+    @property
+    def bps_unit(self):
+        """Gets the bps_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The bps_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_unit
+
+    @bps_unit.setter
+    def bps_unit(self, bps_unit):
+        """Sets the bps_unit of this NvmfNamespaceCreationParams.
+
+
+        :param bps_unit: The bps_unit of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type bps_unit: BPSUnit
+        """
+
+        self._bps_unit = bps_unit
 
     @property
     def bps(self):

@@ -155,6 +155,7 @@ class LabelApi(object):
 
         response_types_map = {
             200: "list[WithTaskLabel]",
+            304: None,
             400: "ErrorBody",
             404: "ErrorBody",
             500: "ErrorBody",
@@ -915,6 +916,7 @@ class LabelApi(object):
 
         response_types_map = {
             200: "list[WithTaskLabel]",
+            304: None,
             400: "ErrorBody",
             404: "ErrorBody",
             500: "ErrorBody",
@@ -1067,6 +1069,7 @@ class LabelApi(object):
 
         response_types_map = {
             200: "list[WithTaskLabel]",
+            304: None,
             400: "ErrorBody",
             404: "ErrorBody",
             500: "ErrorBody",

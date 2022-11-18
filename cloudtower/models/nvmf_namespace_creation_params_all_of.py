@@ -28,6 +28,7 @@ class NvmfNamespaceCreationParamsAllOf(object):
         'namespace_id': 'int',
         'group_id': 'str',
         'is_shared': 'bool',
+        'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'replica_num': 'int',
         'nvmf_subsystem_id': 'str',
@@ -38,6 +39,7 @@ class NvmfNamespaceCreationParamsAllOf(object):
         'namespace_id': 'namespace_id',
         'group_id': 'group_id',
         'is_shared': 'is_shared',
+        'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'replica_num': 'replica_num',
         'nvmf_subsystem_id': 'nvmf_subsystem_id',
@@ -51,6 +53,7 @@ class NvmfNamespaceCreationParamsAllOf(object):
         self._namespace_id = None
         self._group_id = None
         self._is_shared = None
+        self._assigned_size_unit = None
         self._assigned_size = None
         self._replica_num = None
         self._nvmf_subsystem_id = None
@@ -63,6 +66,8 @@ class NvmfNamespaceCreationParamsAllOf(object):
             self.group_id = kwargs["group_id"]
         if "is_shared" in kwargs:
             self.is_shared = kwargs["is_shared"]
+        if "assigned_size_unit" in kwargs:
+            self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "replica_num" in kwargs:
@@ -134,6 +139,27 @@ class NvmfNamespaceCreationParamsAllOf(object):
         """
 
         self._is_shared = is_shared
+
+    @property
+    def assigned_size_unit(self):
+        """Gets the assigned_size_unit of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The assigned_size_unit of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._assigned_size_unit
+
+    @assigned_size_unit.setter
+    def assigned_size_unit(self, assigned_size_unit):
+        """Sets the assigned_size_unit of this NvmfNamespaceCreationParamsAllOf.
+
+
+        :param assigned_size_unit: The assigned_size_unit of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :type assigned_size_unit: ByteUnit
+        """
+
+        self._assigned_size_unit = assigned_size_unit
 
     @property
     def assigned_size(self):

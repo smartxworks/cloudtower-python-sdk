@@ -27,6 +27,7 @@ class MountNewCreateDisksParamsVmVolume(object):
     openapi_types = {
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
         'path': 'str',
+        'size_unit': 'ByteUnit',
         'size': 'int',
         'name': 'str'
     }
@@ -34,6 +35,7 @@ class MountNewCreateDisksParamsVmVolume(object):
     attribute_map = {
         'elf_storage_policy': 'elf_storage_policy',
         'path': 'path',
+        'size_unit': 'size_unit',
         'size': 'size',
         'name': 'name'
     }
@@ -44,6 +46,7 @@ class MountNewCreateDisksParamsVmVolume(object):
 
         self._elf_storage_policy = None
         self._path = None
+        self._size_unit = None
         self._size = None
         self._name = None
         self.discriminator = None
@@ -52,6 +55,8 @@ class MountNewCreateDisksParamsVmVolume(object):
             self.elf_storage_policy = kwargs["elf_storage_policy"]
         if "path" in kwargs:
             self.path = kwargs["path"]
+        if "size_unit" in kwargs:
+            self.size_unit = kwargs["size_unit"]
         if "size" in kwargs:
             self.size = kwargs["size"]
         if "name" in kwargs:
@@ -100,6 +105,27 @@ class MountNewCreateDisksParamsVmVolume(object):
         """
 
         self._path = path
+
+    @property
+    def size_unit(self):
+        """Gets the size_unit of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+
+
+        :return: The size_unit of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._size_unit
+
+    @size_unit.setter
+    def size_unit(self, size_unit):
+        """Sets the size_unit of this MountNewCreateDisksParamsVmVolume.
+
+
+        :param size_unit: The size_unit of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :type size_unit: ByteUnit
+        """
+
+        self._size_unit = size_unit
 
     @property
     def size(self):

@@ -25,8 +25,10 @@ class VmRebuildParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'is_full_copy': 'bool',
         'rebuild_from_snapshot_id': 'str',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
+        'max_bandwidth_unit': 'BPSUnit',
         'max_bandwidth': 'int',
         'max_iops_policy': 'VmDiskIoRestrictType',
         'max_iops': 'int',
@@ -37,6 +39,7 @@ class VmRebuildParams(object):
         'ha': 'bool',
         'vm_nics': 'list[VmNicParams]',
         'vm_disks': 'VmDiskParams',
+        'memory_unit': 'ByteUnit',
         'memory': 'int',
         'cpu_cores': 'int',
         'cpu_sockets': 'int',
@@ -49,8 +52,10 @@ class VmRebuildParams(object):
     }
 
     attribute_map = {
+        'is_full_copy': 'is_full_copy',
         'rebuild_from_snapshot_id': 'rebuild_from_snapshot_id',
         'max_bandwidth_policy': 'max_bandwidth_policy',
+        'max_bandwidth_unit': 'max_bandwidth_unit',
         'max_bandwidth': 'max_bandwidth',
         'max_iops_policy': 'max_iops_policy',
         'max_iops': 'max_iops',
@@ -61,6 +66,7 @@ class VmRebuildParams(object):
         'ha': 'ha',
         'vm_nics': 'vm_nics',
         'vm_disks': 'vm_disks',
+        'memory_unit': 'memory_unit',
         'memory': 'memory',
         'cpu_cores': 'cpu_cores',
         'cpu_sockets': 'cpu_sockets',
@@ -76,8 +82,10 @@ class VmRebuildParams(object):
         """VmRebuildParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._is_full_copy = None
         self._rebuild_from_snapshot_id = None
         self._max_bandwidth_policy = None
+        self._max_bandwidth_unit = None
         self._max_bandwidth = None
         self._max_iops_policy = None
         self._max_iops = None
@@ -88,6 +96,7 @@ class VmRebuildParams(object):
         self._ha = None
         self._vm_nics = None
         self._vm_disks = None
+        self._memory_unit = None
         self._memory = None
         self._cpu_cores = None
         self._cpu_sockets = None
@@ -99,10 +108,14 @@ class VmRebuildParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "is_full_copy" in kwargs:
+            self.is_full_copy = kwargs["is_full_copy"]
         if "rebuild_from_snapshot_id" in kwargs:
             self.rebuild_from_snapshot_id = kwargs["rebuild_from_snapshot_id"]
         if "max_bandwidth_policy" in kwargs:
             self.max_bandwidth_policy = kwargs["max_bandwidth_policy"]
+        if "max_bandwidth_unit" in kwargs:
+            self.max_bandwidth_unit = kwargs["max_bandwidth_unit"]
         if "max_bandwidth" in kwargs:
             self.max_bandwidth = kwargs["max_bandwidth"]
         if "max_iops_policy" in kwargs:
@@ -123,6 +136,8 @@ class VmRebuildParams(object):
             self.vm_nics = kwargs["vm_nics"]
         if "vm_disks" in kwargs:
             self.vm_disks = kwargs["vm_disks"]
+        if "memory_unit" in kwargs:
+            self.memory_unit = kwargs["memory_unit"]
         if "memory" in kwargs:
             self.memory = kwargs["memory"]
         if "cpu_cores" in kwargs:
@@ -141,6 +156,27 @@ class VmRebuildParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def is_full_copy(self):
+        """Gets the is_full_copy of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The is_full_copy of this VmRebuildParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_full_copy
+
+    @is_full_copy.setter
+    def is_full_copy(self, is_full_copy):
+        """Sets the is_full_copy of this VmRebuildParams.
+
+
+        :param is_full_copy: The is_full_copy of this VmRebuildParams.  # noqa: E501
+        :type is_full_copy: bool
+        """
+
+        self._is_full_copy = is_full_copy
 
     @property
     def rebuild_from_snapshot_id(self):
@@ -185,6 +221,27 @@ class VmRebuildParams(object):
         """
 
         self._max_bandwidth_policy = max_bandwidth_policy
+
+    @property
+    def max_bandwidth_unit(self):
+        """Gets the max_bandwidth_unit of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The max_bandwidth_unit of this VmRebuildParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._max_bandwidth_unit
+
+    @max_bandwidth_unit.setter
+    def max_bandwidth_unit(self, max_bandwidth_unit):
+        """Sets the max_bandwidth_unit of this VmRebuildParams.
+
+
+        :param max_bandwidth_unit: The max_bandwidth_unit of this VmRebuildParams.  # noqa: E501
+        :type max_bandwidth_unit: BPSUnit
+        """
+
+        self._max_bandwidth_unit = max_bandwidth_unit
 
     @property
     def max_bandwidth(self):
@@ -395,6 +452,27 @@ class VmRebuildParams(object):
         """
 
         self._vm_disks = vm_disks
+
+    @property
+    def memory_unit(self):
+        """Gets the memory_unit of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The memory_unit of this VmRebuildParams.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._memory_unit
+
+    @memory_unit.setter
+    def memory_unit(self, memory_unit):
+        """Sets the memory_unit of this VmRebuildParams.
+
+
+        :param memory_unit: The memory_unit of this VmRebuildParams.  # noqa: E501
+        :type memory_unit: ByteUnit
+        """
+
+        self._memory_unit = memory_unit
 
     @property
     def memory(self):
