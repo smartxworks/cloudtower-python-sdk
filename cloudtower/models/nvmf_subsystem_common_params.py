@@ -26,10 +26,13 @@ class NvmfSubsystemCommonParams(object):
     """
     openapi_types = {
         'bps_wr_max_length': 'int',
+        'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max': 'int',
         'bps_rd_max_length': 'int',
+        'bps_rd_max_unit': 'BPSUnit',
         'bps_rd_max': 'int',
         'bps_max_length': 'int',
+        'bps_max_unit': 'BPSUnit',
         'bps_max': 'int',
         'iops_wr_max_length': 'int',
         'iops_wr_max': 'int',
@@ -37,8 +40,11 @@ class NvmfSubsystemCommonParams(object):
         'iops_rd_max': 'int',
         'iops_max_length': 'int',
         'iops_max': 'int',
+        'bps_wr_unit': 'BPSUnit',
         'bps_wr': 'int',
+        'bps_rd_unit': 'BPSUnit',
         'bps_rd': 'int',
+        'bps_unit': 'BPSUnit',
         'bps': 'int',
         'iops_wr': 'int',
         'iops_rd': 'int',
@@ -50,10 +56,13 @@ class NvmfSubsystemCommonParams(object):
 
     attribute_map = {
         'bps_wr_max_length': 'bps_wr_max_length',
+        'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max': 'bps_wr_max',
         'bps_rd_max_length': 'bps_rd_max_length',
+        'bps_rd_max_unit': 'bps_rd_max_unit',
         'bps_rd_max': 'bps_rd_max',
         'bps_max_length': 'bps_max_length',
+        'bps_max_unit': 'bps_max_unit',
         'bps_max': 'bps_max',
         'iops_wr_max_length': 'iops_wr_max_length',
         'iops_wr_max': 'iops_wr_max',
@@ -61,8 +70,11 @@ class NvmfSubsystemCommonParams(object):
         'iops_rd_max': 'iops_rd_max',
         'iops_max_length': 'iops_max_length',
         'iops_max': 'iops_max',
+        'bps_wr_unit': 'bps_wr_unit',
         'bps_wr': 'bps_wr',
+        'bps_rd_unit': 'bps_rd_unit',
         'bps_rd': 'bps_rd',
+        'bps_unit': 'bps_unit',
         'bps': 'bps',
         'iops_wr': 'iops_wr',
         'iops_rd': 'iops_rd',
@@ -77,10 +89,13 @@ class NvmfSubsystemCommonParams(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._bps_wr_max_length = None
+        self._bps_wr_max_unit = None
         self._bps_wr_max = None
         self._bps_rd_max_length = None
+        self._bps_rd_max_unit = None
         self._bps_rd_max = None
         self._bps_max_length = None
+        self._bps_max_unit = None
         self._bps_max = None
         self._iops_wr_max_length = None
         self._iops_wr_max = None
@@ -88,8 +103,11 @@ class NvmfSubsystemCommonParams(object):
         self._iops_rd_max = None
         self._iops_max_length = None
         self._iops_max = None
+        self._bps_wr_unit = None
         self._bps_wr = None
+        self._bps_rd_unit = None
         self._bps_rd = None
+        self._bps_unit = None
         self._bps = None
         self._iops_wr = None
         self._iops_rd = None
@@ -101,14 +119,20 @@ class NvmfSubsystemCommonParams(object):
 
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
+        if "bps_wr_max_unit" in kwargs:
+            self.bps_wr_max_unit = kwargs["bps_wr_max_unit"]
         if "bps_wr_max" in kwargs:
             self.bps_wr_max = kwargs["bps_wr_max"]
         if "bps_rd_max_length" in kwargs:
             self.bps_rd_max_length = kwargs["bps_rd_max_length"]
+        if "bps_rd_max_unit" in kwargs:
+            self.bps_rd_max_unit = kwargs["bps_rd_max_unit"]
         if "bps_rd_max" in kwargs:
             self.bps_rd_max = kwargs["bps_rd_max"]
         if "bps_max_length" in kwargs:
             self.bps_max_length = kwargs["bps_max_length"]
+        if "bps_max_unit" in kwargs:
+            self.bps_max_unit = kwargs["bps_max_unit"]
         if "bps_max" in kwargs:
             self.bps_max = kwargs["bps_max"]
         if "iops_wr_max_length" in kwargs:
@@ -123,10 +147,16 @@ class NvmfSubsystemCommonParams(object):
             self.iops_max_length = kwargs["iops_max_length"]
         if "iops_max" in kwargs:
             self.iops_max = kwargs["iops_max"]
+        if "bps_wr_unit" in kwargs:
+            self.bps_wr_unit = kwargs["bps_wr_unit"]
         if "bps_wr" in kwargs:
             self.bps_wr = kwargs["bps_wr"]
+        if "bps_rd_unit" in kwargs:
+            self.bps_rd_unit = kwargs["bps_rd_unit"]
         if "bps_rd" in kwargs:
             self.bps_rd = kwargs["bps_rd"]
+        if "bps_unit" in kwargs:
+            self.bps_unit = kwargs["bps_unit"]
         if "bps" in kwargs:
             self.bps = kwargs["bps"]
         if "iops_wr" in kwargs:
@@ -162,6 +192,27 @@ class NvmfSubsystemCommonParams(object):
         """
 
         self._bps_wr_max_length = bps_wr_max_length
+
+    @property
+    def bps_wr_max_unit(self):
+        """Gets the bps_wr_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_wr_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_max_unit
+
+    @bps_wr_max_unit.setter
+    def bps_wr_max_unit(self, bps_wr_max_unit):
+        """Sets the bps_wr_max_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_wr_max_unit: The bps_wr_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_wr_max_unit: BPSUnit
+        """
+
+        self._bps_wr_max_unit = bps_wr_max_unit
 
     @property
     def bps_wr_max(self):
@@ -206,6 +257,27 @@ class NvmfSubsystemCommonParams(object):
         self._bps_rd_max_length = bps_rd_max_length
 
     @property
+    def bps_rd_max_unit(self):
+        """Gets the bps_rd_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_rd_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_rd_max_unit
+
+    @bps_rd_max_unit.setter
+    def bps_rd_max_unit(self, bps_rd_max_unit):
+        """Sets the bps_rd_max_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_rd_max_unit: The bps_rd_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_rd_max_unit: BPSUnit
+        """
+
+        self._bps_rd_max_unit = bps_rd_max_unit
+
+    @property
     def bps_rd_max(self):
         """Gets the bps_rd_max of this NvmfSubsystemCommonParams.  # noqa: E501
 
@@ -246,6 +318,27 @@ class NvmfSubsystemCommonParams(object):
         """
 
         self._bps_max_length = bps_max_length
+
+    @property
+    def bps_max_unit(self):
+        """Gets the bps_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_max_unit
+
+    @bps_max_unit.setter
+    def bps_max_unit(self, bps_max_unit):
+        """Sets the bps_max_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_max_unit: The bps_max_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_max_unit: BPSUnit
+        """
+
+        self._bps_max_unit = bps_max_unit
 
     @property
     def bps_max(self):
@@ -395,6 +488,27 @@ class NvmfSubsystemCommonParams(object):
         self._iops_max = iops_max
 
     @property
+    def bps_wr_unit(self):
+        """Gets the bps_wr_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_wr_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_unit
+
+    @bps_wr_unit.setter
+    def bps_wr_unit(self, bps_wr_unit):
+        """Sets the bps_wr_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_wr_unit: The bps_wr_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_wr_unit: BPSUnit
+        """
+
+        self._bps_wr_unit = bps_wr_unit
+
+    @property
     def bps_wr(self):
         """Gets the bps_wr of this NvmfSubsystemCommonParams.  # noqa: E501
 
@@ -416,6 +530,27 @@ class NvmfSubsystemCommonParams(object):
         self._bps_wr = bps_wr
 
     @property
+    def bps_rd_unit(self):
+        """Gets the bps_rd_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_rd_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_rd_unit
+
+    @bps_rd_unit.setter
+    def bps_rd_unit(self, bps_rd_unit):
+        """Sets the bps_rd_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_rd_unit: The bps_rd_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_rd_unit: BPSUnit
+        """
+
+        self._bps_rd_unit = bps_rd_unit
+
+    @property
     def bps_rd(self):
         """Gets the bps_rd of this NvmfSubsystemCommonParams.  # noqa: E501
 
@@ -435,6 +570,27 @@ class NvmfSubsystemCommonParams(object):
         """
 
         self._bps_rd = bps_rd
+
+    @property
+    def bps_unit(self):
+        """Gets the bps_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+
+
+        :return: The bps_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_unit
+
+    @bps_unit.setter
+    def bps_unit(self, bps_unit):
+        """Sets the bps_unit of this NvmfSubsystemCommonParams.
+
+
+        :param bps_unit: The bps_unit of this NvmfSubsystemCommonParams.  # noqa: E501
+        :type bps_unit: BPSUnit
+        """
+
+        self._bps_unit = bps_unit
 
     @property
     def bps(self):

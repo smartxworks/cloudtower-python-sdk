@@ -9,6 +9,8 @@ from cloudtower.api.alert_rule_api import AlertRuleApi
 from cloudtower.api.api_info_api import ApiInfoApi
 from cloudtower.api.application_api import ApplicationApi
 from cloudtower.api.brick_topo_api import BrickTopoApi
+from cloudtower.api.cloud_tower_application_api import CloudTowerApplicationApi
+from cloudtower.api.cloud_tower_application_package_api import CloudTowerApplicationPackageApi
 from cloudtower.api.cluster_api import ClusterApi
 from cloudtower.api.cluster_image_api import ClusterImageApi
 from cloudtower.api.cluster_settings_api import ClusterSettingsApi

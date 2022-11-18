@@ -25,6 +25,7 @@ class IscsiTargetCreationParamsAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'stripe_size_unit': 'ByteUnit',
         'stripe_size': 'int',
         'stripe_num': 'int',
         'replica_num': 'int',
@@ -34,6 +35,7 @@ class IscsiTargetCreationParamsAllOf(object):
     }
 
     attribute_map = {
+        'stripe_size_unit': 'stripe_size_unit',
         'stripe_size': 'stripe_size',
         'stripe_num': 'stripe_num',
         'replica_num': 'replica_num',
@@ -46,6 +48,7 @@ class IscsiTargetCreationParamsAllOf(object):
         """IscsiTargetCreationParamsAllOf - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._stripe_size_unit = None
         self._stripe_size = None
         self._stripe_num = None
         self._replica_num = None
@@ -54,6 +57,8 @@ class IscsiTargetCreationParamsAllOf(object):
         self._name = None
         self.discriminator = None
 
+        if "stripe_size_unit" in kwargs:
+            self.stripe_size_unit = kwargs["stripe_size_unit"]
         if "stripe_size" in kwargs:
             self.stripe_size = kwargs["stripe_size"]
         if "stripe_num" in kwargs:
@@ -66,6 +71,27 @@ class IscsiTargetCreationParamsAllOf(object):
             self.cluster_id = kwargs["cluster_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def stripe_size_unit(self):
+        """Gets the stripe_size_unit of this IscsiTargetCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The stripe_size_unit of this IscsiTargetCreationParamsAllOf.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._stripe_size_unit
+
+    @stripe_size_unit.setter
+    def stripe_size_unit(self, stripe_size_unit):
+        """Sets the stripe_size_unit of this IscsiTargetCreationParamsAllOf.
+
+
+        :param stripe_size_unit: The stripe_size_unit of this IscsiTargetCreationParamsAllOf.  # noqa: E501
+        :type stripe_size_unit: ByteUnit
+        """
+
+        self._stripe_size_unit = stripe_size_unit
 
     @property
     def stripe_size(self):

@@ -27,6 +27,7 @@ class NvmfSubsystemCreationParamsAllOf(object):
     openapi_types = {
         'replica_num': 'int',
         'thin_provision': 'bool',
+        'stripe_size_unit': 'ByteUnit',
         'stripe_size': 'int',
         'stripe_num': 'int',
         'policy': 'NvmfSubsystemPolicyType',
@@ -37,6 +38,7 @@ class NvmfSubsystemCreationParamsAllOf(object):
     attribute_map = {
         'replica_num': 'replica_num',
         'thin_provision': 'thin_provision',
+        'stripe_size_unit': 'stripe_size_unit',
         'stripe_size': 'stripe_size',
         'stripe_num': 'stripe_num',
         'policy': 'policy',
@@ -50,6 +52,7 @@ class NvmfSubsystemCreationParamsAllOf(object):
 
         self._replica_num = None
         self._thin_provision = None
+        self._stripe_size_unit = None
         self._stripe_size = None
         self._stripe_num = None
         self._policy = None
@@ -61,6 +64,8 @@ class NvmfSubsystemCreationParamsAllOf(object):
             self.replica_num = kwargs["replica_num"]
         if "thin_provision" in kwargs:
             self.thin_provision = kwargs["thin_provision"]
+        if "stripe_size_unit" in kwargs:
+            self.stripe_size_unit = kwargs["stripe_size_unit"]
         if "stripe_size" in kwargs:
             self.stripe_size = kwargs["stripe_size"]
         if "stripe_num" in kwargs:
@@ -117,6 +122,27 @@ class NvmfSubsystemCreationParamsAllOf(object):
             raise ValueError("Invalid value for `thin_provision`, must not be `None`")  # noqa: E501
 
         self._thin_provision = thin_provision
+
+    @property
+    def stripe_size_unit(self):
+        """Gets the stripe_size_unit of this NvmfSubsystemCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The stripe_size_unit of this NvmfSubsystemCreationParamsAllOf.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._stripe_size_unit
+
+    @stripe_size_unit.setter
+    def stripe_size_unit(self, stripe_size_unit):
+        """Sets the stripe_size_unit of this NvmfSubsystemCreationParamsAllOf.
+
+
+        :param stripe_size_unit: The stripe_size_unit of this NvmfSubsystemCreationParamsAllOf.  # noqa: E501
+        :type stripe_size_unit: ByteUnit
+        """
+
+        self._stripe_size_unit = stripe_size_unit
 
     @property
     def stripe_size(self):

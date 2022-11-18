@@ -44,6 +44,8 @@ class ContentLibraryImageApi(object):
         :type name: str
         :param size:
         :type size: str
+        :param size_unit:
+        :type size_unit: str
         :param description:
         :type description: str
         :param upload_task_id:
@@ -85,6 +87,8 @@ class ContentLibraryImageApi(object):
         :type name: str
         :param size:
         :type size: str
+        :param size_unit:
+        :type size_unit: str
         :param description:
         :type description: str
         :param upload_task_id:
@@ -121,6 +125,7 @@ class ContentLibraryImageApi(object):
             'content_language',
             'name',
             'size',
+            'size_unit',
             'description',
             'upload_task_id'
         ]
@@ -173,6 +178,8 @@ class ContentLibraryImageApi(object):
             form_params.append(('name', local_var_params['name']))  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
+        if 'size_unit' in local_var_params:
+            form_params.append(('size_unit', local_var_params['size_unit']))  # noqa: E501
         if 'description' in local_var_params:
             form_params.append(('description', local_var_params['description']))  # noqa: E501
         if 'upload_task_id' in local_var_params:

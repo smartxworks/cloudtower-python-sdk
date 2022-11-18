@@ -29,6 +29,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'is_full_copy': 'bool',
         'template_id': 'str',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
+        'max_bandwidth_unit': 'BPSUnit',
         'max_bandwidth': 'int',
         'max_iops_policy': 'VmDiskIoRestrictType',
         'max_iops': 'int',
@@ -39,6 +40,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'ha': 'bool',
         'vm_nics': 'list[VmNicParams]',
         'disk_operate': 'VmDiskOperate',
+        'memory_unit': 'ByteUnit',
         'memory': 'int',
         'cpu_cores': 'int',
         'cpu_sockets': 'int',
@@ -55,6 +57,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'is_full_copy': 'is_full_copy',
         'template_id': 'template_id',
         'max_bandwidth_policy': 'max_bandwidth_policy',
+        'max_bandwidth_unit': 'max_bandwidth_unit',
         'max_bandwidth': 'max_bandwidth',
         'max_iops_policy': 'max_iops_policy',
         'max_iops': 'max_iops',
@@ -65,6 +68,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'ha': 'ha',
         'vm_nics': 'vm_nics',
         'disk_operate': 'disk_operate',
+        'memory_unit': 'memory_unit',
         'memory': 'memory',
         'cpu_cores': 'cpu_cores',
         'cpu_sockets': 'cpu_sockets',
@@ -84,6 +88,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._is_full_copy = None
         self._template_id = None
         self._max_bandwidth_policy = None
+        self._max_bandwidth_unit = None
         self._max_bandwidth = None
         self._max_iops_policy = None
         self._max_iops = None
@@ -94,6 +99,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._ha = None
         self._vm_nics = None
         self._disk_operate = None
+        self._memory_unit = None
         self._memory = None
         self._cpu_cores = None
         self._cpu_sockets = None
@@ -113,6 +119,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.template_id = kwargs["template_id"]
         if "max_bandwidth_policy" in kwargs:
             self.max_bandwidth_policy = kwargs["max_bandwidth_policy"]
+        if "max_bandwidth_unit" in kwargs:
+            self.max_bandwidth_unit = kwargs["max_bandwidth_unit"]
         if "max_bandwidth" in kwargs:
             self.max_bandwidth = kwargs["max_bandwidth"]
         if "max_iops_policy" in kwargs:
@@ -133,6 +141,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.vm_nics = kwargs["vm_nics"]
         if "disk_operate" in kwargs:
             self.disk_operate = kwargs["disk_operate"]
+        if "memory_unit" in kwargs:
+            self.memory_unit = kwargs["memory_unit"]
         if "memory" in kwargs:
             self.memory = kwargs["memory"]
         if "cpu_cores" in kwargs:
@@ -239,6 +249,27 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """
 
         self._max_bandwidth_policy = max_bandwidth_policy
+
+    @property
+    def max_bandwidth_unit(self):
+        """Gets the max_bandwidth_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The max_bandwidth_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._max_bandwidth_unit
+
+    @max_bandwidth_unit.setter
+    def max_bandwidth_unit(self, max_bandwidth_unit):
+        """Sets the max_bandwidth_unit of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param max_bandwidth_unit: The max_bandwidth_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type max_bandwidth_unit: BPSUnit
+        """
+
+        self._max_bandwidth_unit = max_bandwidth_unit
 
     @property
     def max_bandwidth(self):
@@ -449,6 +480,27 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """
 
         self._disk_operate = disk_operate
+
+    @property
+    def memory_unit(self):
+        """Gets the memory_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The memory_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._memory_unit
+
+    @memory_unit.setter
+    def memory_unit(self, memory_unit):
+        """Sets the memory_unit of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param memory_unit: The memory_unit of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type memory_unit: ByteUnit
+        """
+
+        self._memory_unit = memory_unit
 
     @property
     def memory(self):

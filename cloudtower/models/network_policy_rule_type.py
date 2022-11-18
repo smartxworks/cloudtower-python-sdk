@@ -22,9 +22,10 @@ class NetworkPolicyRuleType(object):
     """
     ALL = "ALL"
     IP_BLOCK = "IP_BLOCK"
+    SECURITY_GROUP = "SECURITY_GROUP"
     SELECTOR = "SELECTOR"
 
-    allowable_values = [ALL, IP_BLOCK, SELECTOR]  # noqa: E501
+    allowable_values = [ALL, IP_BLOCK, SECURITY_GROUP, SELECTOR]  # noqa: E501
 
     """
     Attributes:

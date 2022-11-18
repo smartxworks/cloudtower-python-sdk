@@ -26,6 +26,7 @@ class VmCreationParams(object):
     """
     openapi_types = {
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
+        'max_bandwidth_unit': 'BPSUnit',
         'max_bandwidth': 'int',
         'max_iops_policy': 'VmDiskIoRestrictType',
         'max_iops': 'int',
@@ -36,6 +37,7 @@ class VmCreationParams(object):
         'ha': 'bool',
         'vm_nics': 'list[VmNicParams]',
         'vm_disks': 'VmDiskParams',
+        'memory_unit': 'ByteUnit',
         'memory': 'int',
         'cpu_cores': 'int',
         'cpu_sockets': 'int',
@@ -49,6 +51,7 @@ class VmCreationParams(object):
 
     attribute_map = {
         'max_bandwidth_policy': 'max_bandwidth_policy',
+        'max_bandwidth_unit': 'max_bandwidth_unit',
         'max_bandwidth': 'max_bandwidth',
         'max_iops_policy': 'max_iops_policy',
         'max_iops': 'max_iops',
@@ -59,6 +62,7 @@ class VmCreationParams(object):
         'ha': 'ha',
         'vm_nics': 'vm_nics',
         'vm_disks': 'vm_disks',
+        'memory_unit': 'memory_unit',
         'memory': 'memory',
         'cpu_cores': 'cpu_cores',
         'cpu_sockets': 'cpu_sockets',
@@ -75,6 +79,7 @@ class VmCreationParams(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._max_bandwidth_policy = None
+        self._max_bandwidth_unit = None
         self._max_bandwidth = None
         self._max_iops_policy = None
         self._max_iops = None
@@ -85,6 +90,7 @@ class VmCreationParams(object):
         self._ha = None
         self._vm_nics = None
         self._vm_disks = None
+        self._memory_unit = None
         self._memory = None
         self._cpu_cores = None
         self._cpu_sockets = None
@@ -98,6 +104,8 @@ class VmCreationParams(object):
 
         if "max_bandwidth_policy" in kwargs:
             self.max_bandwidth_policy = kwargs["max_bandwidth_policy"]
+        if "max_bandwidth_unit" in kwargs:
+            self.max_bandwidth_unit = kwargs["max_bandwidth_unit"]
         if "max_bandwidth" in kwargs:
             self.max_bandwidth = kwargs["max_bandwidth"]
         if "max_iops_policy" in kwargs:
@@ -118,6 +126,8 @@ class VmCreationParams(object):
             self.vm_nics = kwargs["vm_nics"]
         if "vm_disks" in kwargs:
             self.vm_disks = kwargs["vm_disks"]
+        if "memory_unit" in kwargs:
+            self.memory_unit = kwargs["memory_unit"]
         if "memory" in kwargs:
             self.memory = kwargs["memory"]
         if "cpu_cores" in kwargs:
@@ -157,6 +167,27 @@ class VmCreationParams(object):
         """
 
         self._max_bandwidth_policy = max_bandwidth_policy
+
+    @property
+    def max_bandwidth_unit(self):
+        """Gets the max_bandwidth_unit of this VmCreationParams.  # noqa: E501
+
+
+        :return: The max_bandwidth_unit of this VmCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._max_bandwidth_unit
+
+    @max_bandwidth_unit.setter
+    def max_bandwidth_unit(self, max_bandwidth_unit):
+        """Sets the max_bandwidth_unit of this VmCreationParams.
+
+
+        :param max_bandwidth_unit: The max_bandwidth_unit of this VmCreationParams.  # noqa: E501
+        :type max_bandwidth_unit: BPSUnit
+        """
+
+        self._max_bandwidth_unit = max_bandwidth_unit
 
     @property
     def max_bandwidth(self):
@@ -377,6 +408,27 @@ class VmCreationParams(object):
             raise ValueError("Invalid value for `vm_disks`, must not be `None`")  # noqa: E501
 
         self._vm_disks = vm_disks
+
+    @property
+    def memory_unit(self):
+        """Gets the memory_unit of this VmCreationParams.  # noqa: E501
+
+
+        :return: The memory_unit of this VmCreationParams.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._memory_unit
+
+    @memory_unit.setter
+    def memory_unit(self, memory_unit):
+        """Sets the memory_unit of this VmCreationParams.
+
+
+        :param memory_unit: The memory_unit of this VmCreationParams.  # noqa: E501
+        :type memory_unit: ByteUnit
+        """
+
+        self._memory_unit = memory_unit
 
     @property
     def memory(self):

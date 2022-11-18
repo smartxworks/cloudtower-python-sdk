@@ -25,11 +25,13 @@ class IscsiLunUpdationParamsDataAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'name': 'str'
     }
 
     attribute_map = {
+        'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'name': 'name'
     }
@@ -38,14 +40,38 @@ class IscsiLunUpdationParamsDataAllOf(object):
         """IscsiLunUpdationParamsDataAllOf - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._assigned_size_unit = None
         self._assigned_size = None
         self._name = None
         self.discriminator = None
 
+        if "assigned_size_unit" in kwargs:
+            self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def assigned_size_unit(self):
+        """Gets the assigned_size_unit of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+
+
+        :return: The assigned_size_unit of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._assigned_size_unit
+
+    @assigned_size_unit.setter
+    def assigned_size_unit(self, assigned_size_unit):
+        """Sets the assigned_size_unit of this IscsiLunUpdationParamsDataAllOf.
+
+
+        :param assigned_size_unit: The assigned_size_unit of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :type assigned_size_unit: ByteUnit
+        """
+
+        self._assigned_size_unit = assigned_size_unit
 
     @property
     def assigned_size(self):

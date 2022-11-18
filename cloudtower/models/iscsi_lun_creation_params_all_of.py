@@ -26,6 +26,7 @@ class IscsiLunCreationParamsAllOf(object):
     """
     openapi_types = {
         'lun_id': 'int',
+        'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'replica_num': 'int',
         'iscsi_target_id': 'str',
@@ -34,6 +35,7 @@ class IscsiLunCreationParamsAllOf(object):
 
     attribute_map = {
         'lun_id': 'lun_id',
+        'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'replica_num': 'replica_num',
         'iscsi_target_id': 'iscsi_target_id',
@@ -45,6 +47,7 @@ class IscsiLunCreationParamsAllOf(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._lun_id = None
+        self._assigned_size_unit = None
         self._assigned_size = None
         self._replica_num = None
         self._iscsi_target_id = None
@@ -53,6 +56,8 @@ class IscsiLunCreationParamsAllOf(object):
 
         if "lun_id" in kwargs:
             self.lun_id = kwargs["lun_id"]
+        if "assigned_size_unit" in kwargs:
+            self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "replica_num" in kwargs:
@@ -82,6 +87,27 @@ class IscsiLunCreationParamsAllOf(object):
         """
 
         self._lun_id = lun_id
+
+    @property
+    def assigned_size_unit(self):
+        """Gets the assigned_size_unit of this IscsiLunCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The assigned_size_unit of this IscsiLunCreationParamsAllOf.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._assigned_size_unit
+
+    @assigned_size_unit.setter
+    def assigned_size_unit(self, assigned_size_unit):
+        """Sets the assigned_size_unit of this IscsiLunCreationParamsAllOf.
+
+
+        :param assigned_size_unit: The assigned_size_unit of this IscsiLunCreationParamsAllOf.  # noqa: E501
+        :type assigned_size_unit: ByteUnit
+        """
+
+        self._assigned_size_unit = assigned_size_unit
 
     @property
     def assigned_size(self):

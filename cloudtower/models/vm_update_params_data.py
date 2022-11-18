@@ -27,6 +27,7 @@ class VmUpdateParamsData(object):
     openapi_types = {
         'vcpu': 'int',
         'ha': 'bool',
+        'memory_unit': 'ByteUnit',
         'memory': 'int',
         'cpu_cores': 'int',
         'cpu_sockets': 'int',
@@ -37,6 +38,7 @@ class VmUpdateParamsData(object):
     attribute_map = {
         'vcpu': 'vcpu',
         'ha': 'ha',
+        'memory_unit': 'memory_unit',
         'memory': 'memory',
         'cpu_cores': 'cpu_cores',
         'cpu_sockets': 'cpu_sockets',
@@ -50,6 +52,7 @@ class VmUpdateParamsData(object):
 
         self._vcpu = None
         self._ha = None
+        self._memory_unit = None
         self._memory = None
         self._cpu_cores = None
         self._cpu_sockets = None
@@ -61,6 +64,8 @@ class VmUpdateParamsData(object):
             self.vcpu = kwargs["vcpu"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
+        if "memory_unit" in kwargs:
+            self.memory_unit = kwargs["memory_unit"]
         if "memory" in kwargs:
             self.memory = kwargs["memory"]
         if "cpu_cores" in kwargs:
@@ -113,6 +118,27 @@ class VmUpdateParamsData(object):
         """
 
         self._ha = ha
+
+    @property
+    def memory_unit(self):
+        """Gets the memory_unit of this VmUpdateParamsData.  # noqa: E501
+
+
+        :return: The memory_unit of this VmUpdateParamsData.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._memory_unit
+
+    @memory_unit.setter
+    def memory_unit(self, memory_unit):
+        """Sets the memory_unit of this VmUpdateParamsData.
+
+
+        :param memory_unit: The memory_unit of this VmUpdateParamsData.  # noqa: E501
+        :type memory_unit: ByteUnit
+        """
+
+        self._memory_unit = memory_unit
 
     @property
     def memory(self):

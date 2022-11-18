@@ -25,11 +25,13 @@ class VmExpandVmDiskParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'size_unit': 'ByteUnit',
         'size': 'int',
         'where': 'VmDiskWhereInput'
     }
 
     attribute_map = {
+        'size_unit': 'size_unit',
         'size': 'size',
         'where': 'where'
     }
@@ -38,14 +40,38 @@ class VmExpandVmDiskParams(object):
         """VmExpandVmDiskParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._size_unit = None
         self._size = None
         self._where = None
         self.discriminator = None
 
+        if "size_unit" in kwargs:
+            self.size_unit = kwargs["size_unit"]
         if "size" in kwargs:
             self.size = kwargs["size"]
         if "where" in kwargs:
             self.where = kwargs["where"]
+
+    @property
+    def size_unit(self):
+        """Gets the size_unit of this VmExpandVmDiskParams.  # noqa: E501
+
+
+        :return: The size_unit of this VmExpandVmDiskParams.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._size_unit
+
+    @size_unit.setter
+    def size_unit(self, size_unit):
+        """Sets the size_unit of this VmExpandVmDiskParams.
+
+
+        :param size_unit: The size_unit of this VmExpandVmDiskParams.  # noqa: E501
+        :type size_unit: ByteUnit
+        """
+
+        self._size_unit = size_unit
 
     @property
     def size(self):

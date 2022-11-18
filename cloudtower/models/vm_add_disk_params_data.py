@@ -26,6 +26,7 @@ class VmAddDiskParamsData(object):
     """
     openapi_types = {
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
+        'max_bandwidth_unit': 'BPSUnit',
         'max_bandwidth': 'int',
         'max_iops_policy': 'VmDiskIoRestrictType',
         'max_iops': 'int',
@@ -35,6 +36,7 @@ class VmAddDiskParamsData(object):
 
     attribute_map = {
         'max_bandwidth_policy': 'max_bandwidth_policy',
+        'max_bandwidth_unit': 'max_bandwidth_unit',
         'max_bandwidth': 'max_bandwidth',
         'max_iops_policy': 'max_iops_policy',
         'max_iops': 'max_iops',
@@ -47,6 +49,7 @@ class VmAddDiskParamsData(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._max_bandwidth_policy = None
+        self._max_bandwidth_unit = None
         self._max_bandwidth = None
         self._max_iops_policy = None
         self._max_iops = None
@@ -56,6 +59,8 @@ class VmAddDiskParamsData(object):
 
         if "max_bandwidth_policy" in kwargs:
             self.max_bandwidth_policy = kwargs["max_bandwidth_policy"]
+        if "max_bandwidth_unit" in kwargs:
+            self.max_bandwidth_unit = kwargs["max_bandwidth_unit"]
         if "max_bandwidth" in kwargs:
             self.max_bandwidth = kwargs["max_bandwidth"]
         if "max_iops_policy" in kwargs:
@@ -87,6 +92,27 @@ class VmAddDiskParamsData(object):
         """
 
         self._max_bandwidth_policy = max_bandwidth_policy
+
+    @property
+    def max_bandwidth_unit(self):
+        """Gets the max_bandwidth_unit of this VmAddDiskParamsData.  # noqa: E501
+
+
+        :return: The max_bandwidth_unit of this VmAddDiskParamsData.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._max_bandwidth_unit
+
+    @max_bandwidth_unit.setter
+    def max_bandwidth_unit(self, max_bandwidth_unit):
+        """Sets the max_bandwidth_unit of this VmAddDiskParamsData.
+
+
+        :param max_bandwidth_unit: The max_bandwidth_unit of this VmAddDiskParamsData.  # noqa: E501
+        :type max_bandwidth_unit: BPSUnit
+        """
+
+        self._max_bandwidth_unit = max_bandwidth_unit
 
     @property
     def max_bandwidth(self):
