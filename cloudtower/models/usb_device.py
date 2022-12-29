@@ -36,6 +36,7 @@ class UsbDevice(object):
         'size': 'int',
         'status': 'UsbDeviceStatus',
         'usb_type': 'str',
+        'vms': 'list[NestedVm]',
         'vm': 'NestedVm'
     }
 
@@ -51,6 +52,7 @@ class UsbDevice(object):
         'size': 'size',
         'status': 'status',
         'usb_type': 'usb_type',
+        'vms': 'vms',
         'vm': 'vm'
     }
 
@@ -69,6 +71,7 @@ class UsbDevice(object):
         self._size = None
         self._status = None
         self._usb_type = None
+        self._vms = None
         self._vm = None
         self.discriminator = None
 
@@ -94,6 +97,7 @@ class UsbDevice(object):
             self.status = kwargs["status"]
         if "usb_type" in kwargs:
             self.usb_type = kwargs["usb_type"]
+        self.vms = kwargs.get("vms", None)
         self.vm = kwargs.get("vm", None)
 
     @property
@@ -348,6 +352,27 @@ class UsbDevice(object):
             raise ValueError("Invalid value for `usb_type`, must not be `None`")  # noqa: E501
 
         self._usb_type = usb_type
+
+    @property
+    def vms(self):
+        """Gets the vms of this UsbDevice.  # noqa: E501
+
+
+        :return: The vms of this UsbDevice.  # noqa: E501
+        :rtype: list[NestedVm]
+        """
+        return self._vms
+
+    @vms.setter
+    def vms(self, vms):
+        """Sets the vms of this UsbDevice.
+
+
+        :param vms: The vms of this UsbDevice.  # noqa: E501
+        :type vms: list[NestedVm]
+        """
+
+        self._vms = vms
 
     @property
     def vm(self):

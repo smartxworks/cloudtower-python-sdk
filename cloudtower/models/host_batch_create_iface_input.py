@@ -28,6 +28,7 @@ class HostBatchCreateIfaceInput(object):
         'netmask': 'str',
         'name': 'list[str]',
         'ip': 'str',
+        'gateway_ip': 'str',
         'function': 'HostBatchCreateIfaceFunction'
     }
 
@@ -35,6 +36,7 @@ class HostBatchCreateIfaceInput(object):
         'netmask': 'netmask',
         'name': 'name',
         'ip': 'ip',
+        'gateway_ip': 'gateway_ip',
         'function': 'function'
     }
 
@@ -45,6 +47,7 @@ class HostBatchCreateIfaceInput(object):
         self._netmask = None
         self._name = None
         self._ip = None
+        self._gateway_ip = None
         self._function = None
         self.discriminator = None
 
@@ -54,6 +57,8 @@ class HostBatchCreateIfaceInput(object):
             self.name = kwargs["name"]
         if "ip" in kwargs:
             self.ip = kwargs["ip"]
+        if "gateway_ip" in kwargs:
+            self.gateway_ip = kwargs["gateway_ip"]
         if "function" in kwargs:
             self.function = kwargs["function"]
 
@@ -125,6 +130,29 @@ class HostBatchCreateIfaceInput(object):
             raise ValueError("Invalid value for `ip`, must not be `None`")  # noqa: E501
 
         self._ip = ip
+
+    @property
+    def gateway_ip(self):
+        """Gets the gateway_ip of this HostBatchCreateIfaceInput.  # noqa: E501
+
+
+        :return: The gateway_ip of this HostBatchCreateIfaceInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._gateway_ip
+
+    @gateway_ip.setter
+    def gateway_ip(self, gateway_ip):
+        """Sets the gateway_ip of this HostBatchCreateIfaceInput.
+
+
+        :param gateway_ip: The gateway_ip of this HostBatchCreateIfaceInput.  # noqa: E501
+        :type gateway_ip: str
+        """
+        if self.local_vars_configuration.client_side_validation and gateway_ip is None:  # noqa: E501
+            raise ValueError("Invalid value for `gateway_ip`, must not be `None`")  # noqa: E501
+
+        self._gateway_ip = gateway_ip
 
     @property
     def function(self):

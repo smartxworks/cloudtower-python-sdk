@@ -26,6 +26,7 @@ class IscsiTargetCommonParams(object):
     """
     openapi_types = {
         'bps_wr_max_length': 'int',
+        'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max_size': 'BPSUnit',
         'bps_wr_max': 'int',
         'bps_rd_max_length': 'int',
@@ -60,6 +61,7 @@ class IscsiTargetCommonParams(object):
 
     attribute_map = {
         'bps_wr_max_length': 'bps_wr_max_length',
+        'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max_size': 'bps_wr_max_size',
         'bps_wr_max': 'bps_wr_max',
         'bps_rd_max_length': 'bps_rd_max_length',
@@ -97,6 +99,7 @@ class IscsiTargetCommonParams(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._bps_wr_max_length = None
+        self._bps_wr_max_unit = None
         self._bps_wr_max_size = None
         self._bps_wr_max = None
         self._bps_rd_max_length = None
@@ -131,6 +134,8 @@ class IscsiTargetCommonParams(object):
 
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
+        if "bps_wr_max_unit" in kwargs:
+            self.bps_wr_max_unit = kwargs["bps_wr_max_unit"]
         if "bps_wr_max_size" in kwargs:
             self.bps_wr_max_size = kwargs["bps_wr_max_size"]
         if "bps_wr_max" in kwargs:
@@ -212,6 +217,27 @@ class IscsiTargetCommonParams(object):
         """
 
         self._bps_wr_max_length = bps_wr_max_length
+
+    @property
+    def bps_wr_max_unit(self):
+        """Gets the bps_wr_max_unit of this IscsiTargetCommonParams.  # noqa: E501
+
+
+        :return: The bps_wr_max_unit of this IscsiTargetCommonParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_max_unit
+
+    @bps_wr_max_unit.setter
+    def bps_wr_max_unit(self, bps_wr_max_unit):
+        """Sets the bps_wr_max_unit of this IscsiTargetCommonParams.
+
+
+        :param bps_wr_max_unit: The bps_wr_max_unit of this IscsiTargetCommonParams.  # noqa: E501
+        :type bps_wr_max_unit: BPSUnit
+        """
+
+        self._bps_wr_max_unit = bps_wr_max_unit
 
     @property
     def bps_wr_max_size(self):

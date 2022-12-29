@@ -22,10 +22,11 @@ class HostBatchCreateIfaceFunction(object):
     """
     ACCESS = "ACCESS"
     MANAGEMENT = "MANAGEMENT"
+    MIGRATION = "MIGRATION"
     STORAGE = "STORAGE"
     VMWARE_ACCESS = "VMWARE_ACCESS"
 
-    allowable_values = [ACCESS, MANAGEMENT, STORAGE, VMWARE_ACCESS]  # noqa: E501
+    allowable_values = [ACCESS, MANAGEMENT, MIGRATION, STORAGE, VMWARE_ACCESS]  # noqa: E501
 
     """
     Attributes:

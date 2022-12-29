@@ -25,6 +25,158 @@ class DatacenterApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def add_clusters_to_datacenter(self, add_clusters_to_datacenter_params, **kwargs):  # noqa: E501
+        """add_clusters_to_datacenter  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.add_clusters_to_datacenter(add_clusters_to_datacenter_params, async_req=True)
+        >>> result = thread.get()
+
+        :param add_clusters_to_datacenter_params: (required)
+        :type add_clusters_to_datacenter_params: list[AddClustersToDatacenterParams]
+        :param content_language:
+        :type content_language: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[WithTaskDatacenter]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.add_clusters_to_datacenter_with_http_info(add_clusters_to_datacenter_params, **kwargs)  # noqa: E501
+
+    def add_clusters_to_datacenter_with_http_info(self, add_clusters_to_datacenter_params, **kwargs):  # noqa: E501
+        """add_clusters_to_datacenter  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.add_clusters_to_datacenter_with_http_info(add_clusters_to_datacenter_params, async_req=True)
+        >>> result = thread.get()
+
+        :param add_clusters_to_datacenter_params: (required)
+        :type add_clusters_to_datacenter_params: list[AddClustersToDatacenterParams]
+        :param content_language:
+        :type content_language: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[WithTaskDatacenter], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'add_clusters_to_datacenter_params',
+            'content_language'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_clusters_to_datacenter" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'add_clusters_to_datacenter_params' is set
+        if self.api_client.client_side_validation and ('add_clusters_to_datacenter_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['add_clusters_to_datacenter_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `add_clusters_to_datacenter_params` when calling `add_clusters_to_datacenter`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'add_clusters_to_datacenter_params' in local_var_params:
+            body_params = local_var_params['add_clusters_to_datacenter_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[WithTaskDatacenter]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/add-clusters-to-datacenter', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
     def create_datacenter(self, datacenter_creation_params, **kwargs):  # noqa: E501
         """create_datacenter  # noqa: E501
 
@@ -618,6 +770,158 @@ class DatacenterApi(object):
 
         return self.api_client.call_api(
             '/get-datacenters-connection', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def remove_clusters_from_datacenter(self, remove_clusters_from_datacenter_params, **kwargs):  # noqa: E501
+        """remove_clusters_from_datacenter  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.remove_clusters_from_datacenter(remove_clusters_from_datacenter_params, async_req=True)
+        >>> result = thread.get()
+
+        :param remove_clusters_from_datacenter_params: (required)
+        :type remove_clusters_from_datacenter_params: list[RemoveClustersFromDatacenterParams]
+        :param content_language:
+        :type content_language: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[WithTaskDatacenter]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.remove_clusters_from_datacenter_with_http_info(remove_clusters_from_datacenter_params, **kwargs)  # noqa: E501
+
+    def remove_clusters_from_datacenter_with_http_info(self, remove_clusters_from_datacenter_params, **kwargs):  # noqa: E501
+        """remove_clusters_from_datacenter  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.remove_clusters_from_datacenter_with_http_info(remove_clusters_from_datacenter_params, async_req=True)
+        >>> result = thread.get()
+
+        :param remove_clusters_from_datacenter_params: (required)
+        :type remove_clusters_from_datacenter_params: list[RemoveClustersFromDatacenterParams]
+        :param content_language:
+        :type content_language: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[WithTaskDatacenter], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'remove_clusters_from_datacenter_params',
+            'content_language'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method remove_clusters_from_datacenter" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'remove_clusters_from_datacenter_params' is set
+        if self.api_client.client_side_validation and ('remove_clusters_from_datacenter_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['remove_clusters_from_datacenter_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `remove_clusters_from_datacenter_params` when calling `remove_clusters_from_datacenter`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'remove_clusters_from_datacenter_params' in local_var_params:
+            body_params = local_var_params['remove_clusters_from_datacenter_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[WithTaskDatacenter]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/remove-clusters-from-datacenter', 'POST',
             path_params,
             query_params,
             header_params,

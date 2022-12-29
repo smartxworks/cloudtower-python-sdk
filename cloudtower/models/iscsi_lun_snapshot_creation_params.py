@@ -25,12 +25,14 @@ class IscsiLunSnapshotCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'effect': 'IscsiLunSnapshotCreationEffect',
         'iscsi_target_id': 'str',
         'name': 'str',
         'iscsi_lun_id': 'str'
     }
 
     attribute_map = {
+        'effect': 'effect',
         'iscsi_target_id': 'iscsi_target_id',
         'name': 'name',
         'iscsi_lun_id': 'iscsi_lun_id'
@@ -40,17 +42,41 @@ class IscsiLunSnapshotCreationParams(object):
         """IscsiLunSnapshotCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._effect = None
         self._iscsi_target_id = None
         self._name = None
         self._iscsi_lun_id = None
         self.discriminator = None
 
+        if "effect" in kwargs:
+            self.effect = kwargs["effect"]
         if "iscsi_target_id" in kwargs:
             self.iscsi_target_id = kwargs["iscsi_target_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
         if "iscsi_lun_id" in kwargs:
             self.iscsi_lun_id = kwargs["iscsi_lun_id"]
+
+    @property
+    def effect(self):
+        """Gets the effect of this IscsiLunSnapshotCreationParams.  # noqa: E501
+
+
+        :return: The effect of this IscsiLunSnapshotCreationParams.  # noqa: E501
+        :rtype: IscsiLunSnapshotCreationEffect
+        """
+        return self._effect
+
+    @effect.setter
+    def effect(self, effect):
+        """Sets the effect of this IscsiLunSnapshotCreationParams.
+
+
+        :param effect: The effect of this IscsiLunSnapshotCreationParams.  # noqa: E501
+        :type effect: IscsiLunSnapshotCreationEffect
+        """
+
+        self._effect = effect
 
     @property
     def iscsi_target_id(self):

@@ -29,6 +29,7 @@ class Metric(object):
         'step': 'int',
         'samples': 'list[MetricSample]',
         'sample_streams': 'list[MetricStream]',
+        'dropped': 'bool',
         'typename': 'str'
     }
 
@@ -37,6 +38,7 @@ class Metric(object):
         'step': 'step',
         'samples': 'samples',
         'sample_streams': 'sample_streams',
+        'dropped': 'dropped',
         'typename': '__typename'
     }
 
@@ -48,6 +50,7 @@ class Metric(object):
         self._step = None
         self._samples = None
         self._sample_streams = None
+        self._dropped = None
         self._typename = None
         self.discriminator = None
 
@@ -57,6 +60,8 @@ class Metric(object):
             self.step = kwargs["step"]
         self.samples = kwargs.get("samples", None)
         self.sample_streams = kwargs.get("sample_streams", None)
+        if "dropped" in kwargs:
+            self.dropped = kwargs["dropped"]
         if "typename" in kwargs:
             self.typename = kwargs["typename"]
 
@@ -147,6 +152,29 @@ class Metric(object):
         """
 
         self._sample_streams = sample_streams
+
+    @property
+    def dropped(self):
+        """Gets the dropped of this Metric.  # noqa: E501
+
+
+        :return: The dropped of this Metric.  # noqa: E501
+        :rtype: bool
+        """
+        return self._dropped
+
+    @dropped.setter
+    def dropped(self, dropped):
+        """Sets the dropped of this Metric.
+
+
+        :param dropped: The dropped of this Metric.  # noqa: E501
+        :type dropped: bool
+        """
+        if self.local_vars_configuration.client_side_validation and dropped is None:  # noqa: E501
+            raise ValueError("Invalid value for `dropped`, must not be `None`")  # noqa: E501
+
+        self._dropped = dropped
 
     @property
     def typename(self):

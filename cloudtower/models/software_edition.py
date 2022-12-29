@@ -23,10 +23,11 @@ class SoftwareEdition(object):
     COMMUNITY = "COMMUNITY"
     ENTERPRISE = "ENTERPRISE"
     ESSENTIAL = "ESSENTIAL"
+    EXPRESS = "EXPRESS"
     STANDARD = "STANDARD"
     TRIAL = "TRIAL"
 
-    allowable_values = [COMMUNITY, ENTERPRISE, ESSENTIAL, STANDARD, TRIAL]  # noqa: E501
+    allowable_values = [COMMUNITY, ENTERPRISE, ESSENTIAL, EXPRESS, STANDARD, TRIAL]  # noqa: E501
 
     """
     Attributes:

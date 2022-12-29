@@ -25,10 +25,12 @@ class UsbDeviceUnmountParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'data': 'UsbDeviceUnmountParamsData',
         'where': 'UsbDeviceWhereInput'
     }
 
     attribute_map = {
+        'data': 'data',
         'where': 'where'
     }
 
@@ -36,11 +38,35 @@ class UsbDeviceUnmountParams(object):
         """UsbDeviceUnmountParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._data = None
         self._where = None
         self.discriminator = None
 
+        if "data" in kwargs:
+            self.data = kwargs["data"]
         if "where" in kwargs:
             self.where = kwargs["where"]
+
+    @property
+    def data(self):
+        """Gets the data of this UsbDeviceUnmountParams.  # noqa: E501
+
+
+        :return: The data of this UsbDeviceUnmountParams.  # noqa: E501
+        :rtype: UsbDeviceUnmountParamsData
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this UsbDeviceUnmountParams.
+
+
+        :param data: The data of this UsbDeviceUnmountParams.  # noqa: E501
+        :type data: UsbDeviceUnmountParamsData
+        """
+
+        self._data = data
 
     @property
     def where(self):
