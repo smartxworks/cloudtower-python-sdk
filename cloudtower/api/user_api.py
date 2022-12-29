@@ -939,7 +939,7 @@ class UserApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: WithTaskTokenString
+        :rtype: WithTaskLoginResponse
         """
         kwargs['_return_http_data_only'] = True
         return self.login_with_http_info(login_input, **kwargs)  # noqa: E501
@@ -978,7 +978,7 @@ class UserApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(WithTaskTokenString, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(WithTaskLoginResponse, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1042,7 +1042,7 @@ class UserApi(object):
         auth_settings = []  # noqa: E501
 
         response_types_map = {
-            200: "WithTaskTokenString",
+            200: "WithTaskLoginResponse",
             400: "ErrorBody",
             404: "ErrorBody",
             500: "ErrorBody",

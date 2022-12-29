@@ -135,7 +135,9 @@ class UsbDeviceWhereInput(object):
         'usb_type_not_in': 'list[str]',
         'usb_type_not_starts_with': 'str',
         'usb_type_starts_with': 'str',
-        'vm': 'VmWhereInput'
+        'vms_every': 'VmWhereInput',
+        'vms_none': 'VmWhereInput',
+        'vms_some': 'VmWhereInput'
     }
 
     attribute_map = {
@@ -249,7 +251,9 @@ class UsbDeviceWhereInput(object):
         'usb_type_not_in': 'usb_type_not_in',
         'usb_type_not_starts_with': 'usb_type_not_starts_with',
         'usb_type_starts_with': 'usb_type_starts_with',
-        'vm': 'vm'
+        'vms_every': 'vms_every',
+        'vms_none': 'vms_none',
+        'vms_some': 'vms_some'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -366,7 +370,9 @@ class UsbDeviceWhereInput(object):
         self._usb_type_not_in = None
         self._usb_type_not_starts_with = None
         self._usb_type_starts_with = None
-        self._vm = None
+        self._vms_every = None
+        self._vms_none = None
+        self._vms_some = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -479,7 +485,9 @@ class UsbDeviceWhereInput(object):
         self.usb_type_not_in = kwargs.get("usb_type_not_in", None)
         self.usb_type_not_starts_with = kwargs.get("usb_type_not_starts_with", None)
         self.usb_type_starts_with = kwargs.get("usb_type_starts_with", None)
-        self.vm = kwargs.get("vm", None)
+        self.vms_every = kwargs.get("vms_every", None)
+        self.vms_none = kwargs.get("vms_none", None)
+        self.vms_some = kwargs.get("vms_some", None)
 
     @property
     def _and(self):
@@ -2792,25 +2800,67 @@ class UsbDeviceWhereInput(object):
         self._usb_type_starts_with = usb_type_starts_with
 
     @property
-    def vm(self):
-        """Gets the vm of this UsbDeviceWhereInput.  # noqa: E501
+    def vms_every(self):
+        """Gets the vms_every of this UsbDeviceWhereInput.  # noqa: E501
 
 
-        :return: The vm of this UsbDeviceWhereInput.  # noqa: E501
+        :return: The vms_every of this UsbDeviceWhereInput.  # noqa: E501
         :rtype: VmWhereInput
         """
-        return self._vm
+        return self._vms_every
 
-    @vm.setter
-    def vm(self, vm):
-        """Sets the vm of this UsbDeviceWhereInput.
+    @vms_every.setter
+    def vms_every(self, vms_every):
+        """Sets the vms_every of this UsbDeviceWhereInput.
 
 
-        :param vm: The vm of this UsbDeviceWhereInput.  # noqa: E501
-        :type vm: VmWhereInput
+        :param vms_every: The vms_every of this UsbDeviceWhereInput.  # noqa: E501
+        :type vms_every: VmWhereInput
         """
 
-        self._vm = vm
+        self._vms_every = vms_every
+
+    @property
+    def vms_none(self):
+        """Gets the vms_none of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The vms_none of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_none
+
+    @vms_none.setter
+    def vms_none(self, vms_none):
+        """Sets the vms_none of this UsbDeviceWhereInput.
+
+
+        :param vms_none: The vms_none of this UsbDeviceWhereInput.  # noqa: E501
+        :type vms_none: VmWhereInput
+        """
+
+        self._vms_none = vms_none
+
+    @property
+    def vms_some(self):
+        """Gets the vms_some of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The vms_some of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_some
+
+    @vms_some.setter
+    def vms_some(self, vms_some):
+        """Sets the vms_some of this UsbDeviceWhereInput.
+
+
+        :param vms_some: The vms_some of this UsbDeviceWhereInput.  # noqa: E501
+        :type vms_some: VmWhereInput
+        """
+
+        self._vms_some = vms_some
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

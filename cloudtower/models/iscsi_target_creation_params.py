@@ -33,6 +33,7 @@ class IscsiTargetCreationParams(object):
         'cluster_id': 'str',
         'name': 'str',
         'bps_wr_max_length': 'int',
+        'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max_size': 'BPSUnit',
         'bps_wr_max': 'int',
         'bps_rd_max_length': 'int',
@@ -74,6 +75,7 @@ class IscsiTargetCreationParams(object):
         'cluster_id': 'cluster_id',
         'name': 'name',
         'bps_wr_max_length': 'bps_wr_max_length',
+        'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max_size': 'bps_wr_max_size',
         'bps_wr_max': 'bps_wr_max',
         'bps_rd_max_length': 'bps_rd_max_length',
@@ -118,6 +120,7 @@ class IscsiTargetCreationParams(object):
         self._cluster_id = None
         self._name = None
         self._bps_wr_max_length = None
+        self._bps_wr_max_unit = None
         self._bps_wr_max_size = None
         self._bps_wr_max = None
         self._bps_rd_max_length = None
@@ -166,6 +169,8 @@ class IscsiTargetCreationParams(object):
             self.name = kwargs["name"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
+        if "bps_wr_max_unit" in kwargs:
+            self.bps_wr_max_unit = kwargs["bps_wr_max_unit"]
         if "bps_wr_max_size" in kwargs:
             self.bps_wr_max_size = kwargs["bps_wr_max_size"]
         if "bps_wr_max" in kwargs:
@@ -406,6 +411,27 @@ class IscsiTargetCreationParams(object):
         """
 
         self._bps_wr_max_length = bps_wr_max_length
+
+    @property
+    def bps_wr_max_unit(self):
+        """Gets the bps_wr_max_unit of this IscsiTargetCreationParams.  # noqa: E501
+
+
+        :return: The bps_wr_max_unit of this IscsiTargetCreationParams.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._bps_wr_max_unit
+
+    @bps_wr_max_unit.setter
+    def bps_wr_max_unit(self, bps_wr_max_unit):
+        """Sets the bps_wr_max_unit of this IscsiTargetCreationParams.
+
+
+        :param bps_wr_max_unit: The bps_wr_max_unit of this IscsiTargetCreationParams.  # noqa: E501
+        :type bps_wr_max_unit: BPSUnit
+        """
+
+        self._bps_wr_max_unit = bps_wr_max_unit
 
     @property
     def bps_wr_max_size(self):
