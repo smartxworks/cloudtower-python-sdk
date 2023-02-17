@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.5.0"
+__version__ = "2.6.0"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
