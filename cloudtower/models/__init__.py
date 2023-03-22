@@ -1078,6 +1078,8 @@ from cloudtower.models.vm_connection import VmConnection
 from cloudtower.models.vm_create_vm_from_content_library_template_params import VmCreateVmFromContentLibraryTemplateParams
 from cloudtower.models.vm_create_vm_from_template_params import VmCreateVmFromTemplateParams
 from cloudtower.models.vm_creation_params import VmCreationParams
+from cloudtower.models.vm_delete_params import VmDeleteParams
+from cloudtower.models.vm_delete_params_effect import VmDeleteParamsEffect
 from cloudtower.models.vm_disk import VmDisk
 from cloudtower.models.vm_disk_connection import VmDiskConnection
 from cloudtower.models.vm_disk_io_policy import VmDiskIoPolicy

@@ -1546,17 +1546,17 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def delete_vm(self, vm_operate_params, **kwargs):  # noqa: E501
+    def delete_vm(self, vm_delete_params, **kwargs):  # noqa: E501
         """delete_vm  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_vm(vm_operate_params, async_req=True)
+        >>> thread = api.delete_vm(vm_delete_params, async_req=True)
         >>> result = thread.get()
 
-        :param vm_operate_params: (required)
-        :type vm_operate_params: VmOperateParams
+        :param vm_delete_params: (required)
+        :type vm_delete_params: VmDeleteParams
         :param content_language:
         :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1575,19 +1575,19 @@ class VmApi(object):
         :rtype: list[WithTaskDeleteVm]
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_vm_with_http_info(vm_operate_params, **kwargs)  # noqa: E501
+        return self.delete_vm_with_http_info(vm_delete_params, **kwargs)  # noqa: E501
 
-    def delete_vm_with_http_info(self, vm_operate_params, **kwargs):  # noqa: E501
+    def delete_vm_with_http_info(self, vm_delete_params, **kwargs):  # noqa: E501
         """delete_vm  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_vm_with_http_info(vm_operate_params, async_req=True)
+        >>> thread = api.delete_vm_with_http_info(vm_delete_params, async_req=True)
         >>> result = thread.get()
 
-        :param vm_operate_params: (required)
-        :type vm_operate_params: VmOperateParams
+        :param vm_delete_params: (required)
+        :type vm_delete_params: VmDeleteParams
         :param content_language:
         :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
@@ -1617,7 +1617,7 @@ class VmApi(object):
         local_var_params = locals()
 
         all_params = [
-            'vm_operate_params',
+            'vm_delete_params',
             'content_language'
         ]
         all_params.extend(
@@ -1640,10 +1640,10 @@ class VmApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'vm_operate_params' is set
-        if self.api_client.client_side_validation and ('vm_operate_params' not in local_var_params or  # noqa: E501
-                                                        local_var_params['vm_operate_params'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `vm_operate_params` when calling `delete_vm`")  # noqa: E501
+        # verify the required parameter 'vm_delete_params' is set
+        if self.api_client.client_side_validation and ('vm_delete_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['vm_delete_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `vm_delete_params` when calling `delete_vm`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1659,8 +1659,8 @@ class VmApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'vm_operate_params' in local_var_params:
-            body_params = local_var_params['vm_operate_params']
+        if 'vm_delete_params' in local_var_params:
+            body_params = local_var_params['vm_delete_params']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

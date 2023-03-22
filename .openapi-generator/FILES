@@ -1172,6 +1172,8 @@ cloudtower/models/vm_connection.py
 cloudtower/models/vm_create_vm_from_content_library_template_params.py
 cloudtower/models/vm_create_vm_from_template_params.py
 cloudtower/models/vm_creation_params.py
+cloudtower/models/vm_delete_params.py
+cloudtower/models/vm_delete_params_effect.py
 cloudtower/models/vm_disk.py
 cloudtower/models/vm_disk_connection.py
 cloudtower/models/vm_disk_io_policy.py
