@@ -1,18 +1,35 @@
 # RELEASE NOTE
 
+## release 日期 2022-03-22
+
+v2.7.0 release
+
+- optimize: VmApi: [delete_vm] 更新参数类型为 `VmDeleteParams`，添加 `effect` 允许删除相关的快照
+- feature: [vm_usage] 枚举添加:
+  - `BUNDLE_APPLICATION`
+- feature: [ROLE_ACTION] 枚举添加:
+  - `MANAGE_OBSERVABILITY_PACKAGE`
+  - `MANAGE_OBSERVABILITY_SERVICE`
+- feature: [software_edition] 枚举添加：
+  - `ENTERPRISE_PLUS`
+- feature: [upload_resource_type] 枚举添加:
+  - `HOST_PLUGIN_PACKAGE`
+- feature: [task_type] 枚举添加:
+  - `HOST_PLUGIN`
+
 ## release 日期 2023-02-20
 
 v2.6.0 release
 
-- feature: [vm_usage] 枚举添加 SKS_MANAGEMENT 与 REGISTRY
+- feature: [vm_usage] 枚举添加 `SKS_MANAGEMENT` 与 `REGISTRY`
 - feature: [ROLEACTION] 枚举添加:
-  - MANAGE_SKS_SERVICE
-  - MANAGE_SKS_LICENSE
-  - CONFIGURE_SKS_SERVICE
-  - CREATE_SKS_WORKLOAD_CLUSTER
-  - DELETE_SKS_WORKLOAD_CLUSTER
-  - UPDATE_SKS_WORKLOAD_CLUSTER
-  - DOWNLOAD_SKS_WORKLOAD_CLUSTER_KUBECONFIG
+  - `MANAGE_SKS_SERVICE`
+  - `MANAGE_SKS_LICENSE`
+  - `CONFIGURE_SKS_SERVICE`
+  - `CREATE_SKS_WORKLOAD_CLUSTER`
+  - `DELETE_SKS_WORKLOAD_CLUSTER`
+  - `UPDATE_SKS_WORKLOAD_CLUSTER`
+  - `DOWNLOAD_SKS_WORKLOAD_CLUSTER_KUBECONFIG`
 
 ## release 日期 2023-01-03
 
