@@ -57,7 +57,7 @@ class TestIscsiLun:
                 remove_snapshot=True
             )
         )
-        delete_result - iscsi_lun_api.delete_iscsi_lun(
+        delete_result = iscsi_lun_api.delete_iscsi_lun(
             iscsi_lun_deletion_params=delete_param
         )
         assert delete_result is not None

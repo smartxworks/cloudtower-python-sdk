@@ -2,7 +2,8 @@ import pytest
 import time
 from cloudtower.models import (
     IscsiTargetCreationParams,
-    IscsiTargetDeletionParams
+    IscsiTargetDeletionParams,
+    IscsiTargetWhereInput
 )
 
 

@@ -1,5 +1,5 @@
 {
-  "endpoint": "http://yinsw-terraform.dev-cloudtower.smartx.com/",
+  "endpoint": "endpoint",
   "username": "root",
   "password": "password",
   "usersource": "LOCAL",

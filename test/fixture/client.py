@@ -17,9 +17,9 @@ def login_info():
 
 
 @pytest.fixture(scope="session")
-def configuration():
+def configuration(login_info):
     return Configuration(
-        host="http://yinsw-terraform.dev-cloudtower.smartx.com/v2/api"
+        host=login_info["endpoint"]+"/v2/api"
     )
 
 

@@ -6,7 +6,9 @@ from cloudtower.models import (
     IscsiLunSnapshotDeletionParams,
     IscsiLunSnapshotWhereInput,
     IscsiLunCloneParams,
-    IscsiLunRollbackParams
+    IscsiLunRollbackParams,
+    IscsiLunDeletionParams,
+    IscsiLunWhereInput
 )
 
 

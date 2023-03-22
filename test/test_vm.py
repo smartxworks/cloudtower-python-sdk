@@ -146,7 +146,7 @@ class TestVm:
                 host_id=host.id
             )
         )
-        migrate_result = vm_api.mig_rate_vm(vm_migrate_params=migrate_params)
+        migrate_result = vm_api.migrate_vm(vm_migrate_params=migrate_params)
         assert migrate_result is not None
         wait_task(migrate_result[0].task_id)
         wait_task(
