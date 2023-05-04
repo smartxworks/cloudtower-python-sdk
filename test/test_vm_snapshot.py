@@ -7,7 +7,7 @@ from cloudtower.models import (
     VmSnapshotDeletionParams,
     VmSnapshotWhereInput,
     VmRebuildParams,
-    VmOperateParams,
+    VmDeleteParams,
     VmWhereInput,
     VmRollbackParams,
     VmRollbackParamsData
@@ -72,7 +72,7 @@ class TestVmSnapshot:
         wait_task(rebuild_result[0].task_id)
         wait_task(
             vm_api.delete_vm(
-                vm_operate_params=VmOperateParams(
+                vm_delete_params=VmDeleteParams(
                     where=VmWhereInput(
                         id=rebuild_result[0].data.id
                     )

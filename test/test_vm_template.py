@@ -11,6 +11,7 @@ from cloudtower.models import (
     ConvertVmTemplateToVmParams,
     VmCreateVmFromTemplateParams,
     VmOperateParams,
+    VmDeleteParams,
     VmWhereInput,
 )
 
@@ -115,13 +116,13 @@ class TestVmTemplate:
         assert convert_result is not None
         wait_task(convert_result[0].task_id)
 
-        delete_param = VmOperateParams(
+        delete_param = VmDeleteParams(
             where=VmWhereInput(
                 id=convert_result[0].data.id
             )
         )
         delete_result = vm_api.delete_vm(
-            vm_operate_params=delete_param
+            vm_delete_params=delete_param
         )
         wait_task(delete_result[0].task_id)
 
@@ -140,12 +141,12 @@ class TestVmTemplate:
         assert create_result is not None
         wait_task(create_result[0].task_id)
 
-        delete_param = VmOperateParams(
+        delete_param = VmDeleteParams(
             where=VmWhereInput(
                 id=create_result[0].data.id
             )
         )
         delete_result = vm_api.delete_vm(
-            vm_operate_params=delete_param
+            vm_delete_params=delete_param
         )
         wait_task(delete_result[0].task_id)

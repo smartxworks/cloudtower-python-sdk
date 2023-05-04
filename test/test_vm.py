@@ -39,7 +39,8 @@ from cloudtower.models import (
     VmUpdateNicParams,
     VmUpdateNicParamsData,
     VmRemoveNicParams,
-    VmRemoveNicParamsData
+    VmRemoveNicParamsData,
+    VmDeleteParams
 )
 
 
@@ -96,7 +97,7 @@ class TestVm:
                 id=create_vm.id
             )
         )
-        delete_result = vm_api.delete_vm(vm_operate_params=deletion_params)
+        delete_result = vm_api.delete_vm(vm_delete_params=deletion_params)
         delete_task_id = delete_result[0].task_id
         wait_task(id=delete_task_id)
         assert 0 is 0
@@ -111,7 +112,7 @@ class TestVm:
         wait_task(clone_result[0].task_id)
         wait_task(
             vm_api.delete_vm(
-                vm_operate_params=VmOperateParams(
+                vm_delete_params=VmDeleteParams(
                     where=VmWhereInput(
                         id=clone_result[0].data.id
                     )
@@ -150,7 +151,7 @@ class TestVm:
         assert migrate_result is not None
         wait_task(migrate_result[0].task_id)
         wait_task(
-            vm_api.delete_vm(vm_operate_params=VmOperateParams(
+            vm_api.delete_vm(vm_delete_params=VmOperateParams(
                 where=VmWhereInput(
                     id=migrate_result[0].data.id
                 )
