@@ -95,6 +95,12 @@ class VmVlanCreationParams(object):
         """
         if self.local_vars_configuration.client_side_validation and vlan_id is None:  # noqa: E501
             raise ValueError("Invalid value for `vlan_id`, must not be `None`")  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                vlan_id is not None and vlan_id > 4095):  # noqa: E501
+            raise ValueError("Invalid value for `vlan_id`, must be a value less than or equal to `4095`")  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                vlan_id is not None and vlan_id < 0):  # noqa: E501
+            raise ValueError("Invalid value for `vlan_id`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._vlan_id = vlan_id
 
