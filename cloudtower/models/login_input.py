@@ -27,13 +27,17 @@ class LoginInput(object):
     openapi_types = {
         'username': 'str',
         'source': 'UserSource',
-        'password': 'str'
+        'password': 'str',
+        'mfa_type': 'MfaType',
+        'auth_config_id': 'str'
     }
 
     attribute_map = {
         'username': 'username',
         'source': 'source',
-        'password': 'password'
+        'password': 'password',
+        'mfa_type': 'mfa_type',
+        'auth_config_id': 'auth_config_id'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -43,14 +47,17 @@ class LoginInput(object):
         self._username = None
         self._source = None
         self._password = None
+        self._mfa_type = None
+        self._auth_config_id = None
         self.discriminator = None
 
         if "username" in kwargs:
             self.username = kwargs["username"]
-        if "source" in kwargs:
-            self.source = kwargs["source"]
+        self.source = kwargs.get("source", None)
         if "password" in kwargs:
             self.password = kwargs["password"]
+        self.mfa_type = kwargs.get("mfa_type", None)
+        self.auth_config_id = kwargs.get("auth_config_id", None)
 
     @property
     def username(self):
@@ -93,8 +100,6 @@ class LoginInput(object):
         :param source: The source of this LoginInput.  # noqa: E501
         :type source: UserSource
         """
-        if self.local_vars_configuration.client_side_validation and source is None:  # noqa: E501
-            raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
 
         self._source = source
 
@@ -120,6 +125,48 @@ class LoginInput(object):
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
+
+    @property
+    def mfa_type(self):
+        """Gets the mfa_type of this LoginInput.  # noqa: E501
+
+
+        :return: The mfa_type of this LoginInput.  # noqa: E501
+        :rtype: MfaType
+        """
+        return self._mfa_type
+
+    @mfa_type.setter
+    def mfa_type(self, mfa_type):
+        """Sets the mfa_type of this LoginInput.
+
+
+        :param mfa_type: The mfa_type of this LoginInput.  # noqa: E501
+        :type mfa_type: MfaType
+        """
+
+        self._mfa_type = mfa_type
+
+    @property
+    def auth_config_id(self):
+        """Gets the auth_config_id of this LoginInput.  # noqa: E501
+
+
+        :return: The auth_config_id of this LoginInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id
+
+    @auth_config_id.setter
+    def auth_config_id(self, auth_config_id):
+        """Sets the auth_config_id of this LoginInput.
+
+
+        :param auth_config_id: The auth_config_id of this LoginInput.  # noqa: E501
+        :type auth_config_id: str
+        """
+
+        self._auth_config_id = auth_config_id
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

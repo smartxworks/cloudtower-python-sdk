@@ -102,8 +102,7 @@ class Alert(object):
         self.alert_rule = kwargs.get("alert_rule", None)
         if "cause" in kwargs:
             self.cause = kwargs["cause"]
-        if "cluster" in kwargs:
-            self.cluster = kwargs["cluster"]
+        self.cluster = kwargs.get("cluster", None)
         self.create_time = kwargs.get("create_time", None)
         self.disk = kwargs.get("disk", None)
         if "ended" in kwargs:
@@ -199,8 +198,6 @@ class Alert(object):
         :param cluster: The cluster of this Alert.  # noqa: E501
         :type cluster: NestedCluster
         """
-        if self.local_vars_configuration.client_side_validation and cluster is None:  # noqa: E501
-            raise ValueError("Invalid value for `cluster`, must not be `None`")  # noqa: E501
 
         self._cluster = cluster
 

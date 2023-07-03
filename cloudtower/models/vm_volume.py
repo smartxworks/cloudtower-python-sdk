@@ -28,6 +28,7 @@ class VmVolume(object):
         'cluster': 'NestedCluster',
         'description': 'str',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'entity_async_status': 'EntityAsyncStatus',
         'guest_size_usage': 'float',
         'guest_used_size': 'int',
         'id': 'str',
@@ -49,6 +50,7 @@ class VmVolume(object):
         'cluster': 'cluster',
         'description': 'description',
         'elf_storage_policy': 'elf_storage_policy',
+        'entity_async_status': 'entityAsyncStatus',
         'guest_size_usage': 'guest_size_usage',
         'guest_used_size': 'guest_used_size',
         'id': 'id',
@@ -73,6 +75,7 @@ class VmVolume(object):
         self._cluster = None
         self._description = None
         self._elf_storage_policy = None
+        self._entity_async_status = None
         self._guest_size_usage = None
         self._guest_used_size = None
         self._id = None
@@ -95,6 +98,7 @@ class VmVolume(object):
         self.description = kwargs.get("description", None)
         if "elf_storage_policy" in kwargs:
             self.elf_storage_policy = kwargs["elf_storage_policy"]
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         self.guest_size_usage = kwargs.get("guest_size_usage", None)
         self.guest_used_size = kwargs.get("guest_used_size", None)
         if "id" in kwargs:
@@ -185,6 +189,27 @@ class VmVolume(object):
             raise ValueError("Invalid value for `elf_storage_policy`, must not be `None`")  # noqa: E501
 
         self._elf_storage_policy = elf_storage_policy
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this VmVolume.  # noqa: E501
+
+
+        :return: The entity_async_status of this VmVolume.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this VmVolume.
+
+
+        :param entity_async_status: The entity_async_status of this VmVolume.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def guest_size_usage(self):

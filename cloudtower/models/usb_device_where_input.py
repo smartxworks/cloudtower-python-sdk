@@ -42,6 +42,10 @@ class UsbDeviceWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'entity_async_status': 'EntityAsyncStatus',
+        'entity_async_status_in': 'list[EntityAsyncStatus]',
+        'entity_async_status_not': 'EntityAsyncStatus',
+        'entity_async_status_not_in': 'list[EntityAsyncStatus]',
         'host': 'HostWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -158,6 +162,10 @@ class UsbDeviceWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'entity_async_status': 'entityAsyncStatus',
+        'entity_async_status_in': 'entityAsyncStatus_in',
+        'entity_async_status_not': 'entityAsyncStatus_not',
+        'entity_async_status_not_in': 'entityAsyncStatus_not_in',
         'host': 'host',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -277,6 +285,10 @@ class UsbDeviceWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._entity_async_status = None
+        self._entity_async_status_in = None
+        self._entity_async_status_not = None
+        self._entity_async_status_not_in = None
         self._host = None
         self._id = None
         self._id_contains = None
@@ -392,6 +404,10 @@ class UsbDeviceWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
+        self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
+        self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
         self.host = kwargs.get("host", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -845,6 +861,90 @@ class UsbDeviceWhereInput(object):
         """
 
         self._description_starts_with = description_starts_with
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this UsbDeviceWhereInput.
+
+
+        :param entity_async_status: The entity_async_status of this UsbDeviceWhereInput.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
+    def entity_async_status_in(self):
+        """Gets the entity_async_status_in of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_in of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_in
+
+    @entity_async_status_in.setter
+    def entity_async_status_in(self, entity_async_status_in):
+        """Sets the entity_async_status_in of this UsbDeviceWhereInput.
+
+
+        :param entity_async_status_in: The entity_async_status_in of this UsbDeviceWhereInput.  # noqa: E501
+        :type entity_async_status_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_in = entity_async_status_in
+
+    @property
+    def entity_async_status_not(self):
+        """Gets the entity_async_status_not of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status_not
+
+    @entity_async_status_not.setter
+    def entity_async_status_not(self, entity_async_status_not):
+        """Sets the entity_async_status_not of this UsbDeviceWhereInput.
+
+
+        :param entity_async_status_not: The entity_async_status_not of this UsbDeviceWhereInput.  # noqa: E501
+        :type entity_async_status_not: EntityAsyncStatus
+        """
+
+        self._entity_async_status_not = entity_async_status_not
+
+    @property
+    def entity_async_status_not_in(self):
+        """Gets the entity_async_status_not_in of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not_in of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_not_in
+
+    @entity_async_status_not_in.setter
+    def entity_async_status_not_in(self, entity_async_status_not_in):
+        """Sets the entity_async_status_not_in of this UsbDeviceWhereInput.
+
+
+        :param entity_async_status_not_in: The entity_async_status_not_in of this UsbDeviceWhereInput.  # noqa: E501
+        :type entity_async_status_not_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
     def host(self):

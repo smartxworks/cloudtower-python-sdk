@@ -59,10 +59,8 @@ class UserUpdationParamsData(object):
 
         if "internal" in kwargs:
             self.internal = kwargs["internal"]
-        if "mobile_phone" in kwargs:
-            self.mobile_phone = kwargs["mobile_phone"]
-        if "email_address" in kwargs:
-            self.email_address = kwargs["email_address"]
+        self.mobile_phone = kwargs.get("mobile_phone", None)
+        self.email_address = kwargs.get("email_address", None)
         if "role_id" in kwargs:
             self.role_id = kwargs["role_id"]
         if "name" in kwargs:

@@ -44,6 +44,10 @@ class NicWhereInput(object):
         'driver_state_in': 'list[NicDriverState]',
         'driver_state_not': 'NicDriverState',
         'driver_state_not_in': 'list[NicDriverState]',
+        'entity_async_status': 'EntityAsyncStatus',
+        'entity_async_status_in': 'list[EntityAsyncStatus]',
+        'entity_async_status_not': 'EntityAsyncStatus',
+        'entity_async_status_not_in': 'list[EntityAsyncStatus]',
         'gateway_ip': 'str',
         'gateway_ip_contains': 'str',
         'gateway_ip_ends_with': 'str',
@@ -267,6 +271,10 @@ class NicWhereInput(object):
         'driver_state_in': 'driver_state_in',
         'driver_state_not': 'driver_state_not',
         'driver_state_not_in': 'driver_state_not_in',
+        'entity_async_status': 'entityAsyncStatus',
+        'entity_async_status_in': 'entityAsyncStatus_in',
+        'entity_async_status_not': 'entityAsyncStatus_not',
+        'entity_async_status_not_in': 'entityAsyncStatus_not_in',
         'gateway_ip': 'gateway_ip',
         'gateway_ip_contains': 'gateway_ip_contains',
         'gateway_ip_ends_with': 'gateway_ip_ends_with',
@@ -493,6 +501,10 @@ class NicWhereInput(object):
         self._driver_state_in = None
         self._driver_state_not = None
         self._driver_state_not_in = None
+        self._entity_async_status = None
+        self._entity_async_status_in = None
+        self._entity_async_status_not = None
+        self._entity_async_status_not_in = None
         self._gateway_ip = None
         self._gateway_ip_contains = None
         self._gateway_ip_ends_with = None
@@ -715,6 +727,10 @@ class NicWhereInput(object):
         self.driver_state_in = kwargs.get("driver_state_in", None)
         self.driver_state_not = kwargs.get("driver_state_not", None)
         self.driver_state_not_in = kwargs.get("driver_state_not_in", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
+        self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
+        self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
         self.gateway_ip = kwargs.get("gateway_ip", None)
         self.gateway_ip_contains = kwargs.get("gateway_ip_contains", None)
         self.gateway_ip_ends_with = kwargs.get("gateway_ip_ends_with", None)
@@ -1315,6 +1331,90 @@ class NicWhereInput(object):
         """
 
         self._driver_state_not_in = driver_state_not_in
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this NicWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status of this NicWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this NicWhereInput.
+
+
+        :param entity_async_status: The entity_async_status of this NicWhereInput.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
+    def entity_async_status_in(self):
+        """Gets the entity_async_status_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_in
+
+    @entity_async_status_in.setter
+    def entity_async_status_in(self, entity_async_status_in):
+        """Sets the entity_async_status_in of this NicWhereInput.
+
+
+        :param entity_async_status_in: The entity_async_status_in of this NicWhereInput.  # noqa: E501
+        :type entity_async_status_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_in = entity_async_status_in
+
+    @property
+    def entity_async_status_not(self):
+        """Gets the entity_async_status_not of this NicWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not of this NicWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status_not
+
+    @entity_async_status_not.setter
+    def entity_async_status_not(self, entity_async_status_not):
+        """Sets the entity_async_status_not of this NicWhereInput.
+
+
+        :param entity_async_status_not: The entity_async_status_not of this NicWhereInput.  # noqa: E501
+        :type entity_async_status_not: EntityAsyncStatus
+        """
+
+        self._entity_async_status_not = entity_async_status_not
+
+    @property
+    def entity_async_status_not_in(self):
+        """Gets the entity_async_status_not_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_not_in
+
+    @entity_async_status_not_in.setter
+    def entity_async_status_not_in(self, entity_async_status_not_in):
+        """Sets the entity_async_status_not_in of this NicWhereInput.
+
+
+        :param entity_async_status_not_in: The entity_async_status_not_in of this NicWhereInput.  # noqa: E501
+        :type entity_async_status_not_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
     def gateway_ip(self):

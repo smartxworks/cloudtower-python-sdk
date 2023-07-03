@@ -25,11 +25,14 @@ class AlertNotifier(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'clusters': 'list[NestedCluster]',
         'disabled': 'bool',
         'email_from': 'str',
         'email_tos': 'list[str]',
+        'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'language_code': 'NotifierLanguageCode',
+        'name': 'str',
         'notice_severities': 'list[str]',
         'security_mode': 'NotifierSecurityMode',
         'smtp_server_host': 'str',
@@ -38,11 +41,14 @@ class AlertNotifier(object):
     }
 
     attribute_map = {
+        'clusters': 'clusters',
         'disabled': 'disabled',
         'email_from': 'email_from',
         'email_tos': 'email_tos',
+        'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'language_code': 'language_code',
+        'name': 'name',
         'notice_severities': 'notice_severities',
         'security_mode': 'security_mode',
         'smtp_server_host': 'smtp_server_host',
@@ -54,11 +60,14 @@ class AlertNotifier(object):
         """AlertNotifier - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._clusters = None
         self._disabled = None
         self._email_from = None
         self._email_tos = None
+        self._entity_async_status = None
         self._id = None
         self._language_code = None
+        self._name = None
         self._notice_severities = None
         self._security_mode = None
         self._smtp_server_host = None
@@ -66,20 +75,44 @@ class AlertNotifier(object):
         self._username = None
         self.discriminator = None
 
+        self.clusters = kwargs.get("clusters", None)
         if "disabled" in kwargs:
             self.disabled = kwargs["disabled"]
         self.email_from = kwargs.get("email_from", None)
         if "email_tos" in kwargs:
             self.email_tos = kwargs["email_tos"]
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.language_code = kwargs.get("language_code", None)
+        self.name = kwargs.get("name", None)
         if "notice_severities" in kwargs:
             self.notice_severities = kwargs["notice_severities"]
         self.security_mode = kwargs.get("security_mode", None)
         self.smtp_server_host = kwargs.get("smtp_server_host", None)
         self.smtp_server_port = kwargs.get("smtp_server_port", None)
         self.username = kwargs.get("username", None)
+
+    @property
+    def clusters(self):
+        """Gets the clusters of this AlertNotifier.  # noqa: E501
+
+
+        :return: The clusters of this AlertNotifier.  # noqa: E501
+        :rtype: list[NestedCluster]
+        """
+        return self._clusters
+
+    @clusters.setter
+    def clusters(self, clusters):
+        """Sets the clusters of this AlertNotifier.
+
+
+        :param clusters: The clusters of this AlertNotifier.  # noqa: E501
+        :type clusters: list[NestedCluster]
+        """
+
+        self._clusters = clusters
 
     @property
     def disabled(self):
@@ -149,6 +182,27 @@ class AlertNotifier(object):
         self._email_tos = email_tos
 
     @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this AlertNotifier.  # noqa: E501
+
+
+        :return: The entity_async_status of this AlertNotifier.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this AlertNotifier.
+
+
+        :param entity_async_status: The entity_async_status of this AlertNotifier.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
     def id(self):
         """Gets the id of this AlertNotifier.  # noqa: E501
 
@@ -191,6 +245,27 @@ class AlertNotifier(object):
         """
 
         self._language_code = language_code
+
+    @property
+    def name(self):
+        """Gets the name of this AlertNotifier.  # noqa: E501
+
+
+        :return: The name of this AlertNotifier.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this AlertNotifier.
+
+
+        :param name: The name of this AlertNotifier.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
 
     @property
     def notice_severities(self):

@@ -22,6 +22,8 @@ class ClusterSettingsOrderByInput(object):
     """
     DEFAULT_HA_ASC = "default_ha_ASC"
     DEFAULT_HA_DESC = "default_ha_DESC"
+    DEFAULT_STORAGE_POLICY_ASC = "default_storage_policy_ASC"
+    DEFAULT_STORAGE_POLICY_DESC = "default_storage_policy_DESC"
     ENABLED_ISCSI_ASC = "enabled_iscsi_ASC"
     ENABLED_ISCSI_DESC = "enabled_iscsi_DESC"
     ID_ASC = "id_ASC"
@@ -29,7 +31,7 @@ class ClusterSettingsOrderByInput(object):
     VM_RECYCLE_BIN_ASC = "vm_recycle_bin_ASC"
     VM_RECYCLE_BIN_DESC = "vm_recycle_bin_DESC"
 
-    allowable_values = [DEFAULT_HA_ASC, DEFAULT_HA_DESC, ENABLED_ISCSI_ASC, ENABLED_ISCSI_DESC, ID_ASC, ID_DESC, VM_RECYCLE_BIN_ASC, VM_RECYCLE_BIN_DESC]  # noqa: E501
+    allowable_values = [DEFAULT_HA_ASC, DEFAULT_HA_DESC, DEFAULT_STORAGE_POLICY_ASC, DEFAULT_STORAGE_POLICY_DESC, ENABLED_ISCSI_ASC, ENABLED_ISCSI_DESC, ID_ASC, ID_DESC, VM_RECYCLE_BIN_ASC, VM_RECYCLE_BIN_DESC]  # noqa: E501
 
     """
     Attributes:

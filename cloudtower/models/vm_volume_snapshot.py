@@ -28,6 +28,7 @@ class VmVolumeSnapshot(object):
         'cluster': 'NestedCluster',
         'create_at': 'str',
         'description': 'str',
+        'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'local_created_at': 'str',
         'local_id': 'str',
@@ -44,6 +45,7 @@ class VmVolumeSnapshot(object):
         'cluster': 'cluster',
         'create_at': 'createAt',
         'description': 'description',
+        'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'local_created_at': 'local_created_at',
         'local_id': 'local_id',
@@ -63,6 +65,7 @@ class VmVolumeSnapshot(object):
         self._cluster = None
         self._create_at = None
         self._description = None
+        self._entity_async_status = None
         self._id = None
         self._local_created_at = None
         self._local_id = None
@@ -80,6 +83,7 @@ class VmVolumeSnapshot(object):
         self.create_at = kwargs.get("create_at", None)
         if "description" in kwargs:
             self.description = kwargs["description"]
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "local_created_at" in kwargs:
@@ -162,6 +166,27 @@ class VmVolumeSnapshot(object):
             raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
 
         self._description = description
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The entity_async_status of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this VmVolumeSnapshot.
+
+
+        :param entity_async_status: The entity_async_status of this VmVolumeSnapshot.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def id(self):

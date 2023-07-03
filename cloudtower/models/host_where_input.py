@@ -134,6 +134,10 @@ class HostWhereInput(object):
         'disks_every': 'DiskWhereInput',
         'disks_none': 'DiskWhereInput',
         'disks_some': 'DiskWhereInput',
+        'entity_async_status': 'EntityAsyncStatus',
+        'entity_async_status_in': 'list[EntityAsyncStatus]',
+        'entity_async_status_not': 'EntityAsyncStatus',
+        'entity_async_status_not_in': 'list[EntityAsyncStatus]',
         'failure_data_space': 'int',
         'failure_data_space_gt': 'int',
         'failure_data_space_gte': 'int',
@@ -660,6 +664,10 @@ class HostWhereInput(object):
         'disks_every': 'disks_every',
         'disks_none': 'disks_none',
         'disks_some': 'disks_some',
+        'entity_async_status': 'entityAsyncStatus',
+        'entity_async_status_in': 'entityAsyncStatus_in',
+        'entity_async_status_not': 'entityAsyncStatus_not',
+        'entity_async_status_not_in': 'entityAsyncStatus_not_in',
         'failure_data_space': 'failure_data_space',
         'failure_data_space_gt': 'failure_data_space_gt',
         'failure_data_space_gte': 'failure_data_space_gte',
@@ -1189,6 +1197,10 @@ class HostWhereInput(object):
         self._disks_every = None
         self._disks_none = None
         self._disks_some = None
+        self._entity_async_status = None
+        self._entity_async_status_in = None
+        self._entity_async_status_not = None
+        self._entity_async_status_not_in = None
         self._failure_data_space = None
         self._failure_data_space_gt = None
         self._failure_data_space_gte = None
@@ -1714,6 +1726,10 @@ class HostWhereInput(object):
         self.disks_every = kwargs.get("disks_every", None)
         self.disks_none = kwargs.get("disks_none", None)
         self.disks_some = kwargs.get("disks_some", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
+        self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
+        self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
         self.failure_data_space = kwargs.get("failure_data_space", None)
         self.failure_data_space_gt = kwargs.get("failure_data_space_gt", None)
         self.failure_data_space_gte = kwargs.get("failure_data_space_gte", None)
@@ -4417,6 +4433,90 @@ class HostWhereInput(object):
         """
 
         self._disks_some = disks_some
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this HostWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status of this HostWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this HostWhereInput.
+
+
+        :param entity_async_status: The entity_async_status of this HostWhereInput.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
+    def entity_async_status_in(self):
+        """Gets the entity_async_status_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_in
+
+    @entity_async_status_in.setter
+    def entity_async_status_in(self, entity_async_status_in):
+        """Sets the entity_async_status_in of this HostWhereInput.
+
+
+        :param entity_async_status_in: The entity_async_status_in of this HostWhereInput.  # noqa: E501
+        :type entity_async_status_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_in = entity_async_status_in
+
+    @property
+    def entity_async_status_not(self):
+        """Gets the entity_async_status_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not of this HostWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status_not
+
+    @entity_async_status_not.setter
+    def entity_async_status_not(self, entity_async_status_not):
+        """Sets the entity_async_status_not of this HostWhereInput.
+
+
+        :param entity_async_status_not: The entity_async_status_not of this HostWhereInput.  # noqa: E501
+        :type entity_async_status_not: EntityAsyncStatus
+        """
+
+        self._entity_async_status_not = entity_async_status_not
+
+    @property
+    def entity_async_status_not_in(self):
+        """Gets the entity_async_status_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_not_in
+
+    @entity_async_status_not_in.setter
+    def entity_async_status_not_in(self, entity_async_status_not_in):
+        """Sets the entity_async_status_not_in of this HostWhereInput.
+
+
+        :param entity_async_status_not_in: The entity_async_status_not_in of this HostWhereInput.  # noqa: E501
+        :type entity_async_status_not_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
     def failure_data_space(self):

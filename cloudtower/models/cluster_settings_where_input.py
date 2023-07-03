@@ -29,6 +29,10 @@ class ClusterSettingsWhereInput(object):
         'cluster': 'ClusterWhereInput',
         'default_ha': 'bool',
         'default_ha_not': 'bool',
+        'default_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'default_storage_policy_in': 'list[VmVolumeElfStoragePolicyType]',
+        'default_storage_policy_not': 'VmVolumeElfStoragePolicyType',
+        'default_storage_policy_not_in': 'list[VmVolumeElfStoragePolicyType]',
         'enabled_iscsi': 'bool',
         'enabled_iscsi_not': 'bool',
         'id': 'str',
@@ -54,6 +58,10 @@ class ClusterSettingsWhereInput(object):
         'cluster': 'cluster',
         'default_ha': 'default_ha',
         'default_ha_not': 'default_ha_not',
+        'default_storage_policy': 'default_storage_policy',
+        'default_storage_policy_in': 'default_storage_policy_in',
+        'default_storage_policy_not': 'default_storage_policy_not',
+        'default_storage_policy_not_in': 'default_storage_policy_not_in',
         'enabled_iscsi': 'enabled_iscsi',
         'enabled_iscsi_not': 'enabled_iscsi_not',
         'id': 'id',
@@ -82,6 +90,10 @@ class ClusterSettingsWhereInput(object):
         self._cluster = None
         self._default_ha = None
         self._default_ha_not = None
+        self._default_storage_policy = None
+        self._default_storage_policy_in = None
+        self._default_storage_policy_not = None
+        self._default_storage_policy_not_in = None
         self._enabled_iscsi = None
         self._enabled_iscsi_not = None
         self._id = None
@@ -106,6 +118,10 @@ class ClusterSettingsWhereInput(object):
         self.cluster = kwargs.get("cluster", None)
         self.default_ha = kwargs.get("default_ha", None)
         self.default_ha_not = kwargs.get("default_ha_not", None)
+        self.default_storage_policy = kwargs.get("default_storage_policy", None)
+        self.default_storage_policy_in = kwargs.get("default_storage_policy_in", None)
+        self.default_storage_policy_not = kwargs.get("default_storage_policy_not", None)
+        self.default_storage_policy_not_in = kwargs.get("default_storage_policy_not_in", None)
         self.enabled_iscsi = kwargs.get("enabled_iscsi", None)
         self.enabled_iscsi_not = kwargs.get("enabled_iscsi_not", None)
         self.id = kwargs.get("id", None)
@@ -208,6 +224,90 @@ class ClusterSettingsWhereInput(object):
         """
 
         self._default_ha_not = default_ha_not
+
+    @property
+    def default_storage_policy(self):
+        """Gets the default_storage_policy of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The default_storage_policy of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._default_storage_policy
+
+    @default_storage_policy.setter
+    def default_storage_policy(self, default_storage_policy):
+        """Sets the default_storage_policy of this ClusterSettingsWhereInput.
+
+
+        :param default_storage_policy: The default_storage_policy of this ClusterSettingsWhereInput.  # noqa: E501
+        :type default_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._default_storage_policy = default_storage_policy
+
+    @property
+    def default_storage_policy_in(self):
+        """Gets the default_storage_policy_in of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The default_storage_policy_in of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: list[VmVolumeElfStoragePolicyType]
+        """
+        return self._default_storage_policy_in
+
+    @default_storage_policy_in.setter
+    def default_storage_policy_in(self, default_storage_policy_in):
+        """Sets the default_storage_policy_in of this ClusterSettingsWhereInput.
+
+
+        :param default_storage_policy_in: The default_storage_policy_in of this ClusterSettingsWhereInput.  # noqa: E501
+        :type default_storage_policy_in: list[VmVolumeElfStoragePolicyType]
+        """
+
+        self._default_storage_policy_in = default_storage_policy_in
+
+    @property
+    def default_storage_policy_not(self):
+        """Gets the default_storage_policy_not of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The default_storage_policy_not of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._default_storage_policy_not
+
+    @default_storage_policy_not.setter
+    def default_storage_policy_not(self, default_storage_policy_not):
+        """Sets the default_storage_policy_not of this ClusterSettingsWhereInput.
+
+
+        :param default_storage_policy_not: The default_storage_policy_not of this ClusterSettingsWhereInput.  # noqa: E501
+        :type default_storage_policy_not: VmVolumeElfStoragePolicyType
+        """
+
+        self._default_storage_policy_not = default_storage_policy_not
+
+    @property
+    def default_storage_policy_not_in(self):
+        """Gets the default_storage_policy_not_in of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The default_storage_policy_not_in of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: list[VmVolumeElfStoragePolicyType]
+        """
+        return self._default_storage_policy_not_in
+
+    @default_storage_policy_not_in.setter
+    def default_storage_policy_not_in(self, default_storage_policy_not_in):
+        """Sets the default_storage_policy_not_in of this ClusterSettingsWhereInput.
+
+
+        :param default_storage_policy_not_in: The default_storage_policy_not_in of this ClusterSettingsWhereInput.  # noqa: E501
+        :type default_storage_policy_not_in: list[VmVolumeElfStoragePolicyType]
+        """
+
+        self._default_storage_policy_not_in = default_storage_policy_not_in
 
     @property
     def enabled_iscsi(self):

@@ -27,6 +27,7 @@ class Nic(object):
     openapi_types = {
         'driver': 'str',
         'driver_state': 'NicDriverState',
+        'entity_async_status': 'EntityAsyncStatus',
         'gateway_ip': 'str',
         'host': 'NestedHost',
         'ibdev': 'str',
@@ -56,6 +57,7 @@ class Nic(object):
     attribute_map = {
         'driver': 'driver',
         'driver_state': 'driver_state',
+        'entity_async_status': 'entityAsyncStatus',
         'gateway_ip': 'gateway_ip',
         'host': 'host',
         'ibdev': 'ibdev',
@@ -88,6 +90,7 @@ class Nic(object):
 
         self._driver = None
         self._driver_state = None
+        self._entity_async_status = None
         self._gateway_ip = None
         self._host = None
         self._ibdev = None
@@ -116,6 +119,7 @@ class Nic(object):
 
         self.driver = kwargs.get("driver", None)
         self.driver_state = kwargs.get("driver_state", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         self.gateway_ip = kwargs.get("gateway_ip", None)
         if "host" in kwargs:
             self.host = kwargs["host"]
@@ -191,6 +195,27 @@ class Nic(object):
         """
 
         self._driver_state = driver_state
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this Nic.  # noqa: E501
+
+
+        :return: The entity_async_status of this Nic.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this Nic.
+
+
+        :param entity_async_status: The entity_async_status of this Nic.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def gateway_ip(self):
