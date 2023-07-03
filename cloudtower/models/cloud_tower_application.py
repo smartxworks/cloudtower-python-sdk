@@ -25,6 +25,7 @@ class CloudTowerApplication(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'instance_statuses': 'object',
         'name': 'str',
@@ -39,6 +40,7 @@ class CloudTowerApplication(object):
     }
 
     attribute_map = {
+        'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'instance_statuses': 'instanceStatuses',
         'name': 'name',
@@ -56,6 +58,7 @@ class CloudTowerApplication(object):
         """CloudTowerApplication - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._entity_async_status = None
         self._id = None
         self._instance_statuses = None
         self._name = None
@@ -69,6 +72,7 @@ class CloudTowerApplication(object):
         self._vm_spec = None
         self.discriminator = None
 
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "instance_statuses" in kwargs:
@@ -86,6 +90,27 @@ class CloudTowerApplication(object):
         self.user = kwargs.get("user", None)
         if "vm_spec" in kwargs:
             self.vm_spec = kwargs["vm_spec"]
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this CloudTowerApplication.  # noqa: E501
+
+
+        :return: The entity_async_status of this CloudTowerApplication.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this CloudTowerApplication.
+
+
+        :param entity_async_status: The entity_async_status of this CloudTowerApplication.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def id(self):

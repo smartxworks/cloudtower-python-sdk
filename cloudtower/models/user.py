@@ -25,6 +25,8 @@ class User(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'auth_config_id': 'str',
+        'display_username': 'str',
         'email_address': 'str',
         'id': 'str',
         'internal': 'bool',
@@ -41,6 +43,8 @@ class User(object):
     }
 
     attribute_map = {
+        'auth_config_id': 'auth_config_id',
+        'display_username': 'display_username',
         'email_address': 'email_address',
         'id': 'id',
         'internal': 'internal',
@@ -60,6 +64,8 @@ class User(object):
         """User - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._auth_config_id = None
+        self._display_username = None
         self._email_address = None
         self._id = None
         self._internal = None
@@ -75,6 +81,9 @@ class User(object):
         self._username = None
         self.discriminator = None
 
+        self.auth_config_id = kwargs.get("auth_config_id", None)
+        if "display_username" in kwargs:
+            self.display_username = kwargs["display_username"]
         self.email_address = kwargs.get("email_address", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -93,6 +102,50 @@ class User(object):
             self.source = kwargs["source"]
         if "username" in kwargs:
             self.username = kwargs["username"]
+
+    @property
+    def auth_config_id(self):
+        """Gets the auth_config_id of this User.  # noqa: E501
+
+
+        :return: The auth_config_id of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id
+
+    @auth_config_id.setter
+    def auth_config_id(self, auth_config_id):
+        """Sets the auth_config_id of this User.
+
+
+        :param auth_config_id: The auth_config_id of this User.  # noqa: E501
+        :type auth_config_id: str
+        """
+
+        self._auth_config_id = auth_config_id
+
+    @property
+    def display_username(self):
+        """Gets the display_username of this User.  # noqa: E501
+
+
+        :return: The display_username of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username
+
+    @display_username.setter
+    def display_username(self, display_username):
+        """Sets the display_username of this User.
+
+
+        :param display_username: The display_username of this User.  # noqa: E501
+        :type display_username: str
+        """
+        if self.local_vars_configuration.client_side_validation and display_username is None:  # noqa: E501
+            raise ValueError("Invalid value for `display_username`, must not be `None`")  # noqa: E501
+
+        self._display_username = display_username
 
     @property
     def email_address(self):

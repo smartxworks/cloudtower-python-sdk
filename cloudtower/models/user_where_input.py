@@ -26,6 +26,34 @@ class UserWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[UserWhereInput]',
+        'auth_config_id': 'str',
+        'auth_config_id_contains': 'str',
+        'auth_config_id_ends_with': 'str',
+        'auth_config_id_gt': 'str',
+        'auth_config_id_gte': 'str',
+        'auth_config_id_in': 'list[str]',
+        'auth_config_id_lt': 'str',
+        'auth_config_id_lte': 'str',
+        'auth_config_id_not': 'str',
+        'auth_config_id_not_contains': 'str',
+        'auth_config_id_not_ends_with': 'str',
+        'auth_config_id_not_in': 'list[str]',
+        'auth_config_id_not_starts_with': 'str',
+        'auth_config_id_starts_with': 'str',
+        'display_username': 'str',
+        'display_username_contains': 'str',
+        'display_username_ends_with': 'str',
+        'display_username_gt': 'str',
+        'display_username_gte': 'str',
+        'display_username_in': 'list[str]',
+        'display_username_lt': 'str',
+        'display_username_lte': 'str',
+        'display_username_not': 'str',
+        'display_username_not_contains': 'str',
+        'display_username_not_ends_with': 'str',
+        'display_username_not_in': 'list[str]',
+        'display_username_not_starts_with': 'str',
+        'display_username_starts_with': 'str',
         'email_address': 'str',
         'email_address_contains': 'str',
         'email_address_ends_with': 'str',
@@ -139,6 +167,34 @@ class UserWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        'auth_config_id': 'auth_config_id',
+        'auth_config_id_contains': 'auth_config_id_contains',
+        'auth_config_id_ends_with': 'auth_config_id_ends_with',
+        'auth_config_id_gt': 'auth_config_id_gt',
+        'auth_config_id_gte': 'auth_config_id_gte',
+        'auth_config_id_in': 'auth_config_id_in',
+        'auth_config_id_lt': 'auth_config_id_lt',
+        'auth_config_id_lte': 'auth_config_id_lte',
+        'auth_config_id_not': 'auth_config_id_not',
+        'auth_config_id_not_contains': 'auth_config_id_not_contains',
+        'auth_config_id_not_ends_with': 'auth_config_id_not_ends_with',
+        'auth_config_id_not_in': 'auth_config_id_not_in',
+        'auth_config_id_not_starts_with': 'auth_config_id_not_starts_with',
+        'auth_config_id_starts_with': 'auth_config_id_starts_with',
+        'display_username': 'display_username',
+        'display_username_contains': 'display_username_contains',
+        'display_username_ends_with': 'display_username_ends_with',
+        'display_username_gt': 'display_username_gt',
+        'display_username_gte': 'display_username_gte',
+        'display_username_in': 'display_username_in',
+        'display_username_lt': 'display_username_lt',
+        'display_username_lte': 'display_username_lte',
+        'display_username_not': 'display_username_not',
+        'display_username_not_contains': 'display_username_not_contains',
+        'display_username_not_ends_with': 'display_username_not_ends_with',
+        'display_username_not_in': 'display_username_not_in',
+        'display_username_not_starts_with': 'display_username_not_starts_with',
+        'display_username_starts_with': 'display_username_starts_with',
         'email_address': 'email_address',
         'email_address_contains': 'email_address_contains',
         'email_address_ends_with': 'email_address_ends_with',
@@ -255,6 +311,34 @@ class UserWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self._auth_config_id = None
+        self._auth_config_id_contains = None
+        self._auth_config_id_ends_with = None
+        self._auth_config_id_gt = None
+        self._auth_config_id_gte = None
+        self._auth_config_id_in = None
+        self._auth_config_id_lt = None
+        self._auth_config_id_lte = None
+        self._auth_config_id_not = None
+        self._auth_config_id_not_contains = None
+        self._auth_config_id_not_ends_with = None
+        self._auth_config_id_not_in = None
+        self._auth_config_id_not_starts_with = None
+        self._auth_config_id_starts_with = None
+        self._display_username = None
+        self._display_username_contains = None
+        self._display_username_ends_with = None
+        self._display_username_gt = None
+        self._display_username_gte = None
+        self._display_username_in = None
+        self._display_username_lt = None
+        self._display_username_lte = None
+        self._display_username_not = None
+        self._display_username_not_contains = None
+        self._display_username_not_ends_with = None
+        self._display_username_not_in = None
+        self._display_username_not_starts_with = None
+        self._display_username_starts_with = None
         self._email_address = None
         self._email_address_contains = None
         self._email_address_ends_with = None
@@ -367,6 +451,34 @@ class UserWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self.auth_config_id = kwargs.get("auth_config_id", None)
+        self.auth_config_id_contains = kwargs.get("auth_config_id_contains", None)
+        self.auth_config_id_ends_with = kwargs.get("auth_config_id_ends_with", None)
+        self.auth_config_id_gt = kwargs.get("auth_config_id_gt", None)
+        self.auth_config_id_gte = kwargs.get("auth_config_id_gte", None)
+        self.auth_config_id_in = kwargs.get("auth_config_id_in", None)
+        self.auth_config_id_lt = kwargs.get("auth_config_id_lt", None)
+        self.auth_config_id_lte = kwargs.get("auth_config_id_lte", None)
+        self.auth_config_id_not = kwargs.get("auth_config_id_not", None)
+        self.auth_config_id_not_contains = kwargs.get("auth_config_id_not_contains", None)
+        self.auth_config_id_not_ends_with = kwargs.get("auth_config_id_not_ends_with", None)
+        self.auth_config_id_not_in = kwargs.get("auth_config_id_not_in", None)
+        self.auth_config_id_not_starts_with = kwargs.get("auth_config_id_not_starts_with", None)
+        self.auth_config_id_starts_with = kwargs.get("auth_config_id_starts_with", None)
+        self.display_username = kwargs.get("display_username", None)
+        self.display_username_contains = kwargs.get("display_username_contains", None)
+        self.display_username_ends_with = kwargs.get("display_username_ends_with", None)
+        self.display_username_gt = kwargs.get("display_username_gt", None)
+        self.display_username_gte = kwargs.get("display_username_gte", None)
+        self.display_username_in = kwargs.get("display_username_in", None)
+        self.display_username_lt = kwargs.get("display_username_lt", None)
+        self.display_username_lte = kwargs.get("display_username_lte", None)
+        self.display_username_not = kwargs.get("display_username_not", None)
+        self.display_username_not_contains = kwargs.get("display_username_not_contains", None)
+        self.display_username_not_ends_with = kwargs.get("display_username_not_ends_with", None)
+        self.display_username_not_in = kwargs.get("display_username_not_in", None)
+        self.display_username_not_starts_with = kwargs.get("display_username_not_starts_with", None)
+        self.display_username_starts_with = kwargs.get("display_username_starts_with", None)
         self.email_address = kwargs.get("email_address", None)
         self.email_address_contains = kwargs.get("email_address_contains", None)
         self.email_address_ends_with = kwargs.get("email_address_ends_with", None)
@@ -497,6 +609,594 @@ class UserWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def auth_config_id(self):
+        """Gets the auth_config_id of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id
+
+    @auth_config_id.setter
+    def auth_config_id(self, auth_config_id):
+        """Sets the auth_config_id of this UserWhereInput.
+
+
+        :param auth_config_id: The auth_config_id of this UserWhereInput.  # noqa: E501
+        :type auth_config_id: str
+        """
+
+        self._auth_config_id = auth_config_id
+
+    @property
+    def auth_config_id_contains(self):
+        """Gets the auth_config_id_contains of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_contains of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_contains
+
+    @auth_config_id_contains.setter
+    def auth_config_id_contains(self, auth_config_id_contains):
+        """Sets the auth_config_id_contains of this UserWhereInput.
+
+
+        :param auth_config_id_contains: The auth_config_id_contains of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_contains: str
+        """
+
+        self._auth_config_id_contains = auth_config_id_contains
+
+    @property
+    def auth_config_id_ends_with(self):
+        """Gets the auth_config_id_ends_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_ends_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_ends_with
+
+    @auth_config_id_ends_with.setter
+    def auth_config_id_ends_with(self, auth_config_id_ends_with):
+        """Sets the auth_config_id_ends_with of this UserWhereInput.
+
+
+        :param auth_config_id_ends_with: The auth_config_id_ends_with of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_ends_with: str
+        """
+
+        self._auth_config_id_ends_with = auth_config_id_ends_with
+
+    @property
+    def auth_config_id_gt(self):
+        """Gets the auth_config_id_gt of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_gt of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_gt
+
+    @auth_config_id_gt.setter
+    def auth_config_id_gt(self, auth_config_id_gt):
+        """Sets the auth_config_id_gt of this UserWhereInput.
+
+
+        :param auth_config_id_gt: The auth_config_id_gt of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_gt: str
+        """
+
+        self._auth_config_id_gt = auth_config_id_gt
+
+    @property
+    def auth_config_id_gte(self):
+        """Gets the auth_config_id_gte of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_gte of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_gte
+
+    @auth_config_id_gte.setter
+    def auth_config_id_gte(self, auth_config_id_gte):
+        """Sets the auth_config_id_gte of this UserWhereInput.
+
+
+        :param auth_config_id_gte: The auth_config_id_gte of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_gte: str
+        """
+
+        self._auth_config_id_gte = auth_config_id_gte
+
+    @property
+    def auth_config_id_in(self):
+        """Gets the auth_config_id_in of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_in of this UserWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._auth_config_id_in
+
+    @auth_config_id_in.setter
+    def auth_config_id_in(self, auth_config_id_in):
+        """Sets the auth_config_id_in of this UserWhereInput.
+
+
+        :param auth_config_id_in: The auth_config_id_in of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_in: list[str]
+        """
+
+        self._auth_config_id_in = auth_config_id_in
+
+    @property
+    def auth_config_id_lt(self):
+        """Gets the auth_config_id_lt of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_lt of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_lt
+
+    @auth_config_id_lt.setter
+    def auth_config_id_lt(self, auth_config_id_lt):
+        """Sets the auth_config_id_lt of this UserWhereInput.
+
+
+        :param auth_config_id_lt: The auth_config_id_lt of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_lt: str
+        """
+
+        self._auth_config_id_lt = auth_config_id_lt
+
+    @property
+    def auth_config_id_lte(self):
+        """Gets the auth_config_id_lte of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_lte of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_lte
+
+    @auth_config_id_lte.setter
+    def auth_config_id_lte(self, auth_config_id_lte):
+        """Sets the auth_config_id_lte of this UserWhereInput.
+
+
+        :param auth_config_id_lte: The auth_config_id_lte of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_lte: str
+        """
+
+        self._auth_config_id_lte = auth_config_id_lte
+
+    @property
+    def auth_config_id_not(self):
+        """Gets the auth_config_id_not of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_not of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_not
+
+    @auth_config_id_not.setter
+    def auth_config_id_not(self, auth_config_id_not):
+        """Sets the auth_config_id_not of this UserWhereInput.
+
+
+        :param auth_config_id_not: The auth_config_id_not of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_not: str
+        """
+
+        self._auth_config_id_not = auth_config_id_not
+
+    @property
+    def auth_config_id_not_contains(self):
+        """Gets the auth_config_id_not_contains of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_not_contains of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_not_contains
+
+    @auth_config_id_not_contains.setter
+    def auth_config_id_not_contains(self, auth_config_id_not_contains):
+        """Sets the auth_config_id_not_contains of this UserWhereInput.
+
+
+        :param auth_config_id_not_contains: The auth_config_id_not_contains of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_not_contains: str
+        """
+
+        self._auth_config_id_not_contains = auth_config_id_not_contains
+
+    @property
+    def auth_config_id_not_ends_with(self):
+        """Gets the auth_config_id_not_ends_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_not_ends_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_not_ends_with
+
+    @auth_config_id_not_ends_with.setter
+    def auth_config_id_not_ends_with(self, auth_config_id_not_ends_with):
+        """Sets the auth_config_id_not_ends_with of this UserWhereInput.
+
+
+        :param auth_config_id_not_ends_with: The auth_config_id_not_ends_with of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_not_ends_with: str
+        """
+
+        self._auth_config_id_not_ends_with = auth_config_id_not_ends_with
+
+    @property
+    def auth_config_id_not_in(self):
+        """Gets the auth_config_id_not_in of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_not_in of this UserWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._auth_config_id_not_in
+
+    @auth_config_id_not_in.setter
+    def auth_config_id_not_in(self, auth_config_id_not_in):
+        """Sets the auth_config_id_not_in of this UserWhereInput.
+
+
+        :param auth_config_id_not_in: The auth_config_id_not_in of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_not_in: list[str]
+        """
+
+        self._auth_config_id_not_in = auth_config_id_not_in
+
+    @property
+    def auth_config_id_not_starts_with(self):
+        """Gets the auth_config_id_not_starts_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_not_starts_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_not_starts_with
+
+    @auth_config_id_not_starts_with.setter
+    def auth_config_id_not_starts_with(self, auth_config_id_not_starts_with):
+        """Sets the auth_config_id_not_starts_with of this UserWhereInput.
+
+
+        :param auth_config_id_not_starts_with: The auth_config_id_not_starts_with of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_not_starts_with: str
+        """
+
+        self._auth_config_id_not_starts_with = auth_config_id_not_starts_with
+
+    @property
+    def auth_config_id_starts_with(self):
+        """Gets the auth_config_id_starts_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The auth_config_id_starts_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id_starts_with
+
+    @auth_config_id_starts_with.setter
+    def auth_config_id_starts_with(self, auth_config_id_starts_with):
+        """Sets the auth_config_id_starts_with of this UserWhereInput.
+
+
+        :param auth_config_id_starts_with: The auth_config_id_starts_with of this UserWhereInput.  # noqa: E501
+        :type auth_config_id_starts_with: str
+        """
+
+        self._auth_config_id_starts_with = auth_config_id_starts_with
+
+    @property
+    def display_username(self):
+        """Gets the display_username of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username
+
+    @display_username.setter
+    def display_username(self, display_username):
+        """Sets the display_username of this UserWhereInput.
+
+
+        :param display_username: The display_username of this UserWhereInput.  # noqa: E501
+        :type display_username: str
+        """
+
+        self._display_username = display_username
+
+    @property
+    def display_username_contains(self):
+        """Gets the display_username_contains of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_contains of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_contains
+
+    @display_username_contains.setter
+    def display_username_contains(self, display_username_contains):
+        """Sets the display_username_contains of this UserWhereInput.
+
+
+        :param display_username_contains: The display_username_contains of this UserWhereInput.  # noqa: E501
+        :type display_username_contains: str
+        """
+
+        self._display_username_contains = display_username_contains
+
+    @property
+    def display_username_ends_with(self):
+        """Gets the display_username_ends_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_ends_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_ends_with
+
+    @display_username_ends_with.setter
+    def display_username_ends_with(self, display_username_ends_with):
+        """Sets the display_username_ends_with of this UserWhereInput.
+
+
+        :param display_username_ends_with: The display_username_ends_with of this UserWhereInput.  # noqa: E501
+        :type display_username_ends_with: str
+        """
+
+        self._display_username_ends_with = display_username_ends_with
+
+    @property
+    def display_username_gt(self):
+        """Gets the display_username_gt of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_gt of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_gt
+
+    @display_username_gt.setter
+    def display_username_gt(self, display_username_gt):
+        """Sets the display_username_gt of this UserWhereInput.
+
+
+        :param display_username_gt: The display_username_gt of this UserWhereInput.  # noqa: E501
+        :type display_username_gt: str
+        """
+
+        self._display_username_gt = display_username_gt
+
+    @property
+    def display_username_gte(self):
+        """Gets the display_username_gte of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_gte of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_gte
+
+    @display_username_gte.setter
+    def display_username_gte(self, display_username_gte):
+        """Sets the display_username_gte of this UserWhereInput.
+
+
+        :param display_username_gte: The display_username_gte of this UserWhereInput.  # noqa: E501
+        :type display_username_gte: str
+        """
+
+        self._display_username_gte = display_username_gte
+
+    @property
+    def display_username_in(self):
+        """Gets the display_username_in of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_in of this UserWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._display_username_in
+
+    @display_username_in.setter
+    def display_username_in(self, display_username_in):
+        """Sets the display_username_in of this UserWhereInput.
+
+
+        :param display_username_in: The display_username_in of this UserWhereInput.  # noqa: E501
+        :type display_username_in: list[str]
+        """
+
+        self._display_username_in = display_username_in
+
+    @property
+    def display_username_lt(self):
+        """Gets the display_username_lt of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_lt of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_lt
+
+    @display_username_lt.setter
+    def display_username_lt(self, display_username_lt):
+        """Sets the display_username_lt of this UserWhereInput.
+
+
+        :param display_username_lt: The display_username_lt of this UserWhereInput.  # noqa: E501
+        :type display_username_lt: str
+        """
+
+        self._display_username_lt = display_username_lt
+
+    @property
+    def display_username_lte(self):
+        """Gets the display_username_lte of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_lte of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_lte
+
+    @display_username_lte.setter
+    def display_username_lte(self, display_username_lte):
+        """Sets the display_username_lte of this UserWhereInput.
+
+
+        :param display_username_lte: The display_username_lte of this UserWhereInput.  # noqa: E501
+        :type display_username_lte: str
+        """
+
+        self._display_username_lte = display_username_lte
+
+    @property
+    def display_username_not(self):
+        """Gets the display_username_not of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_not of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_not
+
+    @display_username_not.setter
+    def display_username_not(self, display_username_not):
+        """Sets the display_username_not of this UserWhereInput.
+
+
+        :param display_username_not: The display_username_not of this UserWhereInput.  # noqa: E501
+        :type display_username_not: str
+        """
+
+        self._display_username_not = display_username_not
+
+    @property
+    def display_username_not_contains(self):
+        """Gets the display_username_not_contains of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_not_contains of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_not_contains
+
+    @display_username_not_contains.setter
+    def display_username_not_contains(self, display_username_not_contains):
+        """Sets the display_username_not_contains of this UserWhereInput.
+
+
+        :param display_username_not_contains: The display_username_not_contains of this UserWhereInput.  # noqa: E501
+        :type display_username_not_contains: str
+        """
+
+        self._display_username_not_contains = display_username_not_contains
+
+    @property
+    def display_username_not_ends_with(self):
+        """Gets the display_username_not_ends_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_not_ends_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_not_ends_with
+
+    @display_username_not_ends_with.setter
+    def display_username_not_ends_with(self, display_username_not_ends_with):
+        """Sets the display_username_not_ends_with of this UserWhereInput.
+
+
+        :param display_username_not_ends_with: The display_username_not_ends_with of this UserWhereInput.  # noqa: E501
+        :type display_username_not_ends_with: str
+        """
+
+        self._display_username_not_ends_with = display_username_not_ends_with
+
+    @property
+    def display_username_not_in(self):
+        """Gets the display_username_not_in of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_not_in of this UserWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._display_username_not_in
+
+    @display_username_not_in.setter
+    def display_username_not_in(self, display_username_not_in):
+        """Sets the display_username_not_in of this UserWhereInput.
+
+
+        :param display_username_not_in: The display_username_not_in of this UserWhereInput.  # noqa: E501
+        :type display_username_not_in: list[str]
+        """
+
+        self._display_username_not_in = display_username_not_in
+
+    @property
+    def display_username_not_starts_with(self):
+        """Gets the display_username_not_starts_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_not_starts_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_not_starts_with
+
+    @display_username_not_starts_with.setter
+    def display_username_not_starts_with(self, display_username_not_starts_with):
+        """Sets the display_username_not_starts_with of this UserWhereInput.
+
+
+        :param display_username_not_starts_with: The display_username_not_starts_with of this UserWhereInput.  # noqa: E501
+        :type display_username_not_starts_with: str
+        """
+
+        self._display_username_not_starts_with = display_username_not_starts_with
+
+    @property
+    def display_username_starts_with(self):
+        """Gets the display_username_starts_with of this UserWhereInput.  # noqa: E501
+
+
+        :return: The display_username_starts_with of this UserWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_username_starts_with
+
+    @display_username_starts_with.setter
+    def display_username_starts_with(self, display_username_starts_with):
+        """Sets the display_username_starts_with of this UserWhereInput.
+
+
+        :param display_username_starts_with: The display_username_starts_with of this UserWhereInput.  # noqa: E501
+        :type display_username_starts_with: str
+        """
+
+        self._display_username_starts_with = display_username_starts_with
 
     @property
     def email_address(self):

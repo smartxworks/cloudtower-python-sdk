@@ -42,6 +42,7 @@ class MetricLabel(object):
         'network': 'str',
         'mac': 'str',
         'host': 'str',
+        'esxi_uuid': 'str',
         'device': 'str',
         'cluster': 'str',
         'chunk': 'str',
@@ -66,6 +67,7 @@ class MetricLabel(object):
         'network': '_network',
         'mac': '_mac',
         'host': '_host',
+        'esxi_uuid': '_esxi_uuid',
         'device': '_device',
         'cluster': '_cluster',
         'chunk': '_chunk',
@@ -93,6 +95,7 @@ class MetricLabel(object):
         self._network = None
         self._mac = None
         self._host = None
+        self._esxi_uuid = None
         self._device = None
         self._cluster = None
         self._chunk = None
@@ -116,6 +119,7 @@ class MetricLabel(object):
         self.network = kwargs.get("network", None)
         self.mac = kwargs.get("mac", None)
         self.host = kwargs.get("host", None)
+        self.esxi_uuid = kwargs.get("esxi_uuid", None)
         self.device = kwargs.get("device", None)
         self.cluster = kwargs.get("cluster", None)
         self.chunk = kwargs.get("chunk", None)
@@ -478,6 +482,27 @@ class MetricLabel(object):
         """
 
         self._host = host
+
+    @property
+    def esxi_uuid(self):
+        """Gets the esxi_uuid of this MetricLabel.  # noqa: E501
+
+
+        :return: The esxi_uuid of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._esxi_uuid
+
+    @esxi_uuid.setter
+    def esxi_uuid(self, esxi_uuid):
+        """Sets the esxi_uuid of this MetricLabel.
+
+
+        :param esxi_uuid: The esxi_uuid of this MetricLabel.  # noqa: E501
+        :type esxi_uuid: str
+        """
+
+        self._esxi_uuid = esxi_uuid
 
     @property
     def device(self):

@@ -55,10 +55,12 @@ from cloudtower.api.nvmf_namespace_api import NvmfNamespaceApi
 from cloudtower.api.nvmf_namespace_snapshot_api import NvmfNamespaceSnapshotApi
 from cloudtower.api.nvmf_subsystem_api import NvmfSubsystemApi
 from cloudtower.api.organization_api import OrganizationApi
+from cloudtower.api.ovf_api import OvfApi
 from cloudtower.api.pmem_dimm_api import PmemDimmApi
 from cloudtower.api.rack_topo_api import RackTopoApi
 from cloudtower.api.report_task_api import ReportTaskApi
 from cloudtower.api.report_template_api import ReportTemplateApi
+from cloudtower.api.security_group_api import SecurityGroupApi
 from cloudtower.api.security_policy_api import SecurityPolicyApi
 from cloudtower.api.snapshot_group_api import SnapshotGroupApi
 from cloudtower.api.snapshot_plan_api import SnapshotPlanApi
@@ -81,6 +83,7 @@ from cloudtower.api.vlan_api import VlanApi
 from cloudtower.api.vm_api import VmApi
 from cloudtower.api.vm_disk_api import VmDiskApi
 from cloudtower.api.vm_entity_filter_result_api import VmEntityFilterResultApi
+from cloudtower.api.vm_export_file_api import VmExportFileApi
 from cloudtower.api.vm_folder_api import VmFolderApi
 from cloudtower.api.vm_nic_api import VmNicApi
 from cloudtower.api.vm_placement_group_api import VmPlacementGroupApi

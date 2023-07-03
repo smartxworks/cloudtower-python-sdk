@@ -27,6 +27,7 @@ class UsbDevice(object):
     openapi_types = {
         'binded': 'bool',
         'description': 'str',
+        'entity_async_status': 'EntityAsyncStatus',
         'host': 'NestedHost',
         'id': 'str',
         'local_created_at': 'str',
@@ -43,6 +44,7 @@ class UsbDevice(object):
     attribute_map = {
         'binded': 'binded',
         'description': 'description',
+        'entity_async_status': 'entityAsyncStatus',
         'host': 'host',
         'id': 'id',
         'local_created_at': 'local_created_at',
@@ -62,6 +64,7 @@ class UsbDevice(object):
 
         self._binded = None
         self._description = None
+        self._entity_async_status = None
         self._host = None
         self._id = None
         self._local_created_at = None
@@ -79,6 +82,7 @@ class UsbDevice(object):
             self.binded = kwargs["binded"]
         if "description" in kwargs:
             self.description = kwargs["description"]
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "host" in kwargs:
             self.host = kwargs["host"]
         if "id" in kwargs:
@@ -145,6 +149,27 @@ class UsbDevice(object):
             raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
 
         self._description = description
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this UsbDevice.  # noqa: E501
+
+
+        :return: The entity_async_status of this UsbDevice.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this UsbDevice.
+
+
+        :param entity_async_status: The entity_async_status of this UsbDevice.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def host(self):

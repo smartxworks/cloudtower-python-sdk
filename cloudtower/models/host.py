@@ -39,6 +39,7 @@ class Host(object):
         'cpu_vendor': 'str',
         'data_ip': 'str',
         'disks': 'list[NestedDisk]',
+        'entity_async_status': 'EntityAsyncStatus',
         'failure_data_space': 'int',
         'hdd_data_capacity': 'int',
         'hdd_disk_count': 'int',
@@ -109,6 +110,7 @@ class Host(object):
         'cpu_vendor': 'cpu_vendor',
         'data_ip': 'data_ip',
         'disks': 'disks',
+        'entity_async_status': 'entityAsyncStatus',
         'failure_data_space': 'failure_data_space',
         'hdd_data_capacity': 'hdd_data_capacity',
         'hdd_disk_count': 'hdd_disk_count',
@@ -182,6 +184,7 @@ class Host(object):
         self._cpu_vendor = None
         self._data_ip = None
         self._disks = None
+        self._entity_async_status = None
         self._failure_data_space = None
         self._hdd_data_capacity = None
         self._hdd_disk_count = None
@@ -260,6 +263,7 @@ class Host(object):
         self.cpu_vendor = kwargs.get("cpu_vendor", None)
         self.data_ip = kwargs.get("data_ip", None)
         self.disks = kwargs.get("disks", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "failure_data_space" in kwargs:
             self.failure_data_space = kwargs["failure_data_space"]
         if "hdd_data_capacity" in kwargs:
@@ -652,6 +656,27 @@ class Host(object):
         """
 
         self._disks = disks
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this Host.  # noqa: E501
+
+
+        :return: The entity_async_status of this Host.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this Host.
+
+
+        :param entity_async_status: The entity_async_status of this Host.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def failure_data_space(self):

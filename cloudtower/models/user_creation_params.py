@@ -25,6 +25,9 @@ class UserCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'auth_config_id': 'str',
+        'ldap_dn': 'str',
+        'source': 'UserSource',
         'mobile_phone': 'str',
         'email_address': 'str',
         'internal': 'bool',
@@ -35,6 +38,9 @@ class UserCreationParams(object):
     }
 
     attribute_map = {
+        'auth_config_id': 'auth_config_id',
+        'ldap_dn': 'ldap_dn',
+        'source': 'source',
         'mobile_phone': 'mobile_phone',
         'email_address': 'email_address',
         'internal': 'internal',
@@ -48,6 +54,9 @@ class UserCreationParams(object):
         """UserCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._auth_config_id = None
+        self._ldap_dn = None
+        self._source = None
         self._mobile_phone = None
         self._email_address = None
         self._internal = None
@@ -57,6 +66,12 @@ class UserCreationParams(object):
         self._username = None
         self.discriminator = None
 
+        if "auth_config_id" in kwargs:
+            self.auth_config_id = kwargs["auth_config_id"]
+        if "ldap_dn" in kwargs:
+            self.ldap_dn = kwargs["ldap_dn"]
+        if "source" in kwargs:
+            self.source = kwargs["source"]
         if "mobile_phone" in kwargs:
             self.mobile_phone = kwargs["mobile_phone"]
         if "email_address" in kwargs:
@@ -71,6 +86,69 @@ class UserCreationParams(object):
             self.password = kwargs["password"]
         if "username" in kwargs:
             self.username = kwargs["username"]
+
+    @property
+    def auth_config_id(self):
+        """Gets the auth_config_id of this UserCreationParams.  # noqa: E501
+
+
+        :return: The auth_config_id of this UserCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_config_id
+
+    @auth_config_id.setter
+    def auth_config_id(self, auth_config_id):
+        """Sets the auth_config_id of this UserCreationParams.
+
+
+        :param auth_config_id: The auth_config_id of this UserCreationParams.  # noqa: E501
+        :type auth_config_id: str
+        """
+
+        self._auth_config_id = auth_config_id
+
+    @property
+    def ldap_dn(self):
+        """Gets the ldap_dn of this UserCreationParams.  # noqa: E501
+
+
+        :return: The ldap_dn of this UserCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._ldap_dn
+
+    @ldap_dn.setter
+    def ldap_dn(self, ldap_dn):
+        """Sets the ldap_dn of this UserCreationParams.
+
+
+        :param ldap_dn: The ldap_dn of this UserCreationParams.  # noqa: E501
+        :type ldap_dn: str
+        """
+
+        self._ldap_dn = ldap_dn
+
+    @property
+    def source(self):
+        """Gets the source of this UserCreationParams.  # noqa: E501
+
+
+        :return: The source of this UserCreationParams.  # noqa: E501
+        :rtype: UserSource
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this UserCreationParams.
+
+
+        :param source: The source of this UserCreationParams.  # noqa: E501
+        :type source: UserSource
+        """
+
+        self._source = source
 
     @property
     def mobile_phone(self):
@@ -199,8 +277,6 @@ class UserCreationParams(object):
         :param password: The password of this UserCreationParams.  # noqa: E501
         :type password: str
         """
-        if self.local_vars_configuration.client_side_validation and password is None:  # noqa: E501
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
 

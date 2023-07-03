@@ -26,6 +26,9 @@ class AlertNotifierWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[AlertNotifierWhereInput]',
+        'clusters_every': 'ClusterWhereInput',
+        'clusters_none': 'ClusterWhereInput',
+        'clusters_some': 'ClusterWhereInput',
         'disabled': 'bool',
         'disabled_not': 'bool',
         'email_from': 'str',
@@ -42,6 +45,10 @@ class AlertNotifierWhereInput(object):
         'email_from_not_in': 'list[str]',
         'email_from_not_starts_with': 'str',
         'email_from_starts_with': 'str',
+        'entity_async_status': 'EntityAsyncStatus',
+        'entity_async_status_in': 'list[EntityAsyncStatus]',
+        'entity_async_status_not': 'EntityAsyncStatus',
+        'entity_async_status_not_in': 'list[EntityAsyncStatus]',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -60,6 +67,20 @@ class AlertNotifierWhereInput(object):
         'language_code_in': 'list[NotifierLanguageCode]',
         'language_code_not': 'NotifierLanguageCode',
         'language_code_not_in': 'list[NotifierLanguageCode]',
+        'name': 'str',
+        'name_contains': 'str',
+        'name_ends_with': 'str',
+        'name_gt': 'str',
+        'name_gte': 'str',
+        'name_in': 'list[str]',
+        'name_lt': 'str',
+        'name_lte': 'str',
+        'name_not': 'str',
+        'name_not_contains': 'str',
+        'name_not_ends_with': 'str',
+        'name_not_in': 'list[str]',
+        'name_not_starts_with': 'str',
+        'name_starts_with': 'str',
         '_not': 'list[AlertNotifierWhereInput]',
         '_or': 'list[AlertNotifierWhereInput]',
         'security_mode': 'NotifierSecurityMode',
@@ -106,6 +127,9 @@ class AlertNotifierWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        'clusters_every': 'clusters_every',
+        'clusters_none': 'clusters_none',
+        'clusters_some': 'clusters_some',
         'disabled': 'disabled',
         'disabled_not': 'disabled_not',
         'email_from': 'email_from',
@@ -122,6 +146,10 @@ class AlertNotifierWhereInput(object):
         'email_from_not_in': 'email_from_not_in',
         'email_from_not_starts_with': 'email_from_not_starts_with',
         'email_from_starts_with': 'email_from_starts_with',
+        'entity_async_status': 'entityAsyncStatus',
+        'entity_async_status_in': 'entityAsyncStatus_in',
+        'entity_async_status_not': 'entityAsyncStatus_not',
+        'entity_async_status_not_in': 'entityAsyncStatus_not_in',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -140,6 +168,20 @@ class AlertNotifierWhereInput(object):
         'language_code_in': 'language_code_in',
         'language_code_not': 'language_code_not',
         'language_code_not_in': 'language_code_not_in',
+        'name': 'name',
+        'name_contains': 'name_contains',
+        'name_ends_with': 'name_ends_with',
+        'name_gt': 'name_gt',
+        'name_gte': 'name_gte',
+        'name_in': 'name_in',
+        'name_lt': 'name_lt',
+        'name_lte': 'name_lte',
+        'name_not': 'name_not',
+        'name_not_contains': 'name_not_contains',
+        'name_not_ends_with': 'name_not_ends_with',
+        'name_not_in': 'name_not_in',
+        'name_not_starts_with': 'name_not_starts_with',
+        'name_starts_with': 'name_starts_with',
         '_not': 'NOT',
         '_or': 'OR',
         'security_mode': 'security_mode',
@@ -189,6 +231,9 @@ class AlertNotifierWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self._clusters_every = None
+        self._clusters_none = None
+        self._clusters_some = None
         self._disabled = None
         self._disabled_not = None
         self._email_from = None
@@ -205,6 +250,10 @@ class AlertNotifierWhereInput(object):
         self._email_from_not_in = None
         self._email_from_not_starts_with = None
         self._email_from_starts_with = None
+        self._entity_async_status = None
+        self._entity_async_status_in = None
+        self._entity_async_status_not = None
+        self._entity_async_status_not_in = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -223,6 +272,20 @@ class AlertNotifierWhereInput(object):
         self._language_code_in = None
         self._language_code_not = None
         self._language_code_not_in = None
+        self._name = None
+        self._name_contains = None
+        self._name_ends_with = None
+        self._name_gt = None
+        self._name_gte = None
+        self._name_in = None
+        self._name_lt = None
+        self._name_lte = None
+        self._name_not = None
+        self._name_not_contains = None
+        self._name_not_ends_with = None
+        self._name_not_in = None
+        self._name_not_starts_with = None
+        self._name_starts_with = None
         self.__not = None
         self.__or = None
         self._security_mode = None
@@ -268,6 +331,9 @@ class AlertNotifierWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self.clusters_every = kwargs.get("clusters_every", None)
+        self.clusters_none = kwargs.get("clusters_none", None)
+        self.clusters_some = kwargs.get("clusters_some", None)
         self.disabled = kwargs.get("disabled", None)
         self.disabled_not = kwargs.get("disabled_not", None)
         self.email_from = kwargs.get("email_from", None)
@@ -284,6 +350,10 @@ class AlertNotifierWhereInput(object):
         self.email_from_not_in = kwargs.get("email_from_not_in", None)
         self.email_from_not_starts_with = kwargs.get("email_from_not_starts_with", None)
         self.email_from_starts_with = kwargs.get("email_from_starts_with", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
+        self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
+        self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -302,6 +372,20 @@ class AlertNotifierWhereInput(object):
         self.language_code_in = kwargs.get("language_code_in", None)
         self.language_code_not = kwargs.get("language_code_not", None)
         self.language_code_not_in = kwargs.get("language_code_not_in", None)
+        self.name = kwargs.get("name", None)
+        self.name_contains = kwargs.get("name_contains", None)
+        self.name_ends_with = kwargs.get("name_ends_with", None)
+        self.name_gt = kwargs.get("name_gt", None)
+        self.name_gte = kwargs.get("name_gte", None)
+        self.name_in = kwargs.get("name_in", None)
+        self.name_lt = kwargs.get("name_lt", None)
+        self.name_lte = kwargs.get("name_lte", None)
+        self.name_not = kwargs.get("name_not", None)
+        self.name_not_contains = kwargs.get("name_not_contains", None)
+        self.name_not_ends_with = kwargs.get("name_not_ends_with", None)
+        self.name_not_in = kwargs.get("name_not_in", None)
+        self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
+        self.name_starts_with = kwargs.get("name_starts_with", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
         self.security_mode = kwargs.get("security_mode", None)
@@ -365,6 +449,69 @@ class AlertNotifierWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def clusters_every(self):
+        """Gets the clusters_every of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The clusters_every of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: ClusterWhereInput
+        """
+        return self._clusters_every
+
+    @clusters_every.setter
+    def clusters_every(self, clusters_every):
+        """Sets the clusters_every of this AlertNotifierWhereInput.
+
+
+        :param clusters_every: The clusters_every of this AlertNotifierWhereInput.  # noqa: E501
+        :type clusters_every: ClusterWhereInput
+        """
+
+        self._clusters_every = clusters_every
+
+    @property
+    def clusters_none(self):
+        """Gets the clusters_none of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The clusters_none of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: ClusterWhereInput
+        """
+        return self._clusters_none
+
+    @clusters_none.setter
+    def clusters_none(self, clusters_none):
+        """Sets the clusters_none of this AlertNotifierWhereInput.
+
+
+        :param clusters_none: The clusters_none of this AlertNotifierWhereInput.  # noqa: E501
+        :type clusters_none: ClusterWhereInput
+        """
+
+        self._clusters_none = clusters_none
+
+    @property
+    def clusters_some(self):
+        """Gets the clusters_some of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The clusters_some of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: ClusterWhereInput
+        """
+        return self._clusters_some
+
+    @clusters_some.setter
+    def clusters_some(self, clusters_some):
+        """Sets the clusters_some of this AlertNotifierWhereInput.
+
+
+        :param clusters_some: The clusters_some of this AlertNotifierWhereInput.  # noqa: E501
+        :type clusters_some: ClusterWhereInput
+        """
+
+        self._clusters_some = clusters_some
 
     @property
     def disabled(self):
@@ -701,6 +848,90 @@ class AlertNotifierWhereInput(object):
         """
 
         self._email_from_starts_with = email_from_starts_with
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this AlertNotifierWhereInput.
+
+
+        :param entity_async_status: The entity_async_status of this AlertNotifierWhereInput.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
+    def entity_async_status_in(self):
+        """Gets the entity_async_status_in of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_in of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_in
+
+    @entity_async_status_in.setter
+    def entity_async_status_in(self, entity_async_status_in):
+        """Sets the entity_async_status_in of this AlertNotifierWhereInput.
+
+
+        :param entity_async_status_in: The entity_async_status_in of this AlertNotifierWhereInput.  # noqa: E501
+        :type entity_async_status_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_in = entity_async_status_in
+
+    @property
+    def entity_async_status_not(self):
+        """Gets the entity_async_status_not of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status_not
+
+    @entity_async_status_not.setter
+    def entity_async_status_not(self, entity_async_status_not):
+        """Sets the entity_async_status_not of this AlertNotifierWhereInput.
+
+
+        :param entity_async_status_not: The entity_async_status_not of this AlertNotifierWhereInput.  # noqa: E501
+        :type entity_async_status_not: EntityAsyncStatus
+        """
+
+        self._entity_async_status_not = entity_async_status_not
+
+    @property
+    def entity_async_status_not_in(self):
+        """Gets the entity_async_status_not_in of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not_in of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_not_in
+
+    @entity_async_status_not_in.setter
+    def entity_async_status_not_in(self, entity_async_status_not_in):
+        """Sets the entity_async_status_not_in of this AlertNotifierWhereInput.
+
+
+        :param entity_async_status_not_in: The entity_async_status_not_in of this AlertNotifierWhereInput.  # noqa: E501
+        :type entity_async_status_not_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
     def id(self):
@@ -1079,6 +1310,300 @@ class AlertNotifierWhereInput(object):
         """
 
         self._language_code_not_in = language_code_not_in
+
+    @property
+    def name(self):
+        """Gets the name of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this AlertNotifierWhereInput.
+
+
+        :param name: The name of this AlertNotifierWhereInput.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def name_contains(self):
+        """Gets the name_contains of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_contains of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_contains
+
+    @name_contains.setter
+    def name_contains(self, name_contains):
+        """Sets the name_contains of this AlertNotifierWhereInput.
+
+
+        :param name_contains: The name_contains of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_contains: str
+        """
+
+        self._name_contains = name_contains
+
+    @property
+    def name_ends_with(self):
+        """Gets the name_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_ends_with
+
+    @name_ends_with.setter
+    def name_ends_with(self, name_ends_with):
+        """Sets the name_ends_with of this AlertNotifierWhereInput.
+
+
+        :param name_ends_with: The name_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_ends_with: str
+        """
+
+        self._name_ends_with = name_ends_with
+
+    @property
+    def name_gt(self):
+        """Gets the name_gt of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_gt of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_gt
+
+    @name_gt.setter
+    def name_gt(self, name_gt):
+        """Sets the name_gt of this AlertNotifierWhereInput.
+
+
+        :param name_gt: The name_gt of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_gt: str
+        """
+
+        self._name_gt = name_gt
+
+    @property
+    def name_gte(self):
+        """Gets the name_gte of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_gte of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_gte
+
+    @name_gte.setter
+    def name_gte(self, name_gte):
+        """Sets the name_gte of this AlertNotifierWhereInput.
+
+
+        :param name_gte: The name_gte of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_gte: str
+        """
+
+        self._name_gte = name_gte
+
+    @property
+    def name_in(self):
+        """Gets the name_in of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_in of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._name_in
+
+    @name_in.setter
+    def name_in(self, name_in):
+        """Sets the name_in of this AlertNotifierWhereInput.
+
+
+        :param name_in: The name_in of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_in: list[str]
+        """
+
+        self._name_in = name_in
+
+    @property
+    def name_lt(self):
+        """Gets the name_lt of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_lt of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_lt
+
+    @name_lt.setter
+    def name_lt(self, name_lt):
+        """Sets the name_lt of this AlertNotifierWhereInput.
+
+
+        :param name_lt: The name_lt of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_lt: str
+        """
+
+        self._name_lt = name_lt
+
+    @property
+    def name_lte(self):
+        """Gets the name_lte of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_lte of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_lte
+
+    @name_lte.setter
+    def name_lte(self, name_lte):
+        """Sets the name_lte of this AlertNotifierWhereInput.
+
+
+        :param name_lte: The name_lte of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_lte: str
+        """
+
+        self._name_lte = name_lte
+
+    @property
+    def name_not(self):
+        """Gets the name_not of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_not of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not
+
+    @name_not.setter
+    def name_not(self, name_not):
+        """Sets the name_not of this AlertNotifierWhereInput.
+
+
+        :param name_not: The name_not of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_not: str
+        """
+
+        self._name_not = name_not
+
+    @property
+    def name_not_contains(self):
+        """Gets the name_not_contains of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_not_contains of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_contains
+
+    @name_not_contains.setter
+    def name_not_contains(self, name_not_contains):
+        """Sets the name_not_contains of this AlertNotifierWhereInput.
+
+
+        :param name_not_contains: The name_not_contains of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_not_contains: str
+        """
+
+        self._name_not_contains = name_not_contains
+
+    @property
+    def name_not_ends_with(self):
+        """Gets the name_not_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_not_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_ends_with
+
+    @name_not_ends_with.setter
+    def name_not_ends_with(self, name_not_ends_with):
+        """Sets the name_not_ends_with of this AlertNotifierWhereInput.
+
+
+        :param name_not_ends_with: The name_not_ends_with of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_not_ends_with: str
+        """
+
+        self._name_not_ends_with = name_not_ends_with
+
+    @property
+    def name_not_in(self):
+        """Gets the name_not_in of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_not_in of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._name_not_in
+
+    @name_not_in.setter
+    def name_not_in(self, name_not_in):
+        """Sets the name_not_in of this AlertNotifierWhereInput.
+
+
+        :param name_not_in: The name_not_in of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_not_in: list[str]
+        """
+
+        self._name_not_in = name_not_in
+
+    @property
+    def name_not_starts_with(self):
+        """Gets the name_not_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_not_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_starts_with
+
+    @name_not_starts_with.setter
+    def name_not_starts_with(self, name_not_starts_with):
+        """Sets the name_not_starts_with of this AlertNotifierWhereInput.
+
+
+        :param name_not_starts_with: The name_not_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_not_starts_with: str
+        """
+
+        self._name_not_starts_with = name_not_starts_with
+
+    @property
+    def name_starts_with(self):
+        """Gets the name_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The name_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_starts_with
+
+    @name_starts_with.setter
+    def name_starts_with(self, name_starts_with):
+        """Sets the name_starts_with of this AlertNotifierWhereInput.
+
+
+        :param name_starts_with: The name_starts_with of this AlertNotifierWhereInput.  # noqa: E501
+        :type name_starts_with: str
+        """
+
+        self._name_starts_with = name_starts_with
 
     @property
     def _not(self):

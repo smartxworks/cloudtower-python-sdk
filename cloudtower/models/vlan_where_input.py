@@ -89,6 +89,10 @@ class VlanWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
+        'mode_type': 'VlanModeType',
+        'mode_type_in': 'list[VlanModeType]',
+        'mode_type_not': 'VlanModeType',
+        'mode_type_not_in': 'list[VlanModeType]',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -105,6 +109,30 @@ class VlanWhereInput(object):
         'name_starts_with': 'str',
         '_not': 'list[VlanWhereInput]',
         '_or': 'list[VlanWhereInput]',
+        'qos_max_bandwidth': 'float',
+        'qos_max_bandwidth_gt': 'float',
+        'qos_max_bandwidth_gte': 'float',
+        'qos_max_bandwidth_in': 'list[float]',
+        'qos_max_bandwidth_lt': 'float',
+        'qos_max_bandwidth_lte': 'float',
+        'qos_max_bandwidth_not': 'float',
+        'qos_max_bandwidth_not_in': 'list[float]',
+        'qos_min_bandwidth': 'float',
+        'qos_min_bandwidth_gt': 'float',
+        'qos_min_bandwidth_gte': 'float',
+        'qos_min_bandwidth_in': 'list[float]',
+        'qos_min_bandwidth_lt': 'float',
+        'qos_min_bandwidth_lte': 'float',
+        'qos_min_bandwidth_not': 'float',
+        'qos_min_bandwidth_not_in': 'list[float]',
+        'qos_priority': 'int',
+        'qos_priority_gt': 'int',
+        'qos_priority_gte': 'int',
+        'qos_priority_in': 'list[int]',
+        'qos_priority_lt': 'int',
+        'qos_priority_lte': 'int',
+        'qos_priority_not': 'int',
+        'qos_priority_not_in': 'list[int]',
         'subnetmask': 'str',
         'subnetmask_contains': 'str',
         'subnetmask_ends_with': 'str',
@@ -202,6 +230,10 @@ class VlanWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
+        'mode_type': 'mode_type',
+        'mode_type_in': 'mode_type_in',
+        'mode_type_not': 'mode_type_not',
+        'mode_type_not_in': 'mode_type_not_in',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -218,6 +250,30 @@ class VlanWhereInput(object):
         'name_starts_with': 'name_starts_with',
         '_not': 'NOT',
         '_or': 'OR',
+        'qos_max_bandwidth': 'qos_max_bandwidth',
+        'qos_max_bandwidth_gt': 'qos_max_bandwidth_gt',
+        'qos_max_bandwidth_gte': 'qos_max_bandwidth_gte',
+        'qos_max_bandwidth_in': 'qos_max_bandwidth_in',
+        'qos_max_bandwidth_lt': 'qos_max_bandwidth_lt',
+        'qos_max_bandwidth_lte': 'qos_max_bandwidth_lte',
+        'qos_max_bandwidth_not': 'qos_max_bandwidth_not',
+        'qos_max_bandwidth_not_in': 'qos_max_bandwidth_not_in',
+        'qos_min_bandwidth': 'qos_min_bandwidth',
+        'qos_min_bandwidth_gt': 'qos_min_bandwidth_gt',
+        'qos_min_bandwidth_gte': 'qos_min_bandwidth_gte',
+        'qos_min_bandwidth_in': 'qos_min_bandwidth_in',
+        'qos_min_bandwidth_lt': 'qos_min_bandwidth_lt',
+        'qos_min_bandwidth_lte': 'qos_min_bandwidth_lte',
+        'qos_min_bandwidth_not': 'qos_min_bandwidth_not',
+        'qos_min_bandwidth_not_in': 'qos_min_bandwidth_not_in',
+        'qos_priority': 'qos_priority',
+        'qos_priority_gt': 'qos_priority_gt',
+        'qos_priority_gte': 'qos_priority_gte',
+        'qos_priority_in': 'qos_priority_in',
+        'qos_priority_lt': 'qos_priority_lt',
+        'qos_priority_lte': 'qos_priority_lte',
+        'qos_priority_not': 'qos_priority_not',
+        'qos_priority_not_in': 'qos_priority_not_in',
         'subnetmask': 'subnetmask',
         'subnetmask_contains': 'subnetmask_contains',
         'subnetmask_ends_with': 'subnetmask_ends_with',
@@ -318,6 +374,10 @@ class VlanWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
+        self._mode_type = None
+        self._mode_type_in = None
+        self._mode_type_not = None
+        self._mode_type_not_in = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -334,6 +394,30 @@ class VlanWhereInput(object):
         self._name_starts_with = None
         self.__not = None
         self.__or = None
+        self._qos_max_bandwidth = None
+        self._qos_max_bandwidth_gt = None
+        self._qos_max_bandwidth_gte = None
+        self._qos_max_bandwidth_in = None
+        self._qos_max_bandwidth_lt = None
+        self._qos_max_bandwidth_lte = None
+        self._qos_max_bandwidth_not = None
+        self._qos_max_bandwidth_not_in = None
+        self._qos_min_bandwidth = None
+        self._qos_min_bandwidth_gt = None
+        self._qos_min_bandwidth_gte = None
+        self._qos_min_bandwidth_in = None
+        self._qos_min_bandwidth_lt = None
+        self._qos_min_bandwidth_lte = None
+        self._qos_min_bandwidth_not = None
+        self._qos_min_bandwidth_not_in = None
+        self._qos_priority = None
+        self._qos_priority_gt = None
+        self._qos_priority_gte = None
+        self._qos_priority_in = None
+        self._qos_priority_lt = None
+        self._qos_priority_lte = None
+        self._qos_priority_not = None
+        self._qos_priority_not_in = None
         self._subnetmask = None
         self._subnetmask_contains = None
         self._subnetmask_ends_with = None
@@ -430,6 +514,10 @@ class VlanWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
+        self.mode_type = kwargs.get("mode_type", None)
+        self.mode_type_in = kwargs.get("mode_type_in", None)
+        self.mode_type_not = kwargs.get("mode_type_not", None)
+        self.mode_type_not_in = kwargs.get("mode_type_not_in", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -446,6 +534,30 @@ class VlanWhereInput(object):
         self.name_starts_with = kwargs.get("name_starts_with", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
+        self.qos_max_bandwidth_gt = kwargs.get("qos_max_bandwidth_gt", None)
+        self.qos_max_bandwidth_gte = kwargs.get("qos_max_bandwidth_gte", None)
+        self.qos_max_bandwidth_in = kwargs.get("qos_max_bandwidth_in", None)
+        self.qos_max_bandwidth_lt = kwargs.get("qos_max_bandwidth_lt", None)
+        self.qos_max_bandwidth_lte = kwargs.get("qos_max_bandwidth_lte", None)
+        self.qos_max_bandwidth_not = kwargs.get("qos_max_bandwidth_not", None)
+        self.qos_max_bandwidth_not_in = kwargs.get("qos_max_bandwidth_not_in", None)
+        self.qos_min_bandwidth = kwargs.get("qos_min_bandwidth", None)
+        self.qos_min_bandwidth_gt = kwargs.get("qos_min_bandwidth_gt", None)
+        self.qos_min_bandwidth_gte = kwargs.get("qos_min_bandwidth_gte", None)
+        self.qos_min_bandwidth_in = kwargs.get("qos_min_bandwidth_in", None)
+        self.qos_min_bandwidth_lt = kwargs.get("qos_min_bandwidth_lt", None)
+        self.qos_min_bandwidth_lte = kwargs.get("qos_min_bandwidth_lte", None)
+        self.qos_min_bandwidth_not = kwargs.get("qos_min_bandwidth_not", None)
+        self.qos_min_bandwidth_not_in = kwargs.get("qos_min_bandwidth_not_in", None)
+        self.qos_priority = kwargs.get("qos_priority", None)
+        self.qos_priority_gt = kwargs.get("qos_priority_gt", None)
+        self.qos_priority_gte = kwargs.get("qos_priority_gte", None)
+        self.qos_priority_in = kwargs.get("qos_priority_in", None)
+        self.qos_priority_lt = kwargs.get("qos_priority_lt", None)
+        self.qos_priority_lte = kwargs.get("qos_priority_lte", None)
+        self.qos_priority_not = kwargs.get("qos_priority_not", None)
+        self.qos_priority_not_in = kwargs.get("qos_priority_not_in", None)
         self.subnetmask = kwargs.get("subnetmask", None)
         self.subnetmask_contains = kwargs.get("subnetmask_contains", None)
         self.subnetmask_ends_with = kwargs.get("subnetmask_ends_with", None)
@@ -1822,6 +1934,90 @@ class VlanWhereInput(object):
         self._local_id_starts_with = local_id_starts_with
 
     @property
+    def mode_type(self):
+        """Gets the mode_type of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The mode_type of this VlanWhereInput.  # noqa: E501
+        :rtype: VlanModeType
+        """
+        return self._mode_type
+
+    @mode_type.setter
+    def mode_type(self, mode_type):
+        """Sets the mode_type of this VlanWhereInput.
+
+
+        :param mode_type: The mode_type of this VlanWhereInput.  # noqa: E501
+        :type mode_type: VlanModeType
+        """
+
+        self._mode_type = mode_type
+
+    @property
+    def mode_type_in(self):
+        """Gets the mode_type_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The mode_type_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[VlanModeType]
+        """
+        return self._mode_type_in
+
+    @mode_type_in.setter
+    def mode_type_in(self, mode_type_in):
+        """Sets the mode_type_in of this VlanWhereInput.
+
+
+        :param mode_type_in: The mode_type_in of this VlanWhereInput.  # noqa: E501
+        :type mode_type_in: list[VlanModeType]
+        """
+
+        self._mode_type_in = mode_type_in
+
+    @property
+    def mode_type_not(self):
+        """Gets the mode_type_not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The mode_type_not of this VlanWhereInput.  # noqa: E501
+        :rtype: VlanModeType
+        """
+        return self._mode_type_not
+
+    @mode_type_not.setter
+    def mode_type_not(self, mode_type_not):
+        """Sets the mode_type_not of this VlanWhereInput.
+
+
+        :param mode_type_not: The mode_type_not of this VlanWhereInput.  # noqa: E501
+        :type mode_type_not: VlanModeType
+        """
+
+        self._mode_type_not = mode_type_not
+
+    @property
+    def mode_type_not_in(self):
+        """Gets the mode_type_not_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The mode_type_not_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[VlanModeType]
+        """
+        return self._mode_type_not_in
+
+    @mode_type_not_in.setter
+    def mode_type_not_in(self, mode_type_not_in):
+        """Sets the mode_type_not_in of this VlanWhereInput.
+
+
+        :param mode_type_not_in: The mode_type_not_in of this VlanWhereInput.  # noqa: E501
+        :type mode_type_not_in: list[VlanModeType]
+        """
+
+        self._mode_type_not_in = mode_type_not_in
+
+    @property
     def name(self):
         """Gets the name of this VlanWhereInput.  # noqa: E501
 
@@ -2156,6 +2352,510 @@ class VlanWhereInput(object):
         """
 
         self.__or = _or
+
+    @property
+    def qos_max_bandwidth(self):
+        """Gets the qos_max_bandwidth of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth
+
+    @qos_max_bandwidth.setter
+    def qos_max_bandwidth(self, qos_max_bandwidth):
+        """Sets the qos_max_bandwidth of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth: The qos_max_bandwidth of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth: float
+        """
+
+        self._qos_max_bandwidth = qos_max_bandwidth
+
+    @property
+    def qos_max_bandwidth_gt(self):
+        """Gets the qos_max_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth_gt
+
+    @qos_max_bandwidth_gt.setter
+    def qos_max_bandwidth_gt(self, qos_max_bandwidth_gt):
+        """Sets the qos_max_bandwidth_gt of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_gt: The qos_max_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_gt: float
+        """
+
+        self._qos_max_bandwidth_gt = qos_max_bandwidth_gt
+
+    @property
+    def qos_max_bandwidth_gte(self):
+        """Gets the qos_max_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth_gte
+
+    @qos_max_bandwidth_gte.setter
+    def qos_max_bandwidth_gte(self, qos_max_bandwidth_gte):
+        """Sets the qos_max_bandwidth_gte of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_gte: The qos_max_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_gte: float
+        """
+
+        self._qos_max_bandwidth_gte = qos_max_bandwidth_gte
+
+    @property
+    def qos_max_bandwidth_in(self):
+        """Gets the qos_max_bandwidth_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_max_bandwidth_in
+
+    @qos_max_bandwidth_in.setter
+    def qos_max_bandwidth_in(self, qos_max_bandwidth_in):
+        """Sets the qos_max_bandwidth_in of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_in: The qos_max_bandwidth_in of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_in: list[float]
+        """
+
+        self._qos_max_bandwidth_in = qos_max_bandwidth_in
+
+    @property
+    def qos_max_bandwidth_lt(self):
+        """Gets the qos_max_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth_lt
+
+    @qos_max_bandwidth_lt.setter
+    def qos_max_bandwidth_lt(self, qos_max_bandwidth_lt):
+        """Sets the qos_max_bandwidth_lt of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_lt: The qos_max_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_lt: float
+        """
+
+        self._qos_max_bandwidth_lt = qos_max_bandwidth_lt
+
+    @property
+    def qos_max_bandwidth_lte(self):
+        """Gets the qos_max_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth_lte
+
+    @qos_max_bandwidth_lte.setter
+    def qos_max_bandwidth_lte(self, qos_max_bandwidth_lte):
+        """Sets the qos_max_bandwidth_lte of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_lte: The qos_max_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_lte: float
+        """
+
+        self._qos_max_bandwidth_lte = qos_max_bandwidth_lte
+
+    @property
+    def qos_max_bandwidth_not(self):
+        """Gets the qos_max_bandwidth_not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_not of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth_not
+
+    @qos_max_bandwidth_not.setter
+    def qos_max_bandwidth_not(self, qos_max_bandwidth_not):
+        """Sets the qos_max_bandwidth_not of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_not: The qos_max_bandwidth_not of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_not: float
+        """
+
+        self._qos_max_bandwidth_not = qos_max_bandwidth_not
+
+    @property
+    def qos_max_bandwidth_not_in(self):
+        """Gets the qos_max_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_max_bandwidth_not_in
+
+    @qos_max_bandwidth_not_in.setter
+    def qos_max_bandwidth_not_in(self, qos_max_bandwidth_not_in):
+        """Sets the qos_max_bandwidth_not_in of this VlanWhereInput.
+
+
+        :param qos_max_bandwidth_not_in: The qos_max_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+        :type qos_max_bandwidth_not_in: list[float]
+        """
+
+        self._qos_max_bandwidth_not_in = qos_max_bandwidth_not_in
+
+    @property
+    def qos_min_bandwidth(self):
+        """Gets the qos_min_bandwidth of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth
+
+    @qos_min_bandwidth.setter
+    def qos_min_bandwidth(self, qos_min_bandwidth):
+        """Sets the qos_min_bandwidth of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth: The qos_min_bandwidth of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth: float
+        """
+
+        self._qos_min_bandwidth = qos_min_bandwidth
+
+    @property
+    def qos_min_bandwidth_gt(self):
+        """Gets the qos_min_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth_gt
+
+    @qos_min_bandwidth_gt.setter
+    def qos_min_bandwidth_gt(self, qos_min_bandwidth_gt):
+        """Sets the qos_min_bandwidth_gt of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_gt: The qos_min_bandwidth_gt of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_gt: float
+        """
+
+        self._qos_min_bandwidth_gt = qos_min_bandwidth_gt
+
+    @property
+    def qos_min_bandwidth_gte(self):
+        """Gets the qos_min_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth_gte
+
+    @qos_min_bandwidth_gte.setter
+    def qos_min_bandwidth_gte(self, qos_min_bandwidth_gte):
+        """Sets the qos_min_bandwidth_gte of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_gte: The qos_min_bandwidth_gte of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_gte: float
+        """
+
+        self._qos_min_bandwidth_gte = qos_min_bandwidth_gte
+
+    @property
+    def qos_min_bandwidth_in(self):
+        """Gets the qos_min_bandwidth_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_min_bandwidth_in
+
+    @qos_min_bandwidth_in.setter
+    def qos_min_bandwidth_in(self, qos_min_bandwidth_in):
+        """Sets the qos_min_bandwidth_in of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_in: The qos_min_bandwidth_in of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_in: list[float]
+        """
+
+        self._qos_min_bandwidth_in = qos_min_bandwidth_in
+
+    @property
+    def qos_min_bandwidth_lt(self):
+        """Gets the qos_min_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth_lt
+
+    @qos_min_bandwidth_lt.setter
+    def qos_min_bandwidth_lt(self, qos_min_bandwidth_lt):
+        """Sets the qos_min_bandwidth_lt of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_lt: The qos_min_bandwidth_lt of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_lt: float
+        """
+
+        self._qos_min_bandwidth_lt = qos_min_bandwidth_lt
+
+    @property
+    def qos_min_bandwidth_lte(self):
+        """Gets the qos_min_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth_lte
+
+    @qos_min_bandwidth_lte.setter
+    def qos_min_bandwidth_lte(self, qos_min_bandwidth_lte):
+        """Sets the qos_min_bandwidth_lte of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_lte: The qos_min_bandwidth_lte of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_lte: float
+        """
+
+        self._qos_min_bandwidth_lte = qos_min_bandwidth_lte
+
+    @property
+    def qos_min_bandwidth_not(self):
+        """Gets the qos_min_bandwidth_not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_not of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth_not
+
+    @qos_min_bandwidth_not.setter
+    def qos_min_bandwidth_not(self, qos_min_bandwidth_not):
+        """Sets the qos_min_bandwidth_not of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_not: The qos_min_bandwidth_not of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_not: float
+        """
+
+        self._qos_min_bandwidth_not = qos_min_bandwidth_not
+
+    @property
+    def qos_min_bandwidth_not_in(self):
+        """Gets the qos_min_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_min_bandwidth_not_in
+
+    @qos_min_bandwidth_not_in.setter
+    def qos_min_bandwidth_not_in(self, qos_min_bandwidth_not_in):
+        """Sets the qos_min_bandwidth_not_in of this VlanWhereInput.
+
+
+        :param qos_min_bandwidth_not_in: The qos_min_bandwidth_not_in of this VlanWhereInput.  # noqa: E501
+        :type qos_min_bandwidth_not_in: list[float]
+        """
+
+        self._qos_min_bandwidth_not_in = qos_min_bandwidth_not_in
+
+    @property
+    def qos_priority(self):
+        """Gets the qos_priority of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority
+
+    @qos_priority.setter
+    def qos_priority(self, qos_priority):
+        """Sets the qos_priority of this VlanWhereInput.
+
+
+        :param qos_priority: The qos_priority of this VlanWhereInput.  # noqa: E501
+        :type qos_priority: int
+        """
+
+        self._qos_priority = qos_priority
+
+    @property
+    def qos_priority_gt(self):
+        """Gets the qos_priority_gt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_gt of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority_gt
+
+    @qos_priority_gt.setter
+    def qos_priority_gt(self, qos_priority_gt):
+        """Sets the qos_priority_gt of this VlanWhereInput.
+
+
+        :param qos_priority_gt: The qos_priority_gt of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_gt: int
+        """
+
+        self._qos_priority_gt = qos_priority_gt
+
+    @property
+    def qos_priority_gte(self):
+        """Gets the qos_priority_gte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_gte of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority_gte
+
+    @qos_priority_gte.setter
+    def qos_priority_gte(self, qos_priority_gte):
+        """Sets the qos_priority_gte of this VlanWhereInput.
+
+
+        :param qos_priority_gte: The qos_priority_gte of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_gte: int
+        """
+
+        self._qos_priority_gte = qos_priority_gte
+
+    @property
+    def qos_priority_in(self):
+        """Gets the qos_priority_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._qos_priority_in
+
+    @qos_priority_in.setter
+    def qos_priority_in(self, qos_priority_in):
+        """Sets the qos_priority_in of this VlanWhereInput.
+
+
+        :param qos_priority_in: The qos_priority_in of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_in: list[int]
+        """
+
+        self._qos_priority_in = qos_priority_in
+
+    @property
+    def qos_priority_lt(self):
+        """Gets the qos_priority_lt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_lt of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority_lt
+
+    @qos_priority_lt.setter
+    def qos_priority_lt(self, qos_priority_lt):
+        """Sets the qos_priority_lt of this VlanWhereInput.
+
+
+        :param qos_priority_lt: The qos_priority_lt of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_lt: int
+        """
+
+        self._qos_priority_lt = qos_priority_lt
+
+    @property
+    def qos_priority_lte(self):
+        """Gets the qos_priority_lte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_lte of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority_lte
+
+    @qos_priority_lte.setter
+    def qos_priority_lte(self, qos_priority_lte):
+        """Sets the qos_priority_lte of this VlanWhereInput.
+
+
+        :param qos_priority_lte: The qos_priority_lte of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_lte: int
+        """
+
+        self._qos_priority_lte = qos_priority_lte
+
+    @property
+    def qos_priority_not(self):
+        """Gets the qos_priority_not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_not of this VlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority_not
+
+    @qos_priority_not.setter
+    def qos_priority_not(self, qos_priority_not):
+        """Sets the qos_priority_not of this VlanWhereInput.
+
+
+        :param qos_priority_not: The qos_priority_not of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_not: int
+        """
+
+        self._qos_priority_not = qos_priority_not
+
+    @property
+    def qos_priority_not_in(self):
+        """Gets the qos_priority_not_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_priority_not_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._qos_priority_not_in
+
+    @qos_priority_not_in.setter
+    def qos_priority_not_in(self, qos_priority_not_in):
+        """Sets the qos_priority_not_in of this VlanWhereInput.
+
+
+        :param qos_priority_not_in: The qos_priority_not_in of this VlanWhereInput.  # noqa: E501
+        :type qos_priority_not_in: list[int]
+        """
+
+        self._qos_priority_not_in = qos_priority_not_in
 
     @property
     def subnetmask(self):

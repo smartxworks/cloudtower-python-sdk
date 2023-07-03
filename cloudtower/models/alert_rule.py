@@ -57,8 +57,7 @@ class AlertRule(object):
         self._thresholds = None
         self.discriminator = None
 
-        if "cluster" in kwargs:
-            self.cluster = kwargs["cluster"]
+        self.cluster = kwargs.get("cluster", None)
         if "customized" in kwargs:
             self.customized = kwargs["customized"]
         if "disabled" in kwargs:
@@ -90,8 +89,6 @@ class AlertRule(object):
         :param cluster: The cluster of this AlertRule.  # noqa: E501
         :type cluster: NestedCluster
         """
-        if self.local_vars_configuration.client_side_validation and cluster is None:  # noqa: E501
-            raise ValueError("Invalid value for `cluster`, must not be `None`")  # noqa: E501
 
         self._cluster = cluster
 

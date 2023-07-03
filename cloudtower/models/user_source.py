@@ -20,10 +20,11 @@ class UserSource(object):
     """
     allowed enum values
     """
+    AUTHN = "AUTHN"
     LDAP = "LDAP"
     LOCAL = "LOCAL"
 
-    allowable_values = [LDAP, LOCAL]  # noqa: E501
+    allowable_values = [AUTHN, LDAP, LOCAL]  # noqa: E501
 
     """
     Attributes:

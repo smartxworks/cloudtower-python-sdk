@@ -27,6 +27,7 @@ class ClusterSettings(object):
     openapi_types = {
         'cluster': 'NestedCluster',
         'default_ha': 'bool',
+        'default_storage_policy': 'VmVolumeElfStoragePolicyType',
         'enabled_iscsi': 'bool',
         'id': 'str',
         'vm_recycle_bin': 'NestedVmRecycleBin'
@@ -35,6 +36,7 @@ class ClusterSettings(object):
     attribute_map = {
         'cluster': 'cluster',
         'default_ha': 'default_ha',
+        'default_storage_policy': 'default_storage_policy',
         'enabled_iscsi': 'enabled_iscsi',
         'id': 'id',
         'vm_recycle_bin': 'vm_recycle_bin'
@@ -46,6 +48,7 @@ class ClusterSettings(object):
 
         self._cluster = None
         self._default_ha = None
+        self._default_storage_policy = None
         self._enabled_iscsi = None
         self._id = None
         self._vm_recycle_bin = None
@@ -54,6 +57,7 @@ class ClusterSettings(object):
         if "cluster" in kwargs:
             self.cluster = kwargs["cluster"]
         self.default_ha = kwargs.get("default_ha", None)
+        self.default_storage_policy = kwargs.get("default_storage_policy", None)
         self.enabled_iscsi = kwargs.get("enabled_iscsi", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -102,6 +106,27 @@ class ClusterSettings(object):
         """
 
         self._default_ha = default_ha
+
+    @property
+    def default_storage_policy(self):
+        """Gets the default_storage_policy of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy of this ClusterSettings.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._default_storage_policy
+
+    @default_storage_policy.setter
+    def default_storage_policy(self, default_storage_policy):
+        """Sets the default_storage_policy of this ClusterSettings.
+
+
+        :param default_storage_policy: The default_storage_policy of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._default_storage_policy = default_storage_policy
 
     @property
     def enabled_iscsi(self):

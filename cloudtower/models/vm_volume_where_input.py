@@ -45,6 +45,10 @@ class VmVolumeWhereInput(object):
         'elf_storage_policy_in': 'list[VmVolumeElfStoragePolicyType]',
         'elf_storage_policy_not': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy_not_in': 'list[VmVolumeElfStoragePolicyType]',
+        'entity_async_status': 'EntityAsyncStatus',
+        'entity_async_status_in': 'list[EntityAsyncStatus]',
+        'entity_async_status_not': 'EntityAsyncStatus',
+        'entity_async_status_not_in': 'list[EntityAsyncStatus]',
         'guest_size_usage': 'float',
         'guest_size_usage_gt': 'float',
         'guest_size_usage_gte': 'float',
@@ -181,6 +185,10 @@ class VmVolumeWhereInput(object):
         'elf_storage_policy_in': 'elf_storage_policy_in',
         'elf_storage_policy_not': 'elf_storage_policy_not',
         'elf_storage_policy_not_in': 'elf_storage_policy_not_in',
+        'entity_async_status': 'entityAsyncStatus',
+        'entity_async_status_in': 'entityAsyncStatus_in',
+        'entity_async_status_not': 'entityAsyncStatus_not',
+        'entity_async_status_not_in': 'entityAsyncStatus_not_in',
         'guest_size_usage': 'guest_size_usage',
         'guest_size_usage_gt': 'guest_size_usage_gt',
         'guest_size_usage_gte': 'guest_size_usage_gte',
@@ -320,6 +328,10 @@ class VmVolumeWhereInput(object):
         self._elf_storage_policy_in = None
         self._elf_storage_policy_not = None
         self._elf_storage_policy_not_in = None
+        self._entity_async_status = None
+        self._entity_async_status_in = None
+        self._entity_async_status_not = None
+        self._entity_async_status_not_in = None
         self._guest_size_usage = None
         self._guest_size_usage_gt = None
         self._guest_size_usage_gte = None
@@ -455,6 +467,10 @@ class VmVolumeWhereInput(object):
         self.elf_storage_policy_in = kwargs.get("elf_storage_policy_in", None)
         self.elf_storage_policy_not = kwargs.get("elf_storage_policy_not", None)
         self.elf_storage_policy_not_in = kwargs.get("elf_storage_policy_not_in", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
+        self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
+        self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
         self.guest_size_usage = kwargs.get("guest_size_usage", None)
         self.guest_size_usage_gt = kwargs.get("guest_size_usage_gt", None)
         self.guest_size_usage_gte = kwargs.get("guest_size_usage_gte", None)
@@ -988,6 +1004,90 @@ class VmVolumeWhereInput(object):
         """
 
         self._elf_storage_policy_not_in = elf_storage_policy_not_in
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this VmVolumeWhereInput.
+
+
+        :param entity_async_status: The entity_async_status of this VmVolumeWhereInput.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
+
+    @property
+    def entity_async_status_in(self):
+        """Gets the entity_async_status_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_in
+
+    @entity_async_status_in.setter
+    def entity_async_status_in(self, entity_async_status_in):
+        """Sets the entity_async_status_in of this VmVolumeWhereInput.
+
+
+        :param entity_async_status_in: The entity_async_status_in of this VmVolumeWhereInput.  # noqa: E501
+        :type entity_async_status_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_in = entity_async_status_in
+
+    @property
+    def entity_async_status_not(self):
+        """Gets the entity_async_status_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status_not
+
+    @entity_async_status_not.setter
+    def entity_async_status_not(self, entity_async_status_not):
+        """Sets the entity_async_status_not of this VmVolumeWhereInput.
+
+
+        :param entity_async_status_not: The entity_async_status_not of this VmVolumeWhereInput.  # noqa: E501
+        :type entity_async_status_not: EntityAsyncStatus
+        """
+
+        self._entity_async_status_not = entity_async_status_not
+
+    @property
+    def entity_async_status_not_in(self):
+        """Gets the entity_async_status_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The entity_async_status_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[EntityAsyncStatus]
+        """
+        return self._entity_async_status_not_in
+
+    @entity_async_status_not_in.setter
+    def entity_async_status_not_in(self, entity_async_status_not_in):
+        """Sets the entity_async_status_not_in of this VmVolumeWhereInput.
+
+
+        :param entity_async_status_not_in: The entity_async_status_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type entity_async_status_not_in: list[EntityAsyncStatus]
+        """
+
+        self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
     def guest_size_usage(self):

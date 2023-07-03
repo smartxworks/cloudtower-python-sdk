@@ -25,11 +25,29 @@ class VmVlanUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'qos_burst_unit': 'ByteUnit',
+        'qos_burst': 'int',
+        'qos_max_bandwidth_unit': 'BPSUnit',
+        'qos_max_bandwidth': 'int',
+        'qos_min_bandwidth_unit': 'BPSUnit',
+        'qos_min_bandwidth': 'int',
+        'qos_priority': 'float',
+        'mode_type': 'VlanModeType',
+        'network_ids': 'list[str]',
         'vlan_id': 'int',
         'name': 'str'
     }
 
     attribute_map = {
+        'qos_burst_unit': 'qos_burst_unit',
+        'qos_burst': 'qos_burst',
+        'qos_max_bandwidth_unit': 'qos_max_bandwidth_unit',
+        'qos_max_bandwidth': 'qos_max_bandwidth',
+        'qos_min_bandwidth_unit': 'qos_min_bandwidth_unit',
+        'qos_min_bandwidth': 'qos_min_bandwidth',
+        'qos_priority': 'qos_priority',
+        'mode_type': 'mode_type',
+        'network_ids': 'network_ids',
         'vlan_id': 'vlan_id',
         'name': 'name'
     }
@@ -38,14 +56,230 @@ class VmVlanUpdationParamsData(object):
         """VmVlanUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._qos_burst_unit = None
+        self._qos_burst = None
+        self._qos_max_bandwidth_unit = None
+        self._qos_max_bandwidth = None
+        self._qos_min_bandwidth_unit = None
+        self._qos_min_bandwidth = None
+        self._qos_priority = None
+        self._mode_type = None
+        self._network_ids = None
         self._vlan_id = None
         self._name = None
         self.discriminator = None
 
+        if "qos_burst_unit" in kwargs:
+            self.qos_burst_unit = kwargs["qos_burst_unit"]
+        self.qos_burst = kwargs.get("qos_burst", None)
+        if "qos_max_bandwidth_unit" in kwargs:
+            self.qos_max_bandwidth_unit = kwargs["qos_max_bandwidth_unit"]
+        self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
+        if "qos_min_bandwidth_unit" in kwargs:
+            self.qos_min_bandwidth_unit = kwargs["qos_min_bandwidth_unit"]
+        self.qos_min_bandwidth = kwargs.get("qos_min_bandwidth", None)
+        if "qos_priority" in kwargs:
+            self.qos_priority = kwargs["qos_priority"]
+        if "mode_type" in kwargs:
+            self.mode_type = kwargs["mode_type"]
+        if "network_ids" in kwargs:
+            self.network_ids = kwargs["network_ids"]
         if "vlan_id" in kwargs:
             self.vlan_id = kwargs["vlan_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def qos_burst_unit(self):
+        """Gets the qos_burst_unit of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_burst_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: ByteUnit
+        """
+        return self._qos_burst_unit
+
+    @qos_burst_unit.setter
+    def qos_burst_unit(self, qos_burst_unit):
+        """Sets the qos_burst_unit of this VmVlanUpdationParamsData.
+
+
+        :param qos_burst_unit: The qos_burst_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_burst_unit: ByteUnit
+        """
+
+        self._qos_burst_unit = qos_burst_unit
+
+    @property
+    def qos_burst(self):
+        """Gets the qos_burst of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_burst of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_burst
+
+    @qos_burst.setter
+    def qos_burst(self, qos_burst):
+        """Sets the qos_burst of this VmVlanUpdationParamsData.
+
+
+        :param qos_burst: The qos_burst of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_burst: int
+        """
+
+        self._qos_burst = qos_burst
+
+    @property
+    def qos_max_bandwidth_unit(self):
+        """Gets the qos_max_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._qos_max_bandwidth_unit
+
+    @qos_max_bandwidth_unit.setter
+    def qos_max_bandwidth_unit(self, qos_max_bandwidth_unit):
+        """Sets the qos_max_bandwidth_unit of this VmVlanUpdationParamsData.
+
+
+        :param qos_max_bandwidth_unit: The qos_max_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_max_bandwidth_unit: BPSUnit
+        """
+
+        self._qos_max_bandwidth_unit = qos_max_bandwidth_unit
+
+    @property
+    def qos_max_bandwidth(self):
+        """Gets the qos_max_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_max_bandwidth
+
+    @qos_max_bandwidth.setter
+    def qos_max_bandwidth(self, qos_max_bandwidth):
+        """Sets the qos_max_bandwidth of this VmVlanUpdationParamsData.
+
+
+        :param qos_max_bandwidth: The qos_max_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_max_bandwidth: int
+        """
+
+        self._qos_max_bandwidth = qos_max_bandwidth
+
+    @property
+    def qos_min_bandwidth_unit(self):
+        """Gets the qos_min_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: BPSUnit
+        """
+        return self._qos_min_bandwidth_unit
+
+    @qos_min_bandwidth_unit.setter
+    def qos_min_bandwidth_unit(self, qos_min_bandwidth_unit):
+        """Sets the qos_min_bandwidth_unit of this VmVlanUpdationParamsData.
+
+
+        :param qos_min_bandwidth_unit: The qos_min_bandwidth_unit of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_min_bandwidth_unit: BPSUnit
+        """
+
+        self._qos_min_bandwidth_unit = qos_min_bandwidth_unit
+
+    @property
+    def qos_min_bandwidth(self):
+        """Gets the qos_min_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_min_bandwidth
+
+    @qos_min_bandwidth.setter
+    def qos_min_bandwidth(self, qos_min_bandwidth):
+        """Sets the qos_min_bandwidth of this VmVlanUpdationParamsData.
+
+
+        :param qos_min_bandwidth: The qos_min_bandwidth of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_min_bandwidth: int
+        """
+
+        self._qos_min_bandwidth = qos_min_bandwidth
+
+    @property
+    def qos_priority(self):
+        """Gets the qos_priority of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The qos_priority of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_priority
+
+    @qos_priority.setter
+    def qos_priority(self, qos_priority):
+        """Sets the qos_priority of this VmVlanUpdationParamsData.
+
+
+        :param qos_priority: The qos_priority of this VmVlanUpdationParamsData.  # noqa: E501
+        :type qos_priority: float
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                qos_priority is not None and qos_priority < 0):  # noqa: E501
+            raise ValueError("Invalid value for `qos_priority`, must be a value greater than or equal to `0`")  # noqa: E501
+
+        self._qos_priority = qos_priority
+
+    @property
+    def mode_type(self):
+        """Gets the mode_type of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The mode_type of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: VlanModeType
+        """
+        return self._mode_type
+
+    @mode_type.setter
+    def mode_type(self, mode_type):
+        """Sets the mode_type of this VmVlanUpdationParamsData.
+
+
+        :param mode_type: The mode_type of this VmVlanUpdationParamsData.  # noqa: E501
+        :type mode_type: VlanModeType
+        """
+
+        self._mode_type = mode_type
+
+    @property
+    def network_ids(self):
+        """Gets the network_ids of this VmVlanUpdationParamsData.  # noqa: E501
+
+
+        :return: The network_ids of this VmVlanUpdationParamsData.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._network_ids
+
+    @network_ids.setter
+    def network_ids(self, network_ids):
+        """Sets the network_ids of this VmVlanUpdationParamsData.
+
+
+        :param network_ids: The network_ids of this VmVlanUpdationParamsData.  # noqa: E501
+        :type network_ids: list[str]
+        """
+
+        self._network_ids = network_ids
 
     @property
     def vlan_id(self):

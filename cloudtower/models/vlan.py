@@ -31,7 +31,12 @@ class Vlan(object):
         'id': 'str',
         'labels': 'list[NestedLabel]',
         'local_id': 'str',
+        'mode_type': 'VlanModeType',
         'name': 'str',
+        'network_ids': 'list[str]',
+        'qos_max_bandwidth': 'float',
+        'qos_min_bandwidth': 'float',
+        'qos_priority': 'int',
         'subnetmask': 'str',
         'type': 'NetworkType',
         'vds': 'NestedVds',
@@ -46,7 +51,12 @@ class Vlan(object):
         'id': 'id',
         'labels': 'labels',
         'local_id': 'local_id',
+        'mode_type': 'mode_type',
         'name': 'name',
+        'network_ids': 'network_ids',
+        'qos_max_bandwidth': 'qos_max_bandwidth',
+        'qos_min_bandwidth': 'qos_min_bandwidth',
+        'qos_priority': 'qos_priority',
         'subnetmask': 'subnetmask',
         'type': 'type',
         'vds': 'vds',
@@ -64,7 +74,12 @@ class Vlan(object):
         self._id = None
         self._labels = None
         self._local_id = None
+        self._mode_type = None
         self._name = None
+        self._network_ids = None
+        self._qos_max_bandwidth = None
+        self._qos_min_bandwidth = None
+        self._qos_priority = None
         self._subnetmask = None
         self._type = None
         self._vds = None
@@ -80,8 +95,14 @@ class Vlan(object):
         self.labels = kwargs.get("labels", None)
         if "local_id" in kwargs:
             self.local_id = kwargs["local_id"]
+        self.mode_type = kwargs.get("mode_type", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
+        if "network_ids" in kwargs:
+            self.network_ids = kwargs["network_ids"]
+        self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
+        self.qos_min_bandwidth = kwargs.get("qos_min_bandwidth", None)
+        self.qos_priority = kwargs.get("qos_priority", None)
         self.subnetmask = kwargs.get("subnetmask", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
@@ -222,6 +243,27 @@ class Vlan(object):
         self._local_id = local_id
 
     @property
+    def mode_type(self):
+        """Gets the mode_type of this Vlan.  # noqa: E501
+
+
+        :return: The mode_type of this Vlan.  # noqa: E501
+        :rtype: VlanModeType
+        """
+        return self._mode_type
+
+    @mode_type.setter
+    def mode_type(self, mode_type):
+        """Sets the mode_type of this Vlan.
+
+
+        :param mode_type: The mode_type of this Vlan.  # noqa: E501
+        :type mode_type: VlanModeType
+        """
+
+        self._mode_type = mode_type
+
+    @property
     def name(self):
         """Gets the name of this Vlan.  # noqa: E501
 
@@ -243,6 +285,92 @@ class Vlan(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def network_ids(self):
+        """Gets the network_ids of this Vlan.  # noqa: E501
+
+
+        :return: The network_ids of this Vlan.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._network_ids
+
+    @network_ids.setter
+    def network_ids(self, network_ids):
+        """Sets the network_ids of this Vlan.
+
+
+        :param network_ids: The network_ids of this Vlan.  # noqa: E501
+        :type network_ids: list[str]
+        """
+        if self.local_vars_configuration.client_side_validation and network_ids is None:  # noqa: E501
+            raise ValueError("Invalid value for `network_ids`, must not be `None`")  # noqa: E501
+
+        self._network_ids = network_ids
+
+    @property
+    def qos_max_bandwidth(self):
+        """Gets the qos_max_bandwidth of this Vlan.  # noqa: E501
+
+
+        :return: The qos_max_bandwidth of this Vlan.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_max_bandwidth
+
+    @qos_max_bandwidth.setter
+    def qos_max_bandwidth(self, qos_max_bandwidth):
+        """Sets the qos_max_bandwidth of this Vlan.
+
+
+        :param qos_max_bandwidth: The qos_max_bandwidth of this Vlan.  # noqa: E501
+        :type qos_max_bandwidth: float
+        """
+
+        self._qos_max_bandwidth = qos_max_bandwidth
+
+    @property
+    def qos_min_bandwidth(self):
+        """Gets the qos_min_bandwidth of this Vlan.  # noqa: E501
+
+
+        :return: The qos_min_bandwidth of this Vlan.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_min_bandwidth
+
+    @qos_min_bandwidth.setter
+    def qos_min_bandwidth(self, qos_min_bandwidth):
+        """Sets the qos_min_bandwidth of this Vlan.
+
+
+        :param qos_min_bandwidth: The qos_min_bandwidth of this Vlan.  # noqa: E501
+        :type qos_min_bandwidth: float
+        """
+
+        self._qos_min_bandwidth = qos_min_bandwidth
+
+    @property
+    def qos_priority(self):
+        """Gets the qos_priority of this Vlan.  # noqa: E501
+
+
+        :return: The qos_priority of this Vlan.  # noqa: E501
+        :rtype: int
+        """
+        return self._qos_priority
+
+    @qos_priority.setter
+    def qos_priority(self, qos_priority):
+        """Sets the qos_priority of this Vlan.
+
+
+        :param qos_priority: The qos_priority of this Vlan.  # noqa: E501
+        :type qos_priority: int
+        """
+
+        self._qos_priority = qos_priority
 
     @property
     def subnetmask(self):
