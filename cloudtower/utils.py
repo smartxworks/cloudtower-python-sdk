@@ -4,6 +4,7 @@ from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, U
 from cloudtower.exceptions import ApiException
 from cloudtower.api.task_api import TaskApi
 from cloudtower.api.user_api import UserApi
+import json
 
 
 def wait_task(id, api_client, interval=5, timeout=300):
@@ -28,7 +29,7 @@ def wait_task(id, api_client, interval=5, timeout=300):
         )
     )
     start = time.time()
-    while(True):
+    while (True):
         now = time.time()
         if (now-start) > timeout:
             raise ApiException(
@@ -105,11 +106,33 @@ def login(api_client: ApiClient, username, password, source=UserSource.LOCAL):
     :type password: UserSource
     """
     user_api = UserApi(api_client)
-    login_res = user_api.login({
+    login_params = {
         "username": username,
         "password": password,
         "source": source
-    })
+    }
+    if source == UserSource.LDAP:
+        host = api_client.configuration.host
+        if host.endswith("/"):  # remove trailing slash
+            host = host[:-1]
+        if host.endswith("/v2/api"):
+            # replace v2/api with api
+            host = host[:-7] + "/api"
+        try:
+            resp = api_client.request("POST", host, body={
+                "query": "{authnStrategies{id type}}",
+                "variables": {}
+            })
+            configs = json.loads(resp.data)['data']['authnStrategies']
+            for config in configs:
+                if config['type'] == 'LDAP':
+                    login_params["auth_config_id"] = config['id']
+                    login_params["source"] = UserSource.AUTHN
+                    break
+        except:
+            # ignore error for backward compatibility, old version of tower has not authn config query
+            pass
+    login_res = user_api.login(login_params)
     api_client.configuration.api_key["Authorization"] = login_res.data.token
     return
 
