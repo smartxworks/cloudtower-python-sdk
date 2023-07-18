@@ -1,7 +1,14 @@
 # RELEASE NOTE
 
-v2.9.0 release (tower version 3.0.0)
+## releae 日期 2023-07-18
+
+v2.9.1 release (tower version 3.0.0)
+
+- optimize: 优化了 utils.login，当使用 UserSource.LDAP 进行登录时，自动使用 LDAP 登录源进行登陆，方便迁移
+
 ## release 日期 2023-07-03
+
+v2.9.0 release (tower version 3.0.0)
 
 - feature: [SecurityGroupApi] 支持创建，更新与删除安全组
 - feature: [SecurityPolicy] 支持创建，更新与删除自定义安全策略
@@ -9,6 +16,7 @@ v2.9.0 release (tower version 3.0.0)
 - feature: [VlanApi] 支持 trunk vlan 的创建与编辑
 - feature: [UserApi] [Login] 支持使用 authn_id 登陆，旧 LDAP 登陆方式被废弃
 - optimize: 为 [Host], [Nic], [UsbDevice], [VmVolume], [VmVolumeSnapshot] 添加了 `EntityAsyncStatus` 已判断资源目前的状态
+
 ## release 日期 2023-05-04
 
 v2.8.0 release
