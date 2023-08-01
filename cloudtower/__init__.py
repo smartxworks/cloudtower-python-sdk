@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.9.1"
+__version__ = "2.10.0"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -120,6 +120,8 @@ from cloudtower.models.alert import Alert
 from cloudtower.models.alert_connection import AlertConnection
 from cloudtower.models.alert_notifier import AlertNotifier
 from cloudtower.models.alert_notifier_connection import AlertNotifierConnection
+from cloudtower.models.alert_notifier_creation_params import AlertNotifierCreationParams
+from cloudtower.models.alert_notifier_many_updation_params import AlertNotifierManyUpdationParams
 from cloudtower.models.alert_notifier_order_by_input import AlertNotifierOrderByInput
 from cloudtower.models.alert_notifier_updation_params import AlertNotifierUpdationParams
 from cloudtower.models.alert_notifier_where_input import AlertNotifierWhereInput
@@ -275,6 +277,8 @@ from cloudtower.models.datacenter_updation_params import DatacenterUpdationParam
 from cloudtower.models.datacenter_updation_params_data import DatacenterUpdationParamsData
 from cloudtower.models.datacenter_where_input import DatacenterWhereInput
 from cloudtower.models.datacenter_where_unique_input import DatacenterWhereUniqueInput
+from cloudtower.models.delete_alert_notifier import DeleteAlertNotifier
+from cloudtower.models.delete_alert_notifier_params import DeleteAlertNotifierParams
 from cloudtower.models.delete_brick_topo import DeleteBrickTopo
 from cloudtower.models.delete_cloud_tower_application_package import DeleteCloudTowerApplicationPackage
 from cloudtower.models.delete_cloud_tower_application_package_params import DeleteCloudTowerApplicationPackageParams
@@ -879,6 +883,7 @@ from cloudtower.models.nested_report_template import NestedReportTemplate
 from cloudtower.models.nested_resource_meta import NestedResourceMeta
 from cloudtower.models.nested_security_policy import NestedSecurityPolicy
 from cloudtower.models.nested_security_policy_apply import NestedSecurityPolicyApply
+from cloudtower.models.nested_smtp_server import NestedSmtpServer
 from cloudtower.models.nested_snapshot_group import NestedSnapshotGroup
 from cloudtower.models.nested_snapshot_group_vm_disk_info import NestedSnapshotGroupVmDiskInfo
 from cloudtower.models.nested_snapshot_group_vm_info import NestedSnapshotGroupVmInfo
@@ -1046,6 +1051,8 @@ from cloudtower.models.security_policy_update_body import SecurityPolicyUpdateBo
 from cloudtower.models.security_policy_update_params import SecurityPolicyUpdateParams
 from cloudtower.models.security_policy_where_input import SecurityPolicyWhereInput
 from cloudtower.models.severity_enum import SeverityEnum
+from cloudtower.models.smtp_secure_mode import SmtpSecureMode
+from cloudtower.models.smtp_server_where_input import SmtpServerWhereInput
 from cloudtower.models.snapshot_group import SnapshotGroup
 from cloudtower.models.snapshot_group_clone_param import SnapshotGroupCloneParam
 from cloudtower.models.snapshot_group_clone_params import SnapshotGroupCloneParams
@@ -1371,6 +1378,7 @@ from cloudtower.models.with_task_consistency_group_snapshot import WithTaskConsi
 from cloudtower.models.with_task_content_library_image import WithTaskContentLibraryImage
 from cloudtower.models.with_task_content_library_vm_template import WithTaskContentLibraryVmTemplate
 from cloudtower.models.with_task_datacenter import WithTaskDatacenter
+from cloudtower.models.with_task_delete_alert_notifier import WithTaskDeleteAlertNotifier
 from cloudtower.models.with_task_delete_brick_topo import WithTaskDeleteBrickTopo
 from cloudtower.models.with_task_delete_cluster import WithTaskDeleteCluster
 from cloudtower.models.with_task_delete_cluster_recycle_bin import WithTaskDeleteClusterRecycleBin

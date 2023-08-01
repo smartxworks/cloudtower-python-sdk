@@ -4,7 +4,6 @@ from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, U
 from cloudtower.exceptions import ApiException
 from cloudtower.api.task_api import TaskApi
 from cloudtower.api.user_api import UserApi
-import json
 
 
 def wait_task(id, api_client, interval=5, timeout=300):
@@ -29,7 +28,7 @@ def wait_task(id, api_client, interval=5, timeout=300):
         )
     )
     start = time.time()
-    while (True):
+    while(True):
         now = time.time()
         if (now-start) > timeout:
             raise ApiException(
@@ -40,7 +39,7 @@ def wait_task(id, api_client, interval=5, timeout=300):
             if task.status == TaskStatus.SUCCESSED:
                 return
             elif task.status == TaskStatus.FAILED:
-                raise ApiException(500, "Task %s failed" % task.id)
+                raise ApiException(500, "Task %s failed: %s" % (task.id, task.error_message))
         time.sleep(interval)
 
 
@@ -66,7 +65,7 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
     """
     task_api = TaskApi(api_client)
     start = time.time()
-    error_ids = []
+    error_msgs = ""
     while len(ids):
         now = time.time()
         if (now-start) > timeout:
@@ -83,13 +82,12 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
                     raise ApiException(500, "Task %s failed" % task.id)
                 else:
                     ids.remove(task.id)
-                    error_ids.append(task.id)
+                    error_msgs += "\n\t%s: %s" % (task.id, task.error_message)
             elif task.status == TaskStatus.SUCCESSED:
                 ids.remove(task.id)
         time.sleep(interval)
-    if len(error_ids):
-        raise ApiException(500, "All Tasks failed" if len(
-            error_ids) else "Tasks %s failed" % error_ids)
+    if len(error_msgs):
+        raise ApiException(500, "Tasks failed:%s" % error_msgs)
     return
 
 
