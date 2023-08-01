@@ -35,6 +35,7 @@ class AlertNotifier(object):
         'name': 'str',
         'notice_severities': 'list[str]',
         'security_mode': 'NotifierSecurityMode',
+        'smtp_server_config': 'NestedSmtpServer',
         'smtp_server_host': 'str',
         'smtp_server_port': 'int',
         'username': 'str'
@@ -51,6 +52,7 @@ class AlertNotifier(object):
         'name': 'name',
         'notice_severities': 'notice_severities',
         'security_mode': 'security_mode',
+        'smtp_server_config': 'smtp_server_config',
         'smtp_server_host': 'smtp_server_host',
         'smtp_server_port': 'smtp_server_port',
         'username': 'username'
@@ -70,6 +72,7 @@ class AlertNotifier(object):
         self._name = None
         self._notice_severities = None
         self._security_mode = None
+        self._smtp_server_config = None
         self._smtp_server_host = None
         self._smtp_server_port = None
         self._username = None
@@ -89,6 +92,7 @@ class AlertNotifier(object):
         if "notice_severities" in kwargs:
             self.notice_severities = kwargs["notice_severities"]
         self.security_mode = kwargs.get("security_mode", None)
+        self.smtp_server_config = kwargs.get("smtp_server_config", None)
         self.smtp_server_host = kwargs.get("smtp_server_host", None)
         self.smtp_server_port = kwargs.get("smtp_server_port", None)
         self.username = kwargs.get("username", None)
@@ -310,6 +314,27 @@ class AlertNotifier(object):
         """
 
         self._security_mode = security_mode
+
+    @property
+    def smtp_server_config(self):
+        """Gets the smtp_server_config of this AlertNotifier.  # noqa: E501
+
+
+        :return: The smtp_server_config of this AlertNotifier.  # noqa: E501
+        :rtype: NestedSmtpServer
+        """
+        return self._smtp_server_config
+
+    @smtp_server_config.setter
+    def smtp_server_config(self, smtp_server_config):
+        """Sets the smtp_server_config of this AlertNotifier.
+
+
+        :param smtp_server_config: The smtp_server_config of this AlertNotifier.  # noqa: E501
+        :type smtp_server_config: NestedSmtpServer
+        """
+
+        self._smtp_server_config = smtp_server_config
 
     @property
     def smtp_server_host(self):

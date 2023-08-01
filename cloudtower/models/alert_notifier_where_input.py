@@ -87,6 +87,7 @@ class AlertNotifierWhereInput(object):
         'security_mode_in': 'list[NotifierSecurityMode]',
         'security_mode_not': 'NotifierSecurityMode',
         'security_mode_not_in': 'list[NotifierSecurityMode]',
+        'smtp_server_config': 'SmtpServerWhereInput',
         'smtp_server_host': 'str',
         'smtp_server_host_contains': 'str',
         'smtp_server_host_ends_with': 'str',
@@ -188,6 +189,7 @@ class AlertNotifierWhereInput(object):
         'security_mode_in': 'security_mode_in',
         'security_mode_not': 'security_mode_not',
         'security_mode_not_in': 'security_mode_not_in',
+        'smtp_server_config': 'smtp_server_config',
         'smtp_server_host': 'smtp_server_host',
         'smtp_server_host_contains': 'smtp_server_host_contains',
         'smtp_server_host_ends_with': 'smtp_server_host_ends_with',
@@ -292,6 +294,7 @@ class AlertNotifierWhereInput(object):
         self._security_mode_in = None
         self._security_mode_not = None
         self._security_mode_not_in = None
+        self._smtp_server_config = None
         self._smtp_server_host = None
         self._smtp_server_host_contains = None
         self._smtp_server_host_ends_with = None
@@ -392,6 +395,7 @@ class AlertNotifierWhereInput(object):
         self.security_mode_in = kwargs.get("security_mode_in", None)
         self.security_mode_not = kwargs.get("security_mode_not", None)
         self.security_mode_not_in = kwargs.get("security_mode_not_in", None)
+        self.smtp_server_config = kwargs.get("smtp_server_config", None)
         self.smtp_server_host = kwargs.get("smtp_server_host", None)
         self.smtp_server_host_contains = kwargs.get("smtp_server_host_contains", None)
         self.smtp_server_host_ends_with = kwargs.get("smtp_server_host_ends_with", None)
@@ -1730,6 +1734,27 @@ class AlertNotifierWhereInput(object):
         """
 
         self._security_mode_not_in = security_mode_not_in
+
+    @property
+    def smtp_server_config(self):
+        """Gets the smtp_server_config of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The smtp_server_config of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: SmtpServerWhereInput
+        """
+        return self._smtp_server_config
+
+    @smtp_server_config.setter
+    def smtp_server_config(self, smtp_server_config):
+        """Sets the smtp_server_config of this AlertNotifierWhereInput.
+
+
+        :param smtp_server_config: The smtp_server_config of this AlertNotifierWhereInput.  # noqa: E501
+        :type smtp_server_config: SmtpServerWhereInput
+        """
+
+        self._smtp_server_config = smtp_server_config
 
     @property
     def smtp_server_host(self):
