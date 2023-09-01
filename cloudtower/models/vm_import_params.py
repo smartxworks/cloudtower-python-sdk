@@ -34,7 +34,7 @@ class VmImportParams(object):
         'vcpu': 'int',
         'status': 'VmStatus',
         'ha': 'bool',
-        'vm_nics': 'list[VmNicParams]',
+        'vm_nics': 'list[VmImportNicParams]',
         'disk_operate': 'OvfDiskOperate',
         'memory_unit': 'ByteUnit',
         'memory': 'int',
@@ -352,7 +352,7 @@ class VmImportParams(object):
 
 
         :return: The vm_nics of this VmImportParams.  # noqa: E501
-        :rtype: list[VmNicParams]
+        :rtype: list[VmImportNicParams]
         """
         return self._vm_nics
 
@@ -362,7 +362,7 @@ class VmImportParams(object):
 
 
         :param vm_nics: The vm_nics of this VmImportParams.  # noqa: E501
-        :type vm_nics: list[VmNicParams]
+        :type vm_nics: list[VmImportNicParams]
         """
 
         self._vm_nics = vm_nics

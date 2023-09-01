@@ -42,8 +42,7 @@ class NestedEverouteClusterCondition(object):
         self._type = None
         self.discriminator = None
 
-        if "last_probe_time" in kwargs:
-            self.last_probe_time = kwargs["last_probe_time"]
+        self.last_probe_time = kwargs.get("last_probe_time", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
 
@@ -65,8 +64,6 @@ class NestedEverouteClusterCondition(object):
         :param last_probe_time: The last_probe_time of this NestedEverouteClusterCondition.  # noqa: E501
         :type last_probe_time: str
         """
-        if self.local_vars_configuration.client_side_validation and last_probe_time is None:  # noqa: E501
-            raise ValueError("Invalid value for `last_probe_time`, must not be `None`")  # noqa: E501
 
         self._last_probe_time = last_probe_time
 

@@ -91,8 +91,7 @@ class EverouteCluster(object):
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.phase = kwargs.get("phase", None)
-        if "status" in kwargs:
-            self.status = kwargs["status"]
+        self.status = kwargs.get("status", None)
         if "version" in kwargs:
             self.version = kwargs["version"]
 
@@ -355,8 +354,6 @@ class EverouteCluster(object):
         :param status: The status of this EverouteCluster.  # noqa: E501
         :type status: NestedEverouteClusterStatus
         """
-        if self.local_vars_configuration.client_side_validation and status is None:  # noqa: E501
-            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
 
