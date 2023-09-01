@@ -2,6 +2,8 @@
 
 ## release 日期 2023-09-01
 
+v2.11.0 release (tower version 3.2.0)
+
 ### breaking change
 
 - [VmApi] [VmImportParams]: 由于 `VmNicParams` 支持配置 qos 配置，现在设计网卡的参数由 `VmNicParams` 更新为了 `VmImportNicParams`，类型和过去一致，没有 qos 支持。
