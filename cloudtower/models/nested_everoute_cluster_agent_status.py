@@ -51,14 +51,11 @@ class NestedEverouteClusterAgentStatus(object):
         self._number_health = None
         self.discriminator = None
 
-        if "current_number" in kwargs:
-            self.current_number = kwargs["current_number"]
-        if "expect_number" in kwargs:
-            self.expect_number = kwargs["expect_number"]
+        self.current_number = kwargs.get("current_number", None)
+        self.expect_number = kwargs.get("expect_number", None)
         self.instances = kwargs.get("instances", None)
         self.manage_vd_ses = kwargs.get("manage_vd_ses", None)
-        if "number_health" in kwargs:
-            self.number_health = kwargs["number_health"]
+        self.number_health = kwargs.get("number_health", None)
 
     @property
     def current_number(self):
@@ -78,8 +75,6 @@ class NestedEverouteClusterAgentStatus(object):
         :param current_number: The current_number of this NestedEverouteClusterAgentStatus.  # noqa: E501
         :type current_number: int
         """
-        if self.local_vars_configuration.client_side_validation and current_number is None:  # noqa: E501
-            raise ValueError("Invalid value for `current_number`, must not be `None`")  # noqa: E501
 
         self._current_number = current_number
 
@@ -101,8 +96,6 @@ class NestedEverouteClusterAgentStatus(object):
         :param expect_number: The expect_number of this NestedEverouteClusterAgentStatus.  # noqa: E501
         :type expect_number: int
         """
-        if self.local_vars_configuration.client_side_validation and expect_number is None:  # noqa: E501
-            raise ValueError("Invalid value for `expect_number`, must not be `None`")  # noqa: E501
 
         self._expect_number = expect_number
 
@@ -166,8 +159,6 @@ class NestedEverouteClusterAgentStatus(object):
         :param number_health: The number_health of this NestedEverouteClusterAgentStatus.  # noqa: E501
         :type number_health: int
         """
-        if self.local_vars_configuration.client_side_validation and number_health is None:  # noqa: E501
-            raise ValueError("Invalid value for `number_health`, must not be `None`")  # noqa: E501
 
         self._number_health = number_health
 

@@ -23,9 +23,10 @@ class TaskType(object):
     APPLICATION = "APPLICATION"
     BACKUP = "BACKUP"
     HOST_PLUGIN = "HOST_PLUGIN"
+    REPLICATION = "REPLICATION"
     RESOLVER = "RESOLVER"
 
-    allowable_values = [APPLICATION, BACKUP, HOST_PLUGIN, RESOLVER]  # noqa: E501
+    allowable_values = [APPLICATION, BACKUP, HOST_PLUGIN, REPLICATION, RESOLVER]  # noqa: E501
 
     """
     Attributes:

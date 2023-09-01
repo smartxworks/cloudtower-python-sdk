@@ -144,6 +144,8 @@ cloudtower/models/application_vm_spec_storage.py
 cloudtower/models/application_where_input.py
 cloudtower/models/architecture.py
 cloudtower/models/batch_hosts.py
+cloudtower/models/bit_ps_unit.py
+cloudtower/models/bit_unit.py
 cloudtower/models/bps_unit.py
 cloudtower/models/brick_phase_enum.py
 cloudtower/models/brick_topo.py
@@ -242,16 +244,22 @@ cloudtower/models/content_library_image_updation_cluster_params_data.py
 cloudtower/models/content_library_image_updation_params.py
 cloudtower/models/content_library_image_updation_params_data.py
 cloudtower/models/content_library_image_where_input.py
+cloudtower/models/content_library_import_vm_nic.py
 cloudtower/models/content_library_vm_template.py
 cloudtower/models/content_library_vm_template_connection.py
 cloudtower/models/content_library_vm_template_creation_params.py
 cloudtower/models/content_library_vm_template_deletion_params.py
+cloudtower/models/content_library_vm_template_export_params.py
+cloudtower/models/content_library_vm_template_import_params.py
 cloudtower/models/content_library_vm_template_order_by_input.py
+cloudtower/models/content_library_vm_template_ovf_disk_operate.py
 cloudtower/models/content_library_vm_template_updation_cluster_params.py
 cloudtower/models/content_library_vm_template_updation_cluster_params_data.py
 cloudtower/models/content_library_vm_template_updation_params.py
 cloudtower/models/content_library_vm_template_updation_params_data.py
 cloudtower/models/content_library_vm_template_where_input.py
+cloudtower/models/content_library_vmdk_cdrom_modify.py
+cloudtower/models/content_library_vmdk_cdrom_mount.py
 cloudtower/models/convert_vm_template_to_vm_params.py
 cloudtower/models/cpu_fan_speed_unit.py
 cloudtower/models/create_vcenter_account_params.py
@@ -376,6 +384,8 @@ cloudtower/models/everoute_package_order_by_input.py
 cloudtower/models/everoute_package_where_input.py
 cloudtower/models/execute_plan.py
 cloudtower/models/export_file_download_links.py
+cloudtower/models/export_vm_volume_params.py
+cloudtower/models/export_vm_volume_params_data.py
 cloudtower/models/extra_ip.py
 cloudtower/models/filter_rule_aggregation_enum.py
 cloudtower/models/filter_rule_input.py
@@ -612,6 +622,7 @@ cloudtower/models/host_updation_params.py
 cloudtower/models/host_updation_params_data.py
 cloudtower/models/host_where_input.py
 cloudtower/models/hypervisor.py
+cloudtower/models/import_vm_volume_params.py
 cloudtower/models/install_vmtools_params.py
 cloudtower/models/install_vmtools_params_data.py
 cloudtower/models/ip_security_policy.py
@@ -1255,6 +1266,7 @@ cloudtower/models/vm_folder_updation_params.py
 cloudtower/models/vm_folder_updation_params_data.py
 cloudtower/models/vm_folder_where_input.py
 cloudtower/models/vm_guests_operation_system.py
+cloudtower/models/vm_import_nic_params.py
 cloudtower/models/vm_import_params.py
 cloudtower/models/vm_migrate_across_cluster_params.py
 cloudtower/models/vm_migrate_across_cluster_params_data.py
@@ -1264,6 +1276,8 @@ cloudtower/models/vm_nic_connection.py
 cloudtower/models/vm_nic_model.py
 cloudtower/models/vm_nic_order_by_input.py
 cloudtower/models/vm_nic_params.py
+cloudtower/models/vm_nic_qos_option.py
+cloudtower/models/vm_nic_qos_traffic.py
 cloudtower/models/vm_nic_where_input.py
 cloudtower/models/vm_operate_params.py
 cloudtower/models/vm_order_by_input.py
@@ -1322,6 +1336,8 @@ cloudtower/models/vm_update_nic_basic_info_params.py
 cloudtower/models/vm_update_nic_basic_info_params_data.py
 cloudtower/models/vm_update_nic_params.py
 cloudtower/models/vm_update_nic_params_data.py
+cloudtower/models/vm_update_nic_qos_options_params.py
+cloudtower/models/vm_update_nic_qos_options_params_data.py
 cloudtower/models/vm_update_owner_params.py
 cloudtower/models/vm_update_owner_params_data.py
 cloudtower/models/vm_update_params.py
@@ -1337,6 +1353,7 @@ cloudtower/models/vm_volume_connection.py
 cloudtower/models/vm_volume_creation_params.py
 cloudtower/models/vm_volume_deletion_params.py
 cloudtower/models/vm_volume_elf_storage_policy_type.py
+cloudtower/models/vm_volume_export_file_type.py
 cloudtower/models/vm_volume_order_by_input.py
 cloudtower/models/vm_volume_rebuild_params.py
 cloudtower/models/vm_volume_rollback_params.py

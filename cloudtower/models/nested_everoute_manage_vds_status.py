@@ -54,13 +54,10 @@ class NestedEverouteManageVDSStatus(object):
         self._vds_id = None
         self.discriminator = None
 
-        if "message" in kwargs:
-            self.message = kwargs["message"]
+        self.message = kwargs.get("message", None)
         self.phase = kwargs.get("phase", None)
-        if "reason" in kwargs:
-            self.reason = kwargs["reason"]
-        if "retry_count" in kwargs:
-            self.retry_count = kwargs["retry_count"]
+        self.reason = kwargs.get("reason", None)
+        self.retry_count = kwargs.get("retry_count", None)
         self.vds = kwargs.get("vds", None)
         if "vds_id" in kwargs:
             self.vds_id = kwargs["vds_id"]
@@ -83,8 +80,6 @@ class NestedEverouteManageVDSStatus(object):
         :param message: The message of this NestedEverouteManageVDSStatus.  # noqa: E501
         :type message: str
         """
-        if self.local_vars_configuration.client_side_validation and message is None:  # noqa: E501
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
 
         self._message = message
 
@@ -127,8 +122,6 @@ class NestedEverouteManageVDSStatus(object):
         :param reason: The reason of this NestedEverouteManageVDSStatus.  # noqa: E501
         :type reason: str
         """
-        if self.local_vars_configuration.client_side_validation and reason is None:  # noqa: E501
-            raise ValueError("Invalid value for `reason`, must not be `None`")  # noqa: E501
 
         self._reason = reason
 
@@ -150,8 +143,6 @@ class NestedEverouteManageVDSStatus(object):
         :param retry_count: The retry_count of this NestedEverouteManageVDSStatus.  # noqa: E501
         :type retry_count: int
         """
-        if self.local_vars_configuration.client_side_validation and retry_count is None:  # noqa: E501
-            raise ValueError("Invalid value for `retry_count`, must not be `None`")  # noqa: E501
 
         self._retry_count = retry_count
 

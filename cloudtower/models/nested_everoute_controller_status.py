@@ -60,19 +60,15 @@ class NestedEverouteControllerStatus(object):
         self._vm_id = None
         self.discriminator = None
 
-        if "ip_addr" in kwargs:
-            self.ip_addr = kwargs["ip_addr"]
+        self.ip_addr = kwargs.get("ip_addr", None)
         if "is_health" in kwargs:
             self.is_health = kwargs["is_health"]
-        if "message" in kwargs:
-            self.message = kwargs["message"]
+        self.message = kwargs.get("message", None)
         self.metrics = kwargs.get("metrics", None)
         self.phase = kwargs.get("phase", None)
-        if "reason" in kwargs:
-            self.reason = kwargs["reason"]
+        self.reason = kwargs.get("reason", None)
         self.vm = kwargs.get("vm", None)
-        if "vm_id" in kwargs:
-            self.vm_id = kwargs["vm_id"]
+        self.vm_id = kwargs.get("vm_id", None)
 
     @property
     def ip_addr(self):
@@ -92,8 +88,6 @@ class NestedEverouteControllerStatus(object):
         :param ip_addr: The ip_addr of this NestedEverouteControllerStatus.  # noqa: E501
         :type ip_addr: str
         """
-        if self.local_vars_configuration.client_side_validation and ip_addr is None:  # noqa: E501
-            raise ValueError("Invalid value for `ip_addr`, must not be `None`")  # noqa: E501
 
         self._ip_addr = ip_addr
 
@@ -138,8 +132,6 @@ class NestedEverouteControllerStatus(object):
         :param message: The message of this NestedEverouteControllerStatus.  # noqa: E501
         :type message: str
         """
-        if self.local_vars_configuration.client_side_validation and message is None:  # noqa: E501
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
 
         self._message = message
 
@@ -203,8 +195,6 @@ class NestedEverouteControllerStatus(object):
         :param reason: The reason of this NestedEverouteControllerStatus.  # noqa: E501
         :type reason: str
         """
-        if self.local_vars_configuration.client_side_validation and reason is None:  # noqa: E501
-            raise ValueError("Invalid value for `reason`, must not be `None`")  # noqa: E501
 
         self._reason = reason
 
@@ -247,8 +237,6 @@ class NestedEverouteControllerStatus(object):
         :param vm_id: The vm_id of this NestedEverouteControllerStatus.  # noqa: E501
         :type vm_id: str
         """
-        if self.local_vars_configuration.client_side_validation and vm_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `vm_id`, must not be `None`")  # noqa: E501
 
         self._vm_id = vm_id
 

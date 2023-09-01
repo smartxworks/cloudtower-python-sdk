@@ -63,15 +63,11 @@ class NestedEverouteClusterStatus(object):
         self.agents = kwargs.get("agents", None)
         self.conditions = kwargs.get("conditions", None)
         self.controllers = kwargs.get("controllers", None)
-        if "message" in kwargs:
-            self.message = kwargs["message"]
+        self.message = kwargs.get("message", None)
         self.phase = kwargs.get("phase", None)
-        if "reason" in kwargs:
-            self.reason = kwargs["reason"]
-        if "retry_count" in kwargs:
-            self.retry_count = kwargs["retry_count"]
-        if "version" in kwargs:
-            self.version = kwargs["version"]
+        self.reason = kwargs.get("reason", None)
+        self.retry_count = kwargs.get("retry_count", None)
+        self.version = kwargs.get("version", None)
 
     @property
     def agents(self):
@@ -154,8 +150,6 @@ class NestedEverouteClusterStatus(object):
         :param message: The message of this NestedEverouteClusterStatus.  # noqa: E501
         :type message: str
         """
-        if self.local_vars_configuration.client_side_validation and message is None:  # noqa: E501
-            raise ValueError("Invalid value for `message`, must not be `None`")  # noqa: E501
 
         self._message = message
 
@@ -198,8 +192,6 @@ class NestedEverouteClusterStatus(object):
         :param reason: The reason of this NestedEverouteClusterStatus.  # noqa: E501
         :type reason: str
         """
-        if self.local_vars_configuration.client_side_validation and reason is None:  # noqa: E501
-            raise ValueError("Invalid value for `reason`, must not be `None`")  # noqa: E501
 
         self._reason = reason
 
@@ -221,8 +213,6 @@ class NestedEverouteClusterStatus(object):
         :param retry_count: The retry_count of this NestedEverouteClusterStatus.  # noqa: E501
         :type retry_count: int
         """
-        if self.local_vars_configuration.client_side_validation and retry_count is None:  # noqa: E501
-            raise ValueError("Invalid value for `retry_count`, must not be `None`")  # noqa: E501
 
         self._retry_count = retry_count
 
@@ -244,8 +234,6 @@ class NestedEverouteClusterStatus(object):
         :param version: The version of this NestedEverouteClusterStatus.  # noqa: E501
         :type version: str
         """
-        if self.local_vars_configuration.client_side_validation and version is None:  # noqa: E501
-            raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
 
