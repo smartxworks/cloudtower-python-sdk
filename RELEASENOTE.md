@@ -1,5 +1,9 @@
 # RELEASE NOTE
 
+v2.11.1 release (tower version 3.2.0)
+
+- bugfix: 修复 `utils.login` LDAP 登陆失败的问题
+
 ## release 日期 2023-09-01
 
 v2.11.0 release (tower version 3.2.0)
