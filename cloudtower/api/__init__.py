@@ -33,6 +33,7 @@ from cloudtower.api.everoute_license_api import EverouteLicenseApi
 from cloudtower.api.everoute_package_api import EveroutePackageApi
 from cloudtower.api.global_alert_rule_api import GlobalAlertRuleApi
 from cloudtower.api.global_settings_api import GlobalSettingsApi
+from cloudtower.api.gpu_device_api import GpuDeviceApi
 from cloudtower.api.graph_api import GraphApi
 from cloudtower.api.host_api import HostApi
 from cloudtower.api.ipmi_api import IpmiApi

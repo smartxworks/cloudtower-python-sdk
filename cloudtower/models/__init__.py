@@ -272,6 +272,7 @@ from cloudtower.models.entity_filter_updation_params_data import EntityFilterUpd
 from cloudtower.models.entity_filter_where_input import EntityFilterWhereInput
 from cloudtower.models.entity_type import EntityType
 from cloudtower.models.error_body import ErrorBody
+from cloudtower.models.error_code import ErrorCode
 from cloudtower.models.everoute_cluster import EverouteCluster
 from cloudtower.models.everoute_cluster_connection import EverouteClusterConnection
 from cloudtower.models.everoute_cluster_order_by_input import EverouteClusterOrderByInput
@@ -356,6 +357,8 @@ from cloudtower.models.get_global_alert_rules_connection_request_body import Get
 from cloudtower.models.get_global_alert_rules_request_body import GetGlobalAlertRulesRequestBody
 from cloudtower.models.get_global_settingses_connection_request_body import GetGlobalSettingsesConnectionRequestBody
 from cloudtower.models.get_global_settingses_request_body import GetGlobalSettingsesRequestBody
+from cloudtower.models.get_gpu_devices_connection_request_body import GetGpuDevicesConnectionRequestBody
+from cloudtower.models.get_gpu_devices_request_body import GetGpuDevicesRequestBody
 from cloudtower.models.get_graphs_connection_request_body import GetGraphsConnectionRequestBody
 from cloudtower.models.get_graphs_request_body import GetGraphsRequestBody
 from cloudtower.models.get_host_metric_input import GetHostMetricInput
@@ -501,6 +504,18 @@ from cloudtower.models.global_settings import GlobalSettings
 from cloudtower.models.global_settings_connection import GlobalSettingsConnection
 from cloudtower.models.global_settings_order_by_input import GlobalSettingsOrderByInput
 from cloudtower.models.global_settings_where_input import GlobalSettingsWhereInput
+from cloudtower.models.gpu_device import GpuDevice
+from cloudtower.models.gpu_device_connection import GpuDeviceConnection
+from cloudtower.models.gpu_device_description_updation_params import GpuDeviceDescriptionUpdationParams
+from cloudtower.models.gpu_device_description_updation_params_data import GpuDeviceDescriptionUpdationParamsData
+from cloudtower.models.gpu_device_order_by_input import GpuDeviceOrderByInput
+from cloudtower.models.gpu_device_sriov_switch_params import GpuDeviceSriovSwitchParams
+from cloudtower.models.gpu_device_sriov_switch_params_data import GpuDeviceSriovSwitchParamsData
+from cloudtower.models.gpu_device_status import GpuDeviceStatus
+from cloudtower.models.gpu_device_usage import GpuDeviceUsage
+from cloudtower.models.gpu_device_usage_updation_params import GpuDeviceUsageUpdationParams
+from cloudtower.models.gpu_device_usage_updation_params_data import GpuDeviceUsageUpdationParamsData
+from cloudtower.models.gpu_device_where_input import GpuDeviceWhereInput
 from cloudtower.models.graph import Graph
 from cloudtower.models.graph_connection import GraphConnection
 from cloudtower.models.graph_creation_params import GraphCreationParams
@@ -529,6 +544,7 @@ from cloudtower.models.ip_security_policy import IPSecurityPolicy
 from cloudtower.models.import_vm_volume_params import ImportVmVolumeParams
 from cloudtower.models.install_vmtools_params import InstallVmtoolsParams
 from cloudtower.models.install_vmtools_params_data import InstallVmtoolsParamsData
+from cloudtower.models.iommu_status import IommuStatus
 from cloudtower.models.ipmi import Ipmi
 from cloudtower.models.ipmi_order_by_input import IpmiOrderByInput
 from cloudtower.models.ipmi_where_input import IpmiWhereInput
@@ -598,6 +614,7 @@ from cloudtower.models.log_service_config import LogServiceConfig
 from cloudtower.models.log_service_configs_input import LogServiceConfigsInput
 from cloudtower.models.login_input import LoginInput
 from cloudtower.models.login_response import LoginResponse
+from cloudtower.models.maintenance_mode_enum import MaintenanceModeEnum
 from cloudtower.models.management_vlan_updation_params import ManagementVlanUpdationParams
 from cloudtower.models.management_vlan_updation_params_data import ManagementVlanUpdationParamsData
 from cloudtower.models.meta_leader import MetaLeader
@@ -652,6 +669,7 @@ from cloudtower.models.nested_aggregate_everoute_license import NestedAggregateE
 from cloudtower.models.nested_aggregate_everoute_package import NestedAggregateEveroutePackage
 from cloudtower.models.nested_aggregate_global_alert_rule import NestedAggregateGlobalAlertRule
 from cloudtower.models.nested_aggregate_global_settings import NestedAggregateGlobalSettings
+from cloudtower.models.nested_aggregate_gpu_device import NestedAggregateGpuDevice
 from cloudtower.models.nested_aggregate_graph import NestedAggregateGraph
 from cloudtower.models.nested_aggregate_host import NestedAggregateHost
 from cloudtower.models.nested_aggregate_iscsi_connection import NestedAggregateIscsiConnection
@@ -752,6 +770,8 @@ from cloudtower.models.nested_frozen_disks import NestedFrozenDisks
 from cloudtower.models.nested_frozen_nic import NestedFrozenNic
 from cloudtower.models.nested_frozen_vlan import NestedFrozenVlan
 from cloudtower.models.nested_global_alert_rule import NestedGlobalAlertRule
+from cloudtower.models.nested_gpu_device import NestedGpuDevice
+from cloudtower.models.nested_gpu_driver_info import NestedGpuDriverInfo
 from cloudtower.models.nested_graph import NestedGraph
 from cloudtower.models.nested_host import NestedHost
 from cloudtower.models.nested_initiator_chap import NestedInitiatorChap
@@ -763,6 +783,7 @@ from cloudtower.models.nested_isolation_policy import NestedIsolationPolicy
 from cloudtower.models.nested_label import NestedLabel
 from cloudtower.models.nested_label_group import NestedLabelGroup
 from cloudtower.models.nested_license import NestedLicense
+from cloudtower.models.nested_maintenance_host_state import NestedMaintenanceHostState
 from cloudtower.models.nested_metro_availability_checklist import NestedMetroAvailabilityChecklist
 from cloudtower.models.nested_metro_check_item import NestedMetroCheckItem
 from cloudtower.models.nested_metro_check_result import NestedMetroCheckResult
@@ -805,6 +826,7 @@ from cloudtower.models.nested_user import NestedUser
 from cloudtower.models.nested_user_role_next import NestedUserRoleNext
 from cloudtower.models.nested_vcenter_account import NestedVcenterAccount
 from cloudtower.models.nested_vds import NestedVds
+from cloudtower.models.nested_vgpu_type import NestedVgpuType
 from cloudtower.models.nested_view import NestedView
 from cloudtower.models.nested_vlan import NestedVlan
 from cloudtower.models.nested_vm import NestedVm
@@ -817,6 +839,7 @@ from cloudtower.models.nested_vm_recycle_bin import NestedVmRecycleBin
 from cloudtower.models.nested_vm_snapshot import NestedVmSnapshot
 from cloudtower.models.nested_vm_template import NestedVmTemplate
 from cloudtower.models.nested_vm_volume import NestedVmVolume
+from cloudtower.models.nested_vm_volume_snapshot import NestedVmVolumeSnapshot
 from cloudtower.models.nested_vsphere_esxi_account import NestedVsphereEsxiAccount
 from cloudtower.models.nested_witness import NestedWitness
 from cloudtower.models.nested_zone import NestedZone
@@ -843,6 +866,7 @@ from cloudtower.models.nic_driver_state import NicDriverState
 from cloudtower.models.nic_order_by_input import NicOrderByInput
 from cloudtower.models.nic_updation_params import NicUpdationParams
 from cloudtower.models.nic_updation_params_data import NicUpdationParamsData
+from cloudtower.models.nic_user_usage import NicUserUsage
 from cloudtower.models.nic_where_input import NicWhereInput
 from cloudtower.models.node_top_updation_param import NodeTopUpdationParam
 from cloudtower.models.node_topo import NodeTopo
@@ -1123,6 +1147,7 @@ from cloudtower.models.vm_add_disk_params_data import VmAddDiskParamsData
 from cloudtower.models.vm_add_disk_params_data_vm_disks import VmAddDiskParamsDataVmDisks
 from cloudtower.models.vm_add_folder_params import VmAddFolderParams
 from cloudtower.models.vm_add_folder_params_data import VmAddFolderParamsData
+from cloudtower.models.vm_add_gpu_device_params import VmAddGpuDeviceParams
 from cloudtower.models.vm_add_nic_params import VmAddNicParams
 from cloudtower.models.vm_add_nic_params_data import VmAddNicParamsData
 from cloudtower.models.vm_cd_rom_params import VmCdRomParams
@@ -1168,6 +1193,7 @@ from cloudtower.models.vm_folder_order_by_input import VmFolderOrderByInput
 from cloudtower.models.vm_folder_updation_params import VmFolderUpdationParams
 from cloudtower.models.vm_folder_updation_params_data import VmFolderUpdationParamsData
 from cloudtower.models.vm_folder_where_input import VmFolderWhereInput
+from cloudtower.models.vm_gpu_operation_params import VmGpuOperationParams
 from cloudtower.models.vm_guests_operation_system import VmGuestsOperationSystem
 from cloudtower.models.vm_import_nic_params import VmImportNicParams
 from cloudtower.models.vm_import_params import VmImportParams
@@ -1183,6 +1209,8 @@ from cloudtower.models.vm_nic_qos_option import VmNicQosOption
 from cloudtower.models.vm_nic_qos_traffic import VmNicQosTraffic
 from cloudtower.models.vm_nic_where_input import VmNicWhereInput
 from cloudtower.models.vm_operate_params import VmOperateParams
+from cloudtower.models.vm_operate_pci_nic_params import VmOperatePciNicParams
+from cloudtower.models.vm_operate_pci_nic_params_data import VmOperatePciNicParamsData
 from cloudtower.models.vm_order_by_input import VmOrderByInput
 from cloudtower.models.vm_placement_group import VmPlacementGroup
 from cloudtower.models.vm_placement_group_connection import VmPlacementGroupConnection
@@ -1197,6 +1225,9 @@ from cloudtower.models.vm_remove_cd_rom_params import VmRemoveCdRomParams
 from cloudtower.models.vm_remove_cd_rom_params_data import VmRemoveCdRomParamsData
 from cloudtower.models.vm_remove_disk_params import VmRemoveDiskParams
 from cloudtower.models.vm_remove_disk_params_data import VmRemoveDiskParamsData
+from cloudtower.models.vm_remove_gpu_device_params import VmRemoveGpuDeviceParams
+from cloudtower.models.vm_remove_nic_by_where_params import VmRemoveNicByWhereParams
+from cloudtower.models.vm_remove_nic_by_where_params_effect import VmRemoveNicByWhereParamsEffect
 from cloudtower.models.vm_remove_nic_params import VmRemoveNicParams
 from cloudtower.models.vm_remove_nic_params_data import VmRemoveNicParamsData
 from cloudtower.models.vm_reset_guest_os_password_params import VmResetGuestOsPasswordParams
@@ -1255,6 +1286,7 @@ from cloudtower.models.vm_volume import VmVolume
 from cloudtower.models.vm_volume_connection import VmVolumeConnection
 from cloudtower.models.vm_volume_creation_params import VmVolumeCreationParams
 from cloudtower.models.vm_volume_deletion_params import VmVolumeDeletionParams
+from cloudtower.models.vm_volume_deletion_params_effect import VmVolumeDeletionParamsEffect
 from cloudtower.models.vm_volume_elf_storage_policy_type import VmVolumeElfStoragePolicyType
 from cloudtower.models.vm_volume_export_file_type import VmVolumeExportFileType
 from cloudtower.models.vm_volume_order_by_input import VmVolumeOrderByInput
@@ -1337,6 +1369,7 @@ from cloudtower.models.with_task_elf_image import WithTaskElfImage
 from cloudtower.models.with_task_entity_filter import WithTaskEntityFilter
 from cloudtower.models.with_task_global_alert_rule import WithTaskGlobalAlertRule
 from cloudtower.models.with_task_global_settings import WithTaskGlobalSettings
+from cloudtower.models.with_task_gpu_device import WithTaskGpuDevice
 from cloudtower.models.with_task_graph import WithTaskGraph
 from cloudtower.models.with_task_host import WithTaskHost
 from cloudtower.models.with_task_iscsi_lun import WithTaskIscsiLun

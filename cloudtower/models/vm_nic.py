@@ -25,9 +25,15 @@ class VmNic(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'egress_rate_limit_burst_in_bit': 'float',
+        'egress_rate_limit_enabled': 'bool',
+        'egress_rate_limit_max_rate_in_bitps': 'float',
         'enabled': 'bool',
         'gateway': 'str',
         'id': 'str',
+        'ingress_rate_limit_burst_in_bit': 'float',
+        'ingress_rate_limit_enabled': 'bool',
+        'ingress_rate_limit_max_rate_in_bitps': 'float',
         'interface_id': 'str',
         'ip_address': 'str',
         'local_id': 'str',
@@ -42,9 +48,15 @@ class VmNic(object):
     }
 
     attribute_map = {
+        'egress_rate_limit_burst_in_bit': 'egress_rate_limit_burst_in_bit',
+        'egress_rate_limit_enabled': 'egress_rate_limit_enabled',
+        'egress_rate_limit_max_rate_in_bitps': 'egress_rate_limit_max_rate_in_bitps',
         'enabled': 'enabled',
         'gateway': 'gateway',
         'id': 'id',
+        'ingress_rate_limit_burst_in_bit': 'ingress_rate_limit_burst_in_bit',
+        'ingress_rate_limit_enabled': 'ingress_rate_limit_enabled',
+        'ingress_rate_limit_max_rate_in_bitps': 'ingress_rate_limit_max_rate_in_bitps',
         'interface_id': 'interface_id',
         'ip_address': 'ip_address',
         'local_id': 'local_id',
@@ -62,9 +74,15 @@ class VmNic(object):
         """VmNic - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._egress_rate_limit_burst_in_bit = None
+        self._egress_rate_limit_enabled = None
+        self._egress_rate_limit_max_rate_in_bitps = None
         self._enabled = None
         self._gateway = None
         self._id = None
+        self._ingress_rate_limit_burst_in_bit = None
+        self._ingress_rate_limit_enabled = None
+        self._ingress_rate_limit_max_rate_in_bitps = None
         self._interface_id = None
         self._ip_address = None
         self._local_id = None
@@ -78,10 +96,16 @@ class VmNic(object):
         self._vm = None
         self.discriminator = None
 
+        self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
+        self.egress_rate_limit_enabled = kwargs.get("egress_rate_limit_enabled", None)
+        self.egress_rate_limit_max_rate_in_bitps = kwargs.get("egress_rate_limit_max_rate_in_bitps", None)
         self.enabled = kwargs.get("enabled", None)
         self.gateway = kwargs.get("gateway", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.ingress_rate_limit_burst_in_bit = kwargs.get("ingress_rate_limit_burst_in_bit", None)
+        self.ingress_rate_limit_enabled = kwargs.get("ingress_rate_limit_enabled", None)
+        self.ingress_rate_limit_max_rate_in_bitps = kwargs.get("ingress_rate_limit_max_rate_in_bitps", None)
         self.interface_id = kwargs.get("interface_id", None)
         self.ip_address = kwargs.get("ip_address", None)
         if "local_id" in kwargs:
@@ -95,6 +119,69 @@ class VmNic(object):
         self.vlan = kwargs.get("vlan", None)
         if "vm" in kwargs:
             self.vm = kwargs["vm"]
+
+    @property
+    def egress_rate_limit_burst_in_bit(self):
+        """Gets the egress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit
+
+    @egress_rate_limit_burst_in_bit.setter
+    def egress_rate_limit_burst_in_bit(self, egress_rate_limit_burst_in_bit):
+        """Sets the egress_rate_limit_burst_in_bit of this VmNic.
+
+
+        :param egress_rate_limit_burst_in_bit: The egress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit: float
+        """
+
+        self._egress_rate_limit_burst_in_bit = egress_rate_limit_burst_in_bit
+
+    @property
+    def egress_rate_limit_enabled(self):
+        """Gets the egress_rate_limit_enabled of this VmNic.  # noqa: E501
+
+
+        :return: The egress_rate_limit_enabled of this VmNic.  # noqa: E501
+        :rtype: bool
+        """
+        return self._egress_rate_limit_enabled
+
+    @egress_rate_limit_enabled.setter
+    def egress_rate_limit_enabled(self, egress_rate_limit_enabled):
+        """Sets the egress_rate_limit_enabled of this VmNic.
+
+
+        :param egress_rate_limit_enabled: The egress_rate_limit_enabled of this VmNic.  # noqa: E501
+        :type egress_rate_limit_enabled: bool
+        """
+
+        self._egress_rate_limit_enabled = egress_rate_limit_enabled
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps
+
+    @egress_rate_limit_max_rate_in_bitps.setter
+    def egress_rate_limit_max_rate_in_bitps(self, egress_rate_limit_max_rate_in_bitps):
+        """Sets the egress_rate_limit_max_rate_in_bitps of this VmNic.
+
+
+        :param egress_rate_limit_max_rate_in_bitps: The egress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps = egress_rate_limit_max_rate_in_bitps
 
     @property
     def enabled(self):
@@ -160,6 +247,69 @@ class VmNic(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def ingress_rate_limit_burst_in_bit(self):
+        """Gets the ingress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit
+
+    @ingress_rate_limit_burst_in_bit.setter
+    def ingress_rate_limit_burst_in_bit(self, ingress_rate_limit_burst_in_bit):
+        """Sets the ingress_rate_limit_burst_in_bit of this VmNic.
+
+
+        :param ingress_rate_limit_burst_in_bit: The ingress_rate_limit_burst_in_bit of this VmNic.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit = ingress_rate_limit_burst_in_bit
+
+    @property
+    def ingress_rate_limit_enabled(self):
+        """Gets the ingress_rate_limit_enabled of this VmNic.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_enabled of this VmNic.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ingress_rate_limit_enabled
+
+    @ingress_rate_limit_enabled.setter
+    def ingress_rate_limit_enabled(self, ingress_rate_limit_enabled):
+        """Sets the ingress_rate_limit_enabled of this VmNic.
+
+
+        :param ingress_rate_limit_enabled: The ingress_rate_limit_enabled of this VmNic.  # noqa: E501
+        :type ingress_rate_limit_enabled: bool
+        """
+
+        self._ingress_rate_limit_enabled = ingress_rate_limit_enabled
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps
+
+    @ingress_rate_limit_max_rate_in_bitps.setter
+    def ingress_rate_limit_max_rate_in_bitps(self, ingress_rate_limit_max_rate_in_bitps):
+        """Sets the ingress_rate_limit_max_rate_in_bitps of this VmNic.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps: The ingress_rate_limit_max_rate_in_bitps of this VmNic.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps = ingress_rate_limit_max_rate_in_bitps
 
     @property
     def interface_id(self):

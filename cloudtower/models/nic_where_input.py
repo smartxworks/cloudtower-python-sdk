@@ -248,6 +248,10 @@ class NicWhereInput(object):
         'used_vf_num_lte': 'int',
         'used_vf_num_not': 'int',
         'used_vf_num_not_in': 'list[int]',
+        'user_usage': 'NicUserUsage',
+        'user_usage_in': 'list[NicUserUsage]',
+        'user_usage_not': 'NicUserUsage',
+        'user_usage_not_in': 'list[NicUserUsage]',
         'vds': 'VdsWhereInput'
     }
 
@@ -475,6 +479,10 @@ class NicWhereInput(object):
         'used_vf_num_lte': 'used_vf_num_lte',
         'used_vf_num_not': 'used_vf_num_not',
         'used_vf_num_not_in': 'used_vf_num_not_in',
+        'user_usage': 'user_usage',
+        'user_usage_in': 'user_usage_in',
+        'user_usage_not': 'user_usage_not',
+        'user_usage_not_in': 'user_usage_not_in',
         'vds': 'vds'
     }
 
@@ -705,6 +713,10 @@ class NicWhereInput(object):
         self._used_vf_num_lte = None
         self._used_vf_num_not = None
         self._used_vf_num_not_in = None
+        self._user_usage = None
+        self._user_usage_in = None
+        self._user_usage_not = None
+        self._user_usage_not_in = None
         self._vds = None
         self.discriminator = None
 
@@ -931,6 +943,10 @@ class NicWhereInput(object):
         self.used_vf_num_lte = kwargs.get("used_vf_num_lte", None)
         self.used_vf_num_not = kwargs.get("used_vf_num_not", None)
         self.used_vf_num_not_in = kwargs.get("used_vf_num_not_in", None)
+        self.user_usage = kwargs.get("user_usage", None)
+        self.user_usage_in = kwargs.get("user_usage_in", None)
+        self.user_usage_not = kwargs.get("user_usage_not", None)
+        self.user_usage_not_in = kwargs.get("user_usage_not_in", None)
         self.vds = kwargs.get("vds", None)
 
     @property
@@ -5615,6 +5631,90 @@ class NicWhereInput(object):
         """
 
         self._used_vf_num_not_in = used_vf_num_not_in
+
+    @property
+    def user_usage(self):
+        """Gets the user_usage of this NicWhereInput.  # noqa: E501
+
+
+        :return: The user_usage of this NicWhereInput.  # noqa: E501
+        :rtype: NicUserUsage
+        """
+        return self._user_usage
+
+    @user_usage.setter
+    def user_usage(self, user_usage):
+        """Sets the user_usage of this NicWhereInput.
+
+
+        :param user_usage: The user_usage of this NicWhereInput.  # noqa: E501
+        :type user_usage: NicUserUsage
+        """
+
+        self._user_usage = user_usage
+
+    @property
+    def user_usage_in(self):
+        """Gets the user_usage_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The user_usage_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[NicUserUsage]
+        """
+        return self._user_usage_in
+
+    @user_usage_in.setter
+    def user_usage_in(self, user_usage_in):
+        """Sets the user_usage_in of this NicWhereInput.
+
+
+        :param user_usage_in: The user_usage_in of this NicWhereInput.  # noqa: E501
+        :type user_usage_in: list[NicUserUsage]
+        """
+
+        self._user_usage_in = user_usage_in
+
+    @property
+    def user_usage_not(self):
+        """Gets the user_usage_not of this NicWhereInput.  # noqa: E501
+
+
+        :return: The user_usage_not of this NicWhereInput.  # noqa: E501
+        :rtype: NicUserUsage
+        """
+        return self._user_usage_not
+
+    @user_usage_not.setter
+    def user_usage_not(self, user_usage_not):
+        """Sets the user_usage_not of this NicWhereInput.
+
+
+        :param user_usage_not: The user_usage_not of this NicWhereInput.  # noqa: E501
+        :type user_usage_not: NicUserUsage
+        """
+
+        self._user_usage_not = user_usage_not
+
+    @property
+    def user_usage_not_in(self):
+        """Gets the user_usage_not_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The user_usage_not_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[NicUserUsage]
+        """
+        return self._user_usage_not_in
+
+    @user_usage_not_in.setter
+    def user_usage_not_in(self, user_usage_not_in):
+        """Sets the user_usage_not_in of this NicWhereInput.
+
+
+        :param user_usage_not_in: The user_usage_not_in of this NicWhereInput.  # noqa: E501
+        :type user_usage_not_in: list[NicUserUsage]
+        """
+
+        self._user_usage_not_in = user_usage_not_in
 
     @property
     def vds(self):

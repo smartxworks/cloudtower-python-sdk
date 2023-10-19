@@ -26,6 +26,7 @@ class Host(object):
     """
     openapi_types = {
         'access_ip': 'str',
+        'allocable_cpu_cores_for_vm_exclusive': 'int',
         'allocatable_memory_bytes': 'int',
         'chunk_id': 'str',
         'cluster': 'NestedCluster',
@@ -41,10 +42,13 @@ class Host(object):
         'disks': 'list[NestedDisk]',
         'entity_async_status': 'EntityAsyncStatus',
         'failure_data_space': 'int',
+        'gpu_devices': 'list[NestedGpuDevice]',
         'hdd_data_capacity': 'int',
         'hdd_disk_count': 'int',
+        'host_state': 'NestedMaintenanceHostState',
         'hypervisor_ip': 'str',
         'id': 'str',
+        'iommu': 'IommuStatus',
         'ipmi': 'NestedIpmi',
         'is_os_in_raid1': 'bool',
         'labels': 'list[NestedLabel]',
@@ -97,6 +101,7 @@ class Host(object):
 
     attribute_map = {
         'access_ip': 'access_ip',
+        'allocable_cpu_cores_for_vm_exclusive': 'allocable_cpu_cores_for_vm_exclusive',
         'allocatable_memory_bytes': 'allocatable_memory_bytes',
         'chunk_id': 'chunk_id',
         'cluster': 'cluster',
@@ -112,10 +117,13 @@ class Host(object):
         'disks': 'disks',
         'entity_async_status': 'entityAsyncStatus',
         'failure_data_space': 'failure_data_space',
+        'gpu_devices': 'gpu_devices',
         'hdd_data_capacity': 'hdd_data_capacity',
         'hdd_disk_count': 'hdd_disk_count',
+        'host_state': 'host_state',
         'hypervisor_ip': 'hypervisor_ip',
         'id': 'id',
+        'iommu': 'iommu',
         'ipmi': 'ipmi',
         'is_os_in_raid1': 'is_os_in_raid1',
         'labels': 'labels',
@@ -171,6 +179,7 @@ class Host(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._access_ip = None
+        self._allocable_cpu_cores_for_vm_exclusive = None
         self._allocatable_memory_bytes = None
         self._chunk_id = None
         self._cluster = None
@@ -186,10 +195,13 @@ class Host(object):
         self._disks = None
         self._entity_async_status = None
         self._failure_data_space = None
+        self._gpu_devices = None
         self._hdd_data_capacity = None
         self._hdd_disk_count = None
+        self._host_state = None
         self._hypervisor_ip = None
         self._id = None
+        self._iommu = None
         self._ipmi = None
         self._is_os_in_raid1 = None
         self._labels = None
@@ -241,6 +253,7 @@ class Host(object):
         self.discriminator = None
 
         self.access_ip = kwargs.get("access_ip", None)
+        self.allocable_cpu_cores_for_vm_exclusive = kwargs.get("allocable_cpu_cores_for_vm_exclusive", None)
         if "allocatable_memory_bytes" in kwargs:
             self.allocatable_memory_bytes = kwargs["allocatable_memory_bytes"]
         if "chunk_id" in kwargs:
@@ -266,13 +279,16 @@ class Host(object):
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "failure_data_space" in kwargs:
             self.failure_data_space = kwargs["failure_data_space"]
+        self.gpu_devices = kwargs.get("gpu_devices", None)
         if "hdd_data_capacity" in kwargs:
             self.hdd_data_capacity = kwargs["hdd_data_capacity"]
         if "hdd_disk_count" in kwargs:
             self.hdd_disk_count = kwargs["hdd_disk_count"]
+        self.host_state = kwargs.get("host_state", None)
         self.hypervisor_ip = kwargs.get("hypervisor_ip", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.iommu = kwargs.get("iommu", None)
         self.ipmi = kwargs.get("ipmi", None)
         self.is_os_in_raid1 = kwargs.get("is_os_in_raid1", None)
         self.labels = kwargs.get("labels", None)
@@ -365,6 +381,27 @@ class Host(object):
         """
 
         self._access_ip = access_ip
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive of this Host.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive
+
+    @allocable_cpu_cores_for_vm_exclusive.setter
+    def allocable_cpu_cores_for_vm_exclusive(self, allocable_cpu_cores_for_vm_exclusive):
+        """Sets the allocable_cpu_cores_for_vm_exclusive of this Host.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive: The allocable_cpu_cores_for_vm_exclusive of this Host.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive = allocable_cpu_cores_for_vm_exclusive
 
     @property
     def allocatable_memory_bytes(self):
@@ -702,6 +739,27 @@ class Host(object):
         self._failure_data_space = failure_data_space
 
     @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this Host.  # noqa: E501
+
+
+        :return: The gpu_devices of this Host.  # noqa: E501
+        :rtype: list[NestedGpuDevice]
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this Host.
+
+
+        :param gpu_devices: The gpu_devices of this Host.  # noqa: E501
+        :type gpu_devices: list[NestedGpuDevice]
+        """
+
+        self._gpu_devices = gpu_devices
+
+    @property
     def hdd_data_capacity(self):
         """Gets the hdd_data_capacity of this Host.  # noqa: E501
 
@@ -748,6 +806,27 @@ class Host(object):
         self._hdd_disk_count = hdd_disk_count
 
     @property
+    def host_state(self):
+        """Gets the host_state of this Host.  # noqa: E501
+
+
+        :return: The host_state of this Host.  # noqa: E501
+        :rtype: NestedMaintenanceHostState
+        """
+        return self._host_state
+
+    @host_state.setter
+    def host_state(self, host_state):
+        """Sets the host_state of this Host.
+
+
+        :param host_state: The host_state of this Host.  # noqa: E501
+        :type host_state: NestedMaintenanceHostState
+        """
+
+        self._host_state = host_state
+
+    @property
     def hypervisor_ip(self):
         """Gets the hypervisor_ip of this Host.  # noqa: E501
 
@@ -790,6 +869,27 @@ class Host(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def iommu(self):
+        """Gets the iommu of this Host.  # noqa: E501
+
+
+        :return: The iommu of this Host.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu
+
+    @iommu.setter
+    def iommu(self, iommu):
+        """Sets the iommu of this Host.
+
+
+        :param iommu: The iommu of this Host.  # noqa: E501
+        :type iommu: IommuStatus
+        """
+
+        self._iommu = iommu
 
     @property
     def ipmi(self):

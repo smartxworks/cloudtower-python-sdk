@@ -39,6 +39,14 @@ class HostWhereInput(object):
         'access_ip_not_in': 'list[str]',
         'access_ip_not_starts_with': 'str',
         'access_ip_starts_with': 'str',
+        'allocable_cpu_cores_for_vm_exclusive': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_gt': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_gte': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_in': 'list[int]',
+        'allocable_cpu_cores_for_vm_exclusive_lt': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_lte': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_not': 'int',
+        'allocable_cpu_cores_for_vm_exclusive_not_in': 'list[int]',
         'allocatable_memory_bytes': 'int',
         'allocatable_memory_bytes_gt': 'int',
         'allocatable_memory_bytes_gte': 'int',
@@ -146,6 +154,9 @@ class HostWhereInput(object):
         'failure_data_space_lte': 'int',
         'failure_data_space_not': 'int',
         'failure_data_space_not_in': 'list[int]',
+        'gpu_devices_every': 'GpuDeviceWhereInput',
+        'gpu_devices_none': 'GpuDeviceWhereInput',
+        'gpu_devices_some': 'GpuDeviceWhereInput',
         'hdd_data_capacity': 'int',
         'hdd_data_capacity_gt': 'int',
         'hdd_data_capacity_gte': 'int',
@@ -190,6 +201,10 @@ class HostWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'iommu': 'IommuStatus',
+        'iommu_in': 'list[IommuStatus]',
+        'iommu_not': 'IommuStatus',
+        'iommu_not_in': 'list[IommuStatus]',
         'ipmi': 'IpmiWhereInput',
         'is_os_in_raid1': 'bool',
         'is_os_in_raid1_not': 'bool',
@@ -569,6 +584,14 @@ class HostWhereInput(object):
         'access_ip_not_in': 'access_ip_not_in',
         'access_ip_not_starts_with': 'access_ip_not_starts_with',
         'access_ip_starts_with': 'access_ip_starts_with',
+        'allocable_cpu_cores_for_vm_exclusive': 'allocable_cpu_cores_for_vm_exclusive',
+        'allocable_cpu_cores_for_vm_exclusive_gt': 'allocable_cpu_cores_for_vm_exclusive_gt',
+        'allocable_cpu_cores_for_vm_exclusive_gte': 'allocable_cpu_cores_for_vm_exclusive_gte',
+        'allocable_cpu_cores_for_vm_exclusive_in': 'allocable_cpu_cores_for_vm_exclusive_in',
+        'allocable_cpu_cores_for_vm_exclusive_lt': 'allocable_cpu_cores_for_vm_exclusive_lt',
+        'allocable_cpu_cores_for_vm_exclusive_lte': 'allocable_cpu_cores_for_vm_exclusive_lte',
+        'allocable_cpu_cores_for_vm_exclusive_not': 'allocable_cpu_cores_for_vm_exclusive_not',
+        'allocable_cpu_cores_for_vm_exclusive_not_in': 'allocable_cpu_cores_for_vm_exclusive_not_in',
         'allocatable_memory_bytes': 'allocatable_memory_bytes',
         'allocatable_memory_bytes_gt': 'allocatable_memory_bytes_gt',
         'allocatable_memory_bytes_gte': 'allocatable_memory_bytes_gte',
@@ -676,6 +699,9 @@ class HostWhereInput(object):
         'failure_data_space_lte': 'failure_data_space_lte',
         'failure_data_space_not': 'failure_data_space_not',
         'failure_data_space_not_in': 'failure_data_space_not_in',
+        'gpu_devices_every': 'gpu_devices_every',
+        'gpu_devices_none': 'gpu_devices_none',
+        'gpu_devices_some': 'gpu_devices_some',
         'hdd_data_capacity': 'hdd_data_capacity',
         'hdd_data_capacity_gt': 'hdd_data_capacity_gt',
         'hdd_data_capacity_gte': 'hdd_data_capacity_gte',
@@ -720,6 +746,10 @@ class HostWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'iommu': 'iommu',
+        'iommu_in': 'iommu_in',
+        'iommu_not': 'iommu_not',
+        'iommu_not_in': 'iommu_not_in',
         'ipmi': 'ipmi',
         'is_os_in_raid1': 'is_os_in_raid1',
         'is_os_in_raid1_not': 'is_os_in_raid1_not',
@@ -1102,6 +1132,14 @@ class HostWhereInput(object):
         self._access_ip_not_in = None
         self._access_ip_not_starts_with = None
         self._access_ip_starts_with = None
+        self._allocable_cpu_cores_for_vm_exclusive = None
+        self._allocable_cpu_cores_for_vm_exclusive_gt = None
+        self._allocable_cpu_cores_for_vm_exclusive_gte = None
+        self._allocable_cpu_cores_for_vm_exclusive_in = None
+        self._allocable_cpu_cores_for_vm_exclusive_lt = None
+        self._allocable_cpu_cores_for_vm_exclusive_lte = None
+        self._allocable_cpu_cores_for_vm_exclusive_not = None
+        self._allocable_cpu_cores_for_vm_exclusive_not_in = None
         self._allocatable_memory_bytes = None
         self._allocatable_memory_bytes_gt = None
         self._allocatable_memory_bytes_gte = None
@@ -1209,6 +1247,9 @@ class HostWhereInput(object):
         self._failure_data_space_lte = None
         self._failure_data_space_not = None
         self._failure_data_space_not_in = None
+        self._gpu_devices_every = None
+        self._gpu_devices_none = None
+        self._gpu_devices_some = None
         self._hdd_data_capacity = None
         self._hdd_data_capacity_gt = None
         self._hdd_data_capacity_gte = None
@@ -1253,6 +1294,10 @@ class HostWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._iommu = None
+        self._iommu_in = None
+        self._iommu_not = None
+        self._iommu_not_in = None
         self._ipmi = None
         self._is_os_in_raid1 = None
         self._is_os_in_raid1_not = None
@@ -1631,6 +1676,14 @@ class HostWhereInput(object):
         self.access_ip_not_in = kwargs.get("access_ip_not_in", None)
         self.access_ip_not_starts_with = kwargs.get("access_ip_not_starts_with", None)
         self.access_ip_starts_with = kwargs.get("access_ip_starts_with", None)
+        self.allocable_cpu_cores_for_vm_exclusive = kwargs.get("allocable_cpu_cores_for_vm_exclusive", None)
+        self.allocable_cpu_cores_for_vm_exclusive_gt = kwargs.get("allocable_cpu_cores_for_vm_exclusive_gt", None)
+        self.allocable_cpu_cores_for_vm_exclusive_gte = kwargs.get("allocable_cpu_cores_for_vm_exclusive_gte", None)
+        self.allocable_cpu_cores_for_vm_exclusive_in = kwargs.get("allocable_cpu_cores_for_vm_exclusive_in", None)
+        self.allocable_cpu_cores_for_vm_exclusive_lt = kwargs.get("allocable_cpu_cores_for_vm_exclusive_lt", None)
+        self.allocable_cpu_cores_for_vm_exclusive_lte = kwargs.get("allocable_cpu_cores_for_vm_exclusive_lte", None)
+        self.allocable_cpu_cores_for_vm_exclusive_not = kwargs.get("allocable_cpu_cores_for_vm_exclusive_not", None)
+        self.allocable_cpu_cores_for_vm_exclusive_not_in = kwargs.get("allocable_cpu_cores_for_vm_exclusive_not_in", None)
         self.allocatable_memory_bytes = kwargs.get("allocatable_memory_bytes", None)
         self.allocatable_memory_bytes_gt = kwargs.get("allocatable_memory_bytes_gt", None)
         self.allocatable_memory_bytes_gte = kwargs.get("allocatable_memory_bytes_gte", None)
@@ -1738,6 +1791,9 @@ class HostWhereInput(object):
         self.failure_data_space_lte = kwargs.get("failure_data_space_lte", None)
         self.failure_data_space_not = kwargs.get("failure_data_space_not", None)
         self.failure_data_space_not_in = kwargs.get("failure_data_space_not_in", None)
+        self.gpu_devices_every = kwargs.get("gpu_devices_every", None)
+        self.gpu_devices_none = kwargs.get("gpu_devices_none", None)
+        self.gpu_devices_some = kwargs.get("gpu_devices_some", None)
         self.hdd_data_capacity = kwargs.get("hdd_data_capacity", None)
         self.hdd_data_capacity_gt = kwargs.get("hdd_data_capacity_gt", None)
         self.hdd_data_capacity_gte = kwargs.get("hdd_data_capacity_gte", None)
@@ -1782,6 +1838,10 @@ class HostWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.iommu = kwargs.get("iommu", None)
+        self.iommu_in = kwargs.get("iommu_in", None)
+        self.iommu_not = kwargs.get("iommu_not", None)
+        self.iommu_not_in = kwargs.get("iommu_not_in", None)
         self.ipmi = kwargs.get("ipmi", None)
         self.is_os_in_raid1 = kwargs.get("is_os_in_raid1", None)
         self.is_os_in_raid1_not = kwargs.get("is_os_in_raid1_not", None)
@@ -2438,6 +2498,174 @@ class HostWhereInput(object):
         """
 
         self._access_ip_starts_with = access_ip_starts_with
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive
+
+    @allocable_cpu_cores_for_vm_exclusive.setter
+    def allocable_cpu_cores_for_vm_exclusive(self, allocable_cpu_cores_for_vm_exclusive):
+        """Sets the allocable_cpu_cores_for_vm_exclusive of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive: The allocable_cpu_cores_for_vm_exclusive of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive = allocable_cpu_cores_for_vm_exclusive
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_gt(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_gt
+
+    @allocable_cpu_cores_for_vm_exclusive_gt.setter
+    def allocable_cpu_cores_for_vm_exclusive_gt(self, allocable_cpu_cores_for_vm_exclusive_gt):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_gt of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_gt: The allocable_cpu_cores_for_vm_exclusive_gt of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_gt: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_gt = allocable_cpu_cores_for_vm_exclusive_gt
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_gte(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_gte
+
+    @allocable_cpu_cores_for_vm_exclusive_gte.setter
+    def allocable_cpu_cores_for_vm_exclusive_gte(self, allocable_cpu_cores_for_vm_exclusive_gte):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_gte of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_gte: The allocable_cpu_cores_for_vm_exclusive_gte of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_gte: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_gte = allocable_cpu_cores_for_vm_exclusive_gte
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_in(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_in
+
+    @allocable_cpu_cores_for_vm_exclusive_in.setter
+    def allocable_cpu_cores_for_vm_exclusive_in(self, allocable_cpu_cores_for_vm_exclusive_in):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_in of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_in: The allocable_cpu_cores_for_vm_exclusive_in of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_in: list[int]
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_in = allocable_cpu_cores_for_vm_exclusive_in
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_lt(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_lt
+
+    @allocable_cpu_cores_for_vm_exclusive_lt.setter
+    def allocable_cpu_cores_for_vm_exclusive_lt(self, allocable_cpu_cores_for_vm_exclusive_lt):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_lt of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_lt: The allocable_cpu_cores_for_vm_exclusive_lt of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_lt: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_lt = allocable_cpu_cores_for_vm_exclusive_lt
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_lte(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_lte
+
+    @allocable_cpu_cores_for_vm_exclusive_lte.setter
+    def allocable_cpu_cores_for_vm_exclusive_lte(self, allocable_cpu_cores_for_vm_exclusive_lte):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_lte of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_lte: The allocable_cpu_cores_for_vm_exclusive_lte of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_lte: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_lte = allocable_cpu_cores_for_vm_exclusive_lte
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_not(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_not
+
+    @allocable_cpu_cores_for_vm_exclusive_not.setter
+    def allocable_cpu_cores_for_vm_exclusive_not(self, allocable_cpu_cores_for_vm_exclusive_not):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_not of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_not: The allocable_cpu_cores_for_vm_exclusive_not of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_not: int
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_not = allocable_cpu_cores_for_vm_exclusive_not
+
+    @property
+    def allocable_cpu_cores_for_vm_exclusive_not_in(self):
+        """Gets the allocable_cpu_cores_for_vm_exclusive_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocable_cpu_cores_for_vm_exclusive_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocable_cpu_cores_for_vm_exclusive_not_in
+
+    @allocable_cpu_cores_for_vm_exclusive_not_in.setter
+    def allocable_cpu_cores_for_vm_exclusive_not_in(self, allocable_cpu_cores_for_vm_exclusive_not_in):
+        """Sets the allocable_cpu_cores_for_vm_exclusive_not_in of this HostWhereInput.
+
+
+        :param allocable_cpu_cores_for_vm_exclusive_not_in: The allocable_cpu_cores_for_vm_exclusive_not_in of this HostWhereInput.  # noqa: E501
+        :type allocable_cpu_cores_for_vm_exclusive_not_in: list[int]
+        """
+
+        self._allocable_cpu_cores_for_vm_exclusive_not_in = allocable_cpu_cores_for_vm_exclusive_not_in
 
     @property
     def allocatable_memory_bytes(self):
@@ -4687,6 +4915,69 @@ class HostWhereInput(object):
         self._failure_data_space_not_in = failure_data_space_not_in
 
     @property
+    def gpu_devices_every(self):
+        """Gets the gpu_devices_every of this HostWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_every of this HostWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_every
+
+    @gpu_devices_every.setter
+    def gpu_devices_every(self, gpu_devices_every):
+        """Sets the gpu_devices_every of this HostWhereInput.
+
+
+        :param gpu_devices_every: The gpu_devices_every of this HostWhereInput.  # noqa: E501
+        :type gpu_devices_every: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_every = gpu_devices_every
+
+    @property
+    def gpu_devices_none(self):
+        """Gets the gpu_devices_none of this HostWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_none of this HostWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_none
+
+    @gpu_devices_none.setter
+    def gpu_devices_none(self, gpu_devices_none):
+        """Sets the gpu_devices_none of this HostWhereInput.
+
+
+        :param gpu_devices_none: The gpu_devices_none of this HostWhereInput.  # noqa: E501
+        :type gpu_devices_none: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_none = gpu_devices_none
+
+    @property
+    def gpu_devices_some(self):
+        """Gets the gpu_devices_some of this HostWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_some of this HostWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_some
+
+    @gpu_devices_some.setter
+    def gpu_devices_some(self, gpu_devices_some):
+        """Sets the gpu_devices_some of this HostWhereInput.
+
+
+        :param gpu_devices_some: The gpu_devices_some of this HostWhereInput.  # noqa: E501
+        :type gpu_devices_some: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_some = gpu_devices_some
+
+    @property
     def hdd_data_capacity(self):
         """Gets the hdd_data_capacity of this HostWhereInput.  # noqa: E501
 
@@ -5609,6 +5900,90 @@ class HostWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def iommu(self):
+        """Gets the iommu of this HostWhereInput.  # noqa: E501
+
+
+        :return: The iommu of this HostWhereInput.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu
+
+    @iommu.setter
+    def iommu(self, iommu):
+        """Sets the iommu of this HostWhereInput.
+
+
+        :param iommu: The iommu of this HostWhereInput.  # noqa: E501
+        :type iommu: IommuStatus
+        """
+
+        self._iommu = iommu
+
+    @property
+    def iommu_in(self):
+        """Gets the iommu_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The iommu_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[IommuStatus]
+        """
+        return self._iommu_in
+
+    @iommu_in.setter
+    def iommu_in(self, iommu_in):
+        """Sets the iommu_in of this HostWhereInput.
+
+
+        :param iommu_in: The iommu_in of this HostWhereInput.  # noqa: E501
+        :type iommu_in: list[IommuStatus]
+        """
+
+        self._iommu_in = iommu_in
+
+    @property
+    def iommu_not(self):
+        """Gets the iommu_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The iommu_not of this HostWhereInput.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu_not
+
+    @iommu_not.setter
+    def iommu_not(self, iommu_not):
+        """Sets the iommu_not of this HostWhereInput.
+
+
+        :param iommu_not: The iommu_not of this HostWhereInput.  # noqa: E501
+        :type iommu_not: IommuStatus
+        """
+
+        self._iommu_not = iommu_not
+
+    @property
+    def iommu_not_in(self):
+        """Gets the iommu_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The iommu_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[IommuStatus]
+        """
+        return self._iommu_not_in
+
+    @iommu_not_in.setter
+    def iommu_not_in(self, iommu_not_in):
+        """Sets the iommu_not_in of this HostWhereInput.
+
+
+        :param iommu_not_in: The iommu_not_in of this HostWhereInput.  # noqa: E501
+        :type iommu_not_in: list[IommuStatus]
+        """
+
+        self._iommu_not_in = iommu_not_in
 
     @property
     def ipmi(self):

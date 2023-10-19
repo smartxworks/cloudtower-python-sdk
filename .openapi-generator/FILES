@@ -34,6 +34,7 @@ cloudtower/api/everoute_license_api.py
 cloudtower/api/everoute_package_api.py
 cloudtower/api/global_alert_rule_api.py
 cloudtower/api/global_settings_api.py
+cloudtower/api/gpu_device_api.py
 cloudtower/api/graph_api.py
 cloudtower/api/host_api.py
 cloudtower/api/ipmi_api.py
@@ -369,6 +370,7 @@ cloudtower/models/entity_filter_updation_params_data.py
 cloudtower/models/entity_filter_where_input.py
 cloudtower/models/entity_type.py
 cloudtower/models/error_body.py
+cloudtower/models/error_code.py
 cloudtower/models/everoute_cluster.py
 cloudtower/models/everoute_cluster_connection.py
 cloudtower/models/everoute_cluster_order_by_input.py
@@ -453,6 +455,8 @@ cloudtower/models/get_global_alert_rules_connection_request_body.py
 cloudtower/models/get_global_alert_rules_request_body.py
 cloudtower/models/get_global_settingses_connection_request_body.py
 cloudtower/models/get_global_settingses_request_body.py
+cloudtower/models/get_gpu_devices_connection_request_body.py
+cloudtower/models/get_gpu_devices_request_body.py
 cloudtower/models/get_graphs_connection_request_body.py
 cloudtower/models/get_graphs_request_body.py
 cloudtower/models/get_host_metric_input.py
@@ -598,6 +602,18 @@ cloudtower/models/global_settings.py
 cloudtower/models/global_settings_connection.py
 cloudtower/models/global_settings_order_by_input.py
 cloudtower/models/global_settings_where_input.py
+cloudtower/models/gpu_device.py
+cloudtower/models/gpu_device_connection.py
+cloudtower/models/gpu_device_description_updation_params.py
+cloudtower/models/gpu_device_description_updation_params_data.py
+cloudtower/models/gpu_device_order_by_input.py
+cloudtower/models/gpu_device_sriov_switch_params.py
+cloudtower/models/gpu_device_sriov_switch_params_data.py
+cloudtower/models/gpu_device_status.py
+cloudtower/models/gpu_device_usage.py
+cloudtower/models/gpu_device_usage_updation_params.py
+cloudtower/models/gpu_device_usage_updation_params_data.py
+cloudtower/models/gpu_device_where_input.py
 cloudtower/models/graph.py
 cloudtower/models/graph_connection.py
 cloudtower/models/graph_creation_params.py
@@ -625,6 +641,7 @@ cloudtower/models/hypervisor.py
 cloudtower/models/import_vm_volume_params.py
 cloudtower/models/install_vmtools_params.py
 cloudtower/models/install_vmtools_params_data.py
+cloudtower/models/iommu_status.py
 cloudtower/models/ip_security_policy.py
 cloudtower/models/ipmi.py
 cloudtower/models/ipmi_order_by_input.py
@@ -695,6 +712,7 @@ cloudtower/models/log_service_config.py
 cloudtower/models/log_service_configs_input.py
 cloudtower/models/login_input.py
 cloudtower/models/login_response.py
+cloudtower/models/maintenance_mode_enum.py
 cloudtower/models/management_vlan_updation_params.py
 cloudtower/models/management_vlan_updation_params_data.py
 cloudtower/models/meta_leader.py
@@ -749,6 +767,7 @@ cloudtower/models/nested_aggregate_everoute_license.py
 cloudtower/models/nested_aggregate_everoute_package.py
 cloudtower/models/nested_aggregate_global_alert_rule.py
 cloudtower/models/nested_aggregate_global_settings.py
+cloudtower/models/nested_aggregate_gpu_device.py
 cloudtower/models/nested_aggregate_graph.py
 cloudtower/models/nested_aggregate_host.py
 cloudtower/models/nested_aggregate_iscsi_connection.py
@@ -849,6 +868,8 @@ cloudtower/models/nested_frozen_disks.py
 cloudtower/models/nested_frozen_nic.py
 cloudtower/models/nested_frozen_vlan.py
 cloudtower/models/nested_global_alert_rule.py
+cloudtower/models/nested_gpu_device.py
+cloudtower/models/nested_gpu_driver_info.py
 cloudtower/models/nested_graph.py
 cloudtower/models/nested_host.py
 cloudtower/models/nested_initiator_chap.py
@@ -860,6 +881,7 @@ cloudtower/models/nested_isolation_policy.py
 cloudtower/models/nested_label.py
 cloudtower/models/nested_label_group.py
 cloudtower/models/nested_license.py
+cloudtower/models/nested_maintenance_host_state.py
 cloudtower/models/nested_metro_availability_checklist.py
 cloudtower/models/nested_metro_check_item.py
 cloudtower/models/nested_metro_check_result.py
@@ -902,6 +924,7 @@ cloudtower/models/nested_user.py
 cloudtower/models/nested_user_role_next.py
 cloudtower/models/nested_vcenter_account.py
 cloudtower/models/nested_vds.py
+cloudtower/models/nested_vgpu_type.py
 cloudtower/models/nested_view.py
 cloudtower/models/nested_vlan.py
 cloudtower/models/nested_vm.py
@@ -914,6 +937,7 @@ cloudtower/models/nested_vm_recycle_bin.py
 cloudtower/models/nested_vm_snapshot.py
 cloudtower/models/nested_vm_template.py
 cloudtower/models/nested_vm_volume.py
+cloudtower/models/nested_vm_volume_snapshot.py
 cloudtower/models/nested_vsphere_esxi_account.py
 cloudtower/models/nested_witness.py
 cloudtower/models/nested_zone.py
@@ -940,6 +964,7 @@ cloudtower/models/nic_driver_state.py
 cloudtower/models/nic_order_by_input.py
 cloudtower/models/nic_updation_params.py
 cloudtower/models/nic_updation_params_data.py
+cloudtower/models/nic_user_usage.py
 cloudtower/models/nic_where_input.py
 cloudtower/models/node_top_updation_param.py
 cloudtower/models/node_topo.py
@@ -1220,6 +1245,7 @@ cloudtower/models/vm_add_disk_params_data.py
 cloudtower/models/vm_add_disk_params_data_vm_disks.py
 cloudtower/models/vm_add_folder_params.py
 cloudtower/models/vm_add_folder_params_data.py
+cloudtower/models/vm_add_gpu_device_params.py
 cloudtower/models/vm_add_nic_params.py
 cloudtower/models/vm_add_nic_params_data.py
 cloudtower/models/vm_cd_rom_params.py
@@ -1265,6 +1291,7 @@ cloudtower/models/vm_folder_order_by_input.py
 cloudtower/models/vm_folder_updation_params.py
 cloudtower/models/vm_folder_updation_params_data.py
 cloudtower/models/vm_folder_where_input.py
+cloudtower/models/vm_gpu_operation_params.py
 cloudtower/models/vm_guests_operation_system.py
 cloudtower/models/vm_import_nic_params.py
 cloudtower/models/vm_import_params.py
@@ -1280,6 +1307,8 @@ cloudtower/models/vm_nic_qos_option.py
 cloudtower/models/vm_nic_qos_traffic.py
 cloudtower/models/vm_nic_where_input.py
 cloudtower/models/vm_operate_params.py
+cloudtower/models/vm_operate_pci_nic_params.py
+cloudtower/models/vm_operate_pci_nic_params_data.py
 cloudtower/models/vm_order_by_input.py
 cloudtower/models/vm_placement_group.py
 cloudtower/models/vm_placement_group_connection.py
@@ -1294,6 +1323,9 @@ cloudtower/models/vm_remove_cd_rom_params.py
 cloudtower/models/vm_remove_cd_rom_params_data.py
 cloudtower/models/vm_remove_disk_params.py
 cloudtower/models/vm_remove_disk_params_data.py
+cloudtower/models/vm_remove_gpu_device_params.py
+cloudtower/models/vm_remove_nic_by_where_params.py
+cloudtower/models/vm_remove_nic_by_where_params_effect.py
 cloudtower/models/vm_remove_nic_params.py
 cloudtower/models/vm_remove_nic_params_data.py
 cloudtower/models/vm_reset_guest_os_password_params.py
@@ -1352,6 +1384,7 @@ cloudtower/models/vm_volume.py
 cloudtower/models/vm_volume_connection.py
 cloudtower/models/vm_volume_creation_params.py
 cloudtower/models/vm_volume_deletion_params.py
+cloudtower/models/vm_volume_deletion_params_effect.py
 cloudtower/models/vm_volume_elf_storage_policy_type.py
 cloudtower/models/vm_volume_export_file_type.py
 cloudtower/models/vm_volume_order_by_input.py
@@ -1434,6 +1467,7 @@ cloudtower/models/with_task_elf_image.py
 cloudtower/models/with_task_entity_filter.py
 cloudtower/models/with_task_global_alert_rule.py
 cloudtower/models/with_task_global_settings.py
+cloudtower/models/with_task_gpu_device.py
 cloudtower/models/with_task_graph.py
 cloudtower/models/with_task_host.py
 cloudtower/models/with_task_iscsi_lun.py

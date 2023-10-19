@@ -40,7 +40,7 @@ def stopped_vm(default_cluster, default_vlan, vm_api, wait_task, wait_entity_asy
     ]
     create_result = vm_api.create_vm(creation_params)
     create_task_id = create_result[0].task_id
-    create_vm: Vm = create_result[0].data
+    create_vm = create_result[0].data
     vm_where_input = VmWhereInput(
         id=create_vm.id
     )
@@ -95,7 +95,7 @@ def running_vm(default_cluster, default_vlan, vm_api, wait_task, wait_entity_asy
     ]
     create_result = vm_api.create_vm(creation_params)
     create_task_id = create_result[0].task_id
-    create_vm: Vm = create_result[0].data
+    create_vm = create_result[0].data
     vm_where_input = VmWhereInput(
         id=create_vm.id
     )

@@ -49,6 +49,10 @@ class VmVolumeSnapshotWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'elf_storage_policy_in': 'list[VmVolumeElfStoragePolicyType]',
+        'elf_storage_policy_not': 'VmVolumeElfStoragePolicyType',
+        'elf_storage_policy_not_in': 'list[VmVolumeElfStoragePolicyType]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -67,6 +71,9 @@ class VmVolumeSnapshotWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'labels_every': 'LabelWhereInput',
+        'labels_none': 'LabelWhereInput',
+        'labels_some': 'LabelWhereInput',
         'local_created_at': 'str',
         'local_created_at_gt': 'str',
         'local_created_at_gte': 'str',
@@ -134,6 +141,16 @@ class VmVolumeSnapshotWhereInput(object):
         'unique_size_not': 'float',
         'unique_size_not_in': 'list[float]',
         'vm_volume': 'VmVolumeWhereInput',
+        'volume_sharing': 'bool',
+        'volume_sharing_not': 'bool',
+        'volume_size': 'float',
+        'volume_size_gt': 'float',
+        'volume_size_gte': 'float',
+        'volume_size_in': 'list[float]',
+        'volume_size_lt': 'float',
+        'volume_size_lte': 'float',
+        'volume_size_not': 'float',
+        'volume_size_not_in': 'list[float]',
         'zbs_snapshot_uuid': 'str',
         'zbs_snapshot_uuid_contains': 'str',
         'zbs_snapshot_uuid_ends_with': 'str',
@@ -175,6 +192,10 @@ class VmVolumeSnapshotWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'elf_storage_policy': 'elf_storage_policy',
+        'elf_storage_policy_in': 'elf_storage_policy_in',
+        'elf_storage_policy_not': 'elf_storage_policy_not',
+        'elf_storage_policy_not_in': 'elf_storage_policy_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -193,6 +214,9 @@ class VmVolumeSnapshotWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'labels_every': 'labels_every',
+        'labels_none': 'labels_none',
+        'labels_some': 'labels_some',
         'local_created_at': 'local_created_at',
         'local_created_at_gt': 'local_created_at_gt',
         'local_created_at_gte': 'local_created_at_gte',
@@ -260,6 +284,16 @@ class VmVolumeSnapshotWhereInput(object):
         'unique_size_not': 'unique_size_not',
         'unique_size_not_in': 'unique_size_not_in',
         'vm_volume': 'vm_volume',
+        'volume_sharing': 'volume_sharing',
+        'volume_sharing_not': 'volume_sharing_not',
+        'volume_size': 'volume_size',
+        'volume_size_gt': 'volume_size_gt',
+        'volume_size_gte': 'volume_size_gte',
+        'volume_size_in': 'volume_size_in',
+        'volume_size_lt': 'volume_size_lt',
+        'volume_size_lte': 'volume_size_lte',
+        'volume_size_not': 'volume_size_not',
+        'volume_size_not_in': 'volume_size_not_in',
         'zbs_snapshot_uuid': 'zbs_snapshot_uuid',
         'zbs_snapshot_uuid_contains': 'zbs_snapshot_uuid_contains',
         'zbs_snapshot_uuid_ends_with': 'zbs_snapshot_uuid_ends_with',
@@ -304,6 +338,10 @@ class VmVolumeSnapshotWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._elf_storage_policy = None
+        self._elf_storage_policy_in = None
+        self._elf_storage_policy_not = None
+        self._elf_storage_policy_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -322,6 +360,9 @@ class VmVolumeSnapshotWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._labels_every = None
+        self._labels_none = None
+        self._labels_some = None
         self._local_created_at = None
         self._local_created_at_gt = None
         self._local_created_at_gte = None
@@ -389,6 +430,16 @@ class VmVolumeSnapshotWhereInput(object):
         self._unique_size_not = None
         self._unique_size_not_in = None
         self._vm_volume = None
+        self._volume_sharing = None
+        self._volume_sharing_not = None
+        self._volume_size = None
+        self._volume_size_gt = None
+        self._volume_size_gte = None
+        self._volume_size_in = None
+        self._volume_size_lt = None
+        self._volume_size_lte = None
+        self._volume_size_not = None
+        self._volume_size_not_in = None
         self._zbs_snapshot_uuid = None
         self._zbs_snapshot_uuid_contains = None
         self._zbs_snapshot_uuid_ends_with = None
@@ -429,6 +480,10 @@ class VmVolumeSnapshotWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.elf_storage_policy = kwargs.get("elf_storage_policy", None)
+        self.elf_storage_policy_in = kwargs.get("elf_storage_policy_in", None)
+        self.elf_storage_policy_not = kwargs.get("elf_storage_policy_not", None)
+        self.elf_storage_policy_not_in = kwargs.get("elf_storage_policy_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -447,6 +502,9 @@ class VmVolumeSnapshotWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.labels_every = kwargs.get("labels_every", None)
+        self.labels_none = kwargs.get("labels_none", None)
+        self.labels_some = kwargs.get("labels_some", None)
         self.local_created_at = kwargs.get("local_created_at", None)
         self.local_created_at_gt = kwargs.get("local_created_at_gt", None)
         self.local_created_at_gte = kwargs.get("local_created_at_gte", None)
@@ -514,6 +572,16 @@ class VmVolumeSnapshotWhereInput(object):
         self.unique_size_not = kwargs.get("unique_size_not", None)
         self.unique_size_not_in = kwargs.get("unique_size_not_in", None)
         self.vm_volume = kwargs.get("vm_volume", None)
+        self.volume_sharing = kwargs.get("volume_sharing", None)
+        self.volume_sharing_not = kwargs.get("volume_sharing_not", None)
+        self.volume_size = kwargs.get("volume_size", None)
+        self.volume_size_gt = kwargs.get("volume_size_gt", None)
+        self.volume_size_gte = kwargs.get("volume_size_gte", None)
+        self.volume_size_in = kwargs.get("volume_size_in", None)
+        self.volume_size_lt = kwargs.get("volume_size_lt", None)
+        self.volume_size_lte = kwargs.get("volume_size_lte", None)
+        self.volume_size_not = kwargs.get("volume_size_not", None)
+        self.volume_size_not_in = kwargs.get("volume_size_not_in", None)
         self.zbs_snapshot_uuid = kwargs.get("zbs_snapshot_uuid", None)
         self.zbs_snapshot_uuid_contains = kwargs.get("zbs_snapshot_uuid_contains", None)
         self.zbs_snapshot_uuid_ends_with = kwargs.get("zbs_snapshot_uuid_ends_with", None)
@@ -1034,6 +1102,90 @@ class VmVolumeSnapshotWhereInput(object):
         self._description_starts_with = description_starts_with
 
     @property
+    def elf_storage_policy(self):
+        """Gets the elf_storage_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_storage_policy
+
+    @elf_storage_policy.setter
+    def elf_storage_policy(self, elf_storage_policy):
+        """Sets the elf_storage_policy of this VmVolumeSnapshotWhereInput.
+
+
+        :param elf_storage_policy: The elf_storage_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type elf_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_storage_policy = elf_storage_policy
+
+    @property
+    def elf_storage_policy_in(self):
+        """Gets the elf_storage_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[VmVolumeElfStoragePolicyType]
+        """
+        return self._elf_storage_policy_in
+
+    @elf_storage_policy_in.setter
+    def elf_storage_policy_in(self, elf_storage_policy_in):
+        """Sets the elf_storage_policy_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param elf_storage_policy_in: The elf_storage_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type elf_storage_policy_in: list[VmVolumeElfStoragePolicyType]
+        """
+
+        self._elf_storage_policy_in = elf_storage_policy_in
+
+    @property
+    def elf_storage_policy_not(self):
+        """Gets the elf_storage_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_storage_policy_not
+
+    @elf_storage_policy_not.setter
+    def elf_storage_policy_not(self, elf_storage_policy_not):
+        """Sets the elf_storage_policy_not of this VmVolumeSnapshotWhereInput.
+
+
+        :param elf_storage_policy_not: The elf_storage_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type elf_storage_policy_not: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_storage_policy_not = elf_storage_policy_not
+
+    @property
+    def elf_storage_policy_not_in(self):
+        """Gets the elf_storage_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[VmVolumeElfStoragePolicyType]
+        """
+        return self._elf_storage_policy_not_in
+
+    @elf_storage_policy_not_in.setter
+    def elf_storage_policy_not_in(self, elf_storage_policy_not_in):
+        """Sets the elf_storage_policy_not_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param elf_storage_policy_not_in: The elf_storage_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type elf_storage_policy_not_in: list[VmVolumeElfStoragePolicyType]
+        """
+
+        self._elf_storage_policy_not_in = elf_storage_policy_not_in
+
+    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VmVolumeSnapshotWhereInput.  # noqa: E501
 
@@ -1410,6 +1562,69 @@ class VmVolumeSnapshotWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def labels_every(self):
+        """Gets the labels_every of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The labels_every of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: LabelWhereInput
+        """
+        return self._labels_every
+
+    @labels_every.setter
+    def labels_every(self, labels_every):
+        """Sets the labels_every of this VmVolumeSnapshotWhereInput.
+
+
+        :param labels_every: The labels_every of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type labels_every: LabelWhereInput
+        """
+
+        self._labels_every = labels_every
+
+    @property
+    def labels_none(self):
+        """Gets the labels_none of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The labels_none of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: LabelWhereInput
+        """
+        return self._labels_none
+
+    @labels_none.setter
+    def labels_none(self, labels_none):
+        """Sets the labels_none of this VmVolumeSnapshotWhereInput.
+
+
+        :param labels_none: The labels_none of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type labels_none: LabelWhereInput
+        """
+
+        self._labels_none = labels_none
+
+    @property
+    def labels_some(self):
+        """Gets the labels_some of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The labels_some of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: LabelWhereInput
+        """
+        return self._labels_some
+
+    @labels_some.setter
+    def labels_some(self, labels_some):
+        """Sets the labels_some of this VmVolumeSnapshotWhereInput.
+
+
+        :param labels_some: The labels_some of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type labels_some: LabelWhereInput
+        """
+
+        self._labels_some = labels_some
 
     @property
     def local_created_at(self):
@@ -2817,6 +3032,216 @@ class VmVolumeSnapshotWhereInput(object):
         """
 
         self._vm_volume = vm_volume
+
+    @property
+    def volume_sharing(self):
+        """Gets the volume_sharing of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_sharing of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._volume_sharing
+
+    @volume_sharing.setter
+    def volume_sharing(self, volume_sharing):
+        """Sets the volume_sharing of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_sharing: The volume_sharing of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_sharing: bool
+        """
+
+        self._volume_sharing = volume_sharing
+
+    @property
+    def volume_sharing_not(self):
+        """Gets the volume_sharing_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_sharing_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._volume_sharing_not
+
+    @volume_sharing_not.setter
+    def volume_sharing_not(self, volume_sharing_not):
+        """Sets the volume_sharing_not of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_sharing_not: The volume_sharing_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_sharing_not: bool
+        """
+
+        self._volume_sharing_not = volume_sharing_not
+
+    @property
+    def volume_size(self):
+        """Gets the volume_size of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size
+
+    @volume_size.setter
+    def volume_size(self, volume_size):
+        """Sets the volume_size of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size: The volume_size of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size: float
+        """
+
+        self._volume_size = volume_size
+
+    @property
+    def volume_size_gt(self):
+        """Gets the volume_size_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size_gt
+
+    @volume_size_gt.setter
+    def volume_size_gt(self, volume_size_gt):
+        """Sets the volume_size_gt of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_gt: The volume_size_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_gt: float
+        """
+
+        self._volume_size_gt = volume_size_gt
+
+    @property
+    def volume_size_gte(self):
+        """Gets the volume_size_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size_gte
+
+    @volume_size_gte.setter
+    def volume_size_gte(self, volume_size_gte):
+        """Sets the volume_size_gte of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_gte: The volume_size_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_gte: float
+        """
+
+        self._volume_size_gte = volume_size_gte
+
+    @property
+    def volume_size_in(self):
+        """Gets the volume_size_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._volume_size_in
+
+    @volume_size_in.setter
+    def volume_size_in(self, volume_size_in):
+        """Sets the volume_size_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_in: The volume_size_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_in: list[float]
+        """
+
+        self._volume_size_in = volume_size_in
+
+    @property
+    def volume_size_lt(self):
+        """Gets the volume_size_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size_lt
+
+    @volume_size_lt.setter
+    def volume_size_lt(self, volume_size_lt):
+        """Sets the volume_size_lt of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_lt: The volume_size_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_lt: float
+        """
+
+        self._volume_size_lt = volume_size_lt
+
+    @property
+    def volume_size_lte(self):
+        """Gets the volume_size_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size_lte
+
+    @volume_size_lte.setter
+    def volume_size_lte(self, volume_size_lte):
+        """Sets the volume_size_lte of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_lte: The volume_size_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_lte: float
+        """
+
+        self._volume_size_lte = volume_size_lte
+
+    @property
+    def volume_size_not(self):
+        """Gets the volume_size_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size_not
+
+    @volume_size_not.setter
+    def volume_size_not(self, volume_size_not):
+        """Sets the volume_size_not of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_not: The volume_size_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_not: float
+        """
+
+        self._volume_size_not = volume_size_not
+
+    @property
+    def volume_size_not_in(self):
+        """Gets the volume_size_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The volume_size_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._volume_size_not_in
+
+    @volume_size_not_in.setter
+    def volume_size_not_in(self, volume_size_not_in):
+        """Sets the volume_size_not_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param volume_size_not_in: The volume_size_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type volume_size_not_in: list[float]
+        """
+
+        self._volume_size_not_in = volume_size_not_in
 
     @property
     def zbs_snapshot_uuid(self):

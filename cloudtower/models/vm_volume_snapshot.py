@@ -28,8 +28,10 @@ class VmVolumeSnapshot(object):
         'cluster': 'NestedCluster',
         'create_at': 'str',
         'description': 'str',
+        'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
+        'labels': 'list[NestedLabel]',
         'local_created_at': 'str',
         'local_id': 'str',
         'name': 'str',
@@ -38,6 +40,8 @@ class VmVolumeSnapshot(object):
         'type': 'VmVolumeSnapshotType',
         'unique_size': 'float',
         'vm_volume': 'NestedVmVolume',
+        'volume_sharing': 'bool',
+        'volume_size': 'float',
         'zbs_snapshot_uuid': 'str'
     }
 
@@ -45,8 +49,10 @@ class VmVolumeSnapshot(object):
         'cluster': 'cluster',
         'create_at': 'createAt',
         'description': 'description',
+        'elf_storage_policy': 'elf_storage_policy',
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
+        'labels': 'labels',
         'local_created_at': 'local_created_at',
         'local_id': 'local_id',
         'name': 'name',
@@ -55,6 +61,8 @@ class VmVolumeSnapshot(object):
         'type': 'type',
         'unique_size': 'unique_size',
         'vm_volume': 'vm_volume',
+        'volume_sharing': 'volume_sharing',
+        'volume_size': 'volume_size',
         'zbs_snapshot_uuid': 'zbs_snapshot_uuid'
     }
 
@@ -65,8 +73,10 @@ class VmVolumeSnapshot(object):
         self._cluster = None
         self._create_at = None
         self._description = None
+        self._elf_storage_policy = None
         self._entity_async_status = None
         self._id = None
+        self._labels = None
         self._local_created_at = None
         self._local_id = None
         self._name = None
@@ -75,6 +85,8 @@ class VmVolumeSnapshot(object):
         self._type = None
         self._unique_size = None
         self._vm_volume = None
+        self._volume_sharing = None
+        self._volume_size = None
         self._zbs_snapshot_uuid = None
         self.discriminator = None
 
@@ -83,9 +95,12 @@ class VmVolumeSnapshot(object):
         self.create_at = kwargs.get("create_at", None)
         if "description" in kwargs:
             self.description = kwargs["description"]
+        if "elf_storage_policy" in kwargs:
+            self.elf_storage_policy = kwargs["elf_storage_policy"]
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.labels = kwargs.get("labels", None)
         if "local_created_at" in kwargs:
             self.local_created_at = kwargs["local_created_at"]
         if "local_id" in kwargs:
@@ -98,6 +113,8 @@ class VmVolumeSnapshot(object):
             self.type = kwargs["type"]
         self.unique_size = kwargs.get("unique_size", None)
         self.vm_volume = kwargs.get("vm_volume", None)
+        self.volume_sharing = kwargs.get("volume_sharing", None)
+        self.volume_size = kwargs.get("volume_size", None)
         self.zbs_snapshot_uuid = kwargs.get("zbs_snapshot_uuid", None)
 
     @property
@@ -168,6 +185,29 @@ class VmVolumeSnapshot(object):
         self._description = description
 
     @property
+    def elf_storage_policy(self):
+        """Gets the elf_storage_policy of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The elf_storage_policy of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_storage_policy
+
+    @elf_storage_policy.setter
+    def elf_storage_policy(self, elf_storage_policy):
+        """Sets the elf_storage_policy of this VmVolumeSnapshot.
+
+
+        :param elf_storage_policy: The elf_storage_policy of this VmVolumeSnapshot.  # noqa: E501
+        :type elf_storage_policy: VmVolumeElfStoragePolicyType
+        """
+        if self.local_vars_configuration.client_side_validation and elf_storage_policy is None:  # noqa: E501
+            raise ValueError("Invalid value for `elf_storage_policy`, must not be `None`")  # noqa: E501
+
+        self._elf_storage_policy = elf_storage_policy
+
+    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VmVolumeSnapshot.  # noqa: E501
 
@@ -210,6 +250,27 @@ class VmVolumeSnapshot(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def labels(self):
+        """Gets the labels of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The labels of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: list[NestedLabel]
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this VmVolumeSnapshot.
+
+
+        :param labels: The labels of this VmVolumeSnapshot.  # noqa: E501
+        :type labels: list[NestedLabel]
+        """
+
+        self._labels = labels
 
     @property
     def local_created_at(self):
@@ -386,6 +447,48 @@ class VmVolumeSnapshot(object):
         """
 
         self._vm_volume = vm_volume
+
+    @property
+    def volume_sharing(self):
+        """Gets the volume_sharing of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The volume_sharing of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: bool
+        """
+        return self._volume_sharing
+
+    @volume_sharing.setter
+    def volume_sharing(self, volume_sharing):
+        """Sets the volume_sharing of this VmVolumeSnapshot.
+
+
+        :param volume_sharing: The volume_sharing of this VmVolumeSnapshot.  # noqa: E501
+        :type volume_sharing: bool
+        """
+
+        self._volume_sharing = volume_sharing
+
+    @property
+    def volume_size(self):
+        """Gets the volume_size of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The volume_size of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: float
+        """
+        return self._volume_size
+
+    @volume_size.setter
+    def volume_size(self, volume_size):
+        """Sets the volume_size of this VmVolumeSnapshot.
+
+
+        :param volume_size: The volume_size of this VmVolumeSnapshot.  # noqa: E501
+        :type volume_size: float
+        """
+
+        self._volume_size = volume_size
 
     @property
     def zbs_snapshot_uuid(self):
