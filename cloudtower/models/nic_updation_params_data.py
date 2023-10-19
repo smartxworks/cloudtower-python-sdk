@@ -25,11 +25,13 @@ class NicUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'nic_user_usage': 'NicUserUsage',
         'total_vf_num': 'int',
         'mtu': 'int'
     }
 
     attribute_map = {
+        'nic_user_usage': 'nic_user_usage',
         'total_vf_num': 'total_vf_num',
         'mtu': 'mtu'
     }
@@ -38,14 +40,38 @@ class NicUpdationParamsData(object):
         """NicUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._nic_user_usage = None
         self._total_vf_num = None
         self._mtu = None
         self.discriminator = None
 
+        if "nic_user_usage" in kwargs:
+            self.nic_user_usage = kwargs["nic_user_usage"]
         if "total_vf_num" in kwargs:
             self.total_vf_num = kwargs["total_vf_num"]
         if "mtu" in kwargs:
             self.mtu = kwargs["mtu"]
+
+    @property
+    def nic_user_usage(self):
+        """Gets the nic_user_usage of this NicUpdationParamsData.  # noqa: E501
+
+
+        :return: The nic_user_usage of this NicUpdationParamsData.  # noqa: E501
+        :rtype: NicUserUsage
+        """
+        return self._nic_user_usage
+
+    @nic_user_usage.setter
+    def nic_user_usage(self, nic_user_usage):
+        """Sets the nic_user_usage of this NicUpdationParamsData.
+
+
+        :param nic_user_usage: The nic_user_usage of this NicUpdationParamsData.  # noqa: E501
+        :type nic_user_usage: NicUserUsage
+        """
+
+        self._nic_user_usage = nic_user_usage
 
     @property
     def total_vf_num(self):

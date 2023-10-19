@@ -77,7 +77,7 @@ class TestVm:
         create_result = vm_api.create_vm(creation_params)
         assert create_result is not None
         create_task_id = create_result[0].task_id
-        create_vm: Vm = create_result[0].data
+        create_vm = create_result[0].data
         wait_task(id=create_task_id)
         updation_params = VmUpdateParams(
             data=VmUpdateParamsData(
@@ -90,7 +90,7 @@ class TestVm:
         update_result = vm_api.update_vm(updation_params)
         assert update_result is not None
         update_task_id = update_result[0].task_id
-        update_vm: Vm = update_result[0].data
+        update_vm = update_result[0].data
         wait_task(id=update_task_id)
         deletion_params = VmOperateParams(
             where=VmWhereInput(

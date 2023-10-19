@@ -38,6 +38,7 @@ class Vm(object):
         'entity_async_status': 'EntityAsyncStatus',
         'firmware': 'VmFirmware',
         'folder': 'NestedVmFolder',
+        'gpu_devices': 'list[NestedGpuDevice]',
         'guest_cpu_model': 'str',
         'guest_os_type': 'VmGuestsOperationSystem',
         'guest_size_usage': 'float',
@@ -69,6 +70,7 @@ class Vm(object):
         'original_name': 'str',
         'os': 'str',
         'out_uninstall_usb': 'list[str]',
+        'pci_nics': 'list[NestedNic]',
         'protected': 'bool',
         'provisioned_size': 'int',
         'size': 'int',
@@ -102,6 +104,7 @@ class Vm(object):
         'entity_async_status': 'entityAsyncStatus',
         'firmware': 'firmware',
         'folder': 'folder',
+        'gpu_devices': 'gpu_devices',
         'guest_cpu_model': 'guest_cpu_model',
         'guest_os_type': 'guest_os_type',
         'guest_size_usage': 'guest_size_usage',
@@ -133,6 +136,7 @@ class Vm(object):
         'original_name': 'original_name',
         'os': 'os',
         'out_uninstall_usb': 'out_uninstall_usb',
+        'pci_nics': 'pci_nics',
         'protected': 'protected',
         'provisioned_size': 'provisioned_size',
         'size': 'size',
@@ -169,6 +173,7 @@ class Vm(object):
         self._entity_async_status = None
         self._firmware = None
         self._folder = None
+        self._gpu_devices = None
         self._guest_cpu_model = None
         self._guest_os_type = None
         self._guest_size_usage = None
@@ -200,6 +205,7 @@ class Vm(object):
         self._original_name = None
         self._os = None
         self._out_uninstall_usb = None
+        self._pci_nics = None
         self._protected = None
         self._provisioned_size = None
         self._size = None
@@ -237,6 +243,7 @@ class Vm(object):
         if "firmware" in kwargs:
             self.firmware = kwargs["firmware"]
         self.folder = kwargs.get("folder", None)
+        self.gpu_devices = kwargs.get("gpu_devices", None)
         self.guest_cpu_model = kwargs.get("guest_cpu_model", None)
         self.guest_os_type = kwargs.get("guest_os_type", None)
         self.guest_size_usage = kwargs.get("guest_size_usage", None)
@@ -279,6 +286,7 @@ class Vm(object):
         self.os = kwargs.get("os", None)
         if "out_uninstall_usb" in kwargs:
             self.out_uninstall_usb = kwargs["out_uninstall_usb"]
+        self.pci_nics = kwargs.get("pci_nics", None)
         if "protected" in kwargs:
             self.protected = kwargs["protected"]
         self.provisioned_size = kwargs.get("provisioned_size", None)
@@ -584,6 +592,27 @@ class Vm(object):
         """
 
         self._folder = folder
+
+    @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this Vm.  # noqa: E501
+
+
+        :return: The gpu_devices of this Vm.  # noqa: E501
+        :rtype: list[NestedGpuDevice]
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this Vm.
+
+
+        :param gpu_devices: The gpu_devices of this Vm.  # noqa: E501
+        :type gpu_devices: list[NestedGpuDevice]
+        """
+
+        self._gpu_devices = gpu_devices
 
     @property
     def guest_cpu_model(self):
@@ -1257,6 +1286,27 @@ class Vm(object):
             raise ValueError("Invalid value for `out_uninstall_usb`, must not be `None`")  # noqa: E501
 
         self._out_uninstall_usb = out_uninstall_usb
+
+    @property
+    def pci_nics(self):
+        """Gets the pci_nics of this Vm.  # noqa: E501
+
+
+        :return: The pci_nics of this Vm.  # noqa: E501
+        :rtype: list[NestedNic]
+        """
+        return self._pci_nics
+
+    @pci_nics.setter
+    def pci_nics(self, pci_nics):
+        """Sets the pci_nics of this Vm.
+
+
+        :param pci_nics: The pci_nics of this Vm.  # noqa: E501
+        :type pci_nics: list[NestedNic]
+        """
+
+        self._pci_nics = pci_nics
 
     @property
     def protected(self):

@@ -51,6 +51,7 @@ class Nic(object):
         'type': 'NetworkType',
         'up': 'bool',
         'used_vf_num': 'int',
+        'user_usage': 'NicUserUsage',
         'vds': 'NestedVds'
     }
 
@@ -81,6 +82,7 @@ class Nic(object):
         'type': 'type',
         'up': 'up',
         'used_vf_num': 'used_vf_num',
+        'user_usage': 'user_usage',
         'vds': 'vds'
     }
 
@@ -114,6 +116,7 @@ class Nic(object):
         self._type = None
         self._up = None
         self._used_vf_num = None
+        self._user_usage = None
         self._vds = None
         self.discriminator = None
 
@@ -152,6 +155,7 @@ class Nic(object):
         if "up" in kwargs:
             self.up = kwargs["up"]
         self.used_vf_num = kwargs.get("used_vf_num", None)
+        self.user_usage = kwargs.get("user_usage", None)
         self.vds = kwargs.get("vds", None)
 
     @property
@@ -717,6 +721,27 @@ class Nic(object):
         """
 
         self._used_vf_num = used_vf_num
+
+    @property
+    def user_usage(self):
+        """Gets the user_usage of this Nic.  # noqa: E501
+
+
+        :return: The user_usage of this Nic.  # noqa: E501
+        :rtype: NicUserUsage
+        """
+        return self._user_usage
+
+    @user_usage.setter
+    def user_usage(self, user_usage):
+        """Sets the user_usage of this Nic.
+
+
+        :param user_usage: The user_usage of this Nic.  # noqa: E501
+        :type user_usage: NicUserUsage
+        """
+
+        self._user_usage = user_usage
 
     @property
     def vds(self):

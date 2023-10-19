@@ -25,6 +25,7 @@ class VmRebuildParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'gpu_devices': 'list[VmGpuOperationParams]',
         'is_full_copy': 'bool',
         'rebuild_from_snapshot_id': 'str',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
@@ -37,6 +38,7 @@ class VmRebuildParams(object):
         'status': 'VmStatus',
         'firmware': 'VmFirmware',
         'ha': 'bool',
+        'vm_placement_group': 'VmPlacementGroupWhereInput',
         'vm_nics': 'list[VmNicParams]',
         'vm_disks': 'VmDiskParams',
         'memory_unit': 'ByteUnit',
@@ -52,6 +54,7 @@ class VmRebuildParams(object):
     }
 
     attribute_map = {
+        'gpu_devices': 'gpu_devices',
         'is_full_copy': 'is_full_copy',
         'rebuild_from_snapshot_id': 'rebuild_from_snapshot_id',
         'max_bandwidth_policy': 'max_bandwidth_policy',
@@ -64,6 +67,7 @@ class VmRebuildParams(object):
         'status': 'status',
         'firmware': 'firmware',
         'ha': 'ha',
+        'vm_placement_group': 'vm_placement_group',
         'vm_nics': 'vm_nics',
         'vm_disks': 'vm_disks',
         'memory_unit': 'memory_unit',
@@ -82,6 +86,7 @@ class VmRebuildParams(object):
         """VmRebuildParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._gpu_devices = None
         self._is_full_copy = None
         self._rebuild_from_snapshot_id = None
         self._max_bandwidth_policy = None
@@ -94,6 +99,7 @@ class VmRebuildParams(object):
         self._status = None
         self._firmware = None
         self._ha = None
+        self._vm_placement_group = None
         self._vm_nics = None
         self._vm_disks = None
         self._memory_unit = None
@@ -108,6 +114,8 @@ class VmRebuildParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "gpu_devices" in kwargs:
+            self.gpu_devices = kwargs["gpu_devices"]
         if "is_full_copy" in kwargs:
             self.is_full_copy = kwargs["is_full_copy"]
         if "rebuild_from_snapshot_id" in kwargs:
@@ -132,6 +140,8 @@ class VmRebuildParams(object):
             self.firmware = kwargs["firmware"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
+        if "vm_placement_group" in kwargs:
+            self.vm_placement_group = kwargs["vm_placement_group"]
         if "vm_nics" in kwargs:
             self.vm_nics = kwargs["vm_nics"]
         if "vm_disks" in kwargs:
@@ -156,6 +166,27 @@ class VmRebuildParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The gpu_devices of this VmRebuildParams.  # noqa: E501
+        :rtype: list[VmGpuOperationParams]
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this VmRebuildParams.
+
+
+        :param gpu_devices: The gpu_devices of this VmRebuildParams.  # noqa: E501
+        :type gpu_devices: list[VmGpuOperationParams]
+        """
+
+        self._gpu_devices = gpu_devices
 
     @property
     def is_full_copy(self):
@@ -410,6 +441,27 @@ class VmRebuildParams(object):
         """
 
         self._ha = ha
+
+    @property
+    def vm_placement_group(self):
+        """Gets the vm_placement_group of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The vm_placement_group of this VmRebuildParams.  # noqa: E501
+        :rtype: VmPlacementGroupWhereInput
+        """
+        return self._vm_placement_group
+
+    @vm_placement_group.setter
+    def vm_placement_group(self, vm_placement_group):
+        """Sets the vm_placement_group of this VmRebuildParams.
+
+
+        :param vm_placement_group: The vm_placement_group of this VmRebuildParams.  # noqa: E501
+        :type vm_placement_group: VmPlacementGroupWhereInput
+        """
+
+        self._vm_placement_group = vm_placement_group
 
     @property
     def vm_nics(self):

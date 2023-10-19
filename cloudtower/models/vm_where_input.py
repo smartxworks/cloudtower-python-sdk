@@ -103,6 +103,9 @@ class VmWhereInput(object):
         'firmware_not': 'VmFirmware',
         'firmware_not_in': 'list[VmFirmware]',
         'folder': 'VmFolderWhereInput',
+        'gpu_devices_every': 'GpuDeviceWhereInput',
+        'gpu_devices_none': 'GpuDeviceWhereInput',
+        'gpu_devices_some': 'GpuDeviceWhereInput',
         'guest_cpu_model': 'str',
         'guest_cpu_model_contains': 'str',
         'guest_cpu_model_ends_with': 'str',
@@ -346,6 +349,9 @@ class VmWhereInput(object):
         'os_not_in': 'list[str]',
         'os_not_starts_with': 'str',
         'os_starts_with': 'str',
+        'pci_nics_every': 'NicWhereInput',
+        'pci_nics_none': 'NicWhereInput',
+        'pci_nics_some': 'NicWhereInput',
         'protected': 'bool',
         'protected_not': 'bool',
         'provisioned_size': 'int',
@@ -509,6 +515,9 @@ class VmWhereInput(object):
         'firmware_not': 'firmware_not',
         'firmware_not_in': 'firmware_not_in',
         'folder': 'folder',
+        'gpu_devices_every': 'gpu_devices_every',
+        'gpu_devices_none': 'gpu_devices_none',
+        'gpu_devices_some': 'gpu_devices_some',
         'guest_cpu_model': 'guest_cpu_model',
         'guest_cpu_model_contains': 'guest_cpu_model_contains',
         'guest_cpu_model_ends_with': 'guest_cpu_model_ends_with',
@@ -752,6 +761,9 @@ class VmWhereInput(object):
         'os_not_in': 'os_not_in',
         'os_not_starts_with': 'os_not_starts_with',
         'os_starts_with': 'os_starts_with',
+        'pci_nics_every': 'pci_nics_every',
+        'pci_nics_none': 'pci_nics_none',
+        'pci_nics_some': 'pci_nics_some',
         'protected': 'protected',
         'protected_not': 'protected_not',
         'provisioned_size': 'provisioned_size',
@@ -918,6 +930,9 @@ class VmWhereInput(object):
         self._firmware_not = None
         self._firmware_not_in = None
         self._folder = None
+        self._gpu_devices_every = None
+        self._gpu_devices_none = None
+        self._gpu_devices_some = None
         self._guest_cpu_model = None
         self._guest_cpu_model_contains = None
         self._guest_cpu_model_ends_with = None
@@ -1161,6 +1176,9 @@ class VmWhereInput(object):
         self._os_not_in = None
         self._os_not_starts_with = None
         self._os_starts_with = None
+        self._pci_nics_every = None
+        self._pci_nics_none = None
+        self._pci_nics_some = None
         self._protected = None
         self._protected_not = None
         self._provisioned_size = None
@@ -1323,6 +1341,9 @@ class VmWhereInput(object):
         self.firmware_not = kwargs.get("firmware_not", None)
         self.firmware_not_in = kwargs.get("firmware_not_in", None)
         self.folder = kwargs.get("folder", None)
+        self.gpu_devices_every = kwargs.get("gpu_devices_every", None)
+        self.gpu_devices_none = kwargs.get("gpu_devices_none", None)
+        self.gpu_devices_some = kwargs.get("gpu_devices_some", None)
         self.guest_cpu_model = kwargs.get("guest_cpu_model", None)
         self.guest_cpu_model_contains = kwargs.get("guest_cpu_model_contains", None)
         self.guest_cpu_model_ends_with = kwargs.get("guest_cpu_model_ends_with", None)
@@ -1566,6 +1587,9 @@ class VmWhereInput(object):
         self.os_not_in = kwargs.get("os_not_in", None)
         self.os_not_starts_with = kwargs.get("os_not_starts_with", None)
         self.os_starts_with = kwargs.get("os_starts_with", None)
+        self.pci_nics_every = kwargs.get("pci_nics_every", None)
+        self.pci_nics_none = kwargs.get("pci_nics_none", None)
+        self.pci_nics_some = kwargs.get("pci_nics_some", None)
         self.protected = kwargs.get("protected", None)
         self.protected_not = kwargs.get("protected_not", None)
         self.provisioned_size = kwargs.get("provisioned_size", None)
@@ -3286,6 +3310,69 @@ class VmWhereInput(object):
         """
 
         self._folder = folder
+
+    @property
+    def gpu_devices_every(self):
+        """Gets the gpu_devices_every of this VmWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_every of this VmWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_every
+
+    @gpu_devices_every.setter
+    def gpu_devices_every(self, gpu_devices_every):
+        """Sets the gpu_devices_every of this VmWhereInput.
+
+
+        :param gpu_devices_every: The gpu_devices_every of this VmWhereInput.  # noqa: E501
+        :type gpu_devices_every: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_every = gpu_devices_every
+
+    @property
+    def gpu_devices_none(self):
+        """Gets the gpu_devices_none of this VmWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_none of this VmWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_none
+
+    @gpu_devices_none.setter
+    def gpu_devices_none(self, gpu_devices_none):
+        """Sets the gpu_devices_none of this VmWhereInput.
+
+
+        :param gpu_devices_none: The gpu_devices_none of this VmWhereInput.  # noqa: E501
+        :type gpu_devices_none: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_none = gpu_devices_none
+
+    @property
+    def gpu_devices_some(self):
+        """Gets the gpu_devices_some of this VmWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_some of this VmWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_some
+
+    @gpu_devices_some.setter
+    def gpu_devices_some(self, gpu_devices_some):
+        """Sets the gpu_devices_some of this VmWhereInput.
+
+
+        :param gpu_devices_some: The gpu_devices_some of this VmWhereInput.  # noqa: E501
+        :type gpu_devices_some: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_some = gpu_devices_some
 
     @property
     def guest_cpu_model(self):
@@ -8389,6 +8476,69 @@ class VmWhereInput(object):
         """
 
         self._os_starts_with = os_starts_with
+
+    @property
+    def pci_nics_every(self):
+        """Gets the pci_nics_every of this VmWhereInput.  # noqa: E501
+
+
+        :return: The pci_nics_every of this VmWhereInput.  # noqa: E501
+        :rtype: NicWhereInput
+        """
+        return self._pci_nics_every
+
+    @pci_nics_every.setter
+    def pci_nics_every(self, pci_nics_every):
+        """Sets the pci_nics_every of this VmWhereInput.
+
+
+        :param pci_nics_every: The pci_nics_every of this VmWhereInput.  # noqa: E501
+        :type pci_nics_every: NicWhereInput
+        """
+
+        self._pci_nics_every = pci_nics_every
+
+    @property
+    def pci_nics_none(self):
+        """Gets the pci_nics_none of this VmWhereInput.  # noqa: E501
+
+
+        :return: The pci_nics_none of this VmWhereInput.  # noqa: E501
+        :rtype: NicWhereInput
+        """
+        return self._pci_nics_none
+
+    @pci_nics_none.setter
+    def pci_nics_none(self, pci_nics_none):
+        """Sets the pci_nics_none of this VmWhereInput.
+
+
+        :param pci_nics_none: The pci_nics_none of this VmWhereInput.  # noqa: E501
+        :type pci_nics_none: NicWhereInput
+        """
+
+        self._pci_nics_none = pci_nics_none
+
+    @property
+    def pci_nics_some(self):
+        """Gets the pci_nics_some of this VmWhereInput.  # noqa: E501
+
+
+        :return: The pci_nics_some of this VmWhereInput.  # noqa: E501
+        :rtype: NicWhereInput
+        """
+        return self._pci_nics_some
+
+    @pci_nics_some.setter
+    def pci_nics_some(self, pci_nics_some):
+        """Sets the pci_nics_some of this VmWhereInput.
+
+
+        :param pci_nics_some: The pci_nics_some of this VmWhereInput.  # noqa: E501
+        :type pci_nics_some: NicWhereInput
+        """
+
+        self._pci_nics_some = pci_nics_some
 
     @property
     def protected(self):

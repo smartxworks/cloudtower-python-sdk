@@ -92,7 +92,7 @@ def wait_tasks(ids, api_client, interval=5, timeout=300, exit_on_error=False):
     return
 
 
-def login(api_client: ApiClient, username, password, source=UserSource.LOCAL):
+def login(api_client, username, password, source=UserSource.LOCAL):
     """login # noqa: E501
     the method will try to login with provided username and password
     :params api_client: (required) api client to set up login status
@@ -136,7 +136,7 @@ def login(api_client: ApiClient, username, password, source=UserSource.LOCAL):
     return
 
 
-def get_svt_image_version(path: str):
+def get_svt_image_version(path):
     p = ""
     with open(path, "rb") as file:
         file.seek(32*1024+190)

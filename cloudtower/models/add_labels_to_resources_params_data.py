@@ -25,11 +25,13 @@ class AddLabelsToResourcesParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'gpu_devices': 'GpuDeviceWhereInput',
         'content_library_vm_templates': 'ContentLibraryVmTemplateWhereInput',
         'content_library_images': 'ContentLibraryImageWhereInput',
         'isolation_policies': 'IsolationPolicyWhereInput',
         'security_policies': 'SecurityPolicyWhereInput',
         'vms': 'VmWhereInput',
+        'vm_volume_snapshots': 'VmVolumeSnapshotWhereInput',
         'vm_volumes': 'VmVolumeWhereInput',
         'vm_templates': 'VmTemplateWhereInput',
         'vm_snapshots': 'VmSnapshotWhereInput',
@@ -55,11 +57,13 @@ class AddLabelsToResourcesParamsData(object):
     }
 
     attribute_map = {
+        'gpu_devices': 'gpu_devices',
         'content_library_vm_templates': 'content_library_vm_templates',
         'content_library_images': 'content_library_images',
         'isolation_policies': 'isolation_policies',
         'security_policies': 'security_policies',
         'vms': 'vms',
+        'vm_volume_snapshots': 'vm_volume_snapshots',
         'vm_volumes': 'vm_volumes',
         'vm_templates': 'vm_templates',
         'vm_snapshots': 'vm_snapshots',
@@ -88,11 +92,13 @@ class AddLabelsToResourcesParamsData(object):
         """AddLabelsToResourcesParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._gpu_devices = None
         self._content_library_vm_templates = None
         self._content_library_images = None
         self._isolation_policies = None
         self._security_policies = None
         self._vms = None
+        self._vm_volume_snapshots = None
         self._vm_volumes = None
         self._vm_templates = None
         self._vm_snapshots = None
@@ -117,6 +123,8 @@ class AddLabelsToResourcesParamsData(object):
         self._clusters = None
         self.discriminator = None
 
+        if "gpu_devices" in kwargs:
+            self.gpu_devices = kwargs["gpu_devices"]
         if "content_library_vm_templates" in kwargs:
             self.content_library_vm_templates = kwargs["content_library_vm_templates"]
         if "content_library_images" in kwargs:
@@ -127,6 +135,8 @@ class AddLabelsToResourcesParamsData(object):
             self.security_policies = kwargs["security_policies"]
         if "vms" in kwargs:
             self.vms = kwargs["vms"]
+        if "vm_volume_snapshots" in kwargs:
+            self.vm_volume_snapshots = kwargs["vm_volume_snapshots"]
         if "vm_volumes" in kwargs:
             self.vm_volumes = kwargs["vm_volumes"]
         if "vm_templates" in kwargs:
@@ -171,6 +181,27 @@ class AddLabelsToResourcesParamsData(object):
             self.consistency_groups = kwargs["consistency_groups"]
         if "clusters" in kwargs:
             self.clusters = kwargs["clusters"]
+
+    @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this AddLabelsToResourcesParamsData.  # noqa: E501
+
+
+        :return: The gpu_devices of this AddLabelsToResourcesParamsData.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this AddLabelsToResourcesParamsData.
+
+
+        :param gpu_devices: The gpu_devices of this AddLabelsToResourcesParamsData.  # noqa: E501
+        :type gpu_devices: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices = gpu_devices
 
     @property
     def content_library_vm_templates(self):
@@ -276,6 +307,27 @@ class AddLabelsToResourcesParamsData(object):
         """
 
         self._vms = vms
+
+    @property
+    def vm_volume_snapshots(self):
+        """Gets the vm_volume_snapshots of this AddLabelsToResourcesParamsData.  # noqa: E501
+
+
+        :return: The vm_volume_snapshots of this AddLabelsToResourcesParamsData.  # noqa: E501
+        :rtype: VmVolumeSnapshotWhereInput
+        """
+        return self._vm_volume_snapshots
+
+    @vm_volume_snapshots.setter
+    def vm_volume_snapshots(self, vm_volume_snapshots):
+        """Sets the vm_volume_snapshots of this AddLabelsToResourcesParamsData.
+
+
+        :param vm_volume_snapshots: The vm_volume_snapshots of this AddLabelsToResourcesParamsData.  # noqa: E501
+        :type vm_volume_snapshots: VmVolumeSnapshotWhereInput
+        """
+
+        self._vm_volume_snapshots = vm_volume_snapshots
 
     @property
     def vm_volumes(self):

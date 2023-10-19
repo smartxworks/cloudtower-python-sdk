@@ -25,6 +25,7 @@ class ErrorBody(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'code': 'ErrorCode',
         'props': 'object',
         'stack': 'str',
         'message': 'str',
@@ -34,6 +35,7 @@ class ErrorBody(object):
     }
 
     attribute_map = {
+        'code': 'code',
         'props': 'props',
         'stack': 'stack',
         'message': 'message',
@@ -46,6 +48,7 @@ class ErrorBody(object):
         """ErrorBody - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._code = None
         self._props = None
         self._stack = None
         self._message = None
@@ -54,6 +57,8 @@ class ErrorBody(object):
         self._path = None
         self.discriminator = None
 
+        if "code" in kwargs:
+            self.code = kwargs["code"]
         self.props = kwargs.get("props", None)
         if "stack" in kwargs:
             self.stack = kwargs["stack"]
@@ -65,6 +70,27 @@ class ErrorBody(object):
             self.operation_name = kwargs["operation_name"]
         if "path" in kwargs:
             self.path = kwargs["path"]
+
+    @property
+    def code(self):
+        """Gets the code of this ErrorBody.  # noqa: E501
+
+
+        :return: The code of this ErrorBody.  # noqa: E501
+        :rtype: ErrorCode
+        """
+        return self._code
+
+    @code.setter
+    def code(self, code):
+        """Sets the code of this ErrorBody.
+
+
+        :param code: The code of this ErrorBody.  # noqa: E501
+        :type code: ErrorCode
+        """
+
+        self._code = code
 
     @property
     def props(self):

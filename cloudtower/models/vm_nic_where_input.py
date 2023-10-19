@@ -26,6 +26,24 @@ class VmNicWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmNicWhereInput]',
+        'egress_rate_limit_burst_in_bit': 'float',
+        'egress_rate_limit_burst_in_bit_gt': 'float',
+        'egress_rate_limit_burst_in_bit_gte': 'float',
+        'egress_rate_limit_burst_in_bit_in': 'list[float]',
+        'egress_rate_limit_burst_in_bit_lt': 'float',
+        'egress_rate_limit_burst_in_bit_lte': 'float',
+        'egress_rate_limit_burst_in_bit_not': 'float',
+        'egress_rate_limit_burst_in_bit_not_in': 'list[float]',
+        'egress_rate_limit_enabled': 'bool',
+        'egress_rate_limit_enabled_not': 'bool',
+        'egress_rate_limit_max_rate_in_bitps': 'float',
+        'egress_rate_limit_max_rate_in_bitps_gt': 'float',
+        'egress_rate_limit_max_rate_in_bitps_gte': 'float',
+        'egress_rate_limit_max_rate_in_bitps_in': 'list[float]',
+        'egress_rate_limit_max_rate_in_bitps_lt': 'float',
+        'egress_rate_limit_max_rate_in_bitps_lte': 'float',
+        'egress_rate_limit_max_rate_in_bitps_not': 'float',
+        'egress_rate_limit_max_rate_in_bitps_not_in': 'list[float]',
         'enabled': 'bool',
         'enabled_not': 'bool',
         'gateway': 'str',
@@ -56,6 +74,24 @@ class VmNicWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'ingress_rate_limit_burst_in_bit': 'float',
+        'ingress_rate_limit_burst_in_bit_gt': 'float',
+        'ingress_rate_limit_burst_in_bit_gte': 'float',
+        'ingress_rate_limit_burst_in_bit_in': 'list[float]',
+        'ingress_rate_limit_burst_in_bit_lt': 'float',
+        'ingress_rate_limit_burst_in_bit_lte': 'float',
+        'ingress_rate_limit_burst_in_bit_not': 'float',
+        'ingress_rate_limit_burst_in_bit_not_in': 'list[float]',
+        'ingress_rate_limit_enabled': 'bool',
+        'ingress_rate_limit_enabled_not': 'bool',
+        'ingress_rate_limit_max_rate_in_bitps': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_gt': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_gte': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_in': 'list[float]',
+        'ingress_rate_limit_max_rate_in_bitps_lt': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_lte': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_not': 'float',
+        'ingress_rate_limit_max_rate_in_bitps_not_in': 'list[float]',
         'interface_id': 'str',
         'interface_id_contains': 'str',
         'interface_id_ends_with': 'str',
@@ -149,6 +185,24 @@ class VmNicWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        'egress_rate_limit_burst_in_bit': 'egress_rate_limit_burst_in_bit',
+        'egress_rate_limit_burst_in_bit_gt': 'egress_rate_limit_burst_in_bit_gt',
+        'egress_rate_limit_burst_in_bit_gte': 'egress_rate_limit_burst_in_bit_gte',
+        'egress_rate_limit_burst_in_bit_in': 'egress_rate_limit_burst_in_bit_in',
+        'egress_rate_limit_burst_in_bit_lt': 'egress_rate_limit_burst_in_bit_lt',
+        'egress_rate_limit_burst_in_bit_lte': 'egress_rate_limit_burst_in_bit_lte',
+        'egress_rate_limit_burst_in_bit_not': 'egress_rate_limit_burst_in_bit_not',
+        'egress_rate_limit_burst_in_bit_not_in': 'egress_rate_limit_burst_in_bit_not_in',
+        'egress_rate_limit_enabled': 'egress_rate_limit_enabled',
+        'egress_rate_limit_enabled_not': 'egress_rate_limit_enabled_not',
+        'egress_rate_limit_max_rate_in_bitps': 'egress_rate_limit_max_rate_in_bitps',
+        'egress_rate_limit_max_rate_in_bitps_gt': 'egress_rate_limit_max_rate_in_bitps_gt',
+        'egress_rate_limit_max_rate_in_bitps_gte': 'egress_rate_limit_max_rate_in_bitps_gte',
+        'egress_rate_limit_max_rate_in_bitps_in': 'egress_rate_limit_max_rate_in_bitps_in',
+        'egress_rate_limit_max_rate_in_bitps_lt': 'egress_rate_limit_max_rate_in_bitps_lt',
+        'egress_rate_limit_max_rate_in_bitps_lte': 'egress_rate_limit_max_rate_in_bitps_lte',
+        'egress_rate_limit_max_rate_in_bitps_not': 'egress_rate_limit_max_rate_in_bitps_not',
+        'egress_rate_limit_max_rate_in_bitps_not_in': 'egress_rate_limit_max_rate_in_bitps_not_in',
         'enabled': 'enabled',
         'enabled_not': 'enabled_not',
         'gateway': 'gateway',
@@ -179,6 +233,24 @@ class VmNicWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'ingress_rate_limit_burst_in_bit': 'ingress_rate_limit_burst_in_bit',
+        'ingress_rate_limit_burst_in_bit_gt': 'ingress_rate_limit_burst_in_bit_gt',
+        'ingress_rate_limit_burst_in_bit_gte': 'ingress_rate_limit_burst_in_bit_gte',
+        'ingress_rate_limit_burst_in_bit_in': 'ingress_rate_limit_burst_in_bit_in',
+        'ingress_rate_limit_burst_in_bit_lt': 'ingress_rate_limit_burst_in_bit_lt',
+        'ingress_rate_limit_burst_in_bit_lte': 'ingress_rate_limit_burst_in_bit_lte',
+        'ingress_rate_limit_burst_in_bit_not': 'ingress_rate_limit_burst_in_bit_not',
+        'ingress_rate_limit_burst_in_bit_not_in': 'ingress_rate_limit_burst_in_bit_not_in',
+        'ingress_rate_limit_enabled': 'ingress_rate_limit_enabled',
+        'ingress_rate_limit_enabled_not': 'ingress_rate_limit_enabled_not',
+        'ingress_rate_limit_max_rate_in_bitps': 'ingress_rate_limit_max_rate_in_bitps',
+        'ingress_rate_limit_max_rate_in_bitps_gt': 'ingress_rate_limit_max_rate_in_bitps_gt',
+        'ingress_rate_limit_max_rate_in_bitps_gte': 'ingress_rate_limit_max_rate_in_bitps_gte',
+        'ingress_rate_limit_max_rate_in_bitps_in': 'ingress_rate_limit_max_rate_in_bitps_in',
+        'ingress_rate_limit_max_rate_in_bitps_lt': 'ingress_rate_limit_max_rate_in_bitps_lt',
+        'ingress_rate_limit_max_rate_in_bitps_lte': 'ingress_rate_limit_max_rate_in_bitps_lte',
+        'ingress_rate_limit_max_rate_in_bitps_not': 'ingress_rate_limit_max_rate_in_bitps_not',
+        'ingress_rate_limit_max_rate_in_bitps_not_in': 'ingress_rate_limit_max_rate_in_bitps_not_in',
         'interface_id': 'interface_id',
         'interface_id_contains': 'interface_id_contains',
         'interface_id_ends_with': 'interface_id_ends_with',
@@ -275,6 +347,24 @@ class VmNicWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self._egress_rate_limit_burst_in_bit = None
+        self._egress_rate_limit_burst_in_bit_gt = None
+        self._egress_rate_limit_burst_in_bit_gte = None
+        self._egress_rate_limit_burst_in_bit_in = None
+        self._egress_rate_limit_burst_in_bit_lt = None
+        self._egress_rate_limit_burst_in_bit_lte = None
+        self._egress_rate_limit_burst_in_bit_not = None
+        self._egress_rate_limit_burst_in_bit_not_in = None
+        self._egress_rate_limit_enabled = None
+        self._egress_rate_limit_enabled_not = None
+        self._egress_rate_limit_max_rate_in_bitps = None
+        self._egress_rate_limit_max_rate_in_bitps_gt = None
+        self._egress_rate_limit_max_rate_in_bitps_gte = None
+        self._egress_rate_limit_max_rate_in_bitps_in = None
+        self._egress_rate_limit_max_rate_in_bitps_lt = None
+        self._egress_rate_limit_max_rate_in_bitps_lte = None
+        self._egress_rate_limit_max_rate_in_bitps_not = None
+        self._egress_rate_limit_max_rate_in_bitps_not_in = None
         self._enabled = None
         self._enabled_not = None
         self._gateway = None
@@ -305,6 +395,24 @@ class VmNicWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._ingress_rate_limit_burst_in_bit = None
+        self._ingress_rate_limit_burst_in_bit_gt = None
+        self._ingress_rate_limit_burst_in_bit_gte = None
+        self._ingress_rate_limit_burst_in_bit_in = None
+        self._ingress_rate_limit_burst_in_bit_lt = None
+        self._ingress_rate_limit_burst_in_bit_lte = None
+        self._ingress_rate_limit_burst_in_bit_not = None
+        self._ingress_rate_limit_burst_in_bit_not_in = None
+        self._ingress_rate_limit_enabled = None
+        self._ingress_rate_limit_enabled_not = None
+        self._ingress_rate_limit_max_rate_in_bitps = None
+        self._ingress_rate_limit_max_rate_in_bitps_gt = None
+        self._ingress_rate_limit_max_rate_in_bitps_gte = None
+        self._ingress_rate_limit_max_rate_in_bitps_in = None
+        self._ingress_rate_limit_max_rate_in_bitps_lt = None
+        self._ingress_rate_limit_max_rate_in_bitps_lte = None
+        self._ingress_rate_limit_max_rate_in_bitps_not = None
+        self._ingress_rate_limit_max_rate_in_bitps_not_in = None
         self._interface_id = None
         self._interface_id_contains = None
         self._interface_id_ends_with = None
@@ -397,6 +505,24 @@ class VmNicWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
+        self.egress_rate_limit_burst_in_bit_gt = kwargs.get("egress_rate_limit_burst_in_bit_gt", None)
+        self.egress_rate_limit_burst_in_bit_gte = kwargs.get("egress_rate_limit_burst_in_bit_gte", None)
+        self.egress_rate_limit_burst_in_bit_in = kwargs.get("egress_rate_limit_burst_in_bit_in", None)
+        self.egress_rate_limit_burst_in_bit_lt = kwargs.get("egress_rate_limit_burst_in_bit_lt", None)
+        self.egress_rate_limit_burst_in_bit_lte = kwargs.get("egress_rate_limit_burst_in_bit_lte", None)
+        self.egress_rate_limit_burst_in_bit_not = kwargs.get("egress_rate_limit_burst_in_bit_not", None)
+        self.egress_rate_limit_burst_in_bit_not_in = kwargs.get("egress_rate_limit_burst_in_bit_not_in", None)
+        self.egress_rate_limit_enabled = kwargs.get("egress_rate_limit_enabled", None)
+        self.egress_rate_limit_enabled_not = kwargs.get("egress_rate_limit_enabled_not", None)
+        self.egress_rate_limit_max_rate_in_bitps = kwargs.get("egress_rate_limit_max_rate_in_bitps", None)
+        self.egress_rate_limit_max_rate_in_bitps_gt = kwargs.get("egress_rate_limit_max_rate_in_bitps_gt", None)
+        self.egress_rate_limit_max_rate_in_bitps_gte = kwargs.get("egress_rate_limit_max_rate_in_bitps_gte", None)
+        self.egress_rate_limit_max_rate_in_bitps_in = kwargs.get("egress_rate_limit_max_rate_in_bitps_in", None)
+        self.egress_rate_limit_max_rate_in_bitps_lt = kwargs.get("egress_rate_limit_max_rate_in_bitps_lt", None)
+        self.egress_rate_limit_max_rate_in_bitps_lte = kwargs.get("egress_rate_limit_max_rate_in_bitps_lte", None)
+        self.egress_rate_limit_max_rate_in_bitps_not = kwargs.get("egress_rate_limit_max_rate_in_bitps_not", None)
+        self.egress_rate_limit_max_rate_in_bitps_not_in = kwargs.get("egress_rate_limit_max_rate_in_bitps_not_in", None)
         self.enabled = kwargs.get("enabled", None)
         self.enabled_not = kwargs.get("enabled_not", None)
         self.gateway = kwargs.get("gateway", None)
@@ -427,6 +553,24 @@ class VmNicWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.ingress_rate_limit_burst_in_bit = kwargs.get("ingress_rate_limit_burst_in_bit", None)
+        self.ingress_rate_limit_burst_in_bit_gt = kwargs.get("ingress_rate_limit_burst_in_bit_gt", None)
+        self.ingress_rate_limit_burst_in_bit_gte = kwargs.get("ingress_rate_limit_burst_in_bit_gte", None)
+        self.ingress_rate_limit_burst_in_bit_in = kwargs.get("ingress_rate_limit_burst_in_bit_in", None)
+        self.ingress_rate_limit_burst_in_bit_lt = kwargs.get("ingress_rate_limit_burst_in_bit_lt", None)
+        self.ingress_rate_limit_burst_in_bit_lte = kwargs.get("ingress_rate_limit_burst_in_bit_lte", None)
+        self.ingress_rate_limit_burst_in_bit_not = kwargs.get("ingress_rate_limit_burst_in_bit_not", None)
+        self.ingress_rate_limit_burst_in_bit_not_in = kwargs.get("ingress_rate_limit_burst_in_bit_not_in", None)
+        self.ingress_rate_limit_enabled = kwargs.get("ingress_rate_limit_enabled", None)
+        self.ingress_rate_limit_enabled_not = kwargs.get("ingress_rate_limit_enabled_not", None)
+        self.ingress_rate_limit_max_rate_in_bitps = kwargs.get("ingress_rate_limit_max_rate_in_bitps", None)
+        self.ingress_rate_limit_max_rate_in_bitps_gt = kwargs.get("ingress_rate_limit_max_rate_in_bitps_gt", None)
+        self.ingress_rate_limit_max_rate_in_bitps_gte = kwargs.get("ingress_rate_limit_max_rate_in_bitps_gte", None)
+        self.ingress_rate_limit_max_rate_in_bitps_in = kwargs.get("ingress_rate_limit_max_rate_in_bitps_in", None)
+        self.ingress_rate_limit_max_rate_in_bitps_lt = kwargs.get("ingress_rate_limit_max_rate_in_bitps_lt", None)
+        self.ingress_rate_limit_max_rate_in_bitps_lte = kwargs.get("ingress_rate_limit_max_rate_in_bitps_lte", None)
+        self.ingress_rate_limit_max_rate_in_bitps_not = kwargs.get("ingress_rate_limit_max_rate_in_bitps_not", None)
+        self.ingress_rate_limit_max_rate_in_bitps_not_in = kwargs.get("ingress_rate_limit_max_rate_in_bitps_not_in", None)
         self.interface_id = kwargs.get("interface_id", None)
         self.interface_id_contains = kwargs.get("interface_id_contains", None)
         self.interface_id_ends_with = kwargs.get("interface_id_ends_with", None)
@@ -537,6 +681,384 @@ class VmNicWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def egress_rate_limit_burst_in_bit(self):
+        """Gets the egress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit
+
+    @egress_rate_limit_burst_in_bit.setter
+    def egress_rate_limit_burst_in_bit(self, egress_rate_limit_burst_in_bit):
+        """Sets the egress_rate_limit_burst_in_bit of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit: The egress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit: float
+        """
+
+        self._egress_rate_limit_burst_in_bit = egress_rate_limit_burst_in_bit
+
+    @property
+    def egress_rate_limit_burst_in_bit_gt(self):
+        """Gets the egress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit_gt
+
+    @egress_rate_limit_burst_in_bit_gt.setter
+    def egress_rate_limit_burst_in_bit_gt(self, egress_rate_limit_burst_in_bit_gt):
+        """Sets the egress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_gt: The egress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_gt: float
+        """
+
+        self._egress_rate_limit_burst_in_bit_gt = egress_rate_limit_burst_in_bit_gt
+
+    @property
+    def egress_rate_limit_burst_in_bit_gte(self):
+        """Gets the egress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit_gte
+
+    @egress_rate_limit_burst_in_bit_gte.setter
+    def egress_rate_limit_burst_in_bit_gte(self, egress_rate_limit_burst_in_bit_gte):
+        """Sets the egress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_gte: The egress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_gte: float
+        """
+
+        self._egress_rate_limit_burst_in_bit_gte = egress_rate_limit_burst_in_bit_gte
+
+    @property
+    def egress_rate_limit_burst_in_bit_in(self):
+        """Gets the egress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._egress_rate_limit_burst_in_bit_in
+
+    @egress_rate_limit_burst_in_bit_in.setter
+    def egress_rate_limit_burst_in_bit_in(self, egress_rate_limit_burst_in_bit_in):
+        """Sets the egress_rate_limit_burst_in_bit_in of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_in: The egress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_in: list[float]
+        """
+
+        self._egress_rate_limit_burst_in_bit_in = egress_rate_limit_burst_in_bit_in
+
+    @property
+    def egress_rate_limit_burst_in_bit_lt(self):
+        """Gets the egress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit_lt
+
+    @egress_rate_limit_burst_in_bit_lt.setter
+    def egress_rate_limit_burst_in_bit_lt(self, egress_rate_limit_burst_in_bit_lt):
+        """Sets the egress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_lt: The egress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_lt: float
+        """
+
+        self._egress_rate_limit_burst_in_bit_lt = egress_rate_limit_burst_in_bit_lt
+
+    @property
+    def egress_rate_limit_burst_in_bit_lte(self):
+        """Gets the egress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit_lte
+
+    @egress_rate_limit_burst_in_bit_lte.setter
+    def egress_rate_limit_burst_in_bit_lte(self, egress_rate_limit_burst_in_bit_lte):
+        """Sets the egress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_lte: The egress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_lte: float
+        """
+
+        self._egress_rate_limit_burst_in_bit_lte = egress_rate_limit_burst_in_bit_lte
+
+    @property
+    def egress_rate_limit_burst_in_bit_not(self):
+        """Gets the egress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_burst_in_bit_not
+
+    @egress_rate_limit_burst_in_bit_not.setter
+    def egress_rate_limit_burst_in_bit_not(self, egress_rate_limit_burst_in_bit_not):
+        """Sets the egress_rate_limit_burst_in_bit_not of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_not: The egress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_not: float
+        """
+
+        self._egress_rate_limit_burst_in_bit_not = egress_rate_limit_burst_in_bit_not
+
+    @property
+    def egress_rate_limit_burst_in_bit_not_in(self):
+        """Gets the egress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._egress_rate_limit_burst_in_bit_not_in
+
+    @egress_rate_limit_burst_in_bit_not_in.setter
+    def egress_rate_limit_burst_in_bit_not_in(self, egress_rate_limit_burst_in_bit_not_in):
+        """Sets the egress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_burst_in_bit_not_in: The egress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_burst_in_bit_not_in: list[float]
+        """
+
+        self._egress_rate_limit_burst_in_bit_not_in = egress_rate_limit_burst_in_bit_not_in
+
+    @property
+    def egress_rate_limit_enabled(self):
+        """Gets the egress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._egress_rate_limit_enabled
+
+    @egress_rate_limit_enabled.setter
+    def egress_rate_limit_enabled(self, egress_rate_limit_enabled):
+        """Sets the egress_rate_limit_enabled of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_enabled: The egress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_enabled: bool
+        """
+
+        self._egress_rate_limit_enabled = egress_rate_limit_enabled
+
+    @property
+    def egress_rate_limit_enabled_not(self):
+        """Gets the egress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._egress_rate_limit_enabled_not
+
+    @egress_rate_limit_enabled_not.setter
+    def egress_rate_limit_enabled_not(self, egress_rate_limit_enabled_not):
+        """Sets the egress_rate_limit_enabled_not of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_enabled_not: The egress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_enabled_not: bool
+        """
+
+        self._egress_rate_limit_enabled_not = egress_rate_limit_enabled_not
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps
+
+    @egress_rate_limit_max_rate_in_bitps.setter
+    def egress_rate_limit_max_rate_in_bitps(self, egress_rate_limit_max_rate_in_bitps):
+        """Sets the egress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps: The egress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps = egress_rate_limit_max_rate_in_bitps
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_gt(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_gt
+
+    @egress_rate_limit_max_rate_in_bitps_gt.setter
+    def egress_rate_limit_max_rate_in_bitps_gt(self, egress_rate_limit_max_rate_in_bitps_gt):
+        """Sets the egress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_gt: The egress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_gt: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_gt = egress_rate_limit_max_rate_in_bitps_gt
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_gte(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_gte
+
+    @egress_rate_limit_max_rate_in_bitps_gte.setter
+    def egress_rate_limit_max_rate_in_bitps_gte(self, egress_rate_limit_max_rate_in_bitps_gte):
+        """Sets the egress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_gte: The egress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_gte: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_gte = egress_rate_limit_max_rate_in_bitps_gte
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_in(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_in
+
+    @egress_rate_limit_max_rate_in_bitps_in.setter
+    def egress_rate_limit_max_rate_in_bitps_in(self, egress_rate_limit_max_rate_in_bitps_in):
+        """Sets the egress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_in: The egress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_in: list[float]
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_in = egress_rate_limit_max_rate_in_bitps_in
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_lt(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_lt
+
+    @egress_rate_limit_max_rate_in_bitps_lt.setter
+    def egress_rate_limit_max_rate_in_bitps_lt(self, egress_rate_limit_max_rate_in_bitps_lt):
+        """Sets the egress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_lt: The egress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_lt: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_lt = egress_rate_limit_max_rate_in_bitps_lt
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_lte(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_lte
+
+    @egress_rate_limit_max_rate_in_bitps_lte.setter
+    def egress_rate_limit_max_rate_in_bitps_lte(self, egress_rate_limit_max_rate_in_bitps_lte):
+        """Sets the egress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_lte: The egress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_lte: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_lte = egress_rate_limit_max_rate_in_bitps_lte
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_not(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_not
+
+    @egress_rate_limit_max_rate_in_bitps_not.setter
+    def egress_rate_limit_max_rate_in_bitps_not(self, egress_rate_limit_max_rate_in_bitps_not):
+        """Sets the egress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_not: The egress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_not: float
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_not = egress_rate_limit_max_rate_in_bitps_not
+
+    @property
+    def egress_rate_limit_max_rate_in_bitps_not_in(self):
+        """Gets the egress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The egress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._egress_rate_limit_max_rate_in_bitps_not_in
+
+    @egress_rate_limit_max_rate_in_bitps_not_in.setter
+    def egress_rate_limit_max_rate_in_bitps_not_in(self, egress_rate_limit_max_rate_in_bitps_not_in):
+        """Sets the egress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.
+
+
+        :param egress_rate_limit_max_rate_in_bitps_not_in: The egress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+        :type egress_rate_limit_max_rate_in_bitps_not_in: list[float]
+        """
+
+        self._egress_rate_limit_max_rate_in_bitps_not_in = egress_rate_limit_max_rate_in_bitps_not_in
 
     @property
     def enabled(self):
@@ -1167,6 +1689,384 @@ class VmNicWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def ingress_rate_limit_burst_in_bit(self):
+        """Gets the ingress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit
+
+    @ingress_rate_limit_burst_in_bit.setter
+    def ingress_rate_limit_burst_in_bit(self, ingress_rate_limit_burst_in_bit):
+        """Sets the ingress_rate_limit_burst_in_bit of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit: The ingress_rate_limit_burst_in_bit of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit = ingress_rate_limit_burst_in_bit
+
+    @property
+    def ingress_rate_limit_burst_in_bit_gt(self):
+        """Gets the ingress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit_gt
+
+    @ingress_rate_limit_burst_in_bit_gt.setter
+    def ingress_rate_limit_burst_in_bit_gt(self, ingress_rate_limit_burst_in_bit_gt):
+        """Sets the ingress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_gt: The ingress_rate_limit_burst_in_bit_gt of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_gt: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit_gt = ingress_rate_limit_burst_in_bit_gt
+
+    @property
+    def ingress_rate_limit_burst_in_bit_gte(self):
+        """Gets the ingress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit_gte
+
+    @ingress_rate_limit_burst_in_bit_gte.setter
+    def ingress_rate_limit_burst_in_bit_gte(self, ingress_rate_limit_burst_in_bit_gte):
+        """Sets the ingress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_gte: The ingress_rate_limit_burst_in_bit_gte of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_gte: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit_gte = ingress_rate_limit_burst_in_bit_gte
+
+    @property
+    def ingress_rate_limit_burst_in_bit_in(self):
+        """Gets the ingress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._ingress_rate_limit_burst_in_bit_in
+
+    @ingress_rate_limit_burst_in_bit_in.setter
+    def ingress_rate_limit_burst_in_bit_in(self, ingress_rate_limit_burst_in_bit_in):
+        """Sets the ingress_rate_limit_burst_in_bit_in of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_in: The ingress_rate_limit_burst_in_bit_in of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_in: list[float]
+        """
+
+        self._ingress_rate_limit_burst_in_bit_in = ingress_rate_limit_burst_in_bit_in
+
+    @property
+    def ingress_rate_limit_burst_in_bit_lt(self):
+        """Gets the ingress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit_lt
+
+    @ingress_rate_limit_burst_in_bit_lt.setter
+    def ingress_rate_limit_burst_in_bit_lt(self, ingress_rate_limit_burst_in_bit_lt):
+        """Sets the ingress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_lt: The ingress_rate_limit_burst_in_bit_lt of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_lt: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit_lt = ingress_rate_limit_burst_in_bit_lt
+
+    @property
+    def ingress_rate_limit_burst_in_bit_lte(self):
+        """Gets the ingress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit_lte
+
+    @ingress_rate_limit_burst_in_bit_lte.setter
+    def ingress_rate_limit_burst_in_bit_lte(self, ingress_rate_limit_burst_in_bit_lte):
+        """Sets the ingress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_lte: The ingress_rate_limit_burst_in_bit_lte of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_lte: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit_lte = ingress_rate_limit_burst_in_bit_lte
+
+    @property
+    def ingress_rate_limit_burst_in_bit_not(self):
+        """Gets the ingress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_burst_in_bit_not
+
+    @ingress_rate_limit_burst_in_bit_not.setter
+    def ingress_rate_limit_burst_in_bit_not(self, ingress_rate_limit_burst_in_bit_not):
+        """Sets the ingress_rate_limit_burst_in_bit_not of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_not: The ingress_rate_limit_burst_in_bit_not of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_not: float
+        """
+
+        self._ingress_rate_limit_burst_in_bit_not = ingress_rate_limit_burst_in_bit_not
+
+    @property
+    def ingress_rate_limit_burst_in_bit_not_in(self):
+        """Gets the ingress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._ingress_rate_limit_burst_in_bit_not_in
+
+    @ingress_rate_limit_burst_in_bit_not_in.setter
+    def ingress_rate_limit_burst_in_bit_not_in(self, ingress_rate_limit_burst_in_bit_not_in):
+        """Sets the ingress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_burst_in_bit_not_in: The ingress_rate_limit_burst_in_bit_not_in of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_burst_in_bit_not_in: list[float]
+        """
+
+        self._ingress_rate_limit_burst_in_bit_not_in = ingress_rate_limit_burst_in_bit_not_in
+
+    @property
+    def ingress_rate_limit_enabled(self):
+        """Gets the ingress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ingress_rate_limit_enabled
+
+    @ingress_rate_limit_enabled.setter
+    def ingress_rate_limit_enabled(self, ingress_rate_limit_enabled):
+        """Sets the ingress_rate_limit_enabled of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_enabled: The ingress_rate_limit_enabled of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_enabled: bool
+        """
+
+        self._ingress_rate_limit_enabled = ingress_rate_limit_enabled
+
+    @property
+    def ingress_rate_limit_enabled_not(self):
+        """Gets the ingress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ingress_rate_limit_enabled_not
+
+    @ingress_rate_limit_enabled_not.setter
+    def ingress_rate_limit_enabled_not(self, ingress_rate_limit_enabled_not):
+        """Sets the ingress_rate_limit_enabled_not of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_enabled_not: The ingress_rate_limit_enabled_not of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_enabled_not: bool
+        """
+
+        self._ingress_rate_limit_enabled_not = ingress_rate_limit_enabled_not
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps
+
+    @ingress_rate_limit_max_rate_in_bitps.setter
+    def ingress_rate_limit_max_rate_in_bitps(self, ingress_rate_limit_max_rate_in_bitps):
+        """Sets the ingress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps: The ingress_rate_limit_max_rate_in_bitps of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps = ingress_rate_limit_max_rate_in_bitps
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_gt(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_gt
+
+    @ingress_rate_limit_max_rate_in_bitps_gt.setter
+    def ingress_rate_limit_max_rate_in_bitps_gt(self, ingress_rate_limit_max_rate_in_bitps_gt):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_gt: The ingress_rate_limit_max_rate_in_bitps_gt of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_gt: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_gt = ingress_rate_limit_max_rate_in_bitps_gt
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_gte(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_gte
+
+    @ingress_rate_limit_max_rate_in_bitps_gte.setter
+    def ingress_rate_limit_max_rate_in_bitps_gte(self, ingress_rate_limit_max_rate_in_bitps_gte):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_gte: The ingress_rate_limit_max_rate_in_bitps_gte of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_gte: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_gte = ingress_rate_limit_max_rate_in_bitps_gte
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_in(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_in
+
+    @ingress_rate_limit_max_rate_in_bitps_in.setter
+    def ingress_rate_limit_max_rate_in_bitps_in(self, ingress_rate_limit_max_rate_in_bitps_in):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_in: The ingress_rate_limit_max_rate_in_bitps_in of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_in: list[float]
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_in = ingress_rate_limit_max_rate_in_bitps_in
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_lt(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_lt
+
+    @ingress_rate_limit_max_rate_in_bitps_lt.setter
+    def ingress_rate_limit_max_rate_in_bitps_lt(self, ingress_rate_limit_max_rate_in_bitps_lt):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_lt: The ingress_rate_limit_max_rate_in_bitps_lt of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_lt: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_lt = ingress_rate_limit_max_rate_in_bitps_lt
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_lte(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_lte
+
+    @ingress_rate_limit_max_rate_in_bitps_lte.setter
+    def ingress_rate_limit_max_rate_in_bitps_lte(self, ingress_rate_limit_max_rate_in_bitps_lte):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_lte: The ingress_rate_limit_max_rate_in_bitps_lte of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_lte: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_lte = ingress_rate_limit_max_rate_in_bitps_lte
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_not(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_not
+
+    @ingress_rate_limit_max_rate_in_bitps_not.setter
+    def ingress_rate_limit_max_rate_in_bitps_not(self, ingress_rate_limit_max_rate_in_bitps_not):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_not: The ingress_rate_limit_max_rate_in_bitps_not of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_not: float
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_not = ingress_rate_limit_max_rate_in_bitps_not
+
+    @property
+    def ingress_rate_limit_max_rate_in_bitps_not_in(self):
+        """Gets the ingress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The ingress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._ingress_rate_limit_max_rate_in_bitps_not_in
+
+    @ingress_rate_limit_max_rate_in_bitps_not_in.setter
+    def ingress_rate_limit_max_rate_in_bitps_not_in(self, ingress_rate_limit_max_rate_in_bitps_not_in):
+        """Sets the ingress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.
+
+
+        :param ingress_rate_limit_max_rate_in_bitps_not_in: The ingress_rate_limit_max_rate_in_bitps_not_in of this VmNicWhereInput.  # noqa: E501
+        :type ingress_rate_limit_max_rate_in_bitps_not_in: list[float]
+        """
+
+        self._ingress_rate_limit_max_rate_in_bitps_not_in = ingress_rate_limit_max_rate_in_bitps_not_in
 
     @property
     def interface_id(self):

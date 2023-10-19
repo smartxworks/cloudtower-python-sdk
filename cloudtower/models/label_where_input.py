@@ -122,6 +122,17 @@ class LabelWhereInput(object):
         'elf_images_every': 'ElfImageWhereInput',
         'elf_images_none': 'ElfImageWhereInput',
         'elf_images_some': 'ElfImageWhereInput',
+        'gpu_device_num': 'int',
+        'gpu_device_num_gt': 'int',
+        'gpu_device_num_gte': 'int',
+        'gpu_device_num_in': 'list[int]',
+        'gpu_device_num_lt': 'int',
+        'gpu_device_num_lte': 'int',
+        'gpu_device_num_not': 'int',
+        'gpu_device_num_not_in': 'list[int]',
+        'gpu_devices_every': 'GpuDeviceWhereInput',
+        'gpu_devices_none': 'GpuDeviceWhereInput',
+        'gpu_devices_some': 'GpuDeviceWhereInput',
         'host_num': 'int',
         'host_num_gt': 'int',
         'host_num_gte': 'int',
@@ -385,6 +396,17 @@ class LabelWhereInput(object):
         'vm_volume_num_lte': 'int',
         'vm_volume_num_not': 'int',
         'vm_volume_num_not_in': 'list[int]',
+        'vm_volume_snapshot_num': 'int',
+        'vm_volume_snapshot_num_gt': 'int',
+        'vm_volume_snapshot_num_gte': 'int',
+        'vm_volume_snapshot_num_in': 'list[int]',
+        'vm_volume_snapshot_num_lt': 'int',
+        'vm_volume_snapshot_num_lte': 'int',
+        'vm_volume_snapshot_num_not': 'int',
+        'vm_volume_snapshot_num_not_in': 'list[int]',
+        'vm_volume_snapshots_every': 'VmVolumeSnapshotWhereInput',
+        'vm_volume_snapshots_none': 'VmVolumeSnapshotWhereInput',
+        'vm_volume_snapshots_some': 'VmVolumeSnapshotWhereInput',
         'vm_volumes_every': 'VmVolumeWhereInput',
         'vm_volumes_none': 'VmVolumeWhereInput',
         'vm_volumes_some': 'VmVolumeWhereInput',
@@ -491,6 +513,17 @@ class LabelWhereInput(object):
         'elf_images_every': 'elf_images_every',
         'elf_images_none': 'elf_images_none',
         'elf_images_some': 'elf_images_some',
+        'gpu_device_num': 'gpu_device_num',
+        'gpu_device_num_gt': 'gpu_device_num_gt',
+        'gpu_device_num_gte': 'gpu_device_num_gte',
+        'gpu_device_num_in': 'gpu_device_num_in',
+        'gpu_device_num_lt': 'gpu_device_num_lt',
+        'gpu_device_num_lte': 'gpu_device_num_lte',
+        'gpu_device_num_not': 'gpu_device_num_not',
+        'gpu_device_num_not_in': 'gpu_device_num_not_in',
+        'gpu_devices_every': 'gpu_devices_every',
+        'gpu_devices_none': 'gpu_devices_none',
+        'gpu_devices_some': 'gpu_devices_some',
         'host_num': 'host_num',
         'host_num_gt': 'host_num_gt',
         'host_num_gte': 'host_num_gte',
@@ -754,6 +787,17 @@ class LabelWhereInput(object):
         'vm_volume_num_lte': 'vm_volume_num_lte',
         'vm_volume_num_not': 'vm_volume_num_not',
         'vm_volume_num_not_in': 'vm_volume_num_not_in',
+        'vm_volume_snapshot_num': 'vm_volume_snapshot_num',
+        'vm_volume_snapshot_num_gt': 'vm_volume_snapshot_num_gt',
+        'vm_volume_snapshot_num_gte': 'vm_volume_snapshot_num_gte',
+        'vm_volume_snapshot_num_in': 'vm_volume_snapshot_num_in',
+        'vm_volume_snapshot_num_lt': 'vm_volume_snapshot_num_lt',
+        'vm_volume_snapshot_num_lte': 'vm_volume_snapshot_num_lte',
+        'vm_volume_snapshot_num_not': 'vm_volume_snapshot_num_not',
+        'vm_volume_snapshot_num_not_in': 'vm_volume_snapshot_num_not_in',
+        'vm_volume_snapshots_every': 'vm_volume_snapshots_every',
+        'vm_volume_snapshots_none': 'vm_volume_snapshots_none',
+        'vm_volume_snapshots_some': 'vm_volume_snapshots_some',
         'vm_volumes_every': 'vm_volumes_every',
         'vm_volumes_none': 'vm_volumes_none',
         'vm_volumes_some': 'vm_volumes_some',
@@ -863,6 +907,17 @@ class LabelWhereInput(object):
         self._elf_images_every = None
         self._elf_images_none = None
         self._elf_images_some = None
+        self._gpu_device_num = None
+        self._gpu_device_num_gt = None
+        self._gpu_device_num_gte = None
+        self._gpu_device_num_in = None
+        self._gpu_device_num_lt = None
+        self._gpu_device_num_lte = None
+        self._gpu_device_num_not = None
+        self._gpu_device_num_not_in = None
+        self._gpu_devices_every = None
+        self._gpu_devices_none = None
+        self._gpu_devices_some = None
         self._host_num = None
         self._host_num_gt = None
         self._host_num_gte = None
@@ -1126,6 +1181,17 @@ class LabelWhereInput(object):
         self._vm_volume_num_lte = None
         self._vm_volume_num_not = None
         self._vm_volume_num_not_in = None
+        self._vm_volume_snapshot_num = None
+        self._vm_volume_snapshot_num_gt = None
+        self._vm_volume_snapshot_num_gte = None
+        self._vm_volume_snapshot_num_in = None
+        self._vm_volume_snapshot_num_lt = None
+        self._vm_volume_snapshot_num_lte = None
+        self._vm_volume_snapshot_num_not = None
+        self._vm_volume_snapshot_num_not_in = None
+        self._vm_volume_snapshots_every = None
+        self._vm_volume_snapshots_none = None
+        self._vm_volume_snapshots_some = None
         self._vm_volumes_every = None
         self._vm_volumes_none = None
         self._vm_volumes_some = None
@@ -1231,6 +1297,17 @@ class LabelWhereInput(object):
         self.elf_images_every = kwargs.get("elf_images_every", None)
         self.elf_images_none = kwargs.get("elf_images_none", None)
         self.elf_images_some = kwargs.get("elf_images_some", None)
+        self.gpu_device_num = kwargs.get("gpu_device_num", None)
+        self.gpu_device_num_gt = kwargs.get("gpu_device_num_gt", None)
+        self.gpu_device_num_gte = kwargs.get("gpu_device_num_gte", None)
+        self.gpu_device_num_in = kwargs.get("gpu_device_num_in", None)
+        self.gpu_device_num_lt = kwargs.get("gpu_device_num_lt", None)
+        self.gpu_device_num_lte = kwargs.get("gpu_device_num_lte", None)
+        self.gpu_device_num_not = kwargs.get("gpu_device_num_not", None)
+        self.gpu_device_num_not_in = kwargs.get("gpu_device_num_not_in", None)
+        self.gpu_devices_every = kwargs.get("gpu_devices_every", None)
+        self.gpu_devices_none = kwargs.get("gpu_devices_none", None)
+        self.gpu_devices_some = kwargs.get("gpu_devices_some", None)
         self.host_num = kwargs.get("host_num", None)
         self.host_num_gt = kwargs.get("host_num_gt", None)
         self.host_num_gte = kwargs.get("host_num_gte", None)
@@ -1494,6 +1571,17 @@ class LabelWhereInput(object):
         self.vm_volume_num_lte = kwargs.get("vm_volume_num_lte", None)
         self.vm_volume_num_not = kwargs.get("vm_volume_num_not", None)
         self.vm_volume_num_not_in = kwargs.get("vm_volume_num_not_in", None)
+        self.vm_volume_snapshot_num = kwargs.get("vm_volume_snapshot_num", None)
+        self.vm_volume_snapshot_num_gt = kwargs.get("vm_volume_snapshot_num_gt", None)
+        self.vm_volume_snapshot_num_gte = kwargs.get("vm_volume_snapshot_num_gte", None)
+        self.vm_volume_snapshot_num_in = kwargs.get("vm_volume_snapshot_num_in", None)
+        self.vm_volume_snapshot_num_lt = kwargs.get("vm_volume_snapshot_num_lt", None)
+        self.vm_volume_snapshot_num_lte = kwargs.get("vm_volume_snapshot_num_lte", None)
+        self.vm_volume_snapshot_num_not = kwargs.get("vm_volume_snapshot_num_not", None)
+        self.vm_volume_snapshot_num_not_in = kwargs.get("vm_volume_snapshot_num_not_in", None)
+        self.vm_volume_snapshots_every = kwargs.get("vm_volume_snapshots_every", None)
+        self.vm_volume_snapshots_none = kwargs.get("vm_volume_snapshots_none", None)
+        self.vm_volume_snapshots_some = kwargs.get("vm_volume_snapshots_some", None)
         self.vm_volumes_every = kwargs.get("vm_volumes_every", None)
         self.vm_volumes_none = kwargs.get("vm_volumes_none", None)
         self.vm_volumes_some = kwargs.get("vm_volumes_some", None)
@@ -3537,6 +3625,237 @@ class LabelWhereInput(object):
         """
 
         self._elf_images_some = elf_images_some
+
+    @property
+    def gpu_device_num(self):
+        """Gets the gpu_device_num of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num
+
+    @gpu_device_num.setter
+    def gpu_device_num(self, gpu_device_num):
+        """Sets the gpu_device_num of this LabelWhereInput.
+
+
+        :param gpu_device_num: The gpu_device_num of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num: int
+        """
+
+        self._gpu_device_num = gpu_device_num
+
+    @property
+    def gpu_device_num_gt(self):
+        """Gets the gpu_device_num_gt of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_gt of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num_gt
+
+    @gpu_device_num_gt.setter
+    def gpu_device_num_gt(self, gpu_device_num_gt):
+        """Sets the gpu_device_num_gt of this LabelWhereInput.
+
+
+        :param gpu_device_num_gt: The gpu_device_num_gt of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_gt: int
+        """
+
+        self._gpu_device_num_gt = gpu_device_num_gt
+
+    @property
+    def gpu_device_num_gte(self):
+        """Gets the gpu_device_num_gte of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_gte of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num_gte
+
+    @gpu_device_num_gte.setter
+    def gpu_device_num_gte(self, gpu_device_num_gte):
+        """Sets the gpu_device_num_gte of this LabelWhereInput.
+
+
+        :param gpu_device_num_gte: The gpu_device_num_gte of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_gte: int
+        """
+
+        self._gpu_device_num_gte = gpu_device_num_gte
+
+    @property
+    def gpu_device_num_in(self):
+        """Gets the gpu_device_num_in of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_in of this LabelWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._gpu_device_num_in
+
+    @gpu_device_num_in.setter
+    def gpu_device_num_in(self, gpu_device_num_in):
+        """Sets the gpu_device_num_in of this LabelWhereInput.
+
+
+        :param gpu_device_num_in: The gpu_device_num_in of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_in: list[int]
+        """
+
+        self._gpu_device_num_in = gpu_device_num_in
+
+    @property
+    def gpu_device_num_lt(self):
+        """Gets the gpu_device_num_lt of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_lt of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num_lt
+
+    @gpu_device_num_lt.setter
+    def gpu_device_num_lt(self, gpu_device_num_lt):
+        """Sets the gpu_device_num_lt of this LabelWhereInput.
+
+
+        :param gpu_device_num_lt: The gpu_device_num_lt of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_lt: int
+        """
+
+        self._gpu_device_num_lt = gpu_device_num_lt
+
+    @property
+    def gpu_device_num_lte(self):
+        """Gets the gpu_device_num_lte of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_lte of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num_lte
+
+    @gpu_device_num_lte.setter
+    def gpu_device_num_lte(self, gpu_device_num_lte):
+        """Sets the gpu_device_num_lte of this LabelWhereInput.
+
+
+        :param gpu_device_num_lte: The gpu_device_num_lte of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_lte: int
+        """
+
+        self._gpu_device_num_lte = gpu_device_num_lte
+
+    @property
+    def gpu_device_num_not(self):
+        """Gets the gpu_device_num_not of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_not of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num_not
+
+    @gpu_device_num_not.setter
+    def gpu_device_num_not(self, gpu_device_num_not):
+        """Sets the gpu_device_num_not of this LabelWhereInput.
+
+
+        :param gpu_device_num_not: The gpu_device_num_not of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_not: int
+        """
+
+        self._gpu_device_num_not = gpu_device_num_not
+
+    @property
+    def gpu_device_num_not_in(self):
+        """Gets the gpu_device_num_not_in of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_device_num_not_in of this LabelWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._gpu_device_num_not_in
+
+    @gpu_device_num_not_in.setter
+    def gpu_device_num_not_in(self, gpu_device_num_not_in):
+        """Sets the gpu_device_num_not_in of this LabelWhereInput.
+
+
+        :param gpu_device_num_not_in: The gpu_device_num_not_in of this LabelWhereInput.  # noqa: E501
+        :type gpu_device_num_not_in: list[int]
+        """
+
+        self._gpu_device_num_not_in = gpu_device_num_not_in
+
+    @property
+    def gpu_devices_every(self):
+        """Gets the gpu_devices_every of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_every of this LabelWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_every
+
+    @gpu_devices_every.setter
+    def gpu_devices_every(self, gpu_devices_every):
+        """Sets the gpu_devices_every of this LabelWhereInput.
+
+
+        :param gpu_devices_every: The gpu_devices_every of this LabelWhereInput.  # noqa: E501
+        :type gpu_devices_every: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_every = gpu_devices_every
+
+    @property
+    def gpu_devices_none(self):
+        """Gets the gpu_devices_none of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_none of this LabelWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_none
+
+    @gpu_devices_none.setter
+    def gpu_devices_none(self, gpu_devices_none):
+        """Sets the gpu_devices_none of this LabelWhereInput.
+
+
+        :param gpu_devices_none: The gpu_devices_none of this LabelWhereInput.  # noqa: E501
+        :type gpu_devices_none: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_none = gpu_devices_none
+
+    @property
+    def gpu_devices_some(self):
+        """Gets the gpu_devices_some of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The gpu_devices_some of this LabelWhereInput.  # noqa: E501
+        :rtype: GpuDeviceWhereInput
+        """
+        return self._gpu_devices_some
+
+    @gpu_devices_some.setter
+    def gpu_devices_some(self, gpu_devices_some):
+        """Sets the gpu_devices_some of this LabelWhereInput.
+
+
+        :param gpu_devices_some: The gpu_devices_some of this LabelWhereInput.  # noqa: E501
+        :type gpu_devices_some: GpuDeviceWhereInput
+        """
+
+        self._gpu_devices_some = gpu_devices_some
 
     @property
     def host_num(self):
@@ -9060,6 +9379,237 @@ class LabelWhereInput(object):
         """
 
         self._vm_volume_num_not_in = vm_volume_num_not_in
+
+    @property
+    def vm_volume_snapshot_num(self):
+        """Gets the vm_volume_snapshot_num of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num
+
+    @vm_volume_snapshot_num.setter
+    def vm_volume_snapshot_num(self, vm_volume_snapshot_num):
+        """Sets the vm_volume_snapshot_num of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num: The vm_volume_snapshot_num of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num: int
+        """
+
+        self._vm_volume_snapshot_num = vm_volume_snapshot_num
+
+    @property
+    def vm_volume_snapshot_num_gt(self):
+        """Gets the vm_volume_snapshot_num_gt of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_gt of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num_gt
+
+    @vm_volume_snapshot_num_gt.setter
+    def vm_volume_snapshot_num_gt(self, vm_volume_snapshot_num_gt):
+        """Sets the vm_volume_snapshot_num_gt of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_gt: The vm_volume_snapshot_num_gt of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_gt: int
+        """
+
+        self._vm_volume_snapshot_num_gt = vm_volume_snapshot_num_gt
+
+    @property
+    def vm_volume_snapshot_num_gte(self):
+        """Gets the vm_volume_snapshot_num_gte of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_gte of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num_gte
+
+    @vm_volume_snapshot_num_gte.setter
+    def vm_volume_snapshot_num_gte(self, vm_volume_snapshot_num_gte):
+        """Sets the vm_volume_snapshot_num_gte of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_gte: The vm_volume_snapshot_num_gte of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_gte: int
+        """
+
+        self._vm_volume_snapshot_num_gte = vm_volume_snapshot_num_gte
+
+    @property
+    def vm_volume_snapshot_num_in(self):
+        """Gets the vm_volume_snapshot_num_in of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_in of this LabelWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._vm_volume_snapshot_num_in
+
+    @vm_volume_snapshot_num_in.setter
+    def vm_volume_snapshot_num_in(self, vm_volume_snapshot_num_in):
+        """Sets the vm_volume_snapshot_num_in of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_in: The vm_volume_snapshot_num_in of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_in: list[int]
+        """
+
+        self._vm_volume_snapshot_num_in = vm_volume_snapshot_num_in
+
+    @property
+    def vm_volume_snapshot_num_lt(self):
+        """Gets the vm_volume_snapshot_num_lt of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_lt of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num_lt
+
+    @vm_volume_snapshot_num_lt.setter
+    def vm_volume_snapshot_num_lt(self, vm_volume_snapshot_num_lt):
+        """Sets the vm_volume_snapshot_num_lt of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_lt: The vm_volume_snapshot_num_lt of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_lt: int
+        """
+
+        self._vm_volume_snapshot_num_lt = vm_volume_snapshot_num_lt
+
+    @property
+    def vm_volume_snapshot_num_lte(self):
+        """Gets the vm_volume_snapshot_num_lte of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_lte of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num_lte
+
+    @vm_volume_snapshot_num_lte.setter
+    def vm_volume_snapshot_num_lte(self, vm_volume_snapshot_num_lte):
+        """Sets the vm_volume_snapshot_num_lte of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_lte: The vm_volume_snapshot_num_lte of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_lte: int
+        """
+
+        self._vm_volume_snapshot_num_lte = vm_volume_snapshot_num_lte
+
+    @property
+    def vm_volume_snapshot_num_not(self):
+        """Gets the vm_volume_snapshot_num_not of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_not of this LabelWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num_not
+
+    @vm_volume_snapshot_num_not.setter
+    def vm_volume_snapshot_num_not(self, vm_volume_snapshot_num_not):
+        """Sets the vm_volume_snapshot_num_not of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_not: The vm_volume_snapshot_num_not of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_not: int
+        """
+
+        self._vm_volume_snapshot_num_not = vm_volume_snapshot_num_not
+
+    @property
+    def vm_volume_snapshot_num_not_in(self):
+        """Gets the vm_volume_snapshot_num_not_in of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num_not_in of this LabelWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._vm_volume_snapshot_num_not_in
+
+    @vm_volume_snapshot_num_not_in.setter
+    def vm_volume_snapshot_num_not_in(self, vm_volume_snapshot_num_not_in):
+        """Sets the vm_volume_snapshot_num_not_in of this LabelWhereInput.
+
+
+        :param vm_volume_snapshot_num_not_in: The vm_volume_snapshot_num_not_in of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshot_num_not_in: list[int]
+        """
+
+        self._vm_volume_snapshot_num_not_in = vm_volume_snapshot_num_not_in
+
+    @property
+    def vm_volume_snapshots_every(self):
+        """Gets the vm_volume_snapshots_every of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshots_every of this LabelWhereInput.  # noqa: E501
+        :rtype: VmVolumeSnapshotWhereInput
+        """
+        return self._vm_volume_snapshots_every
+
+    @vm_volume_snapshots_every.setter
+    def vm_volume_snapshots_every(self, vm_volume_snapshots_every):
+        """Sets the vm_volume_snapshots_every of this LabelWhereInput.
+
+
+        :param vm_volume_snapshots_every: The vm_volume_snapshots_every of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshots_every: VmVolumeSnapshotWhereInput
+        """
+
+        self._vm_volume_snapshots_every = vm_volume_snapshots_every
+
+    @property
+    def vm_volume_snapshots_none(self):
+        """Gets the vm_volume_snapshots_none of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshots_none of this LabelWhereInput.  # noqa: E501
+        :rtype: VmVolumeSnapshotWhereInput
+        """
+        return self._vm_volume_snapshots_none
+
+    @vm_volume_snapshots_none.setter
+    def vm_volume_snapshots_none(self, vm_volume_snapshots_none):
+        """Sets the vm_volume_snapshots_none of this LabelWhereInput.
+
+
+        :param vm_volume_snapshots_none: The vm_volume_snapshots_none of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshots_none: VmVolumeSnapshotWhereInput
+        """
+
+        self._vm_volume_snapshots_none = vm_volume_snapshots_none
+
+    @property
+    def vm_volume_snapshots_some(self):
+        """Gets the vm_volume_snapshots_some of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The vm_volume_snapshots_some of this LabelWhereInput.  # noqa: E501
+        :rtype: VmVolumeSnapshotWhereInput
+        """
+        return self._vm_volume_snapshots_some
+
+    @vm_volume_snapshots_some.setter
+    def vm_volume_snapshots_some(self, vm_volume_snapshots_some):
+        """Sets the vm_volume_snapshots_some of this LabelWhereInput.
+
+
+        :param vm_volume_snapshots_some: The vm_volume_snapshots_some of this LabelWhereInput.  # noqa: E501
+        :type vm_volume_snapshots_some: VmVolumeSnapshotWhereInput
+        """
+
+        self._vm_volume_snapshots_some = vm_volume_snapshots_some
 
     @property
     def vm_volumes_every(self):

@@ -42,6 +42,8 @@ class Label(object):
         'disks': 'list[NestedDisk]',
         'elf_image_num': 'int',
         'elf_images': 'list[NestedElfImage]',
+        'gpu_device_num': 'int',
+        'gpu_devices': 'list[NestedGpuDevice]',
         'host_num': 'int',
         'hosts': 'list[NestedHost]',
         'id': 'str',
@@ -83,6 +85,8 @@ class Label(object):
         'vm_templates': 'list[NestedVmTemplate]',
         'vm_vlan_num': 'int',
         'vm_volume_num': 'int',
+        'vm_volume_snapshot_num': 'int',
+        'vm_volume_snapshots': 'list[NestedVmVolumeSnapshot]',
         'vm_volumes': 'list[NestedVmVolume]',
         'vms': 'list[NestedVm]'
     }
@@ -105,6 +109,8 @@ class Label(object):
         'disks': 'disks',
         'elf_image_num': 'elf_image_num',
         'elf_images': 'elf_images',
+        'gpu_device_num': 'gpu_device_num',
+        'gpu_devices': 'gpu_devices',
         'host_num': 'host_num',
         'hosts': 'hosts',
         'id': 'id',
@@ -146,6 +152,8 @@ class Label(object):
         'vm_templates': 'vm_templates',
         'vm_vlan_num': 'vm_vlan_num',
         'vm_volume_num': 'vm_volume_num',
+        'vm_volume_snapshot_num': 'vm_volume_snapshot_num',
+        'vm_volume_snapshots': 'vm_volume_snapshots',
         'vm_volumes': 'vm_volumes',
         'vms': 'vms'
     }
@@ -171,6 +179,8 @@ class Label(object):
         self._disks = None
         self._elf_image_num = None
         self._elf_images = None
+        self._gpu_device_num = None
+        self._gpu_devices = None
         self._host_num = None
         self._hosts = None
         self._id = None
@@ -212,6 +222,8 @@ class Label(object):
         self._vm_templates = None
         self._vm_vlan_num = None
         self._vm_volume_num = None
+        self._vm_volume_snapshot_num = None
+        self._vm_volume_snapshots = None
         self._vm_volumes = None
         self._vms = None
         self.discriminator = None
@@ -234,6 +246,8 @@ class Label(object):
         self.disks = kwargs.get("disks", None)
         self.elf_image_num = kwargs.get("elf_image_num", None)
         self.elf_images = kwargs.get("elf_images", None)
+        self.gpu_device_num = kwargs.get("gpu_device_num", None)
+        self.gpu_devices = kwargs.get("gpu_devices", None)
         self.host_num = kwargs.get("host_num", None)
         self.hosts = kwargs.get("hosts", None)
         if "id" in kwargs:
@@ -277,6 +291,8 @@ class Label(object):
         self.vm_templates = kwargs.get("vm_templates", None)
         self.vm_vlan_num = kwargs.get("vm_vlan_num", None)
         self.vm_volume_num = kwargs.get("vm_volume_num", None)
+        self.vm_volume_snapshot_num = kwargs.get("vm_volume_snapshot_num", None)
+        self.vm_volume_snapshots = kwargs.get("vm_volume_snapshots", None)
         self.vm_volumes = kwargs.get("vm_volumes", None)
         self.vms = kwargs.get("vms", None)
 
@@ -638,6 +654,48 @@ class Label(object):
         """
 
         self._elf_images = elf_images
+
+    @property
+    def gpu_device_num(self):
+        """Gets the gpu_device_num of this Label.  # noqa: E501
+
+
+        :return: The gpu_device_num of this Label.  # noqa: E501
+        :rtype: int
+        """
+        return self._gpu_device_num
+
+    @gpu_device_num.setter
+    def gpu_device_num(self, gpu_device_num):
+        """Sets the gpu_device_num of this Label.
+
+
+        :param gpu_device_num: The gpu_device_num of this Label.  # noqa: E501
+        :type gpu_device_num: int
+        """
+
+        self._gpu_device_num = gpu_device_num
+
+    @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this Label.  # noqa: E501
+
+
+        :return: The gpu_devices of this Label.  # noqa: E501
+        :rtype: list[NestedGpuDevice]
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this Label.
+
+
+        :param gpu_devices: The gpu_devices of this Label.  # noqa: E501
+        :type gpu_devices: list[NestedGpuDevice]
+        """
+
+        self._gpu_devices = gpu_devices
 
     @property
     def host_num(self):
@@ -1503,6 +1561,48 @@ class Label(object):
         """
 
         self._vm_volume_num = vm_volume_num
+
+    @property
+    def vm_volume_snapshot_num(self):
+        """Gets the vm_volume_snapshot_num of this Label.  # noqa: E501
+
+
+        :return: The vm_volume_snapshot_num of this Label.  # noqa: E501
+        :rtype: int
+        """
+        return self._vm_volume_snapshot_num
+
+    @vm_volume_snapshot_num.setter
+    def vm_volume_snapshot_num(self, vm_volume_snapshot_num):
+        """Sets the vm_volume_snapshot_num of this Label.
+
+
+        :param vm_volume_snapshot_num: The vm_volume_snapshot_num of this Label.  # noqa: E501
+        :type vm_volume_snapshot_num: int
+        """
+
+        self._vm_volume_snapshot_num = vm_volume_snapshot_num
+
+    @property
+    def vm_volume_snapshots(self):
+        """Gets the vm_volume_snapshots of this Label.  # noqa: E501
+
+
+        :return: The vm_volume_snapshots of this Label.  # noqa: E501
+        :rtype: list[NestedVmVolumeSnapshot]
+        """
+        return self._vm_volume_snapshots
+
+    @vm_volume_snapshots.setter
+    def vm_volume_snapshots(self, vm_volume_snapshots):
+        """Sets the vm_volume_snapshots of this Label.
+
+
+        :param vm_volume_snapshots: The vm_volume_snapshots of this Label.  # noqa: E501
+        :type vm_volume_snapshots: list[NestedVmVolumeSnapshot]
+        """
+
+        self._vm_volume_snapshots = vm_volume_snapshots
 
     @property
     def vm_volumes(self):

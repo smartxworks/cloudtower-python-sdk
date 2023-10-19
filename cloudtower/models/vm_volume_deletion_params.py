@@ -25,10 +25,12 @@ class VmVolumeDeletionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'effect': 'VmVolumeDeletionParamsEffect',
         'where': 'VmVolumeWhereInput'
     }
 
     attribute_map = {
+        'effect': 'effect',
         'where': 'where'
     }
 
@@ -36,11 +38,35 @@ class VmVolumeDeletionParams(object):
         """VmVolumeDeletionParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._effect = None
         self._where = None
         self.discriminator = None
 
+        if "effect" in kwargs:
+            self.effect = kwargs["effect"]
         if "where" in kwargs:
             self.where = kwargs["where"]
+
+    @property
+    def effect(self):
+        """Gets the effect of this VmVolumeDeletionParams.  # noqa: E501
+
+
+        :return: The effect of this VmVolumeDeletionParams.  # noqa: E501
+        :rtype: VmVolumeDeletionParamsEffect
+        """
+        return self._effect
+
+    @effect.setter
+    def effect(self, effect):
+        """Sets the effect of this VmVolumeDeletionParams.
+
+
+        :param effect: The effect of this VmVolumeDeletionParams.  # noqa: E501
+        :type effect: VmVolumeDeletionParamsEffect
+        """
+
+        self._effect = effect
 
     @property
     def where(self):

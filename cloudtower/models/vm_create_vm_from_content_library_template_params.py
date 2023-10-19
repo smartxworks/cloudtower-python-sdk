@@ -25,6 +25,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'gpu_devices': 'list[VmGpuOperationParams]',
         'cloud_init': 'TemplateCloudInit',
         'is_full_copy': 'bool',
         'template_id': 'str',
@@ -38,6 +39,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'status': 'VmStatus',
         'firmware': 'VmFirmware',
         'ha': 'bool',
+        'pci_nics': 'NicWhereInput',
+        'vm_placement_group': 'VmPlacementGroupWhereInput',
         'vm_nics': 'list[VmNicParams]',
         'disk_operate': 'VmDiskOperate',
         'memory_unit': 'ByteUnit',
@@ -53,6 +56,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
     }
 
     attribute_map = {
+        'gpu_devices': 'gpu_devices',
         'cloud_init': 'cloud_init',
         'is_full_copy': 'is_full_copy',
         'template_id': 'template_id',
@@ -66,6 +70,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         'status': 'status',
         'firmware': 'firmware',
         'ha': 'ha',
+        'pci_nics': 'pci_nics',
+        'vm_placement_group': 'vm_placement_group',
         'vm_nics': 'vm_nics',
         'disk_operate': 'disk_operate',
         'memory_unit': 'memory_unit',
@@ -84,6 +90,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """VmCreateVmFromContentLibraryTemplateParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._gpu_devices = None
         self._cloud_init = None
         self._is_full_copy = None
         self._template_id = None
@@ -97,6 +104,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._status = None
         self._firmware = None
         self._ha = None
+        self._pci_nics = None
+        self._vm_placement_group = None
         self._vm_nics = None
         self._disk_operate = None
         self._memory_unit = None
@@ -111,6 +120,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "gpu_devices" in kwargs:
+            self.gpu_devices = kwargs["gpu_devices"]
         if "cloud_init" in kwargs:
             self.cloud_init = kwargs["cloud_init"]
         if "is_full_copy" in kwargs:
@@ -137,6 +148,10 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.firmware = kwargs["firmware"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
+        if "pci_nics" in kwargs:
+            self.pci_nics = kwargs["pci_nics"]
+        if "vm_placement_group" in kwargs:
+            self.vm_placement_group = kwargs["vm_placement_group"]
         if "vm_nics" in kwargs:
             self.vm_nics = kwargs["vm_nics"]
         if "disk_operate" in kwargs:
@@ -161,6 +176,27 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def gpu_devices(self):
+        """Gets the gpu_devices of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The gpu_devices of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: list[VmGpuOperationParams]
+        """
+        return self._gpu_devices
+
+    @gpu_devices.setter
+    def gpu_devices(self, gpu_devices):
+        """Sets the gpu_devices of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param gpu_devices: The gpu_devices of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type gpu_devices: list[VmGpuOperationParams]
+        """
+
+        self._gpu_devices = gpu_devices
 
     @property
     def cloud_init(self):
@@ -438,6 +474,48 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """
 
         self._ha = ha
+
+    @property
+    def pci_nics(self):
+        """Gets the pci_nics of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The pci_nics of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: NicWhereInput
+        """
+        return self._pci_nics
+
+    @pci_nics.setter
+    def pci_nics(self, pci_nics):
+        """Sets the pci_nics of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param pci_nics: The pci_nics of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type pci_nics: NicWhereInput
+        """
+
+        self._pci_nics = pci_nics
+
+    @property
+    def vm_placement_group(self):
+        """Gets the vm_placement_group of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The vm_placement_group of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: VmPlacementGroupWhereInput
+        """
+        return self._vm_placement_group
+
+    @vm_placement_group.setter
+    def vm_placement_group(self, vm_placement_group):
+        """Sets the vm_placement_group of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param vm_placement_group: The vm_placement_group of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type vm_placement_group: VmPlacementGroupWhereInput
+        """
+
+        self._vm_placement_group = vm_placement_group
 
     @property
     def vm_nics(self):
