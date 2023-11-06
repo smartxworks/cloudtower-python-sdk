@@ -398,8 +398,8 @@ conf = cloudtower.Configuration(
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 2.12.0\n"\
-               "SDK Package Version: 2.12.0".\
+               "Version of the API: 2.14.0\n"\
+               "SDK Package Version: 2.14.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
