@@ -26,6 +26,8 @@ class NamespaceGroupWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[NamespaceGroupWhereInput]',
+        '_not': 'list[NamespaceGroupWhereInput]',
+        '_or': 'list[NamespaceGroupWhereInput]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -86,13 +88,13 @@ class NamespaceGroupWhereInput(object):
         'namespaces_every': 'NvmfNamespaceWhereInput',
         'namespaces_none': 'NvmfNamespaceWhereInput',
         'namespaces_some': 'NvmfNamespaceWhereInput',
-        '_not': 'list[NamespaceGroupWhereInput]',
-        'nvmf_subsystem': 'NvmfSubsystemWhereInput',
-        '_or': 'list[NamespaceGroupWhereInput]'
+        'nvmf_subsystem': 'NvmfSubsystemWhereInput'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -153,9 +155,7 @@ class NamespaceGroupWhereInput(object):
         'namespaces_every': 'namespaces_every',
         'namespaces_none': 'namespaces_none',
         'namespaces_some': 'namespaces_some',
-        '_not': 'NOT',
-        'nvmf_subsystem': 'nvmf_subsystem',
-        '_or': 'OR'
+        'nvmf_subsystem': 'nvmf_subsystem'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -163,6 +163,8 @@ class NamespaceGroupWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -223,12 +225,12 @@ class NamespaceGroupWhereInput(object):
         self._namespaces_every = None
         self._namespaces_none = None
         self._namespaces_some = None
-        self.__not = None
         self._nvmf_subsystem = None
-        self.__or = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -289,9 +291,7 @@ class NamespaceGroupWhereInput(object):
         self.namespaces_every = kwargs.get("namespaces_every", None)
         self.namespaces_none = kwargs.get("namespaces_none", None)
         self.namespaces_some = kwargs.get("namespaces_some", None)
-        self._not = kwargs.get("_not", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
-        self._or = kwargs.get("_or", None)
 
     @property
     def _and(self):
@@ -313,6 +313,48 @@ class NamespaceGroupWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this NamespaceGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this NamespaceGroupWhereInput.  # noqa: E501
+        :rtype: list[NamespaceGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this NamespaceGroupWhereInput.
+
+
+        :param _not: The _not of this NamespaceGroupWhereInput.  # noqa: E501
+        :type _not: list[NamespaceGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this NamespaceGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this NamespaceGroupWhereInput.  # noqa: E501
+        :rtype: list[NamespaceGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this NamespaceGroupWhereInput.
+
+
+        :param _or: The _or of this NamespaceGroupWhereInput.  # noqa: E501
+        :type _or: list[NamespaceGroupWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def entity_async_status(self):
@@ -1575,27 +1617,6 @@ class NamespaceGroupWhereInput(object):
         self._namespaces_some = namespaces_some
 
     @property
-    def _not(self):
-        """Gets the _not of this NamespaceGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this NamespaceGroupWhereInput.  # noqa: E501
-        :rtype: list[NamespaceGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this NamespaceGroupWhereInput.
-
-
-        :param _not: The _not of this NamespaceGroupWhereInput.  # noqa: E501
-        :type _not: list[NamespaceGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nvmf_subsystem(self):
         """Gets the nvmf_subsystem of this NamespaceGroupWhereInput.  # noqa: E501
 
@@ -1615,27 +1636,6 @@ class NamespaceGroupWhereInput(object):
         """
 
         self._nvmf_subsystem = nvmf_subsystem
-
-    @property
-    def _or(self):
-        """Gets the _or of this NamespaceGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this NamespaceGroupWhereInput.  # noqa: E501
-        :rtype: list[NamespaceGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this NamespaceGroupWhereInput.
-
-
-        :param _or: The _or of this NamespaceGroupWhereInput.  # noqa: E501
-        :type _or: list[NamespaceGroupWhereInput]
-        """
-
-        self.__or = _or
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -26,6 +26,8 @@ class SnapshotPlanWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SnapshotPlanWhereInput]',
+        '_not': 'list[SnapshotPlanWhereInput]',
+        '_or': 'list[SnapshotPlanWhereInput]',
         'auto_delete_num': 'int',
         'auto_delete_num_gt': 'int',
         'auto_delete_num_gte': 'int',
@@ -174,7 +176,6 @@ class SnapshotPlanWhereInput(object):
         'next_execute_time_lte': 'str',
         'next_execute_time_not': 'str',
         'next_execute_time_not_in': 'list[str]',
-        '_not': 'list[SnapshotPlanWhereInput]',
         'object_num': 'int',
         'object_num_gt': 'int',
         'object_num_gte': 'int',
@@ -183,7 +184,6 @@ class SnapshotPlanWhereInput(object):
         'object_num_lte': 'int',
         'object_num_not': 'int',
         'object_num_not_in': 'list[int]',
-        '_or': 'list[SnapshotPlanWhereInput]',
         'physical_size_bytes': 'int',
         'physical_size_bytes_gt': 'int',
         'physical_size_bytes_gte': 'int',
@@ -227,6 +227,8 @@ class SnapshotPlanWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'auto_delete_num': 'auto_delete_num',
         'auto_delete_num_gt': 'auto_delete_num_gt',
         'auto_delete_num_gte': 'auto_delete_num_gte',
@@ -375,7 +377,6 @@ class SnapshotPlanWhereInput(object):
         'next_execute_time_lte': 'next_execute_time_lte',
         'next_execute_time_not': 'next_execute_time_not',
         'next_execute_time_not_in': 'next_execute_time_not_in',
-        '_not': 'NOT',
         'object_num': 'object_num',
         'object_num_gt': 'object_num_gt',
         'object_num_gte': 'object_num_gte',
@@ -384,7 +385,6 @@ class SnapshotPlanWhereInput(object):
         'object_num_lte': 'object_num_lte',
         'object_num_not': 'object_num_not',
         'object_num_not_in': 'object_num_not_in',
-        '_or': 'OR',
         'physical_size_bytes': 'physical_size_bytes',
         'physical_size_bytes_gt': 'physical_size_bytes_gt',
         'physical_size_bytes_gte': 'physical_size_bytes_gte',
@@ -431,6 +431,8 @@ class SnapshotPlanWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._auto_delete_num = None
         self._auto_delete_num_gt = None
         self._auto_delete_num_gte = None
@@ -579,7 +581,6 @@ class SnapshotPlanWhereInput(object):
         self._next_execute_time_lte = None
         self._next_execute_time_not = None
         self._next_execute_time_not_in = None
-        self.__not = None
         self._object_num = None
         self._object_num_gt = None
         self._object_num_gte = None
@@ -588,7 +589,6 @@ class SnapshotPlanWhereInput(object):
         self._object_num_lte = None
         self._object_num_not = None
         self._object_num_not_in = None
-        self.__or = None
         self._physical_size_bytes = None
         self._physical_size_bytes_gt = None
         self._physical_size_bytes_gte = None
@@ -631,6 +631,8 @@ class SnapshotPlanWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.auto_delete_num = kwargs.get("auto_delete_num", None)
         self.auto_delete_num_gt = kwargs.get("auto_delete_num_gt", None)
         self.auto_delete_num_gte = kwargs.get("auto_delete_num_gte", None)
@@ -779,7 +781,6 @@ class SnapshotPlanWhereInput(object):
         self.next_execute_time_lte = kwargs.get("next_execute_time_lte", None)
         self.next_execute_time_not = kwargs.get("next_execute_time_not", None)
         self.next_execute_time_not_in = kwargs.get("next_execute_time_not_in", None)
-        self._not = kwargs.get("_not", None)
         self.object_num = kwargs.get("object_num", None)
         self.object_num_gt = kwargs.get("object_num_gt", None)
         self.object_num_gte = kwargs.get("object_num_gte", None)
@@ -788,7 +789,6 @@ class SnapshotPlanWhereInput(object):
         self.object_num_lte = kwargs.get("object_num_lte", None)
         self.object_num_not = kwargs.get("object_num_not", None)
         self.object_num_not_in = kwargs.get("object_num_not_in", None)
-        self._or = kwargs.get("_or", None)
         self.physical_size_bytes = kwargs.get("physical_size_bytes", None)
         self.physical_size_bytes_gt = kwargs.get("physical_size_bytes_gt", None)
         self.physical_size_bytes_gte = kwargs.get("physical_size_bytes_gte", None)
@@ -849,6 +849,48 @@ class SnapshotPlanWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SnapshotPlanWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SnapshotPlanWhereInput.  # noqa: E501
+        :rtype: list[SnapshotPlanWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SnapshotPlanWhereInput.
+
+
+        :param _not: The _not of this SnapshotPlanWhereInput.  # noqa: E501
+        :type _not: list[SnapshotPlanWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SnapshotPlanWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SnapshotPlanWhereInput.  # noqa: E501
+        :rtype: list[SnapshotPlanWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SnapshotPlanWhereInput.
+
+
+        :param _or: The _or of this SnapshotPlanWhereInput.  # noqa: E501
+        :type _or: list[SnapshotPlanWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def auto_delete_num(self):
@@ -3959,27 +4001,6 @@ class SnapshotPlanWhereInput(object):
         self._next_execute_time_not_in = next_execute_time_not_in
 
     @property
-    def _not(self):
-        """Gets the _not of this SnapshotPlanWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SnapshotPlanWhereInput.  # noqa: E501
-        :rtype: list[SnapshotPlanWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SnapshotPlanWhereInput.
-
-
-        :param _not: The _not of this SnapshotPlanWhereInput.  # noqa: E501
-        :type _not: list[SnapshotPlanWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def object_num(self):
         """Gets the object_num of this SnapshotPlanWhereInput.  # noqa: E501
 
@@ -4146,27 +4167,6 @@ class SnapshotPlanWhereInput(object):
         """
 
         self._object_num_not_in = object_num_not_in
-
-    @property
-    def _or(self):
-        """Gets the _or of this SnapshotPlanWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SnapshotPlanWhereInput.  # noqa: E501
-        :rtype: list[SnapshotPlanWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SnapshotPlanWhereInput.
-
-
-        :param _or: The _or of this SnapshotPlanWhereInput.  # noqa: E501
-        :type _or: list[SnapshotPlanWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def physical_size_bytes(self):

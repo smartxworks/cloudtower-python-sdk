@@ -26,6 +26,8 @@ class CloudTowerApplicationPackageWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[CloudTowerApplicationPackageWhereInput]',
+        '_not': 'list[CloudTowerApplicationPackageWhereInput]',
+        '_or': 'list[CloudTowerApplicationPackageWhereInput]',
         'applications_every': 'CloudTowerApplicationWhereInput',
         'applications_none': 'CloudTowerApplicationWhereInput',
         'applications_some': 'CloudTowerApplicationWhereInput',
@@ -61,8 +63,6 @@ class CloudTowerApplicationPackageWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[CloudTowerApplicationPackageWhereInput]',
-        '_or': 'list[CloudTowerApplicationPackageWhereInput]',
         'scos_version': 'str',
         'scos_version_contains': 'str',
         'scos_version_ends_with': 'str',
@@ -95,6 +95,8 @@ class CloudTowerApplicationPackageWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'applications_every': 'applications_every',
         'applications_none': 'applications_none',
         'applications_some': 'applications_some',
@@ -130,8 +132,6 @@ class CloudTowerApplicationPackageWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'scos_version': 'scosVersion',
         'scos_version_contains': 'scosVersion_contains',
         'scos_version_ends_with': 'scosVersion_ends_with',
@@ -167,6 +167,8 @@ class CloudTowerApplicationPackageWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._applications_every = None
         self._applications_none = None
         self._applications_some = None
@@ -202,8 +204,6 @@ class CloudTowerApplicationPackageWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._scos_version = None
         self._scos_version_contains = None
         self._scos_version_ends_with = None
@@ -235,6 +235,8 @@ class CloudTowerApplicationPackageWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.applications_every = kwargs.get("applications_every", None)
         self.applications_none = kwargs.get("applications_none", None)
         self.applications_some = kwargs.get("applications_some", None)
@@ -270,8 +272,6 @@ class CloudTowerApplicationPackageWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.scos_version = kwargs.get("scos_version", None)
         self.scos_version_contains = kwargs.get("scos_version_contains", None)
         self.scos_version_ends_with = kwargs.get("scos_version_ends_with", None)
@@ -321,6 +321,48 @@ class CloudTowerApplicationPackageWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+
+
+        :return: The _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+        :rtype: list[CloudTowerApplicationPackageWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this CloudTowerApplicationPackageWhereInput.
+
+
+        :param _not: The _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+        :type _not: list[CloudTowerApplicationPackageWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+
+
+        :return: The _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+        :rtype: list[CloudTowerApplicationPackageWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this CloudTowerApplicationPackageWhereInput.
+
+
+        :param _or: The _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
+        :type _or: list[CloudTowerApplicationPackageWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def applications_every(self):
@@ -1056,48 +1098,6 @@ class CloudTowerApplicationPackageWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-
-
-        :return: The _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-        :rtype: list[CloudTowerApplicationPackageWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this CloudTowerApplicationPackageWhereInput.
-
-
-        :param _not: The _not of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-        :type _not: list[CloudTowerApplicationPackageWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-
-
-        :return: The _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-        :rtype: list[CloudTowerApplicationPackageWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this CloudTowerApplicationPackageWhereInput.
-
-
-        :param _or: The _or of this CloudTowerApplicationPackageWhereInput.  # noqa: E501
-        :type _or: list[CloudTowerApplicationPackageWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def scos_version(self):

@@ -26,6 +26,8 @@ class VsphereEsxiAccountWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VsphereEsxiAccountWhereInput]',
+        '_not': 'list[VsphereEsxiAccountWhereInput]',
+        '_or': 'list[VsphereEsxiAccountWhereInput]',
         'host': 'HostWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -71,8 +73,6 @@ class VsphereEsxiAccountWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        '_not': 'list[VsphereEsxiAccountWhereInput]',
-        '_or': 'list[VsphereEsxiAccountWhereInput]',
         'port': 'int',
         'port_gt': 'int',
         'port_gte': 'int',
@@ -99,6 +99,8 @@ class VsphereEsxiAccountWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'host': 'host',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -144,8 +146,6 @@ class VsphereEsxiAccountWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'port': 'port',
         'port_gt': 'port_gt',
         'port_gte': 'port_gte',
@@ -175,6 +175,8 @@ class VsphereEsxiAccountWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._host = None
         self._id = None
         self._id_contains = None
@@ -220,8 +222,6 @@ class VsphereEsxiAccountWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._port = None
         self._port_gt = None
         self._port_gte = None
@@ -247,6 +247,8 @@ class VsphereEsxiAccountWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.host = kwargs.get("host", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -292,8 +294,6 @@ class VsphereEsxiAccountWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.port = kwargs.get("port", None)
         self.port_gt = kwargs.get("port_gt", None)
         self.port_gte = kwargs.get("port_gte", None)
@@ -337,6 +337,48 @@ class VsphereEsxiAccountWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
+        :rtype: list[VsphereEsxiAccountWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VsphereEsxiAccountWhereInput.
+
+
+        :param _not: The _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
+        :type _not: list[VsphereEsxiAccountWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
+        :rtype: list[VsphereEsxiAccountWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VsphereEsxiAccountWhereInput.
+
+
+        :param _or: The _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
+        :type _or: list[VsphereEsxiAccountWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def host(self):
@@ -1282,48 +1324,6 @@ class VsphereEsxiAccountWhereInput(object):
         """
 
         self._local_id_starts_with = local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
-        :rtype: list[VsphereEsxiAccountWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VsphereEsxiAccountWhereInput.
-
-
-        :param _not: The _not of this VsphereEsxiAccountWhereInput.  # noqa: E501
-        :type _not: list[VsphereEsxiAccountWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
-        :rtype: list[VsphereEsxiAccountWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VsphereEsxiAccountWhereInput.
-
-
-        :param _or: The _or of this VsphereEsxiAccountWhereInput.  # noqa: E501
-        :type _or: list[VsphereEsxiAccountWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def port(self):

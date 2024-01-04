@@ -26,6 +26,8 @@ class VmNicWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmNicWhereInput]',
+        '_not': 'list[VmNicWhereInput]',
+        '_or': 'list[VmNicWhereInput]',
         'egress_rate_limit_burst_in_bit': 'float',
         'egress_rate_limit_burst_in_bit_gt': 'float',
         'egress_rate_limit_burst_in_bit_gte': 'float',
@@ -155,8 +157,6 @@ class VmNicWhereInput(object):
         'model_not': 'VmNicModel',
         'model_not_in': 'list[VmNicModel]',
         'nic': 'NicWhereInput',
-        '_not': 'list[VmNicWhereInput]',
-        '_or': 'list[VmNicWhereInput]',
         'order': 'int',
         'order_gt': 'int',
         'order_gte': 'int',
@@ -185,6 +185,8 @@ class VmNicWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'egress_rate_limit_burst_in_bit': 'egress_rate_limit_burst_in_bit',
         'egress_rate_limit_burst_in_bit_gt': 'egress_rate_limit_burst_in_bit_gt',
         'egress_rate_limit_burst_in_bit_gte': 'egress_rate_limit_burst_in_bit_gte',
@@ -314,8 +316,6 @@ class VmNicWhereInput(object):
         'model_not': 'model_not',
         'model_not_in': 'model_not_in',
         'nic': 'nic',
-        '_not': 'NOT',
-        '_or': 'OR',
         'order': 'order',
         'order_gt': 'order_gt',
         'order_gte': 'order_gte',
@@ -347,6 +347,8 @@ class VmNicWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._egress_rate_limit_burst_in_bit = None
         self._egress_rate_limit_burst_in_bit_gt = None
         self._egress_rate_limit_burst_in_bit_gte = None
@@ -476,8 +478,6 @@ class VmNicWhereInput(object):
         self._model_not = None
         self._model_not_in = None
         self._nic = None
-        self.__not = None
-        self.__or = None
         self._order = None
         self._order_gt = None
         self._order_gte = None
@@ -505,6 +505,8 @@ class VmNicWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
         self.egress_rate_limit_burst_in_bit_gt = kwargs.get("egress_rate_limit_burst_in_bit_gt", None)
         self.egress_rate_limit_burst_in_bit_gte = kwargs.get("egress_rate_limit_burst_in_bit_gte", None)
@@ -634,8 +636,6 @@ class VmNicWhereInput(object):
         self.model_not = kwargs.get("model_not", None)
         self.model_not_in = kwargs.get("model_not_in", None)
         self.nic = kwargs.get("nic", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.order = kwargs.get("order", None)
         self.order_gt = kwargs.get("order_gt", None)
         self.order_gte = kwargs.get("order_gte", None)
@@ -681,6 +681,48 @@ class VmNicWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[VmNicWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmNicWhereInput.
+
+
+        :param _not: The _not of this VmNicWhereInput.  # noqa: E501
+        :type _not: list[VmNicWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[VmNicWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmNicWhereInput.
+
+
+        :param _or: The _or of this VmNicWhereInput.  # noqa: E501
+        :type _or: list[VmNicWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def egress_rate_limit_burst_in_bit(self):
@@ -3390,48 +3432,6 @@ class VmNicWhereInput(object):
         """
 
         self._nic = nic
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmNicWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmNicWhereInput.  # noqa: E501
-        :rtype: list[VmNicWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmNicWhereInput.
-
-
-        :param _not: The _not of this VmNicWhereInput.  # noqa: E501
-        :type _not: list[VmNicWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmNicWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmNicWhereInput.  # noqa: E501
-        :rtype: list[VmNicWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmNicWhereInput.
-
-
-        :param _or: The _or of this VmNicWhereInput.  # noqa: E501
-        :type _or: list[VmNicWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def order(self):

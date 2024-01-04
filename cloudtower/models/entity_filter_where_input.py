@@ -26,6 +26,8 @@ class EntityFilterWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[EntityFilterWhereInput]',
+        '_not': 'list[EntityFilterWhereInput]',
+        '_or': 'list[EntityFilterWhereInput]',
         'apply_to_all_clusters': 'bool',
         'apply_to_all_clusters_not': 'bool',
         'clusters_every': 'ClusterWhereInput',
@@ -78,8 +80,6 @@ class EntityFilterWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[EntityFilterWhereInput]',
-        '_or': 'list[EntityFilterWhereInput]',
         'preset': 'str',
         'preset_contains': 'str',
         'preset_ends_with': 'str',
@@ -98,6 +98,8 @@ class EntityFilterWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'apply_to_all_clusters': 'apply_to_all_clusters',
         'apply_to_all_clusters_not': 'apply_to_all_clusters_not',
         'clusters_every': 'clusters_every',
@@ -150,8 +152,6 @@ class EntityFilterWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'preset': 'preset',
         'preset_contains': 'preset_contains',
         'preset_ends_with': 'preset_ends_with',
@@ -173,6 +173,8 @@ class EntityFilterWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._apply_to_all_clusters = None
         self._apply_to_all_clusters_not = None
         self._clusters_every = None
@@ -225,8 +227,6 @@ class EntityFilterWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._preset = None
         self._preset_contains = None
         self._preset_ends_with = None
@@ -244,6 +244,8 @@ class EntityFilterWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.apply_to_all_clusters = kwargs.get("apply_to_all_clusters", None)
         self.apply_to_all_clusters_not = kwargs.get("apply_to_all_clusters_not", None)
         self.clusters_every = kwargs.get("clusters_every", None)
@@ -296,8 +298,6 @@ class EntityFilterWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.preset = kwargs.get("preset", None)
         self.preset_contains = kwargs.get("preset_contains", None)
         self.preset_ends_with = kwargs.get("preset_ends_with", None)
@@ -333,6 +333,48 @@ class EntityFilterWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this EntityFilterWhereInput.  # noqa: E501
+
+
+        :return: The _not of this EntityFilterWhereInput.  # noqa: E501
+        :rtype: list[EntityFilterWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this EntityFilterWhereInput.
+
+
+        :param _not: The _not of this EntityFilterWhereInput.  # noqa: E501
+        :type _not: list[EntityFilterWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this EntityFilterWhereInput.  # noqa: E501
+
+
+        :return: The _or of this EntityFilterWhereInput.  # noqa: E501
+        :rtype: list[EntityFilterWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this EntityFilterWhereInput.
+
+
+        :param _or: The _or of this EntityFilterWhereInput.  # noqa: E501
+        :type _or: list[EntityFilterWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def apply_to_all_clusters(self):
@@ -1425,48 +1467,6 @@ class EntityFilterWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this EntityFilterWhereInput.  # noqa: E501
-
-
-        :return: The _not of this EntityFilterWhereInput.  # noqa: E501
-        :rtype: list[EntityFilterWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this EntityFilterWhereInput.
-
-
-        :param _not: The _not of this EntityFilterWhereInput.  # noqa: E501
-        :type _not: list[EntityFilterWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this EntityFilterWhereInput.  # noqa: E501
-
-
-        :return: The _or of this EntityFilterWhereInput.  # noqa: E501
-        :rtype: list[EntityFilterWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this EntityFilterWhereInput.
-
-
-        :param _or: The _or of this EntityFilterWhereInput.  # noqa: E501
-        :type _or: list[EntityFilterWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def preset(self):

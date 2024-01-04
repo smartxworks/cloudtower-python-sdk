@@ -26,6 +26,8 @@ class AlertRuleWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[AlertRuleWhereInput]',
+        '_not': 'list[AlertRuleWhereInput]',
+        '_or': 'list[AlertRuleWhereInput]',
         'cluster': 'ClusterWhereInput',
         'customized': 'bool',
         'customized_not': 'bool',
@@ -59,13 +61,13 @@ class AlertRuleWhereInput(object):
         'local_id_not_ends_with': 'str',
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
-        'local_id_starts_with': 'str',
-        '_not': 'list[AlertRuleWhereInput]',
-        '_or': 'list[AlertRuleWhereInput]'
+        'local_id_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'customized': 'customized',
         'customized_not': 'customized_not',
@@ -99,9 +101,7 @@ class AlertRuleWhereInput(object):
         'local_id_not_ends_with': 'local_id_not_ends_with',
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
-        'local_id_starts_with': 'local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR'
+        'local_id_starts_with': 'local_id_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -109,6 +109,8 @@ class AlertRuleWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._customized = None
         self._customized_not = None
@@ -143,11 +145,11 @@ class AlertRuleWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.customized = kwargs.get("customized", None)
         self.customized_not = kwargs.get("customized_not", None)
@@ -182,8 +184,6 @@ class AlertRuleWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
 
     @property
     def _and(self):
@@ -205,6 +205,48 @@ class AlertRuleWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this AlertRuleWhereInput.  # noqa: E501
+
+
+        :return: The _not of this AlertRuleWhereInput.  # noqa: E501
+        :rtype: list[AlertRuleWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this AlertRuleWhereInput.
+
+
+        :param _not: The _not of this AlertRuleWhereInput.  # noqa: E501
+        :type _not: list[AlertRuleWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this AlertRuleWhereInput.  # noqa: E501
+
+
+        :return: The _or of this AlertRuleWhereInput.  # noqa: E501
+        :rtype: list[AlertRuleWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this AlertRuleWhereInput.
+
+
+        :param _or: The _or of this AlertRuleWhereInput.  # noqa: E501
+        :type _or: list[AlertRuleWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -919,48 +961,6 @@ class AlertRuleWhereInput(object):
         """
 
         self._local_id_starts_with = local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this AlertRuleWhereInput.  # noqa: E501
-
-
-        :return: The _not of this AlertRuleWhereInput.  # noqa: E501
-        :rtype: list[AlertRuleWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this AlertRuleWhereInput.
-
-
-        :param _not: The _not of this AlertRuleWhereInput.  # noqa: E501
-        :type _not: list[AlertRuleWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this AlertRuleWhereInput.  # noqa: E501
-
-
-        :return: The _or of this AlertRuleWhereInput.  # noqa: E501
-        :rtype: list[AlertRuleWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this AlertRuleWhereInput.
-
-
-        :param _or: The _or of this AlertRuleWhereInput.  # noqa: E501
-        :type _or: list[AlertRuleWhereInput]
-        """
-
-        self.__or = _or
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

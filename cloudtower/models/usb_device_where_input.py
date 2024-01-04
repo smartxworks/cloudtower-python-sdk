@@ -26,6 +26,8 @@ class UsbDeviceWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[UsbDeviceWhereInput]',
+        '_not': 'list[UsbDeviceWhereInput]',
+        '_or': 'list[UsbDeviceWhereInput]',
         'binded': 'bool',
         'binded_not': 'bool',
         'description': 'str',
@@ -111,8 +113,6 @@ class UsbDeviceWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[UsbDeviceWhereInput]',
-        '_or': 'list[UsbDeviceWhereInput]',
         'size': 'int',
         'size_gt': 'int',
         'size_gte': 'int',
@@ -146,6 +146,8 @@ class UsbDeviceWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'binded': 'binded',
         'binded_not': 'binded_not',
         'description': 'description',
@@ -231,8 +233,6 @@ class UsbDeviceWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'size': 'size',
         'size_gt': 'size_gt',
         'size_gte': 'size_gte',
@@ -269,6 +269,8 @@ class UsbDeviceWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._binded = None
         self._binded_not = None
         self._description = None
@@ -354,8 +356,6 @@ class UsbDeviceWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._size = None
         self._size_gt = None
         self._size_gte = None
@@ -388,6 +388,8 @@ class UsbDeviceWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.binded = kwargs.get("binded", None)
         self.binded_not = kwargs.get("binded_not", None)
         self.description = kwargs.get("description", None)
@@ -473,8 +475,6 @@ class UsbDeviceWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.size = kwargs.get("size", None)
         self.size_gt = kwargs.get("size_gt", None)
         self.size_gte = kwargs.get("size_gte", None)
@@ -525,6 +525,48 @@ class UsbDeviceWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The _not of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: list[UsbDeviceWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this UsbDeviceWhereInput.
+
+
+        :param _not: The _not of this UsbDeviceWhereInput.  # noqa: E501
+        :type _not: list[UsbDeviceWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this UsbDeviceWhereInput.  # noqa: E501
+
+
+        :return: The _or of this UsbDeviceWhereInput.  # noqa: E501
+        :rtype: list[UsbDeviceWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this UsbDeviceWhereInput.
+
+
+        :param _or: The _or of this UsbDeviceWhereInput.  # noqa: E501
+        :type _or: list[UsbDeviceWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def binded(self):
@@ -2310,48 +2352,6 @@ class UsbDeviceWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this UsbDeviceWhereInput.  # noqa: E501
-
-
-        :return: The _not of this UsbDeviceWhereInput.  # noqa: E501
-        :rtype: list[UsbDeviceWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this UsbDeviceWhereInput.
-
-
-        :param _not: The _not of this UsbDeviceWhereInput.  # noqa: E501
-        :type _not: list[UsbDeviceWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this UsbDeviceWhereInput.  # noqa: E501
-
-
-        :return: The _or of this UsbDeviceWhereInput.  # noqa: E501
-        :rtype: list[UsbDeviceWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this UsbDeviceWhereInput.
-
-
-        :param _or: The _or of this UsbDeviceWhereInput.  # noqa: E501
-        :type _or: list[UsbDeviceWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def size(self):

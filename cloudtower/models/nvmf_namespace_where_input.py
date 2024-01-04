@@ -26,6 +26,8 @@ class NvmfNamespaceWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[NvmfNamespaceWhereInput]',
+        '_not': 'list[NvmfNamespaceWhereInput]',
+        '_or': 'list[NvmfNamespaceWhereInput]',
         'assigned_size': 'int',
         'assigned_size_gt': 'int',
         'assigned_size_gte': 'int',
@@ -255,7 +257,6 @@ class NvmfNamespaceWhereInput(object):
         'namespace_id_lte': 'int',
         'namespace_id_not': 'int',
         'namespace_id_not_in': 'list[int]',
-        '_not': 'list[NvmfNamespaceWhereInput]',
         'nqn_whitelist': 'str',
         'nqn_whitelist_contains': 'str',
         'nqn_whitelist_ends_with': 'str',
@@ -271,7 +272,6 @@ class NvmfNamespaceWhereInput(object):
         'nqn_whitelist_not_starts_with': 'str',
         'nqn_whitelist_starts_with': 'str',
         'nvmf_subsystem': 'NvmfSubsystemWhereInput',
-        '_or': 'list[NvmfNamespaceWhereInput]',
         'replica_num': 'int',
         'replica_num_gt': 'int',
         'replica_num_gte': 'int',
@@ -340,6 +340,8 @@ class NvmfNamespaceWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'assigned_size': 'assigned_size',
         'assigned_size_gt': 'assigned_size_gt',
         'assigned_size_gte': 'assigned_size_gte',
@@ -569,7 +571,6 @@ class NvmfNamespaceWhereInput(object):
         'namespace_id_lte': 'namespace_id_lte',
         'namespace_id_not': 'namespace_id_not',
         'namespace_id_not_in': 'namespace_id_not_in',
-        '_not': 'NOT',
         'nqn_whitelist': 'nqn_whitelist',
         'nqn_whitelist_contains': 'nqn_whitelist_contains',
         'nqn_whitelist_ends_with': 'nqn_whitelist_ends_with',
@@ -585,7 +586,6 @@ class NvmfNamespaceWhereInput(object):
         'nqn_whitelist_not_starts_with': 'nqn_whitelist_not_starts_with',
         'nqn_whitelist_starts_with': 'nqn_whitelist_starts_with',
         'nvmf_subsystem': 'nvmf_subsystem',
-        '_or': 'OR',
         'replica_num': 'replica_num',
         'replica_num_gt': 'replica_num_gt',
         'replica_num_gte': 'replica_num_gte',
@@ -657,6 +657,8 @@ class NvmfNamespaceWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._assigned_size = None
         self._assigned_size_gt = None
         self._assigned_size_gte = None
@@ -886,7 +888,6 @@ class NvmfNamespaceWhereInput(object):
         self._namespace_id_lte = None
         self._namespace_id_not = None
         self._namespace_id_not_in = None
-        self.__not = None
         self._nqn_whitelist = None
         self._nqn_whitelist_contains = None
         self._nqn_whitelist_ends_with = None
@@ -902,7 +903,6 @@ class NvmfNamespaceWhereInput(object):
         self._nqn_whitelist_not_starts_with = None
         self._nqn_whitelist_starts_with = None
         self._nvmf_subsystem = None
-        self.__or = None
         self._replica_num = None
         self._replica_num_gt = None
         self._replica_num_gte = None
@@ -970,6 +970,8 @@ class NvmfNamespaceWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.assigned_size = kwargs.get("assigned_size", None)
         self.assigned_size_gt = kwargs.get("assigned_size_gt", None)
         self.assigned_size_gte = kwargs.get("assigned_size_gte", None)
@@ -1199,7 +1201,6 @@ class NvmfNamespaceWhereInput(object):
         self.namespace_id_lte = kwargs.get("namespace_id_lte", None)
         self.namespace_id_not = kwargs.get("namespace_id_not", None)
         self.namespace_id_not_in = kwargs.get("namespace_id_not_in", None)
-        self._not = kwargs.get("_not", None)
         self.nqn_whitelist = kwargs.get("nqn_whitelist", None)
         self.nqn_whitelist_contains = kwargs.get("nqn_whitelist_contains", None)
         self.nqn_whitelist_ends_with = kwargs.get("nqn_whitelist_ends_with", None)
@@ -1215,7 +1216,6 @@ class NvmfNamespaceWhereInput(object):
         self.nqn_whitelist_not_starts_with = kwargs.get("nqn_whitelist_not_starts_with", None)
         self.nqn_whitelist_starts_with = kwargs.get("nqn_whitelist_starts_with", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
-        self._or = kwargs.get("_or", None)
         self.replica_num = kwargs.get("replica_num", None)
         self.replica_num_gt = kwargs.get("replica_num_gt", None)
         self.replica_num_gte = kwargs.get("replica_num_gte", None)
@@ -1301,6 +1301,48 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The _not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[NvmfNamespaceWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this NvmfNamespaceWhereInput.
+
+
+        :param _not: The _not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type _not: list[NvmfNamespaceWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The _or of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[NvmfNamespaceWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this NvmfNamespaceWhereInput.
+
+
+        :param _or: The _or of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type _or: list[NvmfNamespaceWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def assigned_size(self):
@@ -6112,27 +6154,6 @@ class NvmfNamespaceWhereInput(object):
         self._namespace_id_not_in = namespace_id_not_in
 
     @property
-    def _not(self):
-        """Gets the _not of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The _not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[NvmfNamespaceWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this NvmfNamespaceWhereInput.
-
-
-        :param _not: The _not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type _not: list[NvmfNamespaceWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nqn_whitelist(self):
         """Gets the nqn_whitelist of this NvmfNamespaceWhereInput.  # noqa: E501
 
@@ -6446,27 +6467,6 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self._nvmf_subsystem = nvmf_subsystem
-
-    @property
-    def _or(self):
-        """Gets the _or of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The _or of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[NvmfNamespaceWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this NvmfNamespaceWhereInput.
-
-
-        :param _or: The _or of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type _or: list[NvmfNamespaceWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def replica_num(self):

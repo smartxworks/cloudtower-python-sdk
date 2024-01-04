@@ -26,6 +26,8 @@ class ApplicationWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ApplicationWhereInput]',
+        '_not': 'list[ApplicationWhereInput]',
+        '_or': 'list[ApplicationWhereInput]',
         'cluster': 'ClusterWhereInput',
         'error_message': 'str',
         'error_message_contains': 'str',
@@ -91,8 +93,6 @@ class ApplicationWhereInput(object):
         'memory_lte': 'int',
         'memory_not': 'int',
         'memory_not_in': 'list[int]',
-        '_not': 'list[ApplicationWhereInput]',
-        '_or': 'list[ApplicationWhereInput]',
         'state': 'ApplicationState',
         'state_in': 'list[ApplicationState]',
         'state_not': 'ApplicationState',
@@ -158,6 +158,8 @@ class ApplicationWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'error_message': 'error_message',
         'error_message_contains': 'error_message_contains',
@@ -223,8 +225,6 @@ class ApplicationWhereInput(object):
         'memory_lte': 'memory_lte',
         'memory_not': 'memory_not',
         'memory_not_in': 'memory_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'state': 'state',
         'state_in': 'state_in',
         'state_not': 'state_not',
@@ -293,6 +293,8 @@ class ApplicationWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._error_message = None
         self._error_message_contains = None
@@ -358,8 +360,6 @@ class ApplicationWhereInput(object):
         self._memory_lte = None
         self._memory_not = None
         self._memory_not_in = None
-        self.__not = None
-        self.__or = None
         self._state = None
         self._state_in = None
         self._state_not = None
@@ -424,6 +424,8 @@ class ApplicationWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.error_message = kwargs.get("error_message", None)
         self.error_message_contains = kwargs.get("error_message_contains", None)
@@ -489,8 +491,6 @@ class ApplicationWhereInput(object):
         self.memory_lte = kwargs.get("memory_lte", None)
         self.memory_not = kwargs.get("memory_not", None)
         self.memory_not_in = kwargs.get("memory_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.state = kwargs.get("state", None)
         self.state_in = kwargs.get("state_in", None)
         self.state_not = kwargs.get("state_not", None)
@@ -573,6 +573,48 @@ class ApplicationWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ApplicationWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ApplicationWhereInput.  # noqa: E501
+        :rtype: list[ApplicationWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ApplicationWhereInput.
+
+
+        :param _not: The _not of this ApplicationWhereInput.  # noqa: E501
+        :type _not: list[ApplicationWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ApplicationWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ApplicationWhereInput.  # noqa: E501
+        :rtype: list[ApplicationWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ApplicationWhereInput.
+
+
+        :param _or: The _or of this ApplicationWhereInput.  # noqa: E501
+        :type _or: list[ApplicationWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1938,48 +1980,6 @@ class ApplicationWhereInput(object):
         """
 
         self._memory_not_in = memory_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this ApplicationWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ApplicationWhereInput.  # noqa: E501
-        :rtype: list[ApplicationWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ApplicationWhereInput.
-
-
-        :param _not: The _not of this ApplicationWhereInput.  # noqa: E501
-        :type _not: list[ApplicationWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ApplicationWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ApplicationWhereInput.  # noqa: E501
-        :rtype: list[ApplicationWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ApplicationWhereInput.
-
-
-        :param _or: The _or of this ApplicationWhereInput.  # noqa: E501
-        :type _or: list[ApplicationWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def state(self):

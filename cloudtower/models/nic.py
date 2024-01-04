@@ -32,6 +32,7 @@ class Nic(object):
         'host': 'NestedHost',
         'ibdev': 'str',
         'id': 'str',
+        'iommu_status': 'IommuStatus',
         'ip_address': 'str',
         'is_sriov': 'bool',
         'labels': 'list[NestedLabel]',
@@ -52,7 +53,8 @@ class Nic(object):
         'up': 'bool',
         'used_vf_num': 'int',
         'user_usage': 'NicUserUsage',
-        'vds': 'NestedVds'
+        'vds': 'NestedVds',
+        'vms': 'list[NestedVm]'
     }
 
     attribute_map = {
@@ -63,6 +65,7 @@ class Nic(object):
         'host': 'host',
         'ibdev': 'ibdev',
         'id': 'id',
+        'iommu_status': 'iommu_status',
         'ip_address': 'ip_address',
         'is_sriov': 'is_sriov',
         'labels': 'labels',
@@ -83,7 +86,8 @@ class Nic(object):
         'up': 'up',
         'used_vf_num': 'used_vf_num',
         'user_usage': 'user_usage',
-        'vds': 'vds'
+        'vds': 'vds',
+        'vms': 'vms'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -97,6 +101,7 @@ class Nic(object):
         self._host = None
         self._ibdev = None
         self._id = None
+        self._iommu_status = None
         self._ip_address = None
         self._is_sriov = None
         self._labels = None
@@ -118,6 +123,7 @@ class Nic(object):
         self._used_vf_num = None
         self._user_usage = None
         self._vds = None
+        self._vms = None
         self.discriminator = None
 
         self.driver = kwargs.get("driver", None)
@@ -129,6 +135,7 @@ class Nic(object):
         self.ibdev = kwargs.get("ibdev", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.iommu_status = kwargs.get("iommu_status", None)
         self.ip_address = kwargs.get("ip_address", None)
         self.is_sriov = kwargs.get("is_sriov", None)
         self.labels = kwargs.get("labels", None)
@@ -157,6 +164,7 @@ class Nic(object):
         self.used_vf_num = kwargs.get("used_vf_num", None)
         self.user_usage = kwargs.get("user_usage", None)
         self.vds = kwargs.get("vds", None)
+        self.vms = kwargs.get("vms", None)
 
     @property
     def driver(self):
@@ -308,6 +316,27 @@ class Nic(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def iommu_status(self):
+        """Gets the iommu_status of this Nic.  # noqa: E501
+
+
+        :return: The iommu_status of this Nic.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu_status
+
+    @iommu_status.setter
+    def iommu_status(self, iommu_status):
+        """Sets the iommu_status of this Nic.
+
+
+        :param iommu_status: The iommu_status of this Nic.  # noqa: E501
+        :type iommu_status: IommuStatus
+        """
+
+        self._iommu_status = iommu_status
 
     @property
     def ip_address(self):
@@ -763,6 +792,27 @@ class Nic(object):
         """
 
         self._vds = vds
+
+    @property
+    def vms(self):
+        """Gets the vms of this Nic.  # noqa: E501
+
+
+        :return: The vms of this Nic.  # noqa: E501
+        :rtype: list[NestedVm]
+        """
+        return self._vms
+
+    @vms.setter
+    def vms(self, vms):
+        """Sets the vms of this Nic.
+
+
+        :param vms: The vms of this Nic.  # noqa: E501
+        :type vms: list[NestedVm]
+        """
+
+        self._vms = vms
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

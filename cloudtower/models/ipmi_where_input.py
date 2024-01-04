@@ -26,6 +26,8 @@ class IpmiWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[IpmiWhereInput]',
+        '_not': 'list[IpmiWhereInput]',
+        '_or': 'list[IpmiWhereInput]',
         'host': 'HostWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -69,8 +71,6 @@ class IpmiWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        '_not': 'list[IpmiWhereInput]',
-        '_or': 'list[IpmiWhereInput]',
         'username': 'str',
         'username_contains': 'str',
         'username_ends_with': 'str',
@@ -91,6 +91,8 @@ class IpmiWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'host': 'host',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -134,8 +136,6 @@ class IpmiWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'username': 'username',
         'username_contains': 'username_contains',
         'username_ends_with': 'username_ends_with',
@@ -159,6 +159,8 @@ class IpmiWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._host = None
         self._id = None
         self._id_contains = None
@@ -202,8 +204,6 @@ class IpmiWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._username = None
         self._username_contains = None
         self._username_ends_with = None
@@ -223,6 +223,8 @@ class IpmiWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.host = kwargs.get("host", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -266,8 +268,6 @@ class IpmiWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.username = kwargs.get("username", None)
         self.username_contains = kwargs.get("username_contains", None)
         self.username_ends_with = kwargs.get("username_ends_with", None)
@@ -305,6 +305,48 @@ class IpmiWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this IpmiWhereInput.  # noqa: E501
+
+
+        :return: The _not of this IpmiWhereInput.  # noqa: E501
+        :rtype: list[IpmiWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this IpmiWhereInput.
+
+
+        :param _not: The _not of this IpmiWhereInput.  # noqa: E501
+        :type _not: list[IpmiWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this IpmiWhereInput.  # noqa: E501
+
+
+        :return: The _or of this IpmiWhereInput.  # noqa: E501
+        :rtype: list[IpmiWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this IpmiWhereInput.
+
+
+        :param _or: The _or of this IpmiWhereInput.  # noqa: E501
+        :type _or: list[IpmiWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def host(self):
@@ -1208,48 +1250,6 @@ class IpmiWhereInput(object):
         """
 
         self._local_id_starts_with = local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this IpmiWhereInput.  # noqa: E501
-
-
-        :return: The _not of this IpmiWhereInput.  # noqa: E501
-        :rtype: list[IpmiWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this IpmiWhereInput.
-
-
-        :param _not: The _not of this IpmiWhereInput.  # noqa: E501
-        :type _not: list[IpmiWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this IpmiWhereInput.  # noqa: E501
-
-
-        :return: The _or of this IpmiWhereInput.  # noqa: E501
-        :rtype: list[IpmiWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this IpmiWhereInput.
-
-
-        :param _or: The _or of this IpmiWhereInput.  # noqa: E501
-        :type _or: list[IpmiWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def username(self):

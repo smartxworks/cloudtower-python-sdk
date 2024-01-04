@@ -26,6 +26,8 @@ class SnapshotGroupWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SnapshotGroupWhereInput]',
+        '_not': 'list[SnapshotGroupWhereInput]',
+        '_or': 'list[SnapshotGroupWhereInput]',
         'cluster': 'ClusterWhereInput',
         'deleted': 'bool',
         'deleted_not': 'bool',
@@ -103,7 +105,6 @@ class SnapshotGroupWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[SnapshotGroupWhereInput]',
         'object_num': 'int',
         'object_num_gt': 'int',
         'object_num_gte': 'int',
@@ -112,7 +113,6 @@ class SnapshotGroupWhereInput(object):
         'object_num_lte': 'int',
         'object_num_not': 'int',
         'object_num_not_in': 'list[int]',
-        '_or': 'list[SnapshotGroupWhereInput]',
         'snapshot_plan_task': 'SnapshotPlanTaskWhereInput',
         'vm_snapshots_every': 'VmSnapshotWhereInput',
         'vm_snapshots_none': 'VmSnapshotWhereInput',
@@ -121,6 +121,8 @@ class SnapshotGroupWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'deleted': 'deleted',
         'deleted_not': 'deleted_not',
@@ -198,7 +200,6 @@ class SnapshotGroupWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'object_num': 'object_num',
         'object_num_gt': 'object_num_gt',
         'object_num_gte': 'object_num_gte',
@@ -207,7 +208,6 @@ class SnapshotGroupWhereInput(object):
         'object_num_lte': 'object_num_lte',
         'object_num_not': 'object_num_not',
         'object_num_not_in': 'object_num_not_in',
-        '_or': 'OR',
         'snapshot_plan_task': 'snapshotPlanTask',
         'vm_snapshots_every': 'vm_snapshots_every',
         'vm_snapshots_none': 'vm_snapshots_none',
@@ -219,6 +219,8 @@ class SnapshotGroupWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._deleted = None
         self._deleted_not = None
@@ -296,7 +298,6 @@ class SnapshotGroupWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._object_num = None
         self._object_num_gt = None
         self._object_num_gte = None
@@ -305,7 +306,6 @@ class SnapshotGroupWhereInput(object):
         self._object_num_lte = None
         self._object_num_not = None
         self._object_num_not_in = None
-        self.__or = None
         self._snapshot_plan_task = None
         self._vm_snapshots_every = None
         self._vm_snapshots_none = None
@@ -313,6 +313,8 @@ class SnapshotGroupWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.deleted = kwargs.get("deleted", None)
         self.deleted_not = kwargs.get("deleted_not", None)
@@ -390,7 +392,6 @@ class SnapshotGroupWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.object_num = kwargs.get("object_num", None)
         self.object_num_gt = kwargs.get("object_num_gt", None)
         self.object_num_gte = kwargs.get("object_num_gte", None)
@@ -399,7 +400,6 @@ class SnapshotGroupWhereInput(object):
         self.object_num_lte = kwargs.get("object_num_lte", None)
         self.object_num_not = kwargs.get("object_num_not", None)
         self.object_num_not_in = kwargs.get("object_num_not_in", None)
-        self._or = kwargs.get("_or", None)
         self.snapshot_plan_task = kwargs.get("snapshot_plan_task", None)
         self.vm_snapshots_every = kwargs.get("vm_snapshots_every", None)
         self.vm_snapshots_none = kwargs.get("vm_snapshots_none", None)
@@ -425,6 +425,48 @@ class SnapshotGroupWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SnapshotGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SnapshotGroupWhereInput.  # noqa: E501
+        :rtype: list[SnapshotGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SnapshotGroupWhereInput.
+
+
+        :param _not: The _not of this SnapshotGroupWhereInput.  # noqa: E501
+        :type _not: list[SnapshotGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SnapshotGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SnapshotGroupWhereInput.  # noqa: E501
+        :rtype: list[SnapshotGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SnapshotGroupWhereInput.
+
+
+        :param _or: The _or of this SnapshotGroupWhereInput.  # noqa: E501
+        :type _or: list[SnapshotGroupWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2044,27 +2086,6 @@ class SnapshotGroupWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this SnapshotGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SnapshotGroupWhereInput.  # noqa: E501
-        :rtype: list[SnapshotGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SnapshotGroupWhereInput.
-
-
-        :param _not: The _not of this SnapshotGroupWhereInput.  # noqa: E501
-        :type _not: list[SnapshotGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def object_num(self):
         """Gets the object_num of this SnapshotGroupWhereInput.  # noqa: E501
 
@@ -2231,27 +2252,6 @@ class SnapshotGroupWhereInput(object):
         """
 
         self._object_num_not_in = object_num_not_in
-
-    @property
-    def _or(self):
-        """Gets the _or of this SnapshotGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SnapshotGroupWhereInput.  # noqa: E501
-        :rtype: list[SnapshotGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SnapshotGroupWhereInput.
-
-
-        :param _or: The _or of this SnapshotGroupWhereInput.  # noqa: E501
-        :type _or: list[SnapshotGroupWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def snapshot_plan_task(self):

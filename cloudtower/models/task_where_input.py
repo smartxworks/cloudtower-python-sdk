@@ -26,6 +26,8 @@ class TaskWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[TaskWhereInput]',
+        '_not': 'list[TaskWhereInput]',
+        '_or': 'list[TaskWhereInput]',
         'cluster': 'ClusterWhereInput',
         'description': 'str',
         'description_contains': 'str',
@@ -115,8 +117,6 @@ class TaskWhereInput(object):
         'local_created_at_lte': 'str',
         'local_created_at_not': 'str',
         'local_created_at_not_in': 'list[str]',
-        '_not': 'list[TaskWhereInput]',
-        '_or': 'list[TaskWhereInput]',
         'progress': 'float',
         'progress_gt': 'float',
         'progress_gte': 'float',
@@ -226,6 +226,8 @@ class TaskWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'description': 'description',
         'description_contains': 'description_contains',
@@ -315,8 +317,6 @@ class TaskWhereInput(object):
         'local_created_at_lte': 'local_created_at_lte',
         'local_created_at_not': 'local_created_at_not',
         'local_created_at_not_in': 'local_created_at_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'progress': 'progress',
         'progress_gt': 'progress_gt',
         'progress_gte': 'progress_gte',
@@ -429,6 +429,8 @@ class TaskWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._description = None
         self._description_contains = None
@@ -518,8 +520,6 @@ class TaskWhereInput(object):
         self._local_created_at_lte = None
         self._local_created_at_not = None
         self._local_created_at_not_in = None
-        self.__not = None
-        self.__or = None
         self._progress = None
         self._progress_gt = None
         self._progress_gte = None
@@ -628,6 +628,8 @@ class TaskWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
@@ -717,8 +719,6 @@ class TaskWhereInput(object):
         self.local_created_at_lte = kwargs.get("local_created_at_lte", None)
         self.local_created_at_not = kwargs.get("local_created_at_not", None)
         self.local_created_at_not_in = kwargs.get("local_created_at_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.progress = kwargs.get("progress", None)
         self.progress_gt = kwargs.get("progress_gt", None)
         self.progress_gte = kwargs.get("progress_gte", None)
@@ -845,6 +845,48 @@ class TaskWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this TaskWhereInput.  # noqa: E501
+
+
+        :return: The _not of this TaskWhereInput.  # noqa: E501
+        :rtype: list[TaskWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this TaskWhereInput.
+
+
+        :param _not: The _not of this TaskWhereInput.  # noqa: E501
+        :type _not: list[TaskWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this TaskWhereInput.  # noqa: E501
+
+
+        :return: The _or of this TaskWhereInput.  # noqa: E501
+        :rtype: list[TaskWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this TaskWhereInput.
+
+
+        :param _or: The _or of this TaskWhereInput.  # noqa: E501
+        :type _or: list[TaskWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2714,48 +2756,6 @@ class TaskWhereInput(object):
         """
 
         self._local_created_at_not_in = local_created_at_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this TaskWhereInput.  # noqa: E501
-
-
-        :return: The _not of this TaskWhereInput.  # noqa: E501
-        :rtype: list[TaskWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this TaskWhereInput.
-
-
-        :param _not: The _not of this TaskWhereInput.  # noqa: E501
-        :type _not: list[TaskWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this TaskWhereInput.  # noqa: E501
-
-
-        :return: The _or of this TaskWhereInput.  # noqa: E501
-        :rtype: list[TaskWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this TaskWhereInput.
-
-
-        :param _or: The _or of this TaskWhereInput.  # noqa: E501
-        :type _or: list[TaskWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def progress(self):

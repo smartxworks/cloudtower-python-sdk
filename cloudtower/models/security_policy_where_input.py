@@ -26,6 +26,8 @@ class SecurityPolicyWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SecurityPolicyWhereInput]',
+        '_not': 'list[SecurityPolicyWhereInput]',
+        '_or': 'list[SecurityPolicyWhereInput]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -69,8 +71,6 @@ class SecurityPolicyWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[SecurityPolicyWhereInput]',
-        '_or': 'list[SecurityPolicyWhereInput]',
         'policy_mode': 'PolicyMode',
         'policy_mode_in': 'list[PolicyMode]',
         'policy_mode_not': 'PolicyMode',
@@ -79,6 +79,8 @@ class SecurityPolicyWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -122,8 +124,6 @@ class SecurityPolicyWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'policy_mode': 'policy_mode',
         'policy_mode_in': 'policy_mode_in',
         'policy_mode_not': 'policy_mode_not',
@@ -135,6 +135,8 @@ class SecurityPolicyWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -178,8 +180,6 @@ class SecurityPolicyWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._policy_mode = None
         self._policy_mode_in = None
         self._policy_mode_not = None
@@ -187,6 +187,8 @@ class SecurityPolicyWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -230,8 +232,6 @@ class SecurityPolicyWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.policy_mode = kwargs.get("policy_mode", None)
         self.policy_mode_in = kwargs.get("policy_mode_in", None)
         self.policy_mode_not = kwargs.get("policy_mode_not", None)
@@ -257,6 +257,48 @@ class SecurityPolicyWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SecurityPolicyWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SecurityPolicyWhereInput.  # noqa: E501
+        :rtype: list[SecurityPolicyWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SecurityPolicyWhereInput.
+
+
+        :param _not: The _not of this SecurityPolicyWhereInput.  # noqa: E501
+        :type _not: list[SecurityPolicyWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SecurityPolicyWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SecurityPolicyWhereInput.  # noqa: E501
+        :rtype: list[SecurityPolicyWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SecurityPolicyWhereInput.
+
+
+        :param _or: The _or of this SecurityPolicyWhereInput.  # noqa: E501
+        :type _or: list[SecurityPolicyWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def description(self):
@@ -1160,48 +1202,6 @@ class SecurityPolicyWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SecurityPolicyWhereInput.  # noqa: E501
-        :rtype: list[SecurityPolicyWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SecurityPolicyWhereInput.
-
-
-        :param _not: The _not of this SecurityPolicyWhereInput.  # noqa: E501
-        :type _not: list[SecurityPolicyWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SecurityPolicyWhereInput.  # noqa: E501
-        :rtype: list[SecurityPolicyWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SecurityPolicyWhereInput.
-
-
-        :param _or: The _or of this SecurityPolicyWhereInput.  # noqa: E501
-        :type _or: list[SecurityPolicyWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def policy_mode(self):

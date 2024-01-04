@@ -25,6 +25,7 @@ class VmCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner': 'VmOwnerParams',
         'gpu_devices': 'list[VmGpuOperationParams]',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
         'max_bandwidth_unit': 'BPSUnit',
@@ -53,6 +54,7 @@ class VmCreationParams(object):
     }
 
     attribute_map = {
+        'owner': 'owner',
         'gpu_devices': 'gpu_devices',
         'max_bandwidth_policy': 'max_bandwidth_policy',
         'max_bandwidth_unit': 'max_bandwidth_unit',
@@ -84,6 +86,7 @@ class VmCreationParams(object):
         """VmCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._owner = None
         self._gpu_devices = None
         self._max_bandwidth_policy = None
         self._max_bandwidth_unit = None
@@ -111,6 +114,8 @@ class VmCreationParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "owner" in kwargs:
+            self.owner = kwargs["owner"]
         if "gpu_devices" in kwargs:
             self.gpu_devices = kwargs["gpu_devices"]
         if "max_bandwidth_policy" in kwargs:
@@ -161,6 +166,27 @@ class VmCreationParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def owner(self):
+        """Gets the owner of this VmCreationParams.  # noqa: E501
+
+
+        :return: The owner of this VmCreationParams.  # noqa: E501
+        :rtype: VmOwnerParams
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this VmCreationParams.
+
+
+        :param owner: The owner of this VmCreationParams.  # noqa: E501
+        :type owner: VmOwnerParams
+        """
+
+        self._owner = owner
 
     @property
     def gpu_devices(self):

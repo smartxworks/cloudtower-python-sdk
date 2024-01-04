@@ -22,10 +22,11 @@ class DiskHealthStatus(object):
     """
     HEALTHY = "HEALTHY"
     SMART_FAILED = "SMART_FAILED"
+    SOFTWARE_RAID_FAILURE = "SOFTWARE_RAID_FAILURE"
     SUBHEALTHY = "SUBHEALTHY"
     UNHEALTHY = "UNHEALTHY"
 
-    allowable_values = [HEALTHY, SMART_FAILED, SUBHEALTHY, UNHEALTHY]  # noqa: E501
+    allowable_values = [HEALTHY, SMART_FAILED, SOFTWARE_RAID_FAILURE, SUBHEALTHY, UNHEALTHY]  # noqa: E501
 
     """
     Attributes:

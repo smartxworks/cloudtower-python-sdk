@@ -26,6 +26,8 @@ class SnapshotPlanTaskWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SnapshotPlanTaskWhereInput]',
+        '_not': 'list[SnapshotPlanTaskWhereInput]',
+        '_or': 'list[SnapshotPlanTaskWhereInput]',
         'cluster': 'ClusterWhereInput',
         'end_time': 'str',
         'end_time_gt': 'str',
@@ -69,8 +71,6 @@ class SnapshotPlanTaskWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        '_not': 'list[SnapshotPlanTaskWhereInput]',
-        '_or': 'list[SnapshotPlanTaskWhereInput]',
         'snapshot_group': 'SnapshotGroupWhereInput',
         'snapshot_plan': 'SnapshotPlanWhereInput',
         'start_time': 'str',
@@ -93,6 +93,8 @@ class SnapshotPlanTaskWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'end_time': 'end_time',
         'end_time_gt': 'end_time_gt',
@@ -136,8 +138,6 @@ class SnapshotPlanTaskWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'snapshot_group': 'snapshotGroup',
         'snapshot_plan': 'snapshotPlan',
         'start_time': 'start_time',
@@ -163,6 +163,8 @@ class SnapshotPlanTaskWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._end_time = None
         self._end_time_gt = None
@@ -206,8 +208,6 @@ class SnapshotPlanTaskWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._snapshot_group = None
         self._snapshot_plan = None
         self._start_time = None
@@ -229,6 +229,8 @@ class SnapshotPlanTaskWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.end_time = kwargs.get("end_time", None)
         self.end_time_gt = kwargs.get("end_time_gt", None)
@@ -272,8 +274,6 @@ class SnapshotPlanTaskWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.snapshot_group = kwargs.get("snapshot_group", None)
         self.snapshot_plan = kwargs.get("snapshot_plan", None)
         self.start_time = kwargs.get("start_time", None)
@@ -313,6 +313,48 @@ class SnapshotPlanTaskWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
+        :rtype: list[SnapshotPlanTaskWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SnapshotPlanTaskWhereInput.
+
+
+        :param _not: The _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
+        :type _not: list[SnapshotPlanTaskWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
+        :rtype: list[SnapshotPlanTaskWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SnapshotPlanTaskWhereInput.
+
+
+        :param _or: The _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
+        :type _or: list[SnapshotPlanTaskWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1216,48 +1258,6 @@ class SnapshotPlanTaskWhereInput(object):
         """
 
         self._local_id_starts_with = local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
-        :rtype: list[SnapshotPlanTaskWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SnapshotPlanTaskWhereInput.
-
-
-        :param _not: The _not of this SnapshotPlanTaskWhereInput.  # noqa: E501
-        :type _not: list[SnapshotPlanTaskWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
-        :rtype: list[SnapshotPlanTaskWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SnapshotPlanTaskWhereInput.
-
-
-        :param _or: The _or of this SnapshotPlanTaskWhereInput.  # noqa: E501
-        :type _or: list[SnapshotPlanTaskWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def snapshot_group(self):

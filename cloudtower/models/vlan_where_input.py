@@ -26,6 +26,8 @@ class VlanWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VlanWhereInput]',
+        '_not': 'list[VlanWhereInput]',
+        '_or': 'list[VlanWhereInput]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -107,8 +109,6 @@ class VlanWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[VlanWhereInput]',
-        '_or': 'list[VlanWhereInput]',
         'qos_max_bandwidth': 'float',
         'qos_max_bandwidth_gt': 'float',
         'qos_max_bandwidth_gte': 'float',
@@ -167,6 +167,8 @@ class VlanWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -248,8 +250,6 @@ class VlanWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'qos_max_bandwidth': 'qos_max_bandwidth',
         'qos_max_bandwidth_gt': 'qos_max_bandwidth_gt',
         'qos_max_bandwidth_gte': 'qos_max_bandwidth_gte',
@@ -311,6 +311,8 @@ class VlanWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -392,8 +394,6 @@ class VlanWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._qos_max_bandwidth = None
         self._qos_max_bandwidth_gt = None
         self._qos_max_bandwidth_gte = None
@@ -451,6 +451,8 @@ class VlanWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -532,8 +534,6 @@ class VlanWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
         self.qos_max_bandwidth_gt = kwargs.get("qos_max_bandwidth_gt", None)
         self.qos_max_bandwidth_gte = kwargs.get("qos_max_bandwidth_gte", None)
@@ -609,6 +609,48 @@ class VlanWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VlanWhereInput.  # noqa: E501
+        :rtype: list[VlanWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VlanWhereInput.
+
+
+        :param _not: The _not of this VlanWhereInput.  # noqa: E501
+        :type _not: list[VlanWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VlanWhereInput.  # noqa: E501
+        :rtype: list[VlanWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VlanWhereInput.
+
+
+        :param _or: The _or of this VlanWhereInput.  # noqa: E501
+        :type _or: list[VlanWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def entity_async_status(self):
@@ -2310,48 +2352,6 @@ class VlanWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VlanWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VlanWhereInput.  # noqa: E501
-        :rtype: list[VlanWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VlanWhereInput.
-
-
-        :param _not: The _not of this VlanWhereInput.  # noqa: E501
-        :type _not: list[VlanWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VlanWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VlanWhereInput.  # noqa: E501
-        :rtype: list[VlanWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VlanWhereInput.
-
-
-        :param _or: The _or of this VlanWhereInput.  # noqa: E501
-        :type _or: list[VlanWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def qos_max_bandwidth(self):

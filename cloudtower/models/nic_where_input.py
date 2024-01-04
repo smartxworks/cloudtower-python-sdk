@@ -26,6 +26,8 @@ class NicWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[NicWhereInput]',
+        '_not': 'list[NicWhereInput]',
+        '_or': 'list[NicWhereInput]',
         'driver': 'str',
         'driver_contains': 'str',
         'driver_ends_with': 'str',
@@ -91,6 +93,10 @@ class NicWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'iommu_status': 'IommuStatus',
+        'iommu_status_in': 'list[IommuStatus]',
+        'iommu_status_not': 'IommuStatus',
+        'iommu_status_not_in': 'list[IommuStatus]',
         'ip_address': 'str',
         'ip_address_contains': 'str',
         'ip_address_ends_with': 'str',
@@ -196,8 +202,6 @@ class NicWhereInput(object):
         'nic_uuid_not_in': 'list[str]',
         'nic_uuid_not_starts_with': 'str',
         'nic_uuid_starts_with': 'str',
-        '_not': 'list[NicWhereInput]',
-        '_or': 'list[NicWhereInput]',
         'physical': 'bool',
         'physical_not': 'bool',
         'rdma_enabled': 'bool',
@@ -252,11 +256,16 @@ class NicWhereInput(object):
         'user_usage_in': 'list[NicUserUsage]',
         'user_usage_not': 'NicUserUsage',
         'user_usage_not_in': 'list[NicUserUsage]',
-        'vds': 'VdsWhereInput'
+        'vds': 'VdsWhereInput',
+        'vms_every': 'VmWhereInput',
+        'vms_none': 'VmWhereInput',
+        'vms_some': 'VmWhereInput'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'driver': 'driver',
         'driver_contains': 'driver_contains',
         'driver_ends_with': 'driver_ends_with',
@@ -322,6 +331,10 @@ class NicWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'iommu_status': 'iommu_status',
+        'iommu_status_in': 'iommu_status_in',
+        'iommu_status_not': 'iommu_status_not',
+        'iommu_status_not_in': 'iommu_status_not_in',
         'ip_address': 'ip_address',
         'ip_address_contains': 'ip_address_contains',
         'ip_address_ends_with': 'ip_address_ends_with',
@@ -427,8 +440,6 @@ class NicWhereInput(object):
         'nic_uuid_not_in': 'nic_uuid_not_in',
         'nic_uuid_not_starts_with': 'nic_uuid_not_starts_with',
         'nic_uuid_starts_with': 'nic_uuid_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'physical': 'physical',
         'physical_not': 'physical_not',
         'rdma_enabled': 'rdma_enabled',
@@ -483,7 +494,10 @@ class NicWhereInput(object):
         'user_usage_in': 'user_usage_in',
         'user_usage_not': 'user_usage_not',
         'user_usage_not_in': 'user_usage_not_in',
-        'vds': 'vds'
+        'vds': 'vds',
+        'vms_every': 'vms_every',
+        'vms_none': 'vms_none',
+        'vms_some': 'vms_some'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -491,6 +505,8 @@ class NicWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._driver = None
         self._driver_contains = None
         self._driver_ends_with = None
@@ -556,6 +572,10 @@ class NicWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._iommu_status = None
+        self._iommu_status_in = None
+        self._iommu_status_not = None
+        self._iommu_status_not_in = None
         self._ip_address = None
         self._ip_address_contains = None
         self._ip_address_ends_with = None
@@ -661,8 +681,6 @@ class NicWhereInput(object):
         self._nic_uuid_not_in = None
         self._nic_uuid_not_starts_with = None
         self._nic_uuid_starts_with = None
-        self.__not = None
-        self.__or = None
         self._physical = None
         self._physical_not = None
         self._rdma_enabled = None
@@ -718,9 +736,14 @@ class NicWhereInput(object):
         self._user_usage_not = None
         self._user_usage_not_in = None
         self._vds = None
+        self._vms_every = None
+        self._vms_none = None
+        self._vms_some = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.driver = kwargs.get("driver", None)
         self.driver_contains = kwargs.get("driver_contains", None)
         self.driver_ends_with = kwargs.get("driver_ends_with", None)
@@ -786,6 +809,10 @@ class NicWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.iommu_status = kwargs.get("iommu_status", None)
+        self.iommu_status_in = kwargs.get("iommu_status_in", None)
+        self.iommu_status_not = kwargs.get("iommu_status_not", None)
+        self.iommu_status_not_in = kwargs.get("iommu_status_not_in", None)
         self.ip_address = kwargs.get("ip_address", None)
         self.ip_address_contains = kwargs.get("ip_address_contains", None)
         self.ip_address_ends_with = kwargs.get("ip_address_ends_with", None)
@@ -891,8 +918,6 @@ class NicWhereInput(object):
         self.nic_uuid_not_in = kwargs.get("nic_uuid_not_in", None)
         self.nic_uuid_not_starts_with = kwargs.get("nic_uuid_not_starts_with", None)
         self.nic_uuid_starts_with = kwargs.get("nic_uuid_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.physical = kwargs.get("physical", None)
         self.physical_not = kwargs.get("physical_not", None)
         self.rdma_enabled = kwargs.get("rdma_enabled", None)
@@ -948,6 +973,9 @@ class NicWhereInput(object):
         self.user_usage_not = kwargs.get("user_usage_not", None)
         self.user_usage_not_in = kwargs.get("user_usage_not_in", None)
         self.vds = kwargs.get("vds", None)
+        self.vms_every = kwargs.get("vms_every", None)
+        self.vms_none = kwargs.get("vms_none", None)
+        self.vms_some = kwargs.get("vms_some", None)
 
     @property
     def _and(self):
@@ -969,6 +997,48 @@ class NicWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this NicWhereInput.  # noqa: E501
+
+
+        :return: The _not of this NicWhereInput.  # noqa: E501
+        :rtype: list[NicWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this NicWhereInput.
+
+
+        :param _not: The _not of this NicWhereInput.  # noqa: E501
+        :type _not: list[NicWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this NicWhereInput.  # noqa: E501
+
+
+        :return: The _or of this NicWhereInput.  # noqa: E501
+        :rtype: list[NicWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this NicWhereInput.
+
+
+        :param _or: The _or of this NicWhereInput.  # noqa: E501
+        :type _or: list[NicWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def driver(self):
@@ -2334,6 +2404,90 @@ class NicWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def iommu_status(self):
+        """Gets the iommu_status of this NicWhereInput.  # noqa: E501
+
+
+        :return: The iommu_status of this NicWhereInput.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu_status
+
+    @iommu_status.setter
+    def iommu_status(self, iommu_status):
+        """Sets the iommu_status of this NicWhereInput.
+
+
+        :param iommu_status: The iommu_status of this NicWhereInput.  # noqa: E501
+        :type iommu_status: IommuStatus
+        """
+
+        self._iommu_status = iommu_status
+
+    @property
+    def iommu_status_in(self):
+        """Gets the iommu_status_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The iommu_status_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[IommuStatus]
+        """
+        return self._iommu_status_in
+
+    @iommu_status_in.setter
+    def iommu_status_in(self, iommu_status_in):
+        """Sets the iommu_status_in of this NicWhereInput.
+
+
+        :param iommu_status_in: The iommu_status_in of this NicWhereInput.  # noqa: E501
+        :type iommu_status_in: list[IommuStatus]
+        """
+
+        self._iommu_status_in = iommu_status_in
+
+    @property
+    def iommu_status_not(self):
+        """Gets the iommu_status_not of this NicWhereInput.  # noqa: E501
+
+
+        :return: The iommu_status_not of this NicWhereInput.  # noqa: E501
+        :rtype: IommuStatus
+        """
+        return self._iommu_status_not
+
+    @iommu_status_not.setter
+    def iommu_status_not(self, iommu_status_not):
+        """Sets the iommu_status_not of this NicWhereInput.
+
+
+        :param iommu_status_not: The iommu_status_not of this NicWhereInput.  # noqa: E501
+        :type iommu_status_not: IommuStatus
+        """
+
+        self._iommu_status_not = iommu_status_not
+
+    @property
+    def iommu_status_not_in(self):
+        """Gets the iommu_status_not_in of this NicWhereInput.  # noqa: E501
+
+
+        :return: The iommu_status_not_in of this NicWhereInput.  # noqa: E501
+        :rtype: list[IommuStatus]
+        """
+        return self._iommu_status_not_in
+
+    @iommu_status_not_in.setter
+    def iommu_status_not_in(self, iommu_status_not_in):
+        """Sets the iommu_status_not_in of this NicWhereInput.
+
+
+        :param iommu_status_not_in: The iommu_status_not_in of this NicWhereInput.  # noqa: E501
+        :type iommu_status_not_in: list[IommuStatus]
+        """
+
+        self._iommu_status_not_in = iommu_status_not_in
 
     @property
     def ip_address(self):
@@ -4541,48 +4695,6 @@ class NicWhereInput(object):
         self._nic_uuid_starts_with = nic_uuid_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this NicWhereInput.  # noqa: E501
-
-
-        :return: The _not of this NicWhereInput.  # noqa: E501
-        :rtype: list[NicWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this NicWhereInput.
-
-
-        :param _not: The _not of this NicWhereInput.  # noqa: E501
-        :type _not: list[NicWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this NicWhereInput.  # noqa: E501
-
-
-        :return: The _or of this NicWhereInput.  # noqa: E501
-        :rtype: list[NicWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this NicWhereInput.
-
-
-        :param _or: The _or of this NicWhereInput.  # noqa: E501
-        :type _or: list[NicWhereInput]
-        """
-
-        self.__or = _or
-
-    @property
     def physical(self):
         """Gets the physical of this NicWhereInput.  # noqa: E501
 
@@ -5736,6 +5848,69 @@ class NicWhereInput(object):
         """
 
         self._vds = vds
+
+    @property
+    def vms_every(self):
+        """Gets the vms_every of this NicWhereInput.  # noqa: E501
+
+
+        :return: The vms_every of this NicWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_every
+
+    @vms_every.setter
+    def vms_every(self, vms_every):
+        """Sets the vms_every of this NicWhereInput.
+
+
+        :param vms_every: The vms_every of this NicWhereInput.  # noqa: E501
+        :type vms_every: VmWhereInput
+        """
+
+        self._vms_every = vms_every
+
+    @property
+    def vms_none(self):
+        """Gets the vms_none of this NicWhereInput.  # noqa: E501
+
+
+        :return: The vms_none of this NicWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_none
+
+    @vms_none.setter
+    def vms_none(self, vms_none):
+        """Sets the vms_none of this NicWhereInput.
+
+
+        :param vms_none: The vms_none of this NicWhereInput.  # noqa: E501
+        :type vms_none: VmWhereInput
+        """
+
+        self._vms_none = vms_none
+
+    @property
+    def vms_some(self):
+        """Gets the vms_some of this NicWhereInput.  # noqa: E501
+
+
+        :return: The vms_some of this NicWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_some
+
+    @vms_some.setter
+    def vms_some(self, vms_some):
+        """Sets the vms_some of this NicWhereInput.
+
+
+        :param vms_some: The vms_some of this NicWhereInput.  # noqa: E501
+        :type vms_some: VmWhereInput
+        """
+
+        self._vms_some = vms_some
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

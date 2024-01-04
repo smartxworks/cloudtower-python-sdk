@@ -25,6 +25,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'owner': 'VmOwnerParams',
         'gpu_devices': 'list[VmGpuOperationParams]',
         'cloud_init': 'TemplateCloudInit',
         'is_full_copy': 'bool',
@@ -56,6 +57,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
     }
 
     attribute_map = {
+        'owner': 'owner',
         'gpu_devices': 'gpu_devices',
         'cloud_init': 'cloud_init',
         'is_full_copy': 'is_full_copy',
@@ -90,6 +92,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """VmCreateVmFromContentLibraryTemplateParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._owner = None
         self._gpu_devices = None
         self._cloud_init = None
         self._is_full_copy = None
@@ -120,6 +123,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "owner" in kwargs:
+            self.owner = kwargs["owner"]
         if "gpu_devices" in kwargs:
             self.gpu_devices = kwargs["gpu_devices"]
         if "cloud_init" in kwargs:
@@ -176,6 +181,27 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def owner(self):
+        """Gets the owner of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The owner of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: VmOwnerParams
+        """
+        return self._owner
+
+    @owner.setter
+    def owner(self, owner):
+        """Sets the owner of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param owner: The owner of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type owner: VmOwnerParams
+        """
+
+        self._owner = owner
 
     @property
     def gpu_devices(self):

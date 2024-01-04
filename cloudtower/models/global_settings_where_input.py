@@ -26,6 +26,8 @@ class GlobalSettingsWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[GlobalSettingsWhereInput]',
+        '_not': 'list[GlobalSettingsWhereInput]',
+        '_or': 'list[GlobalSettingsWhereInput]',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -39,13 +41,13 @@ class GlobalSettingsWhereInput(object):
         'id_not_ends_with': 'str',
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
-        'id_starts_with': 'str',
-        '_not': 'list[GlobalSettingsWhereInput]',
-        '_or': 'list[GlobalSettingsWhereInput]'
+        'id_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -59,9 +61,7 @@ class GlobalSettingsWhereInput(object):
         'id_not_ends_with': 'id_not_ends_with',
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
-        'id_starts_with': 'id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR'
+        'id_starts_with': 'id_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -69,6 +69,8 @@ class GlobalSettingsWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -83,11 +85,11 @@ class GlobalSettingsWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self.__not = None
-        self.__or = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -102,8 +104,6 @@ class GlobalSettingsWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
 
     @property
     def _and(self):
@@ -125,6 +125,48 @@ class GlobalSettingsWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this GlobalSettingsWhereInput.  # noqa: E501
+
+
+        :return: The _not of this GlobalSettingsWhereInput.  # noqa: E501
+        :rtype: list[GlobalSettingsWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this GlobalSettingsWhereInput.
+
+
+        :param _not: The _not of this GlobalSettingsWhereInput.  # noqa: E501
+        :type _not: list[GlobalSettingsWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this GlobalSettingsWhereInput.  # noqa: E501
+
+
+        :return: The _or of this GlobalSettingsWhereInput.  # noqa: E501
+        :rtype: list[GlobalSettingsWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this GlobalSettingsWhereInput.
+
+
+        :param _or: The _or of this GlobalSettingsWhereInput.  # noqa: E501
+        :type _or: list[GlobalSettingsWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def id(self):
@@ -419,48 +461,6 @@ class GlobalSettingsWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this GlobalSettingsWhereInput.  # noqa: E501
-
-
-        :return: The _not of this GlobalSettingsWhereInput.  # noqa: E501
-        :rtype: list[GlobalSettingsWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this GlobalSettingsWhereInput.
-
-
-        :param _not: The _not of this GlobalSettingsWhereInput.  # noqa: E501
-        :type _not: list[GlobalSettingsWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this GlobalSettingsWhereInput.  # noqa: E501
-
-
-        :return: The _or of this GlobalSettingsWhereInput.  # noqa: E501
-        :rtype: list[GlobalSettingsWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this GlobalSettingsWhereInput.
-
-
-        :param _or: The _or of this GlobalSettingsWhereInput.  # noqa: E501
-        :type _or: list[GlobalSettingsWhereInput]
-        """
-
-        self.__or = _or
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -25,8 +25,9 @@ class TaskType(object):
     HOST_PLUGIN = "HOST_PLUGIN"
     REPLICATION = "REPLICATION"
     RESOLVER = "RESOLVER"
+    SFS = "SFS"
 
-    allowable_values = [APPLICATION, BACKUP, HOST_PLUGIN, REPLICATION, RESOLVER]  # noqa: E501
+    allowable_values = [APPLICATION, BACKUP, HOST_PLUGIN, REPLICATION, RESOLVER, SFS]  # noqa: E501
 
     """
     Attributes:

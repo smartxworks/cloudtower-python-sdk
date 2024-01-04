@@ -26,6 +26,8 @@ class EverouteLicenseWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[EverouteLicenseWhereInput]',
+        '_not': 'list[EverouteLicenseWhereInput]',
+        '_or': 'list[EverouteLicenseWhereInput]',
         'code': 'str',
         'code_contains': 'str',
         'code_ends_with': 'str',
@@ -70,8 +72,6 @@ class EverouteLicenseWhereInput(object):
         'max_socket_num_lte': 'int',
         'max_socket_num_not': 'int',
         'max_socket_num_not_in': 'list[int]',
-        '_not': 'list[EverouteLicenseWhereInput]',
-        '_or': 'list[EverouteLicenseWhereInput]',
         'serial': 'str',
         'serial_contains': 'str',
         'serial_ends_with': 'str',
@@ -120,6 +120,8 @@ class EverouteLicenseWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'code': 'code',
         'code_contains': 'code_contains',
         'code_ends_with': 'code_ends_with',
@@ -164,8 +166,6 @@ class EverouteLicenseWhereInput(object):
         'max_socket_num_lte': 'max_socket_num_lte',
         'max_socket_num_not': 'max_socket_num_not',
         'max_socket_num_not_in': 'max_socket_num_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'serial': 'serial',
         'serial_contains': 'serial_contains',
         'serial_ends_with': 'serial_ends_with',
@@ -217,6 +217,8 @@ class EverouteLicenseWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._code = None
         self._code_contains = None
         self._code_ends_with = None
@@ -261,8 +263,6 @@ class EverouteLicenseWhereInput(object):
         self._max_socket_num_lte = None
         self._max_socket_num_not = None
         self._max_socket_num_not_in = None
-        self.__not = None
-        self.__or = None
         self._serial = None
         self._serial_contains = None
         self._serial_ends_with = None
@@ -310,6 +310,8 @@ class EverouteLicenseWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.code = kwargs.get("code", None)
         self.code_contains = kwargs.get("code_contains", None)
         self.code_ends_with = kwargs.get("code_ends_with", None)
@@ -354,8 +356,6 @@ class EverouteLicenseWhereInput(object):
         self.max_socket_num_lte = kwargs.get("max_socket_num_lte", None)
         self.max_socket_num_not = kwargs.get("max_socket_num_not", None)
         self.max_socket_num_not_in = kwargs.get("max_socket_num_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.serial = kwargs.get("serial", None)
         self.serial_contains = kwargs.get("serial_contains", None)
         self.serial_ends_with = kwargs.get("serial_ends_with", None)
@@ -421,6 +421,48 @@ class EverouteLicenseWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this EverouteLicenseWhereInput.  # noqa: E501
+
+
+        :return: The _not of this EverouteLicenseWhereInput.  # noqa: E501
+        :rtype: list[EverouteLicenseWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this EverouteLicenseWhereInput.
+
+
+        :param _not: The _not of this EverouteLicenseWhereInput.  # noqa: E501
+        :type _not: list[EverouteLicenseWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this EverouteLicenseWhereInput.  # noqa: E501
+
+
+        :return: The _or of this EverouteLicenseWhereInput.  # noqa: E501
+        :rtype: list[EverouteLicenseWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this EverouteLicenseWhereInput.
+
+
+        :param _or: The _or of this EverouteLicenseWhereInput.  # noqa: E501
+        :type _or: list[EverouteLicenseWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def code(self):
@@ -1345,48 +1387,6 @@ class EverouteLicenseWhereInput(object):
         """
 
         self._max_socket_num_not_in = max_socket_num_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this EverouteLicenseWhereInput.  # noqa: E501
-
-
-        :return: The _not of this EverouteLicenseWhereInput.  # noqa: E501
-        :rtype: list[EverouteLicenseWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this EverouteLicenseWhereInput.
-
-
-        :param _not: The _not of this EverouteLicenseWhereInput.  # noqa: E501
-        :type _not: list[EverouteLicenseWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this EverouteLicenseWhereInput.  # noqa: E501
-
-
-        :return: The _or of this EverouteLicenseWhereInput.  # noqa: E501
-        :rtype: list[EverouteLicenseWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this EverouteLicenseWhereInput.
-
-
-        :param _or: The _or of this EverouteLicenseWhereInput.  # noqa: E501
-        :type _or: list[EverouteLicenseWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def serial(self):

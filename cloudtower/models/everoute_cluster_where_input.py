@@ -25,13 +25,15 @@ class EverouteClusterWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[EverouteClusterWhereInput]',
+        '_not': 'list[EverouteClusterWhereInput]',
+        '_or': 'list[EverouteClusterWhereInput]',
         'agent_elf_clusters_every': 'ClusterWhereInput',
         'agent_elf_clusters_none': 'ClusterWhereInput',
         'agent_elf_clusters_some': 'ClusterWhereInput',
         'agent_elf_vdses_every': 'VdsWhereInput',
         'agent_elf_vdses_none': 'VdsWhereInput',
         'agent_elf_vdses_some': 'VdsWhereInput',
-        '_and': 'list[EverouteClusterWhereInput]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -70,8 +72,6 @@ class EverouteClusterWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[EverouteClusterWhereInput]',
-        '_or': 'list[EverouteClusterWhereInput]',
         'phase': 'EverouteClusterPhase',
         'phase_in': 'list[EverouteClusterPhase]',
         'phase_not': 'EverouteClusterPhase',
@@ -93,13 +93,15 @@ class EverouteClusterWhereInput(object):
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'agent_elf_clusters_every': 'agent_elf_clusters_every',
         'agent_elf_clusters_none': 'agent_elf_clusters_none',
         'agent_elf_clusters_some': 'agent_elf_clusters_some',
         'agent_elf_vdses_every': 'agent_elf_vdses_every',
         'agent_elf_vdses_none': 'agent_elf_vdses_none',
         'agent_elf_vdses_some': 'agent_elf_vdses_some',
-        '_and': 'AND',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -138,8 +140,6 @@ class EverouteClusterWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'phase': 'phase',
         'phase_in': 'phase_in',
         'phase_not': 'phase_not',
@@ -164,13 +164,15 @@ class EverouteClusterWhereInput(object):
         """EverouteClusterWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._agent_elf_clusters_every = None
         self._agent_elf_clusters_none = None
         self._agent_elf_clusters_some = None
         self._agent_elf_vdses_every = None
         self._agent_elf_vdses_none = None
         self._agent_elf_vdses_some = None
-        self.__and = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -209,8 +211,6 @@ class EverouteClusterWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._phase = None
         self._phase_in = None
         self._phase_not = None
@@ -231,13 +231,15 @@ class EverouteClusterWhereInput(object):
         self._version_starts_with = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.agent_elf_clusters_every = kwargs.get("agent_elf_clusters_every", None)
         self.agent_elf_clusters_none = kwargs.get("agent_elf_clusters_none", None)
         self.agent_elf_clusters_some = kwargs.get("agent_elf_clusters_some", None)
         self.agent_elf_vdses_every = kwargs.get("agent_elf_vdses_every", None)
         self.agent_elf_vdses_none = kwargs.get("agent_elf_vdses_none", None)
         self.agent_elf_vdses_some = kwargs.get("agent_elf_vdses_some", None)
-        self._and = kwargs.get("_and", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -276,8 +278,6 @@ class EverouteClusterWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.phase = kwargs.get("phase", None)
         self.phase_in = kwargs.get("phase_in", None)
         self.phase_not = kwargs.get("phase_not", None)
@@ -296,6 +296,69 @@ class EverouteClusterWhereInput(object):
         self.version_not_in = kwargs.get("version_not_in", None)
         self.version_not_starts_with = kwargs.get("version_not_starts_with", None)
         self.version_starts_with = kwargs.get("version_starts_with", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this EverouteClusterWhereInput.  # noqa: E501
+
+
+        :return: The _and of this EverouteClusterWhereInput.  # noqa: E501
+        :rtype: list[EverouteClusterWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this EverouteClusterWhereInput.
+
+
+        :param _and: The _and of this EverouteClusterWhereInput.  # noqa: E501
+        :type _and: list[EverouteClusterWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this EverouteClusterWhereInput.  # noqa: E501
+
+
+        :return: The _not of this EverouteClusterWhereInput.  # noqa: E501
+        :rtype: list[EverouteClusterWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this EverouteClusterWhereInput.
+
+
+        :param _not: The _not of this EverouteClusterWhereInput.  # noqa: E501
+        :type _not: list[EverouteClusterWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this EverouteClusterWhereInput.  # noqa: E501
+
+
+        :return: The _or of this EverouteClusterWhereInput.  # noqa: E501
+        :rtype: list[EverouteClusterWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this EverouteClusterWhereInput.
+
+
+        :param _or: The _or of this EverouteClusterWhereInput.  # noqa: E501
+        :type _or: list[EverouteClusterWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def agent_elf_clusters_every(self):
@@ -422,27 +485,6 @@ class EverouteClusterWhereInput(object):
         """
 
         self._agent_elf_vdses_some = agent_elf_vdses_some
-
-    @property
-    def _and(self):
-        """Gets the _and of this EverouteClusterWhereInput.  # noqa: E501
-
-
-        :return: The _and of this EverouteClusterWhereInput.  # noqa: E501
-        :rtype: list[EverouteClusterWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this EverouteClusterWhereInput.
-
-
-        :param _and: The _and of this EverouteClusterWhereInput.  # noqa: E501
-        :type _and: list[EverouteClusterWhereInput]
-        """
-
-        self.__and = _and
 
     @property
     def entity_async_status(self):
@@ -1241,48 +1283,6 @@ class EverouteClusterWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this EverouteClusterWhereInput.  # noqa: E501
-
-
-        :return: The _not of this EverouteClusterWhereInput.  # noqa: E501
-        :rtype: list[EverouteClusterWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this EverouteClusterWhereInput.
-
-
-        :param _not: The _not of this EverouteClusterWhereInput.  # noqa: E501
-        :type _not: list[EverouteClusterWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this EverouteClusterWhereInput.  # noqa: E501
-
-
-        :return: The _or of this EverouteClusterWhereInput.  # noqa: E501
-        :rtype: list[EverouteClusterWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this EverouteClusterWhereInput.
-
-
-        :param _or: The _or of this EverouteClusterWhereInput.  # noqa: E501
-        :type _or: list[EverouteClusterWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def phase(self):

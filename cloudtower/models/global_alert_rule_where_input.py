@@ -25,10 +25,12 @@ class GlobalAlertRuleWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[GlobalAlertRuleWhereInput]',
+        '_not': 'list[GlobalAlertRuleWhereInput]',
+        '_or': 'list[GlobalAlertRuleWhereInput]',
         'alert_rules_every': 'AlertRuleWhereInput',
         'alert_rules_none': 'AlertRuleWhereInput',
         'alert_rules_some': 'AlertRuleWhereInput',
-        '_and': 'list[GlobalAlertRuleWhereInput]',
         'boolean': 'bool',
         'boolean_not': 'bool',
         'cause': 'str',
@@ -103,7 +105,6 @@ class GlobalAlertRuleWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[GlobalAlertRuleWhereInput]',
         'object': 'AlertRuleObject',
         'object_in': 'list[AlertRuleObject]',
         'object_not': 'AlertRuleObject',
@@ -122,7 +123,6 @@ class GlobalAlertRuleWhereInput(object):
         'operator_not_in': 'list[str]',
         'operator_not_starts_with': 'str',
         'operator_starts_with': 'str',
-        '_or': 'list[GlobalAlertRuleWhereInput]',
         'solution': 'str',
         'solution_contains': 'str',
         'solution_ends_with': 'str',
@@ -144,10 +144,12 @@ class GlobalAlertRuleWhereInput(object):
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'alert_rules_every': 'alert_rules_every',
         'alert_rules_none': 'alert_rules_none',
         'alert_rules_some': 'alert_rules_some',
-        '_and': 'AND',
         'boolean': 'boolean',
         'boolean_not': 'boolean_not',
         'cause': 'cause',
@@ -222,7 +224,6 @@ class GlobalAlertRuleWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'object': 'object',
         'object_in': 'object_in',
         'object_not': 'object_not',
@@ -241,7 +242,6 @@ class GlobalAlertRuleWhereInput(object):
         'operator_not_in': 'operator_not_in',
         'operator_not_starts_with': 'operator_not_starts_with',
         'operator_starts_with': 'operator_starts_with',
-        '_or': 'OR',
         'solution': 'solution',
         'solution_contains': 'solution_contains',
         'solution_ends_with': 'solution_ends_with',
@@ -266,10 +266,12 @@ class GlobalAlertRuleWhereInput(object):
         """GlobalAlertRuleWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._alert_rules_every = None
         self._alert_rules_none = None
         self._alert_rules_some = None
-        self.__and = None
         self._boolean = None
         self._boolean_not = None
         self._cause = None
@@ -344,7 +346,6 @@ class GlobalAlertRuleWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._object = None
         self._object_in = None
         self._object_not = None
@@ -363,7 +364,6 @@ class GlobalAlertRuleWhereInput(object):
         self._operator_not_in = None
         self._operator_not_starts_with = None
         self._operator_starts_with = None
-        self.__or = None
         self._solution = None
         self._solution_contains = None
         self._solution_ends_with = None
@@ -384,10 +384,12 @@ class GlobalAlertRuleWhereInput(object):
         self._unit_not_in = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.alert_rules_every = kwargs.get("alert_rules_every", None)
         self.alert_rules_none = kwargs.get("alert_rules_none", None)
         self.alert_rules_some = kwargs.get("alert_rules_some", None)
-        self._and = kwargs.get("_and", None)
         self.boolean = kwargs.get("boolean", None)
         self.boolean_not = kwargs.get("boolean_not", None)
         self.cause = kwargs.get("cause", None)
@@ -462,7 +464,6 @@ class GlobalAlertRuleWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.object = kwargs.get("object", None)
         self.object_in = kwargs.get("object_in", None)
         self.object_not = kwargs.get("object_not", None)
@@ -481,7 +482,6 @@ class GlobalAlertRuleWhereInput(object):
         self.operator_not_in = kwargs.get("operator_not_in", None)
         self.operator_not_starts_with = kwargs.get("operator_not_starts_with", None)
         self.operator_starts_with = kwargs.get("operator_starts_with", None)
-        self._or = kwargs.get("_or", None)
         self.solution = kwargs.get("solution", None)
         self.solution_contains = kwargs.get("solution_contains", None)
         self.solution_ends_with = kwargs.get("solution_ends_with", None)
@@ -500,6 +500,69 @@ class GlobalAlertRuleWhereInput(object):
         self.unit_in = kwargs.get("unit_in", None)
         self.unit_not = kwargs.get("unit_not", None)
         self.unit_not_in = kwargs.get("unit_not_in", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this GlobalAlertRuleWhereInput.  # noqa: E501
+
+
+        :return: The _and of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :rtype: list[GlobalAlertRuleWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this GlobalAlertRuleWhereInput.
+
+
+        :param _and: The _and of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :type _and: list[GlobalAlertRuleWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this GlobalAlertRuleWhereInput.  # noqa: E501
+
+
+        :return: The _not of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :rtype: list[GlobalAlertRuleWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this GlobalAlertRuleWhereInput.
+
+
+        :param _not: The _not of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :type _not: list[GlobalAlertRuleWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this GlobalAlertRuleWhereInput.  # noqa: E501
+
+
+        :return: The _or of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :rtype: list[GlobalAlertRuleWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this GlobalAlertRuleWhereInput.
+
+
+        :param _or: The _or of this GlobalAlertRuleWhereInput.  # noqa: E501
+        :type _or: list[GlobalAlertRuleWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def alert_rules_every(self):
@@ -563,27 +626,6 @@ class GlobalAlertRuleWhereInput(object):
         """
 
         self._alert_rules_some = alert_rules_some
-
-    @property
-    def _and(self):
-        """Gets the _and of this GlobalAlertRuleWhereInput.  # noqa: E501
-
-
-        :return: The _and of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :rtype: list[GlobalAlertRuleWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this GlobalAlertRuleWhereInput.
-
-
-        :param _and: The _and of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :type _and: list[GlobalAlertRuleWhereInput]
-        """
-
-        self.__and = _and
 
     @property
     def boolean(self):
@@ -2140,27 +2182,6 @@ class GlobalAlertRuleWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this GlobalAlertRuleWhereInput.  # noqa: E501
-
-
-        :return: The _not of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :rtype: list[GlobalAlertRuleWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this GlobalAlertRuleWhereInput.
-
-
-        :param _not: The _not of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :type _not: list[GlobalAlertRuleWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def object(self):
         """Gets the object of this GlobalAlertRuleWhereInput.  # noqa: E501
 
@@ -2537,27 +2558,6 @@ class GlobalAlertRuleWhereInput(object):
         """
 
         self._operator_starts_with = operator_starts_with
-
-    @property
-    def _or(self):
-        """Gets the _or of this GlobalAlertRuleWhereInput.  # noqa: E501
-
-
-        :return: The _or of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :rtype: list[GlobalAlertRuleWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this GlobalAlertRuleWhereInput.
-
-
-        :param _or: The _or of this GlobalAlertRuleWhereInput.  # noqa: E501
-        :type _or: list[GlobalAlertRuleWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def solution(self):

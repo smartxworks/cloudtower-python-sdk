@@ -25,6 +25,9 @@ class UserAuditLogWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[UserAuditLogWhereInput]',
+        '_not': 'list[UserAuditLogWhereInput]',
+        '_or': 'list[UserAuditLogWhereInput]',
         'action': 'str',
         'action_contains': 'str',
         'action_ends_with': 'str',
@@ -39,7 +42,20 @@ class UserAuditLogWhereInput(object):
         'action_not_in': 'list[str]',
         'action_not_starts_with': 'str',
         'action_starts_with': 'str',
-        '_and': 'list[UserAuditLogWhereInput]',
+        'auth_type': 'str',
+        'auth_type_contains': 'str',
+        'auth_type_ends_with': 'str',
+        'auth_type_gt': 'str',
+        'auth_type_gte': 'str',
+        'auth_type_in': 'list[str]',
+        'auth_type_lt': 'str',
+        'auth_type_lte': 'str',
+        'auth_type_not': 'str',
+        'auth_type_not_contains': 'str',
+        'auth_type_not_ends_with': 'str',
+        'auth_type_not_in': 'list[str]',
+        'auth_type_not_starts_with': 'str',
+        'auth_type_starts_with': 'str',
         'cluster': 'ClusterWhereInput',
         'created_at': 'str',
         'created_at_gt': 'str',
@@ -99,8 +115,6 @@ class UserAuditLogWhereInput(object):
         'message_not_in': 'list[str]',
         'message_not_starts_with': 'str',
         'message_starts_with': 'str',
-        '_not': 'list[UserAuditLogWhereInput]',
-        '_or': 'list[UserAuditLogWhereInput]',
         'resource_id': 'str',
         'resource_id_contains': 'str',
         'resource_id_ends_with': 'str',
@@ -141,10 +155,27 @@ class UserAuditLogWhereInput(object):
         'status_in': 'list[UserAuditLogStatus]',
         'status_not': 'UserAuditLogStatus',
         'status_not_in': 'list[UserAuditLogStatus]',
-        'user': 'UserWhereInput'
+        'user': 'UserWhereInput',
+        'username': 'str',
+        'username_contains': 'str',
+        'username_ends_with': 'str',
+        'username_gt': 'str',
+        'username_gte': 'str',
+        'username_in': 'list[str]',
+        'username_lt': 'str',
+        'username_lte': 'str',
+        'username_not': 'str',
+        'username_not_contains': 'str',
+        'username_not_ends_with': 'str',
+        'username_not_in': 'list[str]',
+        'username_not_starts_with': 'str',
+        'username_starts_with': 'str'
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'action': 'action',
         'action_contains': 'action_contains',
         'action_ends_with': 'action_ends_with',
@@ -159,7 +190,20 @@ class UserAuditLogWhereInput(object):
         'action_not_in': 'action_not_in',
         'action_not_starts_with': 'action_not_starts_with',
         'action_starts_with': 'action_starts_with',
-        '_and': 'AND',
+        'auth_type': 'auth_type',
+        'auth_type_contains': 'auth_type_contains',
+        'auth_type_ends_with': 'auth_type_ends_with',
+        'auth_type_gt': 'auth_type_gt',
+        'auth_type_gte': 'auth_type_gte',
+        'auth_type_in': 'auth_type_in',
+        'auth_type_lt': 'auth_type_lt',
+        'auth_type_lte': 'auth_type_lte',
+        'auth_type_not': 'auth_type_not',
+        'auth_type_not_contains': 'auth_type_not_contains',
+        'auth_type_not_ends_with': 'auth_type_not_ends_with',
+        'auth_type_not_in': 'auth_type_not_in',
+        'auth_type_not_starts_with': 'auth_type_not_starts_with',
+        'auth_type_starts_with': 'auth_type_starts_with',
         'cluster': 'cluster',
         'created_at': 'createdAt',
         'created_at_gt': 'createdAt_gt',
@@ -219,8 +263,6 @@ class UserAuditLogWhereInput(object):
         'message_not_in': 'message_not_in',
         'message_not_starts_with': 'message_not_starts_with',
         'message_starts_with': 'message_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'resource_id': 'resource_id',
         'resource_id_contains': 'resource_id_contains',
         'resource_id_ends_with': 'resource_id_ends_with',
@@ -261,13 +303,30 @@ class UserAuditLogWhereInput(object):
         'status_in': 'status_in',
         'status_not': 'status_not',
         'status_not_in': 'status_not_in',
-        'user': 'user'
+        'user': 'user',
+        'username': 'username',
+        'username_contains': 'username_contains',
+        'username_ends_with': 'username_ends_with',
+        'username_gt': 'username_gt',
+        'username_gte': 'username_gte',
+        'username_in': 'username_in',
+        'username_lt': 'username_lt',
+        'username_lte': 'username_lte',
+        'username_not': 'username_not',
+        'username_not_contains': 'username_not_contains',
+        'username_not_ends_with': 'username_not_ends_with',
+        'username_not_in': 'username_not_in',
+        'username_not_starts_with': 'username_not_starts_with',
+        'username_starts_with': 'username_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
         """UserAuditLogWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._action = None
         self._action_contains = None
         self._action_ends_with = None
@@ -282,7 +341,20 @@ class UserAuditLogWhereInput(object):
         self._action_not_in = None
         self._action_not_starts_with = None
         self._action_starts_with = None
-        self.__and = None
+        self._auth_type = None
+        self._auth_type_contains = None
+        self._auth_type_ends_with = None
+        self._auth_type_gt = None
+        self._auth_type_gte = None
+        self._auth_type_in = None
+        self._auth_type_lt = None
+        self._auth_type_lte = None
+        self._auth_type_not = None
+        self._auth_type_not_contains = None
+        self._auth_type_not_ends_with = None
+        self._auth_type_not_in = None
+        self._auth_type_not_starts_with = None
+        self._auth_type_starts_with = None
         self._cluster = None
         self._created_at = None
         self._created_at_gt = None
@@ -342,8 +414,6 @@ class UserAuditLogWhereInput(object):
         self._message_not_in = None
         self._message_not_starts_with = None
         self._message_starts_with = None
-        self.__not = None
-        self.__or = None
         self._resource_id = None
         self._resource_id_contains = None
         self._resource_id_ends_with = None
@@ -385,8 +455,25 @@ class UserAuditLogWhereInput(object):
         self._status_not = None
         self._status_not_in = None
         self._user = None
+        self._username = None
+        self._username_contains = None
+        self._username_ends_with = None
+        self._username_gt = None
+        self._username_gte = None
+        self._username_in = None
+        self._username_lt = None
+        self._username_lte = None
+        self._username_not = None
+        self._username_not_contains = None
+        self._username_not_ends_with = None
+        self._username_not_in = None
+        self._username_not_starts_with = None
+        self._username_starts_with = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.action = kwargs.get("action", None)
         self.action_contains = kwargs.get("action_contains", None)
         self.action_ends_with = kwargs.get("action_ends_with", None)
@@ -401,7 +488,20 @@ class UserAuditLogWhereInput(object):
         self.action_not_in = kwargs.get("action_not_in", None)
         self.action_not_starts_with = kwargs.get("action_not_starts_with", None)
         self.action_starts_with = kwargs.get("action_starts_with", None)
-        self._and = kwargs.get("_and", None)
+        self.auth_type = kwargs.get("auth_type", None)
+        self.auth_type_contains = kwargs.get("auth_type_contains", None)
+        self.auth_type_ends_with = kwargs.get("auth_type_ends_with", None)
+        self.auth_type_gt = kwargs.get("auth_type_gt", None)
+        self.auth_type_gte = kwargs.get("auth_type_gte", None)
+        self.auth_type_in = kwargs.get("auth_type_in", None)
+        self.auth_type_lt = kwargs.get("auth_type_lt", None)
+        self.auth_type_lte = kwargs.get("auth_type_lte", None)
+        self.auth_type_not = kwargs.get("auth_type_not", None)
+        self.auth_type_not_contains = kwargs.get("auth_type_not_contains", None)
+        self.auth_type_not_ends_with = kwargs.get("auth_type_not_ends_with", None)
+        self.auth_type_not_in = kwargs.get("auth_type_not_in", None)
+        self.auth_type_not_starts_with = kwargs.get("auth_type_not_starts_with", None)
+        self.auth_type_starts_with = kwargs.get("auth_type_starts_with", None)
         self.cluster = kwargs.get("cluster", None)
         self.created_at = kwargs.get("created_at", None)
         self.created_at_gt = kwargs.get("created_at_gt", None)
@@ -461,8 +561,6 @@ class UserAuditLogWhereInput(object):
         self.message_not_in = kwargs.get("message_not_in", None)
         self.message_not_starts_with = kwargs.get("message_not_starts_with", None)
         self.message_starts_with = kwargs.get("message_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.resource_id = kwargs.get("resource_id", None)
         self.resource_id_contains = kwargs.get("resource_id_contains", None)
         self.resource_id_ends_with = kwargs.get("resource_id_ends_with", None)
@@ -504,6 +602,83 @@ class UserAuditLogWhereInput(object):
         self.status_not = kwargs.get("status_not", None)
         self.status_not_in = kwargs.get("status_not_in", None)
         self.user = kwargs.get("user", None)
+        self.username = kwargs.get("username", None)
+        self.username_contains = kwargs.get("username_contains", None)
+        self.username_ends_with = kwargs.get("username_ends_with", None)
+        self.username_gt = kwargs.get("username_gt", None)
+        self.username_gte = kwargs.get("username_gte", None)
+        self.username_in = kwargs.get("username_in", None)
+        self.username_lt = kwargs.get("username_lt", None)
+        self.username_lte = kwargs.get("username_lte", None)
+        self.username_not = kwargs.get("username_not", None)
+        self.username_not_contains = kwargs.get("username_not_contains", None)
+        self.username_not_ends_with = kwargs.get("username_not_ends_with", None)
+        self.username_not_in = kwargs.get("username_not_in", None)
+        self.username_not_starts_with = kwargs.get("username_not_starts_with", None)
+        self.username_starts_with = kwargs.get("username_starts_with", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _and of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[UserAuditLogWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this UserAuditLogWhereInput.
+
+
+        :param _and: The _and of this UserAuditLogWhereInput.  # noqa: E501
+        :type _and: list[UserAuditLogWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _not of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[UserAuditLogWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this UserAuditLogWhereInput.
+
+
+        :param _not: The _not of this UserAuditLogWhereInput.  # noqa: E501
+        :type _not: list[UserAuditLogWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _or of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[UserAuditLogWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this UserAuditLogWhereInput.
+
+
+        :param _or: The _or of this UserAuditLogWhereInput.  # noqa: E501
+        :type _or: list[UserAuditLogWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def action(self):
@@ -800,25 +975,298 @@ class UserAuditLogWhereInput(object):
         self._action_starts_with = action_starts_with
 
     @property
-    def _and(self):
-        """Gets the _and of this UserAuditLogWhereInput.  # noqa: E501
+    def auth_type(self):
+        """Gets the auth_type of this UserAuditLogWhereInput.  # noqa: E501
 
 
-        :return: The _and of this UserAuditLogWhereInput.  # noqa: E501
-        :rtype: list[UserAuditLogWhereInput]
+        :return: The auth_type of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
         """
-        return self.__and
+        return self._auth_type
 
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this UserAuditLogWhereInput.
+    @auth_type.setter
+    def auth_type(self, auth_type):
+        """Sets the auth_type of this UserAuditLogWhereInput.
 
 
-        :param _and: The _and of this UserAuditLogWhereInput.  # noqa: E501
-        :type _and: list[UserAuditLogWhereInput]
+        :param auth_type: The auth_type of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type: str
         """
 
-        self.__and = _and
+        self._auth_type = auth_type
+
+    @property
+    def auth_type_contains(self):
+        """Gets the auth_type_contains of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_contains
+
+    @auth_type_contains.setter
+    def auth_type_contains(self, auth_type_contains):
+        """Sets the auth_type_contains of this UserAuditLogWhereInput.
+
+
+        :param auth_type_contains: The auth_type_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_contains: str
+        """
+
+        self._auth_type_contains = auth_type_contains
+
+    @property
+    def auth_type_ends_with(self):
+        """Gets the auth_type_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_ends_with
+
+    @auth_type_ends_with.setter
+    def auth_type_ends_with(self, auth_type_ends_with):
+        """Sets the auth_type_ends_with of this UserAuditLogWhereInput.
+
+
+        :param auth_type_ends_with: The auth_type_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_ends_with: str
+        """
+
+        self._auth_type_ends_with = auth_type_ends_with
+
+    @property
+    def auth_type_gt(self):
+        """Gets the auth_type_gt of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_gt of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_gt
+
+    @auth_type_gt.setter
+    def auth_type_gt(self, auth_type_gt):
+        """Sets the auth_type_gt of this UserAuditLogWhereInput.
+
+
+        :param auth_type_gt: The auth_type_gt of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_gt: str
+        """
+
+        self._auth_type_gt = auth_type_gt
+
+    @property
+    def auth_type_gte(self):
+        """Gets the auth_type_gte of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_gte of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_gte
+
+    @auth_type_gte.setter
+    def auth_type_gte(self, auth_type_gte):
+        """Sets the auth_type_gte of this UserAuditLogWhereInput.
+
+
+        :param auth_type_gte: The auth_type_gte of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_gte: str
+        """
+
+        self._auth_type_gte = auth_type_gte
+
+    @property
+    def auth_type_in(self):
+        """Gets the auth_type_in of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_in of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._auth_type_in
+
+    @auth_type_in.setter
+    def auth_type_in(self, auth_type_in):
+        """Sets the auth_type_in of this UserAuditLogWhereInput.
+
+
+        :param auth_type_in: The auth_type_in of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_in: list[str]
+        """
+
+        self._auth_type_in = auth_type_in
+
+    @property
+    def auth_type_lt(self):
+        """Gets the auth_type_lt of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_lt of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_lt
+
+    @auth_type_lt.setter
+    def auth_type_lt(self, auth_type_lt):
+        """Sets the auth_type_lt of this UserAuditLogWhereInput.
+
+
+        :param auth_type_lt: The auth_type_lt of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_lt: str
+        """
+
+        self._auth_type_lt = auth_type_lt
+
+    @property
+    def auth_type_lte(self):
+        """Gets the auth_type_lte of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_lte of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_lte
+
+    @auth_type_lte.setter
+    def auth_type_lte(self, auth_type_lte):
+        """Sets the auth_type_lte of this UserAuditLogWhereInput.
+
+
+        :param auth_type_lte: The auth_type_lte of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_lte: str
+        """
+
+        self._auth_type_lte = auth_type_lte
+
+    @property
+    def auth_type_not(self):
+        """Gets the auth_type_not of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_not of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_not
+
+    @auth_type_not.setter
+    def auth_type_not(self, auth_type_not):
+        """Sets the auth_type_not of this UserAuditLogWhereInput.
+
+
+        :param auth_type_not: The auth_type_not of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_not: str
+        """
+
+        self._auth_type_not = auth_type_not
+
+    @property
+    def auth_type_not_contains(self):
+        """Gets the auth_type_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_not_contains
+
+    @auth_type_not_contains.setter
+    def auth_type_not_contains(self, auth_type_not_contains):
+        """Sets the auth_type_not_contains of this UserAuditLogWhereInput.
+
+
+        :param auth_type_not_contains: The auth_type_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_not_contains: str
+        """
+
+        self._auth_type_not_contains = auth_type_not_contains
+
+    @property
+    def auth_type_not_ends_with(self):
+        """Gets the auth_type_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_not_ends_with
+
+    @auth_type_not_ends_with.setter
+    def auth_type_not_ends_with(self, auth_type_not_ends_with):
+        """Sets the auth_type_not_ends_with of this UserAuditLogWhereInput.
+
+
+        :param auth_type_not_ends_with: The auth_type_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_not_ends_with: str
+        """
+
+        self._auth_type_not_ends_with = auth_type_not_ends_with
+
+    @property
+    def auth_type_not_in(self):
+        """Gets the auth_type_not_in of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_not_in of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._auth_type_not_in
+
+    @auth_type_not_in.setter
+    def auth_type_not_in(self, auth_type_not_in):
+        """Sets the auth_type_not_in of this UserAuditLogWhereInput.
+
+
+        :param auth_type_not_in: The auth_type_not_in of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_not_in: list[str]
+        """
+
+        self._auth_type_not_in = auth_type_not_in
+
+    @property
+    def auth_type_not_starts_with(self):
+        """Gets the auth_type_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_not_starts_with
+
+    @auth_type_not_starts_with.setter
+    def auth_type_not_starts_with(self, auth_type_not_starts_with):
+        """Sets the auth_type_not_starts_with of this UserAuditLogWhereInput.
+
+
+        :param auth_type_not_starts_with: The auth_type_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_not_starts_with: str
+        """
+
+        self._auth_type_not_starts_with = auth_type_not_starts_with
+
+    @property
+    def auth_type_starts_with(self):
+        """Gets the auth_type_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The auth_type_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type_starts_with
+
+    @auth_type_starts_with.setter
+    def auth_type_starts_with(self, auth_type_starts_with):
+        """Sets the auth_type_starts_with of this UserAuditLogWhereInput.
+
+
+        :param auth_type_starts_with: The auth_type_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type auth_type_starts_with: str
+        """
+
+        self._auth_type_starts_with = auth_type_starts_with
 
     @property
     def cluster(self):
@@ -2060,48 +2508,6 @@ class UserAuditLogWhereInput(object):
         self._message_starts_with = message_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this UserAuditLogWhereInput.  # noqa: E501
-
-
-        :return: The _not of this UserAuditLogWhereInput.  # noqa: E501
-        :rtype: list[UserAuditLogWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this UserAuditLogWhereInput.
-
-
-        :param _not: The _not of this UserAuditLogWhereInput.  # noqa: E501
-        :type _not: list[UserAuditLogWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this UserAuditLogWhereInput.  # noqa: E501
-
-
-        :return: The _or of this UserAuditLogWhereInput.  # noqa: E501
-        :rtype: list[UserAuditLogWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this UserAuditLogWhereInput.
-
-
-        :param _or: The _or of this UserAuditLogWhereInput.  # noqa: E501
-        :type _or: list[UserAuditLogWhereInput]
-        """
-
-        self.__or = _or
-
-    @property
     def resource_id(self):
         """Gets the resource_id of this UserAuditLogWhereInput.  # noqa: E501
 
@@ -2961,6 +3367,300 @@ class UserAuditLogWhereInput(object):
         """
 
         self._user = user
+
+    @property
+    def username(self):
+        """Gets the username of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        """Sets the username of this UserAuditLogWhereInput.
+
+
+        :param username: The username of this UserAuditLogWhereInput.  # noqa: E501
+        :type username: str
+        """
+
+        self._username = username
+
+    @property
+    def username_contains(self):
+        """Gets the username_contains of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_contains
+
+    @username_contains.setter
+    def username_contains(self, username_contains):
+        """Sets the username_contains of this UserAuditLogWhereInput.
+
+
+        :param username_contains: The username_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_contains: str
+        """
+
+        self._username_contains = username_contains
+
+    @property
+    def username_ends_with(self):
+        """Gets the username_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_ends_with
+
+    @username_ends_with.setter
+    def username_ends_with(self, username_ends_with):
+        """Sets the username_ends_with of this UserAuditLogWhereInput.
+
+
+        :param username_ends_with: The username_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_ends_with: str
+        """
+
+        self._username_ends_with = username_ends_with
+
+    @property
+    def username_gt(self):
+        """Gets the username_gt of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_gt of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_gt
+
+    @username_gt.setter
+    def username_gt(self, username_gt):
+        """Sets the username_gt of this UserAuditLogWhereInput.
+
+
+        :param username_gt: The username_gt of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_gt: str
+        """
+
+        self._username_gt = username_gt
+
+    @property
+    def username_gte(self):
+        """Gets the username_gte of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_gte of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_gte
+
+    @username_gte.setter
+    def username_gte(self, username_gte):
+        """Sets the username_gte of this UserAuditLogWhereInput.
+
+
+        :param username_gte: The username_gte of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_gte: str
+        """
+
+        self._username_gte = username_gte
+
+    @property
+    def username_in(self):
+        """Gets the username_in of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_in of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._username_in
+
+    @username_in.setter
+    def username_in(self, username_in):
+        """Sets the username_in of this UserAuditLogWhereInput.
+
+
+        :param username_in: The username_in of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_in: list[str]
+        """
+
+        self._username_in = username_in
+
+    @property
+    def username_lt(self):
+        """Gets the username_lt of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_lt of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_lt
+
+    @username_lt.setter
+    def username_lt(self, username_lt):
+        """Sets the username_lt of this UserAuditLogWhereInput.
+
+
+        :param username_lt: The username_lt of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_lt: str
+        """
+
+        self._username_lt = username_lt
+
+    @property
+    def username_lte(self):
+        """Gets the username_lte of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_lte of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_lte
+
+    @username_lte.setter
+    def username_lte(self, username_lte):
+        """Sets the username_lte of this UserAuditLogWhereInput.
+
+
+        :param username_lte: The username_lte of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_lte: str
+        """
+
+        self._username_lte = username_lte
+
+    @property
+    def username_not(self):
+        """Gets the username_not of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_not of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_not
+
+    @username_not.setter
+    def username_not(self, username_not):
+        """Sets the username_not of this UserAuditLogWhereInput.
+
+
+        :param username_not: The username_not of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_not: str
+        """
+
+        self._username_not = username_not
+
+    @property
+    def username_not_contains(self):
+        """Gets the username_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_not_contains
+
+    @username_not_contains.setter
+    def username_not_contains(self, username_not_contains):
+        """Sets the username_not_contains of this UserAuditLogWhereInput.
+
+
+        :param username_not_contains: The username_not_contains of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_not_contains: str
+        """
+
+        self._username_not_contains = username_not_contains
+
+    @property
+    def username_not_ends_with(self):
+        """Gets the username_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_not_ends_with
+
+    @username_not_ends_with.setter
+    def username_not_ends_with(self, username_not_ends_with):
+        """Sets the username_not_ends_with of this UserAuditLogWhereInput.
+
+
+        :param username_not_ends_with: The username_not_ends_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_not_ends_with: str
+        """
+
+        self._username_not_ends_with = username_not_ends_with
+
+    @property
+    def username_not_in(self):
+        """Gets the username_not_in of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_not_in of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._username_not_in
+
+    @username_not_in.setter
+    def username_not_in(self, username_not_in):
+        """Sets the username_not_in of this UserAuditLogWhereInput.
+
+
+        :param username_not_in: The username_not_in of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_not_in: list[str]
+        """
+
+        self._username_not_in = username_not_in
+
+    @property
+    def username_not_starts_with(self):
+        """Gets the username_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_not_starts_with
+
+    @username_not_starts_with.setter
+    def username_not_starts_with(self, username_not_starts_with):
+        """Sets the username_not_starts_with of this UserAuditLogWhereInput.
+
+
+        :param username_not_starts_with: The username_not_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_not_starts_with: str
+        """
+
+        self._username_not_starts_with = username_not_starts_with
+
+    @property
+    def username_starts_with(self):
+        """Gets the username_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The username_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._username_starts_with
+
+    @username_starts_with.setter
+    def username_starts_with(self, username_starts_with):
+        """Sets the username_starts_with of this UserAuditLogWhereInput.
+
+
+        :param username_starts_with: The username_starts_with of this UserAuditLogWhereInput.  # noqa: E501
+        :type username_starts_with: str
+        """
+
+        self._username_starts_with = username_starts_with
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
