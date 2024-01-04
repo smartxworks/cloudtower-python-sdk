@@ -26,6 +26,8 @@ class NfsInodeWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[NfsInodeWhereInput]',
+        '_not': 'list[NfsInodeWhereInput]',
+        '_or': 'list[NfsInodeWhereInput]',
         'assigned_size': 'int',
         'assigned_size_gt': 'int',
         'assigned_size_gte': 'int',
@@ -94,8 +96,6 @@ class NfsInodeWhereInput(object):
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
         'nfs_export': 'NfsExportWhereInput',
-        '_not': 'list[NfsInodeWhereInput]',
-        '_or': 'list[NfsInodeWhereInput]',
         'parent_id': 'str',
         'parent_id_contains': 'str',
         'parent_id_ends_with': 'str',
@@ -138,6 +138,8 @@ class NfsInodeWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'assigned_size': 'assigned_size',
         'assigned_size_gt': 'assigned_size_gt',
         'assigned_size_gte': 'assigned_size_gte',
@@ -206,8 +208,6 @@ class NfsInodeWhereInput(object):
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
         'nfs_export': 'nfs_export',
-        '_not': 'NOT',
-        '_or': 'OR',
         'parent_id': 'parent_id',
         'parent_id_contains': 'parent_id_contains',
         'parent_id_ends_with': 'parent_id_ends_with',
@@ -253,6 +253,8 @@ class NfsInodeWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._assigned_size = None
         self._assigned_size_gt = None
         self._assigned_size_gte = None
@@ -321,8 +323,6 @@ class NfsInodeWhereInput(object):
         self._name_not_starts_with = None
         self._name_starts_with = None
         self._nfs_export = None
-        self.__not = None
-        self.__or = None
         self._parent_id = None
         self._parent_id_contains = None
         self._parent_id_ends_with = None
@@ -364,6 +364,8 @@ class NfsInodeWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.assigned_size = kwargs.get("assigned_size", None)
         self.assigned_size_gt = kwargs.get("assigned_size_gt", None)
         self.assigned_size_gte = kwargs.get("assigned_size_gte", None)
@@ -432,8 +434,6 @@ class NfsInodeWhereInput(object):
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
         self.nfs_export = kwargs.get("nfs_export", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.parent_id = kwargs.get("parent_id", None)
         self.parent_id_contains = kwargs.get("parent_id_contains", None)
         self.parent_id_ends_with = kwargs.get("parent_id_ends_with", None)
@@ -493,6 +493,48 @@ class NfsInodeWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this NfsInodeWhereInput.  # noqa: E501
+
+
+        :return: The _not of this NfsInodeWhereInput.  # noqa: E501
+        :rtype: list[NfsInodeWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this NfsInodeWhereInput.
+
+
+        :param _not: The _not of this NfsInodeWhereInput.  # noqa: E501
+        :type _not: list[NfsInodeWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this NfsInodeWhereInput.  # noqa: E501
+
+
+        :return: The _or of this NfsInodeWhereInput.  # noqa: E501
+        :rtype: list[NfsInodeWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this NfsInodeWhereInput.
+
+
+        :param _or: The _or of this NfsInodeWhereInput.  # noqa: E501
+        :type _or: list[NfsInodeWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def assigned_size(self):
@@ -1921,48 +1963,6 @@ class NfsInodeWhereInput(object):
         """
 
         self._nfs_export = nfs_export
-
-    @property
-    def _not(self):
-        """Gets the _not of this NfsInodeWhereInput.  # noqa: E501
-
-
-        :return: The _not of this NfsInodeWhereInput.  # noqa: E501
-        :rtype: list[NfsInodeWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this NfsInodeWhereInput.
-
-
-        :param _not: The _not of this NfsInodeWhereInput.  # noqa: E501
-        :type _not: list[NfsInodeWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this NfsInodeWhereInput.  # noqa: E501
-
-
-        :return: The _or of this NfsInodeWhereInput.  # noqa: E501
-        :rtype: list[NfsInodeWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this NfsInodeWhereInput.
-
-
-        :param _or: The _or of this NfsInodeWhereInput.  # noqa: E501
-        :type _or: list[NfsInodeWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def parent_id(self):

@@ -26,6 +26,8 @@ class DatacenterWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[DatacenterWhereInput]',
+        '_not': 'list[DatacenterWhereInput]',
+        '_or': 'list[DatacenterWhereInput]',
         'cluster_num': 'int',
         'cluster_num_gt': 'int',
         'cluster_num_gte': 'int',
@@ -84,8 +86,6 @@ class DatacenterWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[DatacenterWhereInput]',
-        '_or': 'list[DatacenterWhereInput]',
         'organization': 'OrganizationWhereInput',
         'total_cpu_hz': 'int',
         'total_cpu_hz_gt': 'int',
@@ -147,6 +147,8 @@ class DatacenterWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster_num': 'cluster_num',
         'cluster_num_gt': 'cluster_num_gt',
         'cluster_num_gte': 'cluster_num_gte',
@@ -205,8 +207,6 @@ class DatacenterWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'organization': 'organization',
         'total_cpu_hz': 'total_cpu_hz',
         'total_cpu_hz_gt': 'total_cpu_hz_gt',
@@ -271,6 +271,8 @@ class DatacenterWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster_num = None
         self._cluster_num_gt = None
         self._cluster_num_gte = None
@@ -329,8 +331,6 @@ class DatacenterWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._organization = None
         self._total_cpu_hz = None
         self._total_cpu_hz_gt = None
@@ -391,6 +391,8 @@ class DatacenterWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster_num = kwargs.get("cluster_num", None)
         self.cluster_num_gt = kwargs.get("cluster_num_gt", None)
         self.cluster_num_gte = kwargs.get("cluster_num_gte", None)
@@ -449,8 +451,6 @@ class DatacenterWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.organization = kwargs.get("organization", None)
         self.total_cpu_hz = kwargs.get("total_cpu_hz", None)
         self.total_cpu_hz_gt = kwargs.get("total_cpu_hz_gt", None)
@@ -529,6 +529,48 @@ class DatacenterWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this DatacenterWhereInput.  # noqa: E501
+
+
+        :return: The _not of this DatacenterWhereInput.  # noqa: E501
+        :rtype: list[DatacenterWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this DatacenterWhereInput.
+
+
+        :param _not: The _not of this DatacenterWhereInput.  # noqa: E501
+        :type _not: list[DatacenterWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this DatacenterWhereInput.  # noqa: E501
+
+
+        :return: The _or of this DatacenterWhereInput.  # noqa: E501
+        :rtype: list[DatacenterWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this DatacenterWhereInput.
+
+
+        :param _or: The _or of this DatacenterWhereInput.  # noqa: E501
+        :type _or: list[DatacenterWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster_num(self):
@@ -1747,48 +1789,6 @@ class DatacenterWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this DatacenterWhereInput.  # noqa: E501
-
-
-        :return: The _not of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[DatacenterWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this DatacenterWhereInput.
-
-
-        :param _not: The _not of this DatacenterWhereInput.  # noqa: E501
-        :type _not: list[DatacenterWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this DatacenterWhereInput.  # noqa: E501
-
-
-        :return: The _or of this DatacenterWhereInput.  # noqa: E501
-        :rtype: list[DatacenterWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this DatacenterWhereInput.
-
-
-        :param _or: The _or of this DatacenterWhereInput.  # noqa: E501
-        :type _or: list[DatacenterWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def organization(self):

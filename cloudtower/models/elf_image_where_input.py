@@ -26,6 +26,8 @@ class ElfImageWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ElfImageWhereInput]',
+        '_not': 'list[ElfImageWhereInput]',
+        '_or': 'list[ElfImageWhereInput]',
         'cluster': 'ClusterWhereInput',
         'content_library_image': 'ContentLibraryImageWhereInput',
         'description': 'str',
@@ -99,8 +101,6 @@ class ElfImageWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ElfImageWhereInput]',
-        '_or': 'list[ElfImageWhereInput]',
         'path': 'str',
         'path_contains': 'str',
         'path_ends_with': 'str',
@@ -136,6 +136,8 @@ class ElfImageWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'content_library_image': 'content_library_image',
         'description': 'description',
@@ -209,8 +211,6 @@ class ElfImageWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'path': 'path',
         'path_contains': 'path_contains',
         'path_ends_with': 'path_ends_with',
@@ -249,6 +249,8 @@ class ElfImageWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._content_library_image = None
         self._description = None
@@ -322,8 +324,6 @@ class ElfImageWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._path = None
         self._path_contains = None
         self._path_ends_with = None
@@ -358,6 +358,8 @@ class ElfImageWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.content_library_image = kwargs.get("content_library_image", None)
         self.description = kwargs.get("description", None)
@@ -431,8 +433,6 @@ class ElfImageWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.path = kwargs.get("path", None)
         self.path_contains = kwargs.get("path_contains", None)
         self.path_ends_with = kwargs.get("path_ends_with", None)
@@ -485,6 +485,48 @@ class ElfImageWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ElfImageWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ElfImageWhereInput.  # noqa: E501
+        :rtype: list[ElfImageWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ElfImageWhereInput.
+
+
+        :param _not: The _not of this ElfImageWhereInput.  # noqa: E501
+        :type _not: list[ElfImageWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ElfImageWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ElfImageWhereInput.  # noqa: E501
+        :rtype: list[ElfImageWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ElfImageWhereInput.
+
+
+        :param _or: The _or of this ElfImageWhereInput.  # noqa: E501
+        :type _or: list[ElfImageWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2018,48 +2060,6 @@ class ElfImageWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ElfImageWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ElfImageWhereInput.  # noqa: E501
-        :rtype: list[ElfImageWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ElfImageWhereInput.
-
-
-        :param _not: The _not of this ElfImageWhereInput.  # noqa: E501
-        :type _not: list[ElfImageWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ElfImageWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ElfImageWhereInput.  # noqa: E501
-        :rtype: list[ElfImageWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ElfImageWhereInput.
-
-
-        :param _or: The _or of this ElfImageWhereInput.  # noqa: E501
-        :type _or: list[ElfImageWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def path(self):

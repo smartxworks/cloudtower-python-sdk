@@ -26,6 +26,8 @@ class ClusterWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ClusterWhereInput]',
+        '_not': 'list[ClusterWhereInput]',
+        '_or': 'list[ClusterWhereInput]',
         'application_highest_version': 'str',
         'application_highest_version_contains': 'str',
         'application_highest_version_ends_with': 'str',
@@ -322,7 +324,6 @@ class ClusterWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ClusterWhereInput]',
         'ntp_mode': 'NtpMode',
         'ntp_mode_in': 'list[NtpMode]',
         'ntp_mode_not': 'NtpMode',
@@ -333,7 +334,6 @@ class ClusterWhereInput(object):
         'nvme_over_tcp_enabled_not': 'bool',
         'nvmf_enabled': 'bool',
         'nvmf_enabled_not': 'bool',
-        '_or': 'list[ClusterWhereInput]',
         'pmem_enabled': 'bool',
         'pmem_enabled_not': 'bool',
         'provisioned_cpu_cores': 'int',
@@ -576,6 +576,8 @@ class ClusterWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'application_highest_version': 'application_highest_version',
         'application_highest_version_contains': 'application_highest_version_contains',
         'application_highest_version_ends_with': 'application_highest_version_ends_with',
@@ -872,7 +874,6 @@ class ClusterWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'ntp_mode': 'ntp_mode',
         'ntp_mode_in': 'ntp_mode_in',
         'ntp_mode_not': 'ntp_mode_not',
@@ -883,7 +884,6 @@ class ClusterWhereInput(object):
         'nvme_over_tcp_enabled_not': 'nvme_over_tcp_enabled_not',
         'nvmf_enabled': 'nvmf_enabled',
         'nvmf_enabled_not': 'nvmf_enabled_not',
-        '_or': 'OR',
         'pmem_enabled': 'pmem_enabled',
         'pmem_enabled_not': 'pmem_enabled_not',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
@@ -1129,6 +1129,8 @@ class ClusterWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._application_highest_version = None
         self._application_highest_version_contains = None
         self._application_highest_version_ends_with = None
@@ -1425,7 +1427,6 @@ class ClusterWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._ntp_mode = None
         self._ntp_mode_in = None
         self._ntp_mode_not = None
@@ -1436,7 +1437,6 @@ class ClusterWhereInput(object):
         self._nvme_over_tcp_enabled_not = None
         self._nvmf_enabled = None
         self._nvmf_enabled_not = None
-        self.__or = None
         self._pmem_enabled = None
         self._pmem_enabled_not = None
         self._provisioned_cpu_cores = None
@@ -1678,6 +1678,8 @@ class ClusterWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.application_highest_version = kwargs.get("application_highest_version", None)
         self.application_highest_version_contains = kwargs.get("application_highest_version_contains", None)
         self.application_highest_version_ends_with = kwargs.get("application_highest_version_ends_with", None)
@@ -1974,7 +1976,6 @@ class ClusterWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.ntp_mode = kwargs.get("ntp_mode", None)
         self.ntp_mode_in = kwargs.get("ntp_mode_in", None)
         self.ntp_mode_not = kwargs.get("ntp_mode_not", None)
@@ -1985,7 +1986,6 @@ class ClusterWhereInput(object):
         self.nvme_over_tcp_enabled_not = kwargs.get("nvme_over_tcp_enabled_not", None)
         self.nvmf_enabled = kwargs.get("nvmf_enabled", None)
         self.nvmf_enabled_not = kwargs.get("nvmf_enabled_not", None)
-        self._or = kwargs.get("_or", None)
         self.pmem_enabled = kwargs.get("pmem_enabled", None)
         self.pmem_enabled_not = kwargs.get("pmem_enabled_not", None)
         self.provisioned_cpu_cores = kwargs.get("provisioned_cpu_cores", None)
@@ -2245,6 +2245,48 @@ class ClusterWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ClusterWhereInput.  # noqa: E501
+        :rtype: list[ClusterWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ClusterWhereInput.
+
+
+        :param _not: The _not of this ClusterWhereInput.  # noqa: E501
+        :type _not: list[ClusterWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ClusterWhereInput.  # noqa: E501
+        :rtype: list[ClusterWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ClusterWhereInput.
+
+
+        :param _or: The _or of this ClusterWhereInput.  # noqa: E501
+        :type _or: list[ClusterWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def application_highest_version(self):
@@ -8463,27 +8505,6 @@ class ClusterWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this ClusterWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ClusterWhereInput.  # noqa: E501
-        :rtype: list[ClusterWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ClusterWhereInput.
-
-
-        :param _not: The _not of this ClusterWhereInput.  # noqa: E501
-        :type _not: list[ClusterWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def ntp_mode(self):
         """Gets the ntp_mode of this ClusterWhereInput.  # noqa: E501
 
@@ -8692,27 +8713,6 @@ class ClusterWhereInput(object):
         """
 
         self._nvmf_enabled_not = nvmf_enabled_not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ClusterWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ClusterWhereInput.  # noqa: E501
-        :rtype: list[ClusterWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ClusterWhereInput.
-
-
-        :param _or: The _or of this ClusterWhereInput.  # noqa: E501
-        :type _or: list[ClusterWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def pmem_enabled(self):

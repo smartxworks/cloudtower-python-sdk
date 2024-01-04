@@ -46,8 +46,8 @@ class Graph(object):
         'type': 'GraphType',
         'view': 'NestedView',
         'vm_nics': 'list[NestedVmNic]',
-        'vms': 'list[NestedVm]',
         'vm_volumes': 'list[NestedVmVolume]',
+        'vms': 'list[NestedVm]',
         'witnesses': 'list[NestedWitness]',
         'zones': 'list[NestedZone]'
     }
@@ -74,8 +74,8 @@ class Graph(object):
         'type': 'type',
         'view': 'view',
         'vm_nics': 'vmNics',
-        'vms': 'vms',
         'vm_volumes': 'vmVolumes',
+        'vms': 'vms',
         'witnesses': 'witnesses',
         'zones': 'zones'
     }
@@ -105,8 +105,8 @@ class Graph(object):
         self._type = None
         self._view = None
         self._vm_nics = None
-        self._vms = None
         self._vm_volumes = None
+        self._vms = None
         self._witnesses = None
         self._zones = None
         self.discriminator = None
@@ -143,8 +143,8 @@ class Graph(object):
         if "view" in kwargs:
             self.view = kwargs["view"]
         self.vm_nics = kwargs.get("vm_nics", None)
-        self.vms = kwargs.get("vms", None)
         self.vm_volumes = kwargs.get("vm_volumes", None)
+        self.vms = kwargs.get("vms", None)
         self.witnesses = kwargs.get("witnesses", None)
         self.zones = kwargs.get("zones", None)
 
@@ -612,27 +612,6 @@ class Graph(object):
         self._vm_nics = vm_nics
 
     @property
-    def vms(self):
-        """Gets the vms of this Graph.  # noqa: E501
-
-
-        :return: The vms of this Graph.  # noqa: E501
-        :rtype: list[NestedVm]
-        """
-        return self._vms
-
-    @vms.setter
-    def vms(self, vms):
-        """Sets the vms of this Graph.
-
-
-        :param vms: The vms of this Graph.  # noqa: E501
-        :type vms: list[NestedVm]
-        """
-
-        self._vms = vms
-
-    @property
     def vm_volumes(self):
         """Gets the vm_volumes of this Graph.  # noqa: E501
 
@@ -652,6 +631,27 @@ class Graph(object):
         """
 
         self._vm_volumes = vm_volumes
+
+    @property
+    def vms(self):
+        """Gets the vms of this Graph.  # noqa: E501
+
+
+        :return: The vms of this Graph.  # noqa: E501
+        :rtype: list[NestedVm]
+        """
+        return self._vms
+
+    @vms.setter
+    def vms(self, vms):
+        """Sets the vms of this Graph.
+
+
+        :param vms: The vms of this Graph.  # noqa: E501
+        :type vms: list[NestedVm]
+        """
+
+        self._vms = vms
 
     @property
     def witnesses(self):

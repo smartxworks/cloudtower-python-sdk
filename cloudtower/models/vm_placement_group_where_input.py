@@ -26,6 +26,8 @@ class VmPlacementGroupWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmPlacementGroupWhereInput]',
+        '_not': 'list[VmPlacementGroupWhereInput]',
+        '_or': 'list[VmPlacementGroupWhereInput]',
         'cluster': 'ClusterWhereInput',
         'description': 'str',
         'description_contains': 'str',
@@ -105,8 +107,6 @@ class VmPlacementGroupWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[VmPlacementGroupWhereInput]',
-        '_or': 'list[VmPlacementGroupWhereInput]',
         'vm_host_must_enabled': 'bool',
         'vm_host_must_enabled_not': 'bool',
         'vm_host_must_host_uuids_every': 'HostWhereInput',
@@ -134,6 +134,8 @@ class VmPlacementGroupWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'description': 'description',
         'description_contains': 'description_contains',
@@ -213,8 +215,6 @@ class VmPlacementGroupWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'vm_host_must_enabled': 'vm_host_must_enabled',
         'vm_host_must_enabled_not': 'vm_host_must_enabled_not',
         'vm_host_must_host_uuids_every': 'vm_host_must_host_uuids_every',
@@ -245,6 +245,8 @@ class VmPlacementGroupWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._description = None
         self._description_contains = None
@@ -324,8 +326,6 @@ class VmPlacementGroupWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._vm_host_must_enabled = None
         self._vm_host_must_enabled_not = None
         self._vm_host_must_host_uuids_every = None
@@ -352,6 +352,8 @@ class VmPlacementGroupWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
@@ -431,8 +433,6 @@ class VmPlacementGroupWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.vm_host_must_enabled = kwargs.get("vm_host_must_enabled", None)
         self.vm_host_must_enabled_not = kwargs.get("vm_host_must_enabled_not", None)
         self.vm_host_must_host_uuids_every = kwargs.get("vm_host_must_host_uuids_every", None)
@@ -477,6 +477,48 @@ class VmPlacementGroupWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: list[VmPlacementGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmPlacementGroupWhereInput.
+
+
+        :param _not: The _not of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type _not: list[VmPlacementGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: list[VmPlacementGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmPlacementGroupWhereInput.
+
+
+        :param _or: The _or of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type _or: list[VmPlacementGroupWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2136,48 +2178,6 @@ class VmPlacementGroupWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmPlacementGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmPlacementGroupWhereInput.  # noqa: E501
-        :rtype: list[VmPlacementGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmPlacementGroupWhereInput.
-
-
-        :param _not: The _not of this VmPlacementGroupWhereInput.  # noqa: E501
-        :type _not: list[VmPlacementGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmPlacementGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmPlacementGroupWhereInput.  # noqa: E501
-        :rtype: list[VmPlacementGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmPlacementGroupWhereInput.
-
-
-        :param _or: The _or of this VmPlacementGroupWhereInput.  # noqa: E501
-        :type _or: list[VmPlacementGroupWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def vm_host_must_enabled(self):

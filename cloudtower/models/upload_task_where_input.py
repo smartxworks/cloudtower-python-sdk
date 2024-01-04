@@ -26,6 +26,8 @@ class UploadTaskWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[UploadTaskWhereInput]',
+        '_not': 'list[UploadTaskWhereInput]',
+        '_or': 'list[UploadTaskWhereInput]',
         'chunk_size': 'int',
         'chunk_size_gt': 'int',
         'chunk_size_gte': 'int',
@@ -64,8 +66,6 @@ class UploadTaskWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        '_not': 'list[UploadTaskWhereInput]',
-        '_or': 'list[UploadTaskWhereInput]',
         'resource_type': 'UploadResourceType',
         'resource_type_in': 'list[UploadResourceType]',
         'resource_type_not': 'UploadResourceType',
@@ -102,6 +102,8 @@ class UploadTaskWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'chunk_size': 'chunk_size',
         'chunk_size_gt': 'chunk_size_gt',
         'chunk_size_gte': 'chunk_size_gte',
@@ -140,8 +142,6 @@ class UploadTaskWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'resource_type': 'resource_type',
         'resource_type_in': 'resource_type_in',
         'resource_type_not': 'resource_type_not',
@@ -181,6 +181,8 @@ class UploadTaskWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._chunk_size = None
         self._chunk_size_gt = None
         self._chunk_size_gte = None
@@ -219,8 +221,6 @@ class UploadTaskWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._resource_type = None
         self._resource_type_in = None
         self._resource_type_not = None
@@ -256,6 +256,8 @@ class UploadTaskWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.chunk_size = kwargs.get("chunk_size", None)
         self.chunk_size_gt = kwargs.get("chunk_size_gt", None)
         self.chunk_size_gte = kwargs.get("chunk_size_gte", None)
@@ -294,8 +296,6 @@ class UploadTaskWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.resource_type = kwargs.get("resource_type", None)
         self.resource_type_in = kwargs.get("resource_type_in", None)
         self.resource_type_not = kwargs.get("resource_type_not", None)
@@ -349,6 +349,48 @@ class UploadTaskWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this UploadTaskWhereInput.  # noqa: E501
+
+
+        :return: The _not of this UploadTaskWhereInput.  # noqa: E501
+        :rtype: list[UploadTaskWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this UploadTaskWhereInput.
+
+
+        :param _not: The _not of this UploadTaskWhereInput.  # noqa: E501
+        :type _not: list[UploadTaskWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this UploadTaskWhereInput.  # noqa: E501
+
+
+        :return: The _or of this UploadTaskWhereInput.  # noqa: E501
+        :rtype: list[UploadTaskWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this UploadTaskWhereInput.
+
+
+        :param _or: The _or of this UploadTaskWhereInput.  # noqa: E501
+        :type _or: list[UploadTaskWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def chunk_size(self):
@@ -1147,48 +1189,6 @@ class UploadTaskWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this UploadTaskWhereInput.  # noqa: E501
-
-
-        :return: The _not of this UploadTaskWhereInput.  # noqa: E501
-        :rtype: list[UploadTaskWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this UploadTaskWhereInput.
-
-
-        :param _not: The _not of this UploadTaskWhereInput.  # noqa: E501
-        :type _not: list[UploadTaskWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this UploadTaskWhereInput.  # noqa: E501
-
-
-        :return: The _or of this UploadTaskWhereInput.  # noqa: E501
-        :rtype: list[UploadTaskWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this UploadTaskWhereInput.
-
-
-        :param _or: The _or of this UploadTaskWhereInput.  # noqa: E501
-        :type _or: list[UploadTaskWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def resource_type(self):

@@ -26,6 +26,8 @@ class SecurityGroupWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SecurityGroupWhereInput]',
+        '_not': 'list[SecurityGroupWhereInput]',
+        '_or': 'list[SecurityGroupWhereInput]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -72,8 +74,6 @@ class SecurityGroupWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[SecurityGroupWhereInput]',
-        '_or': 'list[SecurityGroupWhereInput]',
         'security_policies_every': 'SecurityPolicyWhereInput',
         'security_policies_none': 'SecurityPolicyWhereInput',
         'security_policies_some': 'SecurityPolicyWhereInput',
@@ -84,6 +84,8 @@ class SecurityGroupWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -130,8 +132,6 @@ class SecurityGroupWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'security_policies_every': 'security_policies_every',
         'security_policies_none': 'security_policies_none',
         'security_policies_some': 'security_policies_some',
@@ -145,6 +145,8 @@ class SecurityGroupWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -191,8 +193,6 @@ class SecurityGroupWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._security_policies_every = None
         self._security_policies_none = None
         self._security_policies_some = None
@@ -202,6 +202,8 @@ class SecurityGroupWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -248,8 +250,6 @@ class SecurityGroupWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.security_policies_every = kwargs.get("security_policies_every", None)
         self.security_policies_none = kwargs.get("security_policies_none", None)
         self.security_policies_some = kwargs.get("security_policies_some", None)
@@ -277,6 +277,48 @@ class SecurityGroupWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SecurityGroupWhereInput.
+
+
+        :param _not: The _not of this SecurityGroupWhereInput.  # noqa: E501
+        :type _not: list[SecurityGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SecurityGroupWhereInput.
+
+
+        :param _or: The _or of this SecurityGroupWhereInput.  # noqa: E501
+        :type _or: list[SecurityGroupWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def description(self):
@@ -1243,48 +1285,6 @@ class SecurityGroupWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[SecurityGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SecurityGroupWhereInput.
-
-
-        :param _not: The _not of this SecurityGroupWhereInput.  # noqa: E501
-        :type _not: list[SecurityGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[SecurityGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SecurityGroupWhereInput.
-
-
-        :param _or: The _or of this SecurityGroupWhereInput.  # noqa: E501
-        :type _or: list[SecurityGroupWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def security_policies_every(self):

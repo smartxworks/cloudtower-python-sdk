@@ -26,6 +26,8 @@ class RackTopoWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[RackTopoWhereInput]',
+        '_not': 'list[RackTopoWhereInput]',
+        '_or': 'list[RackTopoWhereInput]',
         'brick_topoes_every': 'BrickTopoWhereInput',
         'brick_topoes_none': 'BrickTopoWhereInput',
         'brick_topoes_some': 'BrickTopoWhereInput',
@@ -80,13 +82,13 @@ class RackTopoWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[RackTopoWhereInput]',
-        '_or': 'list[RackTopoWhereInput]',
         'zone_topo': 'ZoneTopoWhereInput'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'brick_topoes_every': 'brick_topoes_every',
         'brick_topoes_none': 'brick_topoes_none',
         'brick_topoes_some': 'brick_topoes_some',
@@ -141,8 +143,6 @@ class RackTopoWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'zone_topo': 'zone_topo'
     }
 
@@ -151,6 +151,8 @@ class RackTopoWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._brick_topoes_every = None
         self._brick_topoes_none = None
         self._brick_topoes_some = None
@@ -205,12 +207,12 @@ class RackTopoWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._zone_topo = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.brick_topoes_every = kwargs.get("brick_topoes_every", None)
         self.brick_topoes_none = kwargs.get("brick_topoes_none", None)
         self.brick_topoes_some = kwargs.get("brick_topoes_some", None)
@@ -265,8 +267,6 @@ class RackTopoWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.zone_topo = kwargs.get("zone_topo", None)
 
     @property
@@ -289,6 +289,48 @@ class RackTopoWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this RackTopoWhereInput.  # noqa: E501
+
+
+        :return: The _not of this RackTopoWhereInput.  # noqa: E501
+        :rtype: list[RackTopoWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this RackTopoWhereInput.
+
+
+        :param _not: The _not of this RackTopoWhereInput.  # noqa: E501
+        :type _not: list[RackTopoWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this RackTopoWhereInput.  # noqa: E501
+
+
+        :return: The _or of this RackTopoWhereInput.  # noqa: E501
+        :rtype: list[RackTopoWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this RackTopoWhereInput.
+
+
+        :param _or: The _or of this RackTopoWhereInput.  # noqa: E501
+        :type _or: list[RackTopoWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def brick_topoes_every(self):
@@ -1423,48 +1465,6 @@ class RackTopoWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this RackTopoWhereInput.  # noqa: E501
-
-
-        :return: The _not of this RackTopoWhereInput.  # noqa: E501
-        :rtype: list[RackTopoWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this RackTopoWhereInput.
-
-
-        :param _not: The _not of this RackTopoWhereInput.  # noqa: E501
-        :type _not: list[RackTopoWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this RackTopoWhereInput.  # noqa: E501
-
-
-        :return: The _or of this RackTopoWhereInput.  # noqa: E501
-        :rtype: list[RackTopoWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this RackTopoWhereInput.
-
-
-        :param _or: The _or of this RackTopoWhereInput.  # noqa: E501
-        :type _or: list[RackTopoWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def zone_topo(self):

@@ -239,6 +239,8 @@ cloudtower/models/consistent_type.py
 cloudtower/models/content_library_image.py
 cloudtower/models/content_library_image_connection.py
 cloudtower/models/content_library_image_deletion_params.py
+cloudtower/models/content_library_image_import_data.py
+cloudtower/models/content_library_image_import_params.py
 cloudtower/models/content_library_image_order_by_input.py
 cloudtower/models/content_library_image_updation_cluster_params.py
 cloudtower/models/content_library_image_updation_cluster_params_data.py
@@ -262,6 +264,7 @@ cloudtower/models/content_library_vm_template_where_input.py
 cloudtower/models/content_library_vmdk_cdrom_modify.py
 cloudtower/models/content_library_vmdk_cdrom_mount.py
 cloudtower/models/convert_vm_template_to_vm_params.py
+cloudtower/models/copy_iscsi_lun_params.py
 cloudtower/models/cpu_fan_speed_unit.py
 cloudtower/models/create_vcenter_account_params.py
 cloudtower/models/create_vcenter_account_params_data.py
@@ -359,6 +362,13 @@ cloudtower/models/elf_storage_policy.py
 cloudtower/models/elf_storage_policy_connection.py
 cloudtower/models/elf_storage_policy_order_by_input.py
 cloudtower/models/elf_storage_policy_where_input.py
+cloudtower/models/enter_maintenance_mode_check_params.py
+cloudtower/models/enter_maintenance_mode_check_result.py
+cloudtower/models/enter_maintenance_mode_input.py
+cloudtower/models/enter_maintenance_mode_params.py
+cloudtower/models/enter_maintenance_mode_result.py
+cloudtower/models/enter_maintenance_mode_result_params.py
+cloudtower/models/enter_maintenance_mode_result_params_where.py
 cloudtower/models/entity_async_status.py
 cloudtower/models/entity_filter.py
 cloudtower/models/entity_filter_connection.py
@@ -385,6 +395,10 @@ cloudtower/models/everoute_package_connection.py
 cloudtower/models/everoute_package_order_by_input.py
 cloudtower/models/everoute_package_where_input.py
 cloudtower/models/execute_plan.py
+cloudtower/models/exit_maintenance_mode_input.py
+cloudtower/models/exit_maintenance_mode_params.py
+cloudtower/models/exit_maintenance_mode_result.py
+cloudtower/models/exit_maintenance_mode_result_params.py
 cloudtower/models/export_file_download_links.py
 cloudtower/models/export_vm_volume_params.py
 cloudtower/models/export_vm_volume_params_data.py
@@ -572,6 +586,7 @@ cloudtower/models/get_vm_snapshots_connection_request_body.py
 cloudtower/models/get_vm_snapshots_request_body.py
 cloudtower/models/get_vm_templates_connection_request_body.py
 cloudtower/models/get_vm_templates_request_body.py
+cloudtower/models/get_vm_vnc_info_params.py
 cloudtower/models/get_vm_volume_metric_input.py
 cloudtower/models/get_vm_volume_snapshots_connection_request_body.py
 cloudtower/models/get_vm_volume_snapshots_request_body.py
@@ -614,6 +629,8 @@ cloudtower/models/gpu_device_usage.py
 cloudtower/models/gpu_device_usage_updation_params.py
 cloudtower/models/gpu_device_usage_updation_params_data.py
 cloudtower/models/gpu_device_where_input.py
+cloudtower/models/gpu_vm_detail.py
+cloudtower/models/gpu_vm_info.py
 cloudtower/models/graph.py
 cloudtower/models/graph_connection.py
 cloudtower/models/graph_creation_params.py
@@ -713,6 +730,8 @@ cloudtower/models/log_service_configs_input.py
 cloudtower/models/login_input.py
 cloudtower/models/login_response.py
 cloudtower/models/maintenance_mode_enum.py
+cloudtower/models/maintenance_mode_verify.py
+cloudtower/models/maintenance_mode_vm_info.py
 cloudtower/models/management_vlan_updation_params.py
 cloudtower/models/management_vlan_updation_params_data.py
 cloudtower/models/meta_leader.py
@@ -1004,6 +1023,9 @@ cloudtower/models/nvmf_subsystem_order_by_input.py
 cloudtower/models/nvmf_subsystem_policy_type.py
 cloudtower/models/nvmf_subsystem_updation_params.py
 cloudtower/models/nvmf_subsystem_where_input.py
+cloudtower/models/operate_action_enum.py
+cloudtower/models/operate_host_power_data.py
+cloudtower/models/operate_host_power_params.py
 cloudtower/models/organization.py
 cloudtower/models/organization_connection.py
 cloudtower/models/organization_creation_params.py
@@ -1078,6 +1100,7 @@ cloudtower/models/security_policy_update_body.py
 cloudtower/models/security_policy_update_params.py
 cloudtower/models/security_policy_where_input.py
 cloudtower/models/severity_enum.py
+cloudtower/models/shutdown_vm_id.py
 cloudtower/models/smtp_secure_mode.py
 cloudtower/models/smtp_server_where_input.py
 cloudtower/models/snapshot_group.py
@@ -1147,9 +1170,14 @@ cloudtower/models/table_reporter_params.py
 cloudtower/models/table_reporter_params_filter.py
 cloudtower/models/task.py
 cloudtower/models/task_connection.py
+cloudtower/models/task_creation_params.py
+cloudtower/models/task_description.py
 cloudtower/models/task_order_by_input.py
 cloudtower/models/task_status.py
+cloudtower/models/task_step_creation_params.py
 cloudtower/models/task_type.py
+cloudtower/models/task_update_params.py
+cloudtower/models/task_update_params_data.py
 cloudtower/models/task_where_input.py
 cloudtower/models/template_cloud_init.py
 cloudtower/models/time_unit.py
@@ -1186,6 +1214,8 @@ cloudtower/models/usb_device_where_input.py
 cloudtower/models/user.py
 cloudtower/models/user_audit_log.py
 cloudtower/models/user_audit_log_connection.py
+cloudtower/models/user_audit_log_creation_params.py
+cloudtower/models/user_audit_log_message.py
 cloudtower/models/user_audit_log_order_by_input.py
 cloudtower/models/user_audit_log_status.py
 cloudtower/models/user_audit_log_where_input.py
@@ -1291,6 +1321,8 @@ cloudtower/models/vm_folder_order_by_input.py
 cloudtower/models/vm_folder_updation_params.py
 cloudtower/models/vm_folder_updation_params_data.py
 cloudtower/models/vm_folder_where_input.py
+cloudtower/models/vm_gpu_detail.py
+cloudtower/models/vm_gpu_info.py
 cloudtower/models/vm_gpu_operation_params.py
 cloudtower/models/vm_guests_operation_system.py
 cloudtower/models/vm_import_nic_params.py
@@ -1310,6 +1342,7 @@ cloudtower/models/vm_operate_params.py
 cloudtower/models/vm_operate_pci_nic_params.py
 cloudtower/models/vm_operate_pci_nic_params_data.py
 cloudtower/models/vm_order_by_input.py
+cloudtower/models/vm_owner_params.py
 cloudtower/models/vm_placement_group.py
 cloudtower/models/vm_placement_group_connection.py
 cloudtower/models/vm_placement_group_creation_params.py
@@ -1380,6 +1413,7 @@ cloudtower/models/vm_vlan_creation_params.py
 cloudtower/models/vm_vlan_updation_params.py
 cloudtower/models/vm_vlan_updation_params_data.py
 cloudtower/models/vm_vm_policy.py
+cloudtower/models/vm_vnc_info.py
 cloudtower/models/vm_volume.py
 cloudtower/models/vm_volume_connection.py
 cloudtower/models/vm_volume_creation_params.py
@@ -1495,8 +1529,10 @@ cloudtower/models/with_task_snapshot_group.py
 cloudtower/models/with_task_snapshot_plan.py
 cloudtower/models/with_task_snmp_transport.py
 cloudtower/models/with_task_snmp_trap_receiver.py
+cloudtower/models/with_task_task.py
 cloudtower/models/with_task_usb_device.py
 cloudtower/models/with_task_user.py
+cloudtower/models/with_task_user_audit_log.py
 cloudtower/models/with_task_user_role_next.py
 cloudtower/models/with_task_vcenter_account.py
 cloudtower/models/with_task_vds.py

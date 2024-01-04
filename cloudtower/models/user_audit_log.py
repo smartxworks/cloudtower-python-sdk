@@ -26,6 +26,7 @@ class UserAuditLog(object):
     """
     openapi_types = {
         'action': 'str',
+        'auth_type': 'str',
         'cluster': 'NestedCluster',
         'created_at': 'str',
         'finished_at': 'str',
@@ -36,11 +37,13 @@ class UserAuditLog(object):
         'resource_type': 'str',
         'started_at': 'str',
         'status': 'UserAuditLogStatus',
-        'user': 'NestedUser'
+        'user': 'NestedUser',
+        'username': 'str'
     }
 
     attribute_map = {
         'action': 'action',
+        'auth_type': 'auth_type',
         'cluster': 'cluster',
         'created_at': 'createdAt',
         'finished_at': 'finished_at',
@@ -51,7 +54,8 @@ class UserAuditLog(object):
         'resource_type': 'resource_type',
         'started_at': 'started_at',
         'status': 'status',
-        'user': 'user'
+        'user': 'user',
+        'username': 'username'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -59,6 +63,7 @@ class UserAuditLog(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._action = None
+        self._auth_type = None
         self._cluster = None
         self._created_at = None
         self._finished_at = None
@@ -70,10 +75,12 @@ class UserAuditLog(object):
         self._started_at = None
         self._status = None
         self._user = None
+        self._username = None
         self.discriminator = None
 
         if "action" in kwargs:
             self.action = kwargs["action"]
+        self.auth_type = kwargs.get("auth_type", None)
         self.cluster = kwargs.get("cluster", None)
         if "created_at" in kwargs:
             self.created_at = kwargs["created_at"]
@@ -89,6 +96,7 @@ class UserAuditLog(object):
         self.started_at = kwargs.get("started_at", None)
         self.status = kwargs.get("status", None)
         self.user = kwargs.get("user", None)
+        self.username = kwargs.get("username", None)
 
     @property
     def action(self):
@@ -112,6 +120,27 @@ class UserAuditLog(object):
             raise ValueError("Invalid value for `action`, must not be `None`")  # noqa: E501
 
         self._action = action
+
+    @property
+    def auth_type(self):
+        """Gets the auth_type of this UserAuditLog.  # noqa: E501
+
+
+        :return: The auth_type of this UserAuditLog.  # noqa: E501
+        :rtype: str
+        """
+        return self._auth_type
+
+    @auth_type.setter
+    def auth_type(self, auth_type):
+        """Sets the auth_type of this UserAuditLog.
+
+
+        :param auth_type: The auth_type of this UserAuditLog.  # noqa: E501
+        :type auth_type: str
+        """
+
+        self._auth_type = auth_type
 
     @property
     def cluster(self):
@@ -351,6 +380,27 @@ class UserAuditLog(object):
         """
 
         self._user = user
+
+    @property
+    def username(self):
+        """Gets the username of this UserAuditLog.  # noqa: E501
+
+
+        :return: The username of this UserAuditLog.  # noqa: E501
+        :rtype: str
+        """
+        return self._username
+
+    @username.setter
+    def username(self, username):
+        """Sets the username of this UserAuditLog.
+
+
+        :param username: The username of this UserAuditLog.  # noqa: E501
+        :type username: str
+        """
+
+        self._username = username
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -26,6 +26,8 @@ class VmEntityFilterResultWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmEntityFilterResultWhereInput]',
+        '_not': 'list[VmEntityFilterResultWhereInput]',
+        '_or': 'list[VmEntityFilterResultWhereInput]',
         'entity_filter': 'EntityFilterWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -41,13 +43,13 @@ class VmEntityFilterResultWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        '_not': 'list[VmEntityFilterResultWhereInput]',
-        '_or': 'list[VmEntityFilterResultWhereInput]',
         'vm': 'VmWhereInput'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'entity_filter': 'entityFilter',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -63,8 +65,6 @@ class VmEntityFilterResultWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'vm': 'vm'
     }
 
@@ -73,6 +73,8 @@ class VmEntityFilterResultWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._entity_filter = None
         self._id = None
         self._id_contains = None
@@ -88,12 +90,12 @@ class VmEntityFilterResultWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._vm = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.entity_filter = kwargs.get("entity_filter", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -109,8 +111,6 @@ class VmEntityFilterResultWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.vm = kwargs.get("vm", None)
 
     @property
@@ -133,6 +133,48 @@ class VmEntityFilterResultWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmEntityFilterResultWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmEntityFilterResultWhereInput.  # noqa: E501
+        :rtype: list[VmEntityFilterResultWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmEntityFilterResultWhereInput.
+
+
+        :param _not: The _not of this VmEntityFilterResultWhereInput.  # noqa: E501
+        :type _not: list[VmEntityFilterResultWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmEntityFilterResultWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmEntityFilterResultWhereInput.  # noqa: E501
+        :rtype: list[VmEntityFilterResultWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmEntityFilterResultWhereInput.
+
+
+        :param _or: The _or of this VmEntityFilterResultWhereInput.  # noqa: E501
+        :type _or: list[VmEntityFilterResultWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def entity_filter(self):
@@ -448,48 +490,6 @@ class VmEntityFilterResultWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmEntityFilterResultWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmEntityFilterResultWhereInput.  # noqa: E501
-        :rtype: list[VmEntityFilterResultWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmEntityFilterResultWhereInput.
-
-
-        :param _not: The _not of this VmEntityFilterResultWhereInput.  # noqa: E501
-        :type _not: list[VmEntityFilterResultWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmEntityFilterResultWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmEntityFilterResultWhereInput.  # noqa: E501
-        :rtype: list[VmEntityFilterResultWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmEntityFilterResultWhereInput.
-
-
-        :param _or: The _or of this VmEntityFilterResultWhereInput.  # noqa: E501
-        :type _or: list[VmEntityFilterResultWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def vm(self):

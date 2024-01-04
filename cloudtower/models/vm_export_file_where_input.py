@@ -26,6 +26,8 @@ class VmExportFileWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmExportFileWhereInput]',
+        '_not': 'list[VmExportFileWhereInput]',
+        '_or': 'list[VmExportFileWhereInput]',
         'content_library_vm_template': 'ContentLibraryVmTemplateWhereInput',
         'created_at': 'str',
         'created_at_gt': 'str',
@@ -69,8 +71,6 @@ class VmExportFileWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        '_not': 'list[VmExportFileWhereInput]',
-        '_or': 'list[VmExportFileWhereInput]',
         'storage_cluster_id': 'str',
         'storage_cluster_id_contains': 'str',
         'storage_cluster_id_ends_with': 'str',
@@ -95,6 +95,8 @@ class VmExportFileWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'content_library_vm_template': 'content_library_vm_template',
         'created_at': 'createdAt',
         'created_at_gt': 'createdAt_gt',
@@ -138,8 +140,6 @@ class VmExportFileWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'storage_cluster_id': 'storage_cluster_id',
         'storage_cluster_id_contains': 'storage_cluster_id_contains',
         'storage_cluster_id_ends_with': 'storage_cluster_id_ends_with',
@@ -167,6 +167,8 @@ class VmExportFileWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._content_library_vm_template = None
         self._created_at = None
         self._created_at_gt = None
@@ -210,8 +212,6 @@ class VmExportFileWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._storage_cluster_id = None
         self._storage_cluster_id_contains = None
         self._storage_cluster_id_ends_with = None
@@ -235,6 +235,8 @@ class VmExportFileWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.content_library_vm_template = kwargs.get("content_library_vm_template", None)
         self.created_at = kwargs.get("created_at", None)
         self.created_at_gt = kwargs.get("created_at_gt", None)
@@ -278,8 +280,6 @@ class VmExportFileWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.storage_cluster_id = kwargs.get("storage_cluster_id", None)
         self.storage_cluster_id_contains = kwargs.get("storage_cluster_id_contains", None)
         self.storage_cluster_id_ends_with = kwargs.get("storage_cluster_id_ends_with", None)
@@ -321,6 +321,48 @@ class VmExportFileWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmExportFileWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmExportFileWhereInput.  # noqa: E501
+        :rtype: list[VmExportFileWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmExportFileWhereInput.
+
+
+        :param _not: The _not of this VmExportFileWhereInput.  # noqa: E501
+        :type _not: list[VmExportFileWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmExportFileWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmExportFileWhereInput.  # noqa: E501
+        :rtype: list[VmExportFileWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmExportFileWhereInput.
+
+
+        :param _or: The _or of this VmExportFileWhereInput.  # noqa: E501
+        :type _or: list[VmExportFileWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def content_library_vm_template(self):
@@ -1224,48 +1266,6 @@ class VmExportFileWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmExportFileWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmExportFileWhereInput.  # noqa: E501
-        :rtype: list[VmExportFileWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmExportFileWhereInput.
-
-
-        :param _not: The _not of this VmExportFileWhereInput.  # noqa: E501
-        :type _not: list[VmExportFileWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmExportFileWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmExportFileWhereInput.  # noqa: E501
-        :rtype: list[VmExportFileWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmExportFileWhereInput.
-
-
-        :param _or: The _or of this VmExportFileWhereInput.  # noqa: E501
-        :type _or: list[VmExportFileWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def storage_cluster_id(self):

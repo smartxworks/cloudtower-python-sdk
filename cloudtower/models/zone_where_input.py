@@ -26,6 +26,8 @@ class ZoneWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ZoneWhereInput]',
+        '_not': 'list[ZoneWhereInput]',
+        '_or': 'list[ZoneWhereInput]',
         'cluster': 'ClusterWhereInput',
         'datacenter': 'DatacenterWhereInput',
         'failure_data_space': 'int',
@@ -77,8 +79,6 @@ class ZoneWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        '_not': 'list[ZoneWhereInput]',
-        '_or': 'list[ZoneWhereInput]',
         'provisioned_cpu_cores': 'int',
         'provisioned_cpu_cores_for_active_vm': 'int',
         'provisioned_cpu_cores_for_active_vm_gt': 'int',
@@ -203,6 +203,8 @@ class ZoneWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'datacenter': 'datacenter',
         'failure_data_space': 'failure_data_space',
@@ -254,8 +256,6 @@ class ZoneWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
         'provisioned_cpu_cores_for_active_vm': 'provisioned_cpu_cores_for_active_vm',
         'provisioned_cpu_cores_for_active_vm_gt': 'provisioned_cpu_cores_for_active_vm_gt',
@@ -383,6 +383,8 @@ class ZoneWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._datacenter = None
         self._failure_data_space = None
@@ -434,8 +436,6 @@ class ZoneWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._provisioned_cpu_cores = None
         self._provisioned_cpu_cores_for_active_vm = None
         self._provisioned_cpu_cores_for_active_vm_gt = None
@@ -559,6 +559,8 @@ class ZoneWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.datacenter = kwargs.get("datacenter", None)
         self.failure_data_space = kwargs.get("failure_data_space", None)
@@ -610,8 +612,6 @@ class ZoneWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.provisioned_cpu_cores = kwargs.get("provisioned_cpu_cores", None)
         self.provisioned_cpu_cores_for_active_vm = kwargs.get("provisioned_cpu_cores_for_active_vm", None)
         self.provisioned_cpu_cores_for_active_vm_gt = kwargs.get("provisioned_cpu_cores_for_active_vm_gt", None)
@@ -753,6 +753,48 @@ class ZoneWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ZoneWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ZoneWhereInput.  # noqa: E501
+        :rtype: list[ZoneWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ZoneWhereInput.
+
+
+        :param _not: The _not of this ZoneWhereInput.  # noqa: E501
+        :type _not: list[ZoneWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ZoneWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ZoneWhereInput.  # noqa: E501
+        :rtype: list[ZoneWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ZoneWhereInput.
+
+
+        :param _or: The _or of this ZoneWhereInput.  # noqa: E501
+        :type _or: list[ZoneWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1824,48 +1866,6 @@ class ZoneWhereInput(object):
         """
 
         self._local_id_starts_with = local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ZoneWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ZoneWhereInput.  # noqa: E501
-        :rtype: list[ZoneWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ZoneWhereInput.
-
-
-        :param _not: The _not of this ZoneWhereInput.  # noqa: E501
-        :type _not: list[ZoneWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ZoneWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ZoneWhereInput.  # noqa: E501
-        :rtype: list[ZoneWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ZoneWhereInput.
-
-
-        :param _or: The _or of this ZoneWhereInput.  # noqa: E501
-        :type _or: list[ZoneWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def provisioned_cpu_cores(self):

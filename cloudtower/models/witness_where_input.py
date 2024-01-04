@@ -26,6 +26,8 @@ class WitnessWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[WitnessWhereInput]',
+        '_not': 'list[WitnessWhereInput]',
+        '_or': 'list[WitnessWhereInput]',
         'cluster': 'ClusterWhereInput',
         'cpu_hz_per_core': 'int',
         'cpu_hz_per_core_gt': 'int',
@@ -105,8 +107,6 @@ class WitnessWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[WitnessWhereInput]',
-        '_or': 'list[WitnessWhereInput]',
         'system_data_capacity': 'int',
         'system_data_capacity_gt': 'int',
         'system_data_capacity_gte': 'int',
@@ -151,6 +151,8 @@ class WitnessWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'cpu_hz_per_core': 'cpu_hz_per_core',
         'cpu_hz_per_core_gt': 'cpu_hz_per_core_gt',
@@ -230,8 +232,6 @@ class WitnessWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'system_data_capacity': 'system_data_capacity',
         'system_data_capacity_gt': 'system_data_capacity_gt',
         'system_data_capacity_gte': 'system_data_capacity_gte',
@@ -279,6 +279,8 @@ class WitnessWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._cpu_hz_per_core = None
         self._cpu_hz_per_core_gt = None
@@ -358,8 +360,6 @@ class WitnessWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._system_data_capacity = None
         self._system_data_capacity_gt = None
         self._system_data_capacity_gte = None
@@ -403,6 +403,8 @@ class WitnessWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.cpu_hz_per_core = kwargs.get("cpu_hz_per_core", None)
         self.cpu_hz_per_core_gt = kwargs.get("cpu_hz_per_core_gt", None)
@@ -482,8 +484,6 @@ class WitnessWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.system_data_capacity = kwargs.get("system_data_capacity", None)
         self.system_data_capacity_gt = kwargs.get("system_data_capacity_gt", None)
         self.system_data_capacity_gte = kwargs.get("system_data_capacity_gte", None)
@@ -545,6 +545,48 @@ class WitnessWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this WitnessWhereInput.  # noqa: E501
+
+
+        :return: The _not of this WitnessWhereInput.  # noqa: E501
+        :rtype: list[WitnessWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this WitnessWhereInput.
+
+
+        :param _not: The _not of this WitnessWhereInput.  # noqa: E501
+        :type _not: list[WitnessWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this WitnessWhereInput.  # noqa: E501
+
+
+        :return: The _or of this WitnessWhereInput.  # noqa: E501
+        :rtype: list[WitnessWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this WitnessWhereInput.
+
+
+        :param _or: The _or of this WitnessWhereInput.  # noqa: E501
+        :type _or: list[WitnessWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2204,48 +2246,6 @@ class WitnessWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this WitnessWhereInput.  # noqa: E501
-
-
-        :return: The _not of this WitnessWhereInput.  # noqa: E501
-        :rtype: list[WitnessWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this WitnessWhereInput.
-
-
-        :param _not: The _not of this WitnessWhereInput.  # noqa: E501
-        :type _not: list[WitnessWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this WitnessWhereInput.  # noqa: E501
-
-
-        :return: The _or of this WitnessWhereInput.  # noqa: E501
-        :rtype: list[WitnessWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this WitnessWhereInput.
-
-
-        :param _or: The _or of this WitnessWhereInput.  # noqa: E501
-        :type _or: list[WitnessWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def system_data_capacity(self):

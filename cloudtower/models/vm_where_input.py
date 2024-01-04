@@ -26,6 +26,8 @@ class VmWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmWhereInput]',
+        '_not': 'list[VmWhereInput]',
+        '_or': 'list[VmWhereInput]',
         'clock_offset': 'VmClockOffset',
         'clock_offset_in': 'list[VmClockOffset]',
         'clock_offset_not': 'VmClockOffset',
@@ -91,13 +93,13 @@ class VmWhereInput(object):
         'dns_servers_not_in': 'list[str]',
         'dns_servers_not_starts_with': 'str',
         'dns_servers_starts_with': 'str',
-        'entity_filter_results_every': 'VmEntityFilterResultWhereInput',
-        'entity_filter_results_none': 'VmEntityFilterResultWhereInput',
-        'entity_filter_results_some': 'VmEntityFilterResultWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
+        'entity_filter_results_every': 'VmEntityFilterResultWhereInput',
+        'entity_filter_results_none': 'VmEntityFilterResultWhereInput',
+        'entity_filter_results_some': 'VmEntityFilterResultWhereInput',
         'firmware': 'VmFirmware',
         'firmware_in': 'list[VmFirmware]',
         'firmware_not': 'VmFirmware',
@@ -319,8 +321,6 @@ class VmWhereInput(object):
         'node_ip_not_in': 'list[str]',
         'node_ip_not_starts_with': 'str',
         'node_ip_starts_with': 'str',
-        '_not': 'list[VmWhereInput]',
-        '_or': 'list[VmWhereInput]',
         'original_name': 'str',
         'original_name_contains': 'str',
         'original_name_ends_with': 'str',
@@ -438,6 +438,8 @@ class VmWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'clock_offset': 'clock_offset',
         'clock_offset_in': 'clock_offset_in',
         'clock_offset_not': 'clock_offset_not',
@@ -503,13 +505,13 @@ class VmWhereInput(object):
         'dns_servers_not_in': 'dns_servers_not_in',
         'dns_servers_not_starts_with': 'dns_servers_not_starts_with',
         'dns_servers_starts_with': 'dns_servers_starts_with',
-        'entity_filter_results_every': 'entity_filter_results_every',
-        'entity_filter_results_none': 'entity_filter_results_none',
-        'entity_filter_results_some': 'entity_filter_results_some',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
+        'entity_filter_results_every': 'entity_filter_results_every',
+        'entity_filter_results_none': 'entity_filter_results_none',
+        'entity_filter_results_some': 'entity_filter_results_some',
         'firmware': 'firmware',
         'firmware_in': 'firmware_in',
         'firmware_not': 'firmware_not',
@@ -731,8 +733,6 @@ class VmWhereInput(object):
         'node_ip_not_in': 'node_ip_not_in',
         'node_ip_not_starts_with': 'node_ip_not_starts_with',
         'node_ip_starts_with': 'node_ip_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'original_name': 'original_name',
         'original_name_contains': 'original_name_contains',
         'original_name_ends_with': 'original_name_ends_with',
@@ -853,6 +853,8 @@ class VmWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._clock_offset = None
         self._clock_offset_in = None
         self._clock_offset_not = None
@@ -918,13 +920,13 @@ class VmWhereInput(object):
         self._dns_servers_not_in = None
         self._dns_servers_not_starts_with = None
         self._dns_servers_starts_with = None
-        self._entity_filter_results_every = None
-        self._entity_filter_results_none = None
-        self._entity_filter_results_some = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
+        self._entity_filter_results_every = None
+        self._entity_filter_results_none = None
+        self._entity_filter_results_some = None
         self._firmware = None
         self._firmware_in = None
         self._firmware_not = None
@@ -1146,8 +1148,6 @@ class VmWhereInput(object):
         self._node_ip_not_in = None
         self._node_ip_not_starts_with = None
         self._node_ip_starts_with = None
-        self.__not = None
-        self.__or = None
         self._original_name = None
         self._original_name_contains = None
         self._original_name_ends_with = None
@@ -1264,6 +1264,8 @@ class VmWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.clock_offset = kwargs.get("clock_offset", None)
         self.clock_offset_in = kwargs.get("clock_offset_in", None)
         self.clock_offset_not = kwargs.get("clock_offset_not", None)
@@ -1329,13 +1331,13 @@ class VmWhereInput(object):
         self.dns_servers_not_in = kwargs.get("dns_servers_not_in", None)
         self.dns_servers_not_starts_with = kwargs.get("dns_servers_not_starts_with", None)
         self.dns_servers_starts_with = kwargs.get("dns_servers_starts_with", None)
-        self.entity_filter_results_every = kwargs.get("entity_filter_results_every", None)
-        self.entity_filter_results_none = kwargs.get("entity_filter_results_none", None)
-        self.entity_filter_results_some = kwargs.get("entity_filter_results_some", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
+        self.entity_filter_results_every = kwargs.get("entity_filter_results_every", None)
+        self.entity_filter_results_none = kwargs.get("entity_filter_results_none", None)
+        self.entity_filter_results_some = kwargs.get("entity_filter_results_some", None)
         self.firmware = kwargs.get("firmware", None)
         self.firmware_in = kwargs.get("firmware_in", None)
         self.firmware_not = kwargs.get("firmware_not", None)
@@ -1557,8 +1559,6 @@ class VmWhereInput(object):
         self.node_ip_not_in = kwargs.get("node_ip_not_in", None)
         self.node_ip_not_starts_with = kwargs.get("node_ip_not_starts_with", None)
         self.node_ip_starts_with = kwargs.get("node_ip_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.original_name = kwargs.get("original_name", None)
         self.original_name_contains = kwargs.get("original_name_contains", None)
         self.original_name_ends_with = kwargs.get("original_name_ends_with", None)
@@ -1693,6 +1693,48 @@ class VmWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmWhereInput.  # noqa: E501
+        :rtype: list[VmWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmWhereInput.
+
+
+        :param _not: The _not of this VmWhereInput.  # noqa: E501
+        :type _not: list[VmWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmWhereInput.  # noqa: E501
+        :rtype: list[VmWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmWhereInput.
+
+
+        :param _or: The _or of this VmWhereInput.  # noqa: E501
+        :type _or: list[VmWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def clock_offset(self):
@@ -3060,69 +3102,6 @@ class VmWhereInput(object):
         self._dns_servers_starts_with = dns_servers_starts_with
 
     @property
-    def entity_filter_results_every(self):
-        """Gets the entity_filter_results_every of this VmWhereInput.  # noqa: E501
-
-
-        :return: The entity_filter_results_every of this VmWhereInput.  # noqa: E501
-        :rtype: VmEntityFilterResultWhereInput
-        """
-        return self._entity_filter_results_every
-
-    @entity_filter_results_every.setter
-    def entity_filter_results_every(self, entity_filter_results_every):
-        """Sets the entity_filter_results_every of this VmWhereInput.
-
-
-        :param entity_filter_results_every: The entity_filter_results_every of this VmWhereInput.  # noqa: E501
-        :type entity_filter_results_every: VmEntityFilterResultWhereInput
-        """
-
-        self._entity_filter_results_every = entity_filter_results_every
-
-    @property
-    def entity_filter_results_none(self):
-        """Gets the entity_filter_results_none of this VmWhereInput.  # noqa: E501
-
-
-        :return: The entity_filter_results_none of this VmWhereInput.  # noqa: E501
-        :rtype: VmEntityFilterResultWhereInput
-        """
-        return self._entity_filter_results_none
-
-    @entity_filter_results_none.setter
-    def entity_filter_results_none(self, entity_filter_results_none):
-        """Sets the entity_filter_results_none of this VmWhereInput.
-
-
-        :param entity_filter_results_none: The entity_filter_results_none of this VmWhereInput.  # noqa: E501
-        :type entity_filter_results_none: VmEntityFilterResultWhereInput
-        """
-
-        self._entity_filter_results_none = entity_filter_results_none
-
-    @property
-    def entity_filter_results_some(self):
-        """Gets the entity_filter_results_some of this VmWhereInput.  # noqa: E501
-
-
-        :return: The entity_filter_results_some of this VmWhereInput.  # noqa: E501
-        :rtype: VmEntityFilterResultWhereInput
-        """
-        return self._entity_filter_results_some
-
-    @entity_filter_results_some.setter
-    def entity_filter_results_some(self, entity_filter_results_some):
-        """Sets the entity_filter_results_some of this VmWhereInput.
-
-
-        :param entity_filter_results_some: The entity_filter_results_some of this VmWhereInput.  # noqa: E501
-        :type entity_filter_results_some: VmEntityFilterResultWhereInput
-        """
-
-        self._entity_filter_results_some = entity_filter_results_some
-
-    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VmWhereInput.  # noqa: E501
 
@@ -3205,6 +3184,69 @@ class VmWhereInput(object):
         """
 
         self._entity_async_status_not_in = entity_async_status_not_in
+
+    @property
+    def entity_filter_results_every(self):
+        """Gets the entity_filter_results_every of this VmWhereInput.  # noqa: E501
+
+
+        :return: The entity_filter_results_every of this VmWhereInput.  # noqa: E501
+        :rtype: VmEntityFilterResultWhereInput
+        """
+        return self._entity_filter_results_every
+
+    @entity_filter_results_every.setter
+    def entity_filter_results_every(self, entity_filter_results_every):
+        """Sets the entity_filter_results_every of this VmWhereInput.
+
+
+        :param entity_filter_results_every: The entity_filter_results_every of this VmWhereInput.  # noqa: E501
+        :type entity_filter_results_every: VmEntityFilterResultWhereInput
+        """
+
+        self._entity_filter_results_every = entity_filter_results_every
+
+    @property
+    def entity_filter_results_none(self):
+        """Gets the entity_filter_results_none of this VmWhereInput.  # noqa: E501
+
+
+        :return: The entity_filter_results_none of this VmWhereInput.  # noqa: E501
+        :rtype: VmEntityFilterResultWhereInput
+        """
+        return self._entity_filter_results_none
+
+    @entity_filter_results_none.setter
+    def entity_filter_results_none(self, entity_filter_results_none):
+        """Sets the entity_filter_results_none of this VmWhereInput.
+
+
+        :param entity_filter_results_none: The entity_filter_results_none of this VmWhereInput.  # noqa: E501
+        :type entity_filter_results_none: VmEntityFilterResultWhereInput
+        """
+
+        self._entity_filter_results_none = entity_filter_results_none
+
+    @property
+    def entity_filter_results_some(self):
+        """Gets the entity_filter_results_some of this VmWhereInput.  # noqa: E501
+
+
+        :return: The entity_filter_results_some of this VmWhereInput.  # noqa: E501
+        :rtype: VmEntityFilterResultWhereInput
+        """
+        return self._entity_filter_results_some
+
+    @entity_filter_results_some.setter
+    def entity_filter_results_some(self, entity_filter_results_some):
+        """Sets the entity_filter_results_some of this VmWhereInput.
+
+
+        :param entity_filter_results_some: The entity_filter_results_some of this VmWhereInput.  # noqa: E501
+        :type entity_filter_results_some: VmEntityFilterResultWhereInput
+        """
+
+        self._entity_filter_results_some = entity_filter_results_some
 
     @property
     def firmware(self):
@@ -7846,48 +7888,6 @@ class VmWhereInput(object):
         """
 
         self._node_ip_starts_with = node_ip_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmWhereInput.  # noqa: E501
-        :rtype: list[VmWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmWhereInput.
-
-
-        :param _not: The _not of this VmWhereInput.  # noqa: E501
-        :type _not: list[VmWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmWhereInput.  # noqa: E501
-        :rtype: list[VmWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmWhereInput.
-
-
-        :param _or: The _or of this VmWhereInput.  # noqa: E501
-        :type _or: list[VmWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def original_name(self):

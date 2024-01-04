@@ -26,6 +26,11 @@ class ConsistencyGroupSnapshotWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ConsistencyGroupSnapshotWhereInput]',
+        'iscsi_lun_snapshots_every': 'IscsiLunSnapshotWhereInput',
+        'iscsi_lun_snapshots_none': 'IscsiLunSnapshotWhereInput',
+        'iscsi_lun_snapshots_some': 'IscsiLunSnapshotWhereInput',
+        '_not': 'list[ConsistencyGroupSnapshotWhereInput]',
+        '_or': 'list[ConsistencyGroupSnapshotWhereInput]',
         'consistency_group': 'ConsistencyGroupWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
@@ -45,9 +50,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'iscsi_lun_snapshots_every': 'IscsiLunSnapshotWhereInput',
-        'iscsi_lun_snapshots_none': 'IscsiLunSnapshotWhereInput',
-        'iscsi_lun_snapshots_some': 'IscsiLunSnapshotWhereInput',
         'labels_every': 'LabelWhereInput',
         'labels_none': 'LabelWhereInput',
         'labels_some': 'LabelWhereInput',
@@ -87,11 +89,9 @@ class ConsistencyGroupSnapshotWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ConsistencyGroupSnapshotWhereInput]',
         'nvmf_namespace_snapshots_every': 'NvmfNamespaceSnapshotWhereInput',
         'nvmf_namespace_snapshots_none': 'NvmfNamespaceSnapshotWhereInput',
         'nvmf_namespace_snapshots_some': 'NvmfNamespaceSnapshotWhereInput',
-        '_or': 'list[ConsistencyGroupSnapshotWhereInput]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -104,6 +104,11 @@ class ConsistencyGroupSnapshotWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        'iscsi_lun_snapshots_every': 'Iscsi_lun_snapshots_every',
+        'iscsi_lun_snapshots_none': 'Iscsi_lun_snapshots_none',
+        'iscsi_lun_snapshots_some': 'Iscsi_lun_snapshots_some',
+        '_not': 'NOT',
+        '_or': 'OR',
         'consistency_group': 'consistency_group',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
@@ -123,9 +128,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'iscsi_lun_snapshots_every': 'Iscsi_lun_snapshots_every',
-        'iscsi_lun_snapshots_none': 'Iscsi_lun_snapshots_none',
-        'iscsi_lun_snapshots_some': 'Iscsi_lun_snapshots_some',
         'labels_every': 'labels_every',
         'labels_none': 'labels_none',
         'labels_some': 'labels_some',
@@ -165,11 +167,9 @@ class ConsistencyGroupSnapshotWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'nvmf_namespace_snapshots_every': 'nvmf_namespace_snapshots_every',
         'nvmf_namespace_snapshots_none': 'nvmf_namespace_snapshots_none',
         'nvmf_namespace_snapshots_some': 'nvmf_namespace_snapshots_some',
-        '_or': 'OR',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -185,6 +185,11 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self._iscsi_lun_snapshots_every = None
+        self._iscsi_lun_snapshots_none = None
+        self._iscsi_lun_snapshots_some = None
+        self.__not = None
+        self.__or = None
         self._consistency_group = None
         self._entity_async_status = None
         self._entity_async_status_in = None
@@ -204,9 +209,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._iscsi_lun_snapshots_every = None
-        self._iscsi_lun_snapshots_none = None
-        self._iscsi_lun_snapshots_some = None
         self._labels_every = None
         self._labels_none = None
         self._labels_some = None
@@ -246,11 +248,9 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._nvmf_namespace_snapshots_every = None
         self._nvmf_namespace_snapshots_none = None
         self._nvmf_namespace_snapshots_some = None
-        self.__or = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -262,6 +262,11 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self.iscsi_lun_snapshots_every = kwargs.get("iscsi_lun_snapshots_every", None)
+        self.iscsi_lun_snapshots_none = kwargs.get("iscsi_lun_snapshots_none", None)
+        self.iscsi_lun_snapshots_some = kwargs.get("iscsi_lun_snapshots_some", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.consistency_group = kwargs.get("consistency_group", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
@@ -281,9 +286,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.iscsi_lun_snapshots_every = kwargs.get("iscsi_lun_snapshots_every", None)
-        self.iscsi_lun_snapshots_none = kwargs.get("iscsi_lun_snapshots_none", None)
-        self.iscsi_lun_snapshots_some = kwargs.get("iscsi_lun_snapshots_some", None)
         self.labels_every = kwargs.get("labels_every", None)
         self.labels_none = kwargs.get("labels_none", None)
         self.labels_some = kwargs.get("labels_some", None)
@@ -323,11 +325,9 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.nvmf_namespace_snapshots_every = kwargs.get("nvmf_namespace_snapshots_every", None)
         self.nvmf_namespace_snapshots_none = kwargs.get("nvmf_namespace_snapshots_none", None)
         self.nvmf_namespace_snapshots_some = kwargs.get("nvmf_namespace_snapshots_some", None)
-        self._or = kwargs.get("_or", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -357,6 +357,111 @@ class ConsistencyGroupSnapshotWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def iscsi_lun_snapshots_every(self):
+        """Gets the iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :rtype: IscsiLunSnapshotWhereInput
+        """
+        return self._iscsi_lun_snapshots_every
+
+    @iscsi_lun_snapshots_every.setter
+    def iscsi_lun_snapshots_every(self, iscsi_lun_snapshots_every):
+        """Sets the iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.
+
+
+        :param iscsi_lun_snapshots_every: The iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :type iscsi_lun_snapshots_every: IscsiLunSnapshotWhereInput
+        """
+
+        self._iscsi_lun_snapshots_every = iscsi_lun_snapshots_every
+
+    @property
+    def iscsi_lun_snapshots_none(self):
+        """Gets the iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :rtype: IscsiLunSnapshotWhereInput
+        """
+        return self._iscsi_lun_snapshots_none
+
+    @iscsi_lun_snapshots_none.setter
+    def iscsi_lun_snapshots_none(self, iscsi_lun_snapshots_none):
+        """Sets the iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.
+
+
+        :param iscsi_lun_snapshots_none: The iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :type iscsi_lun_snapshots_none: IscsiLunSnapshotWhereInput
+        """
+
+        self._iscsi_lun_snapshots_none = iscsi_lun_snapshots_none
+
+    @property
+    def iscsi_lun_snapshots_some(self):
+        """Gets the iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :rtype: IscsiLunSnapshotWhereInput
+        """
+        return self._iscsi_lun_snapshots_some
+
+    @iscsi_lun_snapshots_some.setter
+    def iscsi_lun_snapshots_some(self, iscsi_lun_snapshots_some):
+        """Sets the iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.
+
+
+        :param iscsi_lun_snapshots_some: The iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :type iscsi_lun_snapshots_some: IscsiLunSnapshotWhereInput
+        """
+
+        self._iscsi_lun_snapshots_some = iscsi_lun_snapshots_some
+
+    @property
+    def _not(self):
+        """Gets the _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :rtype: list[ConsistencyGroupSnapshotWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ConsistencyGroupSnapshotWhereInput.
+
+
+        :param _not: The _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :type _not: list[ConsistencyGroupSnapshotWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :rtype: list[ConsistencyGroupSnapshotWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ConsistencyGroupSnapshotWhereInput.
+
+
+        :param _or: The _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
+        :type _or: list[ConsistencyGroupSnapshotWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def consistency_group(self):
@@ -756,69 +861,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def iscsi_lun_snapshots_every(self):
-        """Gets the iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :rtype: IscsiLunSnapshotWhereInput
-        """
-        return self._iscsi_lun_snapshots_every
-
-    @iscsi_lun_snapshots_every.setter
-    def iscsi_lun_snapshots_every(self, iscsi_lun_snapshots_every):
-        """Sets the iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.
-
-
-        :param iscsi_lun_snapshots_every: The iscsi_lun_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :type iscsi_lun_snapshots_every: IscsiLunSnapshotWhereInput
-        """
-
-        self._iscsi_lun_snapshots_every = iscsi_lun_snapshots_every
-
-    @property
-    def iscsi_lun_snapshots_none(self):
-        """Gets the iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :rtype: IscsiLunSnapshotWhereInput
-        """
-        return self._iscsi_lun_snapshots_none
-
-    @iscsi_lun_snapshots_none.setter
-    def iscsi_lun_snapshots_none(self, iscsi_lun_snapshots_none):
-        """Sets the iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.
-
-
-        :param iscsi_lun_snapshots_none: The iscsi_lun_snapshots_none of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :type iscsi_lun_snapshots_none: IscsiLunSnapshotWhereInput
-        """
-
-        self._iscsi_lun_snapshots_none = iscsi_lun_snapshots_none
-
-    @property
-    def iscsi_lun_snapshots_some(self):
-        """Gets the iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :rtype: IscsiLunSnapshotWhereInput
-        """
-        return self._iscsi_lun_snapshots_some
-
-    @iscsi_lun_snapshots_some.setter
-    def iscsi_lun_snapshots_some(self, iscsi_lun_snapshots_some):
-        """Sets the iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.
-
-
-        :param iscsi_lun_snapshots_some: The iscsi_lun_snapshots_some of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :type iscsi_lun_snapshots_some: IscsiLunSnapshotWhereInput
-        """
-
-        self._iscsi_lun_snapshots_some = iscsi_lun_snapshots_some
 
     @property
     def labels_every(self):
@@ -1640,27 +1682,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :rtype: list[ConsistencyGroupSnapshotWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ConsistencyGroupSnapshotWhereInput.
-
-
-        :param _not: The _not of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :type _not: list[ConsistencyGroupSnapshotWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nvmf_namespace_snapshots_every(self):
         """Gets the nvmf_namespace_snapshots_every of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
 
@@ -1722,27 +1743,6 @@ class ConsistencyGroupSnapshotWhereInput(object):
         """
 
         self._nvmf_namespace_snapshots_some = nvmf_namespace_snapshots_some
-
-    @property
-    def _or(self):
-        """Gets the _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :rtype: list[ConsistencyGroupSnapshotWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ConsistencyGroupSnapshotWhereInput.
-
-
-        :param _or: The _or of this ConsistencyGroupSnapshotWhereInput.  # noqa: E501
-        :type _or: list[ConsistencyGroupSnapshotWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def unique_size(self):

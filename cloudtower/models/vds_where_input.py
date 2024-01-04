@@ -26,6 +26,8 @@ class VdsWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VdsWhereInput]',
+        '_not': 'list[VdsWhereInput]',
+        '_or': 'list[VdsWhereInput]',
         'bond_mode': 'str',
         'bond_mode_contains': 'str',
         'bond_mode_ends_with': 'str',
@@ -96,8 +98,6 @@ class VdsWhereInput(object):
         'nics_every': 'NicWhereInput',
         'nics_none': 'NicWhereInput',
         'nics_some': 'NicWhereInput',
-        '_not': 'list[VdsWhereInput]',
-        '_or': 'list[VdsWhereInput]',
         'ovsbr_name': 'str',
         'ovsbr_name_contains': 'str',
         'ovsbr_name_ends_with': 'str',
@@ -145,6 +145,8 @@ class VdsWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'bond_mode': 'bond_mode',
         'bond_mode_contains': 'bond_mode_contains',
         'bond_mode_ends_with': 'bond_mode_ends_with',
@@ -215,8 +217,6 @@ class VdsWhereInput(object):
         'nics_every': 'nics_every',
         'nics_none': 'nics_none',
         'nics_some': 'nics_some',
-        '_not': 'NOT',
-        '_or': 'OR',
         'ovsbr_name': 'ovsbr_name',
         'ovsbr_name_contains': 'ovsbr_name_contains',
         'ovsbr_name_ends_with': 'ovsbr_name_ends_with',
@@ -267,6 +267,8 @@ class VdsWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._bond_mode = None
         self._bond_mode_contains = None
         self._bond_mode_ends_with = None
@@ -337,8 +339,6 @@ class VdsWhereInput(object):
         self._nics_every = None
         self._nics_none = None
         self._nics_some = None
-        self.__not = None
-        self.__or = None
         self._ovsbr_name = None
         self._ovsbr_name_contains = None
         self._ovsbr_name_ends_with = None
@@ -385,6 +385,8 @@ class VdsWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.bond_mode = kwargs.get("bond_mode", None)
         self.bond_mode_contains = kwargs.get("bond_mode_contains", None)
         self.bond_mode_ends_with = kwargs.get("bond_mode_ends_with", None)
@@ -455,8 +457,6 @@ class VdsWhereInput(object):
         self.nics_every = kwargs.get("nics_every", None)
         self.nics_none = kwargs.get("nics_none", None)
         self.nics_some = kwargs.get("nics_some", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.ovsbr_name = kwargs.get("ovsbr_name", None)
         self.ovsbr_name_contains = kwargs.get("ovsbr_name_contains", None)
         self.ovsbr_name_ends_with = kwargs.get("ovsbr_name_ends_with", None)
@@ -521,6 +521,48 @@ class VdsWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VdsWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VdsWhereInput.  # noqa: E501
+        :rtype: list[VdsWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VdsWhereInput.
+
+
+        :param _not: The _not of this VdsWhereInput.  # noqa: E501
+        :type _not: list[VdsWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VdsWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VdsWhereInput.  # noqa: E501
+        :rtype: list[VdsWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VdsWhereInput.
+
+
+        :param _or: The _or of this VdsWhereInput.  # noqa: E501
+        :type _or: list[VdsWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def bond_mode(self):
@@ -1991,48 +2033,6 @@ class VdsWhereInput(object):
         """
 
         self._nics_some = nics_some
-
-    @property
-    def _not(self):
-        """Gets the _not of this VdsWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VdsWhereInput.  # noqa: E501
-        :rtype: list[VdsWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VdsWhereInput.
-
-
-        :param _not: The _not of this VdsWhereInput.  # noqa: E501
-        :type _not: list[VdsWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VdsWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VdsWhereInput.  # noqa: E501
-        :rtype: list[VdsWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VdsWhereInput.
-
-
-        :param _or: The _or of this VdsWhereInput.  # noqa: E501
-        :type _or: list[VdsWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def ovsbr_name(self):

@@ -21,11 +21,11 @@ class NicDriverState(object):
     allowed enum values
     """
     NEED_REBOOT = "NEED_REBOOT"
-    NO_DRIVER = "NO_DRIVER"
     NOT_READY = "NOT_READY"
+    NO_DRIVER = "NO_DRIVER"
     READY = "READY"
 
-    allowable_values = [NEED_REBOOT, NO_DRIVER, NOT_READY, READY]  # noqa: E501
+    allowable_values = [NEED_REBOOT, NOT_READY, NO_DRIVER, READY]  # noqa: E501
 
     """
     Attributes:

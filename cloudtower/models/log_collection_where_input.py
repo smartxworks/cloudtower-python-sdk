@@ -26,6 +26,8 @@ class LogCollectionWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[LogCollectionWhereInput]',
+        '_not': 'list[LogCollectionWhereInput]',
+        '_or': 'list[LogCollectionWhereInput]',
         'cluster': 'ClusterWhereInput',
         'hosts_every': 'HostWhereInput',
         'hosts_none': 'HostWhereInput',
@@ -74,8 +76,6 @@ class LogCollectionWhereInput(object):
         'log_started_at_lte': 'str',
         'log_started_at_not': 'str',
         'log_started_at_not_in': 'list[str]',
-        '_not': 'list[LogCollectionWhereInput]',
-        '_or': 'list[LogCollectionWhereInput]',
         'owner': 'str',
         'owner_contains': 'str',
         'owner_ends_with': 'str',
@@ -137,6 +137,8 @@ class LogCollectionWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'hosts_every': 'hosts_every',
         'hosts_none': 'hosts_none',
@@ -185,8 +187,6 @@ class LogCollectionWhereInput(object):
         'log_started_at_lte': 'log_started_at_lte',
         'log_started_at_not': 'log_started_at_not',
         'log_started_at_not_in': 'log_started_at_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'owner': 'owner',
         'owner_contains': 'owner_contains',
         'owner_ends_with': 'owner_ends_with',
@@ -251,6 +251,8 @@ class LogCollectionWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._hosts_every = None
         self._hosts_none = None
@@ -299,8 +301,6 @@ class LogCollectionWhereInput(object):
         self._log_started_at_lte = None
         self._log_started_at_not = None
         self._log_started_at_not_in = None
-        self.__not = None
-        self.__or = None
         self._owner = None
         self._owner_contains = None
         self._owner_ends_with = None
@@ -361,6 +361,8 @@ class LogCollectionWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.hosts_every = kwargs.get("hosts_every", None)
         self.hosts_none = kwargs.get("hosts_none", None)
@@ -409,8 +411,6 @@ class LogCollectionWhereInput(object):
         self.log_started_at_lte = kwargs.get("log_started_at_lte", None)
         self.log_started_at_not = kwargs.get("log_started_at_not", None)
         self.log_started_at_not_in = kwargs.get("log_started_at_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.owner = kwargs.get("owner", None)
         self.owner_contains = kwargs.get("owner_contains", None)
         self.owner_ends_with = kwargs.get("owner_ends_with", None)
@@ -489,6 +489,48 @@ class LogCollectionWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this LogCollectionWhereInput.  # noqa: E501
+
+
+        :return: The _not of this LogCollectionWhereInput.  # noqa: E501
+        :rtype: list[LogCollectionWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this LogCollectionWhereInput.
+
+
+        :param _not: The _not of this LogCollectionWhereInput.  # noqa: E501
+        :type _not: list[LogCollectionWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this LogCollectionWhereInput.  # noqa: E501
+
+
+        :return: The _or of this LogCollectionWhereInput.  # noqa: E501
+        :rtype: list[LogCollectionWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this LogCollectionWhereInput.
+
+
+        :param _or: The _or of this LogCollectionWhereInput.  # noqa: E501
+        :type _or: list[LogCollectionWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1497,48 +1539,6 @@ class LogCollectionWhereInput(object):
         """
 
         self._log_started_at_not_in = log_started_at_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this LogCollectionWhereInput.  # noqa: E501
-
-
-        :return: The _not of this LogCollectionWhereInput.  # noqa: E501
-        :rtype: list[LogCollectionWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this LogCollectionWhereInput.
-
-
-        :param _not: The _not of this LogCollectionWhereInput.  # noqa: E501
-        :type _not: list[LogCollectionWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this LogCollectionWhereInput.  # noqa: E501
-
-
-        :return: The _or of this LogCollectionWhereInput.  # noqa: E501
-        :rtype: list[LogCollectionWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this LogCollectionWhereInput.
-
-
-        :param _or: The _or of this LogCollectionWhereInput.  # noqa: E501
-        :type _or: list[LogCollectionWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def owner(self):

@@ -26,6 +26,8 @@ class IsolationPolicyWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[IsolationPolicyWhereInput]',
+        '_not': 'list[IsolationPolicyWhereInput]',
+        '_or': 'list[IsolationPolicyWhereInput]',
         'everoute_cluster': 'EverouteClusterWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -48,13 +50,13 @@ class IsolationPolicyWhereInput(object):
         'mode_in': 'list[IsolationMode]',
         'mode_not': 'IsolationMode',
         'mode_not_in': 'list[IsolationMode]',
-        '_not': 'list[IsolationPolicyWhereInput]',
-        '_or': 'list[IsolationPolicyWhereInput]',
         'vm': 'VmWhereInput'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'everoute_cluster': 'everoute_cluster',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -77,8 +79,6 @@ class IsolationPolicyWhereInput(object):
         'mode_in': 'mode_in',
         'mode_not': 'mode_not',
         'mode_not_in': 'mode_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'vm': 'vm'
     }
 
@@ -87,6 +87,8 @@ class IsolationPolicyWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._everoute_cluster = None
         self._id = None
         self._id_contains = None
@@ -109,12 +111,12 @@ class IsolationPolicyWhereInput(object):
         self._mode_in = None
         self._mode_not = None
         self._mode_not_in = None
-        self.__not = None
-        self.__or = None
         self._vm = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.everoute_cluster = kwargs.get("everoute_cluster", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -137,8 +139,6 @@ class IsolationPolicyWhereInput(object):
         self.mode_in = kwargs.get("mode_in", None)
         self.mode_not = kwargs.get("mode_not", None)
         self.mode_not_in = kwargs.get("mode_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.vm = kwargs.get("vm", None)
 
     @property
@@ -161,6 +161,48 @@ class IsolationPolicyWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this IsolationPolicyWhereInput.  # noqa: E501
+
+
+        :return: The _not of this IsolationPolicyWhereInput.  # noqa: E501
+        :rtype: list[IsolationPolicyWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this IsolationPolicyWhereInput.
+
+
+        :param _not: The _not of this IsolationPolicyWhereInput.  # noqa: E501
+        :type _not: list[IsolationPolicyWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this IsolationPolicyWhereInput.  # noqa: E501
+
+
+        :return: The _or of this IsolationPolicyWhereInput.  # noqa: E501
+        :rtype: list[IsolationPolicyWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this IsolationPolicyWhereInput.
+
+
+        :param _or: The _or of this IsolationPolicyWhereInput.  # noqa: E501
+        :type _or: list[IsolationPolicyWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def everoute_cluster(self):
@@ -623,48 +665,6 @@ class IsolationPolicyWhereInput(object):
         """
 
         self._mode_not_in = mode_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this IsolationPolicyWhereInput.  # noqa: E501
-
-
-        :return: The _not of this IsolationPolicyWhereInput.  # noqa: E501
-        :rtype: list[IsolationPolicyWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this IsolationPolicyWhereInput.
-
-
-        :param _not: The _not of this IsolationPolicyWhereInput.  # noqa: E501
-        :type _not: list[IsolationPolicyWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this IsolationPolicyWhereInput.  # noqa: E501
-
-
-        :return: The _or of this IsolationPolicyWhereInput.  # noqa: E501
-        :rtype: list[IsolationPolicyWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this IsolationPolicyWhereInput.
-
-
-        :param _or: The _or of this IsolationPolicyWhereInput.  # noqa: E501
-        :type _or: list[IsolationPolicyWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def vm(self):

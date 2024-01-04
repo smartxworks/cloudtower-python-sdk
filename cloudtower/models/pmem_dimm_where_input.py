@@ -26,6 +26,8 @@ class PmemDimmWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[PmemDimmWhereInput]',
+        '_not': 'list[PmemDimmWhereInput]',
+        '_or': 'list[PmemDimmWhereInput]',
         'capacity': 'int',
         'capacity_gt': 'int',
         'capacity_gte': 'int',
@@ -96,7 +98,6 @@ class PmemDimmWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[PmemDimmWhereInput]',
         'numa_node': 'int',
         'numa_node_gt': 'int',
         'numa_node_gte': 'int',
@@ -105,7 +106,6 @@ class PmemDimmWhereInput(object):
         'numa_node_lte': 'int',
         'numa_node_not': 'int',
         'numa_node_not_in': 'list[int]',
-        '_or': 'list[PmemDimmWhereInput]',
         'part_number': 'str',
         'part_number_contains': 'str',
         'part_number_ends_with': 'str',
@@ -146,6 +146,8 @@ class PmemDimmWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'capacity': 'capacity',
         'capacity_gt': 'capacity_gt',
         'capacity_gte': 'capacity_gte',
@@ -216,7 +218,6 @@ class PmemDimmWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'numa_node': 'numa_node',
         'numa_node_gt': 'numa_node_gt',
         'numa_node_gte': 'numa_node_gte',
@@ -225,7 +226,6 @@ class PmemDimmWhereInput(object):
         'numa_node_lte': 'numa_node_lte',
         'numa_node_not': 'numa_node_not',
         'numa_node_not_in': 'numa_node_not_in',
-        '_or': 'OR',
         'part_number': 'part_number',
         'part_number_contains': 'part_number_contains',
         'part_number_ends_with': 'part_number_ends_with',
@@ -269,6 +269,8 @@ class PmemDimmWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._capacity = None
         self._capacity_gt = None
         self._capacity_gte = None
@@ -339,7 +341,6 @@ class PmemDimmWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._numa_node = None
         self._numa_node_gt = None
         self._numa_node_gte = None
@@ -348,7 +349,6 @@ class PmemDimmWhereInput(object):
         self._numa_node_lte = None
         self._numa_node_not = None
         self._numa_node_not_in = None
-        self.__or = None
         self._part_number = None
         self._part_number_contains = None
         self._part_number_ends_with = None
@@ -388,6 +388,8 @@ class PmemDimmWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.capacity = kwargs.get("capacity", None)
         self.capacity_gt = kwargs.get("capacity_gt", None)
         self.capacity_gte = kwargs.get("capacity_gte", None)
@@ -458,7 +460,6 @@ class PmemDimmWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.numa_node = kwargs.get("numa_node", None)
         self.numa_node_gt = kwargs.get("numa_node_gt", None)
         self.numa_node_gte = kwargs.get("numa_node_gte", None)
@@ -467,7 +468,6 @@ class PmemDimmWhereInput(object):
         self.numa_node_lte = kwargs.get("numa_node_lte", None)
         self.numa_node_not = kwargs.get("numa_node_not", None)
         self.numa_node_not_in = kwargs.get("numa_node_not_in", None)
-        self._or = kwargs.get("_or", None)
         self.part_number = kwargs.get("part_number", None)
         self.part_number_contains = kwargs.get("part_number_contains", None)
         self.part_number_ends_with = kwargs.get("part_number_ends_with", None)
@@ -525,6 +525,48 @@ class PmemDimmWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this PmemDimmWhereInput.  # noqa: E501
+
+
+        :return: The _not of this PmemDimmWhereInput.  # noqa: E501
+        :rtype: list[PmemDimmWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this PmemDimmWhereInput.
+
+
+        :param _not: The _not of this PmemDimmWhereInput.  # noqa: E501
+        :type _not: list[PmemDimmWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this PmemDimmWhereInput.  # noqa: E501
+
+
+        :return: The _or of this PmemDimmWhereInput.  # noqa: E501
+        :rtype: list[PmemDimmWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this PmemDimmWhereInput.
+
+
+        :param _or: The _or of this PmemDimmWhereInput.  # noqa: E501
+        :type _or: list[PmemDimmWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def capacity(self):
@@ -1997,27 +2039,6 @@ class PmemDimmWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this PmemDimmWhereInput.  # noqa: E501
-
-
-        :return: The _not of this PmemDimmWhereInput.  # noqa: E501
-        :rtype: list[PmemDimmWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this PmemDimmWhereInput.
-
-
-        :param _not: The _not of this PmemDimmWhereInput.  # noqa: E501
-        :type _not: list[PmemDimmWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def numa_node(self):
         """Gets the numa_node of this PmemDimmWhereInput.  # noqa: E501
 
@@ -2184,27 +2205,6 @@ class PmemDimmWhereInput(object):
         """
 
         self._numa_node_not_in = numa_node_not_in
-
-    @property
-    def _or(self):
-        """Gets the _or of this PmemDimmWhereInput.  # noqa: E501
-
-
-        :return: The _or of this PmemDimmWhereInput.  # noqa: E501
-        :rtype: list[PmemDimmWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this PmemDimmWhereInput.
-
-
-        :param _or: The _or of this PmemDimmWhereInput.  # noqa: E501
-        :type _or: list[PmemDimmWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def part_number(self):

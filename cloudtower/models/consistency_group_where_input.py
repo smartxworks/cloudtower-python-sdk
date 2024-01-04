@@ -26,6 +26,8 @@ class ConsistencyGroupWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ConsistencyGroupWhereInput]',
+        '_not': 'list[ConsistencyGroupWhereInput]',
+        '_or': 'list[ConsistencyGroupWhereInput]',
         'cluster': 'ClusterWhereInput',
         'consistency_group_snapshots_every': 'ConsistencyGroupSnapshotWhereInput',
         'consistency_group_snapshots_none': 'ConsistencyGroupSnapshotWhereInput',
@@ -107,8 +109,6 @@ class ConsistencyGroupWhereInput(object):
         'namespaces_every': 'NvmfNamespaceWhereInput',
         'namespaces_none': 'NvmfNamespaceWhereInput',
         'namespaces_some': 'NvmfNamespaceWhereInput',
-        '_not': 'list[ConsistencyGroupWhereInput]',
-        '_or': 'list[ConsistencyGroupWhereInput]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -121,6 +121,8 @@ class ConsistencyGroupWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'consistency_group_snapshots_every': 'consistency_group_snapshots_every',
         'consistency_group_snapshots_none': 'consistency_group_snapshots_none',
@@ -202,8 +204,6 @@ class ConsistencyGroupWhereInput(object):
         'namespaces_every': 'namespaces_every',
         'namespaces_none': 'namespaces_none',
         'namespaces_some': 'namespaces_some',
-        '_not': 'NOT',
-        '_or': 'OR',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -219,6 +219,8 @@ class ConsistencyGroupWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._consistency_group_snapshots_every = None
         self._consistency_group_snapshots_none = None
@@ -300,8 +302,6 @@ class ConsistencyGroupWhereInput(object):
         self._namespaces_every = None
         self._namespaces_none = None
         self._namespaces_some = None
-        self.__not = None
-        self.__or = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -313,6 +313,8 @@ class ConsistencyGroupWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.consistency_group_snapshots_every = kwargs.get("consistency_group_snapshots_every", None)
         self.consistency_group_snapshots_none = kwargs.get("consistency_group_snapshots_none", None)
@@ -394,8 +396,6 @@ class ConsistencyGroupWhereInput(object):
         self.namespaces_every = kwargs.get("namespaces_every", None)
         self.namespaces_none = kwargs.get("namespaces_none", None)
         self.namespaces_some = kwargs.get("namespaces_some", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -425,6 +425,48 @@ class ConsistencyGroupWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ConsistencyGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ConsistencyGroupWhereInput.  # noqa: E501
+        :rtype: list[ConsistencyGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ConsistencyGroupWhereInput.
+
+
+        :param _not: The _not of this ConsistencyGroupWhereInput.  # noqa: E501
+        :type _not: list[ConsistencyGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ConsistencyGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ConsistencyGroupWhereInput.  # noqa: E501
+        :rtype: list[ConsistencyGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ConsistencyGroupWhereInput.
+
+
+        :param _or: The _or of this ConsistencyGroupWhereInput.  # noqa: E501
+        :type _or: list[ConsistencyGroupWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2126,48 +2168,6 @@ class ConsistencyGroupWhereInput(object):
         """
 
         self._namespaces_some = namespaces_some
-
-    @property
-    def _not(self):
-        """Gets the _not of this ConsistencyGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ConsistencyGroupWhereInput.  # noqa: E501
-        :rtype: list[ConsistencyGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ConsistencyGroupWhereInput.
-
-
-        :param _not: The _not of this ConsistencyGroupWhereInput.  # noqa: E501
-        :type _not: list[ConsistencyGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ConsistencyGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ConsistencyGroupWhereInput.  # noqa: E501
-        :rtype: list[ConsistencyGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ConsistencyGroupWhereInput.
-
-
-        :param _or: The _or of this ConsistencyGroupWhereInput.  # noqa: E501
-        :type _or: list[ConsistencyGroupWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def unique_size(self):

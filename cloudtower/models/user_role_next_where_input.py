@@ -26,6 +26,8 @@ class UserRoleNextWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[UserRoleNextWhereInput]',
+        '_not': 'list[UserRoleNextWhereInput]',
+        '_or': 'list[UserRoleNextWhereInput]',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -54,8 +56,6 @@ class UserRoleNextWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[UserRoleNextWhereInput]',
-        '_or': 'list[UserRoleNextWhereInput]',
         'platform': 'UserRolePlatform',
         'platform_in': 'list[UserRolePlatform]',
         'platform_not': 'UserRolePlatform',
@@ -71,6 +71,8 @@ class UserRoleNextWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -99,8 +101,6 @@ class UserRoleNextWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'platform': 'platform',
         'platform_in': 'platform_in',
         'platform_not': 'platform_not',
@@ -119,6 +119,8 @@ class UserRoleNextWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -147,8 +149,6 @@ class UserRoleNextWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._platform = None
         self._platform_in = None
         self._platform_not = None
@@ -163,6 +163,8 @@ class UserRoleNextWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -191,8 +193,6 @@ class UserRoleNextWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.platform = kwargs.get("platform", None)
         self.platform_in = kwargs.get("platform_in", None)
         self.platform_not = kwargs.get("platform_not", None)
@@ -225,6 +225,48 @@ class UserRoleNextWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this UserRoleNextWhereInput.  # noqa: E501
+
+
+        :return: The _not of this UserRoleNextWhereInput.  # noqa: E501
+        :rtype: list[UserRoleNextWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this UserRoleNextWhereInput.
+
+
+        :param _not: The _not of this UserRoleNextWhereInput.  # noqa: E501
+        :type _not: list[UserRoleNextWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this UserRoleNextWhereInput.  # noqa: E501
+
+
+        :return: The _or of this UserRoleNextWhereInput.  # noqa: E501
+        :rtype: list[UserRoleNextWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this UserRoleNextWhereInput.
+
+
+        :param _or: The _or of this UserRoleNextWhereInput.  # noqa: E501
+        :type _or: list[UserRoleNextWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def id(self):
@@ -813,48 +855,6 @@ class UserRoleNextWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this UserRoleNextWhereInput.  # noqa: E501
-
-
-        :return: The _not of this UserRoleNextWhereInput.  # noqa: E501
-        :rtype: list[UserRoleNextWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this UserRoleNextWhereInput.
-
-
-        :param _not: The _not of this UserRoleNextWhereInput.  # noqa: E501
-        :type _not: list[UserRoleNextWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this UserRoleNextWhereInput.  # noqa: E501
-
-
-        :return: The _or of this UserRoleNextWhereInput.  # noqa: E501
-        :rtype: list[UserRoleNextWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this UserRoleNextWhereInput.
-
-
-        :param _or: The _or of this UserRoleNextWhereInput.  # noqa: E501
-        :type _or: list[UserRoleNextWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def platform(self):

@@ -26,6 +26,8 @@ class DiskWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[DiskWhereInput]',
+        '_not': 'list[DiskWhereInput]',
+        '_or': 'list[DiskWhereInput]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -116,7 +118,6 @@ class DiskWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[DiskWhereInput]',
         'numa_node': 'int',
         'numa_node_gt': 'int',
         'numa_node_gte': 'int',
@@ -127,7 +128,6 @@ class DiskWhereInput(object):
         'numa_node_not_in': 'list[int]',
         'offline': 'bool',
         'offline_not': 'bool',
-        '_or': 'list[DiskWhereInput]',
         'path': 'str',
         'path_contains': 'str',
         'path_ends_with': 'str',
@@ -217,6 +217,8 @@ class DiskWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -307,7 +309,6 @@ class DiskWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
         'numa_node': 'numa_node',
         'numa_node_gt': 'numa_node_gt',
         'numa_node_gte': 'numa_node_gte',
@@ -318,7 +319,6 @@ class DiskWhereInput(object):
         'numa_node_not_in': 'numa_node_not_in',
         'offline': 'offline',
         'offline_not': 'offline_not',
-        '_or': 'OR',
         'path': 'path',
         'path_contains': 'path_contains',
         'path_ends_with': 'path_ends_with',
@@ -411,6 +411,8 @@ class DiskWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -501,7 +503,6 @@ class DiskWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
         self._numa_node = None
         self._numa_node_gt = None
         self._numa_node_gte = None
@@ -512,7 +513,6 @@ class DiskWhereInput(object):
         self._numa_node_not_in = None
         self._offline = None
         self._offline_not = None
-        self.__or = None
         self._path = None
         self._path_contains = None
         self._path_ends_with = None
@@ -601,6 +601,8 @@ class DiskWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -691,7 +693,6 @@ class DiskWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
         self.numa_node = kwargs.get("numa_node", None)
         self.numa_node_gt = kwargs.get("numa_node_gt", None)
         self.numa_node_gte = kwargs.get("numa_node_gte", None)
@@ -702,7 +703,6 @@ class DiskWhereInput(object):
         self.numa_node_not_in = kwargs.get("numa_node_not_in", None)
         self.offline = kwargs.get("offline", None)
         self.offline_not = kwargs.get("offline_not", None)
-        self._or = kwargs.get("_or", None)
         self.path = kwargs.get("path", None)
         self.path_contains = kwargs.get("path_contains", None)
         self.path_ends_with = kwargs.get("path_ends_with", None)
@@ -809,6 +809,48 @@ class DiskWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this DiskWhereInput.  # noqa: E501
+
+
+        :return: The _not of this DiskWhereInput.  # noqa: E501
+        :rtype: list[DiskWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this DiskWhereInput.
+
+
+        :param _not: The _not of this DiskWhereInput.  # noqa: E501
+        :type _not: list[DiskWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this DiskWhereInput.  # noqa: E501
+
+
+        :return: The _or of this DiskWhereInput.  # noqa: E501
+        :rtype: list[DiskWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this DiskWhereInput.
+
+
+        :param _or: The _or of this DiskWhereInput.  # noqa: E501
+        :type _or: list[DiskWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def entity_async_status(self):
@@ -2701,27 +2743,6 @@ class DiskWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
-    def _not(self):
-        """Gets the _not of this DiskWhereInput.  # noqa: E501
-
-
-        :return: The _not of this DiskWhereInput.  # noqa: E501
-        :rtype: list[DiskWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this DiskWhereInput.
-
-
-        :param _not: The _not of this DiskWhereInput.  # noqa: E501
-        :type _not: list[DiskWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def numa_node(self):
         """Gets the numa_node of this DiskWhereInput.  # noqa: E501
 
@@ -2930,27 +2951,6 @@ class DiskWhereInput(object):
         """
 
         self._offline_not = offline_not
-
-    @property
-    def _or(self):
-        """Gets the _or of this DiskWhereInput.  # noqa: E501
-
-
-        :return: The _or of this DiskWhereInput.  # noqa: E501
-        :rtype: list[DiskWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this DiskWhereInput.
-
-
-        :param _or: The _or of this DiskWhereInput.  # noqa: E501
-        :type _or: list[DiskWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def path(self):
