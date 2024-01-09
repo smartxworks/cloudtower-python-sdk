@@ -2,6 +2,14 @@
 
 ## release 日期 2024-01-09
 
+v2.14.2 release (tower version 4.0.0)
+
+### bugfix
+
+- [Utils]\: 修复错误的 ldap 登陆
+
+## release 日期 2024-01-09
+
 v2.14.1 release (tower version 4.0.0)
 
 ### bugfix
