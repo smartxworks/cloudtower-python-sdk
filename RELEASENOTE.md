@@ -1,5 +1,13 @@
 # RELEASE NOTE
 
+## release 日期 2024-01-09
+
+v2.14.1 release (tower version 4.0.0)
+
+### bugfix
+
+- [VmVolumeElfStoragePolicyType]\: 修复错误的枚举类型
+
 ## release 日期 2024-01-04
 
 v2.14.0 release (tower version 4.0.0)
