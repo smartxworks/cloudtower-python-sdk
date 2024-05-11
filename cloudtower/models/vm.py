@@ -77,6 +77,7 @@ class Vm(object):
         'snapshot_plan': 'NestedSnapshotPlan',
         'snapshots': 'list[NestedVmSnapshot]',
         'status': 'VmStatus',
+        'unique_logical_size': 'int',
         'unique_size': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
         'vcpu': 'int',
@@ -143,6 +144,7 @@ class Vm(object):
         'snapshot_plan': 'snapshot_plan',
         'snapshots': 'snapshots',
         'status': 'status',
+        'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
         'usb_devices': 'usb_devices',
         'vcpu': 'vcpu',
@@ -212,6 +214,7 @@ class Vm(object):
         self._snapshot_plan = None
         self._snapshots = None
         self._status = None
+        self._unique_logical_size = None
         self._unique_size = None
         self._usb_devices = None
         self._vcpu = None
@@ -295,6 +298,7 @@ class Vm(object):
         self.snapshots = kwargs.get("snapshots", None)
         if "status" in kwargs:
             self.status = kwargs["status"]
+        self.unique_logical_size = kwargs.get("unique_logical_size", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.usb_devices = kwargs.get("usb_devices", None)
         if "vcpu" in kwargs:
@@ -1437,6 +1441,27 @@ class Vm(object):
             raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
+
+    @property
+    def unique_logical_size(self):
+        """Gets the unique_logical_size of this Vm.  # noqa: E501
+
+
+        :return: The unique_logical_size of this Vm.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size
+
+    @unique_logical_size.setter
+    def unique_logical_size(self, unique_logical_size):
+        """Sets the unique_logical_size of this Vm.
+
+
+        :param unique_logical_size: The unique_logical_size of this Vm.  # noqa: E501
+        :type unique_logical_size: int
+        """
+
+        self._unique_logical_size = unique_logical_size
 
     @property
     def unique_size(self):

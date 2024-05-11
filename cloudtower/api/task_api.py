@@ -37,7 +37,7 @@ class TaskApi(object):
         :param task_creation_params: (required)
         :type task_creation_params: list[TaskCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class TaskApi(object):
         :param task_creation_params: (required)
         :type task_creation_params: list[TaskCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class TaskApi(object):
         :param task_update_params: (required)
         :type task_update_params: TaskUpdateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class TaskApi(object):
         :param task_update_params: (required)
         :type task_update_params: TaskUpdateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

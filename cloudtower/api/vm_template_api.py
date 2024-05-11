@@ -37,7 +37,7 @@ class VmTemplateApi(object):
         :param vm_template_creation_params: (required)
         :type vm_template_creation_params: list[VmTemplateCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VmTemplateApi(object):
         :param vm_template_creation_params: (required)
         :type vm_template_creation_params: list[VmTemplateCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VmTemplateApi(object):
         :param vm_template_creation_params: (required)
         :type vm_template_creation_params: list[VmTemplateCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VmTemplateApi(object):
         :param vm_template_creation_params: (required)
         :type vm_template_creation_params: list[VmTemplateCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class VmTemplateApi(object):
         :param vm_template_deletion_params: (required)
         :type vm_template_deletion_params: VmTemplateDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class VmTemplateApi(object):
         :param vm_template_deletion_params: (required)
         :type vm_template_deletion_params: VmTemplateDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class VmTemplateApi(object):
         :param vm_template_updation_params: (required)
         :type vm_template_updation_params: VmTemplateUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class VmTemplateApi(object):
         :param vm_template_updation_params: (required)
         :type vm_template_updation_params: VmTemplateUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

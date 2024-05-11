@@ -341,7 +341,7 @@ class GlobalAlertRuleApi(object):
         :param customize_alert_rule_updation_params: (required)
         :type customize_alert_rule_updation_params: CustomizeAlertRuleUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class GlobalAlertRuleApi(object):
         :param customize_alert_rule_updation_params: (required)
         :type customize_alert_rule_updation_params: CustomizeAlertRuleUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class GlobalAlertRuleApi(object):
         :param global_alert_rule_updation_params: (required)
         :type global_alert_rule_updation_params: GlobalAlertRuleUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class GlobalAlertRuleApi(object):
         :param global_alert_rule_updation_params: (required)
         :type global_alert_rule_updation_params: GlobalAlertRuleUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

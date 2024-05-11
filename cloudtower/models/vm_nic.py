@@ -43,8 +43,10 @@ class VmNic(object):
         'nic': 'NestedNic',
         'order': 'int',
         'subnet_mask': 'str',
+        'type': 'VmNicType',
         'vlan': 'NestedVlan',
-        'vm': 'NestedVm'
+        'vm': 'NestedVm',
+        'vpc_nic': 'NestedVirtualPrivateCloudNic'
     }
 
     attribute_map = {
@@ -66,8 +68,10 @@ class VmNic(object):
         'nic': 'nic',
         'order': 'order',
         'subnet_mask': 'subnet_mask',
+        'type': 'type',
         'vlan': 'vlan',
-        'vm': 'vm'
+        'vm': 'vm',
+        'vpc_nic': 'vpc_nic'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -92,8 +96,10 @@ class VmNic(object):
         self._nic = None
         self._order = None
         self._subnet_mask = None
+        self._type = None
         self._vlan = None
         self._vm = None
+        self._vpc_nic = None
         self.discriminator = None
 
         self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
@@ -116,9 +122,11 @@ class VmNic(object):
         self.nic = kwargs.get("nic", None)
         self.order = kwargs.get("order", None)
         self.subnet_mask = kwargs.get("subnet_mask", None)
+        self.type = kwargs.get("type", None)
         self.vlan = kwargs.get("vlan", None)
         if "vm" in kwargs:
             self.vm = kwargs["vm"]
+        self.vpc_nic = kwargs.get("vpc_nic", None)
 
     @property
     def egress_rate_limit_burst_in_bit(self):
@@ -503,6 +511,27 @@ class VmNic(object):
         self._subnet_mask = subnet_mask
 
     @property
+    def type(self):
+        """Gets the type of this VmNic.  # noqa: E501
+
+
+        :return: The type of this VmNic.  # noqa: E501
+        :rtype: VmNicType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VmNic.
+
+
+        :param type: The type of this VmNic.  # noqa: E501
+        :type type: VmNicType
+        """
+
+        self._type = type
+
+    @property
     def vlan(self):
         """Gets the vlan of this VmNic.  # noqa: E501
 
@@ -545,6 +574,27 @@ class VmNic(object):
             raise ValueError("Invalid value for `vm`, must not be `None`")  # noqa: E501
 
         self._vm = vm
+
+    @property
+    def vpc_nic(self):
+        """Gets the vpc_nic of this VmNic.  # noqa: E501
+
+
+        :return: The vpc_nic of this VmNic.  # noqa: E501
+        :rtype: NestedVirtualPrivateCloudNic
+        """
+        return self._vpc_nic
+
+    @vpc_nic.setter
+    def vpc_nic(self, vpc_nic):
+        """Sets the vpc_nic of this VmNic.
+
+
+        :param vpc_nic: The vpc_nic of this VmNic.  # noqa: E501
+        :type vpc_nic: NestedVirtualPrivateCloudNic
+        """
+
+        self._vpc_nic = vpc_nic
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

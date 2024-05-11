@@ -37,7 +37,7 @@ class SecurityGroupApi(object):
         :param security_group_create_params: (required)
         :type security_group_create_params: SecurityGroupCreateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class SecurityGroupApi(object):
         :param security_group_create_params: (required)
         :type security_group_create_params: SecurityGroupCreateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class SecurityGroupApi(object):
         :param security_group_delete_params: (required)
         :type security_group_delete_params: SecurityGroupDeleteParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class SecurityGroupApi(object):
         :param security_group_delete_params: (required)
         :type security_group_delete_params: SecurityGroupDeleteParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class SecurityGroupApi(object):
         :param security_group_update_body: (required)
         :type security_group_update_body: SecurityGroupUpdateBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class SecurityGroupApi(object):
         :param security_group_update_body: (required)
         :type security_group_update_body: SecurityGroupUpdateBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

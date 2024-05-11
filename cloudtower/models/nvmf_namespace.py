@@ -63,6 +63,7 @@ class NvmfNamespace(object):
         'stripe_num': 'int',
         'stripe_size': 'int',
         'thin_provision': 'bool',
+        'unique_logical_size': 'int',
         'unique_size': 'int',
         'zbs_volume_id': 'str'
     }
@@ -106,6 +107,7 @@ class NvmfNamespace(object):
         'stripe_num': 'stripe_num',
         'stripe_size': 'stripe_size',
         'thin_provision': 'thin_provision',
+        'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
         'zbs_volume_id': 'zbs_volume_id'
     }
@@ -152,6 +154,7 @@ class NvmfNamespace(object):
         self._stripe_num = None
         self._stripe_size = None
         self._thin_provision = None
+        self._unique_logical_size = None
         self._unique_size = None
         self._zbs_volume_id = None
         self.discriminator = None
@@ -228,6 +231,7 @@ class NvmfNamespace(object):
             self.stripe_size = kwargs["stripe_size"]
         if "thin_provision" in kwargs:
             self.thin_provision = kwargs["thin_provision"]
+        self.unique_logical_size = kwargs.get("unique_logical_size", None)
         if "unique_size" in kwargs:
             self.unique_size = kwargs["unique_size"]
         if "zbs_volume_id" in kwargs:
@@ -1098,6 +1102,27 @@ class NvmfNamespace(object):
             raise ValueError("Invalid value for `thin_provision`, must not be `None`")  # noqa: E501
 
         self._thin_provision = thin_provision
+
+    @property
+    def unique_logical_size(self):
+        """Gets the unique_logical_size of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The unique_logical_size of this NvmfNamespace.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size
+
+    @unique_logical_size.setter
+    def unique_logical_size(self, unique_logical_size):
+        """Sets the unique_logical_size of this NvmfNamespace.
+
+
+        :param unique_logical_size: The unique_logical_size of this NvmfNamespace.  # noqa: E501
+        :type unique_logical_size: int
+        """
+
+        self._unique_logical_size = unique_logical_size
 
     @property
     def unique_size(self):
