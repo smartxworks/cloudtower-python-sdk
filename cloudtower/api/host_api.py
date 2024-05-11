@@ -37,7 +37,7 @@ class HostApi(object):
         :param host_creation_params: (required)
         :type host_creation_params: list[HostCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class HostApi(object):
         :param host_creation_params: (required)
         :type host_creation_params: list[HostCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class HostApi(object):
         :param enter_maintenance_mode_params: (required)
         :type enter_maintenance_mode_params: EnterMaintenanceModeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class HostApi(object):
         :param enter_maintenance_mode_params: (required)
         :type enter_maintenance_mode_params: EnterMaintenanceModeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class HostApi(object):
         :param enter_maintenance_mode_check_params: (required)
         :type enter_maintenance_mode_check_params: EnterMaintenanceModeCheckParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class HostApi(object):
         :param enter_maintenance_mode_check_params: (required)
         :type enter_maintenance_mode_check_params: EnterMaintenanceModeCheckParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class HostApi(object):
         :param enter_maintenance_mode_result_params: (required)
         :type enter_maintenance_mode_result_params: EnterMaintenanceModeResultParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class HostApi(object):
         :param enter_maintenance_mode_result_params: (required)
         :type enter_maintenance_mode_result_params: EnterMaintenanceModeResultParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class HostApi(object):
         :param exit_maintenance_mode_params: (required)
         :type exit_maintenance_mode_params: ExitMaintenanceModeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class HostApi(object):
         :param exit_maintenance_mode_params: (required)
         :type exit_maintenance_mode_params: ExitMaintenanceModeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class HostApi(object):
         :param exit_maintenance_mode_result_params: (required)
         :type exit_maintenance_mode_result_params: ExitMaintenanceModeResultParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class HostApi(object):
         :param exit_maintenance_mode_result_params: (required)
         :type exit_maintenance_mode_result_params: ExitMaintenanceModeResultParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1253,7 +1253,7 @@ class HostApi(object):
         :param operate_host_power_params: (required)
         :type operate_host_power_params: OperateHostPowerParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1284,7 +1284,7 @@ class HostApi(object):
         :param operate_host_power_params: (required)
         :type operate_host_power_params: OperateHostPowerParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1405,7 +1405,7 @@ class HostApi(object):
         :param trigger_disk_blink_params: (required)
         :type trigger_disk_blink_params: list[TriggerDiskBlinkParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1436,7 +1436,7 @@ class HostApi(object):
         :param trigger_disk_blink_params: (required)
         :type trigger_disk_blink_params: list[TriggerDiskBlinkParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1557,7 +1557,7 @@ class HostApi(object):
         :param host_updation_params: (required)
         :type host_updation_params: HostUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1588,7 +1588,7 @@ class HostApi(object):
         :param host_updation_params: (required)
         :type host_updation_params: HostUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

@@ -37,7 +37,7 @@ class OvfApi(object):
         :param get_export_file_download_links_params: (required)
         :type get_export_file_download_links_params: GetExportFileDownloadLinksParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class OvfApi(object):
         :param get_export_file_download_links_params: (required)
         :type get_export_file_download_links_params: GetExportFileDownloadLinksParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -191,7 +191,7 @@ class OvfApi(object):
         :param cluster_id: (required)
         :type cluster_id: str
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -224,7 +224,7 @@ class OvfApi(object):
         :param cluster_id: (required)
         :type cluster_id: str
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -352,7 +352,7 @@ class OvfApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param cluster_id:
         :type cluster_id: str
         :param name:
@@ -393,7 +393,7 @@ class OvfApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param cluster_id:
         :type cluster_id: str
         :param name:

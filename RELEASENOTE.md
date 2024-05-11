@@ -1,5 +1,23 @@
 # RELEASE NOTE
 
+## release 日期 2024-05-11
+
+v2.15.0 release (tower version 4.1.0)
+
+### update
+
+- [CommonHeader]: 新增默认返回 Header 类
+- [ContentLanguage]: 新增枚举规范返回语言，用于设置请求头的 `content-language`
+- [NestedLabel], [LabelApi]: `LabelApi` 将会返回一致的 `Label` 相关的属性，NestedLabel 额外返回 `key` 和 `value`。
+- [Vm], [VmVolume], [IscsiLun], [NvmfNameSpace], [NfsInode]: 新增返回 `unique_logical_size` 用于表示资源的独占逻辑容量
+
+### bugfix
+
+- [VmApi]
+  - [add_vm_Nic], [remove_vm_nic], [remove_vm_nic_by_where], [update_vm_nic], [update_vm_nic_basic_info], [update_vm_nic_advance_info], [update_vm_nic_qos_option]: 修复更新虚拟机网卡类 API 编辑后丢失部分网卡信息的问题
+- [VmPlacementGroupApi]
+  - [create_vm_placement_group], [update_vm_placement_group]: 修复了创建与更新放置组时，`vm_vm_policy_enabled` 为 false 时无法更新组内虚拟机成员
+
 ## release 日期 2024-01-09
 
 v2.14.2 release (tower version 4.0.0)
@@ -88,7 +106,7 @@ v2.12.0 release (tower version 3.3.0)
   - 新增 [remove_vm_pci_nic] 支持为已有的虚拟机卸载 PCI 网卡
 - [VmApi] 优化卸载网卡:
   - [remove_vm_nic] `nic_index` 作为删除标记不够稳定，弃用
-  - [remove_vm_nic_by_where] 新方法，支持使用 where 条件来筛选需要的网卡，对于 VmNic 而言，可以配合使用 vm + mac_address 的筛选， `{vm:<vm_where>, mac_address:<mac_address>}` 的形式来较为稳定的筛选出需要的 VmNic
+  - [remove_vm_nic_by_where] 新方法，支持使用 where 条件来筛选需要的网卡，对于 \_vm_nic 而言，可以配合使用 vm + mac_address 的筛选， `{vm:<vm_where>, mac_address:<mac_address>}` 的形式来较为稳定的筛选出需要的 \_vm_nic
 - [NicApi] [update_nic] 支持通过 `nic_user_usage` 更新网口用途
 - [LabelApi] 支持为 GPU 设备打标签
 
@@ -106,14 +124,14 @@ v2.11.0 release (tower version 3.2.0)
 
 ### breaking change
 
-- [VmApi] [VmImportParams]: 由于 `VmNicParams` 支持配置 qos 配置，现在设计网卡的参数由 `VmNicParams` 更新为了 `VmImportNicParams`，类型和过去一致，没有 qos 支持。
+- [VmApi] [VmImportParams]: 由于 `_vm_nicParams` 支持配置 qos 配置，现在设计网卡的参数由 `_vm_nicParams` 更新为了 `VmImportNicParams`，类型和过去一致，没有 qos 支持。
 
 ### update
 
 - feature: [VmVolumeApi]: [import_vm_volume] [export_vm_volume]: 现在支持虚拟卷的导入与导出
 - feature: [ContentLibraryVmTemplateApi]: [import_content_library_vm_template] [export_content_library_vm_template]: 现在支持虚拟机模板的导入与导出
 - feature: [VmApi]: [update_vm_nic_qos_option]: 现在支持通过 api 更新现有虚拟机网卡的 qos 属性
-- optimize: [VmNicParams]: 现在支持配置 `qos` 参数，用于在创建虚拟机（直接创建，模板创建，快照重建，克隆创建）时配置虚拟机网卡的 qos 参数
+- optimize: [_vm_nicParams]: 现在支持配置 `qos` 参数，用于在创建虚拟机（直接创建，模板创建，快照重建，克隆创建）时配置虚拟机网卡的 qos 参数
 
 ### bugfix
 

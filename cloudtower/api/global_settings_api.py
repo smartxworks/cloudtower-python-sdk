@@ -37,7 +37,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_creation_params: (required)
         :type cluster_recycle_bin_creation_params: ClusterRecycleBinCreationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_creation_params: (required)
         :type cluster_recycle_bin_creation_params: ClusterRecycleBinCreationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_deletion_params: (required)
         :type cluster_recycle_bin_deletion_params: ClusterRecycleBinDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_deletion_params: (required)
         :type cluster_recycle_bin_deletion_params: ClusterRecycleBinDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class GlobalSettingsApi(object):
         :param update_access_restriction_params: (required)
         :type update_access_restriction_params: UpdateAccessRestrictionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class GlobalSettingsApi(object):
         :param update_access_restriction_params: (required)
         :type update_access_restriction_params: UpdateAccessRestrictionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_updation_params: (required)
         :type cluster_recycle_bin_updation_params: ClusterRecycleBinUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class GlobalSettingsApi(object):
         :param cluster_recycle_bin_updation_params: (required)
         :type cluster_recycle_bin_updation_params: ClusterRecycleBinUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class GlobalSettingsApi(object):
         :param global_recycle_bin_updation_params: (required)
         :type global_recycle_bin_updation_params: GlobalRecycleBinUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -980,7 +980,7 @@ class GlobalSettingsApi(object):
         :param global_recycle_bin_updation_params: (required)
         :type global_recycle_bin_updation_params: GlobalRecycleBinUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1101,7 +1101,7 @@ class GlobalSettingsApi(object):
         :param update_passrod_security_params: (required)
         :type update_passrod_security_params: UpdatePassrodSecurityParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1132,7 +1132,7 @@ class GlobalSettingsApi(object):
         :param update_passrod_security_params: (required)
         :type update_passrod_security_params: UpdatePassrodSecurityParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1253,7 +1253,7 @@ class GlobalSettingsApi(object):
         :param update_session_timeout_params: (required)
         :type update_session_timeout_params: UpdateSessionTimeoutParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1284,7 +1284,7 @@ class GlobalSettingsApi(object):
         :param update_session_timeout_params: (required)
         :type update_session_timeout_params: UpdateSessionTimeoutParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

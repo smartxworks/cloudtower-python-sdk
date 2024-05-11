@@ -37,7 +37,7 @@ class NvmfNamespaceSnapshotApi(object):
         :param nvmf_namespace_snapshot_creation_params: (required)
         :type nvmf_namespace_snapshot_creation_params: list[NvmfNamespaceSnapshotCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class NvmfNamespaceSnapshotApi(object):
         :param nvmf_namespace_snapshot_creation_params: (required)
         :type nvmf_namespace_snapshot_creation_params: list[NvmfNamespaceSnapshotCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class NvmfNamespaceSnapshotApi(object):
         :param nvmf_namespace_snapshot_deletion_params: (required)
         :type nvmf_namespace_snapshot_deletion_params: NvmfNamespaceSnapshotDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class NvmfNamespaceSnapshotApi(object):
         :param nvmf_namespace_snapshot_deletion_params: (required)
         :type nvmf_namespace_snapshot_deletion_params: NvmfNamespaceSnapshotDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

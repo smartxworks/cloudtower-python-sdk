@@ -37,7 +37,7 @@ class NfsExportApi(object):
         :param nfs_export_creation_params: (required)
         :type nfs_export_creation_params: list[NfsExportCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class NfsExportApi(object):
         :param nfs_export_creation_params: (required)
         :type nfs_export_creation_params: list[NfsExportCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class NfsExportApi(object):
         :param nfs_export_deletion_params: (required)
         :type nfs_export_deletion_params: NfsExportDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class NfsExportApi(object):
         :param nfs_export_deletion_params: (required)
         :type nfs_export_deletion_params: NfsExportDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class NfsExportApi(object):
         :param nfs_export_updation_params: (required)
         :type nfs_export_updation_params: NfsExportUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class NfsExportApi(object):
         :param nfs_export_updation_params: (required)
         :type nfs_export_updation_params: NfsExportUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
