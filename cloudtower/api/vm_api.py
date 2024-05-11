@@ -37,7 +37,7 @@ class VmApi(object):
         :param abort_migrate_vm_across_cluster_params: (required)
         :type abort_migrate_vm_across_cluster_params: AbortMigrateVmAcrossClusterParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VmApi(object):
         :param abort_migrate_vm_across_cluster_params: (required)
         :type abort_migrate_vm_across_cluster_params: AbortMigrateVmAcrossClusterParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VmApi(object):
         :param vm_add_cd_rom_params: (required)
         :type vm_add_cd_rom_params: VmAddCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VmApi(object):
         :param vm_add_cd_rom_params: (required)
         :type vm_add_cd_rom_params: VmAddCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -342,7 +342,7 @@ class VmApi(object):
         :param vm_add_disk_params: (required)
         :type vm_add_disk_params: VmAddDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -373,7 +373,7 @@ class VmApi(object):
         :param vm_add_disk_params: (required)
         :type vm_add_disk_params: VmAddDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -494,7 +494,7 @@ class VmApi(object):
         :param vm_add_gpu_device_params: (required)
         :type vm_add_gpu_device_params: VmAddGpuDeviceParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -525,7 +525,7 @@ class VmApi(object):
         :param vm_add_gpu_device_params: (required)
         :type vm_add_gpu_device_params: VmAddGpuDeviceParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -646,7 +646,7 @@ class VmApi(object):
         :param vm_add_nic_params: (required)
         :type vm_add_nic_params: VmAddNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -677,7 +677,7 @@ class VmApi(object):
         :param vm_add_nic_params: (required)
         :type vm_add_nic_params: VmAddNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -798,7 +798,7 @@ class VmApi(object):
         :param vm_operate_pci_nic_params: (required)
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -829,7 +829,7 @@ class VmApi(object):
         :param vm_operate_pci_nic_params: (required)
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -951,7 +951,7 @@ class VmApi(object):
         :param vm_add_folder_params: (required)
         :type vm_add_folder_params: VmAddFolderParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -982,7 +982,7 @@ class VmApi(object):
         :param vm_add_folder_params: (required)
         :type vm_add_folder_params: VmAddFolderParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1103,7 +1103,7 @@ class VmApi(object):
         :param vm_clone_params: (required)
         :type vm_clone_params: list[VmCloneParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1134,7 +1134,7 @@ class VmApi(object):
         :param vm_clone_params: (required)
         :type vm_clone_params: list[VmCloneParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1255,7 +1255,7 @@ class VmApi(object):
         :param convert_vm_template_to_vm_params: (required)
         :type convert_vm_template_to_vm_params: list[ConvertVmTemplateToVmParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1286,7 +1286,7 @@ class VmApi(object):
         :param convert_vm_template_to_vm_params: (required)
         :type convert_vm_template_to_vm_params: list[ConvertVmTemplateToVmParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1407,7 +1407,7 @@ class VmApi(object):
         :param vm_creation_params: (required)
         :type vm_creation_params: list[VmCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1438,7 +1438,7 @@ class VmApi(object):
         :param vm_creation_params: (required)
         :type vm_creation_params: list[VmCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1559,7 +1559,7 @@ class VmApi(object):
         :param vm_create_vm_from_content_library_template_params: (required)
         :type vm_create_vm_from_content_library_template_params: list[VmCreateVmFromContentLibraryTemplateParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1590,7 +1590,7 @@ class VmApi(object):
         :param vm_create_vm_from_content_library_template_params: (required)
         :type vm_create_vm_from_content_library_template_params: list[VmCreateVmFromContentLibraryTemplateParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1711,7 +1711,7 @@ class VmApi(object):
         :param vm_create_vm_from_template_params: (required)
         :type vm_create_vm_from_template_params: list[VmCreateVmFromTemplateParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1742,7 +1742,7 @@ class VmApi(object):
         :param vm_create_vm_from_template_params: (required)
         :type vm_create_vm_from_template_params: list[VmCreateVmFromTemplateParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1863,7 +1863,7 @@ class VmApi(object):
         :param vm_delete_params: (required)
         :type vm_delete_params: VmDeleteParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1894,7 +1894,7 @@ class VmApi(object):
         :param vm_delete_params: (required)
         :type vm_delete_params: VmDeleteParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2015,7 +2015,7 @@ class VmApi(object):
         :param vm_eject_cd_rom_params: (required)
         :type vm_eject_cd_rom_params: VmEjectCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2046,7 +2046,7 @@ class VmApi(object):
         :param vm_eject_cd_rom_params: (required)
         :type vm_eject_cd_rom_params: VmEjectCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2167,7 +2167,7 @@ class VmApi(object):
         :param vm_expand_vm_disk_params: (required)
         :type vm_expand_vm_disk_params: VmExpandVmDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2198,7 +2198,7 @@ class VmApi(object):
         :param vm_expand_vm_disk_params: (required)
         :type vm_expand_vm_disk_params: VmExpandVmDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2319,7 +2319,7 @@ class VmApi(object):
         :param vm_export_params: (required)
         :type vm_export_params: VmExportParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2350,7 +2350,7 @@ class VmApi(object):
         :param vm_export_params: (required)
         :type vm_export_params: VmExportParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2472,7 +2472,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2503,7 +2503,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2624,7 +2624,7 @@ class VmApi(object):
         :param get_vms_request_body: (required)
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2655,7 +2655,7 @@ class VmApi(object):
         :param get_vms_request_body: (required)
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2764,19 +2764,19 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_vm_vnc_info(self, get_vm_vnc_info_params, **kwargs):  # noqa: E501
+    def get_vm_vnc_info(self, content_language, get_vm_vnc_info_params, **kwargs):  # noqa: E501
         """get_vm_vnc_info  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_vm_vnc_info(get_vm_vnc_info_params, async_req=True)
+        >>> thread = api.get_vm_vnc_info(content_language, get_vm_vnc_info_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param get_vm_vnc_info_params: (required)
         :type get_vm_vnc_info_params: GetVmVncInfoParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2793,21 +2793,21 @@ class VmApi(object):
         :rtype: VmVncInfo
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_vm_vnc_info_with_http_info(get_vm_vnc_info_params, **kwargs)  # noqa: E501
+        return self.get_vm_vnc_info_with_http_info(content_language, get_vm_vnc_info_params, **kwargs)  # noqa: E501
 
-    def get_vm_vnc_info_with_http_info(self, get_vm_vnc_info_params, **kwargs):  # noqa: E501
+    def get_vm_vnc_info_with_http_info(self, content_language, get_vm_vnc_info_params, **kwargs):  # noqa: E501
         """get_vm_vnc_info  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_vm_vnc_info_with_http_info(get_vm_vnc_info_params, async_req=True)
+        >>> thread = api.get_vm_vnc_info_with_http_info(content_language, get_vm_vnc_info_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param get_vm_vnc_info_params: (required)
         :type get_vm_vnc_info_params: GetVmVncInfoParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2835,8 +2835,8 @@ class VmApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_vm_vnc_info_params',
-            'content_language'
+            'content_language',
+            'get_vm_vnc_info_params'
         ]
         all_params.extend(
             [
@@ -2858,6 +2858,10 @@ class VmApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'content_language' is set
+        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
+                                                        local_var_params['content_language'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `content_language` when calling `get_vm_vnc_info`")  # noqa: E501
         # verify the required parameter 'get_vm_vnc_info_params' is set
         if self.api_client.client_side_validation and ('get_vm_vnc_info_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['get_vm_vnc_info_params'] is None):  # noqa: E501
@@ -3232,7 +3236,7 @@ class VmApi(object):
         :param vm_import_params: (required)
         :type vm_import_params: list[VmImportParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3263,7 +3267,7 @@ class VmApi(object):
         :param vm_import_params: (required)
         :type vm_import_params: list[VmImportParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3384,7 +3388,7 @@ class VmApi(object):
         :param install_vmtools_params: (required)
         :type install_vmtools_params: InstallVmtoolsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3415,7 +3419,7 @@ class VmApi(object):
         :param install_vmtools_params: (required)
         :type install_vmtools_params: InstallVmtoolsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3536,7 +3540,7 @@ class VmApi(object):
         :param vm_migrate_params: (required)
         :type vm_migrate_params: VmMigrateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3567,7 +3571,7 @@ class VmApi(object):
         :param vm_migrate_params: (required)
         :type vm_migrate_params: VmMigrateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3688,7 +3692,7 @@ class VmApi(object):
         :param vm_migrate_across_cluster_params: (required)
         :type vm_migrate_across_cluster_params: VmMigrateAcrossClusterParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3719,7 +3723,7 @@ class VmApi(object):
         :param vm_migrate_across_cluster_params: (required)
         :type vm_migrate_across_cluster_params: VmMigrateAcrossClusterParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3841,7 +3845,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3872,7 +3876,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3993,7 +3997,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4024,7 +4028,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4145,7 +4149,7 @@ class VmApi(object):
         :param vm_rebuild_params: (required)
         :type vm_rebuild_params: list[VmRebuildParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4176,7 +4180,7 @@ class VmApi(object):
         :param vm_rebuild_params: (required)
         :type vm_rebuild_params: list[VmRebuildParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4297,7 +4301,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4328,7 +4332,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4449,7 +4453,7 @@ class VmApi(object):
         :param vm_remove_cd_rom_params: (required)
         :type vm_remove_cd_rom_params: VmRemoveCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4480,7 +4484,7 @@ class VmApi(object):
         :param vm_remove_cd_rom_params: (required)
         :type vm_remove_cd_rom_params: VmRemoveCdRomParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4601,7 +4605,7 @@ class VmApi(object):
         :param vm_remove_disk_params: (required)
         :type vm_remove_disk_params: VmRemoveDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4632,7 +4636,7 @@ class VmApi(object):
         :param vm_remove_disk_params: (required)
         :type vm_remove_disk_params: VmRemoveDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4753,7 +4757,7 @@ class VmApi(object):
         :param vm_remove_gpu_device_params: (required)
         :type vm_remove_gpu_device_params: VmRemoveGpuDeviceParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4784,7 +4788,7 @@ class VmApi(object):
         :param vm_remove_gpu_device_params: (required)
         :type vm_remove_gpu_device_params: VmRemoveGpuDeviceParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4905,7 +4909,7 @@ class VmApi(object):
         :param vm_remove_nic_params: (required)
         :type vm_remove_nic_params: VmRemoveNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4936,7 +4940,7 @@ class VmApi(object):
         :param vm_remove_nic_params: (required)
         :type vm_remove_nic_params: VmRemoveNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5057,7 +5061,7 @@ class VmApi(object):
         :param vm_remove_nic_by_where_params: (required)
         :type vm_remove_nic_by_where_params: VmRemoveNicByWhereParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5088,7 +5092,7 @@ class VmApi(object):
         :param vm_remove_nic_by_where_params: (required)
         :type vm_remove_nic_by_where_params: VmRemoveNicByWhereParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5209,7 +5213,7 @@ class VmApi(object):
         :param vm_operate_pci_nic_params: (required)
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5240,7 +5244,7 @@ class VmApi(object):
         :param vm_operate_pci_nic_params: (required)
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5362,7 +5366,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5393,7 +5397,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5514,7 +5518,7 @@ class VmApi(object):
         :param vm_reset_guest_os_password_params: (required)
         :type vm_reset_guest_os_password_params: VmResetGuestOsPasswordParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5545,7 +5549,7 @@ class VmApi(object):
         :param vm_reset_guest_os_password_params: (required)
         :type vm_reset_guest_os_password_params: VmResetGuestOsPasswordParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5667,7 +5671,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5698,7 +5702,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5819,7 +5823,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5850,7 +5854,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5971,7 +5975,7 @@ class VmApi(object):
         :param vm_rollback_params: (required)
         :type vm_rollback_params: VmRollbackParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6002,7 +6006,7 @@ class VmApi(object):
         :param vm_rollback_params: (required)
         :type vm_rollback_params: VmRollbackParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6123,7 +6127,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6154,7 +6158,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6275,7 +6279,7 @@ class VmApi(object):
         :param vm_start_params: (required)
         :type vm_start_params: VmStartParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6306,7 +6310,7 @@ class VmApi(object):
         :param vm_start_params: (required)
         :type vm_start_params: VmStartParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6427,7 +6431,7 @@ class VmApi(object):
         :param stop_vm_in_cutover_migration_params: (required)
         :type stop_vm_in_cutover_migration_params: StopVmInCutoverMigrationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6458,7 +6462,7 @@ class VmApi(object):
         :param stop_vm_in_cutover_migration_params: (required)
         :type stop_vm_in_cutover_migration_params: StopVmInCutoverMigrationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6579,7 +6583,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6610,7 +6614,7 @@ class VmApi(object):
         :param vm_operate_params: (required)
         :type vm_operate_params: VmOperateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6731,7 +6735,7 @@ class VmApi(object):
         :param vm_toggle_cd_rom_disable_params: (required)
         :type vm_toggle_cd_rom_disable_params: VmToggleCdRomDisableParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6762,7 +6766,7 @@ class VmApi(object):
         :param vm_toggle_cd_rom_disable_params: (required)
         :type vm_toggle_cd_rom_disable_params: VmToggleCdRomDisableParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6883,7 +6887,7 @@ class VmApi(object):
         :param vm_update_params: (required)
         :type vm_update_params: VmUpdateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6914,7 +6918,7 @@ class VmApi(object):
         :param vm_update_params: (required)
         :type vm_update_params: VmUpdateParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7035,7 +7039,7 @@ class VmApi(object):
         :param vm_update_advanced_options_params: (required)
         :type vm_update_advanced_options_params: VmUpdateAdvancedOptionsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7066,7 +7070,7 @@ class VmApi(object):
         :param vm_update_advanced_options_params: (required)
         :type vm_update_advanced_options_params: VmUpdateAdvancedOptionsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7188,7 +7192,7 @@ class VmApi(object):
         :param vm_update_disk_params: (required)
         :type vm_update_disk_params: VmUpdateDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7219,7 +7223,7 @@ class VmApi(object):
         :param vm_update_disk_params: (required)
         :type vm_update_disk_params: VmUpdateDiskParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7340,7 +7344,7 @@ class VmApi(object):
         :param vm_update_host_options_params: (required)
         :type vm_update_host_options_params: VmUpdateHostOptionsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7371,7 +7375,7 @@ class VmApi(object):
         :param vm_update_host_options_params: (required)
         :type vm_update_host_options_params: VmUpdateHostOptionsParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7493,7 +7497,7 @@ class VmApi(object):
         :param vm_update_io_policy_params: (required)
         :type vm_update_io_policy_params: VmUpdateIoPolicyParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7524,7 +7528,7 @@ class VmApi(object):
         :param vm_update_io_policy_params: (required)
         :type vm_update_io_policy_params: VmUpdateIoPolicyParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7646,7 +7650,7 @@ class VmApi(object):
         :param vm_update_nic_params: (required)
         :type vm_update_nic_params: VmUpdateNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7677,7 +7681,7 @@ class VmApi(object):
         :param vm_update_nic_params: (required)
         :type vm_update_nic_params: VmUpdateNicParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7798,7 +7802,7 @@ class VmApi(object):
         :param vm_update_nic_advance_info_params: (required)
         :type vm_update_nic_advance_info_params: VmUpdateNicAdvanceInfoParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7829,7 +7833,7 @@ class VmApi(object):
         :param vm_update_nic_advance_info_params: (required)
         :type vm_update_nic_advance_info_params: VmUpdateNicAdvanceInfoParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7951,7 +7955,7 @@ class VmApi(object):
         :param vm_update_nic_basic_info_params: (required)
         :type vm_update_nic_basic_info_params: VmUpdateNicBasicInfoParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7982,7 +7986,7 @@ class VmApi(object):
         :param vm_update_nic_basic_info_params: (required)
         :type vm_update_nic_basic_info_params: VmUpdateNicBasicInfoParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8092,19 +8096,19 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def update_vm_nic_qos_option(self, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
+    def update_vm_nic_qos_option(self, content_language, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
         """update_vm_nic_qos_option  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_vm_nic_qos_option(vm_update_nic_qos_options_params, async_req=True)
+        >>> thread = api.update_vm_nic_qos_option(content_language, vm_update_nic_qos_options_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param vm_update_nic_qos_options_params: (required)
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8121,21 +8125,21 @@ class VmApi(object):
         :rtype: list[WithTaskVm]
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_vm_nic_qos_option_with_http_info(vm_update_nic_qos_options_params, **kwargs)  # noqa: E501
+        return self.update_vm_nic_qos_option_with_http_info(content_language, vm_update_nic_qos_options_params, **kwargs)  # noqa: E501
 
-    def update_vm_nic_qos_option_with_http_info(self, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
+    def update_vm_nic_qos_option_with_http_info(self, content_language, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
         """update_vm_nic_qos_option  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_vm_nic_qos_option_with_http_info(vm_update_nic_qos_options_params, async_req=True)
+        >>> thread = api.update_vm_nic_qos_option_with_http_info(content_language, vm_update_nic_qos_options_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param vm_update_nic_qos_options_params: (required)
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8163,8 +8167,8 @@ class VmApi(object):
         local_var_params = locals()
 
         all_params = [
-            'vm_update_nic_qos_options_params',
-            'content_language'
+            'content_language',
+            'vm_update_nic_qos_options_params'
         ]
         all_params.extend(
             [
@@ -8186,6 +8190,10 @@ class VmApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'content_language' is set
+        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
+                                                        local_var_params['content_language'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `content_language` when calling `update_vm_nic_qos_option`")  # noqa: E501
         # verify the required parameter 'vm_update_nic_qos_options_params' is set
         if self.api_client.client_side_validation and ('vm_update_nic_qos_options_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['vm_update_nic_qos_options_params'] is None):  # noqa: E501
@@ -8257,7 +8265,7 @@ class VmApi(object):
         :param vm_update_owner_params: (required)
         :type vm_update_owner_params: VmUpdateOwnerParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8288,7 +8296,7 @@ class VmApi(object):
         :param vm_update_owner_params: (required)
         :type vm_update_owner_params: VmUpdateOwnerParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

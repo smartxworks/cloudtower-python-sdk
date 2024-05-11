@@ -1,5 +1,4 @@
 import time
-import json
 from cloudtower.api_client import ApiClient
 from cloudtower.models import GetTasksRequestBody, TaskWhereInput, TaskStatus, UserSource
 from cloudtower.exceptions import ApiException

@@ -37,7 +37,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_clone_params: (required)
         :type iscsi_lun_clone_params: list[IscsiLunCloneParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_clone_params: (required)
         :type iscsi_lun_clone_params: list[IscsiLunCloneParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class IscsiLunApi(object):
         :param copy_iscsi_lun_params: (required)
         :type copy_iscsi_lun_params: list[CopyIscsiLunParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class IscsiLunApi(object):
         :param copy_iscsi_lun_params: (required)
         :type copy_iscsi_lun_params: list[CopyIscsiLunParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_creation_params: (required)
         :type iscsi_lun_creation_params: list[IscsiLunCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_creation_params: (required)
         :type iscsi_lun_creation_params: list[IscsiLunCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_deletion_params: (required)
         :type iscsi_lun_deletion_params: IscsiLunDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_deletion_params: (required)
         :type iscsi_lun_deletion_params: IscsiLunDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_rollback_params: (required)
         :type iscsi_lun_rollback_params: list[IscsiLunRollbackParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -980,7 +980,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_rollback_params: (required)
         :type iscsi_lun_rollback_params: list[IscsiLunRollbackParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1101,7 +1101,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_updation_params: (required)
         :type iscsi_lun_updation_params: IscsiLunUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1132,7 +1132,7 @@ class IscsiLunApi(object):
         :param iscsi_lun_updation_params: (required)
         :type iscsi_lun_updation_params: IscsiLunUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

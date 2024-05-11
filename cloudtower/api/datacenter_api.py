@@ -37,7 +37,7 @@ class DatacenterApi(object):
         :param add_clusters_to_datacenter_params: (required)
         :type add_clusters_to_datacenter_params: list[AddClustersToDatacenterParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class DatacenterApi(object):
         :param add_clusters_to_datacenter_params: (required)
         :type add_clusters_to_datacenter_params: list[AddClustersToDatacenterParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class DatacenterApi(object):
         :param datacenter_creation_params: (required)
         :type datacenter_creation_params: list[DatacenterCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class DatacenterApi(object):
         :param datacenter_creation_params: (required)
         :type datacenter_creation_params: list[DatacenterCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class DatacenterApi(object):
         :param datacenter_deletion_params: (required)
         :type datacenter_deletion_params: DatacenterDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class DatacenterApi(object):
         :param datacenter_deletion_params: (required)
         :type datacenter_deletion_params: DatacenterDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class DatacenterApi(object):
         :param remove_clusters_from_datacenter_params: (required)
         :type remove_clusters_from_datacenter_params: list[RemoveClustersFromDatacenterParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class DatacenterApi(object):
         :param remove_clusters_from_datacenter_params: (required)
         :type remove_clusters_from_datacenter_params: list[RemoveClustersFromDatacenterParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class DatacenterApi(object):
         :param datacenter_updation_params: (required)
         :type datacenter_updation_params: DatacenterUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -980,7 +980,7 @@ class DatacenterApi(object):
         :param datacenter_updation_params: (required)
         :type datacenter_updation_params: DatacenterUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

@@ -42,6 +42,7 @@ class VmVolume(object):
         'sharing': 'bool',
         'size': 'int',
         'type': 'VmVolumeType',
+        'unique_logical_size': 'int',
         'unique_size': 'int',
         'vm_disks': 'list[NestedVmDisk]'
     }
@@ -64,6 +65,7 @@ class VmVolume(object):
         'sharing': 'sharing',
         'size': 'size',
         'type': 'type',
+        'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
         'vm_disks': 'vm_disks'
     }
@@ -89,6 +91,7 @@ class VmVolume(object):
         self._sharing = None
         self._size = None
         self._type = None
+        self._unique_logical_size = None
         self._unique_size = None
         self._vm_disks = None
         self.discriminator = None
@@ -120,6 +123,7 @@ class VmVolume(object):
         if "size" in kwargs:
             self.size = kwargs["size"]
         self.type = kwargs.get("type", None)
+        self.unique_logical_size = kwargs.get("unique_logical_size", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.vm_disks = kwargs.get("vm_disks", None)
 
@@ -499,6 +503,27 @@ class VmVolume(object):
         """
 
         self._type = type
+
+    @property
+    def unique_logical_size(self):
+        """Gets the unique_logical_size of this VmVolume.  # noqa: E501
+
+
+        :return: The unique_logical_size of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size
+
+    @unique_logical_size.setter
+    def unique_logical_size(self, unique_logical_size):
+        """Sets the unique_logical_size of this VmVolume.
+
+
+        :param unique_logical_size: The unique_logical_size of this VmVolume.  # noqa: E501
+        :type unique_logical_size: int
+        """
+
+        self._unique_logical_size = unique_logical_size
 
     @property
     def unique_size(self):

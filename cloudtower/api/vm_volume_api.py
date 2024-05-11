@@ -37,7 +37,7 @@ class VmVolumeApi(object):
         :param clone_vm_volume_params: (required)
         :type clone_vm_volume_params: list[CloneVmVolumeParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VmVolumeApi(object):
         :param clone_vm_volume_params: (required)
         :type clone_vm_volume_params: list[CloneVmVolumeParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VmVolumeApi(object):
         :param vm_volume_creation_params: (required)
         :type vm_volume_creation_params: list[VmVolumeCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VmVolumeApi(object):
         :param vm_volume_creation_params: (required)
         :type vm_volume_creation_params: list[VmVolumeCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class VmVolumeApi(object):
         :param vm_volume_deletion_params: (required)
         :type vm_volume_deletion_params: VmVolumeDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class VmVolumeApi(object):
         :param vm_volume_deletion_params: (required)
         :type vm_volume_deletion_params: VmVolumeDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -481,19 +481,19 @@ class VmVolumeApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def export_vm_volume(self, export_vm_volume_params, **kwargs):  # noqa: E501
+    def export_vm_volume(self, content_language, export_vm_volume_params, **kwargs):  # noqa: E501
         """export_vm_volume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.export_vm_volume(export_vm_volume_params, async_req=True)
+        >>> thread = api.export_vm_volume(content_language, export_vm_volume_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param export_vm_volume_params: (required)
         :type export_vm_volume_params: ExportVmVolumeParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -510,21 +510,21 @@ class VmVolumeApi(object):
         :rtype: list[WithTaskVmExportFile]
         """
         kwargs['_return_http_data_only'] = True
-        return self.export_vm_volume_with_http_info(export_vm_volume_params, **kwargs)  # noqa: E501
+        return self.export_vm_volume_with_http_info(content_language, export_vm_volume_params, **kwargs)  # noqa: E501
 
-    def export_vm_volume_with_http_info(self, export_vm_volume_params, **kwargs):  # noqa: E501
+    def export_vm_volume_with_http_info(self, content_language, export_vm_volume_params, **kwargs):  # noqa: E501
         """export_vm_volume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.export_vm_volume_with_http_info(export_vm_volume_params, async_req=True)
+        >>> thread = api.export_vm_volume_with_http_info(content_language, export_vm_volume_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param export_vm_volume_params: (required)
         :type export_vm_volume_params: ExportVmVolumeParams
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -552,8 +552,8 @@ class VmVolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'export_vm_volume_params',
-            'content_language'
+            'content_language',
+            'export_vm_volume_params'
         ]
         all_params.extend(
             [
@@ -575,6 +575,10 @@ class VmVolumeApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'content_language' is set
+        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
+                                                        local_var_params['content_language'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `content_language` when calling `export_vm_volume`")  # noqa: E501
         # verify the required parameter 'export_vm_volume_params' is set
         if self.api_client.client_side_validation and ('export_vm_volume_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['export_vm_volume_params'] is None):  # noqa: E501
@@ -937,19 +941,19 @@ class VmVolumeApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def import_vm_volume(self, import_vm_volume_params, **kwargs):  # noqa: E501
+    def import_vm_volume(self, content_language, import_vm_volume_params, **kwargs):  # noqa: E501
         """import_vm_volume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.import_vm_volume(import_vm_volume_params, async_req=True)
+        >>> thread = api.import_vm_volume(content_language, import_vm_volume_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param import_vm_volume_params: (required)
         :type import_vm_volume_params: list[ImportVmVolumeParams]
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -966,21 +970,21 @@ class VmVolumeApi(object):
         :rtype: list[WithTaskVmVolume]
         """
         kwargs['_return_http_data_only'] = True
-        return self.import_vm_volume_with_http_info(import_vm_volume_params, **kwargs)  # noqa: E501
+        return self.import_vm_volume_with_http_info(content_language, import_vm_volume_params, **kwargs)  # noqa: E501
 
-    def import_vm_volume_with_http_info(self, import_vm_volume_params, **kwargs):  # noqa: E501
+    def import_vm_volume_with_http_info(self, content_language, import_vm_volume_params, **kwargs):  # noqa: E501
         """import_vm_volume  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.import_vm_volume_with_http_info(import_vm_volume_params, async_req=True)
+        >>> thread = api.import_vm_volume_with_http_info(content_language, import_vm_volume_params, async_req=True)
         >>> result = thread.get()
 
+        :param content_language: (required)
+        :type content_language: ContentLanguage
         :param import_vm_volume_params: (required)
         :type import_vm_volume_params: list[ImportVmVolumeParams]
-        :param content_language:
-        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1008,8 +1012,8 @@ class VmVolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'import_vm_volume_params',
-            'content_language'
+            'content_language',
+            'import_vm_volume_params'
         ]
         all_params.extend(
             [
@@ -1031,6 +1035,10 @@ class VmVolumeApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'content_language' is set
+        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
+                                                        local_var_params['content_language'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `content_language` when calling `import_vm_volume`")  # noqa: E501
         # verify the required parameter 'import_vm_volume_params' is set
         if self.api_client.client_side_validation and ('import_vm_volume_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['import_vm_volume_params'] is None):  # noqa: E501
@@ -1101,7 +1109,7 @@ class VmVolumeApi(object):
         :param vm_volume_rebuild_params: (required)
         :type vm_volume_rebuild_params: list[VmVolumeRebuildParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1132,7 +1140,7 @@ class VmVolumeApi(object):
         :param vm_volume_rebuild_params: (required)
         :type vm_volume_rebuild_params: list[VmVolumeRebuildParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1254,7 +1262,7 @@ class VmVolumeApi(object):
         :param vm_volume_rollback_params: (required)
         :type vm_volume_rollback_params: list[VmVolumeRollbackParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1285,7 +1293,7 @@ class VmVolumeApi(object):
         :param vm_volume_rollback_params: (required)
         :type vm_volume_rollback_params: list[VmVolumeRollbackParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1407,7 +1415,7 @@ class VmVolumeApi(object):
         :param update_vm_volume_params: (required)
         :type update_vm_volume_params: UpdateVmVolumeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1438,7 +1446,7 @@ class VmVolumeApi(object):
         :param update_vm_volume_params: (required)
         :type update_vm_volume_params: UpdateVmVolumeParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

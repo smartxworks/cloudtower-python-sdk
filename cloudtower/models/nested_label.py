@@ -25,11 +25,15 @@ class NestedLabel(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str'
+        'id': 'str',
+        'key': 'str',
+        'value': 'str'
     }
 
     attribute_map = {
-        'id': 'id'
+        'id': 'id',
+        'key': 'key',
+        'value': 'value'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -37,10 +41,15 @@ class NestedLabel(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._id = None
+        self._key = None
+        self._value = None
         self.discriminator = None
 
         if "id" in kwargs:
             self.id = kwargs["id"]
+        if "key" in kwargs:
+            self.key = kwargs["key"]
+        self.value = kwargs.get("value", None)
 
     @property
     def id(self):
@@ -64,6 +73,50 @@ class NestedLabel(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def key(self):
+        """Gets the key of this NestedLabel.  # noqa: E501
+
+
+        :return: The key of this NestedLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this NestedLabel.
+
+
+        :param key: The key of this NestedLabel.  # noqa: E501
+        :type key: str
+        """
+        if self.local_vars_configuration.client_side_validation and key is None:  # noqa: E501
+            raise ValueError("Invalid value for `key`, must not be `None`")  # noqa: E501
+
+        self._key = key
+
+    @property
+    def value(self):
+        """Gets the value of this NestedLabel.  # noqa: E501
+
+
+        :return: The value of this NestedLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this NestedLabel.
+
+
+        :param value: The value of this NestedLabel.  # noqa: E501
+        :type value: str
+        """
+
+        self._value = value
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

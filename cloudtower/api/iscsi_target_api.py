@@ -37,7 +37,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_creation_params: (required)
         :type iscsi_target_creation_params: list[IscsiTargetCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_creation_params: (required)
         :type iscsi_target_creation_params: list[IscsiTargetCreationParams]
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_deletion_params: (required)
         :type iscsi_target_deletion_params: IscsiTargetDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_deletion_params: (required)
         :type iscsi_target_deletion_params: IscsiTargetDeletionParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_updation_params: (required)
         :type iscsi_target_updation_params: IscsiTargetUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class IscsiTargetApi(object):
         :param iscsi_target_updation_params: (required)
         :type iscsi_target_updation_params: IscsiTargetUpdationParams
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

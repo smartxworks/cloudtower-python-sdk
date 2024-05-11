@@ -151,6 +151,14 @@ class VmVolumeWhereInput(object):
         'type_in': 'list[VmVolumeType]',
         'type_not': 'VmVolumeType',
         'type_not_in': 'list[VmVolumeType]',
+        'unique_logical_size': 'int',
+        'unique_logical_size_gt': 'int',
+        'unique_logical_size_gte': 'int',
+        'unique_logical_size_in': 'list[int]',
+        'unique_logical_size_lt': 'int',
+        'unique_logical_size_lte': 'int',
+        'unique_logical_size_not': 'int',
+        'unique_logical_size_not_in': 'list[int]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -291,6 +299,14 @@ class VmVolumeWhereInput(object):
         'type_in': 'type_in',
         'type_not': 'type_not',
         'type_not_in': 'type_not_in',
+        'unique_logical_size': 'unique_logical_size',
+        'unique_logical_size_gt': 'unique_logical_size_gt',
+        'unique_logical_size_gte': 'unique_logical_size_gte',
+        'unique_logical_size_in': 'unique_logical_size_in',
+        'unique_logical_size_lt': 'unique_logical_size_lt',
+        'unique_logical_size_lte': 'unique_logical_size_lte',
+        'unique_logical_size_not': 'unique_logical_size_not',
+        'unique_logical_size_not_in': 'unique_logical_size_not_in',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -434,6 +450,14 @@ class VmVolumeWhereInput(object):
         self._type_in = None
         self._type_not = None
         self._type_not_in = None
+        self._unique_logical_size = None
+        self._unique_logical_size_gt = None
+        self._unique_logical_size_gte = None
+        self._unique_logical_size_in = None
+        self._unique_logical_size_lt = None
+        self._unique_logical_size_lte = None
+        self._unique_logical_size_not = None
+        self._unique_logical_size_not_in = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -573,6 +597,14 @@ class VmVolumeWhereInput(object):
         self.type_in = kwargs.get("type_in", None)
         self.type_not = kwargs.get("type_not", None)
         self.type_not_in = kwargs.get("type_not_in", None)
+        self.unique_logical_size = kwargs.get("unique_logical_size", None)
+        self.unique_logical_size_gt = kwargs.get("unique_logical_size_gt", None)
+        self.unique_logical_size_gte = kwargs.get("unique_logical_size_gte", None)
+        self.unique_logical_size_in = kwargs.get("unique_logical_size_in", None)
+        self.unique_logical_size_lt = kwargs.get("unique_logical_size_lt", None)
+        self.unique_logical_size_lte = kwargs.get("unique_logical_size_lte", None)
+        self.unique_logical_size_not = kwargs.get("unique_logical_size_not", None)
+        self.unique_logical_size_not_in = kwargs.get("unique_logical_size_not_in", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -3230,6 +3262,174 @@ class VmVolumeWhereInput(object):
         """
 
         self._type_not_in = type_not_in
+
+    @property
+    def unique_logical_size(self):
+        """Gets the unique_logical_size of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size
+
+    @unique_logical_size.setter
+    def unique_logical_size(self, unique_logical_size):
+        """Sets the unique_logical_size of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size: The unique_logical_size of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size: int
+        """
+
+        self._unique_logical_size = unique_logical_size
+
+    @property
+    def unique_logical_size_gt(self):
+        """Gets the unique_logical_size_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size_gt
+
+    @unique_logical_size_gt.setter
+    def unique_logical_size_gt(self, unique_logical_size_gt):
+        """Sets the unique_logical_size_gt of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_gt: The unique_logical_size_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_gt: int
+        """
+
+        self._unique_logical_size_gt = unique_logical_size_gt
+
+    @property
+    def unique_logical_size_gte(self):
+        """Gets the unique_logical_size_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size_gte
+
+    @unique_logical_size_gte.setter
+    def unique_logical_size_gte(self, unique_logical_size_gte):
+        """Sets the unique_logical_size_gte of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_gte: The unique_logical_size_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_gte: int
+        """
+
+        self._unique_logical_size_gte = unique_logical_size_gte
+
+    @property
+    def unique_logical_size_in(self):
+        """Gets the unique_logical_size_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._unique_logical_size_in
+
+    @unique_logical_size_in.setter
+    def unique_logical_size_in(self, unique_logical_size_in):
+        """Sets the unique_logical_size_in of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_in: The unique_logical_size_in of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_in: list[int]
+        """
+
+        self._unique_logical_size_in = unique_logical_size_in
+
+    @property
+    def unique_logical_size_lt(self):
+        """Gets the unique_logical_size_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size_lt
+
+    @unique_logical_size_lt.setter
+    def unique_logical_size_lt(self, unique_logical_size_lt):
+        """Sets the unique_logical_size_lt of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_lt: The unique_logical_size_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_lt: int
+        """
+
+        self._unique_logical_size_lt = unique_logical_size_lt
+
+    @property
+    def unique_logical_size_lte(self):
+        """Gets the unique_logical_size_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size_lte
+
+    @unique_logical_size_lte.setter
+    def unique_logical_size_lte(self, unique_logical_size_lte):
+        """Sets the unique_logical_size_lte of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_lte: The unique_logical_size_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_lte: int
+        """
+
+        self._unique_logical_size_lte = unique_logical_size_lte
+
+    @property
+    def unique_logical_size_not(self):
+        """Gets the unique_logical_size_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._unique_logical_size_not
+
+    @unique_logical_size_not.setter
+    def unique_logical_size_not(self, unique_logical_size_not):
+        """Sets the unique_logical_size_not of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_not: The unique_logical_size_not of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_not: int
+        """
+
+        self._unique_logical_size_not = unique_logical_size_not
+
+    @property
+    def unique_logical_size_not_in(self):
+        """Gets the unique_logical_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The unique_logical_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._unique_logical_size_not_in
+
+    @unique_logical_size_not_in.setter
+    def unique_logical_size_not_in(self, unique_logical_size_not_in):
+        """Sets the unique_logical_size_not_in of this VmVolumeWhereInput.
+
+
+        :param unique_logical_size_not_in: The unique_logical_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type unique_logical_size_not_in: list[int]
+        """
+
+        self._unique_logical_size_not_in = unique_logical_size_not_in
 
     @property
     def unique_size(self):

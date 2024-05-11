@@ -179,8 +179,13 @@ class VmNicWhereInput(object):
         'subnet_mask_not_in': 'list[str]',
         'subnet_mask_not_starts_with': 'str',
         'subnet_mask_starts_with': 'str',
+        'type': 'VmNicType',
+        'type_in': 'list[VmNicType]',
+        'type_not': 'VmNicType',
+        'type_not_in': 'list[VmNicType]',
         'vlan': 'VlanWhereInput',
-        'vm': 'VmWhereInput'
+        'vm': 'VmWhereInput',
+        'vpc_nic': 'VirtualPrivateCloudNicWhereInput'
     }
 
     attribute_map = {
@@ -338,8 +343,13 @@ class VmNicWhereInput(object):
         'subnet_mask_not_in': 'subnet_mask_not_in',
         'subnet_mask_not_starts_with': 'subnet_mask_not_starts_with',
         'subnet_mask_starts_with': 'subnet_mask_starts_with',
+        'type': 'type',
+        'type_in': 'type_in',
+        'type_not': 'type_not',
+        'type_not_in': 'type_not_in',
         'vlan': 'vlan',
-        'vm': 'vm'
+        'vm': 'vm',
+        'vpc_nic': 'vpc_nic'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -500,8 +510,13 @@ class VmNicWhereInput(object):
         self._subnet_mask_not_in = None
         self._subnet_mask_not_starts_with = None
         self._subnet_mask_starts_with = None
+        self._type = None
+        self._type_in = None
+        self._type_not = None
+        self._type_not_in = None
         self._vlan = None
         self._vm = None
+        self._vpc_nic = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -658,8 +673,13 @@ class VmNicWhereInput(object):
         self.subnet_mask_not_in = kwargs.get("subnet_mask_not_in", None)
         self.subnet_mask_not_starts_with = kwargs.get("subnet_mask_not_starts_with", None)
         self.subnet_mask_starts_with = kwargs.get("subnet_mask_starts_with", None)
+        self.type = kwargs.get("type", None)
+        self.type_in = kwargs.get("type_in", None)
+        self.type_not = kwargs.get("type_not", None)
+        self.type_not_in = kwargs.get("type_not_in", None)
         self.vlan = kwargs.get("vlan", None)
         self.vm = kwargs.get("vm", None)
+        self.vpc_nic = kwargs.get("vpc_nic", None)
 
     @property
     def _and(self):
@@ -3896,6 +3916,90 @@ class VmNicWhereInput(object):
         self._subnet_mask_starts_with = subnet_mask_starts_with
 
     @property
+    def type(self):
+        """Gets the type of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The type of this VmNicWhereInput.  # noqa: E501
+        :rtype: VmNicType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VmNicWhereInput.
+
+
+        :param type: The type of this VmNicWhereInput.  # noqa: E501
+        :type type: VmNicType
+        """
+
+        self._type = type
+
+    @property
+    def type_in(self):
+        """Gets the type_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The type_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[VmNicType]
+        """
+        return self._type_in
+
+    @type_in.setter
+    def type_in(self, type_in):
+        """Sets the type_in of this VmNicWhereInput.
+
+
+        :param type_in: The type_in of this VmNicWhereInput.  # noqa: E501
+        :type type_in: list[VmNicType]
+        """
+
+        self._type_in = type_in
+
+    @property
+    def type_not(self):
+        """Gets the type_not of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The type_not of this VmNicWhereInput.  # noqa: E501
+        :rtype: VmNicType
+        """
+        return self._type_not
+
+    @type_not.setter
+    def type_not(self, type_not):
+        """Sets the type_not of this VmNicWhereInput.
+
+
+        :param type_not: The type_not of this VmNicWhereInput.  # noqa: E501
+        :type type_not: VmNicType
+        """
+
+        self._type_not = type_not
+
+    @property
+    def type_not_in(self):
+        """Gets the type_not_in of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The type_not_in of this VmNicWhereInput.  # noqa: E501
+        :rtype: list[VmNicType]
+        """
+        return self._type_not_in
+
+    @type_not_in.setter
+    def type_not_in(self, type_not_in):
+        """Sets the type_not_in of this VmNicWhereInput.
+
+
+        :param type_not_in: The type_not_in of this VmNicWhereInput.  # noqa: E501
+        :type type_not_in: list[VmNicType]
+        """
+
+        self._type_not_in = type_not_in
+
+    @property
     def vlan(self):
         """Gets the vlan of this VmNicWhereInput.  # noqa: E501
 
@@ -3936,6 +4040,27 @@ class VmNicWhereInput(object):
         """
 
         self._vm = vm
+
+    @property
+    def vpc_nic(self):
+        """Gets the vpc_nic of this VmNicWhereInput.  # noqa: E501
+
+
+        :return: The vpc_nic of this VmNicWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudNicWhereInput
+        """
+        return self._vpc_nic
+
+    @vpc_nic.setter
+    def vpc_nic(self, vpc_nic):
+        """Sets the vpc_nic of this VmNicWhereInput.
+
+
+        :param vpc_nic: The vpc_nic of this VmNicWhereInput.  # noqa: E501
+        :type vpc_nic: VirtualPrivateCloudNicWhereInput
+        """
+
+        self._vpc_nic = vpc_nic
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
