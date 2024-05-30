@@ -314,14 +314,14 @@ class NvmfNamespaceWhereInput(object):
         'stripe_size_not_in': 'list[int]',
         'thin_provision': 'bool',
         'thin_provision_not': 'bool',
-        'unique_logical_size': 'int',
-        'unique_logical_size_gt': 'int',
-        'unique_logical_size_gte': 'int',
-        'unique_logical_size_in': 'list[int]',
-        'unique_logical_size_lt': 'int',
-        'unique_logical_size_lte': 'int',
-        'unique_logical_size_not': 'int',
-        'unique_logical_size_not_in': 'list[int]',
+        'unique_logical_size': 'float',
+        'unique_logical_size_gt': 'float',
+        'unique_logical_size_gte': 'float',
+        'unique_logical_size_in': 'list[float]',
+        'unique_logical_size_lt': 'float',
+        'unique_logical_size_lte': 'float',
+        'unique_logical_size_not': 'float',
+        'unique_logical_size_not_in': 'list[float]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -7388,7 +7388,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size
 
@@ -7398,7 +7398,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size: The unique_logical_size of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size: int
+        :type unique_logical_size: float
         """
 
         self._unique_logical_size = unique_logical_size
@@ -7409,7 +7409,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_gt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size_gt
 
@@ -7419,7 +7419,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_gt: The unique_logical_size_gt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_gt: int
+        :type unique_logical_size_gt: float
         """
 
         self._unique_logical_size_gt = unique_logical_size_gt
@@ -7430,7 +7430,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_gte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size_gte
 
@@ -7440,7 +7440,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_gte: The unique_logical_size_gte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_gte: int
+        :type unique_logical_size_gte: float
         """
 
         self._unique_logical_size_gte = unique_logical_size_gte
@@ -7451,7 +7451,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._unique_logical_size_in
 
@@ -7461,7 +7461,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_in: The unique_logical_size_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_in: list[int]
+        :type unique_logical_size_in: list[float]
         """
 
         self._unique_logical_size_in = unique_logical_size_in
@@ -7472,7 +7472,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_lt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size_lt
 
@@ -7482,7 +7482,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_lt: The unique_logical_size_lt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_lt: int
+        :type unique_logical_size_lt: float
         """
 
         self._unique_logical_size_lt = unique_logical_size_lt
@@ -7493,7 +7493,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_lte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size_lte
 
@@ -7503,7 +7503,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_lte: The unique_logical_size_lte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_lte: int
+        :type unique_logical_size_lte: float
         """
 
         self._unique_logical_size_lte = unique_logical_size_lte
@@ -7514,7 +7514,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size_not
 
@@ -7524,7 +7524,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_not: The unique_logical_size_not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_not: int
+        :type unique_logical_size_not: float
         """
 
         self._unique_logical_size_not = unique_logical_size_not
@@ -7535,7 +7535,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :return: The unique_logical_size_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[float]
         """
         return self._unique_logical_size_not_in
 
@@ -7545,7 +7545,7 @@ class NvmfNamespaceWhereInput(object):
 
 
         :param unique_logical_size_not_in: The unique_logical_size_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_not_in: list[int]
+        :type unique_logical_size_not_in: list[float]
         """
 
         self._unique_logical_size_not_in = unique_logical_size_not_in

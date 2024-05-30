@@ -42,7 +42,7 @@ class VmVolume(object):
         'sharing': 'bool',
         'size': 'int',
         'type': 'VmVolumeType',
-        'unique_logical_size': 'int',
+        'unique_logical_size': 'float',
         'unique_size': 'int',
         'vm_disks': 'list[NestedVmDisk]'
     }
@@ -510,7 +510,7 @@ class VmVolume(object):
 
 
         :return: The unique_logical_size of this VmVolume.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size
 
@@ -520,7 +520,7 @@ class VmVolume(object):
 
 
         :param unique_logical_size: The unique_logical_size of this VmVolume.  # noqa: E501
-        :type unique_logical_size: int
+        :type unique_logical_size: float
         """
 
         self._unique_logical_size = unique_logical_size
