@@ -77,7 +77,7 @@ class Vm(object):
         'snapshot_plan': 'NestedSnapshotPlan',
         'snapshots': 'list[NestedVmSnapshot]',
         'status': 'VmStatus',
-        'unique_logical_size': 'int',
+        'unique_logical_size': 'float',
         'unique_size': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
         'vcpu': 'int',
@@ -1448,7 +1448,7 @@ class Vm(object):
 
 
         :return: The unique_logical_size of this Vm.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size
 
@@ -1458,7 +1458,7 @@ class Vm(object):
 
 
         :param unique_logical_size: The unique_logical_size of this Vm.  # noqa: E501
-        :type unique_logical_size: int
+        :type unique_logical_size: float
         """
 
         self._unique_logical_size = unique_logical_size

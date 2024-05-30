@@ -63,7 +63,7 @@ class NvmfNamespace(object):
         'stripe_num': 'int',
         'stripe_size': 'int',
         'thin_provision': 'bool',
-        'unique_logical_size': 'int',
+        'unique_logical_size': 'float',
         'unique_size': 'int',
         'zbs_volume_id': 'str'
     }
@@ -1109,7 +1109,7 @@ class NvmfNamespace(object):
 
 
         :return: The unique_logical_size of this NvmfNamespace.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size
 
@@ -1119,7 +1119,7 @@ class NvmfNamespace(object):
 
 
         :param unique_logical_size: The unique_logical_size of this NvmfNamespace.  # noqa: E501
-        :type unique_logical_size: int
+        :type unique_logical_size: float
         """
 
         self._unique_logical_size = unique_logical_size

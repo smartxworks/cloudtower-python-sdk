@@ -37,7 +37,7 @@ class NfsInode(object):
         'parent_id': 'str',
         'shared_size': 'int',
         'snapshot_num': 'int',
-        'unique_logical_size': 'int',
+        'unique_logical_size': 'float',
         'unique_size': 'int'
     }
 
@@ -382,7 +382,7 @@ class NfsInode(object):
 
 
         :return: The unique_logical_size of this NfsInode.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._unique_logical_size
 
@@ -392,7 +392,7 @@ class NfsInode(object):
 
 
         :param unique_logical_size: The unique_logical_size of this NfsInode.  # noqa: E501
-        :type unique_logical_size: int
+        :type unique_logical_size: float
         """
 
         self._unique_logical_size = unique_logical_size
