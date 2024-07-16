@@ -25,6 +25,7 @@ class Vm(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'bios_uuid': 'str',
         'clock_offset': 'VmClockOffset',
         'cloud_init_supported': 'bool',
         'cluster': 'NestedCluster',
@@ -92,6 +93,7 @@ class Vm(object):
     }
 
     attribute_map = {
+        'bios_uuid': 'bios_uuid',
         'clock_offset': 'clock_offset',
         'cloud_init_supported': 'cloud_init_supported',
         'cluster': 'cluster',
@@ -162,6 +164,7 @@ class Vm(object):
         """Vm - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._bios_uuid = None
         self._clock_offset = None
         self._cloud_init_supported = None
         self._cluster = None
@@ -228,6 +231,7 @@ class Vm(object):
         self._win_opt = None
         self.discriminator = None
 
+        self.bios_uuid = kwargs.get("bios_uuid", None)
         if "clock_offset" in kwargs:
             self.clock_offset = kwargs["clock_offset"]
         self.cloud_init_supported = kwargs.get("cloud_init_supported", None)
@@ -313,6 +317,27 @@ class Vm(object):
         self.vm_usage = kwargs.get("vm_usage", None)
         if "win_opt" in kwargs:
             self.win_opt = kwargs["win_opt"]
+
+    @property
+    def bios_uuid(self):
+        """Gets the bios_uuid of this Vm.  # noqa: E501
+
+
+        :return: The bios_uuid of this Vm.  # noqa: E501
+        :rtype: str
+        """
+        return self._bios_uuid
+
+    @bios_uuid.setter
+    def bios_uuid(self, bios_uuid):
+        """Sets the bios_uuid of this Vm.
+
+
+        :param bios_uuid: The bios_uuid of this Vm.  # noqa: E501
+        :type bios_uuid: str
+        """
+
+        self._bios_uuid = bios_uuid
 
     @property
     def clock_offset(self):

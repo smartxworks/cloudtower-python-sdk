@@ -633,19 +633,19 @@ class ContentLibraryVmTemplateApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def export_content_library_vm_template(self, content_language, content_library_vm_template_export_params, **kwargs):  # noqa: E501
+    def export_content_library_vm_template(self, content_library_vm_template_export_params, **kwargs):  # noqa: E501
         """export_content_library_vm_template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.export_content_library_vm_template(content_language, content_library_vm_template_export_params, async_req=True)
+        >>> thread = api.export_content_library_vm_template(content_library_vm_template_export_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param content_library_vm_template_export_params: (required)
         :type content_library_vm_template_export_params: ContentLibraryVmTemplateExportParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -662,21 +662,21 @@ class ContentLibraryVmTemplateApi(object):
         :rtype: list[WithTaskVmExportFile]
         """
         kwargs['_return_http_data_only'] = True
-        return self.export_content_library_vm_template_with_http_info(content_language, content_library_vm_template_export_params, **kwargs)  # noqa: E501
+        return self.export_content_library_vm_template_with_http_info(content_library_vm_template_export_params, **kwargs)  # noqa: E501
 
-    def export_content_library_vm_template_with_http_info(self, content_language, content_library_vm_template_export_params, **kwargs):  # noqa: E501
+    def export_content_library_vm_template_with_http_info(self, content_library_vm_template_export_params, **kwargs):  # noqa: E501
         """export_content_library_vm_template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.export_content_library_vm_template_with_http_info(content_language, content_library_vm_template_export_params, async_req=True)
+        >>> thread = api.export_content_library_vm_template_with_http_info(content_library_vm_template_export_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param content_library_vm_template_export_params: (required)
         :type content_library_vm_template_export_params: ContentLibraryVmTemplateExportParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -704,8 +704,8 @@ class ContentLibraryVmTemplateApi(object):
         local_var_params = locals()
 
         all_params = [
-            'content_language',
-            'content_library_vm_template_export_params'
+            'content_library_vm_template_export_params',
+            'content_language'
         ]
         all_params.extend(
             [
@@ -727,10 +727,6 @@ class ContentLibraryVmTemplateApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'content_language' is set
-        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
-                                                        local_var_params['content_language'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `content_language` when calling `export_content_library_vm_template`")  # noqa: E501
         # verify the required parameter 'content_library_vm_template_export_params' is set
         if self.api_client.client_side_validation and ('content_library_vm_template_export_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['content_library_vm_template_export_params'] is None):  # noqa: E501
@@ -1093,19 +1089,19 @@ class ContentLibraryVmTemplateApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def import_content_library_vm_template(self, content_language, content_library_vm_template_import_params, **kwargs):  # noqa: E501
+    def import_content_library_vm_template(self, content_library_vm_template_import_params, **kwargs):  # noqa: E501
         """import_content_library_vm_template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.import_content_library_vm_template(content_language, content_library_vm_template_import_params, async_req=True)
+        >>> thread = api.import_content_library_vm_template(content_library_vm_template_import_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param content_library_vm_template_import_params: (required)
         :type content_library_vm_template_import_params: list[ContentLibraryVmTemplateImportParams]
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1122,21 +1118,21 @@ class ContentLibraryVmTemplateApi(object):
         :rtype: list[WithTaskContentLibraryVmTemplate]
         """
         kwargs['_return_http_data_only'] = True
-        return self.import_content_library_vm_template_with_http_info(content_language, content_library_vm_template_import_params, **kwargs)  # noqa: E501
+        return self.import_content_library_vm_template_with_http_info(content_library_vm_template_import_params, **kwargs)  # noqa: E501
 
-    def import_content_library_vm_template_with_http_info(self, content_language, content_library_vm_template_import_params, **kwargs):  # noqa: E501
+    def import_content_library_vm_template_with_http_info(self, content_library_vm_template_import_params, **kwargs):  # noqa: E501
         """import_content_library_vm_template  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.import_content_library_vm_template_with_http_info(content_language, content_library_vm_template_import_params, async_req=True)
+        >>> thread = api.import_content_library_vm_template_with_http_info(content_library_vm_template_import_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param content_library_vm_template_import_params: (required)
         :type content_library_vm_template_import_params: list[ContentLibraryVmTemplateImportParams]
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1164,8 +1160,8 @@ class ContentLibraryVmTemplateApi(object):
         local_var_params = locals()
 
         all_params = [
-            'content_language',
-            'content_library_vm_template_import_params'
+            'content_library_vm_template_import_params',
+            'content_language'
         ]
         all_params.extend(
             [
@@ -1187,10 +1183,6 @@ class ContentLibraryVmTemplateApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'content_language' is set
-        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
-                                                        local_var_params['content_language'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `content_language` when calling `import_content_library_vm_template`")  # noqa: E501
         # verify the required parameter 'content_library_vm_template_import_params' is set
         if self.api_client.client_side_validation and ('content_library_vm_template_import_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['content_library_vm_template_import_params'] is None):  # noqa: E501

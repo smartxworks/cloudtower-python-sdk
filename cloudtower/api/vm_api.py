@@ -2764,19 +2764,19 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def get_vm_vnc_info(self, content_language, get_vm_vnc_info_params, **kwargs):  # noqa: E501
+    def get_vm_vnc_info(self, get_vm_vnc_info_params, **kwargs):  # noqa: E501
         """get_vm_vnc_info  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_vm_vnc_info(content_language, get_vm_vnc_info_params, async_req=True)
+        >>> thread = api.get_vm_vnc_info(get_vm_vnc_info_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param get_vm_vnc_info_params: (required)
         :type get_vm_vnc_info_params: GetVmVncInfoParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2793,21 +2793,21 @@ class VmApi(object):
         :rtype: VmVncInfo
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_vm_vnc_info_with_http_info(content_language, get_vm_vnc_info_params, **kwargs)  # noqa: E501
+        return self.get_vm_vnc_info_with_http_info(get_vm_vnc_info_params, **kwargs)  # noqa: E501
 
-    def get_vm_vnc_info_with_http_info(self, content_language, get_vm_vnc_info_params, **kwargs):  # noqa: E501
+    def get_vm_vnc_info_with_http_info(self, get_vm_vnc_info_params, **kwargs):  # noqa: E501
         """get_vm_vnc_info  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_vm_vnc_info_with_http_info(content_language, get_vm_vnc_info_params, async_req=True)
+        >>> thread = api.get_vm_vnc_info_with_http_info(get_vm_vnc_info_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param get_vm_vnc_info_params: (required)
         :type get_vm_vnc_info_params: GetVmVncInfoParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2835,8 +2835,8 @@ class VmApi(object):
         local_var_params = locals()
 
         all_params = [
-            'content_language',
-            'get_vm_vnc_info_params'
+            'get_vm_vnc_info_params',
+            'content_language'
         ]
         all_params.extend(
             [
@@ -2858,10 +2858,6 @@ class VmApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'content_language' is set
-        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
-                                                        local_var_params['content_language'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `content_language` when calling `get_vm_vnc_info`")  # noqa: E501
         # verify the required parameter 'get_vm_vnc_info_params' is set
         if self.api_client.client_side_validation and ('get_vm_vnc_info_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['get_vm_vnc_info_params'] is None):  # noqa: E501
@@ -8096,19 +8092,19 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def update_vm_nic_qos_option(self, content_language, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
+    def update_vm_nic_qos_option(self, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
         """update_vm_nic_qos_option  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_vm_nic_qos_option(content_language, vm_update_nic_qos_options_params, async_req=True)
+        >>> thread = api.update_vm_nic_qos_option(vm_update_nic_qos_options_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param vm_update_nic_qos_options_params: (required)
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8125,21 +8121,21 @@ class VmApi(object):
         :rtype: list[WithTaskVm]
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_vm_nic_qos_option_with_http_info(content_language, vm_update_nic_qos_options_params, **kwargs)  # noqa: E501
+        return self.update_vm_nic_qos_option_with_http_info(vm_update_nic_qos_options_params, **kwargs)  # noqa: E501
 
-    def update_vm_nic_qos_option_with_http_info(self, content_language, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
+    def update_vm_nic_qos_option_with_http_info(self, vm_update_nic_qos_options_params, **kwargs):  # noqa: E501
         """update_vm_nic_qos_option  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_vm_nic_qos_option_with_http_info(content_language, vm_update_nic_qos_options_params, async_req=True)
+        >>> thread = api.update_vm_nic_qos_option_with_http_info(vm_update_nic_qos_options_params, async_req=True)
         >>> result = thread.get()
 
-        :param content_language: (required)
-        :type content_language: ContentLanguage
         :param vm_update_nic_qos_options_params: (required)
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
+        :param content_language:
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8167,8 +8163,8 @@ class VmApi(object):
         local_var_params = locals()
 
         all_params = [
-            'content_language',
-            'vm_update_nic_qos_options_params'
+            'vm_update_nic_qos_options_params',
+            'content_language'
         ]
         all_params.extend(
             [
@@ -8190,10 +8186,6 @@ class VmApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'content_language' is set
-        if self.api_client.client_side_validation and ('content_language' not in local_var_params or  # noqa: E501
-                                                        local_var_params['content_language'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `content_language` when calling `update_vm_nic_qos_option`")  # noqa: E501
         # verify the required parameter 'vm_update_nic_qos_options_params' is set
         if self.api_client.client_side_validation and ('vm_update_nic_qos_options_params' not in local_var_params or  # noqa: E501
                                                         local_var_params['vm_update_nic_qos_options_params'] is None):  # noqa: E501

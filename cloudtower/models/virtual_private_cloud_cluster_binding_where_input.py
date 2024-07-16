@@ -47,24 +47,14 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'phase': 'EverouteClusterPhase',
-        'phase_in': 'list[EverouteClusterPhase]',
-        'phase_not': 'EverouteClusterPhase',
-        'phase_not_in': 'list[EverouteClusterPhase]',
-        'tep_ip_pool_id': 'str',
-        'tep_ip_pool_id_contains': 'str',
-        'tep_ip_pool_id_ends_with': 'str',
-        'tep_ip_pool_id_gt': 'str',
-        'tep_ip_pool_id_gte': 'str',
-        'tep_ip_pool_id_in': 'list[str]',
-        'tep_ip_pool_id_lt': 'str',
-        'tep_ip_pool_id_lte': 'str',
-        'tep_ip_pool_id_not': 'str',
-        'tep_ip_pool_id_not_contains': 'str',
-        'tep_ip_pool_id_not_ends_with': 'str',
-        'tep_ip_pool_id_not_in': 'list[str]',
-        'tep_ip_pool_id_not_starts_with': 'str',
-        'tep_ip_pool_id_starts_with': 'str',
+        'mtu': 'int',
+        'mtu_gt': 'int',
+        'mtu_gte': 'int',
+        'mtu_in': 'list[int]',
+        'mtu_lt': 'int',
+        'mtu_lte': 'int',
+        'mtu_not': 'int',
+        'mtu_not_in': 'list[int]',
         'vds': 'VdsWhereInput',
         'vlan_id': 'int',
         'vlan_id_gt': 'int',
@@ -73,8 +63,7 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'vlan_id_lt': 'int',
         'vlan_id_lte': 'int',
         'vlan_id_not': 'int',
-        'vlan_id_not_in': 'list[int]',
-        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
+        'vlan_id_not_in': 'list[int]'
     }
 
     attribute_map = {
@@ -100,24 +89,14 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'phase': 'phase',
-        'phase_in': 'phase_in',
-        'phase_not': 'phase_not',
-        'phase_not_in': 'phase_not_in',
-        'tep_ip_pool_id': 'tep_ip_pool_id',
-        'tep_ip_pool_id_contains': 'tep_ip_pool_id_contains',
-        'tep_ip_pool_id_ends_with': 'tep_ip_pool_id_ends_with',
-        'tep_ip_pool_id_gt': 'tep_ip_pool_id_gt',
-        'tep_ip_pool_id_gte': 'tep_ip_pool_id_gte',
-        'tep_ip_pool_id_in': 'tep_ip_pool_id_in',
-        'tep_ip_pool_id_lt': 'tep_ip_pool_id_lt',
-        'tep_ip_pool_id_lte': 'tep_ip_pool_id_lte',
-        'tep_ip_pool_id_not': 'tep_ip_pool_id_not',
-        'tep_ip_pool_id_not_contains': 'tep_ip_pool_id_not_contains',
-        'tep_ip_pool_id_not_ends_with': 'tep_ip_pool_id_not_ends_with',
-        'tep_ip_pool_id_not_in': 'tep_ip_pool_id_not_in',
-        'tep_ip_pool_id_not_starts_with': 'tep_ip_pool_id_not_starts_with',
-        'tep_ip_pool_id_starts_with': 'tep_ip_pool_id_starts_with',
+        'mtu': 'mtu',
+        'mtu_gt': 'mtu_gt',
+        'mtu_gte': 'mtu_gte',
+        'mtu_in': 'mtu_in',
+        'mtu_lt': 'mtu_lt',
+        'mtu_lte': 'mtu_lte',
+        'mtu_not': 'mtu_not',
+        'mtu_not_in': 'mtu_not_in',
         'vds': 'vds',
         'vlan_id': 'vlan_id',
         'vlan_id_gt': 'vlan_id_gt',
@@ -126,8 +105,7 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'vlan_id_lt': 'vlan_id_lt',
         'vlan_id_lte': 'vlan_id_lte',
         'vlan_id_not': 'vlan_id_not',
-        'vlan_id_not_in': 'vlan_id_not_in',
-        'vpc_service': 'vpc_service'
+        'vlan_id_not_in': 'vlan_id_not_in'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -156,24 +134,14 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._phase = None
-        self._phase_in = None
-        self._phase_not = None
-        self._phase_not_in = None
-        self._tep_ip_pool_id = None
-        self._tep_ip_pool_id_contains = None
-        self._tep_ip_pool_id_ends_with = None
-        self._tep_ip_pool_id_gt = None
-        self._tep_ip_pool_id_gte = None
-        self._tep_ip_pool_id_in = None
-        self._tep_ip_pool_id_lt = None
-        self._tep_ip_pool_id_lte = None
-        self._tep_ip_pool_id_not = None
-        self._tep_ip_pool_id_not_contains = None
-        self._tep_ip_pool_id_not_ends_with = None
-        self._tep_ip_pool_id_not_in = None
-        self._tep_ip_pool_id_not_starts_with = None
-        self._tep_ip_pool_id_starts_with = None
+        self._mtu = None
+        self._mtu_gt = None
+        self._mtu_gte = None
+        self._mtu_in = None
+        self._mtu_lt = None
+        self._mtu_lte = None
+        self._mtu_not = None
+        self._mtu_not_in = None
         self._vds = None
         self._vlan_id = None
         self._vlan_id_gt = None
@@ -183,7 +151,6 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self._vlan_id_lte = None
         self._vlan_id_not = None
         self._vlan_id_not_in = None
-        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -208,24 +175,14 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.phase = kwargs.get("phase", None)
-        self.phase_in = kwargs.get("phase_in", None)
-        self.phase_not = kwargs.get("phase_not", None)
-        self.phase_not_in = kwargs.get("phase_not_in", None)
-        self.tep_ip_pool_id = kwargs.get("tep_ip_pool_id", None)
-        self.tep_ip_pool_id_contains = kwargs.get("tep_ip_pool_id_contains", None)
-        self.tep_ip_pool_id_ends_with = kwargs.get("tep_ip_pool_id_ends_with", None)
-        self.tep_ip_pool_id_gt = kwargs.get("tep_ip_pool_id_gt", None)
-        self.tep_ip_pool_id_gte = kwargs.get("tep_ip_pool_id_gte", None)
-        self.tep_ip_pool_id_in = kwargs.get("tep_ip_pool_id_in", None)
-        self.tep_ip_pool_id_lt = kwargs.get("tep_ip_pool_id_lt", None)
-        self.tep_ip_pool_id_lte = kwargs.get("tep_ip_pool_id_lte", None)
-        self.tep_ip_pool_id_not = kwargs.get("tep_ip_pool_id_not", None)
-        self.tep_ip_pool_id_not_contains = kwargs.get("tep_ip_pool_id_not_contains", None)
-        self.tep_ip_pool_id_not_ends_with = kwargs.get("tep_ip_pool_id_not_ends_with", None)
-        self.tep_ip_pool_id_not_in = kwargs.get("tep_ip_pool_id_not_in", None)
-        self.tep_ip_pool_id_not_starts_with = kwargs.get("tep_ip_pool_id_not_starts_with", None)
-        self.tep_ip_pool_id_starts_with = kwargs.get("tep_ip_pool_id_starts_with", None)
+        self.mtu = kwargs.get("mtu", None)
+        self.mtu_gt = kwargs.get("mtu_gt", None)
+        self.mtu_gte = kwargs.get("mtu_gte", None)
+        self.mtu_in = kwargs.get("mtu_in", None)
+        self.mtu_lt = kwargs.get("mtu_lt", None)
+        self.mtu_lte = kwargs.get("mtu_lte", None)
+        self.mtu_not = kwargs.get("mtu_not", None)
+        self.mtu_not_in = kwargs.get("mtu_not_in", None)
         self.vds = kwargs.get("vds", None)
         self.vlan_id = kwargs.get("vlan_id", None)
         self.vlan_id_gt = kwargs.get("vlan_id_gt", None)
@@ -235,7 +192,6 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self.vlan_id_lte = kwargs.get("vlan_id_lte", None)
         self.vlan_id_not = kwargs.get("vlan_id_not", None)
         self.vlan_id_not_in = kwargs.get("vlan_id_not_in", None)
-        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -700,382 +656,172 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self._id_starts_with = id_starts_with
 
     @property
-    def phase(self):
-        """Gets the phase of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu(self):
+        """Gets the mtu of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The phase of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: EverouteClusterPhase
+        :return: The mtu of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._phase
+        return self._mtu
 
-    @phase.setter
-    def phase(self, phase):
-        """Sets the phase of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu.setter
+    def mtu(self, mtu):
+        """Sets the mtu of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param phase: The phase of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type phase: EverouteClusterPhase
+        :param mtu: The mtu of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu: int
         """
 
-        self._phase = phase
+        self._mtu = mtu
 
     @property
-    def phase_in(self):
-        """Gets the phase_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_gt(self):
+        """Gets the mtu_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The phase_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: list[EverouteClusterPhase]
+        :return: The mtu_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._phase_in
+        return self._mtu_gt
 
-    @phase_in.setter
-    def phase_in(self, phase_in):
-        """Sets the phase_in of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_gt.setter
+    def mtu_gt(self, mtu_gt):
+        """Sets the mtu_gt of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param phase_in: The phase_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type phase_in: list[EverouteClusterPhase]
+        :param mtu_gt: The mtu_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_gt: int
         """
 
-        self._phase_in = phase_in
+        self._mtu_gt = mtu_gt
 
     @property
-    def phase_not(self):
-        """Gets the phase_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_gte(self):
+        """Gets the mtu_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The phase_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: EverouteClusterPhase
+        :return: The mtu_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._phase_not
+        return self._mtu_gte
 
-    @phase_not.setter
-    def phase_not(self, phase_not):
-        """Sets the phase_not of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_gte.setter
+    def mtu_gte(self, mtu_gte):
+        """Sets the mtu_gte of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param phase_not: The phase_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type phase_not: EverouteClusterPhase
+        :param mtu_gte: The mtu_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_gte: int
         """
 
-        self._phase_not = phase_not
+        self._mtu_gte = mtu_gte
 
     @property
-    def phase_not_in(self):
-        """Gets the phase_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_in(self):
+        """Gets the mtu_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The phase_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: list[EverouteClusterPhase]
+        :return: The mtu_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._phase_not_in
+        return self._mtu_in
 
-    @phase_not_in.setter
-    def phase_not_in(self, phase_not_in):
-        """Sets the phase_not_in of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_in.setter
+    def mtu_in(self, mtu_in):
+        """Sets the mtu_in of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param phase_not_in: The phase_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type phase_not_in: list[EverouteClusterPhase]
+        :param mtu_in: The mtu_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_in: list[int]
         """
 
-        self._phase_not_in = phase_not_in
+        self._mtu_in = mtu_in
 
     @property
-    def tep_ip_pool_id(self):
-        """Gets the tep_ip_pool_id of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_lt(self):
+        """Gets the mtu_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The tep_ip_pool_id of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
+        :return: The mtu_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._tep_ip_pool_id
+        return self._mtu_lt
 
-    @tep_ip_pool_id.setter
-    def tep_ip_pool_id(self, tep_ip_pool_id):
-        """Sets the tep_ip_pool_id of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_lt.setter
+    def mtu_lt(self, mtu_lt):
+        """Sets the mtu_lt of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param tep_ip_pool_id: The tep_ip_pool_id of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id: str
+        :param mtu_lt: The mtu_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_lt: int
         """
 
-        self._tep_ip_pool_id = tep_ip_pool_id
+        self._mtu_lt = mtu_lt
 
     @property
-    def tep_ip_pool_id_contains(self):
-        """Gets the tep_ip_pool_id_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_lte(self):
+        """Gets the mtu_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The tep_ip_pool_id_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
+        :return: The mtu_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._tep_ip_pool_id_contains
+        return self._mtu_lte
 
-    @tep_ip_pool_id_contains.setter
-    def tep_ip_pool_id_contains(self, tep_ip_pool_id_contains):
-        """Sets the tep_ip_pool_id_contains of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_lte.setter
+    def mtu_lte(self, mtu_lte):
+        """Sets the mtu_lte of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param tep_ip_pool_id_contains: The tep_ip_pool_id_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_contains: str
+        :param mtu_lte: The mtu_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_lte: int
         """
 
-        self._tep_ip_pool_id_contains = tep_ip_pool_id_contains
+        self._mtu_lte = mtu_lte
 
     @property
-    def tep_ip_pool_id_ends_with(self):
-        """Gets the tep_ip_pool_id_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_not(self):
+        """Gets the mtu_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The tep_ip_pool_id_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
+        :return: The mtu_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: int
         """
-        return self._tep_ip_pool_id_ends_with
+        return self._mtu_not
 
-    @tep_ip_pool_id_ends_with.setter
-    def tep_ip_pool_id_ends_with(self, tep_ip_pool_id_ends_with):
-        """Sets the tep_ip_pool_id_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.
+    @mtu_not.setter
+    def mtu_not(self, mtu_not):
+        """Sets the mtu_not of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :param tep_ip_pool_id_ends_with: The tep_ip_pool_id_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_ends_with: str
+        :param mtu_not: The mtu_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_not: int
         """
 
-        self._tep_ip_pool_id_ends_with = tep_ip_pool_id_ends_with
+        self._mtu_not = mtu_not
 
     @property
-    def tep_ip_pool_id_gt(self):
-        """Gets the tep_ip_pool_id_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    def mtu_not_in(self):
+        """Gets the mtu_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
 
 
-        :return: The tep_ip_pool_id_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
+        :return: The mtu_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._tep_ip_pool_id_gt
+        return self._mtu_not_in
 
-    @tep_ip_pool_id_gt.setter
-    def tep_ip_pool_id_gt(self, tep_ip_pool_id_gt):
-        """Sets the tep_ip_pool_id_gt of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_gt: The tep_ip_pool_id_gt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_gt: str
-        """
-
-        self._tep_ip_pool_id_gt = tep_ip_pool_id_gt
-
-    @property
-    def tep_ip_pool_id_gte(self):
-        """Gets the tep_ip_pool_id_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+    @mtu_not_in.setter
+    def mtu_not_in(self, mtu_not_in):
+        """Sets the mtu_not_in of this VirtualPrivateCloudClusterBindingWhereInput.
 
 
-        :return: The tep_ip_pool_id_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_gte
-
-    @tep_ip_pool_id_gte.setter
-    def tep_ip_pool_id_gte(self, tep_ip_pool_id_gte):
-        """Sets the tep_ip_pool_id_gte of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_gte: The tep_ip_pool_id_gte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_gte: str
+        :param mtu_not_in: The mtu_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type mtu_not_in: list[int]
         """
 
-        self._tep_ip_pool_id_gte = tep_ip_pool_id_gte
-
-    @property
-    def tep_ip_pool_id_in(self):
-        """Gets the tep_ip_pool_id_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._tep_ip_pool_id_in
-
-    @tep_ip_pool_id_in.setter
-    def tep_ip_pool_id_in(self, tep_ip_pool_id_in):
-        """Sets the tep_ip_pool_id_in of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_in: The tep_ip_pool_id_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_in: list[str]
-        """
-
-        self._tep_ip_pool_id_in = tep_ip_pool_id_in
-
-    @property
-    def tep_ip_pool_id_lt(self):
-        """Gets the tep_ip_pool_id_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_lt
-
-    @tep_ip_pool_id_lt.setter
-    def tep_ip_pool_id_lt(self, tep_ip_pool_id_lt):
-        """Sets the tep_ip_pool_id_lt of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_lt: The tep_ip_pool_id_lt of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_lt: str
-        """
-
-        self._tep_ip_pool_id_lt = tep_ip_pool_id_lt
-
-    @property
-    def tep_ip_pool_id_lte(self):
-        """Gets the tep_ip_pool_id_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_lte
-
-    @tep_ip_pool_id_lte.setter
-    def tep_ip_pool_id_lte(self, tep_ip_pool_id_lte):
-        """Sets the tep_ip_pool_id_lte of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_lte: The tep_ip_pool_id_lte of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_lte: str
-        """
-
-        self._tep_ip_pool_id_lte = tep_ip_pool_id_lte
-
-    @property
-    def tep_ip_pool_id_not(self):
-        """Gets the tep_ip_pool_id_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_not
-
-    @tep_ip_pool_id_not.setter
-    def tep_ip_pool_id_not(self, tep_ip_pool_id_not):
-        """Sets the tep_ip_pool_id_not of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_not: The tep_ip_pool_id_not of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_not: str
-        """
-
-        self._tep_ip_pool_id_not = tep_ip_pool_id_not
-
-    @property
-    def tep_ip_pool_id_not_contains(self):
-        """Gets the tep_ip_pool_id_not_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_not_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_not_contains
-
-    @tep_ip_pool_id_not_contains.setter
-    def tep_ip_pool_id_not_contains(self, tep_ip_pool_id_not_contains):
-        """Sets the tep_ip_pool_id_not_contains of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_not_contains: The tep_ip_pool_id_not_contains of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_not_contains: str
-        """
-
-        self._tep_ip_pool_id_not_contains = tep_ip_pool_id_not_contains
-
-    @property
-    def tep_ip_pool_id_not_ends_with(self):
-        """Gets the tep_ip_pool_id_not_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_not_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_not_ends_with
-
-    @tep_ip_pool_id_not_ends_with.setter
-    def tep_ip_pool_id_not_ends_with(self, tep_ip_pool_id_not_ends_with):
-        """Sets the tep_ip_pool_id_not_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_not_ends_with: The tep_ip_pool_id_not_ends_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_not_ends_with: str
-        """
-
-        self._tep_ip_pool_id_not_ends_with = tep_ip_pool_id_not_ends_with
-
-    @property
-    def tep_ip_pool_id_not_in(self):
-        """Gets the tep_ip_pool_id_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._tep_ip_pool_id_not_in
-
-    @tep_ip_pool_id_not_in.setter
-    def tep_ip_pool_id_not_in(self, tep_ip_pool_id_not_in):
-        """Sets the tep_ip_pool_id_not_in of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_not_in: The tep_ip_pool_id_not_in of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_not_in: list[str]
-        """
-
-        self._tep_ip_pool_id_not_in = tep_ip_pool_id_not_in
-
-    @property
-    def tep_ip_pool_id_not_starts_with(self):
-        """Gets the tep_ip_pool_id_not_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_not_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_not_starts_with
-
-    @tep_ip_pool_id_not_starts_with.setter
-    def tep_ip_pool_id_not_starts_with(self, tep_ip_pool_id_not_starts_with):
-        """Sets the tep_ip_pool_id_not_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_not_starts_with: The tep_ip_pool_id_not_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_not_starts_with: str
-        """
-
-        self._tep_ip_pool_id_not_starts_with = tep_ip_pool_id_not_starts_with
-
-    @property
-    def tep_ip_pool_id_starts_with(self):
-        """Gets the tep_ip_pool_id_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The tep_ip_pool_id_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._tep_ip_pool_id_starts_with
-
-    @tep_ip_pool_id_starts_with.setter
-    def tep_ip_pool_id_starts_with(self, tep_ip_pool_id_starts_with):
-        """Sets the tep_ip_pool_id_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param tep_ip_pool_id_starts_with: The tep_ip_pool_id_starts_with of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type tep_ip_pool_id_starts_with: str
-        """
-
-        self._tep_ip_pool_id_starts_with = tep_ip_pool_id_starts_with
+        self._mtu_not_in = mtu_not_in
 
     @property
     def vds(self):
@@ -1265,27 +1011,6 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         """
 
         self._vlan_id_not_in = vlan_id_not_in
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudServiceWhereInput
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
-        :type vpc_service: VirtualPrivateCloudServiceWhereInput
-        """
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

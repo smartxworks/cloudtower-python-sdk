@@ -1,5 +1,23 @@
 # RELEASE NOTE
 
+## release 日期 2024-07-16
+
+v2.16.0 release (tower version 4.2.0)
+
+### bugfix
+
+- [utils]: 移除代码中的 type annotation 以支持 python2
+- [VmApi], [VmVolumeApi],[ContentLIbraryVmTemplateApi]: 
+  - 移除 [export_content_library_vm_template], [import_content_library_vm_template], [export_vm_volume], [import_vm_volume], [update_vm_nic_qos_option], [get_vm_vnc_info] 被错误增加必须的 content-language 参数
+
+### update
+
+- [HostApi]:
+  - [create_host]: 新增 `vdses` 字段适配网络融合，新增 `zbsSpec` 字段适配 zbs 560 以上版本集群的添加
+- [VmApi]:
+  - [get_vms]: 新增 `bios_uuid` 字段
+- 新增 [image_utils] 工具类，支持通过 uploadTask 来获取上传后的 elfImage 与 contentLibraryImage
+
 ## release 日期 2024-05-30
 
 v2.15.1 release (tower version 4.1.0)
@@ -22,7 +40,7 @@ v2.15.0 release (tower version 4.1.0)
 ### bugfix
 
 - [VmApi]
-  - [add_vm_Nic], [remove_vm_nic], [remove_vm_nic_by_where], [update_vm_nic], [update_vm_nic_basic_info], [update_vm_nic_advance_info], [update_vm_nic_qos_option]: 修复更新虚拟机网卡类 API 编辑后丢失部分网卡信息的问题
+  - [add_vm_nic], [remove_vm_nic], [remove_vm_nic_by_where], [update_vm_nic], [update_vm_nic_basic_info], [update_vm_nic_advance_info], [update_vm_nic_qos_option]: 修复更新虚拟机网卡类 API 编辑后丢失部分网卡信息的问题
 - [VmPlacementGroupApi]
   - [create_vm_placement_group], [update_vm_placement_group]: 修复了创建与更新放置组时，`vm_vm_policy_enabled` 为 false 时无法更新组内虚拟机成员
 

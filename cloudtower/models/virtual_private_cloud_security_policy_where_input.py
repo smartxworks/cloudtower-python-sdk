@@ -60,9 +60,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'labels_every': 'LabelWhereInput',
-        'labels_none': 'LabelWhereInput',
-        'labels_some': 'LabelWhereInput',
         'local_id': 'str',
         'local_id_contains': 'str',
         'local_id_ends_with': 'str',
@@ -95,9 +92,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         'policy_mode_in': 'list[VirtualPrivateCloudSecurityPolicyMode]',
         'policy_mode_not': 'VirtualPrivateCloudSecurityPolicyMode',
         'policy_mode_not_in': 'list[VirtualPrivateCloudSecurityPolicyMode]',
-        'security_groups_every': 'VirtualPrivateCloudSecurityGroupWhereInput',
-        'security_groups_none': 'VirtualPrivateCloudSecurityGroupWhereInput',
-        'security_groups_some': 'VirtualPrivateCloudSecurityGroupWhereInput',
         'vpc': 'VirtualPrivateCloudWhereInput'
     }
 
@@ -137,9 +131,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'labels_every': 'labels_every',
-        'labels_none': 'labels_none',
-        'labels_some': 'labels_some',
         'local_id': 'local_id',
         'local_id_contains': 'local_id_contains',
         'local_id_ends_with': 'local_id_ends_with',
@@ -172,9 +163,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         'policy_mode_in': 'policy_mode_in',
         'policy_mode_not': 'policy_mode_not',
         'policy_mode_not_in': 'policy_mode_not_in',
-        'security_groups_every': 'security_groups_every',
-        'security_groups_none': 'security_groups_none',
-        'security_groups_some': 'security_groups_some',
         'vpc': 'vpc'
     }
 
@@ -217,9 +205,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._labels_every = None
-        self._labels_none = None
-        self._labels_some = None
         self._local_id = None
         self._local_id_contains = None
         self._local_id_ends_with = None
@@ -252,9 +237,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         self._policy_mode_in = None
         self._policy_mode_not = None
         self._policy_mode_not_in = None
-        self._security_groups_every = None
-        self._security_groups_none = None
-        self._security_groups_some = None
         self._vpc = None
         self.discriminator = None
 
@@ -293,9 +275,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.labels_every = kwargs.get("labels_every", None)
-        self.labels_none = kwargs.get("labels_none", None)
-        self.labels_some = kwargs.get("labels_some", None)
         self.local_id = kwargs.get("local_id", None)
         self.local_id_contains = kwargs.get("local_id_contains", None)
         self.local_id_ends_with = kwargs.get("local_id_ends_with", None)
@@ -328,9 +307,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         self.policy_mode_in = kwargs.get("policy_mode_in", None)
         self.policy_mode_not = kwargs.get("policy_mode_not", None)
         self.policy_mode_not_in = kwargs.get("policy_mode_not_in", None)
-        self.security_groups_every = kwargs.get("security_groups_every", None)
-        self.security_groups_none = kwargs.get("security_groups_none", None)
-        self.security_groups_some = kwargs.get("security_groups_some", None)
         self.vpc = kwargs.get("vpc", None)
 
     @property
@@ -1069,69 +1045,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         self._id_starts_with = id_starts_with
 
     @property
-    def labels_every(self):
-        """Gets the labels_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The labels_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: LabelWhereInput
-        """
-        return self._labels_every
-
-    @labels_every.setter
-    def labels_every(self, labels_every):
-        """Sets the labels_every of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param labels_every: The labels_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type labels_every: LabelWhereInput
-        """
-
-        self._labels_every = labels_every
-
-    @property
-    def labels_none(self):
-        """Gets the labels_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The labels_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: LabelWhereInput
-        """
-        return self._labels_none
-
-    @labels_none.setter
-    def labels_none(self, labels_none):
-        """Sets the labels_none of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param labels_none: The labels_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type labels_none: LabelWhereInput
-        """
-
-        self._labels_none = labels_none
-
-    @property
-    def labels_some(self):
-        """Gets the labels_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The labels_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: LabelWhereInput
-        """
-        return self._labels_some
-
-    @labels_some.setter
-    def labels_some(self, labels_some):
-        """Sets the labels_some of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param labels_some: The labels_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type labels_some: LabelWhereInput
-        """
-
-        self._labels_some = labels_some
-
-    @property
     def local_id(self):
         """Gets the local_id of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
 
@@ -1802,69 +1715,6 @@ class VirtualPrivateCloudSecurityPolicyWhereInput(object):
         """
 
         self._policy_mode_not_in = policy_mode_not_in
-
-    @property
-    def security_groups_every(self):
-        """Gets the security_groups_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The security_groups_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-        return self._security_groups_every
-
-    @security_groups_every.setter
-    def security_groups_every(self, security_groups_every):
-        """Sets the security_groups_every of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param security_groups_every: The security_groups_every of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type security_groups_every: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-
-        self._security_groups_every = security_groups_every
-
-    @property
-    def security_groups_none(self):
-        """Gets the security_groups_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The security_groups_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-        return self._security_groups_none
-
-    @security_groups_none.setter
-    def security_groups_none(self, security_groups_none):
-        """Sets the security_groups_none of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param security_groups_none: The security_groups_none of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type security_groups_none: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-
-        self._security_groups_none = security_groups_none
-
-    @property
-    def security_groups_some(self):
-        """Gets the security_groups_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-
-
-        :return: The security_groups_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-        return self._security_groups_some
-
-    @security_groups_some.setter
-    def security_groups_some(self, security_groups_some):
-        """Sets the security_groups_some of this VirtualPrivateCloudSecurityPolicyWhereInput.
-
-
-        :param security_groups_some: The security_groups_some of this VirtualPrivateCloudSecurityPolicyWhereInput.  # noqa: E501
-        :type security_groups_some: VirtualPrivateCloudSecurityGroupWhereInput
-        """
-
-        self._security_groups_some = security_groups_some
 
     @property
     def vpc(self):
