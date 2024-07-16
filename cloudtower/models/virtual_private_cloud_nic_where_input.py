@@ -57,7 +57,9 @@ class VirtualPrivateCloudNicWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        'snapshot': 'VirtualPrivateCloudNicSnapshotWhereInput',
+        'snapshots_every': 'VirtualPrivateCloudNicSnapshotWhereInput',
+        'snapshots_none': 'VirtualPrivateCloudNicSnapshotWhereInput',
+        'snapshots_some': 'VirtualPrivateCloudNicSnapshotWhereInput',
         'vm_nic': 'VmNicWhereInput',
         'vpc': 'VirtualPrivateCloudWhereInput',
         'vpc_subnet': 'VirtualPrivateCloudSubnetWhereInput'
@@ -96,7 +98,9 @@ class VirtualPrivateCloudNicWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        'snapshot': 'snapshot',
+        'snapshots_every': 'snapshots_every',
+        'snapshots_none': 'snapshots_none',
+        'snapshots_some': 'snapshots_some',
         'vm_nic': 'vm_nic',
         'vpc': 'vpc',
         'vpc_subnet': 'vpc_subnet'
@@ -138,7 +142,9 @@ class VirtualPrivateCloudNicWhereInput(object):
         self._local_id_not_in = None
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
-        self._snapshot = None
+        self._snapshots_every = None
+        self._snapshots_none = None
+        self._snapshots_some = None
         self._vm_nic = None
         self._vpc = None
         self._vpc_subnet = None
@@ -176,7 +182,9 @@ class VirtualPrivateCloudNicWhereInput(object):
         self.local_id_not_in = kwargs.get("local_id_not_in", None)
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
-        self.snapshot = kwargs.get("snapshot", None)
+        self.snapshots_every = kwargs.get("snapshots_every", None)
+        self.snapshots_none = kwargs.get("snapshots_none", None)
+        self.snapshots_some = kwargs.get("snapshots_some", None)
         self.vm_nic = kwargs.get("vm_nic", None)
         self.vpc = kwargs.get("vpc", None)
         self.vpc_subnet = kwargs.get("vpc_subnet", None)
@@ -854,25 +862,67 @@ class VirtualPrivateCloudNicWhereInput(object):
         self._local_id_starts_with = local_id_starts_with
 
     @property
-    def snapshot(self):
-        """Gets the snapshot of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+    def snapshots_every(self):
+        """Gets the snapshots_every of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
 
 
-        :return: The snapshot of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :return: The snapshots_every of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
         :rtype: VirtualPrivateCloudNicSnapshotWhereInput
         """
-        return self._snapshot
+        return self._snapshots_every
 
-    @snapshot.setter
-    def snapshot(self, snapshot):
-        """Sets the snapshot of this VirtualPrivateCloudNicWhereInput.
+    @snapshots_every.setter
+    def snapshots_every(self, snapshots_every):
+        """Sets the snapshots_every of this VirtualPrivateCloudNicWhereInput.
 
 
-        :param snapshot: The snapshot of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
-        :type snapshot: VirtualPrivateCloudNicSnapshotWhereInput
+        :param snapshots_every: The snapshots_every of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :type snapshots_every: VirtualPrivateCloudNicSnapshotWhereInput
         """
 
-        self._snapshot = snapshot
+        self._snapshots_every = snapshots_every
+
+    @property
+    def snapshots_none(self):
+        """Gets the snapshots_none of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+
+
+        :return: The snapshots_none of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudNicSnapshotWhereInput
+        """
+        return self._snapshots_none
+
+    @snapshots_none.setter
+    def snapshots_none(self, snapshots_none):
+        """Sets the snapshots_none of this VirtualPrivateCloudNicWhereInput.
+
+
+        :param snapshots_none: The snapshots_none of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :type snapshots_none: VirtualPrivateCloudNicSnapshotWhereInput
+        """
+
+        self._snapshots_none = snapshots_none
+
+    @property
+    def snapshots_some(self):
+        """Gets the snapshots_some of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+
+
+        :return: The snapshots_some of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudNicSnapshotWhereInput
+        """
+        return self._snapshots_some
+
+    @snapshots_some.setter
+    def snapshots_some(self, snapshots_some):
+        """Sets the snapshots_some of this VirtualPrivateCloudNicWhereInput.
+
+
+        :param snapshots_some: The snapshots_some of this VirtualPrivateCloudNicWhereInput.  # noqa: E501
+        :type snapshots_some: VirtualPrivateCloudNicSnapshotWhereInput
+        """
+
+        self._snapshots_some = snapshots_some
 
     @property
     def vm_nic(self):

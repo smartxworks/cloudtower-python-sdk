@@ -38,7 +38,8 @@ class DiscoveredHost(object):
         'product': 'str',
         'serial': 'str',
         'sockets': 'int',
-        'version': 'str'
+        'version': 'str',
+        'zbs_spec': 'str'
     }
 
     attribute_map = {
@@ -55,7 +56,8 @@ class DiscoveredHost(object):
         'product': 'product',
         'serial': 'serial',
         'sockets': 'sockets',
-        'version': 'version'
+        'version': 'version',
+        'zbs_spec': 'zbs_spec'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -76,6 +78,7 @@ class DiscoveredHost(object):
         self._serial = None
         self._sockets = None
         self._version = None
+        self._zbs_spec = None
         self.discriminator = None
 
         if "all_flash" in kwargs:
@@ -101,6 +104,7 @@ class DiscoveredHost(object):
             self.sockets = kwargs["sockets"]
         if "version" in kwargs:
             self.version = kwargs["version"]
+        self.zbs_spec = kwargs.get("zbs_spec", None)
 
     @property
     def all_flash(self):
@@ -413,6 +417,27 @@ class DiscoveredHost(object):
             raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
+
+    @property
+    def zbs_spec(self):
+        """Gets the zbs_spec of this DiscoveredHost.  # noqa: E501
+
+
+        :return: The zbs_spec of this DiscoveredHost.  # noqa: E501
+        :rtype: str
+        """
+        return self._zbs_spec
+
+    @zbs_spec.setter
+    def zbs_spec(self, zbs_spec):
+        """Sets the zbs_spec of this DiscoveredHost.
+
+
+        :param zbs_spec: The zbs_spec of this DiscoveredHost.  # noqa: E501
+        :type zbs_spec: str
+        """
+
+        self._zbs_spec = zbs_spec
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

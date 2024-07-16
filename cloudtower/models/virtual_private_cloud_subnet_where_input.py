@@ -56,8 +56,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
-        'enable_broadcast': 'bool',
-        'enable_broadcast_not': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -70,20 +68,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'gateway_in': 'list[str]',
         'gateway_lt': 'str',
         'gateway_lte': 'str',
-        'gateway_mac': 'str',
-        'gateway_mac_contains': 'str',
-        'gateway_mac_ends_with': 'str',
-        'gateway_mac_gt': 'str',
-        'gateway_mac_gte': 'str',
-        'gateway_mac_in': 'list[str]',
-        'gateway_mac_lt': 'str',
-        'gateway_mac_lte': 'str',
-        'gateway_mac_not': 'str',
-        'gateway_mac_not_contains': 'str',
-        'gateway_mac_not_ends_with': 'str',
-        'gateway_mac_not_in': 'list[str]',
-        'gateway_mac_not_starts_with': 'str',
-        'gateway_mac_starts_with': 'str',
         'gateway_not': 'str',
         'gateway_not_contains': 'str',
         'gateway_not_ends_with': 'str',
@@ -104,7 +88,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'layer2_gateway': 'VirtualPrivateCloudLayer2GatewayWhereInput',
         'local_id': 'str',
         'local_id_contains': 'str',
         'local_id_ends_with': 'str',
@@ -150,10 +133,7 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'unused_ip_count_lte': 'int',
         'unused_ip_count_not': 'int',
         'unused_ip_count_not_in': 'list[int]',
-        'vpc': 'VirtualPrivateCloudWhereInput',
-        'vpc_nics_every': 'VirtualPrivateCloudNicWhereInput',
-        'vpc_nics_none': 'VirtualPrivateCloudNicWhereInput',
-        'vpc_nics_some': 'VirtualPrivateCloudNicWhereInput'
+        'vpc': 'VirtualPrivateCloudWhereInput'
     }
 
     attribute_map = {
@@ -188,8 +168,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
-        'enable_broadcast': 'enable_broadcast',
-        'enable_broadcast_not': 'enable_broadcast_not',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -202,20 +180,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'gateway_in': 'gateway_in',
         'gateway_lt': 'gateway_lt',
         'gateway_lte': 'gateway_lte',
-        'gateway_mac': 'gateway_mac',
-        'gateway_mac_contains': 'gateway_mac_contains',
-        'gateway_mac_ends_with': 'gateway_mac_ends_with',
-        'gateway_mac_gt': 'gateway_mac_gt',
-        'gateway_mac_gte': 'gateway_mac_gte',
-        'gateway_mac_in': 'gateway_mac_in',
-        'gateway_mac_lt': 'gateway_mac_lt',
-        'gateway_mac_lte': 'gateway_mac_lte',
-        'gateway_mac_not': 'gateway_mac_not',
-        'gateway_mac_not_contains': 'gateway_mac_not_contains',
-        'gateway_mac_not_ends_with': 'gateway_mac_not_ends_with',
-        'gateway_mac_not_in': 'gateway_mac_not_in',
-        'gateway_mac_not_starts_with': 'gateway_mac_not_starts_with',
-        'gateway_mac_starts_with': 'gateway_mac_starts_with',
         'gateway_not': 'gateway_not',
         'gateway_not_contains': 'gateway_not_contains',
         'gateway_not_ends_with': 'gateway_not_ends_with',
@@ -236,7 +200,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'layer2_gateway': 'layer2_gateway',
         'local_id': 'local_id',
         'local_id_contains': 'local_id_contains',
         'local_id_ends_with': 'local_id_ends_with',
@@ -282,10 +245,7 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         'unused_ip_count_lte': 'unused_ip_count_lte',
         'unused_ip_count_not': 'unused_ip_count_not',
         'unused_ip_count_not_in': 'unused_ip_count_not_in',
-        'vpc': 'vpc',
-        'vpc_nics_every': 'vpc_nics_every',
-        'vpc_nics_none': 'vpc_nics_none',
-        'vpc_nics_some': 'vpc_nics_some'
+        'vpc': 'vpc'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -323,8 +283,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
-        self._enable_broadcast = None
-        self._enable_broadcast_not = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -337,20 +295,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self._gateway_in = None
         self._gateway_lt = None
         self._gateway_lte = None
-        self._gateway_mac = None
-        self._gateway_mac_contains = None
-        self._gateway_mac_ends_with = None
-        self._gateway_mac_gt = None
-        self._gateway_mac_gte = None
-        self._gateway_mac_in = None
-        self._gateway_mac_lt = None
-        self._gateway_mac_lte = None
-        self._gateway_mac_not = None
-        self._gateway_mac_not_contains = None
-        self._gateway_mac_not_ends_with = None
-        self._gateway_mac_not_in = None
-        self._gateway_mac_not_starts_with = None
-        self._gateway_mac_starts_with = None
         self._gateway_not = None
         self._gateway_not_contains = None
         self._gateway_not_ends_with = None
@@ -371,7 +315,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._layer2_gateway = None
         self._local_id = None
         self._local_id_contains = None
         self._local_id_ends_with = None
@@ -418,9 +361,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self._unused_ip_count_not = None
         self._unused_ip_count_not_in = None
         self._vpc = None
-        self._vpc_nics_every = None
-        self._vpc_nics_none = None
-        self._vpc_nics_some = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -454,8 +394,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
-        self.enable_broadcast = kwargs.get("enable_broadcast", None)
-        self.enable_broadcast_not = kwargs.get("enable_broadcast_not", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -468,20 +406,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self.gateway_in = kwargs.get("gateway_in", None)
         self.gateway_lt = kwargs.get("gateway_lt", None)
         self.gateway_lte = kwargs.get("gateway_lte", None)
-        self.gateway_mac = kwargs.get("gateway_mac", None)
-        self.gateway_mac_contains = kwargs.get("gateway_mac_contains", None)
-        self.gateway_mac_ends_with = kwargs.get("gateway_mac_ends_with", None)
-        self.gateway_mac_gt = kwargs.get("gateway_mac_gt", None)
-        self.gateway_mac_gte = kwargs.get("gateway_mac_gte", None)
-        self.gateway_mac_in = kwargs.get("gateway_mac_in", None)
-        self.gateway_mac_lt = kwargs.get("gateway_mac_lt", None)
-        self.gateway_mac_lte = kwargs.get("gateway_mac_lte", None)
-        self.gateway_mac_not = kwargs.get("gateway_mac_not", None)
-        self.gateway_mac_not_contains = kwargs.get("gateway_mac_not_contains", None)
-        self.gateway_mac_not_ends_with = kwargs.get("gateway_mac_not_ends_with", None)
-        self.gateway_mac_not_in = kwargs.get("gateway_mac_not_in", None)
-        self.gateway_mac_not_starts_with = kwargs.get("gateway_mac_not_starts_with", None)
-        self.gateway_mac_starts_with = kwargs.get("gateway_mac_starts_with", None)
         self.gateway_not = kwargs.get("gateway_not", None)
         self.gateway_not_contains = kwargs.get("gateway_not_contains", None)
         self.gateway_not_ends_with = kwargs.get("gateway_not_ends_with", None)
@@ -502,7 +426,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.layer2_gateway = kwargs.get("layer2_gateway", None)
         self.local_id = kwargs.get("local_id", None)
         self.local_id_contains = kwargs.get("local_id_contains", None)
         self.local_id_ends_with = kwargs.get("local_id_ends_with", None)
@@ -549,9 +472,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self.unused_ip_count_not = kwargs.get("unused_ip_count_not", None)
         self.unused_ip_count_not_in = kwargs.get("unused_ip_count_not_in", None)
         self.vpc = kwargs.get("vpc", None)
-        self.vpc_nics_every = kwargs.get("vpc_nics_every", None)
-        self.vpc_nics_none = kwargs.get("vpc_nics_none", None)
-        self.vpc_nics_some = kwargs.get("vpc_nics_some", None)
 
     @property
     def _and(self):
@@ -1205,48 +1125,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         self._description_starts_with = description_starts_with
 
     @property
-    def enable_broadcast(self):
-        """Gets the enable_broadcast of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The enable_broadcast of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_broadcast
-
-    @enable_broadcast.setter
-    def enable_broadcast(self, enable_broadcast):
-        """Sets the enable_broadcast of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param enable_broadcast: The enable_broadcast of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type enable_broadcast: bool
-        """
-
-        self._enable_broadcast = enable_broadcast
-
-    @property
-    def enable_broadcast_not(self):
-        """Gets the enable_broadcast_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The enable_broadcast_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_broadcast_not
-
-    @enable_broadcast_not.setter
-    def enable_broadcast_not(self, enable_broadcast_not):
-        """Sets the enable_broadcast_not of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param enable_broadcast_not: The enable_broadcast_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type enable_broadcast_not: bool
-        """
-
-        self._enable_broadcast_not = enable_broadcast_not
-
-    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
 
@@ -1497,300 +1375,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         """
 
         self._gateway_lte = gateway_lte
-
-    @property
-    def gateway_mac(self):
-        """Gets the gateway_mac of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac
-
-    @gateway_mac.setter
-    def gateway_mac(self, gateway_mac):
-        """Sets the gateway_mac of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac: The gateway_mac of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac: str
-        """
-
-        self._gateway_mac = gateway_mac
-
-    @property
-    def gateway_mac_contains(self):
-        """Gets the gateway_mac_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_contains
-
-    @gateway_mac_contains.setter
-    def gateway_mac_contains(self, gateway_mac_contains):
-        """Sets the gateway_mac_contains of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_contains: The gateway_mac_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_contains: str
-        """
-
-        self._gateway_mac_contains = gateway_mac_contains
-
-    @property
-    def gateway_mac_ends_with(self):
-        """Gets the gateway_mac_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_ends_with
-
-    @gateway_mac_ends_with.setter
-    def gateway_mac_ends_with(self, gateway_mac_ends_with):
-        """Sets the gateway_mac_ends_with of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_ends_with: The gateway_mac_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_ends_with: str
-        """
-
-        self._gateway_mac_ends_with = gateway_mac_ends_with
-
-    @property
-    def gateway_mac_gt(self):
-        """Gets the gateway_mac_gt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_gt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_gt
-
-    @gateway_mac_gt.setter
-    def gateway_mac_gt(self, gateway_mac_gt):
-        """Sets the gateway_mac_gt of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_gt: The gateway_mac_gt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_gt: str
-        """
-
-        self._gateway_mac_gt = gateway_mac_gt
-
-    @property
-    def gateway_mac_gte(self):
-        """Gets the gateway_mac_gte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_gte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_gte
-
-    @gateway_mac_gte.setter
-    def gateway_mac_gte(self, gateway_mac_gte):
-        """Sets the gateway_mac_gte of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_gte: The gateway_mac_gte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_gte: str
-        """
-
-        self._gateway_mac_gte = gateway_mac_gte
-
-    @property
-    def gateway_mac_in(self):
-        """Gets the gateway_mac_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._gateway_mac_in
-
-    @gateway_mac_in.setter
-    def gateway_mac_in(self, gateway_mac_in):
-        """Sets the gateway_mac_in of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_in: The gateway_mac_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_in: list[str]
-        """
-
-        self._gateway_mac_in = gateway_mac_in
-
-    @property
-    def gateway_mac_lt(self):
-        """Gets the gateway_mac_lt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_lt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_lt
-
-    @gateway_mac_lt.setter
-    def gateway_mac_lt(self, gateway_mac_lt):
-        """Sets the gateway_mac_lt of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_lt: The gateway_mac_lt of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_lt: str
-        """
-
-        self._gateway_mac_lt = gateway_mac_lt
-
-    @property
-    def gateway_mac_lte(self):
-        """Gets the gateway_mac_lte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_lte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_lte
-
-    @gateway_mac_lte.setter
-    def gateway_mac_lte(self, gateway_mac_lte):
-        """Sets the gateway_mac_lte of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_lte: The gateway_mac_lte of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_lte: str
-        """
-
-        self._gateway_mac_lte = gateway_mac_lte
-
-    @property
-    def gateway_mac_not(self):
-        """Gets the gateway_mac_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_not
-
-    @gateway_mac_not.setter
-    def gateway_mac_not(self, gateway_mac_not):
-        """Sets the gateway_mac_not of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_not: The gateway_mac_not of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_not: str
-        """
-
-        self._gateway_mac_not = gateway_mac_not
-
-    @property
-    def gateway_mac_not_contains(self):
-        """Gets the gateway_mac_not_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_not_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_not_contains
-
-    @gateway_mac_not_contains.setter
-    def gateway_mac_not_contains(self, gateway_mac_not_contains):
-        """Sets the gateway_mac_not_contains of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_not_contains: The gateway_mac_not_contains of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_not_contains: str
-        """
-
-        self._gateway_mac_not_contains = gateway_mac_not_contains
-
-    @property
-    def gateway_mac_not_ends_with(self):
-        """Gets the gateway_mac_not_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_not_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_not_ends_with
-
-    @gateway_mac_not_ends_with.setter
-    def gateway_mac_not_ends_with(self, gateway_mac_not_ends_with):
-        """Sets the gateway_mac_not_ends_with of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_not_ends_with: The gateway_mac_not_ends_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_not_ends_with: str
-        """
-
-        self._gateway_mac_not_ends_with = gateway_mac_not_ends_with
-
-    @property
-    def gateway_mac_not_in(self):
-        """Gets the gateway_mac_not_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_not_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._gateway_mac_not_in
-
-    @gateway_mac_not_in.setter
-    def gateway_mac_not_in(self, gateway_mac_not_in):
-        """Sets the gateway_mac_not_in of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_not_in: The gateway_mac_not_in of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_not_in: list[str]
-        """
-
-        self._gateway_mac_not_in = gateway_mac_not_in
-
-    @property
-    def gateway_mac_not_starts_with(self):
-        """Gets the gateway_mac_not_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_not_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_not_starts_with
-
-    @gateway_mac_not_starts_with.setter
-    def gateway_mac_not_starts_with(self, gateway_mac_not_starts_with):
-        """Sets the gateway_mac_not_starts_with of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_not_starts_with: The gateway_mac_not_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_not_starts_with: str
-        """
-
-        self._gateway_mac_not_starts_with = gateway_mac_not_starts_with
-
-    @property
-    def gateway_mac_starts_with(self):
-        """Gets the gateway_mac_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The gateway_mac_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_mac_starts_with
-
-    @gateway_mac_starts_with.setter
-    def gateway_mac_starts_with(self, gateway_mac_starts_with):
-        """Sets the gateway_mac_starts_with of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param gateway_mac_starts_with: The gateway_mac_starts_with of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type gateway_mac_starts_with: str
-        """
-
-        self._gateway_mac_starts_with = gateway_mac_starts_with
 
     @property
     def gateway_not(self):
@@ -2211,27 +1795,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def layer2_gateway(self):
-        """Gets the layer2_gateway of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The layer2_gateway of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudLayer2GatewayWhereInput
-        """
-        return self._layer2_gateway
-
-    @layer2_gateway.setter
-    def layer2_gateway(self, layer2_gateway):
-        """Sets the layer2_gateway of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param layer2_gateway: The layer2_gateway of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type layer2_gateway: VirtualPrivateCloudLayer2GatewayWhereInput
-        """
-
-        self._layer2_gateway = layer2_gateway
 
     @property
     def local_id(self):
@@ -3198,69 +2761,6 @@ class VirtualPrivateCloudSubnetWhereInput(object):
         """
 
         self._vpc = vpc
-
-    @property
-    def vpc_nics_every(self):
-        """Gets the vpc_nics_every of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The vpc_nics_every of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudNicWhereInput
-        """
-        return self._vpc_nics_every
-
-    @vpc_nics_every.setter
-    def vpc_nics_every(self, vpc_nics_every):
-        """Sets the vpc_nics_every of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param vpc_nics_every: The vpc_nics_every of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type vpc_nics_every: VirtualPrivateCloudNicWhereInput
-        """
-
-        self._vpc_nics_every = vpc_nics_every
-
-    @property
-    def vpc_nics_none(self):
-        """Gets the vpc_nics_none of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The vpc_nics_none of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudNicWhereInput
-        """
-        return self._vpc_nics_none
-
-    @vpc_nics_none.setter
-    def vpc_nics_none(self, vpc_nics_none):
-        """Sets the vpc_nics_none of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param vpc_nics_none: The vpc_nics_none of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type vpc_nics_none: VirtualPrivateCloudNicWhereInput
-        """
-
-        self._vpc_nics_none = vpc_nics_none
-
-    @property
-    def vpc_nics_some(self):
-        """Gets the vpc_nics_some of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-
-
-        :return: The vpc_nics_some of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudNicWhereInput
-        """
-        return self._vpc_nics_some
-
-    @vpc_nics_some.setter
-    def vpc_nics_some(self, vpc_nics_some):
-        """Sets the vpc_nics_some of this VirtualPrivateCloudSubnetWhereInput.
-
-
-        :param vpc_nics_some: The vpc_nics_some of this VirtualPrivateCloudSubnetWhereInput.  # noqa: E501
-        :type vpc_nics_some: VirtualPrivateCloudNicWhereInput
-        """
-
-        self._vpc_nics_some = vpc_nics_some
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

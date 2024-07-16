@@ -75,8 +75,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         'local_id_not_in': 'list[str]',
         'local_id_not_starts_with': 'str',
         'local_id_starts_with': 'str',
-        'vpc': 'VirtualPrivateCloudWhereInput',
-        'vpc_nic': 'VirtualPrivateCloudNicWhereInput'
+        'vpc': 'VirtualPrivateCloudWhereInput'
     }
 
     attribute_map = {
@@ -130,8 +129,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         'local_id_not_in': 'local_id_not_in',
         'local_id_not_starts_with': 'local_id_not_starts_with',
         'local_id_starts_with': 'local_id_starts_with',
-        'vpc': 'vpc',
-        'vpc_nic': 'vpc_nic'
+        'vpc': 'vpc'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -189,7 +187,6 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         self._local_id_not_starts_with = None
         self._local_id_starts_with = None
         self._vpc = None
-        self._vpc_nic = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -243,7 +240,6 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
         self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
         self.vpc = kwargs.get("vpc", None)
-        self.vpc_nic = kwargs.get("vpc_nic", None)
 
     @property
     def _and(self):
@@ -1315,27 +1311,6 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         """
 
         self._vpc = vpc
-
-    @property
-    def vpc_nic(self):
-        """Gets the vpc_nic of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
-
-
-        :return: The vpc_nic of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudNicWhereInput
-        """
-        return self._vpc_nic
-
-    @vpc_nic.setter
-    def vpc_nic(self, vpc_nic):
-        """Sets the vpc_nic of this VirtualPrivateCloudFloatingIpWhereInput.
-
-
-        :param vpc_nic: The vpc_nic of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
-        :type vpc_nic: VirtualPrivateCloudNicWhereInput
-        """
-
-        self._vpc_nic = vpc_nic
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

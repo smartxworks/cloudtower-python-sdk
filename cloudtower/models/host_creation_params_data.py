@@ -25,6 +25,8 @@ class HostCreationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'vdses': 'list[HostVdsConfig]',
+        'zbs_spec': 'ZbsSpec',
         'ifaces': 'list[HostBatchCreateIfaceInput]',
         'disks': 'list[HostBatchCreateDiskInput]',
         'platform_password': 'str',
@@ -37,6 +39,8 @@ class HostCreationParamsData(object):
     }
 
     attribute_map = {
+        'vdses': 'vdses',
+        'zbs_spec': 'zbs_spec',
         'ifaces': 'ifaces',
         'disks': 'disks',
         'platform_password': 'platform_password',
@@ -52,6 +56,8 @@ class HostCreationParamsData(object):
         """HostCreationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._vdses = None
+        self._zbs_spec = None
         self._ifaces = None
         self._disks = None
         self._platform_password = None
@@ -63,6 +69,10 @@ class HostCreationParamsData(object):
         self._host_ip = None
         self.discriminator = None
 
+        if "vdses" in kwargs:
+            self.vdses = kwargs["vdses"]
+        if "zbs_spec" in kwargs:
+            self.zbs_spec = kwargs["zbs_spec"]
         if "ifaces" in kwargs:
             self.ifaces = kwargs["ifaces"]
         if "disks" in kwargs:
@@ -81,6 +91,48 @@ class HostCreationParamsData(object):
             self.host_uuid = kwargs["host_uuid"]
         if "host_ip" in kwargs:
             self.host_ip = kwargs["host_ip"]
+
+    @property
+    def vdses(self):
+        """Gets the vdses of this HostCreationParamsData.  # noqa: E501
+
+
+        :return: The vdses of this HostCreationParamsData.  # noqa: E501
+        :rtype: list[HostVdsConfig]
+        """
+        return self._vdses
+
+    @vdses.setter
+    def vdses(self, vdses):
+        """Sets the vdses of this HostCreationParamsData.
+
+
+        :param vdses: The vdses of this HostCreationParamsData.  # noqa: E501
+        :type vdses: list[HostVdsConfig]
+        """
+
+        self._vdses = vdses
+
+    @property
+    def zbs_spec(self):
+        """Gets the zbs_spec of this HostCreationParamsData.  # noqa: E501
+
+
+        :return: The zbs_spec of this HostCreationParamsData.  # noqa: E501
+        :rtype: ZbsSpec
+        """
+        return self._zbs_spec
+
+    @zbs_spec.setter
+    def zbs_spec(self, zbs_spec):
+        """Sets the zbs_spec of this HostCreationParamsData.
+
+
+        :param zbs_spec: The zbs_spec of this HostCreationParamsData.  # noqa: E501
+        :type zbs_spec: ZbsSpec
+        """
+
+        self._zbs_spec = zbs_spec
 
     @property
     def ifaces(self):

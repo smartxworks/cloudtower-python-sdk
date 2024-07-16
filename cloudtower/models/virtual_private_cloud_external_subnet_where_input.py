@@ -60,8 +60,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
-        'exclusive': 'bool',
-        'exclusive_not': 'bool',
         'floating_ip_cidr': 'str',
         'floating_ip_cidr_contains': 'str',
         'floating_ip_cidr_ends_with': 'str',
@@ -107,20 +105,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'load_balancer_gateway_cidr': 'str',
-        'load_balancer_gateway_cidr_contains': 'str',
-        'load_balancer_gateway_cidr_ends_with': 'str',
-        'load_balancer_gateway_cidr_gt': 'str',
-        'load_balancer_gateway_cidr_gte': 'str',
-        'load_balancer_gateway_cidr_in': 'list[str]',
-        'load_balancer_gateway_cidr_lt': 'str',
-        'load_balancer_gateway_cidr_lte': 'str',
-        'load_balancer_gateway_cidr_not': 'str',
-        'load_balancer_gateway_cidr_not_contains': 'str',
-        'load_balancer_gateway_cidr_not_ends_with': 'str',
-        'load_balancer_gateway_cidr_not_in': 'list[str]',
-        'load_balancer_gateway_cidr_not_starts_with': 'str',
-        'load_balancer_gateway_cidr_starts_with': 'str',
         'local_id': 'str',
         'local_id_contains': 'str',
         'local_id_ends_with': 'str',
@@ -184,8 +168,7 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'router_gateways_none': 'VirtualPrivateCloudRouterGatewayWhereInput',
         'router_gateways_some': 'VirtualPrivateCloudRouterGatewayWhereInput',
         'vlan': 'VlanWhereInput',
-        'vpc': 'VirtualPrivateCloudWhereInput',
-        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
+        'vpc': 'VirtualPrivateCloudWhereInput'
     }
 
     attribute_map = {
@@ -224,8 +207,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
-        'exclusive': 'exclusive',
-        'exclusive_not': 'exclusive_not',
         'floating_ip_cidr': 'floating_ip_cidr',
         'floating_ip_cidr_contains': 'floating_ip_cidr_contains',
         'floating_ip_cidr_ends_with': 'floating_ip_cidr_ends_with',
@@ -271,20 +252,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'load_balancer_gateway_cidr': 'load_balancer_gateway_cidr',
-        'load_balancer_gateway_cidr_contains': 'load_balancer_gateway_cidr_contains',
-        'load_balancer_gateway_cidr_ends_with': 'load_balancer_gateway_cidr_ends_with',
-        'load_balancer_gateway_cidr_gt': 'load_balancer_gateway_cidr_gt',
-        'load_balancer_gateway_cidr_gte': 'load_balancer_gateway_cidr_gte',
-        'load_balancer_gateway_cidr_in': 'load_balancer_gateway_cidr_in',
-        'load_balancer_gateway_cidr_lt': 'load_balancer_gateway_cidr_lt',
-        'load_balancer_gateway_cidr_lte': 'load_balancer_gateway_cidr_lte',
-        'load_balancer_gateway_cidr_not': 'load_balancer_gateway_cidr_not',
-        'load_balancer_gateway_cidr_not_contains': 'load_balancer_gateway_cidr_not_contains',
-        'load_balancer_gateway_cidr_not_ends_with': 'load_balancer_gateway_cidr_not_ends_with',
-        'load_balancer_gateway_cidr_not_in': 'load_balancer_gateway_cidr_not_in',
-        'load_balancer_gateway_cidr_not_starts_with': 'load_balancer_gateway_cidr_not_starts_with',
-        'load_balancer_gateway_cidr_starts_with': 'load_balancer_gateway_cidr_starts_with',
         'local_id': 'local_id',
         'local_id_contains': 'local_id_contains',
         'local_id_ends_with': 'local_id_ends_with',
@@ -348,8 +315,7 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'router_gateways_none': 'router_gateways_none',
         'router_gateways_some': 'router_gateways_some',
         'vlan': 'vlan',
-        'vpc': 'vpc',
-        'vpc_service': 'vpc_service'
+        'vpc': 'vpc'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -391,8 +357,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
-        self._exclusive = None
-        self._exclusive_not = None
         self._floating_ip_cidr = None
         self._floating_ip_cidr_contains = None
         self._floating_ip_cidr_ends_with = None
@@ -438,20 +402,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._load_balancer_gateway_cidr = None
-        self._load_balancer_gateway_cidr_contains = None
-        self._load_balancer_gateway_cidr_ends_with = None
-        self._load_balancer_gateway_cidr_gt = None
-        self._load_balancer_gateway_cidr_gte = None
-        self._load_balancer_gateway_cidr_in = None
-        self._load_balancer_gateway_cidr_lt = None
-        self._load_balancer_gateway_cidr_lte = None
-        self._load_balancer_gateway_cidr_not = None
-        self._load_balancer_gateway_cidr_not_contains = None
-        self._load_balancer_gateway_cidr_not_ends_with = None
-        self._load_balancer_gateway_cidr_not_in = None
-        self._load_balancer_gateway_cidr_not_starts_with = None
-        self._load_balancer_gateway_cidr_starts_with = None
         self._local_id = None
         self._local_id_contains = None
         self._local_id_ends_with = None
@@ -516,7 +466,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self._router_gateways_some = None
         self._vlan = None
         self._vpc = None
-        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -554,8 +503,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
-        self.exclusive = kwargs.get("exclusive", None)
-        self.exclusive_not = kwargs.get("exclusive_not", None)
         self.floating_ip_cidr = kwargs.get("floating_ip_cidr", None)
         self.floating_ip_cidr_contains = kwargs.get("floating_ip_cidr_contains", None)
         self.floating_ip_cidr_ends_with = kwargs.get("floating_ip_cidr_ends_with", None)
@@ -601,20 +548,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.load_balancer_gateway_cidr = kwargs.get("load_balancer_gateway_cidr", None)
-        self.load_balancer_gateway_cidr_contains = kwargs.get("load_balancer_gateway_cidr_contains", None)
-        self.load_balancer_gateway_cidr_ends_with = kwargs.get("load_balancer_gateway_cidr_ends_with", None)
-        self.load_balancer_gateway_cidr_gt = kwargs.get("load_balancer_gateway_cidr_gt", None)
-        self.load_balancer_gateway_cidr_gte = kwargs.get("load_balancer_gateway_cidr_gte", None)
-        self.load_balancer_gateway_cidr_in = kwargs.get("load_balancer_gateway_cidr_in", None)
-        self.load_balancer_gateway_cidr_lt = kwargs.get("load_balancer_gateway_cidr_lt", None)
-        self.load_balancer_gateway_cidr_lte = kwargs.get("load_balancer_gateway_cidr_lte", None)
-        self.load_balancer_gateway_cidr_not = kwargs.get("load_balancer_gateway_cidr_not", None)
-        self.load_balancer_gateway_cidr_not_contains = kwargs.get("load_balancer_gateway_cidr_not_contains", None)
-        self.load_balancer_gateway_cidr_not_ends_with = kwargs.get("load_balancer_gateway_cidr_not_ends_with", None)
-        self.load_balancer_gateway_cidr_not_in = kwargs.get("load_balancer_gateway_cidr_not_in", None)
-        self.load_balancer_gateway_cidr_not_starts_with = kwargs.get("load_balancer_gateway_cidr_not_starts_with", None)
-        self.load_balancer_gateway_cidr_starts_with = kwargs.get("load_balancer_gateway_cidr_starts_with", None)
         self.local_id = kwargs.get("local_id", None)
         self.local_id_contains = kwargs.get("local_id_contains", None)
         self.local_id_ends_with = kwargs.get("local_id_ends_with", None)
@@ -679,7 +612,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self.router_gateways_some = kwargs.get("router_gateways_some", None)
         self.vlan = kwargs.get("vlan", None)
         self.vpc = kwargs.get("vpc", None)
-        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -1415,48 +1347,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         """
 
         self._entity_async_status_not_in = entity_async_status_not_in
-
-    @property
-    def exclusive(self):
-        """Gets the exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclusive
-
-    @exclusive.setter
-    def exclusive(self, exclusive):
-        """Sets the exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param exclusive: The exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type exclusive: bool
-        """
-
-        self._exclusive = exclusive
-
-    @property
-    def exclusive_not(self):
-        """Gets the exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclusive_not
-
-    @exclusive_not.setter
-    def exclusive_not(self, exclusive_not):
-        """Sets the exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param exclusive_not: The exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type exclusive_not: bool
-        """
-
-        self._exclusive_not = exclusive_not
 
     @property
     def floating_ip_cidr(self):
@@ -2402,300 +2292,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def load_balancer_gateway_cidr(self):
-        """Gets the load_balancer_gateway_cidr of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr
-
-    @load_balancer_gateway_cidr.setter
-    def load_balancer_gateway_cidr(self, load_balancer_gateway_cidr):
-        """Sets the load_balancer_gateway_cidr of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr: The load_balancer_gateway_cidr of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr: str
-        """
-
-        self._load_balancer_gateway_cidr = load_balancer_gateway_cidr
-
-    @property
-    def load_balancer_gateway_cidr_contains(self):
-        """Gets the load_balancer_gateway_cidr_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_contains
-
-    @load_balancer_gateway_cidr_contains.setter
-    def load_balancer_gateway_cidr_contains(self, load_balancer_gateway_cidr_contains):
-        """Sets the load_balancer_gateway_cidr_contains of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_contains: The load_balancer_gateway_cidr_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_contains: str
-        """
-
-        self._load_balancer_gateway_cidr_contains = load_balancer_gateway_cidr_contains
-
-    @property
-    def load_balancer_gateway_cidr_ends_with(self):
-        """Gets the load_balancer_gateway_cidr_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_ends_with
-
-    @load_balancer_gateway_cidr_ends_with.setter
-    def load_balancer_gateway_cidr_ends_with(self, load_balancer_gateway_cidr_ends_with):
-        """Sets the load_balancer_gateway_cidr_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_ends_with: The load_balancer_gateway_cidr_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_ends_with: str
-        """
-
-        self._load_balancer_gateway_cidr_ends_with = load_balancer_gateway_cidr_ends_with
-
-    @property
-    def load_balancer_gateway_cidr_gt(self):
-        """Gets the load_balancer_gateway_cidr_gt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_gt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_gt
-
-    @load_balancer_gateway_cidr_gt.setter
-    def load_balancer_gateway_cidr_gt(self, load_balancer_gateway_cidr_gt):
-        """Sets the load_balancer_gateway_cidr_gt of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_gt: The load_balancer_gateway_cidr_gt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_gt: str
-        """
-
-        self._load_balancer_gateway_cidr_gt = load_balancer_gateway_cidr_gt
-
-    @property
-    def load_balancer_gateway_cidr_gte(self):
-        """Gets the load_balancer_gateway_cidr_gte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_gte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_gte
-
-    @load_balancer_gateway_cidr_gte.setter
-    def load_balancer_gateway_cidr_gte(self, load_balancer_gateway_cidr_gte):
-        """Sets the load_balancer_gateway_cidr_gte of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_gte: The load_balancer_gateway_cidr_gte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_gte: str
-        """
-
-        self._load_balancer_gateway_cidr_gte = load_balancer_gateway_cidr_gte
-
-    @property
-    def load_balancer_gateway_cidr_in(self):
-        """Gets the load_balancer_gateway_cidr_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._load_balancer_gateway_cidr_in
-
-    @load_balancer_gateway_cidr_in.setter
-    def load_balancer_gateway_cidr_in(self, load_balancer_gateway_cidr_in):
-        """Sets the load_balancer_gateway_cidr_in of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_in: The load_balancer_gateway_cidr_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_in: list[str]
-        """
-
-        self._load_balancer_gateway_cidr_in = load_balancer_gateway_cidr_in
-
-    @property
-    def load_balancer_gateway_cidr_lt(self):
-        """Gets the load_balancer_gateway_cidr_lt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_lt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_lt
-
-    @load_balancer_gateway_cidr_lt.setter
-    def load_balancer_gateway_cidr_lt(self, load_balancer_gateway_cidr_lt):
-        """Sets the load_balancer_gateway_cidr_lt of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_lt: The load_balancer_gateway_cidr_lt of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_lt: str
-        """
-
-        self._load_balancer_gateway_cidr_lt = load_balancer_gateway_cidr_lt
-
-    @property
-    def load_balancer_gateway_cidr_lte(self):
-        """Gets the load_balancer_gateway_cidr_lte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_lte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_lte
-
-    @load_balancer_gateway_cidr_lte.setter
-    def load_balancer_gateway_cidr_lte(self, load_balancer_gateway_cidr_lte):
-        """Sets the load_balancer_gateway_cidr_lte of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_lte: The load_balancer_gateway_cidr_lte of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_lte: str
-        """
-
-        self._load_balancer_gateway_cidr_lte = load_balancer_gateway_cidr_lte
-
-    @property
-    def load_balancer_gateway_cidr_not(self):
-        """Gets the load_balancer_gateway_cidr_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_not
-
-    @load_balancer_gateway_cidr_not.setter
-    def load_balancer_gateway_cidr_not(self, load_balancer_gateway_cidr_not):
-        """Sets the load_balancer_gateway_cidr_not of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_not: The load_balancer_gateway_cidr_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_not: str
-        """
-
-        self._load_balancer_gateway_cidr_not = load_balancer_gateway_cidr_not
-
-    @property
-    def load_balancer_gateway_cidr_not_contains(self):
-        """Gets the load_balancer_gateway_cidr_not_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_not_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_not_contains
-
-    @load_balancer_gateway_cidr_not_contains.setter
-    def load_balancer_gateway_cidr_not_contains(self, load_balancer_gateway_cidr_not_contains):
-        """Sets the load_balancer_gateway_cidr_not_contains of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_not_contains: The load_balancer_gateway_cidr_not_contains of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_not_contains: str
-        """
-
-        self._load_balancer_gateway_cidr_not_contains = load_balancer_gateway_cidr_not_contains
-
-    @property
-    def load_balancer_gateway_cidr_not_ends_with(self):
-        """Gets the load_balancer_gateway_cidr_not_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_not_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_not_ends_with
-
-    @load_balancer_gateway_cidr_not_ends_with.setter
-    def load_balancer_gateway_cidr_not_ends_with(self, load_balancer_gateway_cidr_not_ends_with):
-        """Sets the load_balancer_gateway_cidr_not_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_not_ends_with: The load_balancer_gateway_cidr_not_ends_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_not_ends_with: str
-        """
-
-        self._load_balancer_gateway_cidr_not_ends_with = load_balancer_gateway_cidr_not_ends_with
-
-    @property
-    def load_balancer_gateway_cidr_not_in(self):
-        """Gets the load_balancer_gateway_cidr_not_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_not_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._load_balancer_gateway_cidr_not_in
-
-    @load_balancer_gateway_cidr_not_in.setter
-    def load_balancer_gateway_cidr_not_in(self, load_balancer_gateway_cidr_not_in):
-        """Sets the load_balancer_gateway_cidr_not_in of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_not_in: The load_balancer_gateway_cidr_not_in of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_not_in: list[str]
-        """
-
-        self._load_balancer_gateway_cidr_not_in = load_balancer_gateway_cidr_not_in
-
-    @property
-    def load_balancer_gateway_cidr_not_starts_with(self):
-        """Gets the load_balancer_gateway_cidr_not_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_not_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_not_starts_with
-
-    @load_balancer_gateway_cidr_not_starts_with.setter
-    def load_balancer_gateway_cidr_not_starts_with(self, load_balancer_gateway_cidr_not_starts_with):
-        """Sets the load_balancer_gateway_cidr_not_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_not_starts_with: The load_balancer_gateway_cidr_not_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_not_starts_with: str
-        """
-
-        self._load_balancer_gateway_cidr_not_starts_with = load_balancer_gateway_cidr_not_starts_with
-
-    @property
-    def load_balancer_gateway_cidr_starts_with(self):
-        """Gets the load_balancer_gateway_cidr_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The load_balancer_gateway_cidr_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._load_balancer_gateway_cidr_starts_with
-
-    @load_balancer_gateway_cidr_starts_with.setter
-    def load_balancer_gateway_cidr_starts_with(self, load_balancer_gateway_cidr_starts_with):
-        """Sets the load_balancer_gateway_cidr_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param load_balancer_gateway_cidr_starts_with: The load_balancer_gateway_cidr_starts_with of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type load_balancer_gateway_cidr_starts_with: str
-        """
-
-        self._load_balancer_gateway_cidr_starts_with = load_balancer_gateway_cidr_starts_with
 
     @property
     def local_id(self):
@@ -4040,27 +3636,6 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         """
 
         self._vpc = vpc
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudServiceWhereInput
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudExternalSubnetWhereInput.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
-        :type vpc_service: VirtualPrivateCloudServiceWhereInput
-        """
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
