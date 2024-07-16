@@ -101,6 +101,7 @@ cloudtower/api/zone_topo_api.py
 cloudtower/api_client.py
 cloudtower/configuration.py
 cloudtower/exceptions.py
+cloudtower/image_utils.py
 cloudtower/models/__init__.py
 cloudtower/models/abort_migrate_vm_across_cluster_params.py
 cloudtower/models/access_mode.py
