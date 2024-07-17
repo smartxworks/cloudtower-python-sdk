@@ -74,6 +74,9 @@ class ContentLibraryImageWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'iscsi_luns_every': 'IscsiLunWhereInput',
+        'iscsi_luns_none': 'IscsiLunWhereInput',
+        'iscsi_luns_some': 'IscsiLunWhereInput',
         'labels_every': 'LabelWhereInput',
         'labels_none': 'LabelWhereInput',
         'labels_some': 'LabelWhereInput',
@@ -174,6 +177,9 @@ class ContentLibraryImageWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'iscsi_luns_every': 'iscsi_luns_every',
+        'iscsi_luns_none': 'iscsi_luns_none',
+        'iscsi_luns_some': 'iscsi_luns_some',
         'labels_every': 'labels_every',
         'labels_none': 'labels_none',
         'labels_some': 'labels_some',
@@ -277,6 +283,9 @@ class ContentLibraryImageWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._iscsi_luns_every = None
+        self._iscsi_luns_none = None
+        self._iscsi_luns_some = None
         self._labels_every = None
         self._labels_none = None
         self._labels_some = None
@@ -376,6 +385,9 @@ class ContentLibraryImageWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.iscsi_luns_every = kwargs.get("iscsi_luns_every", None)
+        self.iscsi_luns_none = kwargs.get("iscsi_luns_none", None)
+        self.iscsi_luns_some = kwargs.get("iscsi_luns_some", None)
         self.labels_every = kwargs.get("labels_every", None)
         self.labels_none = kwargs.get("labels_none", None)
         self.labels_some = kwargs.get("labels_some", None)
@@ -1453,6 +1465,69 @@ class ContentLibraryImageWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def iscsi_luns_every(self):
+        """Gets the iscsi_luns_every of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_every of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: IscsiLunWhereInput
+        """
+        return self._iscsi_luns_every
+
+    @iscsi_luns_every.setter
+    def iscsi_luns_every(self, iscsi_luns_every):
+        """Sets the iscsi_luns_every of this ContentLibraryImageWhereInput.
+
+
+        :param iscsi_luns_every: The iscsi_luns_every of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type iscsi_luns_every: IscsiLunWhereInput
+        """
+
+        self._iscsi_luns_every = iscsi_luns_every
+
+    @property
+    def iscsi_luns_none(self):
+        """Gets the iscsi_luns_none of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_none of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: IscsiLunWhereInput
+        """
+        return self._iscsi_luns_none
+
+    @iscsi_luns_none.setter
+    def iscsi_luns_none(self, iscsi_luns_none):
+        """Sets the iscsi_luns_none of this ContentLibraryImageWhereInput.
+
+
+        :param iscsi_luns_none: The iscsi_luns_none of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type iscsi_luns_none: IscsiLunWhereInput
+        """
+
+        self._iscsi_luns_none = iscsi_luns_none
+
+    @property
+    def iscsi_luns_some(self):
+        """Gets the iscsi_luns_some of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_some of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: IscsiLunWhereInput
+        """
+        return self._iscsi_luns_some
+
+    @iscsi_luns_some.setter
+    def iscsi_luns_some(self, iscsi_luns_some):
+        """Sets the iscsi_luns_some of this ContentLibraryImageWhereInput.
+
+
+        :param iscsi_luns_some: The iscsi_luns_some of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type iscsi_luns_some: IscsiLunWhereInput
+        """
+
+        self._iscsi_luns_some = iscsi_luns_some
 
     @property
     def labels_every(self):

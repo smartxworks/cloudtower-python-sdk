@@ -78,9 +78,20 @@ cloudtower/api/usb_device_api.py
 cloudtower/api/user_api.py
 cloudtower/api/user_audit_log_api.py
 cloudtower/api/user_role_next_api.py
+cloudtower/api/v2_everoute_license_api.py
 cloudtower/api/vcenter_account_api.py
 cloudtower/api/vds_api.py
 cloudtower/api/view_api.py
+cloudtower/api/virtual_private_cloud_api.py
+cloudtower/api/virtual_private_cloud_cluster_binding_api.py
+cloudtower/api/virtual_private_cloud_external_subnet_api.py
+cloudtower/api/virtual_private_cloud_floating_ip_api.py
+cloudtower/api/virtual_private_cloud_nat_gateway_api.py
+cloudtower/api/virtual_private_cloud_route_table_api.py
+cloudtower/api/virtual_private_cloud_router_gateway_api.py
+cloudtower/api/virtual_private_cloud_security_group_api.py
+cloudtower/api/virtual_private_cloud_security_policy_api.py
+cloudtower/api/virtual_private_cloud_subnet_api.py
 cloudtower/api/vlan_api.py
 cloudtower/api/vm_api.py
 cloudtower/api/vm_disk_api.py
@@ -1259,6 +1270,7 @@ cloudtower/models/update_vcenter_account_params.py
 cloudtower/models/update_vcenter_account_params_data.py
 cloudtower/models/update_vm_volume_params.py
 cloudtower/models/update_vm_volume_params_data.py
+cloudtower/models/update_vpc_nic_payloads.py
 cloudtower/models/update_vsphere_esxi_account_params.py
 cloudtower/models/update_vsphere_esxi_account_params_data.py
 cloudtower/models/upgrade_cloud_tower_application_params.py
@@ -1566,6 +1578,8 @@ cloudtower/models/vm_update_owner_params.py
 cloudtower/models/vm_update_owner_params_data.py
 cloudtower/models/vm_update_params.py
 cloudtower/models/vm_update_params_data.py
+cloudtower/models/vm_update_vpc_nic_params.py
+cloudtower/models/vm_update_vpc_nic_params_data.py
 cloudtower/models/vm_usage.py
 cloudtower/models/vm_video_type.py
 cloudtower/models/vm_vlan_creation_params.py
@@ -1597,6 +1611,7 @@ cloudtower/models/vm_where_input.py
 cloudtower/models/vm_where_unique_input.py
 cloudtower/models/vmdk_cdrom_modify.py
 cloudtower/models/vmdk_disk_modify.py
+cloudtower/models/vpc_nic_params.py
 cloudtower/models/vsphere_esxi_account.py
 cloudtower/models/vsphere_esxi_account_connection.py
 cloudtower/models/vsphere_esxi_account_order_by_input.py

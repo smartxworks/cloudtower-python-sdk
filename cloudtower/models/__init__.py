@@ -1160,6 +1160,7 @@ from cloudtower.models.update_vcenter_account_params import UpdateVcenterAccount
 from cloudtower.models.update_vcenter_account_params_data import UpdateVcenterAccountParamsData
 from cloudtower.models.update_vm_volume_params import UpdateVmVolumeParams
 from cloudtower.models.update_vm_volume_params_data import UpdateVmVolumeParamsData
+from cloudtower.models.update_vpc_nic_payloads import UpdateVpcNicPayloads
 from cloudtower.models.update_vsphere_esxi_account_params import UpdateVsphereEsxiAccountParams
 from cloudtower.models.update_vsphere_esxi_account_params_data import UpdateVsphereEsxiAccountParamsData
 from cloudtower.models.upgrade_cloud_tower_application_params import UpgradeCloudTowerApplicationParams
@@ -1467,6 +1468,8 @@ from cloudtower.models.vm_update_owner_params import VmUpdateOwnerParams
 from cloudtower.models.vm_update_owner_params_data import VmUpdateOwnerParamsData
 from cloudtower.models.vm_update_params import VmUpdateParams
 from cloudtower.models.vm_update_params_data import VmUpdateParamsData
+from cloudtower.models.vm_update_vpc_nic_params import VmUpdateVpcNicParams
+from cloudtower.models.vm_update_vpc_nic_params_data import VmUpdateVpcNicParamsData
 from cloudtower.models.vm_usage import VmUsage
 from cloudtower.models.vm_video_type import VmVideoType
 from cloudtower.models.vm_vlan_creation_params import VmVlanCreationParams
@@ -1498,6 +1501,7 @@ from cloudtower.models.vm_where_input import VmWhereInput
 from cloudtower.models.vm_where_unique_input import VmWhereUniqueInput
 from cloudtower.models.vmdk_cdrom_modify import VmdkCdromModify
 from cloudtower.models.vmdk_disk_modify import VmdkDiskModify
+from cloudtower.models.vpc_nic_params import VpcNicParams
 from cloudtower.models.vsphere_esxi_account import VsphereEsxiAccount
 from cloudtower.models.vsphere_esxi_account_connection import VsphereEsxiAccountConnection
 from cloudtower.models.vsphere_esxi_account_order_by_input import VsphereEsxiAccountOrderByInput
