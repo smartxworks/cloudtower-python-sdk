@@ -32,6 +32,7 @@ class ContentLibraryImage(object):
         'elf_images': 'list[NestedElfImage]',
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
+        'iscsi_luns': 'list[NestedIscsiLun]',
         'labels': 'list[NestedLabel]',
         'name': 'str',
         'path': 'str',
@@ -49,6 +50,7 @@ class ContentLibraryImage(object):
         'elf_images': 'elf_images',
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
+        'iscsi_luns': 'iscsi_luns',
         'labels': 'labels',
         'name': 'name',
         'path': 'path',
@@ -69,6 +71,7 @@ class ContentLibraryImage(object):
         self._elf_images = None
         self._entity_async_status = None
         self._id = None
+        self._iscsi_luns = None
         self._labels = None
         self._name = None
         self._path = None
@@ -89,6 +92,7 @@ class ContentLibraryImage(object):
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.iscsi_luns = kwargs.get("iscsi_luns", None)
         self.labels = kwargs.get("labels", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
@@ -254,6 +258,27 @@ class ContentLibraryImage(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def iscsi_luns(self):
+        """Gets the iscsi_luns of this ContentLibraryImage.  # noqa: E501
+
+
+        :return: The iscsi_luns of this ContentLibraryImage.  # noqa: E501
+        :rtype: list[NestedIscsiLun]
+        """
+        return self._iscsi_luns
+
+    @iscsi_luns.setter
+    def iscsi_luns(self, iscsi_luns):
+        """Sets the iscsi_luns of this ContentLibraryImage.
+
+
+        :param iscsi_luns: The iscsi_luns of this ContentLibraryImage.  # noqa: E501
+        :type iscsi_luns: list[NestedIscsiLun]
+        """
+
+        self._iscsi_luns = iscsi_luns
 
     @property
     def labels(self):

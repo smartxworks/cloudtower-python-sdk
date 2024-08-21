@@ -20,11 +20,13 @@ class DiskFunction(object):
     """
     allowed enum values
     """
+    BOOT = "BOOT"
     CACHE = "CACHE"
     DATA = "DATA"
     SMTX_SYSTEM = "SMTX_SYSTEM"
+    UNMOUNT = "UNMOUNT"
 
-    allowable_values = [CACHE, DATA, SMTX_SYSTEM]  # noqa: E501
+    allowable_values = [BOOT, CACHE, DATA, SMTX_SYSTEM, UNMOUNT]  # noqa: E501
 
     """
     Attributes:

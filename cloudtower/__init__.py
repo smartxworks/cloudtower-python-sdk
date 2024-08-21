@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.16.0"
+__version__ = "2.17.0"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -80,9 +80,20 @@ from cloudtower.api.usb_device_api import UsbDeviceApi
 from cloudtower.api.user_api import UserApi
 from cloudtower.api.user_audit_log_api import UserAuditLogApi
 from cloudtower.api.user_role_next_api import UserRoleNextApi
+from cloudtower.api.v2_everoute_license_api import V2EverouteLicenseApi
 from cloudtower.api.vcenter_account_api import VcenterAccountApi
 from cloudtower.api.vds_api import VdsApi
 from cloudtower.api.view_api import ViewApi
+from cloudtower.api.virtual_private_cloud_api import VirtualPrivateCloudApi
+from cloudtower.api.virtual_private_cloud_cluster_binding_api import VirtualPrivateCloudClusterBindingApi
+from cloudtower.api.virtual_private_cloud_external_subnet_api import VirtualPrivateCloudExternalSubnetApi
+from cloudtower.api.virtual_private_cloud_floating_ip_api import VirtualPrivateCloudFloatingIpApi
+from cloudtower.api.virtual_private_cloud_nat_gateway_api import VirtualPrivateCloudNatGatewayApi
+from cloudtower.api.virtual_private_cloud_route_table_api import VirtualPrivateCloudRouteTableApi
+from cloudtower.api.virtual_private_cloud_router_gateway_api import VirtualPrivateCloudRouterGatewayApi
+from cloudtower.api.virtual_private_cloud_security_group_api import VirtualPrivateCloudSecurityGroupApi
+from cloudtower.api.virtual_private_cloud_security_policy_api import VirtualPrivateCloudSecurityPolicyApi
+from cloudtower.api.virtual_private_cloud_subnet_api import VirtualPrivateCloudSubnetApi
 from cloudtower.api.vlan_api import VlanApi
 from cloudtower.api.vm_api import VmApi
 from cloudtower.api.vm_disk_api import VmDiskApi
@@ -993,6 +1004,7 @@ from cloudtower.models.nested_svt_image import NestedSvtImage
 from cloudtower.models.nested_tag_position import NestedTagPosition
 from cloudtower.models.nested_task import NestedTask
 from cloudtower.models.nested_template_nic import NestedTemplateNic
+from cloudtower.models.nested_template_vpc_nic import NestedTemplateVpcNic
 from cloudtower.models.nested_thresholds import NestedThresholds
 from cloudtower.models.nested_usb_device import NestedUsbDevice
 from cloudtower.models.nested_user import NestedUser
@@ -1267,6 +1279,7 @@ from cloudtower.models.update_vcenter_account_params import UpdateVcenterAccount
 from cloudtower.models.update_vcenter_account_params_data import UpdateVcenterAccountParamsData
 from cloudtower.models.update_vm_volume_params import UpdateVmVolumeParams
 from cloudtower.models.update_vm_volume_params_data import UpdateVmVolumeParamsData
+from cloudtower.models.update_vpc_nic_payloads import UpdateVpcNicPayloads
 from cloudtower.models.update_vsphere_esxi_account_params import UpdateVsphereEsxiAccountParams
 from cloudtower.models.update_vsphere_esxi_account_params_data import UpdateVsphereEsxiAccountParamsData
 from cloudtower.models.upgrade_cloud_tower_application_params import UpgradeCloudTowerApplicationParams
@@ -1574,6 +1587,8 @@ from cloudtower.models.vm_update_owner_params import VmUpdateOwnerParams
 from cloudtower.models.vm_update_owner_params_data import VmUpdateOwnerParamsData
 from cloudtower.models.vm_update_params import VmUpdateParams
 from cloudtower.models.vm_update_params_data import VmUpdateParamsData
+from cloudtower.models.vm_update_vpc_nic_params import VmUpdateVpcNicParams
+from cloudtower.models.vm_update_vpc_nic_params_data import VmUpdateVpcNicParamsData
 from cloudtower.models.vm_usage import VmUsage
 from cloudtower.models.vm_video_type import VmVideoType
 from cloudtower.models.vm_vlan_creation_params import VmVlanCreationParams
@@ -1605,6 +1620,7 @@ from cloudtower.models.vm_where_input import VmWhereInput
 from cloudtower.models.vm_where_unique_input import VmWhereUniqueInput
 from cloudtower.models.vmdk_cdrom_modify import VmdkCdromModify
 from cloudtower.models.vmdk_disk_modify import VmdkDiskModify
+from cloudtower.models.vpc_nic_params import VpcNicParams
 from cloudtower.models.vsphere_esxi_account import VsphereEsxiAccount
 from cloudtower.models.vsphere_esxi_account_connection import VsphereEsxiAccountConnection
 from cloudtower.models.vsphere_esxi_account_order_by_input import VsphereEsxiAccountOrderByInput

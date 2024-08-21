@@ -189,7 +189,7 @@ class VcenterAccountApi(object):
         :param get_vcenter_accounts_request_body: (required)
         :type get_vcenter_accounts_request_body: GetVcenterAccountsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VcenterAccountApi(object):
         :param get_vcenter_accounts_request_body: (required)
         :type get_vcenter_accounts_request_body: GetVcenterAccountsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class VcenterAccountApi(object):
         :param get_vcenter_accounts_connection_request_body: (required)
         :type get_vcenter_accounts_connection_request_body: GetVcenterAccountsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class VcenterAccountApi(object):
         :param get_vcenter_accounts_connection_request_body: (required)
         :type get_vcenter_accounts_connection_request_body: GetVcenterAccountsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

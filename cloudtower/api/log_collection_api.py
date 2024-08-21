@@ -144,7 +144,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['Authorization']  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskLogCollection]",
@@ -289,7 +289,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['Authorization']  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskDeleteLogCollection]",
@@ -434,7 +434,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = ['Authorization']  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskLogCollection]",
@@ -472,7 +472,7 @@ class LogCollectionApi(object):
         :param get_log_collections_request_body: (required)
         :type get_log_collections_request_body: GetLogCollectionsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -503,7 +503,7 @@ class LogCollectionApi(object):
         :param get_log_collections_request_body: (required)
         :type get_log_collections_request_body: GetLogCollectionsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -624,7 +624,7 @@ class LogCollectionApi(object):
         :param get_log_collections_connection_request_body: (required)
         :type get_log_collections_connection_request_body: GetLogCollectionsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -655,7 +655,7 @@ class LogCollectionApi(object):
         :param get_log_collections_connection_request_body: (required)
         :type get_log_collections_connection_request_body: GetLogCollectionsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

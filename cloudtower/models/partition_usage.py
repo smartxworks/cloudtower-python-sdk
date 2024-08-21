@@ -22,6 +22,7 @@ class PartitionUsage(object):
     """
     BOOT = "BOOT"
     CACHE = "CACHE"
+    EFI_SYSTEM = "EFI_SYSTEM"
     JOURNAL = "JOURNAL"
     METAD = "METAD"
     PARTITION = "PARTITION"
@@ -31,7 +32,7 @@ class PartitionUsage(object):
     UNPARTED = "UNPARTED"
     ZOOKEEPER = "ZOOKEEPER"
 
-    allowable_values = [BOOT, CACHE, JOURNAL, METAD, PARTITION, SWAP, SYSTEM, UNMOUNTED, UNPARTED, ZOOKEEPER]  # noqa: E501
+    allowable_values = [BOOT, CACHE, EFI_SYSTEM, JOURNAL, METAD, PARTITION, SWAP, SYSTEM, UNMOUNTED, UNPARTED, ZOOKEEPER]  # noqa: E501
 
     """
     Attributes:

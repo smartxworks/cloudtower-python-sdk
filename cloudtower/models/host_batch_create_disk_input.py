@@ -26,12 +26,14 @@ class HostBatchCreateDiskInput(object):
     """
     openapi_types = {
         'type': 'DiskType',
+        'size': 'float',
         'function': 'DiskFunction',
         'drive': 'str'
     }
 
     attribute_map = {
         'type': 'type',
+        'size': 'size',
         'function': 'function',
         'drive': 'drive'
     }
@@ -41,11 +43,13 @@ class HostBatchCreateDiskInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._type = None
+        self._size = None
         self._function = None
         self._drive = None
         self.discriminator = None
 
         self.type = kwargs.get("type", None)
+        self.size = kwargs.get("size", None)
         self.function = kwargs.get("function", None)
         if "drive" in kwargs:
             self.drive = kwargs["drive"]
@@ -70,6 +74,27 @@ class HostBatchCreateDiskInput(object):
         """
 
         self._type = type
+
+    @property
+    def size(self):
+        """Gets the size of this HostBatchCreateDiskInput.  # noqa: E501
+
+
+        :return: The size of this HostBatchCreateDiskInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """Sets the size of this HostBatchCreateDiskInput.
+
+
+        :param size: The size of this HostBatchCreateDiskInput.  # noqa: E501
+        :type size: float
+        """
+
+        self._size = size
 
     @property
     def function(self):

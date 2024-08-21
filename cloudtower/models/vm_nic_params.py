@@ -25,6 +25,8 @@ class VmNicParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'vpc_nic': 'VpcNicParams',
+        'type': 'VmNicType',
         'qos': 'VmNicQosOption',
         'subnet_mask': 'str',
         'gateway': 'str',
@@ -39,6 +41,8 @@ class VmNicParams(object):
     }
 
     attribute_map = {
+        'vpc_nic': 'vpc_nic',
+        'type': 'type',
         'qos': 'qos',
         'subnet_mask': 'subnet_mask',
         'gateway': 'gateway',
@@ -56,6 +60,8 @@ class VmNicParams(object):
         """VmNicParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._vpc_nic = None
+        self._type = None
         self._qos = None
         self._subnet_mask = None
         self._gateway = None
@@ -69,6 +75,10 @@ class VmNicParams(object):
         self._local_id = None
         self.discriminator = None
 
+        if "vpc_nic" in kwargs:
+            self.vpc_nic = kwargs["vpc_nic"]
+        if "type" in kwargs:
+            self.type = kwargs["type"]
         if "qos" in kwargs:
             self.qos = kwargs["qos"]
         if "subnet_mask" in kwargs:
@@ -91,6 +101,48 @@ class VmNicParams(object):
             self.mac_address = kwargs["mac_address"]
         if "local_id" in kwargs:
             self.local_id = kwargs["local_id"]
+
+    @property
+    def vpc_nic(self):
+        """Gets the vpc_nic of this VmNicParams.  # noqa: E501
+
+
+        :return: The vpc_nic of this VmNicParams.  # noqa: E501
+        :rtype: VpcNicParams
+        """
+        return self._vpc_nic
+
+    @vpc_nic.setter
+    def vpc_nic(self, vpc_nic):
+        """Sets the vpc_nic of this VmNicParams.
+
+
+        :param vpc_nic: The vpc_nic of this VmNicParams.  # noqa: E501
+        :type vpc_nic: VpcNicParams
+        """
+
+        self._vpc_nic = vpc_nic
+
+    @property
+    def type(self):
+        """Gets the type of this VmNicParams.  # noqa: E501
+
+
+        :return: The type of this VmNicParams.  # noqa: E501
+        :rtype: VmNicType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VmNicParams.
+
+
+        :param type: The type of this VmNicParams.  # noqa: E501
+        :type type: VmNicType
+        """
+
+        self._type = type
 
     @property
     def qos(self):
@@ -215,8 +267,6 @@ class VmNicParams(object):
         :param connect_vlan_id: The connect_vlan_id of this VmNicParams.  # noqa: E501
         :type connect_vlan_id: str
         """
-        if self.local_vars_configuration.client_side_validation and connect_vlan_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `connect_vlan_id`, must not be `None`")  # noqa: E501
 
         self._connect_vlan_id = connect_vlan_id
 
