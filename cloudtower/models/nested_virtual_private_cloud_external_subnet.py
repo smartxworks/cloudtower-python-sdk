@@ -27,13 +27,17 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
     openapi_types = {
         'floating_ip_cidr': 'str',
         'id': 'str',
-        'name': 'str'
+        'name': 'str',
+        'nat_gateway_cidr': 'str',
+        'router_gateway_cidr': 'str'
     }
 
     attribute_map = {
         'floating_ip_cidr': 'floating_ip_cidr',
         'id': 'id',
-        'name': 'name'
+        'name': 'name',
+        'nat_gateway_cidr': 'nat_gateway_cidr',
+        'router_gateway_cidr': 'router_gateway_cidr'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -43,6 +47,8 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
         self._floating_ip_cidr = None
         self._id = None
         self._name = None
+        self._nat_gateway_cidr = None
+        self._router_gateway_cidr = None
         self.discriminator = None
 
         self.floating_ip_cidr = kwargs.get("floating_ip_cidr", None)
@@ -50,6 +56,8 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
             self.id = kwargs["id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.nat_gateway_cidr = kwargs.get("nat_gateway_cidr", None)
+        self.router_gateway_cidr = kwargs.get("router_gateway_cidr", None)
 
     @property
     def floating_ip_cidr(self):
@@ -117,6 +125,48 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def nat_gateway_cidr(self):
+        """Gets the nat_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+
+
+        :return: The nat_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :rtype: str
+        """
+        return self._nat_gateway_cidr
+
+    @nat_gateway_cidr.setter
+    def nat_gateway_cidr(self, nat_gateway_cidr):
+        """Sets the nat_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.
+
+
+        :param nat_gateway_cidr: The nat_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :type nat_gateway_cidr: str
+        """
+
+        self._nat_gateway_cidr = nat_gateway_cidr
+
+    @property
+    def router_gateway_cidr(self):
+        """Gets the router_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+
+
+        :return: The router_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :rtype: str
+        """
+        return self._router_gateway_cidr
+
+    @router_gateway_cidr.setter
+    def router_gateway_cidr(self, router_gateway_cidr):
+        """Sets the router_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.
+
+
+        :param router_gateway_cidr: The router_gateway_cidr of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :type router_gateway_cidr: str
+        """
+
+        self._router_gateway_cidr = router_gateway_cidr
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
