@@ -25,11 +25,13 @@ class HostCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'auth_info': 'HostAuthInfo',
         'data': 'list[HostCreationParamsData]',
         'cluster_id': 'str'
     }
 
     attribute_map = {
+        'auth_info': 'auth_info',
         'data': 'data',
         'cluster_id': 'cluster_id'
     }
@@ -38,14 +40,38 @@ class HostCreationParams(object):
         """HostCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._auth_info = None
         self._data = None
         self._cluster_id = None
         self.discriminator = None
 
+        if "auth_info" in kwargs:
+            self.auth_info = kwargs["auth_info"]
         if "data" in kwargs:
             self.data = kwargs["data"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def auth_info(self):
+        """Gets the auth_info of this HostCreationParams.  # noqa: E501
+
+
+        :return: The auth_info of this HostCreationParams.  # noqa: E501
+        :rtype: HostAuthInfo
+        """
+        return self._auth_info
+
+    @auth_info.setter
+    def auth_info(self, auth_info):
+        """Sets the auth_info of this HostCreationParams.
+
+
+        :param auth_info: The auth_info of this HostCreationParams.  # noqa: E501
+        :type auth_info: HostAuthInfo
+        """
+
+        self._auth_info = auth_info
 
     @property
     def data(self):

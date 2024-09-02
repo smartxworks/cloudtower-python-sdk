@@ -8,6 +8,13 @@ from cloudtower.api.alert_notifier_api import AlertNotifierApi
 from cloudtower.api.alert_rule_api import AlertRuleApi
 from cloudtower.api.api_info_api import ApiInfoApi
 from cloudtower.api.application_api import ApplicationApi
+from cloudtower.api.backup_plan_api import BackupPlanApi
+from cloudtower.api.backup_plan_execution_api import BackupPlanExecutionApi
+from cloudtower.api.backup_restore_execution_api import BackupRestoreExecutionApi
+from cloudtower.api.backup_restore_point_api import BackupRestorePointApi
+from cloudtower.api.backup_service_api import BackupServiceApi
+from cloudtower.api.backup_store_repository_api import BackupStoreRepositoryApi
+from cloudtower.api.backup_target_execution_api import BackupTargetExecutionApi
 from cloudtower.api.brick_topo_api import BrickTopoApi
 from cloudtower.api.cloud_tower_application_api import CloudTowerApplicationApi
 from cloudtower.api.cloud_tower_application_package_api import CloudTowerApplicationPackageApi
@@ -55,6 +62,7 @@ from cloudtower.api.node_topo_api import NodeTopoApi
 from cloudtower.api.nvmf_namespace_api import NvmfNamespaceApi
 from cloudtower.api.nvmf_namespace_snapshot_api import NvmfNamespaceSnapshotApi
 from cloudtower.api.nvmf_subsystem_api import NvmfSubsystemApi
+from cloudtower.api.observability_api import ObservabilityApi
 from cloudtower.api.organization_api import OrganizationApi
 from cloudtower.api.ovf_api import OvfApi
 from cloudtower.api.pmem_dimm_api import PmemDimmApi

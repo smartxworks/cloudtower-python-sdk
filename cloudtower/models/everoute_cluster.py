@@ -34,10 +34,12 @@ class EverouteCluster(object):
         'global_whitelist': 'NestedEverouteClusterWhitelist',
         'id': 'str',
         'installed': 'bool',
+        'load_balancer_service': 'NestedLoadBalancerService',
         'name': 'str',
         'phase': 'EverouteClusterPhase',
         'status': 'NestedEverouteClusterStatus',
-        'version': 'str'
+        'version': 'str',
+        'vpc_service': 'NestedVirtualPrivateCloudService'
     }
 
     attribute_map = {
@@ -50,10 +52,12 @@ class EverouteCluster(object):
         'global_whitelist': 'global_whitelist',
         'id': 'id',
         'installed': 'installed',
+        'load_balancer_service': 'load_balancer_service',
         'name': 'name',
         'phase': 'phase',
         'status': 'status',
-        'version': 'version'
+        'version': 'version',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -69,10 +73,12 @@ class EverouteCluster(object):
         self._global_whitelist = None
         self._id = None
         self._installed = None
+        self._load_balancer_service = None
         self._name = None
         self._phase = None
         self._status = None
         self._version = None
+        self._vpc_service = None
         self.discriminator = None
 
         self.agent_elf_clusters = kwargs.get("agent_elf_clusters", None)
@@ -88,12 +94,14 @@ class EverouteCluster(object):
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.installed = kwargs.get("installed", None)
+        self.load_balancer_service = kwargs.get("load_balancer_service", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.phase = kwargs.get("phase", None)
         self.status = kwargs.get("status", None)
         if "version" in kwargs:
             self.version = kwargs["version"]
+        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def agent_elf_clusters(self):
@@ -293,6 +301,27 @@ class EverouteCluster(object):
         self._installed = installed
 
     @property
+    def load_balancer_service(self):
+        """Gets the load_balancer_service of this EverouteCluster.  # noqa: E501
+
+
+        :return: The load_balancer_service of this EverouteCluster.  # noqa: E501
+        :rtype: NestedLoadBalancerService
+        """
+        return self._load_balancer_service
+
+    @load_balancer_service.setter
+    def load_balancer_service(self, load_balancer_service):
+        """Sets the load_balancer_service of this EverouteCluster.
+
+
+        :param load_balancer_service: The load_balancer_service of this EverouteCluster.  # noqa: E501
+        :type load_balancer_service: NestedLoadBalancerService
+        """
+
+        self._load_balancer_service = load_balancer_service
+
+    @property
     def name(self):
         """Gets the name of this EverouteCluster.  # noqa: E501
 
@@ -379,6 +408,27 @@ class EverouteCluster(object):
             raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this EverouteCluster.  # noqa: E501
+
+
+        :return: The vpc_service of this EverouteCluster.  # noqa: E501
+        :rtype: NestedVirtualPrivateCloudService
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this EverouteCluster.
+
+
+        :param vpc_service: The vpc_service of this EverouteCluster.  # noqa: E501
+        :type vpc_service: NestedVirtualPrivateCloudService
+        """
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

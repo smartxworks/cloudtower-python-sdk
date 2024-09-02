@@ -58,6 +58,7 @@ class EverouteClusterWhereInput(object):
         'id_starts_with': 'str',
         'installed': 'bool',
         'installed_not': 'bool',
+        'load_balancer_service': 'LoadBalancerServiceWhereInput',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -89,7 +90,8 @@ class EverouteClusterWhereInput(object):
         'version_not_ends_with': 'str',
         'version_not_in': 'list[str]',
         'version_not_starts_with': 'str',
-        'version_starts_with': 'str'
+        'version_starts_with': 'str',
+        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
     }
 
     attribute_map = {
@@ -126,6 +128,7 @@ class EverouteClusterWhereInput(object):
         'id_starts_with': 'id_starts_with',
         'installed': 'installed',
         'installed_not': 'installed_not',
+        'load_balancer_service': 'load_balancer_service',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -157,7 +160,8 @@ class EverouteClusterWhereInput(object):
         'version_not_ends_with': 'version_not_ends_with',
         'version_not_in': 'version_not_in',
         'version_not_starts_with': 'version_not_starts_with',
-        'version_starts_with': 'version_starts_with'
+        'version_starts_with': 'version_starts_with',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -197,6 +201,7 @@ class EverouteClusterWhereInput(object):
         self._id_starts_with = None
         self._installed = None
         self._installed_not = None
+        self._load_balancer_service = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -229,6 +234,7 @@ class EverouteClusterWhereInput(object):
         self._version_not_in = None
         self._version_not_starts_with = None
         self._version_starts_with = None
+        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -264,6 +270,7 @@ class EverouteClusterWhereInput(object):
         self.id_starts_with = kwargs.get("id_starts_with", None)
         self.installed = kwargs.get("installed", None)
         self.installed_not = kwargs.get("installed_not", None)
+        self.load_balancer_service = kwargs.get("load_balancer_service", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -296,6 +303,7 @@ class EverouteClusterWhereInput(object):
         self.version_not_in = kwargs.get("version_not_in", None)
         self.version_not_starts_with = kwargs.get("version_not_starts_with", None)
         self.version_starts_with = kwargs.get("version_starts_with", None)
+        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -991,6 +999,27 @@ class EverouteClusterWhereInput(object):
         self._installed_not = installed_not
 
     @property
+    def load_balancer_service(self):
+        """Gets the load_balancer_service of this EverouteClusterWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_service of this EverouteClusterWhereInput.  # noqa: E501
+        :rtype: LoadBalancerServiceWhereInput
+        """
+        return self._load_balancer_service
+
+    @load_balancer_service.setter
+    def load_balancer_service(self, load_balancer_service):
+        """Sets the load_balancer_service of this EverouteClusterWhereInput.
+
+
+        :param load_balancer_service: The load_balancer_service of this EverouteClusterWhereInput.  # noqa: E501
+        :type load_balancer_service: LoadBalancerServiceWhereInput
+        """
+
+        self._load_balancer_service = load_balancer_service
+
+    @property
     def name(self):
         """Gets the name of this EverouteClusterWhereInput.  # noqa: E501
 
@@ -1661,6 +1690,27 @@ class EverouteClusterWhereInput(object):
         """
 
         self._version_starts_with = version_starts_with
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this EverouteClusterWhereInput.  # noqa: E501
+
+
+        :return: The vpc_service of this EverouteClusterWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudServiceWhereInput
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this EverouteClusterWhereInput.
+
+
+        :param vpc_service: The vpc_service of this EverouteClusterWhereInput.  # noqa: E501
+        :type vpc_service: VirtualPrivateCloudServiceWhereInput
+        """
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

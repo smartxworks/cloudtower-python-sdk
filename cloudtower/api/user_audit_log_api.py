@@ -189,7 +189,7 @@ class UserAuditLogApi(object):
         :param get_user_audit_logs_request_body: (required)
         :type get_user_audit_logs_request_body: GetUserAuditLogsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class UserAuditLogApi(object):
         :param get_user_audit_logs_request_body: (required)
         :type get_user_audit_logs_request_body: GetUserAuditLogsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class UserAuditLogApi(object):
         :param get_user_audit_logs_connection_request_body: (required)
         :type get_user_audit_logs_connection_request_body: GetUserAuditLogsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class UserAuditLogApi(object):
         :param get_user_audit_logs_connection_request_body: (required)
         :type get_user_audit_logs_connection_request_body: GetUserAuditLogsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

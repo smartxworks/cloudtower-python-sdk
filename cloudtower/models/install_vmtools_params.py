@@ -65,8 +65,6 @@ class InstallVmtoolsParams(object):
         :param data: The data of this InstallVmtoolsParams.  # noqa: E501
         :type data: InstallVmtoolsParamsData
         """
-        if self.local_vars_configuration.client_side_validation and data is None:  # noqa: E501
-            raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501
 
         self._data = data
 

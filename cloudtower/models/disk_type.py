@@ -21,10 +21,12 @@ class DiskType(object):
     allowed enum values
     """
     HDD = "HDD"
+    NVME_SSD = "NVMe_SSD"
     PMEM = "PMem"
+    SATA_OR_SAS_SSD = "SATA_OR_SAS_SSD"
     SSD = "SSD"
 
-    allowable_values = [HDD, PMEM, SSD]  # noqa: E501
+    allowable_values = [HDD, NVME_SSD, PMEM, SATA_OR_SAS_SSD, SSD]  # noqa: E501
 
     """
     Attributes:
