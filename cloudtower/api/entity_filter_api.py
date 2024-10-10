@@ -37,7 +37,7 @@ class EntityFilterApi(object):
         :param entity_filter_creation_params: (required)
         :type entity_filter_creation_params: list[EntityFilterCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class EntityFilterApi(object):
         :param entity_filter_creation_params: (required)
         :type entity_filter_creation_params: list[EntityFilterCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class EntityFilterApi(object):
         :param entity_filter_deletion_params: (required)
         :type entity_filter_deletion_params: EntityFilterDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class EntityFilterApi(object):
         :param entity_filter_deletion_params: (required)
         :type entity_filter_deletion_params: EntityFilterDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class EntityFilterApi(object):
         :param entity_filter_updation_params: (required)
         :type entity_filter_updation_params: EntityFilterUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class EntityFilterApi(object):
         :param entity_filter_updation_params: (required)
         :type entity_filter_updation_params: EntityFilterUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

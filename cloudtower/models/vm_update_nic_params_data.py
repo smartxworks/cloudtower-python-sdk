@@ -25,7 +25,6 @@ class VmUpdateNicParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'vpc_nic': 'UpdateVpcNicPayloads',
         'subnet_mask': 'str',
         'gateway': 'str',
         'ip_address': 'str',
@@ -39,7 +38,6 @@ class VmUpdateNicParamsData(object):
     }
 
     attribute_map = {
-        'vpc_nic': 'vpc_nic',
         'subnet_mask': 'subnet_mask',
         'gateway': 'gateway',
         'ip_address': 'ip_address',
@@ -56,7 +54,6 @@ class VmUpdateNicParamsData(object):
         """VmUpdateNicParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self._vpc_nic = None
         self._subnet_mask = None
         self._gateway = None
         self._ip_address = None
@@ -69,8 +66,6 @@ class VmUpdateNicParamsData(object):
         self._nic_index = None
         self.discriminator = None
 
-        if "vpc_nic" in kwargs:
-            self.vpc_nic = kwargs["vpc_nic"]
         if "subnet_mask" in kwargs:
             self.subnet_mask = kwargs["subnet_mask"]
         if "gateway" in kwargs:
@@ -91,27 +86,6 @@ class VmUpdateNicParamsData(object):
             self.mac_address = kwargs["mac_address"]
         if "nic_index" in kwargs:
             self.nic_index = kwargs["nic_index"]
-
-    @property
-    def vpc_nic(self):
-        """Gets the vpc_nic of this VmUpdateNicParamsData.  # noqa: E501
-
-
-        :return: The vpc_nic of this VmUpdateNicParamsData.  # noqa: E501
-        :rtype: UpdateVpcNicPayloads
-        """
-        return self._vpc_nic
-
-    @vpc_nic.setter
-    def vpc_nic(self, vpc_nic):
-        """Sets the vpc_nic of this VmUpdateNicParamsData.
-
-
-        :param vpc_nic: The vpc_nic of this VmUpdateNicParamsData.  # noqa: E501
-        :type vpc_nic: UpdateVpcNicPayloads
-        """
-
-        self._vpc_nic = vpc_nic
 
     @property
     def subnet_mask(self):

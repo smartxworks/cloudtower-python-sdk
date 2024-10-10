@@ -341,7 +341,7 @@ class VsphereEsxiAccountApi(object):
         :param update_vsphere_esxi_account_params: (required)
         :type update_vsphere_esxi_account_params: UpdateVsphereEsxiAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class VsphereEsxiAccountApi(object):
         :param update_vsphere_esxi_account_params: (required)
         :type update_vsphere_esxi_account_params: UpdateVsphereEsxiAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

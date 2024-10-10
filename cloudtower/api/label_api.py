@@ -37,7 +37,7 @@ class LabelApi(object):
         :param add_labels_to_resources_params: (required)
         :type add_labels_to_resources_params: AddLabelsToResourcesParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class LabelApi(object):
         :param add_labels_to_resources_params: (required)
         :type add_labels_to_resources_params: AddLabelsToResourcesParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -190,7 +190,7 @@ class LabelApi(object):
         :param label_creation_params: (required)
         :type label_creation_params: list[LabelCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -221,7 +221,7 @@ class LabelApi(object):
         :param label_creation_params: (required)
         :type label_creation_params: list[LabelCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -342,7 +342,7 @@ class LabelApi(object):
         :param label_deletion_params: (required)
         :type label_deletion_params: LabelDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -373,7 +373,7 @@ class LabelApi(object):
         :param label_deletion_params: (required)
         :type label_deletion_params: LabelDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -798,7 +798,7 @@ class LabelApi(object):
         :param body: (required)
         :type body: AddLabelsToResourcesParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -829,7 +829,7 @@ class LabelApi(object):
         :param body: (required)
         :type body: AddLabelsToResourcesParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -951,7 +951,7 @@ class LabelApi(object):
         :param label_updation_params: (required)
         :type label_updation_params: LabelUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -982,7 +982,7 @@ class LabelApi(object):
         :param label_updation_params: (required)
         :type label_updation_params: LabelUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

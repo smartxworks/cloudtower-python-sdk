@@ -28,20 +28,6 @@ class VmWhereInput(object):
         '_and': 'list[VmWhereInput]',
         '_not': 'list[VmWhereInput]',
         '_or': 'list[VmWhereInput]',
-        'bios_uuid': 'str',
-        'bios_uuid_contains': 'str',
-        'bios_uuid_ends_with': 'str',
-        'bios_uuid_gt': 'str',
-        'bios_uuid_gte': 'str',
-        'bios_uuid_in': 'list[str]',
-        'bios_uuid_lt': 'str',
-        'bios_uuid_lte': 'str',
-        'bios_uuid_not': 'str',
-        'bios_uuid_not_contains': 'str',
-        'bios_uuid_not_ends_with': 'str',
-        'bios_uuid_not_in': 'list[str]',
-        'bios_uuid_not_starts_with': 'str',
-        'bios_uuid_starts_with': 'str',
         'clock_offset': 'VmClockOffset',
         'clock_offset_in': 'list[VmClockOffset]',
         'clock_offset_not': 'VmClockOffset',
@@ -392,14 +378,6 @@ class VmWhereInput(object):
         'status_in': 'list[VmStatus]',
         'status_not': 'VmStatus',
         'status_not_in': 'list[VmStatus]',
-        'unique_logical_size': 'float',
-        'unique_logical_size_gt': 'float',
-        'unique_logical_size_gte': 'float',
-        'unique_logical_size_in': 'list[float]',
-        'unique_logical_size_lt': 'float',
-        'unique_logical_size_lte': 'float',
-        'unique_logical_size_not': 'float',
-        'unique_logical_size_not_in': 'list[float]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -462,20 +440,6 @@ class VmWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
-        'bios_uuid': 'bios_uuid',
-        'bios_uuid_contains': 'bios_uuid_contains',
-        'bios_uuid_ends_with': 'bios_uuid_ends_with',
-        'bios_uuid_gt': 'bios_uuid_gt',
-        'bios_uuid_gte': 'bios_uuid_gte',
-        'bios_uuid_in': 'bios_uuid_in',
-        'bios_uuid_lt': 'bios_uuid_lt',
-        'bios_uuid_lte': 'bios_uuid_lte',
-        'bios_uuid_not': 'bios_uuid_not',
-        'bios_uuid_not_contains': 'bios_uuid_not_contains',
-        'bios_uuid_not_ends_with': 'bios_uuid_not_ends_with',
-        'bios_uuid_not_in': 'bios_uuid_not_in',
-        'bios_uuid_not_starts_with': 'bios_uuid_not_starts_with',
-        'bios_uuid_starts_with': 'bios_uuid_starts_with',
         'clock_offset': 'clock_offset',
         'clock_offset_in': 'clock_offset_in',
         'clock_offset_not': 'clock_offset_not',
@@ -826,14 +790,6 @@ class VmWhereInput(object):
         'status_in': 'status_in',
         'status_not': 'status_not',
         'status_not_in': 'status_not_in',
-        'unique_logical_size': 'unique_logical_size',
-        'unique_logical_size_gt': 'unique_logical_size_gt',
-        'unique_logical_size_gte': 'unique_logical_size_gte',
-        'unique_logical_size_in': 'unique_logical_size_in',
-        'unique_logical_size_lt': 'unique_logical_size_lt',
-        'unique_logical_size_lte': 'unique_logical_size_lte',
-        'unique_logical_size_not': 'unique_logical_size_not',
-        'unique_logical_size_not_in': 'unique_logical_size_not_in',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -899,20 +855,6 @@ class VmWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
-        self._bios_uuid = None
-        self._bios_uuid_contains = None
-        self._bios_uuid_ends_with = None
-        self._bios_uuid_gt = None
-        self._bios_uuid_gte = None
-        self._bios_uuid_in = None
-        self._bios_uuid_lt = None
-        self._bios_uuid_lte = None
-        self._bios_uuid_not = None
-        self._bios_uuid_not_contains = None
-        self._bios_uuid_not_ends_with = None
-        self._bios_uuid_not_in = None
-        self._bios_uuid_not_starts_with = None
-        self._bios_uuid_starts_with = None
         self._clock_offset = None
         self._clock_offset_in = None
         self._clock_offset_not = None
@@ -1263,14 +1205,6 @@ class VmWhereInput(object):
         self._status_in = None
         self._status_not = None
         self._status_not_in = None
-        self._unique_logical_size = None
-        self._unique_logical_size_gt = None
-        self._unique_logical_size_gte = None
-        self._unique_logical_size_in = None
-        self._unique_logical_size_lt = None
-        self._unique_logical_size_lte = None
-        self._unique_logical_size_not = None
-        self._unique_logical_size_not_in = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -1332,20 +1266,6 @@ class VmWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
-        self.bios_uuid = kwargs.get("bios_uuid", None)
-        self.bios_uuid_contains = kwargs.get("bios_uuid_contains", None)
-        self.bios_uuid_ends_with = kwargs.get("bios_uuid_ends_with", None)
-        self.bios_uuid_gt = kwargs.get("bios_uuid_gt", None)
-        self.bios_uuid_gte = kwargs.get("bios_uuid_gte", None)
-        self.bios_uuid_in = kwargs.get("bios_uuid_in", None)
-        self.bios_uuid_lt = kwargs.get("bios_uuid_lt", None)
-        self.bios_uuid_lte = kwargs.get("bios_uuid_lte", None)
-        self.bios_uuid_not = kwargs.get("bios_uuid_not", None)
-        self.bios_uuid_not_contains = kwargs.get("bios_uuid_not_contains", None)
-        self.bios_uuid_not_ends_with = kwargs.get("bios_uuid_not_ends_with", None)
-        self.bios_uuid_not_in = kwargs.get("bios_uuid_not_in", None)
-        self.bios_uuid_not_starts_with = kwargs.get("bios_uuid_not_starts_with", None)
-        self.bios_uuid_starts_with = kwargs.get("bios_uuid_starts_with", None)
         self.clock_offset = kwargs.get("clock_offset", None)
         self.clock_offset_in = kwargs.get("clock_offset_in", None)
         self.clock_offset_not = kwargs.get("clock_offset_not", None)
@@ -1696,14 +1616,6 @@ class VmWhereInput(object):
         self.status_in = kwargs.get("status_in", None)
         self.status_not = kwargs.get("status_not", None)
         self.status_not_in = kwargs.get("status_not_in", None)
-        self.unique_logical_size = kwargs.get("unique_logical_size", None)
-        self.unique_logical_size_gt = kwargs.get("unique_logical_size_gt", None)
-        self.unique_logical_size_gte = kwargs.get("unique_logical_size_gte", None)
-        self.unique_logical_size_in = kwargs.get("unique_logical_size_in", None)
-        self.unique_logical_size_lt = kwargs.get("unique_logical_size_lt", None)
-        self.unique_logical_size_lte = kwargs.get("unique_logical_size_lte", None)
-        self.unique_logical_size_not = kwargs.get("unique_logical_size_not", None)
-        self.unique_logical_size_not_in = kwargs.get("unique_logical_size_not_in", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -1823,300 +1735,6 @@ class VmWhereInput(object):
         """
 
         self.__or = _or
-
-    @property
-    def bios_uuid(self):
-        """Gets the bios_uuid of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid
-
-    @bios_uuid.setter
-    def bios_uuid(self, bios_uuid):
-        """Sets the bios_uuid of this VmWhereInput.
-
-
-        :param bios_uuid: The bios_uuid of this VmWhereInput.  # noqa: E501
-        :type bios_uuid: str
-        """
-
-        self._bios_uuid = bios_uuid
-
-    @property
-    def bios_uuid_contains(self):
-        """Gets the bios_uuid_contains of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_contains of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_contains
-
-    @bios_uuid_contains.setter
-    def bios_uuid_contains(self, bios_uuid_contains):
-        """Sets the bios_uuid_contains of this VmWhereInput.
-
-
-        :param bios_uuid_contains: The bios_uuid_contains of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_contains: str
-        """
-
-        self._bios_uuid_contains = bios_uuid_contains
-
-    @property
-    def bios_uuid_ends_with(self):
-        """Gets the bios_uuid_ends_with of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_ends_with of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_ends_with
-
-    @bios_uuid_ends_with.setter
-    def bios_uuid_ends_with(self, bios_uuid_ends_with):
-        """Sets the bios_uuid_ends_with of this VmWhereInput.
-
-
-        :param bios_uuid_ends_with: The bios_uuid_ends_with of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_ends_with: str
-        """
-
-        self._bios_uuid_ends_with = bios_uuid_ends_with
-
-    @property
-    def bios_uuid_gt(self):
-        """Gets the bios_uuid_gt of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_gt of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_gt
-
-    @bios_uuid_gt.setter
-    def bios_uuid_gt(self, bios_uuid_gt):
-        """Sets the bios_uuid_gt of this VmWhereInput.
-
-
-        :param bios_uuid_gt: The bios_uuid_gt of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_gt: str
-        """
-
-        self._bios_uuid_gt = bios_uuid_gt
-
-    @property
-    def bios_uuid_gte(self):
-        """Gets the bios_uuid_gte of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_gte of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_gte
-
-    @bios_uuid_gte.setter
-    def bios_uuid_gte(self, bios_uuid_gte):
-        """Sets the bios_uuid_gte of this VmWhereInput.
-
-
-        :param bios_uuid_gte: The bios_uuid_gte of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_gte: str
-        """
-
-        self._bios_uuid_gte = bios_uuid_gte
-
-    @property
-    def bios_uuid_in(self):
-        """Gets the bios_uuid_in of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_in of this VmWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._bios_uuid_in
-
-    @bios_uuid_in.setter
-    def bios_uuid_in(self, bios_uuid_in):
-        """Sets the bios_uuid_in of this VmWhereInput.
-
-
-        :param bios_uuid_in: The bios_uuid_in of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_in: list[str]
-        """
-
-        self._bios_uuid_in = bios_uuid_in
-
-    @property
-    def bios_uuid_lt(self):
-        """Gets the bios_uuid_lt of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_lt of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_lt
-
-    @bios_uuid_lt.setter
-    def bios_uuid_lt(self, bios_uuid_lt):
-        """Sets the bios_uuid_lt of this VmWhereInput.
-
-
-        :param bios_uuid_lt: The bios_uuid_lt of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_lt: str
-        """
-
-        self._bios_uuid_lt = bios_uuid_lt
-
-    @property
-    def bios_uuid_lte(self):
-        """Gets the bios_uuid_lte of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_lte of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_lte
-
-    @bios_uuid_lte.setter
-    def bios_uuid_lte(self, bios_uuid_lte):
-        """Sets the bios_uuid_lte of this VmWhereInput.
-
-
-        :param bios_uuid_lte: The bios_uuid_lte of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_lte: str
-        """
-
-        self._bios_uuid_lte = bios_uuid_lte
-
-    @property
-    def bios_uuid_not(self):
-        """Gets the bios_uuid_not of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_not of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_not
-
-    @bios_uuid_not.setter
-    def bios_uuid_not(self, bios_uuid_not):
-        """Sets the bios_uuid_not of this VmWhereInput.
-
-
-        :param bios_uuid_not: The bios_uuid_not of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_not: str
-        """
-
-        self._bios_uuid_not = bios_uuid_not
-
-    @property
-    def bios_uuid_not_contains(self):
-        """Gets the bios_uuid_not_contains of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_not_contains of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_not_contains
-
-    @bios_uuid_not_contains.setter
-    def bios_uuid_not_contains(self, bios_uuid_not_contains):
-        """Sets the bios_uuid_not_contains of this VmWhereInput.
-
-
-        :param bios_uuid_not_contains: The bios_uuid_not_contains of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_not_contains: str
-        """
-
-        self._bios_uuid_not_contains = bios_uuid_not_contains
-
-    @property
-    def bios_uuid_not_ends_with(self):
-        """Gets the bios_uuid_not_ends_with of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_not_ends_with of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_not_ends_with
-
-    @bios_uuid_not_ends_with.setter
-    def bios_uuid_not_ends_with(self, bios_uuid_not_ends_with):
-        """Sets the bios_uuid_not_ends_with of this VmWhereInput.
-
-
-        :param bios_uuid_not_ends_with: The bios_uuid_not_ends_with of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_not_ends_with: str
-        """
-
-        self._bios_uuid_not_ends_with = bios_uuid_not_ends_with
-
-    @property
-    def bios_uuid_not_in(self):
-        """Gets the bios_uuid_not_in of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_not_in of this VmWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._bios_uuid_not_in
-
-    @bios_uuid_not_in.setter
-    def bios_uuid_not_in(self, bios_uuid_not_in):
-        """Sets the bios_uuid_not_in of this VmWhereInput.
-
-
-        :param bios_uuid_not_in: The bios_uuid_not_in of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_not_in: list[str]
-        """
-
-        self._bios_uuid_not_in = bios_uuid_not_in
-
-    @property
-    def bios_uuid_not_starts_with(self):
-        """Gets the bios_uuid_not_starts_with of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_not_starts_with of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_not_starts_with
-
-    @bios_uuid_not_starts_with.setter
-    def bios_uuid_not_starts_with(self, bios_uuid_not_starts_with):
-        """Sets the bios_uuid_not_starts_with of this VmWhereInput.
-
-
-        :param bios_uuid_not_starts_with: The bios_uuid_not_starts_with of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_not_starts_with: str
-        """
-
-        self._bios_uuid_not_starts_with = bios_uuid_not_starts_with
-
-    @property
-    def bios_uuid_starts_with(self):
-        """Gets the bios_uuid_starts_with of this VmWhereInput.  # noqa: E501
-
-
-        :return: The bios_uuid_starts_with of this VmWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid_starts_with
-
-    @bios_uuid_starts_with.setter
-    def bios_uuid_starts_with(self, bios_uuid_starts_with):
-        """Sets the bios_uuid_starts_with of this VmWhereInput.
-
-
-        :param bios_uuid_starts_with: The bios_uuid_starts_with of this VmWhereInput.  # noqa: E501
-        :type bios_uuid_starts_with: str
-        """
-
-        self._bios_uuid_starts_with = bios_uuid_starts_with
 
     @property
     def clock_offset(self):
@@ -9467,174 +9085,6 @@ class VmWhereInput(object):
         """
 
         self._status_not_in = status_not_in
-
-    @property
-    def unique_logical_size(self):
-        """Gets the unique_logical_size of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size
-
-    @unique_logical_size.setter
-    def unique_logical_size(self, unique_logical_size):
-        """Sets the unique_logical_size of this VmWhereInput.
-
-
-        :param unique_logical_size: The unique_logical_size of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size: float
-        """
-
-        self._unique_logical_size = unique_logical_size
-
-    @property
-    def unique_logical_size_gt(self):
-        """Gets the unique_logical_size_gt of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_gt of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_gt
-
-    @unique_logical_size_gt.setter
-    def unique_logical_size_gt(self, unique_logical_size_gt):
-        """Sets the unique_logical_size_gt of this VmWhereInput.
-
-
-        :param unique_logical_size_gt: The unique_logical_size_gt of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_gt: float
-        """
-
-        self._unique_logical_size_gt = unique_logical_size_gt
-
-    @property
-    def unique_logical_size_gte(self):
-        """Gets the unique_logical_size_gte of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_gte of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_gte
-
-    @unique_logical_size_gte.setter
-    def unique_logical_size_gte(self, unique_logical_size_gte):
-        """Sets the unique_logical_size_gte of this VmWhereInput.
-
-
-        :param unique_logical_size_gte: The unique_logical_size_gte of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_gte: float
-        """
-
-        self._unique_logical_size_gte = unique_logical_size_gte
-
-    @property
-    def unique_logical_size_in(self):
-        """Gets the unique_logical_size_in of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_in of this VmWhereInput.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._unique_logical_size_in
-
-    @unique_logical_size_in.setter
-    def unique_logical_size_in(self, unique_logical_size_in):
-        """Sets the unique_logical_size_in of this VmWhereInput.
-
-
-        :param unique_logical_size_in: The unique_logical_size_in of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_in: list[float]
-        """
-
-        self._unique_logical_size_in = unique_logical_size_in
-
-    @property
-    def unique_logical_size_lt(self):
-        """Gets the unique_logical_size_lt of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_lt of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_lt
-
-    @unique_logical_size_lt.setter
-    def unique_logical_size_lt(self, unique_logical_size_lt):
-        """Sets the unique_logical_size_lt of this VmWhereInput.
-
-
-        :param unique_logical_size_lt: The unique_logical_size_lt of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_lt: float
-        """
-
-        self._unique_logical_size_lt = unique_logical_size_lt
-
-    @property
-    def unique_logical_size_lte(self):
-        """Gets the unique_logical_size_lte of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_lte of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_lte
-
-    @unique_logical_size_lte.setter
-    def unique_logical_size_lte(self, unique_logical_size_lte):
-        """Sets the unique_logical_size_lte of this VmWhereInput.
-
-
-        :param unique_logical_size_lte: The unique_logical_size_lte of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_lte: float
-        """
-
-        self._unique_logical_size_lte = unique_logical_size_lte
-
-    @property
-    def unique_logical_size_not(self):
-        """Gets the unique_logical_size_not of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_not of this VmWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_not
-
-    @unique_logical_size_not.setter
-    def unique_logical_size_not(self, unique_logical_size_not):
-        """Sets the unique_logical_size_not of this VmWhereInput.
-
-
-        :param unique_logical_size_not: The unique_logical_size_not of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_not: float
-        """
-
-        self._unique_logical_size_not = unique_logical_size_not
-
-    @property
-    def unique_logical_size_not_in(self):
-        """Gets the unique_logical_size_not_in of this VmWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_not_in of this VmWhereInput.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._unique_logical_size_not_in
-
-    @unique_logical_size_not_in.setter
-    def unique_logical_size_not_in(self, unique_logical_size_not_in):
-        """Sets the unique_logical_size_not_in of this VmWhereInput.
-
-
-        :param unique_logical_size_not_in: The unique_logical_size_not_in of this VmWhereInput.  # noqa: E501
-        :type unique_logical_size_not_in: list[float]
-        """
-
-        self._unique_logical_size_not_in = unique_logical_size_not_in
 
     @property
     def unique_size(self):

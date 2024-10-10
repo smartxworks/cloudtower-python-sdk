@@ -144,7 +144,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskLogCollection]",
@@ -289,7 +289,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskDeleteLogCollection]",
@@ -434,7 +434,7 @@ class LogCollectionApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskLogCollection]",

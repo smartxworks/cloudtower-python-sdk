@@ -37,7 +37,7 @@ class UserApi(object):
         :param root_user_creation_params: (required)
         :type root_user_creation_params: RootUserCreationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class UserApi(object):
         :param root_user_creation_params: (required)
         :type root_user_creation_params: RootUserCreationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class UserApi(object):
         :param user_creation_params: (required)
         :type user_creation_params: list[UserCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class UserApi(object):
         :param user_creation_params: (required)
         :type user_creation_params: list[UserCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class UserApi(object):
         :param user_deletion_params: (required)
         :type user_deletion_params: UserDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class UserApi(object):
         :param user_deletion_params: (required)
         :type user_deletion_params: UserDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -583,7 +583,7 @@ class UserApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "User",
@@ -925,7 +925,7 @@ class UserApi(object):
         :param login_input: (required)
         :type login_input: LoginInput
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -956,7 +956,7 @@ class UserApi(object):
         :param login_input: (required)
         :type login_input: LoginInput
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1077,7 +1077,7 @@ class UserApi(object):
         :param user_updation_params: (required)
         :type user_updation_params: UserUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1108,7 +1108,7 @@ class UserApi(object):
         :param user_updation_params: (required)
         :type user_updation_params: UserUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

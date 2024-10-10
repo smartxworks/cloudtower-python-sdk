@@ -24,12 +24,9 @@ class NetworkType(object):
     MANAGEMENT = "MANAGEMENT"
     MIGRATION = "MIGRATION"
     STORAGE = "STORAGE"
-    STORAGE_ACCESS = "STORAGE_ACCESS"
     VM = "VM"
-    VPC_SYS = "VPC_SYS"
-    VPC_VM = "VPC_VM"
 
-    allowable_values = [ACCESS, MANAGEMENT, MIGRATION, STORAGE, STORAGE_ACCESS, VM, VPC_SYS, VPC_VM]  # noqa: E501
+    allowable_values = [ACCESS, MANAGEMENT, MIGRATION, STORAGE, VM]  # noqa: E501
 
     """
     Attributes:

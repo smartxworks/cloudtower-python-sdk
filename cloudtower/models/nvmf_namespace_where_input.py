@@ -314,14 +314,6 @@ class NvmfNamespaceWhereInput(object):
         'stripe_size_not_in': 'list[int]',
         'thin_provision': 'bool',
         'thin_provision_not': 'bool',
-        'unique_logical_size': 'float',
-        'unique_logical_size_gt': 'float',
-        'unique_logical_size_gte': 'float',
-        'unique_logical_size_in': 'list[float]',
-        'unique_logical_size_lt': 'float',
-        'unique_logical_size_lte': 'float',
-        'unique_logical_size_not': 'float',
-        'unique_logical_size_not_in': 'list[float]',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -636,14 +628,6 @@ class NvmfNamespaceWhereInput(object):
         'stripe_size_not_in': 'stripe_size_not_in',
         'thin_provision': 'thin_provision',
         'thin_provision_not': 'thin_provision_not',
-        'unique_logical_size': 'unique_logical_size',
-        'unique_logical_size_gt': 'unique_logical_size_gt',
-        'unique_logical_size_gte': 'unique_logical_size_gte',
-        'unique_logical_size_in': 'unique_logical_size_in',
-        'unique_logical_size_lt': 'unique_logical_size_lt',
-        'unique_logical_size_lte': 'unique_logical_size_lte',
-        'unique_logical_size_not': 'unique_logical_size_not',
-        'unique_logical_size_not_in': 'unique_logical_size_not_in',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -961,14 +945,6 @@ class NvmfNamespaceWhereInput(object):
         self._stripe_size_not_in = None
         self._thin_provision = None
         self._thin_provision_not = None
-        self._unique_logical_size = None
-        self._unique_logical_size_gt = None
-        self._unique_logical_size_gte = None
-        self._unique_logical_size_in = None
-        self._unique_logical_size_lt = None
-        self._unique_logical_size_lte = None
-        self._unique_logical_size_not = None
-        self._unique_logical_size_not_in = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -1282,14 +1258,6 @@ class NvmfNamespaceWhereInput(object):
         self.stripe_size_not_in = kwargs.get("stripe_size_not_in", None)
         self.thin_provision = kwargs.get("thin_provision", None)
         self.thin_provision_not = kwargs.get("thin_provision_not", None)
-        self.unique_logical_size = kwargs.get("unique_logical_size", None)
-        self.unique_logical_size_gt = kwargs.get("unique_logical_size_gt", None)
-        self.unique_logical_size_gte = kwargs.get("unique_logical_size_gte", None)
-        self.unique_logical_size_in = kwargs.get("unique_logical_size_in", None)
-        self.unique_logical_size_lt = kwargs.get("unique_logical_size_lt", None)
-        self.unique_logical_size_lte = kwargs.get("unique_logical_size_lte", None)
-        self.unique_logical_size_not = kwargs.get("unique_logical_size_not", None)
-        self.unique_logical_size_not_in = kwargs.get("unique_logical_size_not_in", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -7381,174 +7349,6 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self._thin_provision_not = thin_provision_not
-
-    @property
-    def unique_logical_size(self):
-        """Gets the unique_logical_size of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size
-
-    @unique_logical_size.setter
-    def unique_logical_size(self, unique_logical_size):
-        """Sets the unique_logical_size of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size: The unique_logical_size of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size: float
-        """
-
-        self._unique_logical_size = unique_logical_size
-
-    @property
-    def unique_logical_size_gt(self):
-        """Gets the unique_logical_size_gt of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_gt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_gt
-
-    @unique_logical_size_gt.setter
-    def unique_logical_size_gt(self, unique_logical_size_gt):
-        """Sets the unique_logical_size_gt of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_gt: The unique_logical_size_gt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_gt: float
-        """
-
-        self._unique_logical_size_gt = unique_logical_size_gt
-
-    @property
-    def unique_logical_size_gte(self):
-        """Gets the unique_logical_size_gte of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_gte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_gte
-
-    @unique_logical_size_gte.setter
-    def unique_logical_size_gte(self, unique_logical_size_gte):
-        """Sets the unique_logical_size_gte of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_gte: The unique_logical_size_gte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_gte: float
-        """
-
-        self._unique_logical_size_gte = unique_logical_size_gte
-
-    @property
-    def unique_logical_size_in(self):
-        """Gets the unique_logical_size_in of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._unique_logical_size_in
-
-    @unique_logical_size_in.setter
-    def unique_logical_size_in(self, unique_logical_size_in):
-        """Sets the unique_logical_size_in of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_in: The unique_logical_size_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_in: list[float]
-        """
-
-        self._unique_logical_size_in = unique_logical_size_in
-
-    @property
-    def unique_logical_size_lt(self):
-        """Gets the unique_logical_size_lt of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_lt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_lt
-
-    @unique_logical_size_lt.setter
-    def unique_logical_size_lt(self, unique_logical_size_lt):
-        """Sets the unique_logical_size_lt of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_lt: The unique_logical_size_lt of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_lt: float
-        """
-
-        self._unique_logical_size_lt = unique_logical_size_lt
-
-    @property
-    def unique_logical_size_lte(self):
-        """Gets the unique_logical_size_lte of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_lte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_lte
-
-    @unique_logical_size_lte.setter
-    def unique_logical_size_lte(self, unique_logical_size_lte):
-        """Sets the unique_logical_size_lte of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_lte: The unique_logical_size_lte of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_lte: float
-        """
-
-        self._unique_logical_size_lte = unique_logical_size_lte
-
-    @property
-    def unique_logical_size_not(self):
-        """Gets the unique_logical_size_not of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size_not
-
-    @unique_logical_size_not.setter
-    def unique_logical_size_not(self, unique_logical_size_not):
-        """Sets the unique_logical_size_not of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_not: The unique_logical_size_not of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_not: float
-        """
-
-        self._unique_logical_size_not = unique_logical_size_not
-
-    @property
-    def unique_logical_size_not_in(self):
-        """Gets the unique_logical_size_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
-
-
-        :return: The unique_logical_size_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :rtype: list[float]
-        """
-        return self._unique_logical_size_not_in
-
-    @unique_logical_size_not_in.setter
-    def unique_logical_size_not_in(self, unique_logical_size_not_in):
-        """Sets the unique_logical_size_not_in of this NvmfNamespaceWhereInput.
-
-
-        :param unique_logical_size_not_in: The unique_logical_size_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
-        :type unique_logical_size_not_in: list[float]
-        """
-
-        self._unique_logical_size_not_in = unique_logical_size_not_in
 
     @property
     def unique_size(self):

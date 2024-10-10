@@ -37,7 +37,7 @@ class ReportTemplateApi(object):
         :param report_template_creation_params: (required)
         :type report_template_creation_params: list[ReportTemplateCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class ReportTemplateApi(object):
         :param report_template_creation_params: (required)
         :type report_template_creation_params: list[ReportTemplateCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class ReportTemplateApi(object):
         :param report_template_deletion_params: (required)
         :type report_template_deletion_params: ReportTemplateDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class ReportTemplateApi(object):
         :param report_template_deletion_params: (required)
         :type report_template_deletion_params: ReportTemplateDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class ReportTemplateApi(object):
         :param reporte_template_generation_params: (required)
         :type reporte_template_generation_params: ReporteTemplateGenerationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class ReportTemplateApi(object):
         :param reporte_template_generation_params: (required)
         :type reporte_template_generation_params: ReporteTemplateGenerationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class ReportTemplateApi(object):
         :param report_template_updation_params: (required)
         :type report_template_updation_params: ReportTemplateUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class ReportTemplateApi(object):
         :param report_template_updation_params: (required)
         :type report_template_updation_params: ReportTemplateUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

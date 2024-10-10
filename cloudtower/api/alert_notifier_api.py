@@ -144,7 +144,7 @@ class AlertNotifierApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskAlertNotifier]",
@@ -289,7 +289,7 @@ class AlertNotifierApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskDeleteAlertNotifier]",
@@ -738,7 +738,7 @@ class AlertNotifierApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "WithTaskAlertNotifier",
@@ -883,7 +883,7 @@ class AlertNotifierApi(object):
                 'POST', body_params))  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Authorization']  # noqa: E501
+        auth_settings = []  # noqa: E501
 
         response_types_map = {
             200: "list[WithTaskAlertNotifier]",

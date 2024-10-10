@@ -37,7 +37,7 @@ class VcenterAccountApi(object):
         :param create_vcenter_account_params: (required)
         :type create_vcenter_account_params: CreateVcenterAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VcenterAccountApi(object):
         :param create_vcenter_account_params: (required)
         :type create_vcenter_account_params: CreateVcenterAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class VcenterAccountApi(object):
         :param update_vcenter_account_params: (required)
         :type update_vcenter_account_params: UpdateVcenterAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class VcenterAccountApi(object):
         :param update_vcenter_account_params: (required)
         :type update_vcenter_account_params: UpdateVcenterAccountParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

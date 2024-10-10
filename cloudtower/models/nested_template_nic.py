@@ -31,9 +31,7 @@ class NestedTemplateNic(object):
         'mac_address': 'str',
         'mirror': 'bool',
         'model': 'VmNicModel',
-        'type': 'VmNicType',
-        'vlan': 'NestedFrozenVlan',
-        'vpc_nic': 'NestedTemplateVpcNic'
+        'vlan': 'NestedFrozenVlan'
     }
 
     attribute_map = {
@@ -43,9 +41,7 @@ class NestedTemplateNic(object):
         'mac_address': 'mac_address',
         'mirror': 'mirror',
         'model': 'model',
-        'type': 'type',
-        'vlan': 'vlan',
-        'vpc_nic': 'vpc_nic'
+        'vlan': 'vlan'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -58,9 +54,7 @@ class NestedTemplateNic(object):
         self._mac_address = None
         self._mirror = None
         self._model = None
-        self._type = None
         self._vlan = None
-        self._vpc_nic = None
         self.discriminator = None
 
         self.enabled = kwargs.get("enabled", None)
@@ -70,10 +64,8 @@ class NestedTemplateNic(object):
         self.mac_address = kwargs.get("mac_address", None)
         self.mirror = kwargs.get("mirror", None)
         self.model = kwargs.get("model", None)
-        self.type = kwargs.get("type", None)
         if "vlan" in kwargs:
             self.vlan = kwargs["vlan"]
-        self.vpc_nic = kwargs.get("vpc_nic", None)
 
     @property
     def enabled(self):
@@ -204,27 +196,6 @@ class NestedTemplateNic(object):
         self._model = model
 
     @property
-    def type(self):
-        """Gets the type of this NestedTemplateNic.  # noqa: E501
-
-
-        :return: The type of this NestedTemplateNic.  # noqa: E501
-        :rtype: VmNicType
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this NestedTemplateNic.
-
-
-        :param type: The type of this NestedTemplateNic.  # noqa: E501
-        :type type: VmNicType
-        """
-
-        self._type = type
-
-    @property
     def vlan(self):
         """Gets the vlan of this NestedTemplateNic.  # noqa: E501
 
@@ -246,27 +217,6 @@ class NestedTemplateNic(object):
             raise ValueError("Invalid value for `vlan`, must not be `None`")  # noqa: E501
 
         self._vlan = vlan
-
-    @property
-    def vpc_nic(self):
-        """Gets the vpc_nic of this NestedTemplateNic.  # noqa: E501
-
-
-        :return: The vpc_nic of this NestedTemplateNic.  # noqa: E501
-        :rtype: NestedTemplateVpcNic
-        """
-        return self._vpc_nic
-
-    @vpc_nic.setter
-    def vpc_nic(self, vpc_nic):
-        """Sets the vpc_nic of this NestedTemplateNic.
-
-
-        :param vpc_nic: The vpc_nic of this NestedTemplateNic.  # noqa: E501
-        :type vpc_nic: NestedTemplateVpcNic
-        """
-
-        self._vpc_nic = vpc_nic
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

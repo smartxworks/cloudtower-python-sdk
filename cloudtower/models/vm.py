@@ -25,7 +25,6 @@ class Vm(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'bios_uuid': 'str',
         'clock_offset': 'VmClockOffset',
         'cloud_init_supported': 'bool',
         'cluster': 'NestedCluster',
@@ -78,7 +77,6 @@ class Vm(object):
         'snapshot_plan': 'NestedSnapshotPlan',
         'snapshots': 'list[NestedVmSnapshot]',
         'status': 'VmStatus',
-        'unique_logical_size': 'float',
         'unique_size': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
         'vcpu': 'int',
@@ -93,7 +91,6 @@ class Vm(object):
     }
 
     attribute_map = {
-        'bios_uuid': 'bios_uuid',
         'clock_offset': 'clock_offset',
         'cloud_init_supported': 'cloud_init_supported',
         'cluster': 'cluster',
@@ -146,7 +143,6 @@ class Vm(object):
         'snapshot_plan': 'snapshot_plan',
         'snapshots': 'snapshots',
         'status': 'status',
-        'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
         'usb_devices': 'usb_devices',
         'vcpu': 'vcpu',
@@ -164,7 +160,6 @@ class Vm(object):
         """Vm - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self._bios_uuid = None
         self._clock_offset = None
         self._cloud_init_supported = None
         self._cluster = None
@@ -217,7 +212,6 @@ class Vm(object):
         self._snapshot_plan = None
         self._snapshots = None
         self._status = None
-        self._unique_logical_size = None
         self._unique_size = None
         self._usb_devices = None
         self._vcpu = None
@@ -231,7 +225,6 @@ class Vm(object):
         self._win_opt = None
         self.discriminator = None
 
-        self.bios_uuid = kwargs.get("bios_uuid", None)
         if "clock_offset" in kwargs:
             self.clock_offset = kwargs["clock_offset"]
         self.cloud_init_supported = kwargs.get("cloud_init_supported", None)
@@ -302,7 +295,6 @@ class Vm(object):
         self.snapshots = kwargs.get("snapshots", None)
         if "status" in kwargs:
             self.status = kwargs["status"]
-        self.unique_logical_size = kwargs.get("unique_logical_size", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.usb_devices = kwargs.get("usb_devices", None)
         if "vcpu" in kwargs:
@@ -317,27 +309,6 @@ class Vm(object):
         self.vm_usage = kwargs.get("vm_usage", None)
         if "win_opt" in kwargs:
             self.win_opt = kwargs["win_opt"]
-
-    @property
-    def bios_uuid(self):
-        """Gets the bios_uuid of this Vm.  # noqa: E501
-
-
-        :return: The bios_uuid of this Vm.  # noqa: E501
-        :rtype: str
-        """
-        return self._bios_uuid
-
-    @bios_uuid.setter
-    def bios_uuid(self, bios_uuid):
-        """Sets the bios_uuid of this Vm.
-
-
-        :param bios_uuid: The bios_uuid of this Vm.  # noqa: E501
-        :type bios_uuid: str
-        """
-
-        self._bios_uuid = bios_uuid
 
     @property
     def clock_offset(self):
@@ -1466,27 +1437,6 @@ class Vm(object):
             raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
-
-    @property
-    def unique_logical_size(self):
-        """Gets the unique_logical_size of this Vm.  # noqa: E501
-
-
-        :return: The unique_logical_size of this Vm.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size
-
-    @unique_logical_size.setter
-    def unique_logical_size(self, unique_logical_size):
-        """Sets the unique_logical_size of this Vm.
-
-
-        :param unique_logical_size: The unique_logical_size of this Vm.  # noqa: E501
-        :type unique_logical_size: float
-        """
-
-        self._unique_logical_size = unique_logical_size
 
     @property
     def unique_size(self):

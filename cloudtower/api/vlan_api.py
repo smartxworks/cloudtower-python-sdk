@@ -37,7 +37,7 @@ class VlanApi(object):
         :param vm_vlan_creation_params: (required)
         :type vm_vlan_creation_params: list[VmVlanCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VlanApi(object):
         :param vm_vlan_creation_params: (required)
         :type vm_vlan_creation_params: list[VmVlanCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VlanApi(object):
         :param vlan_deletion_params: (required)
         :type vlan_deletion_params: VlanDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VlanApi(object):
         :param vlan_deletion_params: (required)
         :type vlan_deletion_params: VlanDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class VlanApi(object):
         :param management_vlan_updation_params: (required)
         :type management_vlan_updation_params: ManagementVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class VlanApi(object):
         :param management_vlan_updation_params: (required)
         :type management_vlan_updation_params: ManagementVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class VlanApi(object):
         :param migration_vlan_updation_params: (required)
         :type migration_vlan_updation_params: MigrationVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class VlanApi(object):
         :param migration_vlan_updation_params: (required)
         :type migration_vlan_updation_params: MigrationVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class VlanApi(object):
         :param vm_vlan_updation_params: (required)
         :type vm_vlan_updation_params: VmVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -980,7 +980,7 @@ class VlanApi(object):
         :param vm_vlan_updation_params: (required)
         :type vm_vlan_updation_params: VmVlanUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

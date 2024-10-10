@@ -341,7 +341,7 @@ class SvtImageApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param cluster_id:
         :type cluster_id: str
         :param name:
@@ -384,7 +384,7 @@ class SvtImageApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param cluster_id:
         :type cluster_id: str
         :param name:

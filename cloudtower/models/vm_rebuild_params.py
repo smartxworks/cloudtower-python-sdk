@@ -25,7 +25,6 @@ class VmRebuildParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'owner': 'VmOwnerParams',
         'gpu_devices': 'list[VmGpuOperationParams]',
         'is_full_copy': 'bool',
         'rebuild_from_snapshot_id': 'str',
@@ -39,7 +38,6 @@ class VmRebuildParams(object):
         'status': 'VmStatus',
         'firmware': 'VmFirmware',
         'ha': 'bool',
-        'pci_nics': 'NicWhereInput',
         'vm_placement_group': 'VmPlacementGroupWhereInput',
         'vm_nics': 'list[VmNicParams]',
         'vm_disks': 'VmDiskParams',
@@ -56,7 +54,6 @@ class VmRebuildParams(object):
     }
 
     attribute_map = {
-        'owner': 'owner',
         'gpu_devices': 'gpu_devices',
         'is_full_copy': 'is_full_copy',
         'rebuild_from_snapshot_id': 'rebuild_from_snapshot_id',
@@ -70,7 +67,6 @@ class VmRebuildParams(object):
         'status': 'status',
         'firmware': 'firmware',
         'ha': 'ha',
-        'pci_nics': 'pci_nics',
         'vm_placement_group': 'vm_placement_group',
         'vm_nics': 'vm_nics',
         'vm_disks': 'vm_disks',
@@ -90,7 +86,6 @@ class VmRebuildParams(object):
         """VmRebuildParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self._owner = None
         self._gpu_devices = None
         self._is_full_copy = None
         self._rebuild_from_snapshot_id = None
@@ -104,7 +99,6 @@ class VmRebuildParams(object):
         self._status = None
         self._firmware = None
         self._ha = None
-        self._pci_nics = None
         self._vm_placement_group = None
         self._vm_nics = None
         self._vm_disks = None
@@ -120,8 +114,6 @@ class VmRebuildParams(object):
         self._cluster_id = None
         self.discriminator = None
 
-        if "owner" in kwargs:
-            self.owner = kwargs["owner"]
         if "gpu_devices" in kwargs:
             self.gpu_devices = kwargs["gpu_devices"]
         if "is_full_copy" in kwargs:
@@ -148,8 +140,6 @@ class VmRebuildParams(object):
             self.firmware = kwargs["firmware"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
-        if "pci_nics" in kwargs:
-            self.pci_nics = kwargs["pci_nics"]
         if "vm_placement_group" in kwargs:
             self.vm_placement_group = kwargs["vm_placement_group"]
         if "vm_nics" in kwargs:
@@ -176,27 +166,6 @@ class VmRebuildParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
-
-    @property
-    def owner(self):
-        """Gets the owner of this VmRebuildParams.  # noqa: E501
-
-
-        :return: The owner of this VmRebuildParams.  # noqa: E501
-        :rtype: VmOwnerParams
-        """
-        return self._owner
-
-    @owner.setter
-    def owner(self, owner):
-        """Sets the owner of this VmRebuildParams.
-
-
-        :param owner: The owner of this VmRebuildParams.  # noqa: E501
-        :type owner: VmOwnerParams
-        """
-
-        self._owner = owner
 
     @property
     def gpu_devices(self):
@@ -472,27 +441,6 @@ class VmRebuildParams(object):
         """
 
         self._ha = ha
-
-    @property
-    def pci_nics(self):
-        """Gets the pci_nics of this VmRebuildParams.  # noqa: E501
-
-
-        :return: The pci_nics of this VmRebuildParams.  # noqa: E501
-        :rtype: NicWhereInput
-        """
-        return self._pci_nics
-
-    @pci_nics.setter
-    def pci_nics(self, pci_nics):
-        """Sets the pci_nics of this VmRebuildParams.
-
-
-        :param pci_nics: The pci_nics of this VmRebuildParams.  # noqa: E501
-        :type pci_nics: NicWhereInput
-        """
-
-        self._pci_nics = pci_nics
 
     @property
     def vm_placement_group(self):

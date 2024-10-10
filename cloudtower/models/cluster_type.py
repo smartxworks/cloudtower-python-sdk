@@ -21,11 +21,10 @@ class ClusterType(object):
     allowed enum values
     """
     BLUESHARK = "BLUESHARK"
-    SMTX_ELF = "SMTX_ELF"
     SMTX_OS = "SMTX_OS"
     SMTX_ZBS = "SMTX_ZBS"
 
-    allowable_values = [BLUESHARK, SMTX_ELF, SMTX_OS, SMTX_ZBS]  # noqa: E501
+    allowable_values = [BLUESHARK, SMTX_OS, SMTX_ZBS]  # noqa: E501
 
     """
     Attributes:

@@ -37,7 +37,7 @@ class VmVolumeApi(object):
         :param clone_vm_volume_params: (required)
         :type clone_vm_volume_params: list[CloneVmVolumeParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VmVolumeApi(object):
         :param clone_vm_volume_params: (required)
         :type clone_vm_volume_params: list[CloneVmVolumeParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VmVolumeApi(object):
         :param vm_volume_creation_params: (required)
         :type vm_volume_creation_params: list[VmVolumeCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VmVolumeApi(object):
         :param vm_volume_creation_params: (required)
         :type vm_volume_creation_params: list[VmVolumeCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -341,7 +341,7 @@ class VmVolumeApi(object):
         :param vm_volume_deletion_params: (required)
         :type vm_volume_deletion_params: VmVolumeDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -372,7 +372,7 @@ class VmVolumeApi(object):
         :param vm_volume_deletion_params: (required)
         :type vm_volume_deletion_params: VmVolumeDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -493,7 +493,7 @@ class VmVolumeApi(object):
         :param export_vm_volume_params: (required)
         :type export_vm_volume_params: ExportVmVolumeParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -524,7 +524,7 @@ class VmVolumeApi(object):
         :param export_vm_volume_params: (required)
         :type export_vm_volume_params: ExportVmVolumeParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class VmVolumeApi(object):
         :param import_vm_volume_params: (required)
         :type import_vm_volume_params: list[ImportVmVolumeParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -980,7 +980,7 @@ class VmVolumeApi(object):
         :param import_vm_volume_params: (required)
         :type import_vm_volume_params: list[ImportVmVolumeParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1101,7 +1101,7 @@ class VmVolumeApi(object):
         :param vm_volume_rebuild_params: (required)
         :type vm_volume_rebuild_params: list[VmVolumeRebuildParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1132,7 +1132,7 @@ class VmVolumeApi(object):
         :param vm_volume_rebuild_params: (required)
         :type vm_volume_rebuild_params: list[VmVolumeRebuildParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1254,7 +1254,7 @@ class VmVolumeApi(object):
         :param vm_volume_rollback_params: (required)
         :type vm_volume_rollback_params: list[VmVolumeRollbackParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1285,7 +1285,7 @@ class VmVolumeApi(object):
         :param vm_volume_rollback_params: (required)
         :type vm_volume_rollback_params: list[VmVolumeRollbackParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1407,7 +1407,7 @@ class VmVolumeApi(object):
         :param update_vm_volume_params: (required)
         :type update_vm_volume_params: UpdateVmVolumeParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1438,7 +1438,7 @@ class VmVolumeApi(object):
         :param update_vm_volume_params: (required)
         :type update_vm_volume_params: UpdateVmVolumeParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
