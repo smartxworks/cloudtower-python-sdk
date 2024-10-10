@@ -26,6 +26,8 @@ class LicenseWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[LicenseWhereInput]',
+        '_not': 'list[LicenseWhereInput]',
+        '_or': 'list[LicenseWhereInput]',
         'expire_date': 'str',
         'expire_date_gt': 'str',
         'expire_date_gte': 'str',
@@ -94,8 +96,6 @@ class LicenseWhereInput(object):
         'max_cluster_num_lte': 'int',
         'max_cluster_num_not': 'int',
         'max_cluster_num_not_in': 'list[int]',
-        '_not': 'list[LicenseWhereInput]',
-        '_or': 'list[LicenseWhereInput]',
         'sign_date': 'str',
         'sign_date_gt': 'str',
         'sign_date_gte': 'str',
@@ -116,6 +116,8 @@ class LicenseWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'expire_date': 'expire_date',
         'expire_date_gt': 'expire_date_gt',
         'expire_date_gte': 'expire_date_gte',
@@ -184,8 +186,6 @@ class LicenseWhereInput(object):
         'max_cluster_num_lte': 'max_cluster_num_lte',
         'max_cluster_num_not': 'max_cluster_num_not',
         'max_cluster_num_not_in': 'max_cluster_num_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'sign_date': 'sign_date',
         'sign_date_gt': 'sign_date_gt',
         'sign_date_gte': 'sign_date_gte',
@@ -209,6 +209,8 @@ class LicenseWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._expire_date = None
         self._expire_date_gt = None
         self._expire_date_gte = None
@@ -277,8 +279,6 @@ class LicenseWhereInput(object):
         self._max_cluster_num_lte = None
         self._max_cluster_num_not = None
         self._max_cluster_num_not_in = None
-        self.__not = None
-        self.__or = None
         self._sign_date = None
         self._sign_date_gt = None
         self._sign_date_gte = None
@@ -298,6 +298,8 @@ class LicenseWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.expire_date = kwargs.get("expire_date", None)
         self.expire_date_gt = kwargs.get("expire_date_gt", None)
         self.expire_date_gte = kwargs.get("expire_date_gte", None)
@@ -366,8 +368,6 @@ class LicenseWhereInput(object):
         self.max_cluster_num_lte = kwargs.get("max_cluster_num_lte", None)
         self.max_cluster_num_not = kwargs.get("max_cluster_num_not", None)
         self.max_cluster_num_not_in = kwargs.get("max_cluster_num_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.sign_date = kwargs.get("sign_date", None)
         self.sign_date_gt = kwargs.get("sign_date_gt", None)
         self.sign_date_gte = kwargs.get("sign_date_gte", None)
@@ -405,6 +405,48 @@ class LicenseWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The _not of this LicenseWhereInput.  # noqa: E501
+        :rtype: list[LicenseWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this LicenseWhereInput.
+
+
+        :param _not: The _not of this LicenseWhereInput.  # noqa: E501
+        :type _not: list[LicenseWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The _or of this LicenseWhereInput.  # noqa: E501
+        :rtype: list[LicenseWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this LicenseWhereInput.
+
+
+        :param _or: The _or of this LicenseWhereInput.  # noqa: E501
+        :type _or: list[LicenseWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def expire_date(self):
@@ -1833,48 +1875,6 @@ class LicenseWhereInput(object):
         """
 
         self._max_cluster_num_not_in = max_cluster_num_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this LicenseWhereInput.  # noqa: E501
-
-
-        :return: The _not of this LicenseWhereInput.  # noqa: E501
-        :rtype: list[LicenseWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this LicenseWhereInput.
-
-
-        :param _not: The _not of this LicenseWhereInput.  # noqa: E501
-        :type _not: list[LicenseWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this LicenseWhereInput.  # noqa: E501
-
-
-        :return: The _or of this LicenseWhereInput.  # noqa: E501
-        :rtype: list[LicenseWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this LicenseWhereInput.
-
-
-        :param _or: The _or of this LicenseWhereInput.  # noqa: E501
-        :type _or: list[LicenseWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def sign_date(self):

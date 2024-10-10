@@ -26,6 +26,8 @@ class VmFolderWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmFolderWhereInput]',
+        '_not': 'list[VmFolderWhereInput]',
+        '_or': 'list[VmFolderWhereInput]',
         'cluster': 'ClusterWhereInput',
         'id': 'str',
         'id_contains': 'str',
@@ -69,8 +71,6 @@ class VmFolderWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[VmFolderWhereInput]',
-        '_or': 'list[VmFolderWhereInput]',
         'vm_num': 'int',
         'vm_num_gt': 'int',
         'vm_num_gte': 'int',
@@ -86,6 +86,8 @@ class VmFolderWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'id': 'id',
         'id_contains': 'id_contains',
@@ -129,8 +131,6 @@ class VmFolderWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'vm_num': 'vm_num',
         'vm_num_gt': 'vm_num_gt',
         'vm_num_gte': 'vm_num_gte',
@@ -149,6 +149,8 @@ class VmFolderWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._id = None
         self._id_contains = None
@@ -192,8 +194,6 @@ class VmFolderWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._vm_num = None
         self._vm_num_gt = None
         self._vm_num_gte = None
@@ -208,6 +208,8 @@ class VmFolderWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
@@ -251,8 +253,6 @@ class VmFolderWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.vm_num = kwargs.get("vm_num", None)
         self.vm_num_gt = kwargs.get("vm_num_gt", None)
         self.vm_num_gte = kwargs.get("vm_num_gte", None)
@@ -285,6 +285,48 @@ class VmFolderWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[VmFolderWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmFolderWhereInput.
+
+
+        :param _not: The _not of this VmFolderWhereInput.  # noqa: E501
+        :type _not: list[VmFolderWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[VmFolderWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmFolderWhereInput.
+
+
+        :param _or: The _or of this VmFolderWhereInput.  # noqa: E501
+        :type _or: list[VmFolderWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1188,48 +1230,6 @@ class VmFolderWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmFolderWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmFolderWhereInput.  # noqa: E501
-        :rtype: list[VmFolderWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmFolderWhereInput.
-
-
-        :param _not: The _not of this VmFolderWhereInput.  # noqa: E501
-        :type _not: list[VmFolderWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmFolderWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmFolderWhereInput.  # noqa: E501
-        :rtype: list[VmFolderWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmFolderWhereInput.
-
-
-        :param _or: The _or of this VmFolderWhereInput.  # noqa: E501
-        :type _or: list[VmFolderWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def vm_num(self):

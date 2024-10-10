@@ -26,6 +26,8 @@ class VmDiskWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[VmDiskWhereInput]',
+        '_not': 'list[VmDiskWhereInput]',
+        '_or': 'list[VmDiskWhereInput]',
         'boot': 'int',
         'boot_gt': 'int',
         'boot_gte': 'int',
@@ -129,8 +131,6 @@ class VmDiskWhereInput(object):
         'max_iops_policy_in': 'list[VmDiskIoRestrictType]',
         'max_iops_policy_not': 'VmDiskIoRestrictType',
         'max_iops_policy_not_in': 'list[VmDiskIoRestrictType]',
-        '_not': 'list[VmDiskWhereInput]',
-        '_or': 'list[VmDiskWhereInput]',
         'serial': 'str',
         'serial_contains': 'str',
         'serial_ends_with': 'str',
@@ -198,6 +198,8 @@ class VmDiskWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'boot': 'boot',
         'boot_gt': 'boot_gt',
         'boot_gte': 'boot_gte',
@@ -301,8 +303,6 @@ class VmDiskWhereInput(object):
         'max_iops_policy_in': 'max_iops_policy_in',
         'max_iops_policy_not': 'max_iops_policy_not',
         'max_iops_policy_not_in': 'max_iops_policy_not_in',
-        '_not': 'NOT',
-        '_or': 'OR',
         'serial': 'serial',
         'serial_contains': 'serial_contains',
         'serial_ends_with': 'serial_ends_with',
@@ -373,6 +373,8 @@ class VmDiskWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._boot = None
         self._boot_gt = None
         self._boot_gte = None
@@ -476,8 +478,6 @@ class VmDiskWhereInput(object):
         self._max_iops_policy_in = None
         self._max_iops_policy_not = None
         self._max_iops_policy_not_in = None
-        self.__not = None
-        self.__or = None
         self._serial = None
         self._serial_contains = None
         self._serial_ends_with = None
@@ -544,6 +544,8 @@ class VmDiskWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.boot = kwargs.get("boot", None)
         self.boot_gt = kwargs.get("boot_gt", None)
         self.boot_gte = kwargs.get("boot_gte", None)
@@ -647,8 +649,6 @@ class VmDiskWhereInput(object):
         self.max_iops_policy_in = kwargs.get("max_iops_policy_in", None)
         self.max_iops_policy_not = kwargs.get("max_iops_policy_not", None)
         self.max_iops_policy_not_in = kwargs.get("max_iops_policy_not_in", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.serial = kwargs.get("serial", None)
         self.serial_contains = kwargs.get("serial_contains", None)
         self.serial_ends_with = kwargs.get("serial_ends_with", None)
@@ -733,6 +733,48 @@ class VmDiskWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this VmDiskWhereInput.  # noqa: E501
+
+
+        :return: The _not of this VmDiskWhereInput.  # noqa: E501
+        :rtype: list[VmDiskWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this VmDiskWhereInput.
+
+
+        :param _not: The _not of this VmDiskWhereInput.  # noqa: E501
+        :type _not: list[VmDiskWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this VmDiskWhereInput.  # noqa: E501
+
+
+        :return: The _or of this VmDiskWhereInput.  # noqa: E501
+        :rtype: list[VmDiskWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this VmDiskWhereInput.
+
+
+        :param _or: The _or of this VmDiskWhereInput.  # noqa: E501
+        :type _or: list[VmDiskWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def boot(self):
@@ -2896,48 +2938,6 @@ class VmDiskWhereInput(object):
         """
 
         self._max_iops_policy_not_in = max_iops_policy_not_in
-
-    @property
-    def _not(self):
-        """Gets the _not of this VmDiskWhereInput.  # noqa: E501
-
-
-        :return: The _not of this VmDiskWhereInput.  # noqa: E501
-        :rtype: list[VmDiskWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this VmDiskWhereInput.
-
-
-        :param _not: The _not of this VmDiskWhereInput.  # noqa: E501
-        :type _not: list[VmDiskWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this VmDiskWhereInput.  # noqa: E501
-
-
-        :return: The _or of this VmDiskWhereInput.  # noqa: E501
-        :rtype: list[VmDiskWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this VmDiskWhereInput.
-
-
-        :param _or: The _or of this VmDiskWhereInput.  # noqa: E501
-        :type _or: list[VmDiskWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def serial(self):

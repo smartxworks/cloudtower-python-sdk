@@ -34,8 +34,8 @@ class Vm(object):
         'deleted_at': 'str',
         'description': 'str',
         'dns_servers': 'str',
-        'entity_filter_results': 'list[NestedVmEntityFilterResult]',
         'entity_async_status': 'EntityAsyncStatus',
+        'entity_filter_results': 'list[NestedVmEntityFilterResult]',
         'firmware': 'VmFirmware',
         'folder': 'NestedVmFolder',
         'gpu_devices': 'list[NestedGpuDevice]',
@@ -100,8 +100,8 @@ class Vm(object):
         'deleted_at': 'deleted_at',
         'description': 'description',
         'dns_servers': 'dns_servers',
-        'entity_filter_results': 'entity_filter_results',
         'entity_async_status': 'entityAsyncStatus',
+        'entity_filter_results': 'entity_filter_results',
         'firmware': 'firmware',
         'folder': 'folder',
         'gpu_devices': 'gpu_devices',
@@ -169,8 +169,8 @@ class Vm(object):
         self._deleted_at = None
         self._description = None
         self._dns_servers = None
-        self._entity_filter_results = None
         self._entity_async_status = None
+        self._entity_filter_results = None
         self._firmware = None
         self._folder = None
         self._gpu_devices = None
@@ -238,8 +238,8 @@ class Vm(object):
         if "description" in kwargs:
             self.description = kwargs["description"]
         self.dns_servers = kwargs.get("dns_servers", None)
-        self.entity_filter_results = kwargs.get("entity_filter_results", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.entity_filter_results = kwargs.get("entity_filter_results", None)
         if "firmware" in kwargs:
             self.firmware = kwargs["firmware"]
         self.folder = kwargs.get("folder", None)
@@ -508,27 +508,6 @@ class Vm(object):
         self._dns_servers = dns_servers
 
     @property
-    def entity_filter_results(self):
-        """Gets the entity_filter_results of this Vm.  # noqa: E501
-
-
-        :return: The entity_filter_results of this Vm.  # noqa: E501
-        :rtype: list[NestedVmEntityFilterResult]
-        """
-        return self._entity_filter_results
-
-    @entity_filter_results.setter
-    def entity_filter_results(self, entity_filter_results):
-        """Sets the entity_filter_results of this Vm.
-
-
-        :param entity_filter_results: The entity_filter_results of this Vm.  # noqa: E501
-        :type entity_filter_results: list[NestedVmEntityFilterResult]
-        """
-
-        self._entity_filter_results = entity_filter_results
-
-    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this Vm.  # noqa: E501
 
@@ -548,6 +527,27 @@ class Vm(object):
         """
 
         self._entity_async_status = entity_async_status
+
+    @property
+    def entity_filter_results(self):
+        """Gets the entity_filter_results of this Vm.  # noqa: E501
+
+
+        :return: The entity_filter_results of this Vm.  # noqa: E501
+        :rtype: list[NestedVmEntityFilterResult]
+        """
+        return self._entity_filter_results
+
+    @entity_filter_results.setter
+    def entity_filter_results(self, entity_filter_results):
+        """Sets the entity_filter_results of this Vm.
+
+
+        :param entity_filter_results: The entity_filter_results of this Vm.  # noqa: E501
+        :type entity_filter_results: list[NestedVmEntityFilterResult]
+        """
+
+        self._entity_filter_results = entity_filter_results
 
     @property
     def firmware(self):

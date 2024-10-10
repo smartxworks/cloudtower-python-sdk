@@ -26,6 +26,8 @@ class DeployWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[DeployWhereInput]',
+        '_not': 'list[DeployWhereInput]',
+        '_or': 'list[DeployWhereInput]',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -41,8 +43,6 @@ class DeployWhereInput(object):
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
         'license': 'LicenseWhereInput',
-        '_not': 'list[DeployWhereInput]',
-        '_or': 'list[DeployWhereInput]',
         'version': 'str',
         'version_contains': 'str',
         'version_ends_with': 'str',
@@ -61,6 +61,8 @@ class DeployWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -76,8 +78,6 @@ class DeployWhereInput(object):
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
         'license': 'license',
-        '_not': 'NOT',
-        '_or': 'OR',
         'version': 'version',
         'version_contains': 'version_contains',
         'version_ends_with': 'version_ends_with',
@@ -99,6 +99,8 @@ class DeployWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -114,8 +116,6 @@ class DeployWhereInput(object):
         self._id_not_starts_with = None
         self._id_starts_with = None
         self._license = None
-        self.__not = None
-        self.__or = None
         self._version = None
         self._version_contains = None
         self._version_ends_with = None
@@ -133,6 +133,8 @@ class DeployWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -148,8 +150,6 @@ class DeployWhereInput(object):
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
         self.license = kwargs.get("license", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.version = kwargs.get("version", None)
         self.version_contains = kwargs.get("version_contains", None)
         self.version_ends_with = kwargs.get("version_ends_with", None)
@@ -185,6 +185,48 @@ class DeployWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this DeployWhereInput.  # noqa: E501
+
+
+        :return: The _not of this DeployWhereInput.  # noqa: E501
+        :rtype: list[DeployWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this DeployWhereInput.
+
+
+        :param _not: The _not of this DeployWhereInput.  # noqa: E501
+        :type _not: list[DeployWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this DeployWhereInput.  # noqa: E501
+
+
+        :return: The _or of this DeployWhereInput.  # noqa: E501
+        :rtype: list[DeployWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this DeployWhereInput.
+
+
+        :param _or: The _or of this DeployWhereInput.  # noqa: E501
+        :type _or: list[DeployWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def id(self):
@@ -500,48 +542,6 @@ class DeployWhereInput(object):
         """
 
         self._license = license
-
-    @property
-    def _not(self):
-        """Gets the _not of this DeployWhereInput.  # noqa: E501
-
-
-        :return: The _not of this DeployWhereInput.  # noqa: E501
-        :rtype: list[DeployWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this DeployWhereInput.
-
-
-        :param _not: The _not of this DeployWhereInput.  # noqa: E501
-        :type _not: list[DeployWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this DeployWhereInput.  # noqa: E501
-
-
-        :return: The _or of this DeployWhereInput.  # noqa: E501
-        :rtype: list[DeployWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this DeployWhereInput.
-
-
-        :param _or: The _or of this DeployWhereInput.  # noqa: E501
-        :type _or: list[DeployWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def version(self):

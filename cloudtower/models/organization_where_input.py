@@ -26,6 +26,8 @@ class OrganizationWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[OrganizationWhereInput]',
+        '_not': 'list[OrganizationWhereInput]',
+        '_or': 'list[OrganizationWhereInput]',
         'datacenters_every': 'DatacenterWhereInput',
         'datacenters_none': 'DatacenterWhereInput',
         'datacenters_some': 'DatacenterWhereInput',
@@ -56,13 +58,13 @@ class OrganizationWhereInput(object):
         'name_not_ends_with': 'str',
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
-        'name_starts_with': 'str',
-        '_not': 'list[OrganizationWhereInput]',
-        '_or': 'list[OrganizationWhereInput]'
+        'name_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'datacenters_every': 'datacenters_every',
         'datacenters_none': 'datacenters_none',
         'datacenters_some': 'datacenters_some',
@@ -93,9 +95,7 @@ class OrganizationWhereInput(object):
         'name_not_ends_with': 'name_not_ends_with',
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
-        'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR'
+        'name_starts_with': 'name_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -103,6 +103,8 @@ class OrganizationWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._datacenters_every = None
         self._datacenters_none = None
         self._datacenters_some = None
@@ -134,11 +136,11 @@ class OrganizationWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.datacenters_every = kwargs.get("datacenters_every", None)
         self.datacenters_none = kwargs.get("datacenters_none", None)
         self.datacenters_some = kwargs.get("datacenters_some", None)
@@ -170,8 +172,6 @@ class OrganizationWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
 
     @property
     def _and(self):
@@ -193,6 +193,48 @@ class OrganizationWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this OrganizationWhereInput.  # noqa: E501
+
+
+        :return: The _not of this OrganizationWhereInput.  # noqa: E501
+        :rtype: list[OrganizationWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this OrganizationWhereInput.
+
+
+        :param _not: The _not of this OrganizationWhereInput.  # noqa: E501
+        :type _not: list[OrganizationWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this OrganizationWhereInput.  # noqa: E501
+
+
+        :return: The _or of this OrganizationWhereInput.  # noqa: E501
+        :rtype: list[OrganizationWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this OrganizationWhereInput.
+
+
+        :param _or: The _or of this OrganizationWhereInput.  # noqa: E501
+        :type _or: list[OrganizationWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def datacenters_every(self):
@@ -844,48 +886,6 @@ class OrganizationWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this OrganizationWhereInput.  # noqa: E501
-
-
-        :return: The _not of this OrganizationWhereInput.  # noqa: E501
-        :rtype: list[OrganizationWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this OrganizationWhereInput.
-
-
-        :param _not: The _not of this OrganizationWhereInput.  # noqa: E501
-        :type _not: list[OrganizationWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this OrganizationWhereInput.  # noqa: E501
-
-
-        :return: The _or of this OrganizationWhereInput.  # noqa: E501
-        :rtype: list[OrganizationWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this OrganizationWhereInput.
-
-
-        :param _or: The _or of this OrganizationWhereInput.  # noqa: E501
-        :type _or: list[OrganizationWhereInput]
-        """
-
-        self.__or = _or
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

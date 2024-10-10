@@ -25,6 +25,9 @@ class SystemAuditLogWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[SystemAuditLogWhereInput]',
+        '_not': 'list[SystemAuditLogWhereInput]',
+        '_or': 'list[SystemAuditLogWhereInput]',
         'action': 'str',
         'action_contains': 'str',
         'action_ends_with': 'str',
@@ -39,7 +42,6 @@ class SystemAuditLogWhereInput(object):
         'action_not_in': 'list[str]',
         'action_not_starts_with': 'str',
         'action_starts_with': 'str',
-        '_and': 'list[SystemAuditLogWhereInput]',
         'cluster': 'ClusterWhereInput',
         'finished_at': 'str',
         'finished_at_gt': 'str',
@@ -99,8 +101,6 @@ class SystemAuditLogWhereInput(object):
         'message_not_in': 'list[str]',
         'message_not_starts_with': 'str',
         'message_starts_with': 'str',
-        '_not': 'list[SystemAuditLogWhereInput]',
-        '_or': 'list[SystemAuditLogWhereInput]',
         'resource_id': 'str',
         'resource_id_contains': 'str',
         'resource_id_ends_with': 'str',
@@ -122,6 +122,9 @@ class SystemAuditLogWhereInput(object):
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'action': 'action',
         'action_contains': 'action_contains',
         'action_ends_with': 'action_ends_with',
@@ -136,7 +139,6 @@ class SystemAuditLogWhereInput(object):
         'action_not_in': 'action_not_in',
         'action_not_starts_with': 'action_not_starts_with',
         'action_starts_with': 'action_starts_with',
-        '_and': 'AND',
         'cluster': 'cluster',
         'finished_at': 'finished_at',
         'finished_at_gt': 'finished_at_gt',
@@ -196,8 +198,6 @@ class SystemAuditLogWhereInput(object):
         'message_not_in': 'message_not_in',
         'message_not_starts_with': 'message_not_starts_with',
         'message_starts_with': 'message_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'resource_id': 'resource_id',
         'resource_id_contains': 'resource_id_contains',
         'resource_id_ends_with': 'resource_id_ends_with',
@@ -222,6 +222,9 @@ class SystemAuditLogWhereInput(object):
         """SystemAuditLogWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._action = None
         self._action_contains = None
         self._action_ends_with = None
@@ -236,7 +239,6 @@ class SystemAuditLogWhereInput(object):
         self._action_not_in = None
         self._action_not_starts_with = None
         self._action_starts_with = None
-        self.__and = None
         self._cluster = None
         self._finished_at = None
         self._finished_at_gt = None
@@ -296,8 +298,6 @@ class SystemAuditLogWhereInput(object):
         self._message_not_in = None
         self._message_not_starts_with = None
         self._message_starts_with = None
-        self.__not = None
-        self.__or = None
         self._resource_id = None
         self._resource_id_contains = None
         self._resource_id_ends_with = None
@@ -318,6 +318,9 @@ class SystemAuditLogWhereInput(object):
         self._status_not_in = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.action = kwargs.get("action", None)
         self.action_contains = kwargs.get("action_contains", None)
         self.action_ends_with = kwargs.get("action_ends_with", None)
@@ -332,7 +335,6 @@ class SystemAuditLogWhereInput(object):
         self.action_not_in = kwargs.get("action_not_in", None)
         self.action_not_starts_with = kwargs.get("action_not_starts_with", None)
         self.action_starts_with = kwargs.get("action_starts_with", None)
-        self._and = kwargs.get("_and", None)
         self.cluster = kwargs.get("cluster", None)
         self.finished_at = kwargs.get("finished_at", None)
         self.finished_at_gt = kwargs.get("finished_at_gt", None)
@@ -392,8 +394,6 @@ class SystemAuditLogWhereInput(object):
         self.message_not_in = kwargs.get("message_not_in", None)
         self.message_not_starts_with = kwargs.get("message_not_starts_with", None)
         self.message_starts_with = kwargs.get("message_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.resource_id = kwargs.get("resource_id", None)
         self.resource_id_contains = kwargs.get("resource_id_contains", None)
         self.resource_id_ends_with = kwargs.get("resource_id_ends_with", None)
@@ -412,6 +412,69 @@ class SystemAuditLogWhereInput(object):
         self.status_in = kwargs.get("status_in", None)
         self.status_not = kwargs.get("status_not", None)
         self.status_not_in = kwargs.get("status_not_in", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this SystemAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _and of this SystemAuditLogWhereInput.  # noqa: E501
+        :rtype: list[SystemAuditLogWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this SystemAuditLogWhereInput.
+
+
+        :param _and: The _and of this SystemAuditLogWhereInput.  # noqa: E501
+        :type _and: list[SystemAuditLogWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SystemAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SystemAuditLogWhereInput.  # noqa: E501
+        :rtype: list[SystemAuditLogWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SystemAuditLogWhereInput.
+
+
+        :param _not: The _not of this SystemAuditLogWhereInput.  # noqa: E501
+        :type _not: list[SystemAuditLogWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SystemAuditLogWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SystemAuditLogWhereInput.  # noqa: E501
+        :rtype: list[SystemAuditLogWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SystemAuditLogWhereInput.
+
+
+        :param _or: The _or of this SystemAuditLogWhereInput.  # noqa: E501
+        :type _or: list[SystemAuditLogWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def action(self):
@@ -706,27 +769,6 @@ class SystemAuditLogWhereInput(object):
         """
 
         self._action_starts_with = action_starts_with
-
-    @property
-    def _and(self):
-        """Gets the _and of this SystemAuditLogWhereInput.  # noqa: E501
-
-
-        :return: The _and of this SystemAuditLogWhereInput.  # noqa: E501
-        :rtype: list[SystemAuditLogWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this SystemAuditLogWhereInput.
-
-
-        :param _and: The _and of this SystemAuditLogWhereInput.  # noqa: E501
-        :type _and: list[SystemAuditLogWhereInput]
-        """
-
-        self.__and = _and
 
     @property
     def cluster(self):
@@ -1966,48 +2008,6 @@ class SystemAuditLogWhereInput(object):
         """
 
         self._message_starts_with = message_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SystemAuditLogWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SystemAuditLogWhereInput.  # noqa: E501
-        :rtype: list[SystemAuditLogWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SystemAuditLogWhereInput.
-
-
-        :param _not: The _not of this SystemAuditLogWhereInput.  # noqa: E501
-        :type _not: list[SystemAuditLogWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SystemAuditLogWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SystemAuditLogWhereInput.  # noqa: E501
-        :rtype: list[SystemAuditLogWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SystemAuditLogWhereInput.
-
-
-        :param _or: The _or of this SystemAuditLogWhereInput.  # noqa: E501
-        :type _or: list[SystemAuditLogWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def resource_id(self):

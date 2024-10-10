@@ -25,6 +25,9 @@ class HostWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[HostWhereInput]',
+        '_not': 'list[HostWhereInput]',
+        '_or': 'list[HostWhereInput]',
         'access_ip': 'str',
         'access_ip_contains': 'str',
         'access_ip_ends_with': 'str',
@@ -55,7 +58,6 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'int',
         'allocatable_memory_bytes_not': 'int',
         'allocatable_memory_bytes_not_in': 'list[int]',
-        '_and': 'list[HostWhereInput]',
         'chunk_id': 'str',
         'chunk_id_contains': 'str',
         'chunk_id_ends_with': 'str',
@@ -296,8 +298,6 @@ class HostWhereInput(object):
         'node_topo_local_id_not_in': 'list[str]',
         'node_topo_local_id_not_starts_with': 'str',
         'node_topo_local_id_starts_with': 'str',
-        '_not': 'list[HostWhereInput]',
-        '_or': 'list[HostWhereInput]',
         'os_memory_bytes': 'int',
         'os_memory_bytes_gt': 'int',
         'os_memory_bytes_gte': 'int',
@@ -570,6 +570,9 @@ class HostWhereInput(object):
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'access_ip': 'access_ip',
         'access_ip_contains': 'access_ip_contains',
         'access_ip_ends_with': 'access_ip_ends_with',
@@ -600,7 +603,6 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'allocatable_memory_bytes_lte',
         'allocatable_memory_bytes_not': 'allocatable_memory_bytes_not',
         'allocatable_memory_bytes_not_in': 'allocatable_memory_bytes_not_in',
-        '_and': 'AND',
         'chunk_id': 'chunk_id',
         'chunk_id_contains': 'chunk_id_contains',
         'chunk_id_ends_with': 'chunk_id_ends_with',
@@ -841,8 +843,6 @@ class HostWhereInput(object):
         'node_topo_local_id_not_in': 'node_topo_local_id_not_in',
         'node_topo_local_id_not_starts_with': 'node_topo_local_id_not_starts_with',
         'node_topo_local_id_starts_with': 'node_topo_local_id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'os_memory_bytes': 'os_memory_bytes',
         'os_memory_bytes_gt': 'os_memory_bytes_gt',
         'os_memory_bytes_gte': 'os_memory_bytes_gte',
@@ -1118,6 +1118,9 @@ class HostWhereInput(object):
         """HostWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._access_ip = None
         self._access_ip_contains = None
         self._access_ip_ends_with = None
@@ -1148,7 +1151,6 @@ class HostWhereInput(object):
         self._allocatable_memory_bytes_lte = None
         self._allocatable_memory_bytes_not = None
         self._allocatable_memory_bytes_not_in = None
-        self.__and = None
         self._chunk_id = None
         self._chunk_id_contains = None
         self._chunk_id_ends_with = None
@@ -1389,8 +1391,6 @@ class HostWhereInput(object):
         self._node_topo_local_id_not_in = None
         self._node_topo_local_id_not_starts_with = None
         self._node_topo_local_id_starts_with = None
-        self.__not = None
-        self.__or = None
         self._os_memory_bytes = None
         self._os_memory_bytes_gt = None
         self._os_memory_bytes_gte = None
@@ -1662,6 +1662,9 @@ class HostWhereInput(object):
         self._zone = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.access_ip = kwargs.get("access_ip", None)
         self.access_ip_contains = kwargs.get("access_ip_contains", None)
         self.access_ip_ends_with = kwargs.get("access_ip_ends_with", None)
@@ -1692,7 +1695,6 @@ class HostWhereInput(object):
         self.allocatable_memory_bytes_lte = kwargs.get("allocatable_memory_bytes_lte", None)
         self.allocatable_memory_bytes_not = kwargs.get("allocatable_memory_bytes_not", None)
         self.allocatable_memory_bytes_not_in = kwargs.get("allocatable_memory_bytes_not_in", None)
-        self._and = kwargs.get("_and", None)
         self.chunk_id = kwargs.get("chunk_id", None)
         self.chunk_id_contains = kwargs.get("chunk_id_contains", None)
         self.chunk_id_ends_with = kwargs.get("chunk_id_ends_with", None)
@@ -1933,8 +1935,6 @@ class HostWhereInput(object):
         self.node_topo_local_id_not_in = kwargs.get("node_topo_local_id_not_in", None)
         self.node_topo_local_id_not_starts_with = kwargs.get("node_topo_local_id_not_starts_with", None)
         self.node_topo_local_id_starts_with = kwargs.get("node_topo_local_id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.os_memory_bytes = kwargs.get("os_memory_bytes", None)
         self.os_memory_bytes_gt = kwargs.get("os_memory_bytes_gt", None)
         self.os_memory_bytes_gte = kwargs.get("os_memory_bytes_gte", None)
@@ -2204,6 +2204,69 @@ class HostWhereInput(object):
         self.with_faster_ssd_as_cache = kwargs.get("with_faster_ssd_as_cache", None)
         self.with_faster_ssd_as_cache_not = kwargs.get("with_faster_ssd_as_cache_not", None)
         self.zone = kwargs.get("zone", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this HostWhereInput.  # noqa: E501
+
+
+        :return: The _and of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this HostWhereInput.
+
+
+        :param _and: The _and of this HostWhereInput.  # noqa: E501
+        :type _and: list[HostWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The _not of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this HostWhereInput.
+
+
+        :param _not: The _not of this HostWhereInput.  # noqa: E501
+        :type _not: list[HostWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this HostWhereInput.  # noqa: E501
+
+
+        :return: The _or of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this HostWhereInput.
+
+
+        :param _or: The _or of this HostWhereInput.  # noqa: E501
+        :type _or: list[HostWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def access_ip(self):
@@ -2834,27 +2897,6 @@ class HostWhereInput(object):
         """
 
         self._allocatable_memory_bytes_not_in = allocatable_memory_bytes_not_in
-
-    @property
-    def _and(self):
-        """Gets the _and of this HostWhereInput.  # noqa: E501
-
-
-        :return: The _and of this HostWhereInput.  # noqa: E501
-        :rtype: list[HostWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this HostWhereInput.
-
-
-        :param _and: The _and of this HostWhereInput.  # noqa: E501
-        :type _and: list[HostWhereInput]
-        """
-
-        self.__and = _and
 
     @property
     def chunk_id(self):
@@ -7895,48 +7937,6 @@ class HostWhereInput(object):
         """
 
         self._node_topo_local_id_starts_with = node_topo_local_id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this HostWhereInput.  # noqa: E501
-
-
-        :return: The _not of this HostWhereInput.  # noqa: E501
-        :rtype: list[HostWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this HostWhereInput.
-
-
-        :param _not: The _not of this HostWhereInput.  # noqa: E501
-        :type _not: list[HostWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this HostWhereInput.  # noqa: E501
-
-
-        :return: The _or of this HostWhereInput.  # noqa: E501
-        :rtype: list[HostWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this HostWhereInput.
-
-
-        :param _or: The _or of this HostWhereInput.  # noqa: E501
-        :type _or: list[HostWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def os_memory_bytes(self):

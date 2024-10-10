@@ -1,5 +1,19 @@
 # RELEASE NOTE
 
+## release 日期 2024-10-10
+
+v2.13.1 release (tower version 3.4.4)
+
+### update
+
+- 新增 [image_utils] 工具类，支持通过 uploadTask 来获取上传后的 elfImage 与 contentLibraryImage
+- [VmApi]: [create_vm_from_content_library_template_batch]: 支持批量通过内容库模板创建虚拟机
+
+### bugfix
+
+- [utils]: 移除代码中的 type annotation 以支持 python2
+- pick 4.0.0 ~ 4.3.0 上修复的已有 api 的 bugfix，详见 master 分支的 [release_note](https://github.com/smartxworks/cloudtower-python-sdk/blob/master/RELEASENOTE.md)
+
 ## release 日期 2023-11-07
 
 v2.13.0 release (tower version 3.4.0)
@@ -30,7 +44,7 @@ v2.12.0 release (tower version 3.3.0)
   - 新增 [remove_vm_pci_nic] 支持为已有的虚拟机卸载 PCI 网卡
 - [VmApi] 优化卸载网卡:
   - [remove_vm_nic] `nic_index` 作为删除标记不够稳定，弃用
-  - [remove_vm_nic_by_where] 新方法，支持使用 where 条件来筛选需要的网卡，对于 VmNic 而言，可以配合使用 vm + mac_address 的筛选， `{vm:<vm_where>, mac_address:<mac_address>}` 的形式来较为稳定的筛选出需要的 VmNic
+  - [remove_vm_nic_by_where] 新方法，支持使用 where 条件来筛选需要的网卡，对于 \_vm_nic 而言，可以配合使用 vm + mac_address 的筛选， `{vm:<vm_where>, mac_address:<mac_address>}` 的形式来较为稳定的筛选出需要的 \_vm_nic
 - [NicApi] [update_nic] 支持通过 `nic_user_usage` 更新网口用途
 - [LabelApi] 支持为 GPU 设备打标签
 
@@ -48,14 +62,14 @@ v2.11.0 release (tower version 3.2.0)
 
 ### breaking change
 
-- [VmApi] [VmImportParams]: 由于 `VmNicParams` 支持配置 qos 配置，现在设计网卡的参数由 `VmNicParams` 更新为了 `VmImportNicParams`，类型和过去一致，没有 qos 支持。
+- [VmApi] [VmImportParams]: 由于 `_vm_nicParams` 支持配置 qos 配置，现在设计网卡的参数由 `_vm_nicParams` 更新为了 `VmImportNicParams`，类型和过去一致，没有 qos 支持。
 
 ### update
 
 - feature: [VmVolumeApi]: [import_vm_volume] [export_vm_volume]: 现在支持虚拟卷的导入与导出
 - feature: [ContentLibraryVmTemplateApi]: [import_content_library_vm_template] [export_content_library_vm_template]: 现在支持虚拟机模板的导入与导出
 - feature: [VmApi]: [update_vm_nic_qos_option]: 现在支持通过 api 更新现有虚拟机网卡的 qos 属性
-- optimize: [VmNicParams]: 现在支持配置 `qos` 参数，用于在创建虚拟机（直接创建，模板创建，快照重建，克隆创建）时配置虚拟机网卡的 qos 参数
+- optimize: [_vm_nicParams]: 现在支持配置 `qos` 参数，用于在创建虚拟机（直接创建，模板创建，快照重建，克隆创建）时配置虚拟机网卡的 qos 参数
 
 ### bugfix
 

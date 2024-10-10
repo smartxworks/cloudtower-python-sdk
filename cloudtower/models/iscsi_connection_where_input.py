@@ -26,6 +26,8 @@ class IscsiConnectionWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[IscsiConnectionWhereInput]',
+        '_not': 'list[IscsiConnectionWhereInput]',
+        '_or': 'list[IscsiConnectionWhereInput]',
         'client_port': 'int',
         'client_port_gt': 'int',
         'client_port_gte': 'int',
@@ -65,9 +67,7 @@ class IscsiConnectionWhereInput(object):
         'initiator_ip_not_starts_with': 'str',
         'initiator_ip_starts_with': 'str',
         'iscsi_target': 'IscsiTargetWhereInput',
-        '_not': 'list[IscsiConnectionWhereInput]',
         'nvmf_subsystem': 'NvmfSubsystemWhereInput',
-        '_or': 'list[IscsiConnectionWhereInput]',
         'tr_type': 'StoreTransportType',
         'tr_type_in': 'list[StoreTransportType]',
         'tr_type_not': 'StoreTransportType',
@@ -80,6 +80,8 @@ class IscsiConnectionWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'client_port': 'client_port',
         'client_port_gt': 'client_port_gt',
         'client_port_gte': 'client_port_gte',
@@ -119,9 +121,7 @@ class IscsiConnectionWhereInput(object):
         'initiator_ip_not_starts_with': 'initiator_ip_not_starts_with',
         'initiator_ip_starts_with': 'initiator_ip_starts_with',
         'iscsi_target': 'iscsi_target',
-        '_not': 'NOT',
         'nvmf_subsystem': 'nvmf_subsystem',
-        '_or': 'OR',
         'tr_type': 'tr_type',
         'tr_type_in': 'tr_type_in',
         'tr_type_not': 'tr_type_not',
@@ -137,6 +137,8 @@ class IscsiConnectionWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._client_port = None
         self._client_port_gt = None
         self._client_port_gte = None
@@ -176,9 +178,7 @@ class IscsiConnectionWhereInput(object):
         self._initiator_ip_not_starts_with = None
         self._initiator_ip_starts_with = None
         self._iscsi_target = None
-        self.__not = None
         self._nvmf_subsystem = None
-        self.__or = None
         self._tr_type = None
         self._tr_type_in = None
         self._tr_type_not = None
@@ -190,6 +190,8 @@ class IscsiConnectionWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.client_port = kwargs.get("client_port", None)
         self.client_port_gt = kwargs.get("client_port_gt", None)
         self.client_port_gte = kwargs.get("client_port_gte", None)
@@ -229,9 +231,7 @@ class IscsiConnectionWhereInput(object):
         self.initiator_ip_not_starts_with = kwargs.get("initiator_ip_not_starts_with", None)
         self.initiator_ip_starts_with = kwargs.get("initiator_ip_starts_with", None)
         self.iscsi_target = kwargs.get("iscsi_target", None)
-        self._not = kwargs.get("_not", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
-        self._or = kwargs.get("_or", None)
         self.tr_type = kwargs.get("tr_type", None)
         self.tr_type_in = kwargs.get("tr_type_in", None)
         self.tr_type_not = kwargs.get("tr_type_not", None)
@@ -261,6 +261,48 @@ class IscsiConnectionWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this IscsiConnectionWhereInput.  # noqa: E501
+
+
+        :return: The _not of this IscsiConnectionWhereInput.  # noqa: E501
+        :rtype: list[IscsiConnectionWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this IscsiConnectionWhereInput.
+
+
+        :param _not: The _not of this IscsiConnectionWhereInput.  # noqa: E501
+        :type _not: list[IscsiConnectionWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this IscsiConnectionWhereInput.  # noqa: E501
+
+
+        :return: The _or of this IscsiConnectionWhereInput.  # noqa: E501
+        :rtype: list[IscsiConnectionWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this IscsiConnectionWhereInput.
+
+
+        :param _or: The _or of this IscsiConnectionWhereInput.  # noqa: E501
+        :type _or: list[IscsiConnectionWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def client_port(self):
@@ -1082,27 +1124,6 @@ class IscsiConnectionWhereInput(object):
         self._iscsi_target = iscsi_target
 
     @property
-    def _not(self):
-        """Gets the _not of this IscsiConnectionWhereInput.  # noqa: E501
-
-
-        :return: The _not of this IscsiConnectionWhereInput.  # noqa: E501
-        :rtype: list[IscsiConnectionWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this IscsiConnectionWhereInput.
-
-
-        :param _not: The _not of this IscsiConnectionWhereInput.  # noqa: E501
-        :type _not: list[IscsiConnectionWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nvmf_subsystem(self):
         """Gets the nvmf_subsystem of this IscsiConnectionWhereInput.  # noqa: E501
 
@@ -1122,27 +1143,6 @@ class IscsiConnectionWhereInput(object):
         """
 
         self._nvmf_subsystem = nvmf_subsystem
-
-    @property
-    def _or(self):
-        """Gets the _or of this IscsiConnectionWhereInput.  # noqa: E501
-
-
-        :return: The _or of this IscsiConnectionWhereInput.  # noqa: E501
-        :rtype: list[IscsiConnectionWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this IscsiConnectionWhereInput.
-
-
-        :param _or: The _or of this IscsiConnectionWhereInput.  # noqa: E501
-        :type _or: list[IscsiConnectionWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def tr_type(self):

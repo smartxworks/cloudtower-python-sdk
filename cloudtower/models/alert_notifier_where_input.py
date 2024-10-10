@@ -26,6 +26,8 @@ class AlertNotifierWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[AlertNotifierWhereInput]',
+        '_not': 'list[AlertNotifierWhereInput]',
+        '_or': 'list[AlertNotifierWhereInput]',
         'clusters_every': 'ClusterWhereInput',
         'clusters_none': 'ClusterWhereInput',
         'clusters_some': 'ClusterWhereInput',
@@ -81,8 +83,6 @@ class AlertNotifierWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[AlertNotifierWhereInput]',
-        '_or': 'list[AlertNotifierWhereInput]',
         'security_mode': 'NotifierSecurityMode',
         'security_mode_in': 'list[NotifierSecurityMode]',
         'security_mode_not': 'NotifierSecurityMode',
@@ -128,6 +128,8 @@ class AlertNotifierWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'clusters_every': 'clusters_every',
         'clusters_none': 'clusters_none',
         'clusters_some': 'clusters_some',
@@ -183,8 +185,6 @@ class AlertNotifierWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'security_mode': 'security_mode',
         'security_mode_in': 'security_mode_in',
         'security_mode_not': 'security_mode_not',
@@ -233,6 +233,8 @@ class AlertNotifierWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._clusters_every = None
         self._clusters_none = None
         self._clusters_some = None
@@ -288,8 +290,6 @@ class AlertNotifierWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._security_mode = None
         self._security_mode_in = None
         self._security_mode_not = None
@@ -334,6 +334,8 @@ class AlertNotifierWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.clusters_every = kwargs.get("clusters_every", None)
         self.clusters_none = kwargs.get("clusters_none", None)
         self.clusters_some = kwargs.get("clusters_some", None)
@@ -389,8 +391,6 @@ class AlertNotifierWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.security_mode = kwargs.get("security_mode", None)
         self.security_mode_in = kwargs.get("security_mode_in", None)
         self.security_mode_not = kwargs.get("security_mode_not", None)
@@ -453,6 +453,48 @@ class AlertNotifierWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The _not of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[AlertNotifierWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this AlertNotifierWhereInput.
+
+
+        :param _not: The _not of this AlertNotifierWhereInput.  # noqa: E501
+        :type _not: list[AlertNotifierWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this AlertNotifierWhereInput.  # noqa: E501
+
+
+        :return: The _or of this AlertNotifierWhereInput.  # noqa: E501
+        :rtype: list[AlertNotifierWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this AlertNotifierWhereInput.
+
+
+        :param _or: The _or of this AlertNotifierWhereInput.  # noqa: E501
+        :type _or: list[AlertNotifierWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def clusters_every(self):
@@ -1608,48 +1650,6 @@ class AlertNotifierWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this AlertNotifierWhereInput.  # noqa: E501
-
-
-        :return: The _not of this AlertNotifierWhereInput.  # noqa: E501
-        :rtype: list[AlertNotifierWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this AlertNotifierWhereInput.
-
-
-        :param _not: The _not of this AlertNotifierWhereInput.  # noqa: E501
-        :type _not: list[AlertNotifierWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this AlertNotifierWhereInput.  # noqa: E501
-
-
-        :return: The _or of this AlertNotifierWhereInput.  # noqa: E501
-        :rtype: list[AlertNotifierWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this AlertNotifierWhereInput.
-
-
-        :param _or: The _or of this AlertNotifierWhereInput.  # noqa: E501
-        :type _or: list[AlertNotifierWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def security_mode(self):

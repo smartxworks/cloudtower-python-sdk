@@ -25,8 +25,10 @@ class AlertWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'alert_rule': 'AlertRuleWhereInput',
         '_and': 'list[AlertWhereInput]',
+        '_not': 'list[AlertWhereInput]',
+        '_or': 'list[AlertWhereInput]',
+        'alert_rule': 'AlertRuleWhereInput',
         'cause': 'str',
         'cause_contains': 'str',
         'cause_ends_with': 'str',
@@ -160,8 +162,6 @@ class AlertWhereInput(object):
         'message_not_in': 'list[str]',
         'message_not_starts_with': 'str',
         'message_starts_with': 'str',
-        '_not': 'list[AlertWhereInput]',
-        '_or': 'list[AlertWhereInput]',
         'severity': 'str',
         'severity_contains': 'str',
         'severity_ends_with': 'str',
@@ -212,8 +212,10 @@ class AlertWhereInput(object):
     }
 
     attribute_map = {
-        'alert_rule': 'alert_rule',
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
+        'alert_rule': 'alert_rule',
         'cause': 'cause',
         'cause_contains': 'cause_contains',
         'cause_ends_with': 'cause_ends_with',
@@ -347,8 +349,6 @@ class AlertWhereInput(object):
         'message_not_in': 'message_not_in',
         'message_not_starts_with': 'message_not_starts_with',
         'message_starts_with': 'message_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'severity': 'severity',
         'severity_contains': 'severity_contains',
         'severity_ends_with': 'severity_ends_with',
@@ -402,8 +402,10 @@ class AlertWhereInput(object):
         """AlertWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self._alert_rule = None
         self.__and = None
+        self.__not = None
+        self.__or = None
+        self._alert_rule = None
         self._cause = None
         self._cause_contains = None
         self._cause_ends_with = None
@@ -537,8 +539,6 @@ class AlertWhereInput(object):
         self._message_not_in = None
         self._message_not_starts_with = None
         self._message_starts_with = None
-        self.__not = None
-        self.__or = None
         self._severity = None
         self._severity_contains = None
         self._severity_ends_with = None
@@ -588,8 +588,10 @@ class AlertWhereInput(object):
         self._vms_some = None
         self.discriminator = None
 
-        self.alert_rule = kwargs.get("alert_rule", None)
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
+        self.alert_rule = kwargs.get("alert_rule", None)
         self.cause = kwargs.get("cause", None)
         self.cause_contains = kwargs.get("cause_contains", None)
         self.cause_ends_with = kwargs.get("cause_ends_with", None)
@@ -723,8 +725,6 @@ class AlertWhereInput(object):
         self.message_not_in = kwargs.get("message_not_in", None)
         self.message_not_starts_with = kwargs.get("message_not_starts_with", None)
         self.message_starts_with = kwargs.get("message_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.severity = kwargs.get("severity", None)
         self.severity_contains = kwargs.get("severity_contains", None)
         self.severity_ends_with = kwargs.get("severity_ends_with", None)
@@ -774,27 +774,6 @@ class AlertWhereInput(object):
         self.vms_some = kwargs.get("vms_some", None)
 
     @property
-    def alert_rule(self):
-        """Gets the alert_rule of this AlertWhereInput.  # noqa: E501
-
-
-        :return: The alert_rule of this AlertWhereInput.  # noqa: E501
-        :rtype: AlertRuleWhereInput
-        """
-        return self._alert_rule
-
-    @alert_rule.setter
-    def alert_rule(self, alert_rule):
-        """Sets the alert_rule of this AlertWhereInput.
-
-
-        :param alert_rule: The alert_rule of this AlertWhereInput.  # noqa: E501
-        :type alert_rule: AlertRuleWhereInput
-        """
-
-        self._alert_rule = alert_rule
-
-    @property
     def _and(self):
         """Gets the _and of this AlertWhereInput.  # noqa: E501
 
@@ -814,6 +793,69 @@ class AlertWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this AlertWhereInput.  # noqa: E501
+
+
+        :return: The _not of this AlertWhereInput.  # noqa: E501
+        :rtype: list[AlertWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this AlertWhereInput.
+
+
+        :param _not: The _not of this AlertWhereInput.  # noqa: E501
+        :type _not: list[AlertWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this AlertWhereInput.  # noqa: E501
+
+
+        :return: The _or of this AlertWhereInput.  # noqa: E501
+        :rtype: list[AlertWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this AlertWhereInput.
+
+
+        :param _or: The _or of this AlertWhereInput.  # noqa: E501
+        :type _or: list[AlertWhereInput]
+        """
+
+        self.__or = _or
+
+    @property
+    def alert_rule(self):
+        """Gets the alert_rule of this AlertWhereInput.  # noqa: E501
+
+
+        :return: The alert_rule of this AlertWhereInput.  # noqa: E501
+        :rtype: AlertRuleWhereInput
+        """
+        return self._alert_rule
+
+    @alert_rule.setter
+    def alert_rule(self, alert_rule):
+        """Sets the alert_rule of this AlertWhereInput.
+
+
+        :param alert_rule: The alert_rule of this AlertWhereInput.  # noqa: E501
+        :type alert_rule: AlertRuleWhereInput
+        """
+
+        self._alert_rule = alert_rule
 
     @property
     def cause(self):
@@ -3607,48 +3649,6 @@ class AlertWhereInput(object):
         """
 
         self._message_starts_with = message_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this AlertWhereInput.  # noqa: E501
-
-
-        :return: The _not of this AlertWhereInput.  # noqa: E501
-        :rtype: list[AlertWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this AlertWhereInput.
-
-
-        :param _not: The _not of this AlertWhereInput.  # noqa: E501
-        :type _not: list[AlertWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this AlertWhereInput.  # noqa: E501
-
-
-        :return: The _or of this AlertWhereInput.  # noqa: E501
-        :rtype: list[AlertWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this AlertWhereInput.
-
-
-        :param _or: The _or of this AlertWhereInput.  # noqa: E501
-        :type _or: list[AlertWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def severity(self):

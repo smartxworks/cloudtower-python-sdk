@@ -26,6 +26,8 @@ class ClusterImageWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ClusterImageWhereInput]',
+        '_not': 'list[ClusterImageWhereInput]',
+        '_or': 'list[ClusterImageWhereInput]',
         'cluster': 'ClusterWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
@@ -95,8 +97,6 @@ class ClusterImageWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ClusterImageWhereInput]',
-        '_or': 'list[ClusterImageWhereInput]',
         'size': 'int',
         'size_gt': 'int',
         'size_gte': 'int',
@@ -155,6 +155,8 @@ class ClusterImageWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
@@ -224,8 +226,6 @@ class ClusterImageWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'size': 'size',
         'size_gt': 'size_gt',
         'size_gte': 'size_gte',
@@ -287,6 +287,8 @@ class ClusterImageWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._entity_async_status = None
         self._entity_async_status_in = None
@@ -356,8 +358,6 @@ class ClusterImageWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._size = None
         self._size_gt = None
         self._size_gte = None
@@ -415,6 +415,8 @@ class ClusterImageWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
@@ -484,8 +486,6 @@ class ClusterImageWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.size = kwargs.get("size", None)
         self.size_gt = kwargs.get("size_gt", None)
         self.size_gte = kwargs.get("size_gte", None)
@@ -561,6 +561,48 @@ class ClusterImageWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ClusterImageWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ClusterImageWhereInput.  # noqa: E501
+        :rtype: list[ClusterImageWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ClusterImageWhereInput.
+
+
+        :param _not: The _not of this ClusterImageWhereInput.  # noqa: E501
+        :type _not: list[ClusterImageWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ClusterImageWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ClusterImageWhereInput.  # noqa: E501
+        :rtype: list[ClusterImageWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ClusterImageWhereInput.
+
+
+        :param _or: The _or of this ClusterImageWhereInput.  # noqa: E501
+        :type _or: list[ClusterImageWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2010,48 +2052,6 @@ class ClusterImageWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ClusterImageWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ClusterImageWhereInput.  # noqa: E501
-        :rtype: list[ClusterImageWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ClusterImageWhereInput.
-
-
-        :param _not: The _not of this ClusterImageWhereInput.  # noqa: E501
-        :type _not: list[ClusterImageWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ClusterImageWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ClusterImageWhereInput.  # noqa: E501
-        :rtype: list[ClusterImageWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ClusterImageWhereInput.
-
-
-        :param _or: The _or of this ClusterImageWhereInput.  # noqa: E501
-        :type _or: list[ClusterImageWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def size(self):

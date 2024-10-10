@@ -101,6 +101,7 @@ cloudtower/api/zone_topo_api.py
 cloudtower/api_client.py
 cloudtower/configuration.py
 cloudtower/exceptions.py
+cloudtower/image_utils.py
 cloudtower/models/__init__.py
 cloudtower/models/abort_migrate_vm_across_cluster_params.py
 cloudtower/models/access_mode.py
@@ -1252,6 +1253,8 @@ cloudtower/models/vm_cd_rom_params.py
 cloudtower/models/vm_clock_offset.py
 cloudtower/models/vm_clone_params.py
 cloudtower/models/vm_connection.py
+cloudtower/models/vm_create_vm_from_content_library_template_batch_params.py
+cloudtower/models/vm_create_vm_from_content_library_template_batch_vm_params.py
 cloudtower/models/vm_create_vm_from_content_library_template_params.py
 cloudtower/models/vm_create_vm_from_template_params.py
 cloudtower/models/vm_creation_params.py
@@ -1503,6 +1506,7 @@ cloudtower/models/with_task_vds.py
 cloudtower/models/with_task_view.py
 cloudtower/models/with_task_vlan.py
 cloudtower/models/with_task_vm.py
+cloudtower/models/with_task_vm_array.py
 cloudtower/models/with_task_vm_export_file.py
 cloudtower/models/with_task_vm_folder.py
 cloudtower/models/with_task_vm_placement_group.py

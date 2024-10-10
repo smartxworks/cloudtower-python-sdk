@@ -26,6 +26,8 @@ class ContentLibraryVmTemplateWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ContentLibraryVmTemplateWhereInput]',
+        '_not': 'list[ContentLibraryVmTemplateWhereInput]',
+        '_or': 'list[ContentLibraryVmTemplateWhereInput]',
         'architecture': 'Architecture',
         'architecture_in': 'list[Architecture]',
         'architecture_not': 'Architecture',
@@ -100,8 +102,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ContentLibraryVmTemplateWhereInput]',
-        '_or': 'list[ContentLibraryVmTemplateWhereInput]',
         'os': 'str',
         'os_contains': 'str',
         'os_ends_with': 'str',
@@ -139,6 +139,8 @@ class ContentLibraryVmTemplateWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'architecture': 'architecture',
         'architecture_in': 'architecture_in',
         'architecture_not': 'architecture_not',
@@ -213,8 +215,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'os': 'os',
         'os_contains': 'os_contains',
         'os_ends_with': 'os_ends_with',
@@ -255,6 +255,8 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._architecture = None
         self._architecture_in = None
         self._architecture_not = None
@@ -329,8 +331,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._os = None
         self._os_contains = None
         self._os_ends_with = None
@@ -367,6 +367,8 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.architecture = kwargs.get("architecture", None)
         self.architecture_in = kwargs.get("architecture_in", None)
         self.architecture_not = kwargs.get("architecture_not", None)
@@ -441,8 +443,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.os = kwargs.get("os", None)
         self.os_contains = kwargs.get("os_contains", None)
         self.os_ends_with = kwargs.get("os_ends_with", None)
@@ -497,6 +497,48 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[ContentLibraryVmTemplateWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param _not: The _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type _not: list[ContentLibraryVmTemplateWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[ContentLibraryVmTemplateWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param _or: The _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type _or: list[ContentLibraryVmTemplateWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def architecture(self):
@@ -2051,48 +2093,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: list[ContentLibraryVmTemplateWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param _not: The _not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type _not: list[ContentLibraryVmTemplateWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: list[ContentLibraryVmTemplateWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param _or: The _or of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type _or: list[ContentLibraryVmTemplateWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def os(self):

@@ -26,6 +26,8 @@ class UserWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[UserWhereInput]',
+        '_not': 'list[UserWhereInput]',
+        '_or': 'list[UserWhereInput]',
         'auth_config_id': 'str',
         'auth_config_id_contains': 'str',
         'auth_config_id_ends_with': 'str',
@@ -126,8 +128,6 @@ class UserWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[UserWhereInput]',
-        '_or': 'list[UserWhereInput]',
         'password_expired': 'bool',
         'password_expired_not': 'bool',
         'password_updated_at': 'str',
@@ -167,6 +167,8 @@ class UserWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'auth_config_id': 'auth_config_id',
         'auth_config_id_contains': 'auth_config_id_contains',
         'auth_config_id_ends_with': 'auth_config_id_ends_with',
@@ -267,8 +269,6 @@ class UserWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'password_expired': 'password_expired',
         'password_expired_not': 'password_expired_not',
         'password_updated_at': 'password_updated_at',
@@ -311,6 +311,8 @@ class UserWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._auth_config_id = None
         self._auth_config_id_contains = None
         self._auth_config_id_ends_with = None
@@ -411,8 +413,6 @@ class UserWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._password_expired = None
         self._password_expired_not = None
         self._password_updated_at = None
@@ -451,6 +451,8 @@ class UserWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.auth_config_id = kwargs.get("auth_config_id", None)
         self.auth_config_id_contains = kwargs.get("auth_config_id_contains", None)
         self.auth_config_id_ends_with = kwargs.get("auth_config_id_ends_with", None)
@@ -551,8 +553,6 @@ class UserWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.password_expired = kwargs.get("password_expired", None)
         self.password_expired_not = kwargs.get("password_expired_not", None)
         self.password_updated_at = kwargs.get("password_updated_at", None)
@@ -609,6 +609,48 @@ class UserWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this UserWhereInput.  # noqa: E501
+
+
+        :return: The _not of this UserWhereInput.  # noqa: E501
+        :rtype: list[UserWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this UserWhereInput.
+
+
+        :param _not: The _not of this UserWhereInput.  # noqa: E501
+        :type _not: list[UserWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this UserWhereInput.  # noqa: E501
+
+
+        :return: The _or of this UserWhereInput.  # noqa: E501
+        :rtype: list[UserWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this UserWhereInput.
+
+
+        :param _or: The _or of this UserWhereInput.  # noqa: E501
+        :type _or: list[UserWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def auth_config_id(self):
@@ -2709,48 +2751,6 @@ class UserWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this UserWhereInput.  # noqa: E501
-
-
-        :return: The _not of this UserWhereInput.  # noqa: E501
-        :rtype: list[UserWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this UserWhereInput.
-
-
-        :param _not: The _not of this UserWhereInput.  # noqa: E501
-        :type _not: list[UserWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this UserWhereInput.  # noqa: E501
-
-
-        :return: The _or of this UserWhereInput.  # noqa: E501
-        :rtype: list[UserWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this UserWhereInput.
-
-
-        :param _or: The _or of this UserWhereInput.  # noqa: E501
-        :type _or: list[UserWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def password_expired(self):

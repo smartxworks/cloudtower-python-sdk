@@ -26,6 +26,8 @@ class ClusterSettingsWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ClusterSettingsWhereInput]',
+        '_not': 'list[ClusterSettingsWhereInput]',
+        '_or': 'list[ClusterSettingsWhereInput]',
         'cluster': 'ClusterWhereInput',
         'default_ha': 'bool',
         'default_ha_not': 'bool',
@@ -48,13 +50,13 @@ class ClusterSettingsWhereInput(object):
         'id_not_ends_with': 'str',
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
-        'id_starts_with': 'str',
-        '_not': 'list[ClusterSettingsWhereInput]',
-        '_or': 'list[ClusterSettingsWhereInput]'
+        'id_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'default_ha': 'default_ha',
         'default_ha_not': 'default_ha_not',
@@ -77,9 +79,7 @@ class ClusterSettingsWhereInput(object):
         'id_not_ends_with': 'id_not_ends_with',
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
-        'id_starts_with': 'id_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR'
+        'id_starts_with': 'id_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -87,6 +87,8 @@ class ClusterSettingsWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._default_ha = None
         self._default_ha_not = None
@@ -110,11 +112,11 @@ class ClusterSettingsWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self.__not = None
-        self.__or = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.default_ha = kwargs.get("default_ha", None)
         self.default_ha_not = kwargs.get("default_ha_not", None)
@@ -138,8 +140,6 @@ class ClusterSettingsWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
 
     @property
     def _and(self):
@@ -161,6 +161,48 @@ class ClusterSettingsWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: list[ClusterSettingsWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ClusterSettingsWhereInput.
+
+
+        :param _not: The _not of this ClusterSettingsWhereInput.  # noqa: E501
+        :type _not: list[ClusterSettingsWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ClusterSettingsWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ClusterSettingsWhereInput.  # noqa: E501
+        :rtype: list[ClusterSettingsWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ClusterSettingsWhereInput.
+
+
+        :param _or: The _or of this ClusterSettingsWhereInput.  # noqa: E501
+        :type _or: list[ClusterSettingsWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -644,48 +686,6 @@ class ClusterSettingsWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: list[ClusterSettingsWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ClusterSettingsWhereInput.
-
-
-        :param _not: The _not of this ClusterSettingsWhereInput.  # noqa: E501
-        :type _not: list[ClusterSettingsWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: list[ClusterSettingsWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ClusterSettingsWhereInput.
-
-
-        :param _or: The _or of this ClusterSettingsWhereInput.  # noqa: E501
-        :type _or: list[ClusterSettingsWhereInput]
-        """
-
-        self.__or = _or
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

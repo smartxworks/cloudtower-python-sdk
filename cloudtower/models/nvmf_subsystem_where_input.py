@@ -26,6 +26,8 @@ class NvmfSubsystemWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[NvmfSubsystemWhereInput]',
+        '_not': 'list[NvmfSubsystemWhereInput]',
+        '_or': 'list[NvmfSubsystemWhereInput]',
         'bps': 'int',
         'bps_gt': 'int',
         'bps_gte': 'int',
@@ -266,7 +268,6 @@ class NvmfSubsystemWhereInput(object):
         'namespaces_every': 'NvmfNamespaceWhereInput',
         'namespaces_none': 'NvmfNamespaceWhereInput',
         'namespaces_some': 'NvmfNamespaceWhereInput',
-        '_not': 'list[NvmfSubsystemWhereInput]',
         'nqn_name': 'str',
         'nqn_name_contains': 'str',
         'nqn_name_ends_with': 'str',
@@ -295,7 +296,6 @@ class NvmfSubsystemWhereInput(object):
         'nqn_whitelist_not_in': 'list[str]',
         'nqn_whitelist_not_starts_with': 'str',
         'nqn_whitelist_starts_with': 'str',
-        '_or': 'list[NvmfSubsystemWhereInput]',
         'policy': 'NvmfSubsystemPolicyType',
         'policy_in': 'list[NvmfSubsystemPolicyType]',
         'policy_not': 'NvmfSubsystemPolicyType',
@@ -330,6 +330,8 @@ class NvmfSubsystemWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'bps': 'bps',
         'bps_gt': 'bps_gt',
         'bps_gte': 'bps_gte',
@@ -570,7 +572,6 @@ class NvmfSubsystemWhereInput(object):
         'namespaces_every': 'namespaces_every',
         'namespaces_none': 'namespaces_none',
         'namespaces_some': 'namespaces_some',
-        '_not': 'NOT',
         'nqn_name': 'nqn_name',
         'nqn_name_contains': 'nqn_name_contains',
         'nqn_name_ends_with': 'nqn_name_ends_with',
@@ -599,7 +600,6 @@ class NvmfSubsystemWhereInput(object):
         'nqn_whitelist_not_in': 'nqn_whitelist_not_in',
         'nqn_whitelist_not_starts_with': 'nqn_whitelist_not_starts_with',
         'nqn_whitelist_starts_with': 'nqn_whitelist_starts_with',
-        '_or': 'OR',
         'policy': 'policy',
         'policy_in': 'policy_in',
         'policy_not': 'policy_not',
@@ -637,6 +637,8 @@ class NvmfSubsystemWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._bps = None
         self._bps_gt = None
         self._bps_gte = None
@@ -877,7 +879,6 @@ class NvmfSubsystemWhereInput(object):
         self._namespaces_every = None
         self._namespaces_none = None
         self._namespaces_some = None
-        self.__not = None
         self._nqn_name = None
         self._nqn_name_contains = None
         self._nqn_name_ends_with = None
@@ -906,7 +907,6 @@ class NvmfSubsystemWhereInput(object):
         self._nqn_whitelist_not_in = None
         self._nqn_whitelist_not_starts_with = None
         self._nqn_whitelist_starts_with = None
-        self.__or = None
         self._policy = None
         self._policy_in = None
         self._policy_not = None
@@ -940,6 +940,8 @@ class NvmfSubsystemWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.bps = kwargs.get("bps", None)
         self.bps_gt = kwargs.get("bps_gt", None)
         self.bps_gte = kwargs.get("bps_gte", None)
@@ -1180,7 +1182,6 @@ class NvmfSubsystemWhereInput(object):
         self.namespaces_every = kwargs.get("namespaces_every", None)
         self.namespaces_none = kwargs.get("namespaces_none", None)
         self.namespaces_some = kwargs.get("namespaces_some", None)
-        self._not = kwargs.get("_not", None)
         self.nqn_name = kwargs.get("nqn_name", None)
         self.nqn_name_contains = kwargs.get("nqn_name_contains", None)
         self.nqn_name_ends_with = kwargs.get("nqn_name_ends_with", None)
@@ -1209,7 +1210,6 @@ class NvmfSubsystemWhereInput(object):
         self.nqn_whitelist_not_in = kwargs.get("nqn_whitelist_not_in", None)
         self.nqn_whitelist_not_starts_with = kwargs.get("nqn_whitelist_not_starts_with", None)
         self.nqn_whitelist_starts_with = kwargs.get("nqn_whitelist_starts_with", None)
-        self._or = kwargs.get("_or", None)
         self.policy = kwargs.get("policy", None)
         self.policy_in = kwargs.get("policy_in", None)
         self.policy_not = kwargs.get("policy_not", None)
@@ -1261,6 +1261,48 @@ class NvmfSubsystemWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this NvmfSubsystemWhereInput.  # noqa: E501
+
+
+        :return: The _not of this NvmfSubsystemWhereInput.  # noqa: E501
+        :rtype: list[NvmfSubsystemWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this NvmfSubsystemWhereInput.
+
+
+        :param _not: The _not of this NvmfSubsystemWhereInput.  # noqa: E501
+        :type _not: list[NvmfSubsystemWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this NvmfSubsystemWhereInput.  # noqa: E501
+
+
+        :return: The _or of this NvmfSubsystemWhereInput.  # noqa: E501
+        :rtype: list[NvmfSubsystemWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this NvmfSubsystemWhereInput.
+
+
+        :param _or: The _or of this NvmfSubsystemWhereInput.  # noqa: E501
+        :type _or: list[NvmfSubsystemWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def bps(self):
@@ -6303,27 +6345,6 @@ class NvmfSubsystemWhereInput(object):
         self._namespaces_some = namespaces_some
 
     @property
-    def _not(self):
-        """Gets the _not of this NvmfSubsystemWhereInput.  # noqa: E501
-
-
-        :return: The _not of this NvmfSubsystemWhereInput.  # noqa: E501
-        :rtype: list[NvmfSubsystemWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this NvmfSubsystemWhereInput.
-
-
-        :param _not: The _not of this NvmfSubsystemWhereInput.  # noqa: E501
-        :type _not: list[NvmfSubsystemWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nqn_name(self):
         """Gets the nqn_name of this NvmfSubsystemWhereInput.  # noqa: E501
 
@@ -6910,27 +6931,6 @@ class NvmfSubsystemWhereInput(object):
         """
 
         self._nqn_whitelist_starts_with = nqn_whitelist_starts_with
-
-    @property
-    def _or(self):
-        """Gets the _or of this NvmfSubsystemWhereInput.  # noqa: E501
-
-
-        :return: The _or of this NvmfSubsystemWhereInput.  # noqa: E501
-        :rtype: list[NvmfSubsystemWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this NvmfSubsystemWhereInput.
-
-
-        :param _or: The _or of this NvmfSubsystemWhereInput.  # noqa: E501
-        :type _or: list[NvmfSubsystemWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def policy(self):

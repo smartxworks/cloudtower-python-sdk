@@ -26,6 +26,8 @@ class CloudTowerApplicationWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[CloudTowerApplicationWhereInput]',
+        '_not': 'list[CloudTowerApplicationWhereInput]',
+        '_or': 'list[CloudTowerApplicationWhereInput]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -58,8 +60,6 @@ class CloudTowerApplicationWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[CloudTowerApplicationWhereInput]',
-        '_or': 'list[CloudTowerApplicationWhereInput]',
         'package': 'CloudTowerApplicationPackageWhereInput',
         'placement_situation': 'str',
         'placement_situation_contains': 'str',
@@ -120,6 +120,8 @@ class CloudTowerApplicationWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -152,8 +154,6 @@ class CloudTowerApplicationWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'package': 'package',
         'placement_situation': 'placementSituation',
         'placement_situation_contains': 'placementSituation_contains',
@@ -217,6 +217,8 @@ class CloudTowerApplicationWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -249,8 +251,6 @@ class CloudTowerApplicationWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._package = None
         self._placement_situation = None
         self._placement_situation_contains = None
@@ -310,6 +310,8 @@ class CloudTowerApplicationWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -342,8 +344,6 @@ class CloudTowerApplicationWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.package = kwargs.get("package", None)
         self.placement_situation = kwargs.get("placement_situation", None)
         self.placement_situation_contains = kwargs.get("placement_situation_contains", None)
@@ -421,6 +421,48 @@ class CloudTowerApplicationWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this CloudTowerApplicationWhereInput.  # noqa: E501
+
+
+        :return: The _not of this CloudTowerApplicationWhereInput.  # noqa: E501
+        :rtype: list[CloudTowerApplicationWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this CloudTowerApplicationWhereInput.
+
+
+        :param _not: The _not of this CloudTowerApplicationWhereInput.  # noqa: E501
+        :type _not: list[CloudTowerApplicationWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this CloudTowerApplicationWhereInput.  # noqa: E501
+
+
+        :return: The _or of this CloudTowerApplicationWhereInput.  # noqa: E501
+        :rtype: list[CloudTowerApplicationWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this CloudTowerApplicationWhereInput.
+
+
+        :param _or: The _or of this CloudTowerApplicationWhereInput.  # noqa: E501
+        :type _or: list[CloudTowerApplicationWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def entity_async_status(self):
@@ -1093,48 +1135,6 @@ class CloudTowerApplicationWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this CloudTowerApplicationWhereInput.  # noqa: E501
-
-
-        :return: The _not of this CloudTowerApplicationWhereInput.  # noqa: E501
-        :rtype: list[CloudTowerApplicationWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this CloudTowerApplicationWhereInput.
-
-
-        :param _not: The _not of this CloudTowerApplicationWhereInput.  # noqa: E501
-        :type _not: list[CloudTowerApplicationWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this CloudTowerApplicationWhereInput.  # noqa: E501
-
-
-        :return: The _or of this CloudTowerApplicationWhereInput.  # noqa: E501
-        :rtype: list[CloudTowerApplicationWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this CloudTowerApplicationWhereInput.
-
-
-        :param _or: The _or of this CloudTowerApplicationWhereInput.  # noqa: E501
-        :type _or: list[CloudTowerApplicationWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def package(self):

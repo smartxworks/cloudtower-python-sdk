@@ -26,6 +26,8 @@ class BrickTopoWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[BrickTopoWhereInput]',
+        '_not': 'list[BrickTopoWhereInput]',
+        '_or': 'list[BrickTopoWhereInput]',
         'cluster': 'ClusterWhereInput',
         'cluster_topo': 'ClusterTopoWhereInput',
         'height': 'int',
@@ -95,8 +97,6 @@ class BrickTopoWhereInput(object):
         'node_topoes_every': 'NodeTopoWhereInput',
         'node_topoes_none': 'NodeTopoWhereInput',
         'node_topoes_some': 'NodeTopoWhereInput',
-        '_not': 'list[BrickTopoWhereInput]',
-        '_or': 'list[BrickTopoWhereInput]',
         'position': 'int',
         'position_gt': 'int',
         'position_gte': 'int',
@@ -118,6 +118,8 @@ class BrickTopoWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'cluster_topo': 'cluster_topo',
         'height': 'height',
@@ -187,8 +189,6 @@ class BrickTopoWhereInput(object):
         'node_topoes_every': 'node_topoes_every',
         'node_topoes_none': 'node_topoes_none',
         'node_topoes_some': 'node_topoes_some',
-        '_not': 'NOT',
-        '_or': 'OR',
         'position': 'position',
         'position_gt': 'position_gt',
         'position_gte': 'position_gte',
@@ -213,6 +213,8 @@ class BrickTopoWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._cluster_topo = None
         self._height = None
@@ -282,8 +284,6 @@ class BrickTopoWhereInput(object):
         self._node_topoes_every = None
         self._node_topoes_none = None
         self._node_topoes_some = None
-        self.__not = None
-        self.__or = None
         self._position = None
         self._position_gt = None
         self._position_gte = None
@@ -304,6 +304,8 @@ class BrickTopoWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.cluster_topo = kwargs.get("cluster_topo", None)
         self.height = kwargs.get("height", None)
@@ -373,8 +375,6 @@ class BrickTopoWhereInput(object):
         self.node_topoes_every = kwargs.get("node_topoes_every", None)
         self.node_topoes_none = kwargs.get("node_topoes_none", None)
         self.node_topoes_some = kwargs.get("node_topoes_some", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.position = kwargs.get("position", None)
         self.position_gt = kwargs.get("position_gt", None)
         self.position_gte = kwargs.get("position_gte", None)
@@ -413,6 +413,48 @@ class BrickTopoWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this BrickTopoWhereInput.  # noqa: E501
+
+
+        :return: The _not of this BrickTopoWhereInput.  # noqa: E501
+        :rtype: list[BrickTopoWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this BrickTopoWhereInput.
+
+
+        :param _not: The _not of this BrickTopoWhereInput.  # noqa: E501
+        :type _not: list[BrickTopoWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this BrickTopoWhereInput.  # noqa: E501
+
+
+        :return: The _or of this BrickTopoWhereInput.  # noqa: E501
+        :rtype: list[BrickTopoWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this BrickTopoWhereInput.
+
+
+        :param _or: The _or of this BrickTopoWhereInput.  # noqa: E501
+        :type _or: list[BrickTopoWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -1862,48 +1904,6 @@ class BrickTopoWhereInput(object):
         """
 
         self._node_topoes_some = node_topoes_some
-
-    @property
-    def _not(self):
-        """Gets the _not of this BrickTopoWhereInput.  # noqa: E501
-
-
-        :return: The _not of this BrickTopoWhereInput.  # noqa: E501
-        :rtype: list[BrickTopoWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this BrickTopoWhereInput.
-
-
-        :param _not: The _not of this BrickTopoWhereInput.  # noqa: E501
-        :type _not: list[BrickTopoWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this BrickTopoWhereInput.  # noqa: E501
-
-
-        :return: The _or of this BrickTopoWhereInput.  # noqa: E501
-        :rtype: list[BrickTopoWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this BrickTopoWhereInput.
-
-
-        :param _or: The _or of this BrickTopoWhereInput.  # noqa: E501
-        :type _or: list[BrickTopoWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def position(self):

@@ -26,6 +26,8 @@ class ReportTemplateWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ReportTemplateWhereInput]',
+        '_not': 'list[ReportTemplateWhereInput]',
+        '_or': 'list[ReportTemplateWhereInput]',
         'created_at': 'str',
         'created_at_gt': 'str',
         'created_at_gte': 'str',
@@ -76,8 +78,6 @@ class ReportTemplateWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[ReportTemplateWhereInput]',
-        '_or': 'list[ReportTemplateWhereInput]',
         'preset': 'str',
         'preset_contains': 'str',
         'preset_ends_with': 'str',
@@ -107,6 +107,8 @@ class ReportTemplateWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'created_at': 'createdAt',
         'created_at_gt': 'createdAt_gt',
         'created_at_gte': 'createdAt_gte',
@@ -157,8 +159,6 @@ class ReportTemplateWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'preset': 'preset',
         'preset_contains': 'preset_contains',
         'preset_ends_with': 'preset_ends_with',
@@ -191,6 +191,8 @@ class ReportTemplateWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._created_at = None
         self._created_at_gt = None
         self._created_at_gte = None
@@ -241,8 +243,6 @@ class ReportTemplateWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._preset = None
         self._preset_contains = None
         self._preset_ends_with = None
@@ -271,6 +271,8 @@ class ReportTemplateWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.created_at = kwargs.get("created_at", None)
         self.created_at_gt = kwargs.get("created_at_gt", None)
         self.created_at_gte = kwargs.get("created_at_gte", None)
@@ -321,8 +323,6 @@ class ReportTemplateWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.preset = kwargs.get("preset", None)
         self.preset_contains = kwargs.get("preset_contains", None)
         self.preset_ends_with = kwargs.get("preset_ends_with", None)
@@ -369,6 +369,48 @@ class ReportTemplateWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ReportTemplateWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ReportTemplateWhereInput.  # noqa: E501
+        :rtype: list[ReportTemplateWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ReportTemplateWhereInput.
+
+
+        :param _not: The _not of this ReportTemplateWhereInput.  # noqa: E501
+        :type _not: list[ReportTemplateWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ReportTemplateWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ReportTemplateWhereInput.  # noqa: E501
+        :rtype: list[ReportTemplateWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ReportTemplateWhereInput.
+
+
+        :param _or: The _or of this ReportTemplateWhereInput.  # noqa: E501
+        :type _or: list[ReportTemplateWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def created_at(self):
@@ -1419,48 +1461,6 @@ class ReportTemplateWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this ReportTemplateWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ReportTemplateWhereInput.  # noqa: E501
-        :rtype: list[ReportTemplateWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ReportTemplateWhereInput.
-
-
-        :param _not: The _not of this ReportTemplateWhereInput.  # noqa: E501
-        :type _not: list[ReportTemplateWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this ReportTemplateWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ReportTemplateWhereInput.  # noqa: E501
-        :rtype: list[ReportTemplateWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ReportTemplateWhereInput.
-
-
-        :param _or: The _or of this ReportTemplateWhereInput.  # noqa: E501
-        :type _or: list[ReportTemplateWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def preset(self):

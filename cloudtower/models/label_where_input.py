@@ -26,6 +26,8 @@ class LabelWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[LabelWhereInput]',
+        '_not': 'list[LabelWhereInput]',
+        '_or': 'list[LabelWhereInput]',
         'cluster_num': 'int',
         'cluster_num_gt': 'int',
         'cluster_num_gte': 'int',
@@ -260,7 +262,6 @@ class LabelWhereInput(object):
         'nics_every': 'NicWhereInput',
         'nics_none': 'NicWhereInput',
         'nics_some': 'NicWhereInput',
-        '_not': 'list[LabelWhereInput]',
         'nvmf_namespace_num': 'int',
         'nvmf_namespace_num_gt': 'int',
         'nvmf_namespace_num_gte': 'int',
@@ -294,7 +295,6 @@ class LabelWhereInput(object):
         'nvmf_subsystems_every': 'NvmfSubsystemWhereInput',
         'nvmf_subsystems_none': 'NvmfSubsystemWhereInput',
         'nvmf_subsystems_some': 'NvmfSubsystemWhereInput',
-        '_or': 'list[LabelWhereInput]',
         'security_policies_every': 'SecurityPolicyWhereInput',
         'security_policies_none': 'SecurityPolicyWhereInput',
         'security_policies_some': 'SecurityPolicyWhereInput',
@@ -417,6 +417,8 @@ class LabelWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster_num': 'cluster_num',
         'cluster_num_gt': 'cluster_num_gt',
         'cluster_num_gte': 'cluster_num_gte',
@@ -651,7 +653,6 @@ class LabelWhereInput(object):
         'nics_every': 'nics_every',
         'nics_none': 'nics_none',
         'nics_some': 'nics_some',
-        '_not': 'NOT',
         'nvmf_namespace_num': 'nvmf_namespace_num',
         'nvmf_namespace_num_gt': 'nvmf_namespace_num_gt',
         'nvmf_namespace_num_gte': 'nvmf_namespace_num_gte',
@@ -685,7 +686,6 @@ class LabelWhereInput(object):
         'nvmf_subsystems_every': 'nvmf_subsystems_every',
         'nvmf_subsystems_none': 'nvmf_subsystems_none',
         'nvmf_subsystems_some': 'nvmf_subsystems_some',
-        '_or': 'OR',
         'security_policies_every': 'security_policies_every',
         'security_policies_none': 'security_policies_none',
         'security_policies_some': 'security_policies_some',
@@ -811,6 +811,8 @@ class LabelWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster_num = None
         self._cluster_num_gt = None
         self._cluster_num_gte = None
@@ -1045,7 +1047,6 @@ class LabelWhereInput(object):
         self._nics_every = None
         self._nics_none = None
         self._nics_some = None
-        self.__not = None
         self._nvmf_namespace_num = None
         self._nvmf_namespace_num_gt = None
         self._nvmf_namespace_num_gte = None
@@ -1079,7 +1080,6 @@ class LabelWhereInput(object):
         self._nvmf_subsystems_every = None
         self._nvmf_subsystems_none = None
         self._nvmf_subsystems_some = None
-        self.__or = None
         self._security_policies_every = None
         self._security_policies_none = None
         self._security_policies_some = None
@@ -1201,6 +1201,8 @@ class LabelWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster_num = kwargs.get("cluster_num", None)
         self.cluster_num_gt = kwargs.get("cluster_num_gt", None)
         self.cluster_num_gte = kwargs.get("cluster_num_gte", None)
@@ -1435,7 +1437,6 @@ class LabelWhereInput(object):
         self.nics_every = kwargs.get("nics_every", None)
         self.nics_none = kwargs.get("nics_none", None)
         self.nics_some = kwargs.get("nics_some", None)
-        self._not = kwargs.get("_not", None)
         self.nvmf_namespace_num = kwargs.get("nvmf_namespace_num", None)
         self.nvmf_namespace_num_gt = kwargs.get("nvmf_namespace_num_gt", None)
         self.nvmf_namespace_num_gte = kwargs.get("nvmf_namespace_num_gte", None)
@@ -1469,7 +1470,6 @@ class LabelWhereInput(object):
         self.nvmf_subsystems_every = kwargs.get("nvmf_subsystems_every", None)
         self.nvmf_subsystems_none = kwargs.get("nvmf_subsystems_none", None)
         self.nvmf_subsystems_some = kwargs.get("nvmf_subsystems_some", None)
-        self._or = kwargs.get("_or", None)
         self.security_policies_every = kwargs.get("security_policies_every", None)
         self.security_policies_none = kwargs.get("security_policies_none", None)
         self.security_policies_some = kwargs.get("security_policies_some", None)
@@ -1609,6 +1609,48 @@ class LabelWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The _not of this LabelWhereInput.  # noqa: E501
+        :rtype: list[LabelWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this LabelWhereInput.
+
+
+        :param _not: The _not of this LabelWhereInput.  # noqa: E501
+        :type _not: list[LabelWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this LabelWhereInput.  # noqa: E501
+
+
+        :return: The _or of this LabelWhereInput.  # noqa: E501
+        :rtype: list[LabelWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this LabelWhereInput.
+
+
+        :param _or: The _or of this LabelWhereInput.  # noqa: E501
+        :type _or: list[LabelWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster_num(self):
@@ -6525,27 +6567,6 @@ class LabelWhereInput(object):
         self._nics_some = nics_some
 
     @property
-    def _not(self):
-        """Gets the _not of this LabelWhereInput.  # noqa: E501
-
-
-        :return: The _not of this LabelWhereInput.  # noqa: E501
-        :rtype: list[LabelWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this LabelWhereInput.
-
-
-        :param _not: The _not of this LabelWhereInput.  # noqa: E501
-        :type _not: list[LabelWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nvmf_namespace_num(self):
         """Gets the nvmf_namespace_num of this LabelWhereInput.  # noqa: E501
 
@@ -7237,27 +7258,6 @@ class LabelWhereInput(object):
         """
 
         self._nvmf_subsystems_some = nvmf_subsystems_some
-
-    @property
-    def _or(self):
-        """Gets the _or of this LabelWhereInput.  # noqa: E501
-
-
-        :return: The _or of this LabelWhereInput.  # noqa: E501
-        :rtype: list[LabelWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this LabelWhereInput.
-
-
-        :param _or: The _or of this LabelWhereInput.  # noqa: E501
-        :type _or: list[LabelWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def security_policies_every(self):

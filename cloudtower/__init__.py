@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.13.0"
+__version__ = "2.13.1"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -1261,6 +1261,8 @@ from cloudtower.models.vm_cd_rom_params import VmCdRomParams
 from cloudtower.models.vm_clock_offset import VmClockOffset
 from cloudtower.models.vm_clone_params import VmCloneParams
 from cloudtower.models.vm_connection import VmConnection
+from cloudtower.models.vm_create_vm_from_content_library_template_batch_params import VmCreateVmFromContentLibraryTemplateBatchParams
+from cloudtower.models.vm_create_vm_from_content_library_template_batch_vm_params import VmCreateVmFromContentLibraryTemplateBatchVmParams
 from cloudtower.models.vm_create_vm_from_content_library_template_params import VmCreateVmFromContentLibraryTemplateParams
 from cloudtower.models.vm_create_vm_from_template_params import VmCreateVmFromTemplateParams
 from cloudtower.models.vm_creation_params import VmCreationParams
@@ -1512,6 +1514,7 @@ from cloudtower.models.with_task_vds import WithTaskVds
 from cloudtower.models.with_task_view import WithTaskView
 from cloudtower.models.with_task_vlan import WithTaskVlan
 from cloudtower.models.with_task_vm import WithTaskVm
+from cloudtower.models.with_task_vm_array import WithTaskVmArray
 from cloudtower.models.with_task_vm_export_file import WithTaskVmExportFile
 from cloudtower.models.with_task_vm_folder import WithTaskVmFolder
 from cloudtower.models.with_task_vm_placement_group import WithTaskVmPlacementGroup

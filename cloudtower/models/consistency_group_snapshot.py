@@ -25,10 +25,10 @@ class ConsistencyGroupSnapshot(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'iscsi_lun_snapshots': 'list[NestedIscsiLunSnapshot]',
         'consistency_group': 'NestedConsistencyGroup',
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
-        'iscsi_lun_snapshots': 'list[NestedIscsiLunSnapshot]',
         'labels': 'list[NestedLabel]',
         'local_created_at': 'str',
         'local_id': 'str',
@@ -38,10 +38,10 @@ class ConsistencyGroupSnapshot(object):
     }
 
     attribute_map = {
+        'iscsi_lun_snapshots': 'Iscsi_lun_snapshots',
         'consistency_group': 'consistency_group',
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
-        'iscsi_lun_snapshots': 'Iscsi_lun_snapshots',
         'labels': 'labels',
         'local_created_at': 'local_created_at',
         'local_id': 'local_id',
@@ -54,10 +54,10 @@ class ConsistencyGroupSnapshot(object):
         """ConsistencyGroupSnapshot - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._iscsi_lun_snapshots = None
         self._consistency_group = None
         self._entity_async_status = None
         self._id = None
-        self._iscsi_lun_snapshots = None
         self._labels = None
         self._local_created_at = None
         self._local_id = None
@@ -66,11 +66,11 @@ class ConsistencyGroupSnapshot(object):
         self._unique_size = None
         self.discriminator = None
 
+        self.iscsi_lun_snapshots = kwargs.get("iscsi_lun_snapshots", None)
         self.consistency_group = kwargs.get("consistency_group", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
-        self.iscsi_lun_snapshots = kwargs.get("iscsi_lun_snapshots", None)
         self.labels = kwargs.get("labels", None)
         if "local_created_at" in kwargs:
             self.local_created_at = kwargs["local_created_at"]
@@ -81,6 +81,27 @@ class ConsistencyGroupSnapshot(object):
         self.nvmf_namespace_snapshots = kwargs.get("nvmf_namespace_snapshots", None)
         if "unique_size" in kwargs:
             self.unique_size = kwargs["unique_size"]
+
+    @property
+    def iscsi_lun_snapshots(self):
+        """Gets the iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
+
+
+        :return: The iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
+        :rtype: list[NestedIscsiLunSnapshot]
+        """
+        return self._iscsi_lun_snapshots
+
+    @iscsi_lun_snapshots.setter
+    def iscsi_lun_snapshots(self, iscsi_lun_snapshots):
+        """Sets the iscsi_lun_snapshots of this ConsistencyGroupSnapshot.
+
+
+        :param iscsi_lun_snapshots: The iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
+        :type iscsi_lun_snapshots: list[NestedIscsiLunSnapshot]
+        """
+
+        self._iscsi_lun_snapshots = iscsi_lun_snapshots
 
     @property
     def consistency_group(self):
@@ -146,27 +167,6 @@ class ConsistencyGroupSnapshot(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
-    @property
-    def iscsi_lun_snapshots(self):
-        """Gets the iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
-
-
-        :return: The iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
-        :rtype: list[NestedIscsiLunSnapshot]
-        """
-        return self._iscsi_lun_snapshots
-
-    @iscsi_lun_snapshots.setter
-    def iscsi_lun_snapshots(self, iscsi_lun_snapshots):
-        """Sets the iscsi_lun_snapshots of this ConsistencyGroupSnapshot.
-
-
-        :param iscsi_lun_snapshots: The iscsi_lun_snapshots of this ConsistencyGroupSnapshot.  # noqa: E501
-        :type iscsi_lun_snapshots: list[NestedIscsiLunSnapshot]
-        """
-
-        self._iscsi_lun_snapshots = iscsi_lun_snapshots
 
     @property
     def labels(self):

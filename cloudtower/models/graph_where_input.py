@@ -26,6 +26,8 @@ class GraphWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[GraphWhereInput]',
+        '_not': 'list[GraphWhereInput]',
+        '_or': 'list[GraphWhereInput]',
         'cluster': 'ClusterWhereInput',
         'disks_every': 'DiskWhereInput',
         'disks_none': 'DiskWhereInput',
@@ -104,8 +106,6 @@ class GraphWhereInput(object):
         'nics_every': 'NicWhereInput',
         'nics_none': 'NicWhereInput',
         'nics_some': 'NicWhereInput',
-        '_not': 'list[GraphWhereInput]',
-        '_or': 'list[GraphWhereInput]',
         'resource_type': 'str',
         'resource_type_contains': 'str',
         'resource_type_ends_with': 'str',
@@ -156,12 +156,12 @@ class GraphWhereInput(object):
         'vm_nics_every': 'VmNicWhereInput',
         'vm_nics_none': 'VmNicWhereInput',
         'vm_nics_some': 'VmNicWhereInput',
-        'vms_every': 'VmWhereInput',
-        'vms_none': 'VmWhereInput',
-        'vms_some': 'VmWhereInput',
         'vm_volumes_every': 'VmVolumeWhereInput',
         'vm_volumes_none': 'VmVolumeWhereInput',
         'vm_volumes_some': 'VmVolumeWhereInput',
+        'vms_every': 'VmWhereInput',
+        'vms_none': 'VmWhereInput',
+        'vms_some': 'VmWhereInput',
         'witnesses_every': 'WitnessWhereInput',
         'witnesses_none': 'WitnessWhereInput',
         'witnesses_some': 'WitnessWhereInput',
@@ -172,6 +172,8 @@ class GraphWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'disks_every': 'disks_every',
         'disks_none': 'disks_none',
@@ -250,8 +252,6 @@ class GraphWhereInput(object):
         'nics_every': 'nics_every',
         'nics_none': 'nics_none',
         'nics_some': 'nics_some',
-        '_not': 'NOT',
-        '_or': 'OR',
         'resource_type': 'resource_type',
         'resource_type_contains': 'resource_type_contains',
         'resource_type_ends_with': 'resource_type_ends_with',
@@ -302,12 +302,12 @@ class GraphWhereInput(object):
         'vm_nics_every': 'vmNics_every',
         'vm_nics_none': 'vmNics_none',
         'vm_nics_some': 'vmNics_some',
-        'vms_every': 'vms_every',
-        'vms_none': 'vms_none',
-        'vms_some': 'vms_some',
         'vm_volumes_every': 'vmVolumes_every',
         'vm_volumes_none': 'vmVolumes_none',
         'vm_volumes_some': 'vmVolumes_some',
+        'vms_every': 'vms_every',
+        'vms_none': 'vms_none',
+        'vms_some': 'vms_some',
         'witnesses_every': 'witnesses_every',
         'witnesses_none': 'witnesses_none',
         'witnesses_some': 'witnesses_some',
@@ -321,6 +321,8 @@ class GraphWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._disks_every = None
         self._disks_none = None
@@ -399,8 +401,6 @@ class GraphWhereInput(object):
         self._nics_every = None
         self._nics_none = None
         self._nics_some = None
-        self.__not = None
-        self.__or = None
         self._resource_type = None
         self._resource_type_contains = None
         self._resource_type_ends_with = None
@@ -451,12 +451,12 @@ class GraphWhereInput(object):
         self._vm_nics_every = None
         self._vm_nics_none = None
         self._vm_nics_some = None
-        self._vms_every = None
-        self._vms_none = None
-        self._vms_some = None
         self._vm_volumes_every = None
         self._vm_volumes_none = None
         self._vm_volumes_some = None
+        self._vms_every = None
+        self._vms_none = None
+        self._vms_some = None
         self._witnesses_every = None
         self._witnesses_none = None
         self._witnesses_some = None
@@ -466,6 +466,8 @@ class GraphWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.disks_every = kwargs.get("disks_every", None)
         self.disks_none = kwargs.get("disks_none", None)
@@ -544,8 +546,6 @@ class GraphWhereInput(object):
         self.nics_every = kwargs.get("nics_every", None)
         self.nics_none = kwargs.get("nics_none", None)
         self.nics_some = kwargs.get("nics_some", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.resource_type = kwargs.get("resource_type", None)
         self.resource_type_contains = kwargs.get("resource_type_contains", None)
         self.resource_type_ends_with = kwargs.get("resource_type_ends_with", None)
@@ -596,12 +596,12 @@ class GraphWhereInput(object):
         self.vm_nics_every = kwargs.get("vm_nics_every", None)
         self.vm_nics_none = kwargs.get("vm_nics_none", None)
         self.vm_nics_some = kwargs.get("vm_nics_some", None)
-        self.vms_every = kwargs.get("vms_every", None)
-        self.vms_none = kwargs.get("vms_none", None)
-        self.vms_some = kwargs.get("vms_some", None)
         self.vm_volumes_every = kwargs.get("vm_volumes_every", None)
         self.vm_volumes_none = kwargs.get("vm_volumes_none", None)
         self.vm_volumes_some = kwargs.get("vm_volumes_some", None)
+        self.vms_every = kwargs.get("vms_every", None)
+        self.vms_none = kwargs.get("vms_none", None)
+        self.vms_some = kwargs.get("vms_some", None)
         self.witnesses_every = kwargs.get("witnesses_every", None)
         self.witnesses_none = kwargs.get("witnesses_none", None)
         self.witnesses_some = kwargs.get("witnesses_some", None)
@@ -629,6 +629,48 @@ class GraphWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this GraphWhereInput.  # noqa: E501
+
+
+        :return: The _not of this GraphWhereInput.  # noqa: E501
+        :rtype: list[GraphWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this GraphWhereInput.
+
+
+        :param _not: The _not of this GraphWhereInput.  # noqa: E501
+        :type _not: list[GraphWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this GraphWhereInput.  # noqa: E501
+
+
+        :return: The _or of this GraphWhereInput.  # noqa: E501
+        :rtype: list[GraphWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this GraphWhereInput.
+
+
+        :param _or: The _or of this GraphWhereInput.  # noqa: E501
+        :type _or: list[GraphWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2269,48 +2311,6 @@ class GraphWhereInput(object):
         self._nics_some = nics_some
 
     @property
-    def _not(self):
-        """Gets the _not of this GraphWhereInput.  # noqa: E501
-
-
-        :return: The _not of this GraphWhereInput.  # noqa: E501
-        :rtype: list[GraphWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this GraphWhereInput.
-
-
-        :param _not: The _not of this GraphWhereInput.  # noqa: E501
-        :type _not: list[GraphWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this GraphWhereInput.  # noqa: E501
-
-
-        :return: The _or of this GraphWhereInput.  # noqa: E501
-        :rtype: list[GraphWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this GraphWhereInput.
-
-
-        :param _or: The _or of this GraphWhereInput.  # noqa: E501
-        :type _or: list[GraphWhereInput]
-        """
-
-        self.__or = _or
-
-    @property
     def resource_type(self):
         """Gets the resource_type of this GraphWhereInput.  # noqa: E501
 
@@ -3361,69 +3361,6 @@ class GraphWhereInput(object):
         self._vm_nics_some = vm_nics_some
 
     @property
-    def vms_every(self):
-        """Gets the vms_every of this GraphWhereInput.  # noqa: E501
-
-
-        :return: The vms_every of this GraphWhereInput.  # noqa: E501
-        :rtype: VmWhereInput
-        """
-        return self._vms_every
-
-    @vms_every.setter
-    def vms_every(self, vms_every):
-        """Sets the vms_every of this GraphWhereInput.
-
-
-        :param vms_every: The vms_every of this GraphWhereInput.  # noqa: E501
-        :type vms_every: VmWhereInput
-        """
-
-        self._vms_every = vms_every
-
-    @property
-    def vms_none(self):
-        """Gets the vms_none of this GraphWhereInput.  # noqa: E501
-
-
-        :return: The vms_none of this GraphWhereInput.  # noqa: E501
-        :rtype: VmWhereInput
-        """
-        return self._vms_none
-
-    @vms_none.setter
-    def vms_none(self, vms_none):
-        """Sets the vms_none of this GraphWhereInput.
-
-
-        :param vms_none: The vms_none of this GraphWhereInput.  # noqa: E501
-        :type vms_none: VmWhereInput
-        """
-
-        self._vms_none = vms_none
-
-    @property
-    def vms_some(self):
-        """Gets the vms_some of this GraphWhereInput.  # noqa: E501
-
-
-        :return: The vms_some of this GraphWhereInput.  # noqa: E501
-        :rtype: VmWhereInput
-        """
-        return self._vms_some
-
-    @vms_some.setter
-    def vms_some(self, vms_some):
-        """Sets the vms_some of this GraphWhereInput.
-
-
-        :param vms_some: The vms_some of this GraphWhereInput.  # noqa: E501
-        :type vms_some: VmWhereInput
-        """
-
-        self._vms_some = vms_some
-
-    @property
     def vm_volumes_every(self):
         """Gets the vm_volumes_every of this GraphWhereInput.  # noqa: E501
 
@@ -3485,6 +3422,69 @@ class GraphWhereInput(object):
         """
 
         self._vm_volumes_some = vm_volumes_some
+
+    @property
+    def vms_every(self):
+        """Gets the vms_every of this GraphWhereInput.  # noqa: E501
+
+
+        :return: The vms_every of this GraphWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_every
+
+    @vms_every.setter
+    def vms_every(self, vms_every):
+        """Sets the vms_every of this GraphWhereInput.
+
+
+        :param vms_every: The vms_every of this GraphWhereInput.  # noqa: E501
+        :type vms_every: VmWhereInput
+        """
+
+        self._vms_every = vms_every
+
+    @property
+    def vms_none(self):
+        """Gets the vms_none of this GraphWhereInput.  # noqa: E501
+
+
+        :return: The vms_none of this GraphWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_none
+
+    @vms_none.setter
+    def vms_none(self, vms_none):
+        """Sets the vms_none of this GraphWhereInput.
+
+
+        :param vms_none: The vms_none of this GraphWhereInput.  # noqa: E501
+        :type vms_none: VmWhereInput
+        """
+
+        self._vms_none = vms_none
+
+    @property
+    def vms_some(self):
+        """Gets the vms_some of this GraphWhereInput.  # noqa: E501
+
+
+        :return: The vms_some of this GraphWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_some
+
+    @vms_some.setter
+    def vms_some(self, vms_some):
+        """Sets the vms_some of this GraphWhereInput.
+
+
+        :param vms_some: The vms_some of this GraphWhereInput.  # noqa: E501
+        :type vms_some: VmWhereInput
+        """
+
+        self._vms_some = vms_some
 
     @property
     def witnesses_every(self):

@@ -26,6 +26,8 @@ class SnmpTrapReceiverWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SnmpTrapReceiverWhereInput]',
+        '_not': 'list[SnmpTrapReceiverWhereInput]',
+        '_or': 'list[SnmpTrapReceiverWhereInput]',
         'auth_pass_phrase': 'str',
         'auth_pass_phrase_contains': 'str',
         'auth_pass_phrase_ends_with': 'str',
@@ -141,8 +143,6 @@ class SnmpTrapReceiverWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[SnmpTrapReceiverWhereInput]',
-        '_or': 'list[SnmpTrapReceiverWhereInput]',
         'port': 'int',
         'port_gt': 'int',
         'port_gte': 'int',
@@ -195,6 +195,8 @@ class SnmpTrapReceiverWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'auth_pass_phrase': 'auth_pass_phrase',
         'auth_pass_phrase_contains': 'auth_pass_phrase_contains',
         'auth_pass_phrase_ends_with': 'auth_pass_phrase_ends_with',
@@ -310,8 +312,6 @@ class SnmpTrapReceiverWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'port': 'port',
         'port_gt': 'port_gt',
         'port_gte': 'port_gte',
@@ -367,6 +367,8 @@ class SnmpTrapReceiverWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._auth_pass_phrase = None
         self._auth_pass_phrase_contains = None
         self._auth_pass_phrase_ends_with = None
@@ -482,8 +484,6 @@ class SnmpTrapReceiverWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._port = None
         self._port_gt = None
         self._port_gte = None
@@ -535,6 +535,8 @@ class SnmpTrapReceiverWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.auth_pass_phrase = kwargs.get("auth_pass_phrase", None)
         self.auth_pass_phrase_contains = kwargs.get("auth_pass_phrase_contains", None)
         self.auth_pass_phrase_ends_with = kwargs.get("auth_pass_phrase_ends_with", None)
@@ -650,8 +652,6 @@ class SnmpTrapReceiverWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.port = kwargs.get("port", None)
         self.port_gt = kwargs.get("port_gt", None)
         self.port_gte = kwargs.get("port_gte", None)
@@ -721,6 +721,48 @@ class SnmpTrapReceiverWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
+        :rtype: list[SnmpTrapReceiverWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SnmpTrapReceiverWhereInput.
+
+
+        :param _not: The _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
+        :type _not: list[SnmpTrapReceiverWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
+        :rtype: list[SnmpTrapReceiverWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SnmpTrapReceiverWhereInput.
+
+
+        :param _or: The _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
+        :type _or: list[SnmpTrapReceiverWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def auth_pass_phrase(self):
@@ -3136,48 +3178,6 @@ class SnmpTrapReceiverWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
-        :rtype: list[SnmpTrapReceiverWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SnmpTrapReceiverWhereInput.
-
-
-        :param _not: The _not of this SnmpTrapReceiverWhereInput.  # noqa: E501
-        :type _not: list[SnmpTrapReceiverWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
-        :rtype: list[SnmpTrapReceiverWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SnmpTrapReceiverWhereInput.
-
-
-        :param _or: The _or of this SnmpTrapReceiverWhereInput.  # noqa: E501
-        :type _or: list[SnmpTrapReceiverWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def port(self):

@@ -26,6 +26,8 @@ class SmtpServerWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[SmtpServerWhereInput]',
+        '_not': 'list[SmtpServerWhereInput]',
+        '_or': 'list[SmtpServerWhereInput]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -84,8 +86,6 @@ class SmtpServerWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[SmtpServerWhereInput]',
-        '_or': 'list[SmtpServerWhereInput]',
         'password': 'str',
         'password_contains': 'str',
         'password_ends_with': 'str',
@@ -130,6 +130,8 @@ class SmtpServerWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -188,8 +190,6 @@ class SmtpServerWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'password': 'password',
         'password_contains': 'password_contains',
         'password_ends_with': 'password_ends_with',
@@ -237,6 +237,8 @@ class SmtpServerWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -295,8 +297,6 @@ class SmtpServerWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._password = None
         self._password_contains = None
         self._password_ends_with = None
@@ -340,6 +340,8 @@ class SmtpServerWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -398,8 +400,6 @@ class SmtpServerWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.password = kwargs.get("password", None)
         self.password_contains = kwargs.get("password_contains", None)
         self.password_ends_with = kwargs.get("password_ends_with", None)
@@ -461,6 +461,48 @@ class SmtpServerWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this SmtpServerWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SmtpServerWhereInput.  # noqa: E501
+        :rtype: list[SmtpServerWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SmtpServerWhereInput.
+
+
+        :param _not: The _not of this SmtpServerWhereInput.  # noqa: E501
+        :type _not: list[SmtpServerWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this SmtpServerWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SmtpServerWhereInput.  # noqa: E501
+        :rtype: list[SmtpServerWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SmtpServerWhereInput.
+
+
+        :param _or: The _or of this SmtpServerWhereInput.  # noqa: E501
+        :type _or: list[SmtpServerWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def description(self):
@@ -1679,48 +1721,6 @@ class SmtpServerWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: list[SmtpServerWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SmtpServerWhereInput.
-
-
-        :param _not: The _not of this SmtpServerWhereInput.  # noqa: E501
-        :type _not: list[SmtpServerWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: list[SmtpServerWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SmtpServerWhereInput.
-
-
-        :param _or: The _or of this SmtpServerWhereInput.  # noqa: E501
-        :type _or: list[SmtpServerWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def password(self):

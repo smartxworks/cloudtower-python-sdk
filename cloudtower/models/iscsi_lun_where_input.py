@@ -25,6 +25,9 @@ class IscsiLunWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        '_and': 'list[IscsiLunWhereInput]',
+        '_not': 'list[IscsiLunWhereInput]',
+        '_or': 'list[IscsiLunWhereInput]',
         'allowed_initiators': 'str',
         'allowed_initiators_contains': 'str',
         'allowed_initiators_ends_with': 'str',
@@ -39,7 +42,6 @@ class IscsiLunWhereInput(object):
         'allowed_initiators_not_in': 'list[str]',
         'allowed_initiators_not_starts_with': 'str',
         'allowed_initiators_starts_with': 'str',
-        '_and': 'list[IscsiLunWhereInput]',
         'assigned_size': 'int',
         'assigned_size_gt': 'int',
         'assigned_size_gte': 'int',
@@ -267,8 +269,6 @@ class IscsiLunWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        '_not': 'list[IscsiLunWhereInput]',
-        '_or': 'list[IscsiLunWhereInput]',
         'replica_num': 'int',
         'replica_num_gt': 'int',
         'replica_num_gte': 'int',
@@ -336,6 +336,9 @@ class IscsiLunWhereInput(object):
     }
 
     attribute_map = {
+        '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'allowed_initiators': 'allowed_initiators',
         'allowed_initiators_contains': 'allowed_initiators_contains',
         'allowed_initiators_ends_with': 'allowed_initiators_ends_with',
@@ -350,7 +353,6 @@ class IscsiLunWhereInput(object):
         'allowed_initiators_not_in': 'allowed_initiators_not_in',
         'allowed_initiators_not_starts_with': 'allowed_initiators_not_starts_with',
         'allowed_initiators_starts_with': 'allowed_initiators_starts_with',
-        '_and': 'AND',
         'assigned_size': 'assigned_size',
         'assigned_size_gt': 'assigned_size_gt',
         'assigned_size_gte': 'assigned_size_gte',
@@ -578,8 +580,6 @@ class IscsiLunWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        '_not': 'NOT',
-        '_or': 'OR',
         'replica_num': 'replica_num',
         'replica_num_gt': 'replica_num_gt',
         'replica_num_gte': 'replica_num_gte',
@@ -650,6 +650,9 @@ class IscsiLunWhereInput(object):
         """IscsiLunWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self.__and = None
+        self.__not = None
+        self.__or = None
         self._allowed_initiators = None
         self._allowed_initiators_contains = None
         self._allowed_initiators_ends_with = None
@@ -664,7 +667,6 @@ class IscsiLunWhereInput(object):
         self._allowed_initiators_not_in = None
         self._allowed_initiators_not_starts_with = None
         self._allowed_initiators_starts_with = None
-        self.__and = None
         self._assigned_size = None
         self._assigned_size_gt = None
         self._assigned_size_gte = None
@@ -892,8 +894,6 @@ class IscsiLunWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self.__not = None
-        self.__or = None
         self._replica_num = None
         self._replica_num_gt = None
         self._replica_num_gte = None
@@ -960,6 +960,9 @@ class IscsiLunWhereInput(object):
         self._zbs_volume_id_starts_with = None
         self.discriminator = None
 
+        self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.allowed_initiators = kwargs.get("allowed_initiators", None)
         self.allowed_initiators_contains = kwargs.get("allowed_initiators_contains", None)
         self.allowed_initiators_ends_with = kwargs.get("allowed_initiators_ends_with", None)
@@ -974,7 +977,6 @@ class IscsiLunWhereInput(object):
         self.allowed_initiators_not_in = kwargs.get("allowed_initiators_not_in", None)
         self.allowed_initiators_not_starts_with = kwargs.get("allowed_initiators_not_starts_with", None)
         self.allowed_initiators_starts_with = kwargs.get("allowed_initiators_starts_with", None)
-        self._and = kwargs.get("_and", None)
         self.assigned_size = kwargs.get("assigned_size", None)
         self.assigned_size_gt = kwargs.get("assigned_size_gt", None)
         self.assigned_size_gte = kwargs.get("assigned_size_gte", None)
@@ -1202,8 +1204,6 @@ class IscsiLunWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
         self.replica_num = kwargs.get("replica_num", None)
         self.replica_num_gt = kwargs.get("replica_num_gt", None)
         self.replica_num_gte = kwargs.get("replica_num_gte", None)
@@ -1268,6 +1268,69 @@ class IscsiLunWhereInput(object):
         self.zbs_volume_id_not_in = kwargs.get("zbs_volume_id_not_in", None)
         self.zbs_volume_id_not_starts_with = kwargs.get("zbs_volume_id_not_starts_with", None)
         self.zbs_volume_id_starts_with = kwargs.get("zbs_volume_id_starts_with", None)
+
+    @property
+    def _and(self):
+        """Gets the _and of this IscsiLunWhereInput.  # noqa: E501
+
+
+        :return: The _and of this IscsiLunWhereInput.  # noqa: E501
+        :rtype: list[IscsiLunWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this IscsiLunWhereInput.
+
+
+        :param _and: The _and of this IscsiLunWhereInput.  # noqa: E501
+        :type _and: list[IscsiLunWhereInput]
+        """
+
+        self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this IscsiLunWhereInput.  # noqa: E501
+
+
+        :return: The _not of this IscsiLunWhereInput.  # noqa: E501
+        :rtype: list[IscsiLunWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this IscsiLunWhereInput.
+
+
+        :param _not: The _not of this IscsiLunWhereInput.  # noqa: E501
+        :type _not: list[IscsiLunWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this IscsiLunWhereInput.  # noqa: E501
+
+
+        :return: The _or of this IscsiLunWhereInput.  # noqa: E501
+        :rtype: list[IscsiLunWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this IscsiLunWhereInput.
+
+
+        :param _or: The _or of this IscsiLunWhereInput.  # noqa: E501
+        :type _or: list[IscsiLunWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def allowed_initiators(self):
@@ -1562,27 +1625,6 @@ class IscsiLunWhereInput(object):
         """
 
         self._allowed_initiators_starts_with = allowed_initiators_starts_with
-
-    @property
-    def _and(self):
-        """Gets the _and of this IscsiLunWhereInput.  # noqa: E501
-
-
-        :return: The _and of this IscsiLunWhereInput.  # noqa: E501
-        :rtype: list[IscsiLunWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this IscsiLunWhereInput.
-
-
-        :param _and: The _and of this IscsiLunWhereInput.  # noqa: E501
-        :type _and: list[IscsiLunWhereInput]
-        """
-
-        self.__and = _and
 
     @property
     def assigned_size(self):
@@ -6350,48 +6392,6 @@ class IscsiLunWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def _not(self):
-        """Gets the _not of this IscsiLunWhereInput.  # noqa: E501
-
-
-        :return: The _not of this IscsiLunWhereInput.  # noqa: E501
-        :rtype: list[IscsiLunWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this IscsiLunWhereInput.
-
-
-        :param _not: The _not of this IscsiLunWhereInput.  # noqa: E501
-        :type _not: list[IscsiLunWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this IscsiLunWhereInput.  # noqa: E501
-
-
-        :return: The _or of this IscsiLunWhereInput.  # noqa: E501
-        :rtype: list[IscsiLunWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this IscsiLunWhereInput.
-
-
-        :param _or: The _or of this IscsiLunWhereInput.  # noqa: E501
-        :type _or: list[IscsiLunWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def replica_num(self):

@@ -26,6 +26,8 @@ class ElfDataStoreWhereInput(object):
     """
     openapi_types = {
         '_and': 'list[ElfDataStoreWhereInput]',
+        '_not': 'list[ElfDataStoreWhereInput]',
+        '_or': 'list[ElfDataStoreWhereInput]',
         'cluster': 'ClusterWhereInput',
         'description': 'str',
         'description_contains': 'str',
@@ -103,9 +105,7 @@ class ElfDataStoreWhereInput(object):
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
         'nfs_export': 'NfsExportWhereInput',
-        '_not': 'list[ElfDataStoreWhereInput]',
         'nvmf_subsystem': 'NvmfSubsystemWhereInput',
-        '_or': 'list[ElfDataStoreWhereInput]',
         'replica_num': 'int',
         'replica_num_gt': 'int',
         'replica_num_gte': 'int',
@@ -124,6 +124,8 @@ class ElfDataStoreWhereInput(object):
 
     attribute_map = {
         '_and': 'AND',
+        '_not': 'NOT',
+        '_or': 'OR',
         'cluster': 'cluster',
         'description': 'description',
         'description_contains': 'description_contains',
@@ -201,9 +203,7 @@ class ElfDataStoreWhereInput(object):
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
         'nfs_export': 'nfs_export',
-        '_not': 'NOT',
         'nvmf_subsystem': 'nvmf_subsystem',
-        '_or': 'OR',
         'replica_num': 'replica_num',
         'replica_num_gt': 'replica_num_gt',
         'replica_num_gte': 'replica_num_gte',
@@ -225,6 +225,8 @@ class ElfDataStoreWhereInput(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self.__and = None
+        self.__not = None
+        self.__or = None
         self._cluster = None
         self._description = None
         self._description_contains = None
@@ -302,9 +304,7 @@ class ElfDataStoreWhereInput(object):
         self._name_not_starts_with = None
         self._name_starts_with = None
         self._nfs_export = None
-        self.__not = None
         self._nvmf_subsystem = None
-        self.__or = None
         self._replica_num = None
         self._replica_num_gt = None
         self._replica_num_gte = None
@@ -322,6 +322,8 @@ class ElfDataStoreWhereInput(object):
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
+        self._not = kwargs.get("_not", None)
+        self._or = kwargs.get("_or", None)
         self.cluster = kwargs.get("cluster", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
@@ -399,9 +401,7 @@ class ElfDataStoreWhereInput(object):
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
         self.nfs_export = kwargs.get("nfs_export", None)
-        self._not = kwargs.get("_not", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
-        self._or = kwargs.get("_or", None)
         self.replica_num = kwargs.get("replica_num", None)
         self.replica_num_gt = kwargs.get("replica_num_gt", None)
         self.replica_num_gte = kwargs.get("replica_num_gte", None)
@@ -437,6 +437,48 @@ class ElfDataStoreWhereInput(object):
         """
 
         self.__and = _and
+
+    @property
+    def _not(self):
+        """Gets the _not of this ElfDataStoreWhereInput.  # noqa: E501
+
+
+        :return: The _not of this ElfDataStoreWhereInput.  # noqa: E501
+        :rtype: list[ElfDataStoreWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this ElfDataStoreWhereInput.
+
+
+        :param _not: The _not of this ElfDataStoreWhereInput.  # noqa: E501
+        :type _not: list[ElfDataStoreWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _or(self):
+        """Gets the _or of this ElfDataStoreWhereInput.  # noqa: E501
+
+
+        :return: The _or of this ElfDataStoreWhereInput.  # noqa: E501
+        :rtype: list[ElfDataStoreWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this ElfDataStoreWhereInput.
+
+
+        :param _or: The _or of this ElfDataStoreWhereInput.  # noqa: E501
+        :type _or: list[ElfDataStoreWhereInput]
+        """
+
+        self.__or = _or
 
     @property
     def cluster(self):
@@ -2056,27 +2098,6 @@ class ElfDataStoreWhereInput(object):
         self._nfs_export = nfs_export
 
     @property
-    def _not(self):
-        """Gets the _not of this ElfDataStoreWhereInput.  # noqa: E501
-
-
-        :return: The _not of this ElfDataStoreWhereInput.  # noqa: E501
-        :rtype: list[ElfDataStoreWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this ElfDataStoreWhereInput.
-
-
-        :param _not: The _not of this ElfDataStoreWhereInput.  # noqa: E501
-        :type _not: list[ElfDataStoreWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
     def nvmf_subsystem(self):
         """Gets the nvmf_subsystem of this ElfDataStoreWhereInput.  # noqa: E501
 
@@ -2096,27 +2117,6 @@ class ElfDataStoreWhereInput(object):
         """
 
         self._nvmf_subsystem = nvmf_subsystem
-
-    @property
-    def _or(self):
-        """Gets the _or of this ElfDataStoreWhereInput.  # noqa: E501
-
-
-        :return: The _or of this ElfDataStoreWhereInput.  # noqa: E501
-        :rtype: list[ElfDataStoreWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this ElfDataStoreWhereInput.
-
-
-        :param _or: The _or of this ElfDataStoreWhereInput.  # noqa: E501
-        :type _or: list[ElfDataStoreWhereInput]
-        """
-
-        self.__or = _or
 
     @property
     def replica_num(self):
