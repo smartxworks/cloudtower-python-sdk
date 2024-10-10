@@ -37,7 +37,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_clone_params: (required)
         :type snapshot_group_clone_params: list[SnapshotGroupCloneParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_clone_params: (required)
         :type snapshot_group_clone_params: list[SnapshotGroupCloneParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_deletion_params: (required)
         :type snapshot_group_deletion_params: SnapshotGroupDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_deletion_params: (required)
         :type snapshot_group_deletion_params: SnapshotGroupDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_keep_params: (required)
         :type snapshot_group_keep_params: SnapshotGroupKeepParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_keep_params: (required)
         :type snapshot_group_keep_params: SnapshotGroupKeepParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_rollback_params: (required)
         :type snapshot_group_rollback_params: SnapshotGroupRollbackParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class SnapshotGroupApi(object):
         :param snapshot_group_rollback_params: (required)
         :type snapshot_group_rollback_params: SnapshotGroupRollbackParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

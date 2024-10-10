@@ -37,7 +37,6 @@ class NfsInode(object):
         'parent_id': 'str',
         'shared_size': 'int',
         'snapshot_num': 'int',
-        'unique_logical_size': 'float',
         'unique_size': 'int'
     }
 
@@ -54,7 +53,6 @@ class NfsInode(object):
         'parent_id': 'parent_id',
         'shared_size': 'shared_size',
         'snapshot_num': 'snapshot_num',
-        'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size'
     }
 
@@ -74,7 +72,6 @@ class NfsInode(object):
         self._parent_id = None
         self._shared_size = None
         self._snapshot_num = None
-        self._unique_logical_size = None
         self._unique_size = None
         self.discriminator = None
 
@@ -100,7 +97,6 @@ class NfsInode(object):
             self.shared_size = kwargs["shared_size"]
         if "snapshot_num" in kwargs:
             self.snapshot_num = kwargs["snapshot_num"]
-        self.unique_logical_size = kwargs.get("unique_logical_size", None)
         if "unique_size" in kwargs:
             self.unique_size = kwargs["unique_size"]
 
@@ -375,27 +371,6 @@ class NfsInode(object):
             raise ValueError("Invalid value for `snapshot_num`, must not be `None`")  # noqa: E501
 
         self._snapshot_num = snapshot_num
-
-    @property
-    def unique_logical_size(self):
-        """Gets the unique_logical_size of this NfsInode.  # noqa: E501
-
-
-        :return: The unique_logical_size of this NfsInode.  # noqa: E501
-        :rtype: float
-        """
-        return self._unique_logical_size
-
-    @unique_logical_size.setter
-    def unique_logical_size(self, unique_logical_size):
-        """Sets the unique_logical_size of this NfsInode.
-
-
-        :param unique_logical_size: The unique_logical_size of this NfsInode.  # noqa: E501
-        :type unique_logical_size: float
-        """
-
-        self._unique_logical_size = unique_logical_size
 
     @property
     def unique_size(self):

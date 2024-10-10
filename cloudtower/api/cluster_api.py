@@ -37,7 +37,7 @@ class ClusterApi(object):
         :param cluster_creation_params: (required)
         :type cluster_creation_params: list[ClusterCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class ClusterApi(object):
         :param cluster_creation_params: (required)
         :type cluster_creation_params: list[ClusterCreationParams]
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class ClusterApi(object):
         :param cluster_deletion_params: (required)
         :type cluster_deletion_params: ClusterDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class ClusterApi(object):
         :param cluster_deletion_params: (required)
         :type cluster_deletion_params: ClusterDeletionParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -790,7 +790,7 @@ class ClusterApi(object):
         :param cluster_updation_params: (required)
         :type cluster_updation_params: ClusterUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -821,7 +821,7 @@ class ClusterApi(object):
         :param cluster_updation_params: (required)
         :type cluster_updation_params: ClusterUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -942,7 +942,7 @@ class ClusterApi(object):
         :param cluster_enable_iscsi_updation_params: (required)
         :type cluster_enable_iscsi_updation_params: ClusterEnableIscsiUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -973,7 +973,7 @@ class ClusterApi(object):
         :param cluster_enable_iscsi_updation_params: (required)
         :type cluster_enable_iscsi_updation_params: ClusterEnableIscsiUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1094,7 +1094,7 @@ class ClusterApi(object):
         :param cluster_ha_updation_params: (required)
         :type cluster_ha_updation_params: ClusterHaUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1125,7 +1125,7 @@ class ClusterApi(object):
         :param cluster_ha_updation_params: (required)
         :type cluster_ha_updation_params: ClusterHaUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1246,7 +1246,7 @@ class ClusterApi(object):
         :param cluster_license_updation_params: (required)
         :type cluster_license_updation_params: ClusterLicenseUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1277,7 +1277,7 @@ class ClusterApi(object):
         :param cluster_license_updation_params: (required)
         :type cluster_license_updation_params: ClusterLicenseUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1398,7 +1398,7 @@ class ClusterApi(object):
         :param cluster_network_setting_updation_params: (required)
         :type cluster_network_setting_updation_params: ClusterNetworkSettingUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1429,7 +1429,7 @@ class ClusterApi(object):
         :param cluster_network_setting_updation_params: (required)
         :type cluster_network_setting_updation_params: ClusterNetworkSettingUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1550,7 +1550,7 @@ class ClusterApi(object):
         :param cluster_virtualization_updation_params: (required)
         :type cluster_virtualization_updation_params: ClusterVirtualizationUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1581,7 +1581,7 @@ class ClusterApi(object):
         :param cluster_virtualization_updation_params: (required)
         :type cluster_virtualization_updation_params: ClusterVirtualizationUpdationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

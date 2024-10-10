@@ -37,7 +37,7 @@ class CloudTowerApplicationApi(object):
         :param delete_cloud_tower_application_package_params: (required)
         :type delete_cloud_tower_application_package_params: DeleteCloudTowerApplicationPackageParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class CloudTowerApplicationApi(object):
         :param delete_cloud_tower_application_package_params: (required)
         :type delete_cloud_tower_application_package_params: DeleteCloudTowerApplicationPackageParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class CloudTowerApplicationApi(object):
         :param deploy_cloud_tower_application_params: (required)
         :type deploy_cloud_tower_application_params: DeployCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class CloudTowerApplicationApi(object):
         :param deploy_cloud_tower_application_params: (required)
         :type deploy_cloud_tower_application_params: DeployCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -645,7 +645,7 @@ class CloudTowerApplicationApi(object):
         :param uninstall_cloud_tower_application_params: (required)
         :type uninstall_cloud_tower_application_params: UninstallCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -676,7 +676,7 @@ class CloudTowerApplicationApi(object):
         :param uninstall_cloud_tower_application_params: (required)
         :type uninstall_cloud_tower_application_params: UninstallCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -797,7 +797,7 @@ class CloudTowerApplicationApi(object):
         :param upgrade_cloud_tower_application_params: (required)
         :type upgrade_cloud_tower_application_params: UpgradeCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -828,7 +828,7 @@ class CloudTowerApplicationApi(object):
         :param upgrade_cloud_tower_application_params: (required)
         :type upgrade_cloud_tower_application_params: UpgradeCloudTowerApplicationParams
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -949,7 +949,7 @@ class CloudTowerApplicationApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param name:
         :type name: str
         :param size:
@@ -988,7 +988,7 @@ class CloudTowerApplicationApi(object):
         :param file: (required)
         :type file: file
         :param content_language:
-        :type content_language: ContentLanguage
+        :type content_language: str
         :param name:
         :type name: str
         :param size:
