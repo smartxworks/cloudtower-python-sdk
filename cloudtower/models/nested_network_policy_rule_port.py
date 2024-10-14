@@ -25,11 +25,13 @@ class NestedNetworkPolicyRulePort(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'alg_protocol': 'NetworkPolicyRuleAlgProtocol',
         'port': 'str',
         'protocol': 'NetworkPolicyRulePortProtocol'
     }
 
     attribute_map = {
+        'alg_protocol': 'alg_protocol',
         'port': 'port',
         'protocol': 'protocol'
     }
@@ -38,13 +40,36 @@ class NestedNetworkPolicyRulePort(object):
         """NestedNetworkPolicyRulePort - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._alg_protocol = None
         self._port = None
         self._protocol = None
         self.discriminator = None
 
+        self.alg_protocol = kwargs.get("alg_protocol", None)
         self.port = kwargs.get("port", None)
         if "protocol" in kwargs:
             self.protocol = kwargs["protocol"]
+
+    @property
+    def alg_protocol(self):
+        """Gets the alg_protocol of this NestedNetworkPolicyRulePort.  # noqa: E501
+
+
+        :return: The alg_protocol of this NestedNetworkPolicyRulePort.  # noqa: E501
+        :rtype: NetworkPolicyRuleAlgProtocol
+        """
+        return self._alg_protocol
+
+    @alg_protocol.setter
+    def alg_protocol(self, alg_protocol):
+        """Sets the alg_protocol of this NestedNetworkPolicyRulePort.
+
+
+        :param alg_protocol: The alg_protocol of this NestedNetworkPolicyRulePort.  # noqa: E501
+        :type alg_protocol: NetworkPolicyRuleAlgProtocol
+        """
+
+        self._alg_protocol = alg_protocol
 
     @property
     def port(self):

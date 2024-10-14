@@ -34,6 +34,7 @@ class Vlan(object):
         'mode_type': 'VlanModeType',
         'name': 'str',
         'network_ids': 'list[str]',
+        'qos_burst': 'float',
         'qos_max_bandwidth': 'float',
         'qos_min_bandwidth': 'float',
         'qos_priority': 'int',
@@ -54,6 +55,7 @@ class Vlan(object):
         'mode_type': 'mode_type',
         'name': 'name',
         'network_ids': 'network_ids',
+        'qos_burst': 'qos_burst',
         'qos_max_bandwidth': 'qos_max_bandwidth',
         'qos_min_bandwidth': 'qos_min_bandwidth',
         'qos_priority': 'qos_priority',
@@ -77,6 +79,7 @@ class Vlan(object):
         self._mode_type = None
         self._name = None
         self._network_ids = None
+        self._qos_burst = None
         self._qos_max_bandwidth = None
         self._qos_min_bandwidth = None
         self._qos_priority = None
@@ -100,6 +103,7 @@ class Vlan(object):
             self.name = kwargs["name"]
         if "network_ids" in kwargs:
             self.network_ids = kwargs["network_ids"]
+        self.qos_burst = kwargs.get("qos_burst", None)
         self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
         self.qos_min_bandwidth = kwargs.get("qos_min_bandwidth", None)
         self.qos_priority = kwargs.get("qos_priority", None)
@@ -308,6 +312,27 @@ class Vlan(object):
             raise ValueError("Invalid value for `network_ids`, must not be `None`")  # noqa: E501
 
         self._network_ids = network_ids
+
+    @property
+    def qos_burst(self):
+        """Gets the qos_burst of this Vlan.  # noqa: E501
+
+
+        :return: The qos_burst of this Vlan.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst
+
+    @qos_burst.setter
+    def qos_burst(self, qos_burst):
+        """Sets the qos_burst of this Vlan.
+
+
+        :param qos_burst: The qos_burst of this Vlan.  # noqa: E501
+        :type qos_burst: float
+        """
+
+        self._qos_burst = qos_burst
 
     @property
     def qos_max_bandwidth(self):
