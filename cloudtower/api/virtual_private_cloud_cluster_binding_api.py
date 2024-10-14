@@ -37,7 +37,7 @@ class VirtualPrivateCloudClusterBindingApi(object):
         :param get_virtual_private_cloud_cluster_bindings_request_body: (required)
         :type get_virtual_private_cloud_cluster_bindings_request_body: GetVirtualPrivateCloudClusterBindingsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,7 +68,7 @@ class VirtualPrivateCloudClusterBindingApi(object):
         :param get_virtual_private_cloud_cluster_bindings_request_body: (required)
         :type get_virtual_private_cloud_cluster_bindings_request_body: GetVirtualPrivateCloudClusterBindingsRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -189,7 +189,7 @@ class VirtualPrivateCloudClusterBindingApi(object):
         :param get_virtual_private_cloud_cluster_bindings_connection_request_body: (required)
         :type get_virtual_private_cloud_cluster_bindings_connection_request_body: GetVirtualPrivateCloudClusterBindingsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -220,7 +220,7 @@ class VirtualPrivateCloudClusterBindingApi(object):
         :param get_virtual_private_cloud_cluster_bindings_connection_request_body: (required)
         :type get_virtual_private_cloud_cluster_bindings_connection_request_body: GetVirtualPrivateCloudClusterBindingsConnectionRequestBody
         :param content_language:
-        :type content_language: str
+        :type content_language: ContentLanguage
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code

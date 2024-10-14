@@ -26,12 +26,16 @@ class NestedSecurityPolicyApply(object):
     """
     openapi_types = {
         'communicable': 'bool',
+        'security_group': 'NestedSecurityGroup',
+        'security_group_id': 'str',
         'selector': 'list[NestedLabel]',
         'selector_ids': 'list[str]'
     }
 
     attribute_map = {
         'communicable': 'communicable',
+        'security_group': 'security_group',
+        'security_group_id': 'security_group_id',
         'selector': 'selector',
         'selector_ids': 'selector_ids'
     }
@@ -41,12 +45,16 @@ class NestedSecurityPolicyApply(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._communicable = None
+        self._security_group = None
+        self._security_group_id = None
         self._selector = None
         self._selector_ids = None
         self.discriminator = None
 
         if "communicable" in kwargs:
             self.communicable = kwargs["communicable"]
+        self.security_group = kwargs.get("security_group", None)
+        self.security_group_id = kwargs.get("security_group_id", None)
         if "selector" in kwargs:
             self.selector = kwargs["selector"]
         if "selector_ids" in kwargs:
@@ -74,6 +82,48 @@ class NestedSecurityPolicyApply(object):
             raise ValueError("Invalid value for `communicable`, must not be `None`")  # noqa: E501
 
         self._communicable = communicable
+
+    @property
+    def security_group(self):
+        """Gets the security_group of this NestedSecurityPolicyApply.  # noqa: E501
+
+
+        :return: The security_group of this NestedSecurityPolicyApply.  # noqa: E501
+        :rtype: NestedSecurityGroup
+        """
+        return self._security_group
+
+    @security_group.setter
+    def security_group(self, security_group):
+        """Sets the security_group of this NestedSecurityPolicyApply.
+
+
+        :param security_group: The security_group of this NestedSecurityPolicyApply.  # noqa: E501
+        :type security_group: NestedSecurityGroup
+        """
+
+        self._security_group = security_group
+
+    @property
+    def security_group_id(self):
+        """Gets the security_group_id of this NestedSecurityPolicyApply.  # noqa: E501
+
+
+        :return: The security_group_id of this NestedSecurityPolicyApply.  # noqa: E501
+        :rtype: str
+        """
+        return self._security_group_id
+
+    @security_group_id.setter
+    def security_group_id(self, security_group_id):
+        """Sets the security_group_id of this NestedSecurityPolicyApply.
+
+
+        :param security_group_id: The security_group_id of this NestedSecurityPolicyApply.  # noqa: E501
+        :type security_group_id: str
+        """
+
+        self._security_group_id = security_group_id
 
     @property
     def selector(self):

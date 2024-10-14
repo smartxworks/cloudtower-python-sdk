@@ -27,6 +27,8 @@ class NestedNetworkPolicyRule(object):
     openapi_types = {
         'ip_block': 'str',
         'ports': 'list[NestedNetworkPolicyRulePort]',
+        'security_group': 'NestedSecurityGroup',
+        'security_group_id': 'str',
         'selector': 'list[NestedLabel]',
         'selector_ids': 'list[str]',
         'type': 'NetworkPolicyRuleType'
@@ -35,6 +37,8 @@ class NestedNetworkPolicyRule(object):
     attribute_map = {
         'ip_block': 'ip_block',
         'ports': 'ports',
+        'security_group': 'security_group',
+        'security_group_id': 'security_group_id',
         'selector': 'selector',
         'selector_ids': 'selector_ids',
         'type': 'type'
@@ -46,6 +50,8 @@ class NestedNetworkPolicyRule(object):
 
         self._ip_block = None
         self._ports = None
+        self._security_group = None
+        self._security_group_id = None
         self._selector = None
         self._selector_ids = None
         self._type = None
@@ -53,6 +59,8 @@ class NestedNetworkPolicyRule(object):
 
         self.ip_block = kwargs.get("ip_block", None)
         self.ports = kwargs.get("ports", None)
+        self.security_group = kwargs.get("security_group", None)
+        self.security_group_id = kwargs.get("security_group_id", None)
         self.selector = kwargs.get("selector", None)
         self.selector_ids = kwargs.get("selector_ids", None)
         if "type" in kwargs:
@@ -99,6 +107,48 @@ class NestedNetworkPolicyRule(object):
         """
 
         self._ports = ports
+
+    @property
+    def security_group(self):
+        """Gets the security_group of this NestedNetworkPolicyRule.  # noqa: E501
+
+
+        :return: The security_group of this NestedNetworkPolicyRule.  # noqa: E501
+        :rtype: NestedSecurityGroup
+        """
+        return self._security_group
+
+    @security_group.setter
+    def security_group(self, security_group):
+        """Sets the security_group of this NestedNetworkPolicyRule.
+
+
+        :param security_group: The security_group of this NestedNetworkPolicyRule.  # noqa: E501
+        :type security_group: NestedSecurityGroup
+        """
+
+        self._security_group = security_group
+
+    @property
+    def security_group_id(self):
+        """Gets the security_group_id of this NestedNetworkPolicyRule.  # noqa: E501
+
+
+        :return: The security_group_id of this NestedNetworkPolicyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._security_group_id
+
+    @security_group_id.setter
+    def security_group_id(self, security_group_id):
+        """Sets the security_group_id of this NestedNetworkPolicyRule.
+
+
+        :param security_group_id: The security_group_id of this NestedNetworkPolicyRule.  # noqa: E501
+        :type security_group_id: str
+        """
+
+        self._security_group_id = security_group_id
 
     @property
     def selector(self):

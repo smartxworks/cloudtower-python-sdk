@@ -109,6 +109,14 @@ class VlanWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
+        'qos_burst': 'float',
+        'qos_burst_gt': 'float',
+        'qos_burst_gte': 'float',
+        'qos_burst_in': 'list[float]',
+        'qos_burst_lt': 'float',
+        'qos_burst_lte': 'float',
+        'qos_burst_not': 'float',
+        'qos_burst_not_in': 'list[float]',
         'qos_max_bandwidth': 'float',
         'qos_max_bandwidth_gt': 'float',
         'qos_max_bandwidth_gte': 'float',
@@ -250,6 +258,14 @@ class VlanWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
+        'qos_burst': 'qos_burst',
+        'qos_burst_gt': 'qos_burst_gt',
+        'qos_burst_gte': 'qos_burst_gte',
+        'qos_burst_in': 'qos_burst_in',
+        'qos_burst_lt': 'qos_burst_lt',
+        'qos_burst_lte': 'qos_burst_lte',
+        'qos_burst_not': 'qos_burst_not',
+        'qos_burst_not_in': 'qos_burst_not_in',
         'qos_max_bandwidth': 'qos_max_bandwidth',
         'qos_max_bandwidth_gt': 'qos_max_bandwidth_gt',
         'qos_max_bandwidth_gte': 'qos_max_bandwidth_gte',
@@ -394,6 +410,14 @@ class VlanWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
+        self._qos_burst = None
+        self._qos_burst_gt = None
+        self._qos_burst_gte = None
+        self._qos_burst_in = None
+        self._qos_burst_lt = None
+        self._qos_burst_lte = None
+        self._qos_burst_not = None
+        self._qos_burst_not_in = None
         self._qos_max_bandwidth = None
         self._qos_max_bandwidth_gt = None
         self._qos_max_bandwidth_gte = None
@@ -534,6 +558,14 @@ class VlanWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.qos_burst = kwargs.get("qos_burst", None)
+        self.qos_burst_gt = kwargs.get("qos_burst_gt", None)
+        self.qos_burst_gte = kwargs.get("qos_burst_gte", None)
+        self.qos_burst_in = kwargs.get("qos_burst_in", None)
+        self.qos_burst_lt = kwargs.get("qos_burst_lt", None)
+        self.qos_burst_lte = kwargs.get("qos_burst_lte", None)
+        self.qos_burst_not = kwargs.get("qos_burst_not", None)
+        self.qos_burst_not_in = kwargs.get("qos_burst_not_in", None)
         self.qos_max_bandwidth = kwargs.get("qos_max_bandwidth", None)
         self.qos_max_bandwidth_gt = kwargs.get("qos_max_bandwidth_gt", None)
         self.qos_max_bandwidth_gte = kwargs.get("qos_max_bandwidth_gte", None)
@@ -2352,6 +2384,174 @@ class VlanWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
+
+    @property
+    def qos_burst(self):
+        """Gets the qos_burst of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst
+
+    @qos_burst.setter
+    def qos_burst(self, qos_burst):
+        """Sets the qos_burst of this VlanWhereInput.
+
+
+        :param qos_burst: The qos_burst of this VlanWhereInput.  # noqa: E501
+        :type qos_burst: float
+        """
+
+        self._qos_burst = qos_burst
+
+    @property
+    def qos_burst_gt(self):
+        """Gets the qos_burst_gt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_gt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst_gt
+
+    @qos_burst_gt.setter
+    def qos_burst_gt(self, qos_burst_gt):
+        """Sets the qos_burst_gt of this VlanWhereInput.
+
+
+        :param qos_burst_gt: The qos_burst_gt of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_gt: float
+        """
+
+        self._qos_burst_gt = qos_burst_gt
+
+    @property
+    def qos_burst_gte(self):
+        """Gets the qos_burst_gte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_gte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst_gte
+
+    @qos_burst_gte.setter
+    def qos_burst_gte(self, qos_burst_gte):
+        """Sets the qos_burst_gte of this VlanWhereInput.
+
+
+        :param qos_burst_gte: The qos_burst_gte of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_gte: float
+        """
+
+        self._qos_burst_gte = qos_burst_gte
+
+    @property
+    def qos_burst_in(self):
+        """Gets the qos_burst_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_burst_in
+
+    @qos_burst_in.setter
+    def qos_burst_in(self, qos_burst_in):
+        """Sets the qos_burst_in of this VlanWhereInput.
+
+
+        :param qos_burst_in: The qos_burst_in of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_in: list[float]
+        """
+
+        self._qos_burst_in = qos_burst_in
+
+    @property
+    def qos_burst_lt(self):
+        """Gets the qos_burst_lt of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_lt of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst_lt
+
+    @qos_burst_lt.setter
+    def qos_burst_lt(self, qos_burst_lt):
+        """Sets the qos_burst_lt of this VlanWhereInput.
+
+
+        :param qos_burst_lt: The qos_burst_lt of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_lt: float
+        """
+
+        self._qos_burst_lt = qos_burst_lt
+
+    @property
+    def qos_burst_lte(self):
+        """Gets the qos_burst_lte of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_lte of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst_lte
+
+    @qos_burst_lte.setter
+    def qos_burst_lte(self, qos_burst_lte):
+        """Sets the qos_burst_lte of this VlanWhereInput.
+
+
+        :param qos_burst_lte: The qos_burst_lte of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_lte: float
+        """
+
+        self._qos_burst_lte = qos_burst_lte
+
+    @property
+    def qos_burst_not(self):
+        """Gets the qos_burst_not of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_not of this VlanWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._qos_burst_not
+
+    @qos_burst_not.setter
+    def qos_burst_not(self, qos_burst_not):
+        """Sets the qos_burst_not of this VlanWhereInput.
+
+
+        :param qos_burst_not: The qos_burst_not of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_not: float
+        """
+
+        self._qos_burst_not = qos_burst_not
+
+    @property
+    def qos_burst_not_in(self):
+        """Gets the qos_burst_not_in of this VlanWhereInput.  # noqa: E501
+
+
+        :return: The qos_burst_not_in of this VlanWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._qos_burst_not_in
+
+    @qos_burst_not_in.setter
+    def qos_burst_not_in(self, qos_burst_not_in):
+        """Sets the qos_burst_not_in of this VlanWhereInput.
+
+
+        :param qos_burst_not_in: The qos_burst_not_in of this VlanWhereInput.  # noqa: E501
+        :type qos_burst_not_in: list[float]
+        """
+
+        self._qos_burst_not_in = qos_burst_not_in
 
     @property
     def qos_max_bandwidth(self):

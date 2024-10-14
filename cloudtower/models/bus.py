@@ -22,9 +22,10 @@ class Bus(object):
     """
     IDE = "IDE"
     SCSI = "SCSI"
+    USB = "USB"
     VIRTIO = "VIRTIO"
 
-    allowable_values = [IDE, SCSI, VIRTIO]  # noqa: E501
+    allowable_values = [IDE, SCSI, USB, VIRTIO]  # noqa: E501
 
     """
     Attributes:

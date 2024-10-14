@@ -25,11 +25,13 @@ class SecurityPolicyIngressEgressInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'type': 'SecurityPolicyFlowControlType',
         'ports': 'list[NetworkPolicyRulePortInput]',
         'target': 'SecurityPolicyIngressEgressInputTarget'
     }
 
     attribute_map = {
+        'type': 'type',
         'ports': 'ports',
         'target': 'target'
     }
@@ -38,14 +40,38 @@ class SecurityPolicyIngressEgressInput(object):
         """SecurityPolicyIngressEgressInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._type = None
         self._ports = None
         self._target = None
         self.discriminator = None
 
+        if "type" in kwargs:
+            self.type = kwargs["type"]
         if "ports" in kwargs:
             self.ports = kwargs["ports"]
         if "target" in kwargs:
             self.target = kwargs["target"]
+
+    @property
+    def type(self):
+        """Gets the type of this SecurityPolicyIngressEgressInput.  # noqa: E501
+
+
+        :return: The type of this SecurityPolicyIngressEgressInput.  # noqa: E501
+        :rtype: SecurityPolicyFlowControlType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this SecurityPolicyIngressEgressInput.
+
+
+        :param type: The type of this SecurityPolicyIngressEgressInput.  # noqa: E501
+        :type type: SecurityPolicyFlowControlType
+        """
+
+        self._type = type
 
     @property
     def ports(self):
@@ -86,8 +112,6 @@ class SecurityPolicyIngressEgressInput(object):
         :param target: The target of this SecurityPolicyIngressEgressInput.  # noqa: E501
         :type target: SecurityPolicyIngressEgressInputTarget
         """
-        if self.local_vars_configuration.client_side_validation and target is None:  # noqa: E501
-            raise ValueError("Invalid value for `target`, must not be `None`")  # noqa: E501
 
         self._target = target
 
