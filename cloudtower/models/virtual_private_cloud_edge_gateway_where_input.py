@@ -37,6 +37,14 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'cpu_number_lte': 'int',
         'cpu_number_not': 'int',
         'cpu_number_not_in': 'list[int]',
+        'created_at': 'str',
+        'created_at_gt': 'str',
+        'created_at_gte': 'str',
+        'created_at_in': 'list[str]',
+        'created_at_lt': 'str',
+        'created_at_lte': 'str',
+        'created_at_not': 'str',
+        'created_at_not_in': 'list[str]',
         'data_volume_size': 'int',
         'data_volume_size_gt': 'int',
         'data_volume_size_gte': 'int',
@@ -59,6 +67,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'edge_gateway_group': 'VirtualPrivateCloudEdgeGatewayGroupWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -153,6 +162,14 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'cpu_number_lte': 'cpu_number_lte',
         'cpu_number_not': 'cpu_number_not',
         'cpu_number_not_in': 'cpu_number_not_in',
+        'created_at': 'createdAt',
+        'created_at_gt': 'createdAt_gt',
+        'created_at_gte': 'createdAt_gte',
+        'created_at_in': 'createdAt_in',
+        'created_at_lt': 'createdAt_lt',
+        'created_at_lte': 'createdAt_lte',
+        'created_at_not': 'createdAt_not',
+        'created_at_not_in': 'createdAt_not_in',
         'data_volume_size': 'data_volume_size',
         'data_volume_size_gt': 'data_volume_size_gt',
         'data_volume_size_gte': 'data_volume_size_gte',
@@ -175,6 +192,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'edge_gateway_group': 'edge_gateway_group',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -272,6 +290,14 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self._cpu_number_lte = None
         self._cpu_number_not = None
         self._cpu_number_not_in = None
+        self._created_at = None
+        self._created_at_gt = None
+        self._created_at_gte = None
+        self._created_at_in = None
+        self._created_at_lt = None
+        self._created_at_lte = None
+        self._created_at_not = None
+        self._created_at_not_in = None
         self._data_volume_size = None
         self._data_volume_size_gt = None
         self._data_volume_size_gte = None
@@ -294,6 +320,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._edge_gateway_group = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -387,6 +414,14 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self.cpu_number_lte = kwargs.get("cpu_number_lte", None)
         self.cpu_number_not = kwargs.get("cpu_number_not", None)
         self.cpu_number_not_in = kwargs.get("cpu_number_not_in", None)
+        self.created_at = kwargs.get("created_at", None)
+        self.created_at_gt = kwargs.get("created_at_gt", None)
+        self.created_at_gte = kwargs.get("created_at_gte", None)
+        self.created_at_in = kwargs.get("created_at_in", None)
+        self.created_at_lt = kwargs.get("created_at_lt", None)
+        self.created_at_lte = kwargs.get("created_at_lte", None)
+        self.created_at_not = kwargs.get("created_at_not", None)
+        self.created_at_not_in = kwargs.get("created_at_not_in", None)
         self.data_volume_size = kwargs.get("data_volume_size", None)
         self.data_volume_size_gt = kwargs.get("data_volume_size_gt", None)
         self.data_volume_size_gte = kwargs.get("data_volume_size_gte", None)
@@ -409,6 +444,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.edge_gateway_group = kwargs.get("edge_gateway_group", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -740,6 +776,174 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         """
 
         self._cpu_number_not_in = cpu_number_not_in
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at: The created_at of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def created_at_gt(self):
+        """Gets the created_at_gt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gt
+
+    @created_at_gt.setter
+    def created_at_gt(self, created_at_gt):
+        """Sets the created_at_gt of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_gt: The created_at_gt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_gt: str
+        """
+
+        self._created_at_gt = created_at_gt
+
+    @property
+    def created_at_gte(self):
+        """Gets the created_at_gte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gte
+
+    @created_at_gte.setter
+    def created_at_gte(self, created_at_gte):
+        """Sets the created_at_gte of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_gte: The created_at_gte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_gte: str
+        """
+
+        self._created_at_gte = created_at_gte
+
+    @property
+    def created_at_in(self):
+        """Gets the created_at_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_in
+
+    @created_at_in.setter
+    def created_at_in(self, created_at_in):
+        """Sets the created_at_in of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_in: The created_at_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_in: list[str]
+        """
+
+        self._created_at_in = created_at_in
+
+    @property
+    def created_at_lt(self):
+        """Gets the created_at_lt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lt
+
+    @created_at_lt.setter
+    def created_at_lt(self, created_at_lt):
+        """Sets the created_at_lt of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_lt: The created_at_lt of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_lt: str
+        """
+
+        self._created_at_lt = created_at_lt
+
+    @property
+    def created_at_lte(self):
+        """Gets the created_at_lte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lte
+
+    @created_at_lte.setter
+    def created_at_lte(self, created_at_lte):
+        """Sets the created_at_lte of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_lte: The created_at_lte of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_lte: str
+        """
+
+        self._created_at_lte = created_at_lte
+
+    @property
+    def created_at_not(self):
+        """Gets the created_at_not of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_not
+
+    @created_at_not.setter
+    def created_at_not(self, created_at_not):
+        """Sets the created_at_not of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_not: The created_at_not of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_not: str
+        """
+
+        self._created_at_not = created_at_not
+
+    @property
+    def created_at_not_in(self):
+        """Gets the created_at_not_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_not_in
+
+    @created_at_not_in.setter
+    def created_at_not_in(self, created_at_not_in):
+        """Sets the created_at_not_in of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param created_at_not_in: The created_at_not_in of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type created_at_not_in: list[str]
+        """
+
+        self._created_at_not_in = created_at_not_in
 
     @property
     def data_volume_size(self):
@@ -1202,6 +1406,27 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         """
 
         self._description_starts_with = description_starts_with
+
+    @property
+    def edge_gateway_group(self):
+        """Gets the edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+        return self._edge_gateway_group
+
+    @edge_gateway_group.setter
+    def edge_gateway_group(self, edge_gateway_group):
+        """Sets the edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param edge_gateway_group: The edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type edge_gateway_group: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+
+        self._edge_gateway_group = edge_gateway_group
 
     @property
     def entity_async_status(self):

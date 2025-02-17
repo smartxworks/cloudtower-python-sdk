@@ -63,7 +63,8 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'vlan_id_lt': 'int',
         'vlan_id_lte': 'int',
         'vlan_id_not': 'int',
-        'vlan_id_not_in': 'list[int]'
+        'vlan_id_not_in': 'list[int]',
+        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
     }
 
     attribute_map = {
@@ -105,7 +106,8 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         'vlan_id_lt': 'vlan_id_lt',
         'vlan_id_lte': 'vlan_id_lte',
         'vlan_id_not': 'vlan_id_not',
-        'vlan_id_not_in': 'vlan_id_not_in'
+        'vlan_id_not_in': 'vlan_id_not_in',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -151,6 +153,7 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self._vlan_id_lte = None
         self._vlan_id_not = None
         self._vlan_id_not_in = None
+        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -192,6 +195,7 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         self.vlan_id_lte = kwargs.get("vlan_id_lte", None)
         self.vlan_id_not = kwargs.get("vlan_id_not", None)
         self.vlan_id_not_in = kwargs.get("vlan_id_not_in", None)
+        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -1011,6 +1015,27 @@ class VirtualPrivateCloudClusterBindingWhereInput(object):
         """
 
         self._vlan_id_not_in = vlan_id_not_in
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+
+
+        :return: The vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudServiceWhereInput
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.
+
+
+        :param vpc_service: The vpc_service of this VirtualPrivateCloudClusterBindingWhereInput.  # noqa: E501
+        :type vpc_service: VirtualPrivateCloudServiceWhereInput
+        """
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

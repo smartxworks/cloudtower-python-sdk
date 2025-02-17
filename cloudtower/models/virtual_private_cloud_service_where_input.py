@@ -31,6 +31,9 @@ class VirtualPrivateCloudServiceWhereInput(object):
         'cluster_bindings_every': 'VirtualPrivateCloudClusterBindingWhereInput',
         'cluster_bindings_none': 'VirtualPrivateCloudClusterBindingWhereInput',
         'cluster_bindings_some': 'VirtualPrivateCloudClusterBindingWhereInput',
+        'edge_gateway_groups_every': 'VirtualPrivateCloudEdgeGatewayGroupWhereInput',
+        'edge_gateway_groups_none': 'VirtualPrivateCloudEdgeGatewayGroupWhereInput',
+        'edge_gateway_groups_some': 'VirtualPrivateCloudEdgeGatewayGroupWhereInput',
         'edge_gateways_every': 'VirtualPrivateCloudEdgeGatewayWhereInput',
         'edge_gateways_none': 'VirtualPrivateCloudEdgeGatewayWhereInput',
         'edge_gateways_some': 'VirtualPrivateCloudEdgeGatewayWhereInput',
@@ -86,6 +89,9 @@ class VirtualPrivateCloudServiceWhereInput(object):
         'cluster_bindings_every': 'cluster_bindings_every',
         'cluster_bindings_none': 'cluster_bindings_none',
         'cluster_bindings_some': 'cluster_bindings_some',
+        'edge_gateway_groups_every': 'edge_gateway_groups_every',
+        'edge_gateway_groups_none': 'edge_gateway_groups_none',
+        'edge_gateway_groups_some': 'edge_gateway_groups_some',
         'edge_gateways_every': 'edge_gateways_every',
         'edge_gateways_none': 'edge_gateways_none',
         'edge_gateways_some': 'edge_gateways_some',
@@ -144,6 +150,9 @@ class VirtualPrivateCloudServiceWhereInput(object):
         self._cluster_bindings_every = None
         self._cluster_bindings_none = None
         self._cluster_bindings_some = None
+        self._edge_gateway_groups_every = None
+        self._edge_gateway_groups_none = None
+        self._edge_gateway_groups_some = None
         self._edge_gateways_every = None
         self._edge_gateways_none = None
         self._edge_gateways_some = None
@@ -198,6 +207,9 @@ class VirtualPrivateCloudServiceWhereInput(object):
         self.cluster_bindings_every = kwargs.get("cluster_bindings_every", None)
         self.cluster_bindings_none = kwargs.get("cluster_bindings_none", None)
         self.cluster_bindings_some = kwargs.get("cluster_bindings_some", None)
+        self.edge_gateway_groups_every = kwargs.get("edge_gateway_groups_every", None)
+        self.edge_gateway_groups_none = kwargs.get("edge_gateway_groups_none", None)
+        self.edge_gateway_groups_some = kwargs.get("edge_gateway_groups_some", None)
         self.edge_gateways_every = kwargs.get("edge_gateways_every", None)
         self.edge_gateways_none = kwargs.get("edge_gateways_none", None)
         self.edge_gateways_some = kwargs.get("edge_gateways_some", None)
@@ -370,6 +382,69 @@ class VirtualPrivateCloudServiceWhereInput(object):
         """
 
         self._cluster_bindings_some = cluster_bindings_some
+
+    @property
+    def edge_gateway_groups_every(self):
+        """Gets the edge_gateway_groups_every of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway_groups_every of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+        return self._edge_gateway_groups_every
+
+    @edge_gateway_groups_every.setter
+    def edge_gateway_groups_every(self, edge_gateway_groups_every):
+        """Sets the edge_gateway_groups_every of this VirtualPrivateCloudServiceWhereInput.
+
+
+        :param edge_gateway_groups_every: The edge_gateway_groups_every of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :type edge_gateway_groups_every: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+
+        self._edge_gateway_groups_every = edge_gateway_groups_every
+
+    @property
+    def edge_gateway_groups_none(self):
+        """Gets the edge_gateway_groups_none of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway_groups_none of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+        return self._edge_gateway_groups_none
+
+    @edge_gateway_groups_none.setter
+    def edge_gateway_groups_none(self, edge_gateway_groups_none):
+        """Sets the edge_gateway_groups_none of this VirtualPrivateCloudServiceWhereInput.
+
+
+        :param edge_gateway_groups_none: The edge_gateway_groups_none of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :type edge_gateway_groups_none: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+
+        self._edge_gateway_groups_none = edge_gateway_groups_none
+
+    @property
+    def edge_gateway_groups_some(self):
+        """Gets the edge_gateway_groups_some of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway_groups_some of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+        return self._edge_gateway_groups_some
+
+    @edge_gateway_groups_some.setter
+    def edge_gateway_groups_some(self, edge_gateway_groups_some):
+        """Sets the edge_gateway_groups_some of this VirtualPrivateCloudServiceWhereInput.
+
+
+        :param edge_gateway_groups_some: The edge_gateway_groups_some of this VirtualPrivateCloudServiceWhereInput.  # noqa: E501
+        :type edge_gateway_groups_some: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+
+        self._edge_gateway_groups_some = edge_gateway_groups_some
 
     @property
     def edge_gateways_every(self):

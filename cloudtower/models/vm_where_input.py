@@ -28,6 +28,9 @@ class VmWhereInput(object):
         '_and': 'list[VmWhereInput]',
         '_not': 'list[VmWhereInput]',
         '_or': 'list[VmWhereInput]',
+        'backup_plans_every': 'BackupPlanWhereInput',
+        'backup_plans_none': 'BackupPlanWhereInput',
+        'backup_plans_some': 'BackupPlanWhereInput',
         'bios_uuid': 'str',
         'bios_uuid_contains': 'str',
         'bios_uuid_ends_with': 'str',
@@ -462,6 +465,9 @@ class VmWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
+        'backup_plans_every': 'backup_plans_every',
+        'backup_plans_none': 'backup_plans_none',
+        'backup_plans_some': 'backup_plans_some',
         'bios_uuid': 'bios_uuid',
         'bios_uuid_contains': 'bios_uuid_contains',
         'bios_uuid_ends_with': 'bios_uuid_ends_with',
@@ -899,6 +905,9 @@ class VmWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
+        self._backup_plans_every = None
+        self._backup_plans_none = None
+        self._backup_plans_some = None
         self._bios_uuid = None
         self._bios_uuid_contains = None
         self._bios_uuid_ends_with = None
@@ -1332,6 +1341,9 @@ class VmWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.backup_plans_every = kwargs.get("backup_plans_every", None)
+        self.backup_plans_none = kwargs.get("backup_plans_none", None)
+        self.backup_plans_some = kwargs.get("backup_plans_some", None)
         self.bios_uuid = kwargs.get("bios_uuid", None)
         self.bios_uuid_contains = kwargs.get("bios_uuid_contains", None)
         self.bios_uuid_ends_with = kwargs.get("bios_uuid_ends_with", None)
@@ -1823,6 +1835,69 @@ class VmWhereInput(object):
         """
 
         self.__or = _or
+
+    @property
+    def backup_plans_every(self):
+        """Gets the backup_plans_every of this VmWhereInput.  # noqa: E501
+
+
+        :return: The backup_plans_every of this VmWhereInput.  # noqa: E501
+        :rtype: BackupPlanWhereInput
+        """
+        return self._backup_plans_every
+
+    @backup_plans_every.setter
+    def backup_plans_every(self, backup_plans_every):
+        """Sets the backup_plans_every of this VmWhereInput.
+
+
+        :param backup_plans_every: The backup_plans_every of this VmWhereInput.  # noqa: E501
+        :type backup_plans_every: BackupPlanWhereInput
+        """
+
+        self._backup_plans_every = backup_plans_every
+
+    @property
+    def backup_plans_none(self):
+        """Gets the backup_plans_none of this VmWhereInput.  # noqa: E501
+
+
+        :return: The backup_plans_none of this VmWhereInput.  # noqa: E501
+        :rtype: BackupPlanWhereInput
+        """
+        return self._backup_plans_none
+
+    @backup_plans_none.setter
+    def backup_plans_none(self, backup_plans_none):
+        """Sets the backup_plans_none of this VmWhereInput.
+
+
+        :param backup_plans_none: The backup_plans_none of this VmWhereInput.  # noqa: E501
+        :type backup_plans_none: BackupPlanWhereInput
+        """
+
+        self._backup_plans_none = backup_plans_none
+
+    @property
+    def backup_plans_some(self):
+        """Gets the backup_plans_some of this VmWhereInput.  # noqa: E501
+
+
+        :return: The backup_plans_some of this VmWhereInput.  # noqa: E501
+        :rtype: BackupPlanWhereInput
+        """
+        return self._backup_plans_some
+
+    @backup_plans_some.setter
+    def backup_plans_some(self, backup_plans_some):
+        """Sets the backup_plans_some of this VmWhereInput.
+
+
+        :param backup_plans_some: The backup_plans_some of this VmWhereInput.  # noqa: E501
+        :type backup_plans_some: BackupPlanWhereInput
+        """
+
+        self._backup_plans_some = backup_plans_some
 
     @property
     def bios_uuid(self):
