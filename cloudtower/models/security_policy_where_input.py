@@ -57,6 +57,8 @@ class SecurityPolicyWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'is_blocklist': 'bool',
+        'is_blocklist_not': 'bool',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -110,6 +112,8 @@ class SecurityPolicyWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'is_blocklist': 'is_blocklist',
+        'is_blocklist_not': 'is_blocklist_not',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -166,6 +170,8 @@ class SecurityPolicyWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._is_blocklist = None
+        self._is_blocklist_not = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -218,6 +224,8 @@ class SecurityPolicyWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.is_blocklist = kwargs.get("is_blocklist", None)
+        self.is_blocklist_not = kwargs.get("is_blocklist_not", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -908,6 +916,48 @@ class SecurityPolicyWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def is_blocklist(self):
+        """Gets the is_blocklist of this SecurityPolicyWhereInput.  # noqa: E501
+
+
+        :return: The is_blocklist of this SecurityPolicyWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_blocklist
+
+    @is_blocklist.setter
+    def is_blocklist(self, is_blocklist):
+        """Sets the is_blocklist of this SecurityPolicyWhereInput.
+
+
+        :param is_blocklist: The is_blocklist of this SecurityPolicyWhereInput.  # noqa: E501
+        :type is_blocklist: bool
+        """
+
+        self._is_blocklist = is_blocklist
+
+    @property
+    def is_blocklist_not(self):
+        """Gets the is_blocklist_not of this SecurityPolicyWhereInput.  # noqa: E501
+
+
+        :return: The is_blocklist_not of this SecurityPolicyWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_blocklist_not
+
+    @is_blocklist_not.setter
+    def is_blocklist_not(self, is_blocklist_not):
+        """Sets the is_blocklist_not of this SecurityPolicyWhereInput.
+
+
+        :param is_blocklist_not: The is_blocklist_not of this SecurityPolicyWhereInput.  # noqa: E501
+        :type is_blocklist_not: bool
+        """
+
+        self._is_blocklist_not = is_blocklist_not
 
     @property
     def name(self):

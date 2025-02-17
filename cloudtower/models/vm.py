@@ -25,6 +25,7 @@ class Vm(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'backup_plans': 'list[NestedBackupPlan]',
         'bios_uuid': 'str',
         'clock_offset': 'VmClockOffset',
         'cloud_init_supported': 'bool',
@@ -93,6 +94,7 @@ class Vm(object):
     }
 
     attribute_map = {
+        'backup_plans': 'backup_plans',
         'bios_uuid': 'bios_uuid',
         'clock_offset': 'clock_offset',
         'cloud_init_supported': 'cloud_init_supported',
@@ -164,6 +166,7 @@ class Vm(object):
         """Vm - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._backup_plans = None
         self._bios_uuid = None
         self._clock_offset = None
         self._cloud_init_supported = None
@@ -231,6 +234,7 @@ class Vm(object):
         self._win_opt = None
         self.discriminator = None
 
+        self.backup_plans = kwargs.get("backup_plans", None)
         self.bios_uuid = kwargs.get("bios_uuid", None)
         if "clock_offset" in kwargs:
             self.clock_offset = kwargs["clock_offset"]
@@ -317,6 +321,27 @@ class Vm(object):
         self.vm_usage = kwargs.get("vm_usage", None)
         if "win_opt" in kwargs:
             self.win_opt = kwargs["win_opt"]
+
+    @property
+    def backup_plans(self):
+        """Gets the backup_plans of this Vm.  # noqa: E501
+
+
+        :return: The backup_plans of this Vm.  # noqa: E501
+        :rtype: list[NestedBackupPlan]
+        """
+        return self._backup_plans
+
+    @backup_plans.setter
+    def backup_plans(self, backup_plans):
+        """Sets the backup_plans of this Vm.
+
+
+        :param backup_plans: The backup_plans of this Vm.  # noqa: E501
+        :type backup_plans: list[NestedBackupPlan]
+        """
+
+        self._backup_plans = backup_plans
 
     @property
     def bios_uuid(self):

@@ -25,11 +25,17 @@ class BackupPlan(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'backup_delay_option': 'BackupPlanDelayOption',
+        'backup_plan_executions': 'list[NestedBackupPlanExecution]',
+        'backup_restore_point_count': 'int',
+        'backup_restore_points': 'list[NestedBackupRestorePoint]',
         'backup_service': 'NestedBackupService',
         'backup_store_repository': 'NestedBackupStoreRepository',
+        'backup_total_size': 'int',
         'compression': 'bool',
         'compression_ratio': 'float',
         'created_at': 'str',
+        'delete_strategy': 'BackupPlanDeleteStrategy',
         'description': 'str',
         'enable_window': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
@@ -44,29 +50,41 @@ class BackupPlan(object):
         'keep_policy': 'BackupPlanKeepPolicy',
         'keep_policy_value': 'int',
         'last_execute_status': 'BackupPlanExecutionStatus',
+        'last_execute_status_message': 'str',
         'last_execute_success_job_count': 'int',
         'last_execute_total_job_count': 'int',
         'last_executed_at': 'str',
         'last_manual_execute_status': 'BackupPlanExecutionStatus',
+        'last_manual_execute_status_message': 'str',
         'last_manual_execute_success_job_count': 'int',
         'last_manual_execute_total_job_count': 'int',
         'last_manual_executed_at': 'str',
+        'logical_size': 'int',
         'name': 'str',
         'next_execute_time': 'str',
+        'phase': 'BackupPlanPhase',
         'physical_size': 'int',
         'snapshot_consistent_type': 'ConsistentType',
         'status': 'BackupPlanStatus',
         'valid_size_of_backup_object': 'int',
+        'valid_size_of_restore_point': 'int',
+        'vms': 'list[NestedVm]',
         'window_end': 'str',
         'window_start': 'str'
     }
 
     attribute_map = {
+        'backup_delay_option': 'backup_delay_option',
+        'backup_plan_executions': 'backup_plan_executions',
+        'backup_restore_point_count': 'backup_restore_point_count',
+        'backup_restore_points': 'backup_restore_points',
         'backup_service': 'backup_service',
         'backup_store_repository': 'backup_store_repository',
+        'backup_total_size': 'backup_total_size',
         'compression': 'compression',
         'compression_ratio': 'compression_ratio',
         'created_at': 'createdAt',
+        'delete_strategy': 'delete_strategy',
         'description': 'description',
         'enable_window': 'enable_window',
         'entity_async_status': 'entityAsyncStatus',
@@ -81,19 +99,25 @@ class BackupPlan(object):
         'keep_policy': 'keep_policy',
         'keep_policy_value': 'keep_policy_value',
         'last_execute_status': 'last_execute_status',
+        'last_execute_status_message': 'last_execute_status_message',
         'last_execute_success_job_count': 'last_execute_success_job_count',
         'last_execute_total_job_count': 'last_execute_total_job_count',
         'last_executed_at': 'last_executed_at',
         'last_manual_execute_status': 'last_manual_execute_status',
+        'last_manual_execute_status_message': 'last_manual_execute_status_message',
         'last_manual_execute_success_job_count': 'last_manual_execute_success_job_count',
         'last_manual_execute_total_job_count': 'last_manual_execute_total_job_count',
         'last_manual_executed_at': 'last_manual_executed_at',
+        'logical_size': 'logical_size',
         'name': 'name',
         'next_execute_time': 'next_execute_time',
+        'phase': 'phase',
         'physical_size': 'physical_size',
         'snapshot_consistent_type': 'snapshot_consistent_type',
         'status': 'status',
         'valid_size_of_backup_object': 'valid_size_of_backup_object',
+        'valid_size_of_restore_point': 'valid_size_of_restore_point',
+        'vms': 'vms',
         'window_end': 'window_end',
         'window_start': 'window_start'
     }
@@ -102,11 +126,17 @@ class BackupPlan(object):
         """BackupPlan - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._backup_delay_option = None
+        self._backup_plan_executions = None
+        self._backup_restore_point_count = None
+        self._backup_restore_points = None
         self._backup_service = None
         self._backup_store_repository = None
+        self._backup_total_size = None
         self._compression = None
         self._compression_ratio = None
         self._created_at = None
+        self._delete_strategy = None
         self._description = None
         self._enable_window = None
         self._entity_async_status = None
@@ -121,31 +151,43 @@ class BackupPlan(object):
         self._keep_policy = None
         self._keep_policy_value = None
         self._last_execute_status = None
+        self._last_execute_status_message = None
         self._last_execute_success_job_count = None
         self._last_execute_total_job_count = None
         self._last_executed_at = None
         self._last_manual_execute_status = None
+        self._last_manual_execute_status_message = None
         self._last_manual_execute_success_job_count = None
         self._last_manual_execute_total_job_count = None
         self._last_manual_executed_at = None
+        self._logical_size = None
         self._name = None
         self._next_execute_time = None
+        self._phase = None
         self._physical_size = None
         self._snapshot_consistent_type = None
         self._status = None
         self._valid_size_of_backup_object = None
+        self._valid_size_of_restore_point = None
+        self._vms = None
         self._window_end = None
         self._window_start = None
         self.discriminator = None
 
+        self.backup_delay_option = kwargs.get("backup_delay_option", None)
+        self.backup_plan_executions = kwargs.get("backup_plan_executions", None)
+        self.backup_restore_point_count = kwargs.get("backup_restore_point_count", None)
+        self.backup_restore_points = kwargs.get("backup_restore_points", None)
         if "backup_service" in kwargs:
             self.backup_service = kwargs["backup_service"]
         if "backup_store_repository" in kwargs:
             self.backup_store_repository = kwargs["backup_store_repository"]
+        self.backup_total_size = kwargs.get("backup_total_size", None)
         self.compression = kwargs.get("compression", None)
         self.compression_ratio = kwargs.get("compression_ratio", None)
         if "created_at" in kwargs:
             self.created_at = kwargs["created_at"]
+        self.delete_strategy = kwargs.get("delete_strategy", None)
         self.description = kwargs.get("description", None)
         if "enable_window" in kwargs:
             self.enable_window = kwargs["enable_window"]
@@ -168,24 +210,114 @@ class BackupPlan(object):
         self.keep_policy_value = kwargs.get("keep_policy_value", None)
         if "last_execute_status" in kwargs:
             self.last_execute_status = kwargs["last_execute_status"]
+        self.last_execute_status_message = kwargs.get("last_execute_status_message", None)
         self.last_execute_success_job_count = kwargs.get("last_execute_success_job_count", None)
         self.last_execute_total_job_count = kwargs.get("last_execute_total_job_count", None)
         self.last_executed_at = kwargs.get("last_executed_at", None)
         if "last_manual_execute_status" in kwargs:
             self.last_manual_execute_status = kwargs["last_manual_execute_status"]
+        self.last_manual_execute_status_message = kwargs.get("last_manual_execute_status_message", None)
         self.last_manual_execute_success_job_count = kwargs.get("last_manual_execute_success_job_count", None)
         self.last_manual_execute_total_job_count = kwargs.get("last_manual_execute_total_job_count", None)
         self.last_manual_executed_at = kwargs.get("last_manual_executed_at", None)
+        self.logical_size = kwargs.get("logical_size", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.next_execute_time = kwargs.get("next_execute_time", None)
+        self.phase = kwargs.get("phase", None)
         self.physical_size = kwargs.get("physical_size", None)
         self.snapshot_consistent_type = kwargs.get("snapshot_consistent_type", None)
         if "status" in kwargs:
             self.status = kwargs["status"]
         self.valid_size_of_backup_object = kwargs.get("valid_size_of_backup_object", None)
+        self.valid_size_of_restore_point = kwargs.get("valid_size_of_restore_point", None)
+        self.vms = kwargs.get("vms", None)
         self.window_end = kwargs.get("window_end", None)
         self.window_start = kwargs.get("window_start", None)
+
+    @property
+    def backup_delay_option(self):
+        """Gets the backup_delay_option of this BackupPlan.  # noqa: E501
+
+
+        :return: The backup_delay_option of this BackupPlan.  # noqa: E501
+        :rtype: BackupPlanDelayOption
+        """
+        return self._backup_delay_option
+
+    @backup_delay_option.setter
+    def backup_delay_option(self, backup_delay_option):
+        """Sets the backup_delay_option of this BackupPlan.
+
+
+        :param backup_delay_option: The backup_delay_option of this BackupPlan.  # noqa: E501
+        :type backup_delay_option: BackupPlanDelayOption
+        """
+
+        self._backup_delay_option = backup_delay_option
+
+    @property
+    def backup_plan_executions(self):
+        """Gets the backup_plan_executions of this BackupPlan.  # noqa: E501
+
+
+        :return: The backup_plan_executions of this BackupPlan.  # noqa: E501
+        :rtype: list[NestedBackupPlanExecution]
+        """
+        return self._backup_plan_executions
+
+    @backup_plan_executions.setter
+    def backup_plan_executions(self, backup_plan_executions):
+        """Sets the backup_plan_executions of this BackupPlan.
+
+
+        :param backup_plan_executions: The backup_plan_executions of this BackupPlan.  # noqa: E501
+        :type backup_plan_executions: list[NestedBackupPlanExecution]
+        """
+
+        self._backup_plan_executions = backup_plan_executions
+
+    @property
+    def backup_restore_point_count(self):
+        """Gets the backup_restore_point_count of this BackupPlan.  # noqa: E501
+
+
+        :return: The backup_restore_point_count of this BackupPlan.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count
+
+    @backup_restore_point_count.setter
+    def backup_restore_point_count(self, backup_restore_point_count):
+        """Sets the backup_restore_point_count of this BackupPlan.
+
+
+        :param backup_restore_point_count: The backup_restore_point_count of this BackupPlan.  # noqa: E501
+        :type backup_restore_point_count: int
+        """
+
+        self._backup_restore_point_count = backup_restore_point_count
+
+    @property
+    def backup_restore_points(self):
+        """Gets the backup_restore_points of this BackupPlan.  # noqa: E501
+
+
+        :return: The backup_restore_points of this BackupPlan.  # noqa: E501
+        :rtype: list[NestedBackupRestorePoint]
+        """
+        return self._backup_restore_points
+
+    @backup_restore_points.setter
+    def backup_restore_points(self, backup_restore_points):
+        """Sets the backup_restore_points of this BackupPlan.
+
+
+        :param backup_restore_points: The backup_restore_points of this BackupPlan.  # noqa: E501
+        :type backup_restore_points: list[NestedBackupRestorePoint]
+        """
+
+        self._backup_restore_points = backup_restore_points
 
     @property
     def backup_service(self):
@@ -232,6 +364,27 @@ class BackupPlan(object):
             raise ValueError("Invalid value for `backup_store_repository`, must not be `None`")  # noqa: E501
 
         self._backup_store_repository = backup_store_repository
+
+    @property
+    def backup_total_size(self):
+        """Gets the backup_total_size of this BackupPlan.  # noqa: E501
+
+
+        :return: The backup_total_size of this BackupPlan.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size
+
+    @backup_total_size.setter
+    def backup_total_size(self, backup_total_size):
+        """Sets the backup_total_size of this BackupPlan.
+
+
+        :param backup_total_size: The backup_total_size of this BackupPlan.  # noqa: E501
+        :type backup_total_size: int
+        """
+
+        self._backup_total_size = backup_total_size
 
     @property
     def compression(self):
@@ -297,6 +450,27 @@ class BackupPlan(object):
             raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
+
+    @property
+    def delete_strategy(self):
+        """Gets the delete_strategy of this BackupPlan.  # noqa: E501
+
+
+        :return: The delete_strategy of this BackupPlan.  # noqa: E501
+        :rtype: BackupPlanDeleteStrategy
+        """
+        return self._delete_strategy
+
+    @delete_strategy.setter
+    def delete_strategy(self, delete_strategy):
+        """Sets the delete_strategy of this BackupPlan.
+
+
+        :param delete_strategy: The delete_strategy of this BackupPlan.  # noqa: E501
+        :type delete_strategy: BackupPlanDeleteStrategy
+        """
+
+        self._delete_strategy = delete_strategy
 
     @property
     def description(self):
@@ -609,6 +783,27 @@ class BackupPlan(object):
         self._last_execute_status = last_execute_status
 
     @property
+    def last_execute_status_message(self):
+        """Gets the last_execute_status_message of this BackupPlan.  # noqa: E501
+
+
+        :return: The last_execute_status_message of this BackupPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message
+
+    @last_execute_status_message.setter
+    def last_execute_status_message(self, last_execute_status_message):
+        """Sets the last_execute_status_message of this BackupPlan.
+
+
+        :param last_execute_status_message: The last_execute_status_message of this BackupPlan.  # noqa: E501
+        :type last_execute_status_message: str
+        """
+
+        self._last_execute_status_message = last_execute_status_message
+
+    @property
     def last_execute_success_job_count(self):
         """Gets the last_execute_success_job_count of this BackupPlan.  # noqa: E501
 
@@ -695,6 +890,27 @@ class BackupPlan(object):
         self._last_manual_execute_status = last_manual_execute_status
 
     @property
+    def last_manual_execute_status_message(self):
+        """Gets the last_manual_execute_status_message of this BackupPlan.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message of this BackupPlan.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message
+
+    @last_manual_execute_status_message.setter
+    def last_manual_execute_status_message(self, last_manual_execute_status_message):
+        """Sets the last_manual_execute_status_message of this BackupPlan.
+
+
+        :param last_manual_execute_status_message: The last_manual_execute_status_message of this BackupPlan.  # noqa: E501
+        :type last_manual_execute_status_message: str
+        """
+
+        self._last_manual_execute_status_message = last_manual_execute_status_message
+
+    @property
     def last_manual_execute_success_job_count(self):
         """Gets the last_manual_execute_success_job_count of this BackupPlan.  # noqa: E501
 
@@ -758,6 +974,27 @@ class BackupPlan(object):
         self._last_manual_executed_at = last_manual_executed_at
 
     @property
+    def logical_size(self):
+        """Gets the logical_size of this BackupPlan.  # noqa: E501
+
+
+        :return: The logical_size of this BackupPlan.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size
+
+    @logical_size.setter
+    def logical_size(self, logical_size):
+        """Sets the logical_size of this BackupPlan.
+
+
+        :param logical_size: The logical_size of this BackupPlan.  # noqa: E501
+        :type logical_size: int
+        """
+
+        self._logical_size = logical_size
+
+    @property
     def name(self):
         """Gets the name of this BackupPlan.  # noqa: E501
 
@@ -800,6 +1037,27 @@ class BackupPlan(object):
         """
 
         self._next_execute_time = next_execute_time
+
+    @property
+    def phase(self):
+        """Gets the phase of this BackupPlan.  # noqa: E501
+
+
+        :return: The phase of this BackupPlan.  # noqa: E501
+        :rtype: BackupPlanPhase
+        """
+        return self._phase
+
+    @phase.setter
+    def phase(self, phase):
+        """Sets the phase of this BackupPlan.
+
+
+        :param phase: The phase of this BackupPlan.  # noqa: E501
+        :type phase: BackupPlanPhase
+        """
+
+        self._phase = phase
 
     @property
     def physical_size(self):
@@ -886,6 +1144,48 @@ class BackupPlan(object):
         """
 
         self._valid_size_of_backup_object = valid_size_of_backup_object
+
+    @property
+    def valid_size_of_restore_point(self):
+        """Gets the valid_size_of_restore_point of this BackupPlan.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point of this BackupPlan.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point
+
+    @valid_size_of_restore_point.setter
+    def valid_size_of_restore_point(self, valid_size_of_restore_point):
+        """Sets the valid_size_of_restore_point of this BackupPlan.
+
+
+        :param valid_size_of_restore_point: The valid_size_of_restore_point of this BackupPlan.  # noqa: E501
+        :type valid_size_of_restore_point: int
+        """
+
+        self._valid_size_of_restore_point = valid_size_of_restore_point
+
+    @property
+    def vms(self):
+        """Gets the vms of this BackupPlan.  # noqa: E501
+
+
+        :return: The vms of this BackupPlan.  # noqa: E501
+        :rtype: list[NestedVm]
+        """
+        return self._vms
+
+    @vms.setter
+    def vms(self, vms):
+        """Sets the vms of this BackupPlan.
+
+
+        :param vms: The vms of this BackupPlan.  # noqa: E501
+        :type vms: list[NestedVm]
+        """
+
+        self._vms = vms
 
     @property
     def window_end(self):

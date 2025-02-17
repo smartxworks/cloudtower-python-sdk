@@ -56,10 +56,13 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'edge_gateway': 'VirtualPrivateCloudEdgeGatewayWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
+        'exclusive': 'bool',
+        'exclusive_not': 'bool',
         'floating_ip_cidr': 'str',
         'floating_ip_cidr_contains': 'str',
         'floating_ip_cidr_ends_with': 'str',
@@ -203,10 +206,13 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'edge_gateway': 'edge_gateway',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
+        'exclusive': 'exclusive',
+        'exclusive_not': 'exclusive_not',
         'floating_ip_cidr': 'floating_ip_cidr',
         'floating_ip_cidr_contains': 'floating_ip_cidr_contains',
         'floating_ip_cidr_ends_with': 'floating_ip_cidr_ends_with',
@@ -353,10 +359,13 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._edge_gateway = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
+        self._exclusive = None
+        self._exclusive_not = None
         self._floating_ip_cidr = None
         self._floating_ip_cidr_contains = None
         self._floating_ip_cidr_ends_with = None
@@ -499,10 +508,13 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.edge_gateway = kwargs.get("edge_gateway", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
+        self.exclusive = kwargs.get("exclusive", None)
+        self.exclusive_not = kwargs.get("exclusive_not", None)
         self.floating_ip_cidr = kwargs.get("floating_ip_cidr", None)
         self.floating_ip_cidr_contains = kwargs.get("floating_ip_cidr_contains", None)
         self.floating_ip_cidr_ends_with = kwargs.get("floating_ip_cidr_ends_with", None)
@@ -1265,6 +1277,27 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         self._description_starts_with = description_starts_with
 
     @property
+    def edge_gateway(self):
+        """Gets the edge_gateway of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayWhereInput
+        """
+        return self._edge_gateway
+
+    @edge_gateway.setter
+    def edge_gateway(self, edge_gateway):
+        """Sets the edge_gateway of this VirtualPrivateCloudExternalSubnetWhereInput.
+
+
+        :param edge_gateway: The edge_gateway of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :type edge_gateway: VirtualPrivateCloudEdgeGatewayWhereInput
+        """
+
+        self._edge_gateway = edge_gateway
+
+    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
 
@@ -1347,6 +1380,48 @@ class VirtualPrivateCloudExternalSubnetWhereInput(object):
         """
 
         self._entity_async_status_not_in = entity_async_status_not_in
+
+    @property
+    def exclusive(self):
+        """Gets the exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+
+
+        :return: The exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclusive
+
+    @exclusive.setter
+    def exclusive(self, exclusive):
+        """Sets the exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.
+
+
+        :param exclusive: The exclusive of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :type exclusive: bool
+        """
+
+        self._exclusive = exclusive
+
+    @property
+    def exclusive_not(self):
+        """Gets the exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+
+
+        :return: The exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclusive_not
+
+    @exclusive_not.setter
+    def exclusive_not(self, exclusive_not):
+        """Sets the exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.
+
+
+        :param exclusive_not: The exclusive_not of this VirtualPrivateCloudExternalSubnetWhereInput.  # noqa: E501
+        :type exclusive_not: bool
+        """
+
+        self._exclusive_not = exclusive_not
 
     @property
     def floating_ip_cidr(self):

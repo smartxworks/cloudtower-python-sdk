@@ -25,6 +25,8 @@ class TaskCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'finished_at': 'str',
+        'started_at': 'str',
         'steps': 'list[TaskStepCreationParams]',
         'args': 'object',
         'key': 'str',
@@ -39,6 +41,8 @@ class TaskCreationParams(object):
     }
 
     attribute_map = {
+        'finished_at': 'finished_at',
+        'started_at': 'started_at',
         'steps': 'steps',
         'args': 'args',
         'key': 'key',
@@ -56,6 +60,8 @@ class TaskCreationParams(object):
         """TaskCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._finished_at = None
+        self._started_at = None
         self._steps = None
         self._args = None
         self._key = None
@@ -69,6 +75,10 @@ class TaskCreationParams(object):
         self._resource_type = None
         self.discriminator = None
 
+        if "finished_at" in kwargs:
+            self.finished_at = kwargs["finished_at"]
+        if "started_at" in kwargs:
+            self.started_at = kwargs["started_at"]
         if "steps" in kwargs:
             self.steps = kwargs["steps"]
         if "args" in kwargs:
@@ -91,6 +101,48 @@ class TaskCreationParams(object):
             self.resource_mutation = kwargs["resource_mutation"]
         if "resource_type" in kwargs:
             self.resource_type = kwargs["resource_type"]
+
+    @property
+    def finished_at(self):
+        """Gets the finished_at of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The finished_at of this TaskCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._finished_at
+
+    @finished_at.setter
+    def finished_at(self, finished_at):
+        """Sets the finished_at of this TaskCreationParams.
+
+
+        :param finished_at: The finished_at of this TaskCreationParams.  # noqa: E501
+        :type finished_at: str
+        """
+
+        self._finished_at = finished_at
+
+    @property
+    def started_at(self):
+        """Gets the started_at of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The started_at of this TaskCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._started_at
+
+    @started_at.setter
+    def started_at(self, started_at):
+        """Sets the started_at of this TaskCreationParams.
+
+
+        :param started_at: The started_at of this TaskCreationParams.  # noqa: E501
+        :type started_at: str
+        """
+
+        self._started_at = started_at
 
     @property
     def steps(self):

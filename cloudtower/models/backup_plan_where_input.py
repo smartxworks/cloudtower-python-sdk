@@ -28,8 +28,34 @@ class BackupPlanWhereInput(object):
         '_and': 'list[BackupPlanWhereInput]',
         '_not': 'list[BackupPlanWhereInput]',
         '_or': 'list[BackupPlanWhereInput]',
+        'backup_delay_option': 'BackupPlanDelayOption',
+        'backup_delay_option_in': 'list[BackupPlanDelayOption]',
+        'backup_delay_option_not': 'BackupPlanDelayOption',
+        'backup_delay_option_not_in': 'list[BackupPlanDelayOption]',
+        'backup_plan_executions_every': 'BackupPlanExecutionWhereInput',
+        'backup_plan_executions_none': 'BackupPlanExecutionWhereInput',
+        'backup_plan_executions_some': 'BackupPlanExecutionWhereInput',
+        'backup_restore_point_count': 'int',
+        'backup_restore_point_count_gt': 'int',
+        'backup_restore_point_count_gte': 'int',
+        'backup_restore_point_count_in': 'list[int]',
+        'backup_restore_point_count_lt': 'int',
+        'backup_restore_point_count_lte': 'int',
+        'backup_restore_point_count_not': 'int',
+        'backup_restore_point_count_not_in': 'list[int]',
+        'backup_restore_points_every': 'BackupRestorePointWhereInput',
+        'backup_restore_points_none': 'BackupRestorePointWhereInput',
+        'backup_restore_points_some': 'BackupRestorePointWhereInput',
         'backup_service': 'BackupServiceWhereInput',
         'backup_store_repository': 'BackupStoreRepositoryWhereInput',
+        'backup_total_size': 'int',
+        'backup_total_size_gt': 'int',
+        'backup_total_size_gte': 'int',
+        'backup_total_size_in': 'list[int]',
+        'backup_total_size_lt': 'int',
+        'backup_total_size_lte': 'int',
+        'backup_total_size_not': 'int',
+        'backup_total_size_not_in': 'list[int]',
         'compression': 'bool',
         'compression_not': 'bool',
         'compression_ratio': 'float',
@@ -48,6 +74,10 @@ class BackupPlanWhereInput(object):
         'created_at_lte': 'str',
         'created_at_not': 'str',
         'created_at_not_in': 'list[str]',
+        'delete_strategy': 'BackupPlanDeleteStrategy',
+        'delete_strategy_in': 'list[BackupPlanDeleteStrategy]',
+        'delete_strategy_not': 'BackupPlanDeleteStrategy',
+        'delete_strategy_not_in': 'list[BackupPlanDeleteStrategy]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -120,6 +150,20 @@ class BackupPlanWhereInput(object):
         'keep_policy_value_not_in': 'list[int]',
         'last_execute_status': 'BackupPlanExecutionStatus',
         'last_execute_status_in': 'list[BackupPlanExecutionStatus]',
+        'last_execute_status_message': 'str',
+        'last_execute_status_message_contains': 'str',
+        'last_execute_status_message_ends_with': 'str',
+        'last_execute_status_message_gt': 'str',
+        'last_execute_status_message_gte': 'str',
+        'last_execute_status_message_in': 'list[str]',
+        'last_execute_status_message_lt': 'str',
+        'last_execute_status_message_lte': 'str',
+        'last_execute_status_message_not': 'str',
+        'last_execute_status_message_not_contains': 'str',
+        'last_execute_status_message_not_ends_with': 'str',
+        'last_execute_status_message_not_in': 'list[str]',
+        'last_execute_status_message_not_starts_with': 'str',
+        'last_execute_status_message_starts_with': 'str',
         'last_execute_status_not': 'BackupPlanExecutionStatus',
         'last_execute_status_not_in': 'list[BackupPlanExecutionStatus]',
         'last_execute_success_job_count': 'int',
@@ -148,6 +192,20 @@ class BackupPlanWhereInput(object):
         'last_executed_at_not_in': 'list[str]',
         'last_manual_execute_status': 'BackupPlanExecutionStatus',
         'last_manual_execute_status_in': 'list[BackupPlanExecutionStatus]',
+        'last_manual_execute_status_message': 'str',
+        'last_manual_execute_status_message_contains': 'str',
+        'last_manual_execute_status_message_ends_with': 'str',
+        'last_manual_execute_status_message_gt': 'str',
+        'last_manual_execute_status_message_gte': 'str',
+        'last_manual_execute_status_message_in': 'list[str]',
+        'last_manual_execute_status_message_lt': 'str',
+        'last_manual_execute_status_message_lte': 'str',
+        'last_manual_execute_status_message_not': 'str',
+        'last_manual_execute_status_message_not_contains': 'str',
+        'last_manual_execute_status_message_not_ends_with': 'str',
+        'last_manual_execute_status_message_not_in': 'list[str]',
+        'last_manual_execute_status_message_not_starts_with': 'str',
+        'last_manual_execute_status_message_starts_with': 'str',
         'last_manual_execute_status_not': 'BackupPlanExecutionStatus',
         'last_manual_execute_status_not_in': 'list[BackupPlanExecutionStatus]',
         'last_manual_execute_success_job_count': 'int',
@@ -174,6 +232,14 @@ class BackupPlanWhereInput(object):
         'last_manual_executed_at_lte': 'str',
         'last_manual_executed_at_not': 'str',
         'last_manual_executed_at_not_in': 'list[str]',
+        'logical_size': 'int',
+        'logical_size_gt': 'int',
+        'logical_size_gte': 'int',
+        'logical_size_in': 'list[int]',
+        'logical_size_lt': 'int',
+        'logical_size_lte': 'int',
+        'logical_size_not': 'int',
+        'logical_size_not_in': 'list[int]',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -196,6 +262,10 @@ class BackupPlanWhereInput(object):
         'next_execute_time_lte': 'str',
         'next_execute_time_not': 'str',
         'next_execute_time_not_in': 'list[str]',
+        'phase': 'BackupPlanPhase',
+        'phase_in': 'list[BackupPlanPhase]',
+        'phase_not': 'BackupPlanPhase',
+        'phase_not_in': 'list[BackupPlanPhase]',
         'physical_size': 'int',
         'physical_size_gt': 'int',
         'physical_size_gte': 'int',
@@ -220,6 +290,17 @@ class BackupPlanWhereInput(object):
         'valid_size_of_backup_object_lte': 'int',
         'valid_size_of_backup_object_not': 'int',
         'valid_size_of_backup_object_not_in': 'list[int]',
+        'valid_size_of_restore_point': 'int',
+        'valid_size_of_restore_point_gt': 'int',
+        'valid_size_of_restore_point_gte': 'int',
+        'valid_size_of_restore_point_in': 'list[int]',
+        'valid_size_of_restore_point_lt': 'int',
+        'valid_size_of_restore_point_lte': 'int',
+        'valid_size_of_restore_point_not': 'int',
+        'valid_size_of_restore_point_not_in': 'list[int]',
+        'vms_every': 'VmWhereInput',
+        'vms_none': 'VmWhereInput',
+        'vms_some': 'VmWhereInput',
         'window_end': 'str',
         'window_end_contains': 'str',
         'window_end_ends_with': 'str',
@@ -254,8 +335,34 @@ class BackupPlanWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
+        'backup_delay_option': 'backup_delay_option',
+        'backup_delay_option_in': 'backup_delay_option_in',
+        'backup_delay_option_not': 'backup_delay_option_not',
+        'backup_delay_option_not_in': 'backup_delay_option_not_in',
+        'backup_plan_executions_every': 'backup_plan_executions_every',
+        'backup_plan_executions_none': 'backup_plan_executions_none',
+        'backup_plan_executions_some': 'backup_plan_executions_some',
+        'backup_restore_point_count': 'backup_restore_point_count',
+        'backup_restore_point_count_gt': 'backup_restore_point_count_gt',
+        'backup_restore_point_count_gte': 'backup_restore_point_count_gte',
+        'backup_restore_point_count_in': 'backup_restore_point_count_in',
+        'backup_restore_point_count_lt': 'backup_restore_point_count_lt',
+        'backup_restore_point_count_lte': 'backup_restore_point_count_lte',
+        'backup_restore_point_count_not': 'backup_restore_point_count_not',
+        'backup_restore_point_count_not_in': 'backup_restore_point_count_not_in',
+        'backup_restore_points_every': 'backup_restore_points_every',
+        'backup_restore_points_none': 'backup_restore_points_none',
+        'backup_restore_points_some': 'backup_restore_points_some',
         'backup_service': 'backup_service',
         'backup_store_repository': 'backup_store_repository',
+        'backup_total_size': 'backup_total_size',
+        'backup_total_size_gt': 'backup_total_size_gt',
+        'backup_total_size_gte': 'backup_total_size_gte',
+        'backup_total_size_in': 'backup_total_size_in',
+        'backup_total_size_lt': 'backup_total_size_lt',
+        'backup_total_size_lte': 'backup_total_size_lte',
+        'backup_total_size_not': 'backup_total_size_not',
+        'backup_total_size_not_in': 'backup_total_size_not_in',
         'compression': 'compression',
         'compression_not': 'compression_not',
         'compression_ratio': 'compression_ratio',
@@ -274,6 +381,10 @@ class BackupPlanWhereInput(object):
         'created_at_lte': 'createdAt_lte',
         'created_at_not': 'createdAt_not',
         'created_at_not_in': 'createdAt_not_in',
+        'delete_strategy': 'delete_strategy',
+        'delete_strategy_in': 'delete_strategy_in',
+        'delete_strategy_not': 'delete_strategy_not',
+        'delete_strategy_not_in': 'delete_strategy_not_in',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -346,6 +457,20 @@ class BackupPlanWhereInput(object):
         'keep_policy_value_not_in': 'keep_policy_value_not_in',
         'last_execute_status': 'last_execute_status',
         'last_execute_status_in': 'last_execute_status_in',
+        'last_execute_status_message': 'last_execute_status_message',
+        'last_execute_status_message_contains': 'last_execute_status_message_contains',
+        'last_execute_status_message_ends_with': 'last_execute_status_message_ends_with',
+        'last_execute_status_message_gt': 'last_execute_status_message_gt',
+        'last_execute_status_message_gte': 'last_execute_status_message_gte',
+        'last_execute_status_message_in': 'last_execute_status_message_in',
+        'last_execute_status_message_lt': 'last_execute_status_message_lt',
+        'last_execute_status_message_lte': 'last_execute_status_message_lte',
+        'last_execute_status_message_not': 'last_execute_status_message_not',
+        'last_execute_status_message_not_contains': 'last_execute_status_message_not_contains',
+        'last_execute_status_message_not_ends_with': 'last_execute_status_message_not_ends_with',
+        'last_execute_status_message_not_in': 'last_execute_status_message_not_in',
+        'last_execute_status_message_not_starts_with': 'last_execute_status_message_not_starts_with',
+        'last_execute_status_message_starts_with': 'last_execute_status_message_starts_with',
         'last_execute_status_not': 'last_execute_status_not',
         'last_execute_status_not_in': 'last_execute_status_not_in',
         'last_execute_success_job_count': 'last_execute_success_job_count',
@@ -374,6 +499,20 @@ class BackupPlanWhereInput(object):
         'last_executed_at_not_in': 'last_executed_at_not_in',
         'last_manual_execute_status': 'last_manual_execute_status',
         'last_manual_execute_status_in': 'last_manual_execute_status_in',
+        'last_manual_execute_status_message': 'last_manual_execute_status_message',
+        'last_manual_execute_status_message_contains': 'last_manual_execute_status_message_contains',
+        'last_manual_execute_status_message_ends_with': 'last_manual_execute_status_message_ends_with',
+        'last_manual_execute_status_message_gt': 'last_manual_execute_status_message_gt',
+        'last_manual_execute_status_message_gte': 'last_manual_execute_status_message_gte',
+        'last_manual_execute_status_message_in': 'last_manual_execute_status_message_in',
+        'last_manual_execute_status_message_lt': 'last_manual_execute_status_message_lt',
+        'last_manual_execute_status_message_lte': 'last_manual_execute_status_message_lte',
+        'last_manual_execute_status_message_not': 'last_manual_execute_status_message_not',
+        'last_manual_execute_status_message_not_contains': 'last_manual_execute_status_message_not_contains',
+        'last_manual_execute_status_message_not_ends_with': 'last_manual_execute_status_message_not_ends_with',
+        'last_manual_execute_status_message_not_in': 'last_manual_execute_status_message_not_in',
+        'last_manual_execute_status_message_not_starts_with': 'last_manual_execute_status_message_not_starts_with',
+        'last_manual_execute_status_message_starts_with': 'last_manual_execute_status_message_starts_with',
         'last_manual_execute_status_not': 'last_manual_execute_status_not',
         'last_manual_execute_status_not_in': 'last_manual_execute_status_not_in',
         'last_manual_execute_success_job_count': 'last_manual_execute_success_job_count',
@@ -400,6 +539,14 @@ class BackupPlanWhereInput(object):
         'last_manual_executed_at_lte': 'last_manual_executed_at_lte',
         'last_manual_executed_at_not': 'last_manual_executed_at_not',
         'last_manual_executed_at_not_in': 'last_manual_executed_at_not_in',
+        'logical_size': 'logical_size',
+        'logical_size_gt': 'logical_size_gt',
+        'logical_size_gte': 'logical_size_gte',
+        'logical_size_in': 'logical_size_in',
+        'logical_size_lt': 'logical_size_lt',
+        'logical_size_lte': 'logical_size_lte',
+        'logical_size_not': 'logical_size_not',
+        'logical_size_not_in': 'logical_size_not_in',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -422,6 +569,10 @@ class BackupPlanWhereInput(object):
         'next_execute_time_lte': 'next_execute_time_lte',
         'next_execute_time_not': 'next_execute_time_not',
         'next_execute_time_not_in': 'next_execute_time_not_in',
+        'phase': 'phase',
+        'phase_in': 'phase_in',
+        'phase_not': 'phase_not',
+        'phase_not_in': 'phase_not_in',
         'physical_size': 'physical_size',
         'physical_size_gt': 'physical_size_gt',
         'physical_size_gte': 'physical_size_gte',
@@ -446,6 +597,17 @@ class BackupPlanWhereInput(object):
         'valid_size_of_backup_object_lte': 'valid_size_of_backup_object_lte',
         'valid_size_of_backup_object_not': 'valid_size_of_backup_object_not',
         'valid_size_of_backup_object_not_in': 'valid_size_of_backup_object_not_in',
+        'valid_size_of_restore_point': 'valid_size_of_restore_point',
+        'valid_size_of_restore_point_gt': 'valid_size_of_restore_point_gt',
+        'valid_size_of_restore_point_gte': 'valid_size_of_restore_point_gte',
+        'valid_size_of_restore_point_in': 'valid_size_of_restore_point_in',
+        'valid_size_of_restore_point_lt': 'valid_size_of_restore_point_lt',
+        'valid_size_of_restore_point_lte': 'valid_size_of_restore_point_lte',
+        'valid_size_of_restore_point_not': 'valid_size_of_restore_point_not',
+        'valid_size_of_restore_point_not_in': 'valid_size_of_restore_point_not_in',
+        'vms_every': 'vms_every',
+        'vms_none': 'vms_none',
+        'vms_some': 'vms_some',
         'window_end': 'window_end',
         'window_end_contains': 'window_end_contains',
         'window_end_ends_with': 'window_end_ends_with',
@@ -483,8 +645,34 @@ class BackupPlanWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
+        self._backup_delay_option = None
+        self._backup_delay_option_in = None
+        self._backup_delay_option_not = None
+        self._backup_delay_option_not_in = None
+        self._backup_plan_executions_every = None
+        self._backup_plan_executions_none = None
+        self._backup_plan_executions_some = None
+        self._backup_restore_point_count = None
+        self._backup_restore_point_count_gt = None
+        self._backup_restore_point_count_gte = None
+        self._backup_restore_point_count_in = None
+        self._backup_restore_point_count_lt = None
+        self._backup_restore_point_count_lte = None
+        self._backup_restore_point_count_not = None
+        self._backup_restore_point_count_not_in = None
+        self._backup_restore_points_every = None
+        self._backup_restore_points_none = None
+        self._backup_restore_points_some = None
         self._backup_service = None
         self._backup_store_repository = None
+        self._backup_total_size = None
+        self._backup_total_size_gt = None
+        self._backup_total_size_gte = None
+        self._backup_total_size_in = None
+        self._backup_total_size_lt = None
+        self._backup_total_size_lte = None
+        self._backup_total_size_not = None
+        self._backup_total_size_not_in = None
         self._compression = None
         self._compression_not = None
         self._compression_ratio = None
@@ -503,6 +691,10 @@ class BackupPlanWhereInput(object):
         self._created_at_lte = None
         self._created_at_not = None
         self._created_at_not_in = None
+        self._delete_strategy = None
+        self._delete_strategy_in = None
+        self._delete_strategy_not = None
+        self._delete_strategy_not_in = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -575,6 +767,20 @@ class BackupPlanWhereInput(object):
         self._keep_policy_value_not_in = None
         self._last_execute_status = None
         self._last_execute_status_in = None
+        self._last_execute_status_message = None
+        self._last_execute_status_message_contains = None
+        self._last_execute_status_message_ends_with = None
+        self._last_execute_status_message_gt = None
+        self._last_execute_status_message_gte = None
+        self._last_execute_status_message_in = None
+        self._last_execute_status_message_lt = None
+        self._last_execute_status_message_lte = None
+        self._last_execute_status_message_not = None
+        self._last_execute_status_message_not_contains = None
+        self._last_execute_status_message_not_ends_with = None
+        self._last_execute_status_message_not_in = None
+        self._last_execute_status_message_not_starts_with = None
+        self._last_execute_status_message_starts_with = None
         self._last_execute_status_not = None
         self._last_execute_status_not_in = None
         self._last_execute_success_job_count = None
@@ -603,6 +809,20 @@ class BackupPlanWhereInput(object):
         self._last_executed_at_not_in = None
         self._last_manual_execute_status = None
         self._last_manual_execute_status_in = None
+        self._last_manual_execute_status_message = None
+        self._last_manual_execute_status_message_contains = None
+        self._last_manual_execute_status_message_ends_with = None
+        self._last_manual_execute_status_message_gt = None
+        self._last_manual_execute_status_message_gte = None
+        self._last_manual_execute_status_message_in = None
+        self._last_manual_execute_status_message_lt = None
+        self._last_manual_execute_status_message_lte = None
+        self._last_manual_execute_status_message_not = None
+        self._last_manual_execute_status_message_not_contains = None
+        self._last_manual_execute_status_message_not_ends_with = None
+        self._last_manual_execute_status_message_not_in = None
+        self._last_manual_execute_status_message_not_starts_with = None
+        self._last_manual_execute_status_message_starts_with = None
         self._last_manual_execute_status_not = None
         self._last_manual_execute_status_not_in = None
         self._last_manual_execute_success_job_count = None
@@ -629,6 +849,14 @@ class BackupPlanWhereInput(object):
         self._last_manual_executed_at_lte = None
         self._last_manual_executed_at_not = None
         self._last_manual_executed_at_not_in = None
+        self._logical_size = None
+        self._logical_size_gt = None
+        self._logical_size_gte = None
+        self._logical_size_in = None
+        self._logical_size_lt = None
+        self._logical_size_lte = None
+        self._logical_size_not = None
+        self._logical_size_not_in = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -651,6 +879,10 @@ class BackupPlanWhereInput(object):
         self._next_execute_time_lte = None
         self._next_execute_time_not = None
         self._next_execute_time_not_in = None
+        self._phase = None
+        self._phase_in = None
+        self._phase_not = None
+        self._phase_not_in = None
         self._physical_size = None
         self._physical_size_gt = None
         self._physical_size_gte = None
@@ -675,6 +907,17 @@ class BackupPlanWhereInput(object):
         self._valid_size_of_backup_object_lte = None
         self._valid_size_of_backup_object_not = None
         self._valid_size_of_backup_object_not_in = None
+        self._valid_size_of_restore_point = None
+        self._valid_size_of_restore_point_gt = None
+        self._valid_size_of_restore_point_gte = None
+        self._valid_size_of_restore_point_in = None
+        self._valid_size_of_restore_point_lt = None
+        self._valid_size_of_restore_point_lte = None
+        self._valid_size_of_restore_point_not = None
+        self._valid_size_of_restore_point_not_in = None
+        self._vms_every = None
+        self._vms_none = None
+        self._vms_some = None
         self._window_end = None
         self._window_end_contains = None
         self._window_end_ends_with = None
@@ -708,8 +951,34 @@ class BackupPlanWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.backup_delay_option = kwargs.get("backup_delay_option", None)
+        self.backup_delay_option_in = kwargs.get("backup_delay_option_in", None)
+        self.backup_delay_option_not = kwargs.get("backup_delay_option_not", None)
+        self.backup_delay_option_not_in = kwargs.get("backup_delay_option_not_in", None)
+        self.backup_plan_executions_every = kwargs.get("backup_plan_executions_every", None)
+        self.backup_plan_executions_none = kwargs.get("backup_plan_executions_none", None)
+        self.backup_plan_executions_some = kwargs.get("backup_plan_executions_some", None)
+        self.backup_restore_point_count = kwargs.get("backup_restore_point_count", None)
+        self.backup_restore_point_count_gt = kwargs.get("backup_restore_point_count_gt", None)
+        self.backup_restore_point_count_gte = kwargs.get("backup_restore_point_count_gte", None)
+        self.backup_restore_point_count_in = kwargs.get("backup_restore_point_count_in", None)
+        self.backup_restore_point_count_lt = kwargs.get("backup_restore_point_count_lt", None)
+        self.backup_restore_point_count_lte = kwargs.get("backup_restore_point_count_lte", None)
+        self.backup_restore_point_count_not = kwargs.get("backup_restore_point_count_not", None)
+        self.backup_restore_point_count_not_in = kwargs.get("backup_restore_point_count_not_in", None)
+        self.backup_restore_points_every = kwargs.get("backup_restore_points_every", None)
+        self.backup_restore_points_none = kwargs.get("backup_restore_points_none", None)
+        self.backup_restore_points_some = kwargs.get("backup_restore_points_some", None)
         self.backup_service = kwargs.get("backup_service", None)
         self.backup_store_repository = kwargs.get("backup_store_repository", None)
+        self.backup_total_size = kwargs.get("backup_total_size", None)
+        self.backup_total_size_gt = kwargs.get("backup_total_size_gt", None)
+        self.backup_total_size_gte = kwargs.get("backup_total_size_gte", None)
+        self.backup_total_size_in = kwargs.get("backup_total_size_in", None)
+        self.backup_total_size_lt = kwargs.get("backup_total_size_lt", None)
+        self.backup_total_size_lte = kwargs.get("backup_total_size_lte", None)
+        self.backup_total_size_not = kwargs.get("backup_total_size_not", None)
+        self.backup_total_size_not_in = kwargs.get("backup_total_size_not_in", None)
         self.compression = kwargs.get("compression", None)
         self.compression_not = kwargs.get("compression_not", None)
         self.compression_ratio = kwargs.get("compression_ratio", None)
@@ -728,6 +997,10 @@ class BackupPlanWhereInput(object):
         self.created_at_lte = kwargs.get("created_at_lte", None)
         self.created_at_not = kwargs.get("created_at_not", None)
         self.created_at_not_in = kwargs.get("created_at_not_in", None)
+        self.delete_strategy = kwargs.get("delete_strategy", None)
+        self.delete_strategy_in = kwargs.get("delete_strategy_in", None)
+        self.delete_strategy_not = kwargs.get("delete_strategy_not", None)
+        self.delete_strategy_not_in = kwargs.get("delete_strategy_not_in", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -800,6 +1073,20 @@ class BackupPlanWhereInput(object):
         self.keep_policy_value_not_in = kwargs.get("keep_policy_value_not_in", None)
         self.last_execute_status = kwargs.get("last_execute_status", None)
         self.last_execute_status_in = kwargs.get("last_execute_status_in", None)
+        self.last_execute_status_message = kwargs.get("last_execute_status_message", None)
+        self.last_execute_status_message_contains = kwargs.get("last_execute_status_message_contains", None)
+        self.last_execute_status_message_ends_with = kwargs.get("last_execute_status_message_ends_with", None)
+        self.last_execute_status_message_gt = kwargs.get("last_execute_status_message_gt", None)
+        self.last_execute_status_message_gte = kwargs.get("last_execute_status_message_gte", None)
+        self.last_execute_status_message_in = kwargs.get("last_execute_status_message_in", None)
+        self.last_execute_status_message_lt = kwargs.get("last_execute_status_message_lt", None)
+        self.last_execute_status_message_lte = kwargs.get("last_execute_status_message_lte", None)
+        self.last_execute_status_message_not = kwargs.get("last_execute_status_message_not", None)
+        self.last_execute_status_message_not_contains = kwargs.get("last_execute_status_message_not_contains", None)
+        self.last_execute_status_message_not_ends_with = kwargs.get("last_execute_status_message_not_ends_with", None)
+        self.last_execute_status_message_not_in = kwargs.get("last_execute_status_message_not_in", None)
+        self.last_execute_status_message_not_starts_with = kwargs.get("last_execute_status_message_not_starts_with", None)
+        self.last_execute_status_message_starts_with = kwargs.get("last_execute_status_message_starts_with", None)
         self.last_execute_status_not = kwargs.get("last_execute_status_not", None)
         self.last_execute_status_not_in = kwargs.get("last_execute_status_not_in", None)
         self.last_execute_success_job_count = kwargs.get("last_execute_success_job_count", None)
@@ -828,6 +1115,20 @@ class BackupPlanWhereInput(object):
         self.last_executed_at_not_in = kwargs.get("last_executed_at_not_in", None)
         self.last_manual_execute_status = kwargs.get("last_manual_execute_status", None)
         self.last_manual_execute_status_in = kwargs.get("last_manual_execute_status_in", None)
+        self.last_manual_execute_status_message = kwargs.get("last_manual_execute_status_message", None)
+        self.last_manual_execute_status_message_contains = kwargs.get("last_manual_execute_status_message_contains", None)
+        self.last_manual_execute_status_message_ends_with = kwargs.get("last_manual_execute_status_message_ends_with", None)
+        self.last_manual_execute_status_message_gt = kwargs.get("last_manual_execute_status_message_gt", None)
+        self.last_manual_execute_status_message_gte = kwargs.get("last_manual_execute_status_message_gte", None)
+        self.last_manual_execute_status_message_in = kwargs.get("last_manual_execute_status_message_in", None)
+        self.last_manual_execute_status_message_lt = kwargs.get("last_manual_execute_status_message_lt", None)
+        self.last_manual_execute_status_message_lte = kwargs.get("last_manual_execute_status_message_lte", None)
+        self.last_manual_execute_status_message_not = kwargs.get("last_manual_execute_status_message_not", None)
+        self.last_manual_execute_status_message_not_contains = kwargs.get("last_manual_execute_status_message_not_contains", None)
+        self.last_manual_execute_status_message_not_ends_with = kwargs.get("last_manual_execute_status_message_not_ends_with", None)
+        self.last_manual_execute_status_message_not_in = kwargs.get("last_manual_execute_status_message_not_in", None)
+        self.last_manual_execute_status_message_not_starts_with = kwargs.get("last_manual_execute_status_message_not_starts_with", None)
+        self.last_manual_execute_status_message_starts_with = kwargs.get("last_manual_execute_status_message_starts_with", None)
         self.last_manual_execute_status_not = kwargs.get("last_manual_execute_status_not", None)
         self.last_manual_execute_status_not_in = kwargs.get("last_manual_execute_status_not_in", None)
         self.last_manual_execute_success_job_count = kwargs.get("last_manual_execute_success_job_count", None)
@@ -854,6 +1155,14 @@ class BackupPlanWhereInput(object):
         self.last_manual_executed_at_lte = kwargs.get("last_manual_executed_at_lte", None)
         self.last_manual_executed_at_not = kwargs.get("last_manual_executed_at_not", None)
         self.last_manual_executed_at_not_in = kwargs.get("last_manual_executed_at_not_in", None)
+        self.logical_size = kwargs.get("logical_size", None)
+        self.logical_size_gt = kwargs.get("logical_size_gt", None)
+        self.logical_size_gte = kwargs.get("logical_size_gte", None)
+        self.logical_size_in = kwargs.get("logical_size_in", None)
+        self.logical_size_lt = kwargs.get("logical_size_lt", None)
+        self.logical_size_lte = kwargs.get("logical_size_lte", None)
+        self.logical_size_not = kwargs.get("logical_size_not", None)
+        self.logical_size_not_in = kwargs.get("logical_size_not_in", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -876,6 +1185,10 @@ class BackupPlanWhereInput(object):
         self.next_execute_time_lte = kwargs.get("next_execute_time_lte", None)
         self.next_execute_time_not = kwargs.get("next_execute_time_not", None)
         self.next_execute_time_not_in = kwargs.get("next_execute_time_not_in", None)
+        self.phase = kwargs.get("phase", None)
+        self.phase_in = kwargs.get("phase_in", None)
+        self.phase_not = kwargs.get("phase_not", None)
+        self.phase_not_in = kwargs.get("phase_not_in", None)
         self.physical_size = kwargs.get("physical_size", None)
         self.physical_size_gt = kwargs.get("physical_size_gt", None)
         self.physical_size_gte = kwargs.get("physical_size_gte", None)
@@ -900,6 +1213,17 @@ class BackupPlanWhereInput(object):
         self.valid_size_of_backup_object_lte = kwargs.get("valid_size_of_backup_object_lte", None)
         self.valid_size_of_backup_object_not = kwargs.get("valid_size_of_backup_object_not", None)
         self.valid_size_of_backup_object_not_in = kwargs.get("valid_size_of_backup_object_not_in", None)
+        self.valid_size_of_restore_point = kwargs.get("valid_size_of_restore_point", None)
+        self.valid_size_of_restore_point_gt = kwargs.get("valid_size_of_restore_point_gt", None)
+        self.valid_size_of_restore_point_gte = kwargs.get("valid_size_of_restore_point_gte", None)
+        self.valid_size_of_restore_point_in = kwargs.get("valid_size_of_restore_point_in", None)
+        self.valid_size_of_restore_point_lt = kwargs.get("valid_size_of_restore_point_lt", None)
+        self.valid_size_of_restore_point_lte = kwargs.get("valid_size_of_restore_point_lte", None)
+        self.valid_size_of_restore_point_not = kwargs.get("valid_size_of_restore_point_not", None)
+        self.valid_size_of_restore_point_not_in = kwargs.get("valid_size_of_restore_point_not_in", None)
+        self.vms_every = kwargs.get("vms_every", None)
+        self.vms_none = kwargs.get("vms_none", None)
+        self.vms_some = kwargs.get("vms_some", None)
         self.window_end = kwargs.get("window_end", None)
         self.window_end_contains = kwargs.get("window_end_contains", None)
         self.window_end_ends_with = kwargs.get("window_end_ends_with", None)
@@ -993,6 +1317,384 @@ class BackupPlanWhereInput(object):
         self.__or = _or
 
     @property
+    def backup_delay_option(self):
+        """Gets the backup_delay_option of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_delay_option of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanDelayOption
+        """
+        return self._backup_delay_option
+
+    @backup_delay_option.setter
+    def backup_delay_option(self, backup_delay_option):
+        """Sets the backup_delay_option of this BackupPlanWhereInput.
+
+
+        :param backup_delay_option: The backup_delay_option of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_delay_option: BackupPlanDelayOption
+        """
+
+        self._backup_delay_option = backup_delay_option
+
+    @property
+    def backup_delay_option_in(self):
+        """Gets the backup_delay_option_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_delay_option_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanDelayOption]
+        """
+        return self._backup_delay_option_in
+
+    @backup_delay_option_in.setter
+    def backup_delay_option_in(self, backup_delay_option_in):
+        """Sets the backup_delay_option_in of this BackupPlanWhereInput.
+
+
+        :param backup_delay_option_in: The backup_delay_option_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_delay_option_in: list[BackupPlanDelayOption]
+        """
+
+        self._backup_delay_option_in = backup_delay_option_in
+
+    @property
+    def backup_delay_option_not(self):
+        """Gets the backup_delay_option_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_delay_option_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanDelayOption
+        """
+        return self._backup_delay_option_not
+
+    @backup_delay_option_not.setter
+    def backup_delay_option_not(self, backup_delay_option_not):
+        """Sets the backup_delay_option_not of this BackupPlanWhereInput.
+
+
+        :param backup_delay_option_not: The backup_delay_option_not of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_delay_option_not: BackupPlanDelayOption
+        """
+
+        self._backup_delay_option_not = backup_delay_option_not
+
+    @property
+    def backup_delay_option_not_in(self):
+        """Gets the backup_delay_option_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_delay_option_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanDelayOption]
+        """
+        return self._backup_delay_option_not_in
+
+    @backup_delay_option_not_in.setter
+    def backup_delay_option_not_in(self, backup_delay_option_not_in):
+        """Sets the backup_delay_option_not_in of this BackupPlanWhereInput.
+
+
+        :param backup_delay_option_not_in: The backup_delay_option_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_delay_option_not_in: list[BackupPlanDelayOption]
+        """
+
+        self._backup_delay_option_not_in = backup_delay_option_not_in
+
+    @property
+    def backup_plan_executions_every(self):
+        """Gets the backup_plan_executions_every of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_plan_executions_every of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanExecutionWhereInput
+        """
+        return self._backup_plan_executions_every
+
+    @backup_plan_executions_every.setter
+    def backup_plan_executions_every(self, backup_plan_executions_every):
+        """Sets the backup_plan_executions_every of this BackupPlanWhereInput.
+
+
+        :param backup_plan_executions_every: The backup_plan_executions_every of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_plan_executions_every: BackupPlanExecutionWhereInput
+        """
+
+        self._backup_plan_executions_every = backup_plan_executions_every
+
+    @property
+    def backup_plan_executions_none(self):
+        """Gets the backup_plan_executions_none of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_plan_executions_none of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanExecutionWhereInput
+        """
+        return self._backup_plan_executions_none
+
+    @backup_plan_executions_none.setter
+    def backup_plan_executions_none(self, backup_plan_executions_none):
+        """Sets the backup_plan_executions_none of this BackupPlanWhereInput.
+
+
+        :param backup_plan_executions_none: The backup_plan_executions_none of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_plan_executions_none: BackupPlanExecutionWhereInput
+        """
+
+        self._backup_plan_executions_none = backup_plan_executions_none
+
+    @property
+    def backup_plan_executions_some(self):
+        """Gets the backup_plan_executions_some of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_plan_executions_some of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanExecutionWhereInput
+        """
+        return self._backup_plan_executions_some
+
+    @backup_plan_executions_some.setter
+    def backup_plan_executions_some(self, backup_plan_executions_some):
+        """Sets the backup_plan_executions_some of this BackupPlanWhereInput.
+
+
+        :param backup_plan_executions_some: The backup_plan_executions_some of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_plan_executions_some: BackupPlanExecutionWhereInput
+        """
+
+        self._backup_plan_executions_some = backup_plan_executions_some
+
+    @property
+    def backup_restore_point_count(self):
+        """Gets the backup_restore_point_count of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count
+
+    @backup_restore_point_count.setter
+    def backup_restore_point_count(self, backup_restore_point_count):
+        """Sets the backup_restore_point_count of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count: The backup_restore_point_count of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count: int
+        """
+
+        self._backup_restore_point_count = backup_restore_point_count
+
+    @property
+    def backup_restore_point_count_gt(self):
+        """Gets the backup_restore_point_count_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count_gt
+
+    @backup_restore_point_count_gt.setter
+    def backup_restore_point_count_gt(self, backup_restore_point_count_gt):
+        """Sets the backup_restore_point_count_gt of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_gt: The backup_restore_point_count_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_gt: int
+        """
+
+        self._backup_restore_point_count_gt = backup_restore_point_count_gt
+
+    @property
+    def backup_restore_point_count_gte(self):
+        """Gets the backup_restore_point_count_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count_gte
+
+    @backup_restore_point_count_gte.setter
+    def backup_restore_point_count_gte(self, backup_restore_point_count_gte):
+        """Sets the backup_restore_point_count_gte of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_gte: The backup_restore_point_count_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_gte: int
+        """
+
+        self._backup_restore_point_count_gte = backup_restore_point_count_gte
+
+    @property
+    def backup_restore_point_count_in(self):
+        """Gets the backup_restore_point_count_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._backup_restore_point_count_in
+
+    @backup_restore_point_count_in.setter
+    def backup_restore_point_count_in(self, backup_restore_point_count_in):
+        """Sets the backup_restore_point_count_in of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_in: The backup_restore_point_count_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_in: list[int]
+        """
+
+        self._backup_restore_point_count_in = backup_restore_point_count_in
+
+    @property
+    def backup_restore_point_count_lt(self):
+        """Gets the backup_restore_point_count_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count_lt
+
+    @backup_restore_point_count_lt.setter
+    def backup_restore_point_count_lt(self, backup_restore_point_count_lt):
+        """Sets the backup_restore_point_count_lt of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_lt: The backup_restore_point_count_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_lt: int
+        """
+
+        self._backup_restore_point_count_lt = backup_restore_point_count_lt
+
+    @property
+    def backup_restore_point_count_lte(self):
+        """Gets the backup_restore_point_count_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count_lte
+
+    @backup_restore_point_count_lte.setter
+    def backup_restore_point_count_lte(self, backup_restore_point_count_lte):
+        """Sets the backup_restore_point_count_lte of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_lte: The backup_restore_point_count_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_lte: int
+        """
+
+        self._backup_restore_point_count_lte = backup_restore_point_count_lte
+
+    @property
+    def backup_restore_point_count_not(self):
+        """Gets the backup_restore_point_count_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_restore_point_count_not
+
+    @backup_restore_point_count_not.setter
+    def backup_restore_point_count_not(self, backup_restore_point_count_not):
+        """Sets the backup_restore_point_count_not of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_not: The backup_restore_point_count_not of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_not: int
+        """
+
+        self._backup_restore_point_count_not = backup_restore_point_count_not
+
+    @property
+    def backup_restore_point_count_not_in(self):
+        """Gets the backup_restore_point_count_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_point_count_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._backup_restore_point_count_not_in
+
+    @backup_restore_point_count_not_in.setter
+    def backup_restore_point_count_not_in(self, backup_restore_point_count_not_in):
+        """Sets the backup_restore_point_count_not_in of this BackupPlanWhereInput.
+
+
+        :param backup_restore_point_count_not_in: The backup_restore_point_count_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_point_count_not_in: list[int]
+        """
+
+        self._backup_restore_point_count_not_in = backup_restore_point_count_not_in
+
+    @property
+    def backup_restore_points_every(self):
+        """Gets the backup_restore_points_every of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_points_every of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupRestorePointWhereInput
+        """
+        return self._backup_restore_points_every
+
+    @backup_restore_points_every.setter
+    def backup_restore_points_every(self, backup_restore_points_every):
+        """Sets the backup_restore_points_every of this BackupPlanWhereInput.
+
+
+        :param backup_restore_points_every: The backup_restore_points_every of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_points_every: BackupRestorePointWhereInput
+        """
+
+        self._backup_restore_points_every = backup_restore_points_every
+
+    @property
+    def backup_restore_points_none(self):
+        """Gets the backup_restore_points_none of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_points_none of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupRestorePointWhereInput
+        """
+        return self._backup_restore_points_none
+
+    @backup_restore_points_none.setter
+    def backup_restore_points_none(self, backup_restore_points_none):
+        """Sets the backup_restore_points_none of this BackupPlanWhereInput.
+
+
+        :param backup_restore_points_none: The backup_restore_points_none of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_points_none: BackupRestorePointWhereInput
+        """
+
+        self._backup_restore_points_none = backup_restore_points_none
+
+    @property
+    def backup_restore_points_some(self):
+        """Gets the backup_restore_points_some of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_restore_points_some of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupRestorePointWhereInput
+        """
+        return self._backup_restore_points_some
+
+    @backup_restore_points_some.setter
+    def backup_restore_points_some(self, backup_restore_points_some):
+        """Sets the backup_restore_points_some of this BackupPlanWhereInput.
+
+
+        :param backup_restore_points_some: The backup_restore_points_some of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_restore_points_some: BackupRestorePointWhereInput
+        """
+
+        self._backup_restore_points_some = backup_restore_points_some
+
+    @property
     def backup_service(self):
         """Gets the backup_service of this BackupPlanWhereInput.  # noqa: E501
 
@@ -1033,6 +1735,174 @@ class BackupPlanWhereInput(object):
         """
 
         self._backup_store_repository = backup_store_repository
+
+    @property
+    def backup_total_size(self):
+        """Gets the backup_total_size of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size
+
+    @backup_total_size.setter
+    def backup_total_size(self, backup_total_size):
+        """Sets the backup_total_size of this BackupPlanWhereInput.
+
+
+        :param backup_total_size: The backup_total_size of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size: int
+        """
+
+        self._backup_total_size = backup_total_size
+
+    @property
+    def backup_total_size_gt(self):
+        """Gets the backup_total_size_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size_gt
+
+    @backup_total_size_gt.setter
+    def backup_total_size_gt(self, backup_total_size_gt):
+        """Sets the backup_total_size_gt of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_gt: The backup_total_size_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_gt: int
+        """
+
+        self._backup_total_size_gt = backup_total_size_gt
+
+    @property
+    def backup_total_size_gte(self):
+        """Gets the backup_total_size_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size_gte
+
+    @backup_total_size_gte.setter
+    def backup_total_size_gte(self, backup_total_size_gte):
+        """Sets the backup_total_size_gte of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_gte: The backup_total_size_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_gte: int
+        """
+
+        self._backup_total_size_gte = backup_total_size_gte
+
+    @property
+    def backup_total_size_in(self):
+        """Gets the backup_total_size_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._backup_total_size_in
+
+    @backup_total_size_in.setter
+    def backup_total_size_in(self, backup_total_size_in):
+        """Sets the backup_total_size_in of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_in: The backup_total_size_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_in: list[int]
+        """
+
+        self._backup_total_size_in = backup_total_size_in
+
+    @property
+    def backup_total_size_lt(self):
+        """Gets the backup_total_size_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size_lt
+
+    @backup_total_size_lt.setter
+    def backup_total_size_lt(self, backup_total_size_lt):
+        """Sets the backup_total_size_lt of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_lt: The backup_total_size_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_lt: int
+        """
+
+        self._backup_total_size_lt = backup_total_size_lt
+
+    @property
+    def backup_total_size_lte(self):
+        """Gets the backup_total_size_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size_lte
+
+    @backup_total_size_lte.setter
+    def backup_total_size_lte(self, backup_total_size_lte):
+        """Sets the backup_total_size_lte of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_lte: The backup_total_size_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_lte: int
+        """
+
+        self._backup_total_size_lte = backup_total_size_lte
+
+    @property
+    def backup_total_size_not(self):
+        """Gets the backup_total_size_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._backup_total_size_not
+
+    @backup_total_size_not.setter
+    def backup_total_size_not(self, backup_total_size_not):
+        """Sets the backup_total_size_not of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_not: The backup_total_size_not of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_not: int
+        """
+
+        self._backup_total_size_not = backup_total_size_not
+
+    @property
+    def backup_total_size_not_in(self):
+        """Gets the backup_total_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The backup_total_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._backup_total_size_not_in
+
+    @backup_total_size_not_in.setter
+    def backup_total_size_not_in(self, backup_total_size_not_in):
+        """Sets the backup_total_size_not_in of this BackupPlanWhereInput.
+
+
+        :param backup_total_size_not_in: The backup_total_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type backup_total_size_not_in: list[int]
+        """
+
+        self._backup_total_size_not_in = backup_total_size_not_in
 
     @property
     def compression(self):
@@ -1411,6 +2281,90 @@ class BackupPlanWhereInput(object):
         """
 
         self._created_at_not_in = created_at_not_in
+
+    @property
+    def delete_strategy(self):
+        """Gets the delete_strategy of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The delete_strategy of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanDeleteStrategy
+        """
+        return self._delete_strategy
+
+    @delete_strategy.setter
+    def delete_strategy(self, delete_strategy):
+        """Sets the delete_strategy of this BackupPlanWhereInput.
+
+
+        :param delete_strategy: The delete_strategy of this BackupPlanWhereInput.  # noqa: E501
+        :type delete_strategy: BackupPlanDeleteStrategy
+        """
+
+        self._delete_strategy = delete_strategy
+
+    @property
+    def delete_strategy_in(self):
+        """Gets the delete_strategy_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The delete_strategy_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanDeleteStrategy]
+        """
+        return self._delete_strategy_in
+
+    @delete_strategy_in.setter
+    def delete_strategy_in(self, delete_strategy_in):
+        """Sets the delete_strategy_in of this BackupPlanWhereInput.
+
+
+        :param delete_strategy_in: The delete_strategy_in of this BackupPlanWhereInput.  # noqa: E501
+        :type delete_strategy_in: list[BackupPlanDeleteStrategy]
+        """
+
+        self._delete_strategy_in = delete_strategy_in
+
+    @property
+    def delete_strategy_not(self):
+        """Gets the delete_strategy_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The delete_strategy_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanDeleteStrategy
+        """
+        return self._delete_strategy_not
+
+    @delete_strategy_not.setter
+    def delete_strategy_not(self, delete_strategy_not):
+        """Sets the delete_strategy_not of this BackupPlanWhereInput.
+
+
+        :param delete_strategy_not: The delete_strategy_not of this BackupPlanWhereInput.  # noqa: E501
+        :type delete_strategy_not: BackupPlanDeleteStrategy
+        """
+
+        self._delete_strategy_not = delete_strategy_not
+
+    @property
+    def delete_strategy_not_in(self):
+        """Gets the delete_strategy_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The delete_strategy_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanDeleteStrategy]
+        """
+        return self._delete_strategy_not_in
+
+    @delete_strategy_not_in.setter
+    def delete_strategy_not_in(self, delete_strategy_not_in):
+        """Sets the delete_strategy_not_in of this BackupPlanWhereInput.
+
+
+        :param delete_strategy_not_in: The delete_strategy_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type delete_strategy_not_in: list[BackupPlanDeleteStrategy]
+        """
+
+        self._delete_strategy_not_in = delete_strategy_not_in
 
     @property
     def description(self):
@@ -2925,6 +3879,300 @@ class BackupPlanWhereInput(object):
         self._last_execute_status_in = last_execute_status_in
 
     @property
+    def last_execute_status_message(self):
+        """Gets the last_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message
+
+    @last_execute_status_message.setter
+    def last_execute_status_message(self, last_execute_status_message):
+        """Sets the last_execute_status_message of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message: The last_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message: str
+        """
+
+        self._last_execute_status_message = last_execute_status_message
+
+    @property
+    def last_execute_status_message_contains(self):
+        """Gets the last_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_contains
+
+    @last_execute_status_message_contains.setter
+    def last_execute_status_message_contains(self, last_execute_status_message_contains):
+        """Sets the last_execute_status_message_contains of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_contains: The last_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_contains: str
+        """
+
+        self._last_execute_status_message_contains = last_execute_status_message_contains
+
+    @property
+    def last_execute_status_message_ends_with(self):
+        """Gets the last_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_ends_with
+
+    @last_execute_status_message_ends_with.setter
+    def last_execute_status_message_ends_with(self, last_execute_status_message_ends_with):
+        """Sets the last_execute_status_message_ends_with of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_ends_with: The last_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_ends_with: str
+        """
+
+        self._last_execute_status_message_ends_with = last_execute_status_message_ends_with
+
+    @property
+    def last_execute_status_message_gt(self):
+        """Gets the last_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_gt
+
+    @last_execute_status_message_gt.setter
+    def last_execute_status_message_gt(self, last_execute_status_message_gt):
+        """Sets the last_execute_status_message_gt of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_gt: The last_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_gt: str
+        """
+
+        self._last_execute_status_message_gt = last_execute_status_message_gt
+
+    @property
+    def last_execute_status_message_gte(self):
+        """Gets the last_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_gte
+
+    @last_execute_status_message_gte.setter
+    def last_execute_status_message_gte(self, last_execute_status_message_gte):
+        """Sets the last_execute_status_message_gte of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_gte: The last_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_gte: str
+        """
+
+        self._last_execute_status_message_gte = last_execute_status_message_gte
+
+    @property
+    def last_execute_status_message_in(self):
+        """Gets the last_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_execute_status_message_in
+
+    @last_execute_status_message_in.setter
+    def last_execute_status_message_in(self, last_execute_status_message_in):
+        """Sets the last_execute_status_message_in of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_in: The last_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_in: list[str]
+        """
+
+        self._last_execute_status_message_in = last_execute_status_message_in
+
+    @property
+    def last_execute_status_message_lt(self):
+        """Gets the last_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_lt
+
+    @last_execute_status_message_lt.setter
+    def last_execute_status_message_lt(self, last_execute_status_message_lt):
+        """Sets the last_execute_status_message_lt of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_lt: The last_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_lt: str
+        """
+
+        self._last_execute_status_message_lt = last_execute_status_message_lt
+
+    @property
+    def last_execute_status_message_lte(self):
+        """Gets the last_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_lte
+
+    @last_execute_status_message_lte.setter
+    def last_execute_status_message_lte(self, last_execute_status_message_lte):
+        """Sets the last_execute_status_message_lte of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_lte: The last_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_lte: str
+        """
+
+        self._last_execute_status_message_lte = last_execute_status_message_lte
+
+    @property
+    def last_execute_status_message_not(self):
+        """Gets the last_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_not
+
+    @last_execute_status_message_not.setter
+    def last_execute_status_message_not(self, last_execute_status_message_not):
+        """Sets the last_execute_status_message_not of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_not: The last_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_not: str
+        """
+
+        self._last_execute_status_message_not = last_execute_status_message_not
+
+    @property
+    def last_execute_status_message_not_contains(self):
+        """Gets the last_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_not_contains
+
+    @last_execute_status_message_not_contains.setter
+    def last_execute_status_message_not_contains(self, last_execute_status_message_not_contains):
+        """Sets the last_execute_status_message_not_contains of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_not_contains: The last_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_not_contains: str
+        """
+
+        self._last_execute_status_message_not_contains = last_execute_status_message_not_contains
+
+    @property
+    def last_execute_status_message_not_ends_with(self):
+        """Gets the last_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_not_ends_with
+
+    @last_execute_status_message_not_ends_with.setter
+    def last_execute_status_message_not_ends_with(self, last_execute_status_message_not_ends_with):
+        """Sets the last_execute_status_message_not_ends_with of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_not_ends_with: The last_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_not_ends_with: str
+        """
+
+        self._last_execute_status_message_not_ends_with = last_execute_status_message_not_ends_with
+
+    @property
+    def last_execute_status_message_not_in(self):
+        """Gets the last_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_execute_status_message_not_in
+
+    @last_execute_status_message_not_in.setter
+    def last_execute_status_message_not_in(self, last_execute_status_message_not_in):
+        """Sets the last_execute_status_message_not_in of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_not_in: The last_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_not_in: list[str]
+        """
+
+        self._last_execute_status_message_not_in = last_execute_status_message_not_in
+
+    @property
+    def last_execute_status_message_not_starts_with(self):
+        """Gets the last_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_not_starts_with
+
+    @last_execute_status_message_not_starts_with.setter
+    def last_execute_status_message_not_starts_with(self, last_execute_status_message_not_starts_with):
+        """Sets the last_execute_status_message_not_starts_with of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_not_starts_with: The last_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_not_starts_with: str
+        """
+
+        self._last_execute_status_message_not_starts_with = last_execute_status_message_not_starts_with
+
+    @property
+    def last_execute_status_message_starts_with(self):
+        """Gets the last_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_execute_status_message_starts_with
+
+    @last_execute_status_message_starts_with.setter
+    def last_execute_status_message_starts_with(self, last_execute_status_message_starts_with):
+        """Sets the last_execute_status_message_starts_with of this BackupPlanWhereInput.
+
+
+        :param last_execute_status_message_starts_with: The last_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_execute_status_message_starts_with: str
+        """
+
+        self._last_execute_status_message_starts_with = last_execute_status_message_starts_with
+
+    @property
     def last_execute_status_not(self):
         """Gets the last_execute_status_not of this BackupPlanWhereInput.  # noqa: E501
 
@@ -3513,6 +4761,300 @@ class BackupPlanWhereInput(object):
         self._last_manual_execute_status_in = last_manual_execute_status_in
 
     @property
+    def last_manual_execute_status_message(self):
+        """Gets the last_manual_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message
+
+    @last_manual_execute_status_message.setter
+    def last_manual_execute_status_message(self, last_manual_execute_status_message):
+        """Sets the last_manual_execute_status_message of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message: The last_manual_execute_status_message of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message: str
+        """
+
+        self._last_manual_execute_status_message = last_manual_execute_status_message
+
+    @property
+    def last_manual_execute_status_message_contains(self):
+        """Gets the last_manual_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_contains
+
+    @last_manual_execute_status_message_contains.setter
+    def last_manual_execute_status_message_contains(self, last_manual_execute_status_message_contains):
+        """Sets the last_manual_execute_status_message_contains of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_contains: The last_manual_execute_status_message_contains of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_contains: str
+        """
+
+        self._last_manual_execute_status_message_contains = last_manual_execute_status_message_contains
+
+    @property
+    def last_manual_execute_status_message_ends_with(self):
+        """Gets the last_manual_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_ends_with
+
+    @last_manual_execute_status_message_ends_with.setter
+    def last_manual_execute_status_message_ends_with(self, last_manual_execute_status_message_ends_with):
+        """Sets the last_manual_execute_status_message_ends_with of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_ends_with: The last_manual_execute_status_message_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_ends_with: str
+        """
+
+        self._last_manual_execute_status_message_ends_with = last_manual_execute_status_message_ends_with
+
+    @property
+    def last_manual_execute_status_message_gt(self):
+        """Gets the last_manual_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_gt
+
+    @last_manual_execute_status_message_gt.setter
+    def last_manual_execute_status_message_gt(self, last_manual_execute_status_message_gt):
+        """Sets the last_manual_execute_status_message_gt of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_gt: The last_manual_execute_status_message_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_gt: str
+        """
+
+        self._last_manual_execute_status_message_gt = last_manual_execute_status_message_gt
+
+    @property
+    def last_manual_execute_status_message_gte(self):
+        """Gets the last_manual_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_gte
+
+    @last_manual_execute_status_message_gte.setter
+    def last_manual_execute_status_message_gte(self, last_manual_execute_status_message_gte):
+        """Sets the last_manual_execute_status_message_gte of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_gte: The last_manual_execute_status_message_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_gte: str
+        """
+
+        self._last_manual_execute_status_message_gte = last_manual_execute_status_message_gte
+
+    @property
+    def last_manual_execute_status_message_in(self):
+        """Gets the last_manual_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_manual_execute_status_message_in
+
+    @last_manual_execute_status_message_in.setter
+    def last_manual_execute_status_message_in(self, last_manual_execute_status_message_in):
+        """Sets the last_manual_execute_status_message_in of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_in: The last_manual_execute_status_message_in of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_in: list[str]
+        """
+
+        self._last_manual_execute_status_message_in = last_manual_execute_status_message_in
+
+    @property
+    def last_manual_execute_status_message_lt(self):
+        """Gets the last_manual_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_lt
+
+    @last_manual_execute_status_message_lt.setter
+    def last_manual_execute_status_message_lt(self, last_manual_execute_status_message_lt):
+        """Sets the last_manual_execute_status_message_lt of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_lt: The last_manual_execute_status_message_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_lt: str
+        """
+
+        self._last_manual_execute_status_message_lt = last_manual_execute_status_message_lt
+
+    @property
+    def last_manual_execute_status_message_lte(self):
+        """Gets the last_manual_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_lte
+
+    @last_manual_execute_status_message_lte.setter
+    def last_manual_execute_status_message_lte(self, last_manual_execute_status_message_lte):
+        """Sets the last_manual_execute_status_message_lte of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_lte: The last_manual_execute_status_message_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_lte: str
+        """
+
+        self._last_manual_execute_status_message_lte = last_manual_execute_status_message_lte
+
+    @property
+    def last_manual_execute_status_message_not(self):
+        """Gets the last_manual_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_not
+
+    @last_manual_execute_status_message_not.setter
+    def last_manual_execute_status_message_not(self, last_manual_execute_status_message_not):
+        """Sets the last_manual_execute_status_message_not of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_not: The last_manual_execute_status_message_not of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_not: str
+        """
+
+        self._last_manual_execute_status_message_not = last_manual_execute_status_message_not
+
+    @property
+    def last_manual_execute_status_message_not_contains(self):
+        """Gets the last_manual_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_not_contains
+
+    @last_manual_execute_status_message_not_contains.setter
+    def last_manual_execute_status_message_not_contains(self, last_manual_execute_status_message_not_contains):
+        """Sets the last_manual_execute_status_message_not_contains of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_not_contains: The last_manual_execute_status_message_not_contains of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_not_contains: str
+        """
+
+        self._last_manual_execute_status_message_not_contains = last_manual_execute_status_message_not_contains
+
+    @property
+    def last_manual_execute_status_message_not_ends_with(self):
+        """Gets the last_manual_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_not_ends_with
+
+    @last_manual_execute_status_message_not_ends_with.setter
+    def last_manual_execute_status_message_not_ends_with(self, last_manual_execute_status_message_not_ends_with):
+        """Sets the last_manual_execute_status_message_not_ends_with of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_not_ends_with: The last_manual_execute_status_message_not_ends_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_not_ends_with: str
+        """
+
+        self._last_manual_execute_status_message_not_ends_with = last_manual_execute_status_message_not_ends_with
+
+    @property
+    def last_manual_execute_status_message_not_in(self):
+        """Gets the last_manual_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_manual_execute_status_message_not_in
+
+    @last_manual_execute_status_message_not_in.setter
+    def last_manual_execute_status_message_not_in(self, last_manual_execute_status_message_not_in):
+        """Sets the last_manual_execute_status_message_not_in of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_not_in: The last_manual_execute_status_message_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_not_in: list[str]
+        """
+
+        self._last_manual_execute_status_message_not_in = last_manual_execute_status_message_not_in
+
+    @property
+    def last_manual_execute_status_message_not_starts_with(self):
+        """Gets the last_manual_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_not_starts_with
+
+    @last_manual_execute_status_message_not_starts_with.setter
+    def last_manual_execute_status_message_not_starts_with(self, last_manual_execute_status_message_not_starts_with):
+        """Sets the last_manual_execute_status_message_not_starts_with of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_not_starts_with: The last_manual_execute_status_message_not_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_not_starts_with: str
+        """
+
+        self._last_manual_execute_status_message_not_starts_with = last_manual_execute_status_message_not_starts_with
+
+    @property
+    def last_manual_execute_status_message_starts_with(self):
+        """Gets the last_manual_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The last_manual_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_manual_execute_status_message_starts_with
+
+    @last_manual_execute_status_message_starts_with.setter
+    def last_manual_execute_status_message_starts_with(self, last_manual_execute_status_message_starts_with):
+        """Sets the last_manual_execute_status_message_starts_with of this BackupPlanWhereInput.
+
+
+        :param last_manual_execute_status_message_starts_with: The last_manual_execute_status_message_starts_with of this BackupPlanWhereInput.  # noqa: E501
+        :type last_manual_execute_status_message_starts_with: str
+        """
+
+        self._last_manual_execute_status_message_starts_with = last_manual_execute_status_message_starts_with
+
+    @property
     def last_manual_execute_status_not(self):
         """Gets the last_manual_execute_status_not of this BackupPlanWhereInput.  # noqa: E501
 
@@ -4059,6 +5601,174 @@ class BackupPlanWhereInput(object):
         self._last_manual_executed_at_not_in = last_manual_executed_at_not_in
 
     @property
+    def logical_size(self):
+        """Gets the logical_size of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size
+
+    @logical_size.setter
+    def logical_size(self, logical_size):
+        """Sets the logical_size of this BackupPlanWhereInput.
+
+
+        :param logical_size: The logical_size of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size: int
+        """
+
+        self._logical_size = logical_size
+
+    @property
+    def logical_size_gt(self):
+        """Gets the logical_size_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size_gt
+
+    @logical_size_gt.setter
+    def logical_size_gt(self, logical_size_gt):
+        """Sets the logical_size_gt of this BackupPlanWhereInput.
+
+
+        :param logical_size_gt: The logical_size_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_gt: int
+        """
+
+        self._logical_size_gt = logical_size_gt
+
+    @property
+    def logical_size_gte(self):
+        """Gets the logical_size_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size_gte
+
+    @logical_size_gte.setter
+    def logical_size_gte(self, logical_size_gte):
+        """Sets the logical_size_gte of this BackupPlanWhereInput.
+
+
+        :param logical_size_gte: The logical_size_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_gte: int
+        """
+
+        self._logical_size_gte = logical_size_gte
+
+    @property
+    def logical_size_in(self):
+        """Gets the logical_size_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._logical_size_in
+
+    @logical_size_in.setter
+    def logical_size_in(self, logical_size_in):
+        """Sets the logical_size_in of this BackupPlanWhereInput.
+
+
+        :param logical_size_in: The logical_size_in of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_in: list[int]
+        """
+
+        self._logical_size_in = logical_size_in
+
+    @property
+    def logical_size_lt(self):
+        """Gets the logical_size_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size_lt
+
+    @logical_size_lt.setter
+    def logical_size_lt(self, logical_size_lt):
+        """Sets the logical_size_lt of this BackupPlanWhereInput.
+
+
+        :param logical_size_lt: The logical_size_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_lt: int
+        """
+
+        self._logical_size_lt = logical_size_lt
+
+    @property
+    def logical_size_lte(self):
+        """Gets the logical_size_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size_lte
+
+    @logical_size_lte.setter
+    def logical_size_lte(self, logical_size_lte):
+        """Sets the logical_size_lte of this BackupPlanWhereInput.
+
+
+        :param logical_size_lte: The logical_size_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_lte: int
+        """
+
+        self._logical_size_lte = logical_size_lte
+
+    @property
+    def logical_size_not(self):
+        """Gets the logical_size_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_size_not
+
+    @logical_size_not.setter
+    def logical_size_not(self, logical_size_not):
+        """Sets the logical_size_not of this BackupPlanWhereInput.
+
+
+        :param logical_size_not: The logical_size_not of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_not: int
+        """
+
+        self._logical_size_not = logical_size_not
+
+    @property
+    def logical_size_not_in(self):
+        """Gets the logical_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The logical_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._logical_size_not_in
+
+    @logical_size_not_in.setter
+    def logical_size_not_in(self, logical_size_not_in):
+        """Sets the logical_size_not_in of this BackupPlanWhereInput.
+
+
+        :param logical_size_not_in: The logical_size_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type logical_size_not_in: list[int]
+        """
+
+        self._logical_size_not_in = logical_size_not_in
+
+    @property
     def name(self):
         """Gets the name of this BackupPlanWhereInput.  # noqa: E501
 
@@ -4519,6 +6229,90 @@ class BackupPlanWhereInput(object):
         """
 
         self._next_execute_time_not_in = next_execute_time_not_in
+
+    @property
+    def phase(self):
+        """Gets the phase of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The phase of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanPhase
+        """
+        return self._phase
+
+    @phase.setter
+    def phase(self, phase):
+        """Sets the phase of this BackupPlanWhereInput.
+
+
+        :param phase: The phase of this BackupPlanWhereInput.  # noqa: E501
+        :type phase: BackupPlanPhase
+        """
+
+        self._phase = phase
+
+    @property
+    def phase_in(self):
+        """Gets the phase_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The phase_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanPhase]
+        """
+        return self._phase_in
+
+    @phase_in.setter
+    def phase_in(self, phase_in):
+        """Sets the phase_in of this BackupPlanWhereInput.
+
+
+        :param phase_in: The phase_in of this BackupPlanWhereInput.  # noqa: E501
+        :type phase_in: list[BackupPlanPhase]
+        """
+
+        self._phase_in = phase_in
+
+    @property
+    def phase_not(self):
+        """Gets the phase_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The phase_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: BackupPlanPhase
+        """
+        return self._phase_not
+
+    @phase_not.setter
+    def phase_not(self, phase_not):
+        """Sets the phase_not of this BackupPlanWhereInput.
+
+
+        :param phase_not: The phase_not of this BackupPlanWhereInput.  # noqa: E501
+        :type phase_not: BackupPlanPhase
+        """
+
+        self._phase_not = phase_not
+
+    @property
+    def phase_not_in(self):
+        """Gets the phase_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The phase_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[BackupPlanPhase]
+        """
+        return self._phase_not_in
+
+    @phase_not_in.setter
+    def phase_not_in(self, phase_not_in):
+        """Sets the phase_not_in of this BackupPlanWhereInput.
+
+
+        :param phase_not_in: The phase_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type phase_not_in: list[BackupPlanPhase]
+        """
+
+        self._phase_not_in = phase_not_in
 
     @property
     def physical_size(self):
@@ -5023,6 +6817,237 @@ class BackupPlanWhereInput(object):
         """
 
         self._valid_size_of_backup_object_not_in = valid_size_of_backup_object_not_in
+
+    @property
+    def valid_size_of_restore_point(self):
+        """Gets the valid_size_of_restore_point of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point
+
+    @valid_size_of_restore_point.setter
+    def valid_size_of_restore_point(self, valid_size_of_restore_point):
+        """Sets the valid_size_of_restore_point of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point: The valid_size_of_restore_point of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point: int
+        """
+
+        self._valid_size_of_restore_point = valid_size_of_restore_point
+
+    @property
+    def valid_size_of_restore_point_gt(self):
+        """Gets the valid_size_of_restore_point_gt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_gt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point_gt
+
+    @valid_size_of_restore_point_gt.setter
+    def valid_size_of_restore_point_gt(self, valid_size_of_restore_point_gt):
+        """Sets the valid_size_of_restore_point_gt of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_gt: The valid_size_of_restore_point_gt of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_gt: int
+        """
+
+        self._valid_size_of_restore_point_gt = valid_size_of_restore_point_gt
+
+    @property
+    def valid_size_of_restore_point_gte(self):
+        """Gets the valid_size_of_restore_point_gte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_gte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point_gte
+
+    @valid_size_of_restore_point_gte.setter
+    def valid_size_of_restore_point_gte(self, valid_size_of_restore_point_gte):
+        """Sets the valid_size_of_restore_point_gte of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_gte: The valid_size_of_restore_point_gte of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_gte: int
+        """
+
+        self._valid_size_of_restore_point_gte = valid_size_of_restore_point_gte
+
+    @property
+    def valid_size_of_restore_point_in(self):
+        """Gets the valid_size_of_restore_point_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_size_of_restore_point_in
+
+    @valid_size_of_restore_point_in.setter
+    def valid_size_of_restore_point_in(self, valid_size_of_restore_point_in):
+        """Sets the valid_size_of_restore_point_in of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_in: The valid_size_of_restore_point_in of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_in: list[int]
+        """
+
+        self._valid_size_of_restore_point_in = valid_size_of_restore_point_in
+
+    @property
+    def valid_size_of_restore_point_lt(self):
+        """Gets the valid_size_of_restore_point_lt of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_lt of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point_lt
+
+    @valid_size_of_restore_point_lt.setter
+    def valid_size_of_restore_point_lt(self, valid_size_of_restore_point_lt):
+        """Sets the valid_size_of_restore_point_lt of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_lt: The valid_size_of_restore_point_lt of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_lt: int
+        """
+
+        self._valid_size_of_restore_point_lt = valid_size_of_restore_point_lt
+
+    @property
+    def valid_size_of_restore_point_lte(self):
+        """Gets the valid_size_of_restore_point_lte of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_lte of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point_lte
+
+    @valid_size_of_restore_point_lte.setter
+    def valid_size_of_restore_point_lte(self, valid_size_of_restore_point_lte):
+        """Sets the valid_size_of_restore_point_lte of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_lte: The valid_size_of_restore_point_lte of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_lte: int
+        """
+
+        self._valid_size_of_restore_point_lte = valid_size_of_restore_point_lte
+
+    @property
+    def valid_size_of_restore_point_not(self):
+        """Gets the valid_size_of_restore_point_not of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_not of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_size_of_restore_point_not
+
+    @valid_size_of_restore_point_not.setter
+    def valid_size_of_restore_point_not(self, valid_size_of_restore_point_not):
+        """Sets the valid_size_of_restore_point_not of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_not: The valid_size_of_restore_point_not of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_not: int
+        """
+
+        self._valid_size_of_restore_point_not = valid_size_of_restore_point_not
+
+    @property
+    def valid_size_of_restore_point_not_in(self):
+        """Gets the valid_size_of_restore_point_not_in of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The valid_size_of_restore_point_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_size_of_restore_point_not_in
+
+    @valid_size_of_restore_point_not_in.setter
+    def valid_size_of_restore_point_not_in(self, valid_size_of_restore_point_not_in):
+        """Sets the valid_size_of_restore_point_not_in of this BackupPlanWhereInput.
+
+
+        :param valid_size_of_restore_point_not_in: The valid_size_of_restore_point_not_in of this BackupPlanWhereInput.  # noqa: E501
+        :type valid_size_of_restore_point_not_in: list[int]
+        """
+
+        self._valid_size_of_restore_point_not_in = valid_size_of_restore_point_not_in
+
+    @property
+    def vms_every(self):
+        """Gets the vms_every of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The vms_every of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_every
+
+    @vms_every.setter
+    def vms_every(self, vms_every):
+        """Sets the vms_every of this BackupPlanWhereInput.
+
+
+        :param vms_every: The vms_every of this BackupPlanWhereInput.  # noqa: E501
+        :type vms_every: VmWhereInput
+        """
+
+        self._vms_every = vms_every
+
+    @property
+    def vms_none(self):
+        """Gets the vms_none of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The vms_none of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_none
+
+    @vms_none.setter
+    def vms_none(self, vms_none):
+        """Sets the vms_none of this BackupPlanWhereInput.
+
+
+        :param vms_none: The vms_none of this BackupPlanWhereInput.  # noqa: E501
+        :type vms_none: VmWhereInput
+        """
+
+        self._vms_none = vms_none
+
+    @property
+    def vms_some(self):
+        """Gets the vms_some of this BackupPlanWhereInput.  # noqa: E501
+
+
+        :return: The vms_some of this BackupPlanWhereInput.  # noqa: E501
+        :rtype: VmWhereInput
+        """
+        return self._vms_some
+
+    @vms_some.setter
+    def vms_some(self, vms_some):
+        """Sets the vms_some of this BackupPlanWhereInput.
+
+
+        :param vms_some: The vms_some of this BackupPlanWhereInput.  # noqa: E501
+        :type vms_some: VmWhereInput
+        """
+
+        self._vms_some = vms_some
 
     @property
     def window_end(self):

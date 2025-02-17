@@ -69,8 +69,7 @@ class VirtualPrivateCloudRouterGateway(object):
         self.associated_subnets = kwargs.get("associated_subnets", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.external_ip = kwargs.get("external_ip", None)
-        if "external_subnet" in kwargs:
-            self.external_subnet = kwargs["external_subnet"]
+        self.external_subnet = kwargs.get("external_subnet", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "local_id" in kwargs:
@@ -164,8 +163,6 @@ class VirtualPrivateCloudRouterGateway(object):
         :param external_subnet: The external_subnet of this VirtualPrivateCloudRouterGateway.  # noqa: E501
         :type external_subnet: NestedVirtualPrivateCloudExternalSubnet
         """
-        if self.local_vars_configuration.client_side_validation and external_subnet is None:  # noqa: E501
-            raise ValueError("Invalid value for `external_subnet`, must not be `None`")  # noqa: E501
 
         self._external_subnet = external_subnet
 

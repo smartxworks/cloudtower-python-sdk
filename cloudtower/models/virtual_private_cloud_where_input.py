@@ -118,7 +118,8 @@ class VirtualPrivateCloudWhereInput(object):
         'security_policies_some': 'VirtualPrivateCloudSecurityPolicyWhereInput',
         'subnets_every': 'VirtualPrivateCloudSubnetWhereInput',
         'subnets_none': 'VirtualPrivateCloudSubnetWhereInput',
-        'subnets_some': 'VirtualPrivateCloudSubnetWhereInput'
+        'subnets_some': 'VirtualPrivateCloudSubnetWhereInput',
+        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
     }
 
     attribute_map = {
@@ -215,7 +216,8 @@ class VirtualPrivateCloudWhereInput(object):
         'security_policies_some': 'security_policies_some',
         'subnets_every': 'subnets_every',
         'subnets_none': 'subnets_none',
-        'subnets_some': 'subnets_some'
+        'subnets_some': 'subnets_some',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -316,6 +318,7 @@ class VirtualPrivateCloudWhereInput(object):
         self._subnets_every = None
         self._subnets_none = None
         self._subnets_some = None
+        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -412,6 +415,7 @@ class VirtualPrivateCloudWhereInput(object):
         self.subnets_every = kwargs.get("subnets_every", None)
         self.subnets_none = kwargs.get("subnets_none", None)
         self.subnets_some = kwargs.get("subnets_some", None)
+        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -2386,6 +2390,27 @@ class VirtualPrivateCloudWhereInput(object):
         """
 
         self._subnets_some = subnets_some
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this VirtualPrivateCloudWhereInput.  # noqa: E501
+
+
+        :return: The vpc_service of this VirtualPrivateCloudWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudServiceWhereInput
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this VirtualPrivateCloudWhereInput.
+
+
+        :param vpc_service: The vpc_service of this VirtualPrivateCloudWhereInput.  # noqa: E501
+        :type vpc_service: VirtualPrivateCloudServiceWhereInput
+        """
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

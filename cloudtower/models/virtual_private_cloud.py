@@ -36,7 +36,8 @@ class VirtualPrivateCloud(object):
         'route_tables': 'list[NestedVirtualPrivateCloudRouteTable]',
         'security_groups': 'list[NestedVirtualPrivateCloudSecurityGroup]',
         'security_policies': 'list[NestedVirtualPrivateCloudSecurityPolicy]',
-        'subnets': 'list[NestedVirtualPrivateCloudSubnet]'
+        'subnets': 'list[NestedVirtualPrivateCloudSubnet]',
+        'vpc_service': 'NestedVirtualPrivateCloudService'
     }
 
     attribute_map = {
@@ -51,7 +52,8 @@ class VirtualPrivateCloud(object):
         'route_tables': 'route_tables',
         'security_groups': 'security_groups',
         'security_policies': 'security_policies',
-        'subnets': 'subnets'
+        'subnets': 'subnets',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -70,6 +72,7 @@ class VirtualPrivateCloud(object):
         self._security_groups = None
         self._security_policies = None
         self._subnets = None
+        self._vpc_service = None
         self.discriminator = None
 
         self.associate_external_subnet_num = kwargs.get("associate_external_subnet_num", None)
@@ -87,6 +90,8 @@ class VirtualPrivateCloud(object):
         self.security_groups = kwargs.get("security_groups", None)
         self.security_policies = kwargs.get("security_policies", None)
         self.subnets = kwargs.get("subnets", None)
+        if "vpc_service" in kwargs:
+            self.vpc_service = kwargs["vpc_service"]
 
     @property
     def associate_external_subnet_num(self):
@@ -345,6 +350,29 @@ class VirtualPrivateCloud(object):
         """
 
         self._subnets = subnets
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this VirtualPrivateCloud.  # noqa: E501
+
+
+        :return: The vpc_service of this VirtualPrivateCloud.  # noqa: E501
+        :rtype: NestedVirtualPrivateCloudService
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this VirtualPrivateCloud.
+
+
+        :param vpc_service: The vpc_service of this VirtualPrivateCloud.  # noqa: E501
+        :type vpc_service: NestedVirtualPrivateCloudService
+        """
+        if self.local_vars_configuration.client_side_validation and vpc_service is None:  # noqa: E501
+            raise ValueError("Invalid value for `vpc_service`, must not be `None`")  # noqa: E501
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

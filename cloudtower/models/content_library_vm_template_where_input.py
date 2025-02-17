@@ -32,11 +32,29 @@ class ContentLibraryVmTemplateWhereInput(object):
         'architecture_in': 'list[Architecture]',
         'architecture_not': 'Architecture',
         'architecture_not_in': 'list[Architecture]',
+        'clock_offset': 'VmClockOffset',
+        'clock_offset_in': 'list[VmClockOffset]',
+        'clock_offset_not': 'VmClockOffset',
+        'clock_offset_not_in': 'list[VmClockOffset]',
         'cloud_init_supported': 'bool',
         'cloud_init_supported_not': 'bool',
         'clusters_every': 'ClusterWhereInput',
         'clusters_none': 'ClusterWhereInput',
         'clusters_some': 'ClusterWhereInput',
+        'cpu_model': 'str',
+        'cpu_model_contains': 'str',
+        'cpu_model_ends_with': 'str',
+        'cpu_model_gt': 'str',
+        'cpu_model_gte': 'str',
+        'cpu_model_in': 'list[str]',
+        'cpu_model_lt': 'str',
+        'cpu_model_lte': 'str',
+        'cpu_model_not': 'str',
+        'cpu_model_not_contains': 'str',
+        'cpu_model_not_ends_with': 'str',
+        'cpu_model_not_in': 'list[str]',
+        'cpu_model_not_starts_with': 'str',
+        'cpu_model_starts_with': 'str',
         'created_at': 'str',
         'created_at_gt': 'str',
         'created_at_gte': 'str',
@@ -63,6 +81,12 @@ class ContentLibraryVmTemplateWhereInput(object):
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
+        'firmware': 'VmFirmware',
+        'firmware_in': 'list[VmFirmware]',
+        'firmware_not': 'VmFirmware',
+        'firmware_not_in': 'list[VmFirmware]',
+        'ha': 'bool',
+        'ha_not': 'bool',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -77,9 +101,37 @@ class ContentLibraryVmTemplateWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'io_policy': 'VmDiskIoPolicy',
+        'io_policy_in': 'list[VmDiskIoPolicy]',
+        'io_policy_not': 'VmDiskIoPolicy',
+        'io_policy_not_in': 'list[VmDiskIoPolicy]',
         'labels_every': 'LabelWhereInput',
         'labels_none': 'LabelWhereInput',
         'labels_some': 'LabelWhereInput',
+        'max_bandwidth': 'int',
+        'max_bandwidth_gt': 'int',
+        'max_bandwidth_gte': 'int',
+        'max_bandwidth_in': 'list[int]',
+        'max_bandwidth_lt': 'int',
+        'max_bandwidth_lte': 'int',
+        'max_bandwidth_not': 'int',
+        'max_bandwidth_not_in': 'list[int]',
+        'max_bandwidth_policy': 'VmDiskIoRestrictType',
+        'max_bandwidth_policy_in': 'list[VmDiskIoRestrictType]',
+        'max_bandwidth_policy_not': 'VmDiskIoRestrictType',
+        'max_bandwidth_policy_not_in': 'list[VmDiskIoRestrictType]',
+        'max_iops': 'int',
+        'max_iops_gt': 'int',
+        'max_iops_gte': 'int',
+        'max_iops_in': 'list[int]',
+        'max_iops_lt': 'int',
+        'max_iops_lte': 'int',
+        'max_iops_not': 'int',
+        'max_iops_not_in': 'list[int]',
+        'max_iops_policy': 'VmDiskIoRestrictType',
+        'max_iops_policy_in': 'list[VmDiskIoRestrictType]',
+        'max_iops_policy_not': 'VmDiskIoRestrictType',
+        'max_iops_policy_not_in': 'list[VmDiskIoRestrictType]',
         'memory': 'int',
         'memory_gt': 'int',
         'memory_gte': 'int',
@@ -132,9 +184,25 @@ class ContentLibraryVmTemplateWhereInput(object):
         'vcpu_lte': 'int',
         'vcpu_not': 'int',
         'vcpu_not_in': 'list[int]',
+        'video_type': 'str',
+        'video_type_contains': 'str',
+        'video_type_ends_with': 'str',
+        'video_type_gt': 'str',
+        'video_type_gte': 'str',
+        'video_type_in': 'list[str]',
+        'video_type_lt': 'str',
+        'video_type_lte': 'str',
+        'video_type_not': 'str',
+        'video_type_not_contains': 'str',
+        'video_type_not_ends_with': 'str',
+        'video_type_not_in': 'list[str]',
+        'video_type_not_starts_with': 'str',
+        'video_type_starts_with': 'str',
         'vm_templates_every': 'VmTemplateWhereInput',
         'vm_templates_none': 'VmTemplateWhereInput',
-        'vm_templates_some': 'VmTemplateWhereInput'
+        'vm_templates_some': 'VmTemplateWhereInput',
+        'win_opt': 'bool',
+        'win_opt_not': 'bool'
     }
 
     attribute_map = {
@@ -145,11 +213,29 @@ class ContentLibraryVmTemplateWhereInput(object):
         'architecture_in': 'architecture_in',
         'architecture_not': 'architecture_not',
         'architecture_not_in': 'architecture_not_in',
+        'clock_offset': 'clock_offset',
+        'clock_offset_in': 'clock_offset_in',
+        'clock_offset_not': 'clock_offset_not',
+        'clock_offset_not_in': 'clock_offset_not_in',
         'cloud_init_supported': 'cloud_init_supported',
         'cloud_init_supported_not': 'cloud_init_supported_not',
         'clusters_every': 'clusters_every',
         'clusters_none': 'clusters_none',
         'clusters_some': 'clusters_some',
+        'cpu_model': 'cpu_model',
+        'cpu_model_contains': 'cpu_model_contains',
+        'cpu_model_ends_with': 'cpu_model_ends_with',
+        'cpu_model_gt': 'cpu_model_gt',
+        'cpu_model_gte': 'cpu_model_gte',
+        'cpu_model_in': 'cpu_model_in',
+        'cpu_model_lt': 'cpu_model_lt',
+        'cpu_model_lte': 'cpu_model_lte',
+        'cpu_model_not': 'cpu_model_not',
+        'cpu_model_not_contains': 'cpu_model_not_contains',
+        'cpu_model_not_ends_with': 'cpu_model_not_ends_with',
+        'cpu_model_not_in': 'cpu_model_not_in',
+        'cpu_model_not_starts_with': 'cpu_model_not_starts_with',
+        'cpu_model_starts_with': 'cpu_model_starts_with',
         'created_at': 'createdAt',
         'created_at_gt': 'createdAt_gt',
         'created_at_gte': 'createdAt_gte',
@@ -176,6 +262,12 @@ class ContentLibraryVmTemplateWhereInput(object):
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
+        'firmware': 'firmware',
+        'firmware_in': 'firmware_in',
+        'firmware_not': 'firmware_not',
+        'firmware_not_in': 'firmware_not_in',
+        'ha': 'ha',
+        'ha_not': 'ha_not',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -190,9 +282,37 @@ class ContentLibraryVmTemplateWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'io_policy': 'io_policy',
+        'io_policy_in': 'io_policy_in',
+        'io_policy_not': 'io_policy_not',
+        'io_policy_not_in': 'io_policy_not_in',
         'labels_every': 'labels_every',
         'labels_none': 'labels_none',
         'labels_some': 'labels_some',
+        'max_bandwidth': 'max_bandwidth',
+        'max_bandwidth_gt': 'max_bandwidth_gt',
+        'max_bandwidth_gte': 'max_bandwidth_gte',
+        'max_bandwidth_in': 'max_bandwidth_in',
+        'max_bandwidth_lt': 'max_bandwidth_lt',
+        'max_bandwidth_lte': 'max_bandwidth_lte',
+        'max_bandwidth_not': 'max_bandwidth_not',
+        'max_bandwidth_not_in': 'max_bandwidth_not_in',
+        'max_bandwidth_policy': 'max_bandwidth_policy',
+        'max_bandwidth_policy_in': 'max_bandwidth_policy_in',
+        'max_bandwidth_policy_not': 'max_bandwidth_policy_not',
+        'max_bandwidth_policy_not_in': 'max_bandwidth_policy_not_in',
+        'max_iops': 'max_iops',
+        'max_iops_gt': 'max_iops_gt',
+        'max_iops_gte': 'max_iops_gte',
+        'max_iops_in': 'max_iops_in',
+        'max_iops_lt': 'max_iops_lt',
+        'max_iops_lte': 'max_iops_lte',
+        'max_iops_not': 'max_iops_not',
+        'max_iops_not_in': 'max_iops_not_in',
+        'max_iops_policy': 'max_iops_policy',
+        'max_iops_policy_in': 'max_iops_policy_in',
+        'max_iops_policy_not': 'max_iops_policy_not',
+        'max_iops_policy_not_in': 'max_iops_policy_not_in',
         'memory': 'memory',
         'memory_gt': 'memory_gt',
         'memory_gte': 'memory_gte',
@@ -245,9 +365,25 @@ class ContentLibraryVmTemplateWhereInput(object):
         'vcpu_lte': 'vcpu_lte',
         'vcpu_not': 'vcpu_not',
         'vcpu_not_in': 'vcpu_not_in',
+        'video_type': 'video_type',
+        'video_type_contains': 'video_type_contains',
+        'video_type_ends_with': 'video_type_ends_with',
+        'video_type_gt': 'video_type_gt',
+        'video_type_gte': 'video_type_gte',
+        'video_type_in': 'video_type_in',
+        'video_type_lt': 'video_type_lt',
+        'video_type_lte': 'video_type_lte',
+        'video_type_not': 'video_type_not',
+        'video_type_not_contains': 'video_type_not_contains',
+        'video_type_not_ends_with': 'video_type_not_ends_with',
+        'video_type_not_in': 'video_type_not_in',
+        'video_type_not_starts_with': 'video_type_not_starts_with',
+        'video_type_starts_with': 'video_type_starts_with',
         'vm_templates_every': 'vm_templates_every',
         'vm_templates_none': 'vm_templates_none',
-        'vm_templates_some': 'vm_templates_some'
+        'vm_templates_some': 'vm_templates_some',
+        'win_opt': 'win_opt',
+        'win_opt_not': 'win_opt_not'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -261,11 +397,29 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._architecture_in = None
         self._architecture_not = None
         self._architecture_not_in = None
+        self._clock_offset = None
+        self._clock_offset_in = None
+        self._clock_offset_not = None
+        self._clock_offset_not_in = None
         self._cloud_init_supported = None
         self._cloud_init_supported_not = None
         self._clusters_every = None
         self._clusters_none = None
         self._clusters_some = None
+        self._cpu_model = None
+        self._cpu_model_contains = None
+        self._cpu_model_ends_with = None
+        self._cpu_model_gt = None
+        self._cpu_model_gte = None
+        self._cpu_model_in = None
+        self._cpu_model_lt = None
+        self._cpu_model_lte = None
+        self._cpu_model_not = None
+        self._cpu_model_not_contains = None
+        self._cpu_model_not_ends_with = None
+        self._cpu_model_not_in = None
+        self._cpu_model_not_starts_with = None
+        self._cpu_model_starts_with = None
         self._created_at = None
         self._created_at_gt = None
         self._created_at_gte = None
@@ -292,6 +446,12 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
+        self._firmware = None
+        self._firmware_in = None
+        self._firmware_not = None
+        self._firmware_not_in = None
+        self._ha = None
+        self._ha_not = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -306,9 +466,37 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._io_policy = None
+        self._io_policy_in = None
+        self._io_policy_not = None
+        self._io_policy_not_in = None
         self._labels_every = None
         self._labels_none = None
         self._labels_some = None
+        self._max_bandwidth = None
+        self._max_bandwidth_gt = None
+        self._max_bandwidth_gte = None
+        self._max_bandwidth_in = None
+        self._max_bandwidth_lt = None
+        self._max_bandwidth_lte = None
+        self._max_bandwidth_not = None
+        self._max_bandwidth_not_in = None
+        self._max_bandwidth_policy = None
+        self._max_bandwidth_policy_in = None
+        self._max_bandwidth_policy_not = None
+        self._max_bandwidth_policy_not_in = None
+        self._max_iops = None
+        self._max_iops_gt = None
+        self._max_iops_gte = None
+        self._max_iops_in = None
+        self._max_iops_lt = None
+        self._max_iops_lte = None
+        self._max_iops_not = None
+        self._max_iops_not_in = None
+        self._max_iops_policy = None
+        self._max_iops_policy_in = None
+        self._max_iops_policy_not = None
+        self._max_iops_policy_not_in = None
         self._memory = None
         self._memory_gt = None
         self._memory_gte = None
@@ -361,9 +549,25 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._vcpu_lte = None
         self._vcpu_not = None
         self._vcpu_not_in = None
+        self._video_type = None
+        self._video_type_contains = None
+        self._video_type_ends_with = None
+        self._video_type_gt = None
+        self._video_type_gte = None
+        self._video_type_in = None
+        self._video_type_lt = None
+        self._video_type_lte = None
+        self._video_type_not = None
+        self._video_type_not_contains = None
+        self._video_type_not_ends_with = None
+        self._video_type_not_in = None
+        self._video_type_not_starts_with = None
+        self._video_type_starts_with = None
         self._vm_templates_every = None
         self._vm_templates_none = None
         self._vm_templates_some = None
+        self._win_opt = None
+        self._win_opt_not = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -373,11 +577,29 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.architecture_in = kwargs.get("architecture_in", None)
         self.architecture_not = kwargs.get("architecture_not", None)
         self.architecture_not_in = kwargs.get("architecture_not_in", None)
+        self.clock_offset = kwargs.get("clock_offset", None)
+        self.clock_offset_in = kwargs.get("clock_offset_in", None)
+        self.clock_offset_not = kwargs.get("clock_offset_not", None)
+        self.clock_offset_not_in = kwargs.get("clock_offset_not_in", None)
         self.cloud_init_supported = kwargs.get("cloud_init_supported", None)
         self.cloud_init_supported_not = kwargs.get("cloud_init_supported_not", None)
         self.clusters_every = kwargs.get("clusters_every", None)
         self.clusters_none = kwargs.get("clusters_none", None)
         self.clusters_some = kwargs.get("clusters_some", None)
+        self.cpu_model = kwargs.get("cpu_model", None)
+        self.cpu_model_contains = kwargs.get("cpu_model_contains", None)
+        self.cpu_model_ends_with = kwargs.get("cpu_model_ends_with", None)
+        self.cpu_model_gt = kwargs.get("cpu_model_gt", None)
+        self.cpu_model_gte = kwargs.get("cpu_model_gte", None)
+        self.cpu_model_in = kwargs.get("cpu_model_in", None)
+        self.cpu_model_lt = kwargs.get("cpu_model_lt", None)
+        self.cpu_model_lte = kwargs.get("cpu_model_lte", None)
+        self.cpu_model_not = kwargs.get("cpu_model_not", None)
+        self.cpu_model_not_contains = kwargs.get("cpu_model_not_contains", None)
+        self.cpu_model_not_ends_with = kwargs.get("cpu_model_not_ends_with", None)
+        self.cpu_model_not_in = kwargs.get("cpu_model_not_in", None)
+        self.cpu_model_not_starts_with = kwargs.get("cpu_model_not_starts_with", None)
+        self.cpu_model_starts_with = kwargs.get("cpu_model_starts_with", None)
         self.created_at = kwargs.get("created_at", None)
         self.created_at_gt = kwargs.get("created_at_gt", None)
         self.created_at_gte = kwargs.get("created_at_gte", None)
@@ -404,6 +626,12 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
+        self.firmware = kwargs.get("firmware", None)
+        self.firmware_in = kwargs.get("firmware_in", None)
+        self.firmware_not = kwargs.get("firmware_not", None)
+        self.firmware_not_in = kwargs.get("firmware_not_in", None)
+        self.ha = kwargs.get("ha", None)
+        self.ha_not = kwargs.get("ha_not", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -418,9 +646,37 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.io_policy = kwargs.get("io_policy", None)
+        self.io_policy_in = kwargs.get("io_policy_in", None)
+        self.io_policy_not = kwargs.get("io_policy_not", None)
+        self.io_policy_not_in = kwargs.get("io_policy_not_in", None)
         self.labels_every = kwargs.get("labels_every", None)
         self.labels_none = kwargs.get("labels_none", None)
         self.labels_some = kwargs.get("labels_some", None)
+        self.max_bandwidth = kwargs.get("max_bandwidth", None)
+        self.max_bandwidth_gt = kwargs.get("max_bandwidth_gt", None)
+        self.max_bandwidth_gte = kwargs.get("max_bandwidth_gte", None)
+        self.max_bandwidth_in = kwargs.get("max_bandwidth_in", None)
+        self.max_bandwidth_lt = kwargs.get("max_bandwidth_lt", None)
+        self.max_bandwidth_lte = kwargs.get("max_bandwidth_lte", None)
+        self.max_bandwidth_not = kwargs.get("max_bandwidth_not", None)
+        self.max_bandwidth_not_in = kwargs.get("max_bandwidth_not_in", None)
+        self.max_bandwidth_policy = kwargs.get("max_bandwidth_policy", None)
+        self.max_bandwidth_policy_in = kwargs.get("max_bandwidth_policy_in", None)
+        self.max_bandwidth_policy_not = kwargs.get("max_bandwidth_policy_not", None)
+        self.max_bandwidth_policy_not_in = kwargs.get("max_bandwidth_policy_not_in", None)
+        self.max_iops = kwargs.get("max_iops", None)
+        self.max_iops_gt = kwargs.get("max_iops_gt", None)
+        self.max_iops_gte = kwargs.get("max_iops_gte", None)
+        self.max_iops_in = kwargs.get("max_iops_in", None)
+        self.max_iops_lt = kwargs.get("max_iops_lt", None)
+        self.max_iops_lte = kwargs.get("max_iops_lte", None)
+        self.max_iops_not = kwargs.get("max_iops_not", None)
+        self.max_iops_not_in = kwargs.get("max_iops_not_in", None)
+        self.max_iops_policy = kwargs.get("max_iops_policy", None)
+        self.max_iops_policy_in = kwargs.get("max_iops_policy_in", None)
+        self.max_iops_policy_not = kwargs.get("max_iops_policy_not", None)
+        self.max_iops_policy_not_in = kwargs.get("max_iops_policy_not_in", None)
         self.memory = kwargs.get("memory", None)
         self.memory_gt = kwargs.get("memory_gt", None)
         self.memory_gte = kwargs.get("memory_gte", None)
@@ -473,9 +729,25 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.vcpu_lte = kwargs.get("vcpu_lte", None)
         self.vcpu_not = kwargs.get("vcpu_not", None)
         self.vcpu_not_in = kwargs.get("vcpu_not_in", None)
+        self.video_type = kwargs.get("video_type", None)
+        self.video_type_contains = kwargs.get("video_type_contains", None)
+        self.video_type_ends_with = kwargs.get("video_type_ends_with", None)
+        self.video_type_gt = kwargs.get("video_type_gt", None)
+        self.video_type_gte = kwargs.get("video_type_gte", None)
+        self.video_type_in = kwargs.get("video_type_in", None)
+        self.video_type_lt = kwargs.get("video_type_lt", None)
+        self.video_type_lte = kwargs.get("video_type_lte", None)
+        self.video_type_not = kwargs.get("video_type_not", None)
+        self.video_type_not_contains = kwargs.get("video_type_not_contains", None)
+        self.video_type_not_ends_with = kwargs.get("video_type_not_ends_with", None)
+        self.video_type_not_in = kwargs.get("video_type_not_in", None)
+        self.video_type_not_starts_with = kwargs.get("video_type_not_starts_with", None)
+        self.video_type_starts_with = kwargs.get("video_type_starts_with", None)
         self.vm_templates_every = kwargs.get("vm_templates_every", None)
         self.vm_templates_none = kwargs.get("vm_templates_none", None)
         self.vm_templates_some = kwargs.get("vm_templates_some", None)
+        self.win_opt = kwargs.get("win_opt", None)
+        self.win_opt_not = kwargs.get("win_opt_not", None)
 
     @property
     def _and(self):
@@ -625,6 +897,90 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._architecture_not_in = architecture_not_in
 
     @property
+    def clock_offset(self):
+        """Gets the clock_offset of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The clock_offset of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmClockOffset
+        """
+        return self._clock_offset
+
+    @clock_offset.setter
+    def clock_offset(self, clock_offset):
+        """Sets the clock_offset of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param clock_offset: The clock_offset of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type clock_offset: VmClockOffset
+        """
+
+        self._clock_offset = clock_offset
+
+    @property
+    def clock_offset_in(self):
+        """Gets the clock_offset_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The clock_offset_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmClockOffset]
+        """
+        return self._clock_offset_in
+
+    @clock_offset_in.setter
+    def clock_offset_in(self, clock_offset_in):
+        """Sets the clock_offset_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param clock_offset_in: The clock_offset_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type clock_offset_in: list[VmClockOffset]
+        """
+
+        self._clock_offset_in = clock_offset_in
+
+    @property
+    def clock_offset_not(self):
+        """Gets the clock_offset_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The clock_offset_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmClockOffset
+        """
+        return self._clock_offset_not
+
+    @clock_offset_not.setter
+    def clock_offset_not(self, clock_offset_not):
+        """Sets the clock_offset_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param clock_offset_not: The clock_offset_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type clock_offset_not: VmClockOffset
+        """
+
+        self._clock_offset_not = clock_offset_not
+
+    @property
+    def clock_offset_not_in(self):
+        """Gets the clock_offset_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The clock_offset_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmClockOffset]
+        """
+        return self._clock_offset_not_in
+
+    @clock_offset_not_in.setter
+    def clock_offset_not_in(self, clock_offset_not_in):
+        """Sets the clock_offset_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param clock_offset_not_in: The clock_offset_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type clock_offset_not_in: list[VmClockOffset]
+        """
+
+        self._clock_offset_not_in = clock_offset_not_in
+
+    @property
     def cloud_init_supported(self):
         """Gets the cloud_init_supported of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
 
@@ -728,6 +1084,300 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._clusters_some = clusters_some
+
+    @property
+    def cpu_model(self):
+        """Gets the cpu_model of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model
+
+    @cpu_model.setter
+    def cpu_model(self, cpu_model):
+        """Sets the cpu_model of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model: The cpu_model of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model: str
+        """
+
+        self._cpu_model = cpu_model
+
+    @property
+    def cpu_model_contains(self):
+        """Gets the cpu_model_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_contains
+
+    @cpu_model_contains.setter
+    def cpu_model_contains(self, cpu_model_contains):
+        """Sets the cpu_model_contains of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_contains: The cpu_model_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_contains: str
+        """
+
+        self._cpu_model_contains = cpu_model_contains
+
+    @property
+    def cpu_model_ends_with(self):
+        """Gets the cpu_model_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_ends_with
+
+    @cpu_model_ends_with.setter
+    def cpu_model_ends_with(self, cpu_model_ends_with):
+        """Sets the cpu_model_ends_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_ends_with: The cpu_model_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_ends_with: str
+        """
+
+        self._cpu_model_ends_with = cpu_model_ends_with
+
+    @property
+    def cpu_model_gt(self):
+        """Gets the cpu_model_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_gt
+
+    @cpu_model_gt.setter
+    def cpu_model_gt(self, cpu_model_gt):
+        """Sets the cpu_model_gt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_gt: The cpu_model_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_gt: str
+        """
+
+        self._cpu_model_gt = cpu_model_gt
+
+    @property
+    def cpu_model_gte(self):
+        """Gets the cpu_model_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_gte
+
+    @cpu_model_gte.setter
+    def cpu_model_gte(self, cpu_model_gte):
+        """Sets the cpu_model_gte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_gte: The cpu_model_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_gte: str
+        """
+
+        self._cpu_model_gte = cpu_model_gte
+
+    @property
+    def cpu_model_in(self):
+        """Gets the cpu_model_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._cpu_model_in
+
+    @cpu_model_in.setter
+    def cpu_model_in(self, cpu_model_in):
+        """Sets the cpu_model_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_in: The cpu_model_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_in: list[str]
+        """
+
+        self._cpu_model_in = cpu_model_in
+
+    @property
+    def cpu_model_lt(self):
+        """Gets the cpu_model_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_lt
+
+    @cpu_model_lt.setter
+    def cpu_model_lt(self, cpu_model_lt):
+        """Sets the cpu_model_lt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_lt: The cpu_model_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_lt: str
+        """
+
+        self._cpu_model_lt = cpu_model_lt
+
+    @property
+    def cpu_model_lte(self):
+        """Gets the cpu_model_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_lte
+
+    @cpu_model_lte.setter
+    def cpu_model_lte(self, cpu_model_lte):
+        """Sets the cpu_model_lte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_lte: The cpu_model_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_lte: str
+        """
+
+        self._cpu_model_lte = cpu_model_lte
+
+    @property
+    def cpu_model_not(self):
+        """Gets the cpu_model_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_not
+
+    @cpu_model_not.setter
+    def cpu_model_not(self, cpu_model_not):
+        """Sets the cpu_model_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_not: The cpu_model_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_not: str
+        """
+
+        self._cpu_model_not = cpu_model_not
+
+    @property
+    def cpu_model_not_contains(self):
+        """Gets the cpu_model_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_not_contains
+
+    @cpu_model_not_contains.setter
+    def cpu_model_not_contains(self, cpu_model_not_contains):
+        """Sets the cpu_model_not_contains of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_not_contains: The cpu_model_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_not_contains: str
+        """
+
+        self._cpu_model_not_contains = cpu_model_not_contains
+
+    @property
+    def cpu_model_not_ends_with(self):
+        """Gets the cpu_model_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_not_ends_with
+
+    @cpu_model_not_ends_with.setter
+    def cpu_model_not_ends_with(self, cpu_model_not_ends_with):
+        """Sets the cpu_model_not_ends_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_not_ends_with: The cpu_model_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_not_ends_with: str
+        """
+
+        self._cpu_model_not_ends_with = cpu_model_not_ends_with
+
+    @property
+    def cpu_model_not_in(self):
+        """Gets the cpu_model_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._cpu_model_not_in
+
+    @cpu_model_not_in.setter
+    def cpu_model_not_in(self, cpu_model_not_in):
+        """Sets the cpu_model_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_not_in: The cpu_model_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_not_in: list[str]
+        """
+
+        self._cpu_model_not_in = cpu_model_not_in
+
+    @property
+    def cpu_model_not_starts_with(self):
+        """Gets the cpu_model_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_not_starts_with
+
+    @cpu_model_not_starts_with.setter
+    def cpu_model_not_starts_with(self, cpu_model_not_starts_with):
+        """Sets the cpu_model_not_starts_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_not_starts_with: The cpu_model_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_not_starts_with: str
+        """
+
+        self._cpu_model_not_starts_with = cpu_model_not_starts_with
+
+    @property
+    def cpu_model_starts_with(self):
+        """Gets the cpu_model_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The cpu_model_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_model_starts_with
+
+    @cpu_model_starts_with.setter
+    def cpu_model_starts_with(self, cpu_model_starts_with):
+        """Sets the cpu_model_starts_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param cpu_model_starts_with: The cpu_model_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type cpu_model_starts_with: str
+        """
+
+        self._cpu_model_starts_with = cpu_model_starts_with
 
     @property
     def created_at(self):
@@ -1276,6 +1926,132 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
+    def firmware(self):
+        """Gets the firmware of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The firmware of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmFirmware
+        """
+        return self._firmware
+
+    @firmware.setter
+    def firmware(self, firmware):
+        """Sets the firmware of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param firmware: The firmware of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type firmware: VmFirmware
+        """
+
+        self._firmware = firmware
+
+    @property
+    def firmware_in(self):
+        """Gets the firmware_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The firmware_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmFirmware]
+        """
+        return self._firmware_in
+
+    @firmware_in.setter
+    def firmware_in(self, firmware_in):
+        """Sets the firmware_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param firmware_in: The firmware_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type firmware_in: list[VmFirmware]
+        """
+
+        self._firmware_in = firmware_in
+
+    @property
+    def firmware_not(self):
+        """Gets the firmware_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The firmware_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmFirmware
+        """
+        return self._firmware_not
+
+    @firmware_not.setter
+    def firmware_not(self, firmware_not):
+        """Sets the firmware_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param firmware_not: The firmware_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type firmware_not: VmFirmware
+        """
+
+        self._firmware_not = firmware_not
+
+    @property
+    def firmware_not_in(self):
+        """Gets the firmware_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The firmware_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmFirmware]
+        """
+        return self._firmware_not_in
+
+    @firmware_not_in.setter
+    def firmware_not_in(self, firmware_not_in):
+        """Sets the firmware_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param firmware_not_in: The firmware_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type firmware_not_in: list[VmFirmware]
+        """
+
+        self._firmware_not_in = firmware_not_in
+
+    @property
+    def ha(self):
+        """Gets the ha of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The ha of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ha
+
+    @ha.setter
+    def ha(self, ha):
+        """Sets the ha of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param ha: The ha of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type ha: bool
+        """
+
+        self._ha = ha
+
+    @property
+    def ha_not(self):
+        """Gets the ha_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The ha_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ha_not
+
+    @ha_not.setter
+    def ha_not(self, ha_not):
+        """Sets the ha_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param ha_not: The ha_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type ha_not: bool
+        """
+
+        self._ha_not = ha_not
+
+    @property
     def id(self):
         """Gets the id of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
 
@@ -1570,6 +2346,90 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._id_starts_with = id_starts_with
 
     @property
+    def io_policy(self):
+        """Gets the io_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The io_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoPolicy
+        """
+        return self._io_policy
+
+    @io_policy.setter
+    def io_policy(self, io_policy):
+        """Sets the io_policy of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param io_policy: The io_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type io_policy: VmDiskIoPolicy
+        """
+
+        self._io_policy = io_policy
+
+    @property
+    def io_policy_in(self):
+        """Gets the io_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The io_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoPolicy]
+        """
+        return self._io_policy_in
+
+    @io_policy_in.setter
+    def io_policy_in(self, io_policy_in):
+        """Sets the io_policy_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param io_policy_in: The io_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type io_policy_in: list[VmDiskIoPolicy]
+        """
+
+        self._io_policy_in = io_policy_in
+
+    @property
+    def io_policy_not(self):
+        """Gets the io_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The io_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoPolicy
+        """
+        return self._io_policy_not
+
+    @io_policy_not.setter
+    def io_policy_not(self, io_policy_not):
+        """Sets the io_policy_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param io_policy_not: The io_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type io_policy_not: VmDiskIoPolicy
+        """
+
+        self._io_policy_not = io_policy_not
+
+    @property
+    def io_policy_not_in(self):
+        """Gets the io_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The io_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoPolicy]
+        """
+        return self._io_policy_not_in
+
+    @io_policy_not_in.setter
+    def io_policy_not_in(self, io_policy_not_in):
+        """Sets the io_policy_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param io_policy_not_in: The io_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type io_policy_not_in: list[VmDiskIoPolicy]
+        """
+
+        self._io_policy_not_in = io_policy_not_in
+
+    @property
     def labels_every(self):
         """Gets the labels_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
 
@@ -1631,6 +2491,510 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._labels_some = labels_some
+
+    @property
+    def max_bandwidth(self):
+        """Gets the max_bandwidth of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth
+
+    @max_bandwidth.setter
+    def max_bandwidth(self, max_bandwidth):
+        """Sets the max_bandwidth of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth: The max_bandwidth of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth: int
+        """
+
+        self._max_bandwidth = max_bandwidth
+
+    @property
+    def max_bandwidth_gt(self):
+        """Gets the max_bandwidth_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth_gt
+
+    @max_bandwidth_gt.setter
+    def max_bandwidth_gt(self, max_bandwidth_gt):
+        """Sets the max_bandwidth_gt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_gt: The max_bandwidth_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_gt: int
+        """
+
+        self._max_bandwidth_gt = max_bandwidth_gt
+
+    @property
+    def max_bandwidth_gte(self):
+        """Gets the max_bandwidth_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth_gte
+
+    @max_bandwidth_gte.setter
+    def max_bandwidth_gte(self, max_bandwidth_gte):
+        """Sets the max_bandwidth_gte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_gte: The max_bandwidth_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_gte: int
+        """
+
+        self._max_bandwidth_gte = max_bandwidth_gte
+
+    @property
+    def max_bandwidth_in(self):
+        """Gets the max_bandwidth_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._max_bandwidth_in
+
+    @max_bandwidth_in.setter
+    def max_bandwidth_in(self, max_bandwidth_in):
+        """Sets the max_bandwidth_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_in: The max_bandwidth_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_in: list[int]
+        """
+
+        self._max_bandwidth_in = max_bandwidth_in
+
+    @property
+    def max_bandwidth_lt(self):
+        """Gets the max_bandwidth_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth_lt
+
+    @max_bandwidth_lt.setter
+    def max_bandwidth_lt(self, max_bandwidth_lt):
+        """Sets the max_bandwidth_lt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_lt: The max_bandwidth_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_lt: int
+        """
+
+        self._max_bandwidth_lt = max_bandwidth_lt
+
+    @property
+    def max_bandwidth_lte(self):
+        """Gets the max_bandwidth_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth_lte
+
+    @max_bandwidth_lte.setter
+    def max_bandwidth_lte(self, max_bandwidth_lte):
+        """Sets the max_bandwidth_lte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_lte: The max_bandwidth_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_lte: int
+        """
+
+        self._max_bandwidth_lte = max_bandwidth_lte
+
+    @property
+    def max_bandwidth_not(self):
+        """Gets the max_bandwidth_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_bandwidth_not
+
+    @max_bandwidth_not.setter
+    def max_bandwidth_not(self, max_bandwidth_not):
+        """Sets the max_bandwidth_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_not: The max_bandwidth_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_not: int
+        """
+
+        self._max_bandwidth_not = max_bandwidth_not
+
+    @property
+    def max_bandwidth_not_in(self):
+        """Gets the max_bandwidth_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._max_bandwidth_not_in
+
+    @max_bandwidth_not_in.setter
+    def max_bandwidth_not_in(self, max_bandwidth_not_in):
+        """Sets the max_bandwidth_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_not_in: The max_bandwidth_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_not_in: list[int]
+        """
+
+        self._max_bandwidth_not_in = max_bandwidth_not_in
+
+    @property
+    def max_bandwidth_policy(self):
+        """Gets the max_bandwidth_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoRestrictType
+        """
+        return self._max_bandwidth_policy
+
+    @max_bandwidth_policy.setter
+    def max_bandwidth_policy(self, max_bandwidth_policy):
+        """Sets the max_bandwidth_policy of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_policy: The max_bandwidth_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_policy: VmDiskIoRestrictType
+        """
+
+        self._max_bandwidth_policy = max_bandwidth_policy
+
+    @property
+    def max_bandwidth_policy_in(self):
+        """Gets the max_bandwidth_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoRestrictType]
+        """
+        return self._max_bandwidth_policy_in
+
+    @max_bandwidth_policy_in.setter
+    def max_bandwidth_policy_in(self, max_bandwidth_policy_in):
+        """Sets the max_bandwidth_policy_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_policy_in: The max_bandwidth_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_policy_in: list[VmDiskIoRestrictType]
+        """
+
+        self._max_bandwidth_policy_in = max_bandwidth_policy_in
+
+    @property
+    def max_bandwidth_policy_not(self):
+        """Gets the max_bandwidth_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoRestrictType
+        """
+        return self._max_bandwidth_policy_not
+
+    @max_bandwidth_policy_not.setter
+    def max_bandwidth_policy_not(self, max_bandwidth_policy_not):
+        """Sets the max_bandwidth_policy_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_policy_not: The max_bandwidth_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_policy_not: VmDiskIoRestrictType
+        """
+
+        self._max_bandwidth_policy_not = max_bandwidth_policy_not
+
+    @property
+    def max_bandwidth_policy_not_in(self):
+        """Gets the max_bandwidth_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_bandwidth_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoRestrictType]
+        """
+        return self._max_bandwidth_policy_not_in
+
+    @max_bandwidth_policy_not_in.setter
+    def max_bandwidth_policy_not_in(self, max_bandwidth_policy_not_in):
+        """Sets the max_bandwidth_policy_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_bandwidth_policy_not_in: The max_bandwidth_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_bandwidth_policy_not_in: list[VmDiskIoRestrictType]
+        """
+
+        self._max_bandwidth_policy_not_in = max_bandwidth_policy_not_in
+
+    @property
+    def max_iops(self):
+        """Gets the max_iops of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops
+
+    @max_iops.setter
+    def max_iops(self, max_iops):
+        """Sets the max_iops of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops: The max_iops of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops: int
+        """
+
+        self._max_iops = max_iops
+
+    @property
+    def max_iops_gt(self):
+        """Gets the max_iops_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops_gt
+
+    @max_iops_gt.setter
+    def max_iops_gt(self, max_iops_gt):
+        """Sets the max_iops_gt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_gt: The max_iops_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_gt: int
+        """
+
+        self._max_iops_gt = max_iops_gt
+
+    @property
+    def max_iops_gte(self):
+        """Gets the max_iops_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops_gte
+
+    @max_iops_gte.setter
+    def max_iops_gte(self, max_iops_gte):
+        """Sets the max_iops_gte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_gte: The max_iops_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_gte: int
+        """
+
+        self._max_iops_gte = max_iops_gte
+
+    @property
+    def max_iops_in(self):
+        """Gets the max_iops_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._max_iops_in
+
+    @max_iops_in.setter
+    def max_iops_in(self, max_iops_in):
+        """Sets the max_iops_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_in: The max_iops_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_in: list[int]
+        """
+
+        self._max_iops_in = max_iops_in
+
+    @property
+    def max_iops_lt(self):
+        """Gets the max_iops_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops_lt
+
+    @max_iops_lt.setter
+    def max_iops_lt(self, max_iops_lt):
+        """Sets the max_iops_lt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_lt: The max_iops_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_lt: int
+        """
+
+        self._max_iops_lt = max_iops_lt
+
+    @property
+    def max_iops_lte(self):
+        """Gets the max_iops_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops_lte
+
+    @max_iops_lte.setter
+    def max_iops_lte(self, max_iops_lte):
+        """Sets the max_iops_lte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_lte: The max_iops_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_lte: int
+        """
+
+        self._max_iops_lte = max_iops_lte
+
+    @property
+    def max_iops_not(self):
+        """Gets the max_iops_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_iops_not
+
+    @max_iops_not.setter
+    def max_iops_not(self, max_iops_not):
+        """Sets the max_iops_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_not: The max_iops_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_not: int
+        """
+
+        self._max_iops_not = max_iops_not
+
+    @property
+    def max_iops_not_in(self):
+        """Gets the max_iops_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._max_iops_not_in
+
+    @max_iops_not_in.setter
+    def max_iops_not_in(self, max_iops_not_in):
+        """Sets the max_iops_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_not_in: The max_iops_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_not_in: list[int]
+        """
+
+        self._max_iops_not_in = max_iops_not_in
+
+    @property
+    def max_iops_policy(self):
+        """Gets the max_iops_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoRestrictType
+        """
+        return self._max_iops_policy
+
+    @max_iops_policy.setter
+    def max_iops_policy(self, max_iops_policy):
+        """Sets the max_iops_policy of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_policy: The max_iops_policy of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_policy: VmDiskIoRestrictType
+        """
+
+        self._max_iops_policy = max_iops_policy
+
+    @property
+    def max_iops_policy_in(self):
+        """Gets the max_iops_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoRestrictType]
+        """
+        return self._max_iops_policy_in
+
+    @max_iops_policy_in.setter
+    def max_iops_policy_in(self, max_iops_policy_in):
+        """Sets the max_iops_policy_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_policy_in: The max_iops_policy_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_policy_in: list[VmDiskIoRestrictType]
+        """
+
+        self._max_iops_policy_in = max_iops_policy_in
+
+    @property
+    def max_iops_policy_not(self):
+        """Gets the max_iops_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmDiskIoRestrictType
+        """
+        return self._max_iops_policy_not
+
+    @max_iops_policy_not.setter
+    def max_iops_policy_not(self, max_iops_policy_not):
+        """Sets the max_iops_policy_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_policy_not: The max_iops_policy_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_policy_not: VmDiskIoRestrictType
+        """
+
+        self._max_iops_policy_not = max_iops_policy_not
+
+    @property
+    def max_iops_policy_not_in(self):
+        """Gets the max_iops_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The max_iops_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[VmDiskIoRestrictType]
+        """
+        return self._max_iops_policy_not_in
+
+    @max_iops_policy_not_in.setter
+    def max_iops_policy_not_in(self, max_iops_policy_not_in):
+        """Sets the max_iops_policy_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param max_iops_policy_not_in: The max_iops_policy_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type max_iops_policy_not_in: list[VmDiskIoRestrictType]
+        """
+
+        self._max_iops_policy_not_in = max_iops_policy_not_in
 
     @property
     def memory(self):
@@ -2725,6 +4089,300 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._vcpu_not_in = vcpu_not_in
 
     @property
+    def video_type(self):
+        """Gets the video_type of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type
+
+    @video_type.setter
+    def video_type(self, video_type):
+        """Sets the video_type of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type: The video_type of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type: str
+        """
+
+        self._video_type = video_type
+
+    @property
+    def video_type_contains(self):
+        """Gets the video_type_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_contains
+
+    @video_type_contains.setter
+    def video_type_contains(self, video_type_contains):
+        """Sets the video_type_contains of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_contains: The video_type_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_contains: str
+        """
+
+        self._video_type_contains = video_type_contains
+
+    @property
+    def video_type_ends_with(self):
+        """Gets the video_type_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_ends_with
+
+    @video_type_ends_with.setter
+    def video_type_ends_with(self, video_type_ends_with):
+        """Sets the video_type_ends_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_ends_with: The video_type_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_ends_with: str
+        """
+
+        self._video_type_ends_with = video_type_ends_with
+
+    @property
+    def video_type_gt(self):
+        """Gets the video_type_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_gt
+
+    @video_type_gt.setter
+    def video_type_gt(self, video_type_gt):
+        """Sets the video_type_gt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_gt: The video_type_gt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_gt: str
+        """
+
+        self._video_type_gt = video_type_gt
+
+    @property
+    def video_type_gte(self):
+        """Gets the video_type_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_gte
+
+    @video_type_gte.setter
+    def video_type_gte(self, video_type_gte):
+        """Sets the video_type_gte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_gte: The video_type_gte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_gte: str
+        """
+
+        self._video_type_gte = video_type_gte
+
+    @property
+    def video_type_in(self):
+        """Gets the video_type_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._video_type_in
+
+    @video_type_in.setter
+    def video_type_in(self, video_type_in):
+        """Sets the video_type_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_in: The video_type_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_in: list[str]
+        """
+
+        self._video_type_in = video_type_in
+
+    @property
+    def video_type_lt(self):
+        """Gets the video_type_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_lt
+
+    @video_type_lt.setter
+    def video_type_lt(self, video_type_lt):
+        """Sets the video_type_lt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_lt: The video_type_lt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_lt: str
+        """
+
+        self._video_type_lt = video_type_lt
+
+    @property
+    def video_type_lte(self):
+        """Gets the video_type_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_lte
+
+    @video_type_lte.setter
+    def video_type_lte(self, video_type_lte):
+        """Sets the video_type_lte of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_lte: The video_type_lte of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_lte: str
+        """
+
+        self._video_type_lte = video_type_lte
+
+    @property
+    def video_type_not(self):
+        """Gets the video_type_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_not
+
+    @video_type_not.setter
+    def video_type_not(self, video_type_not):
+        """Sets the video_type_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_not: The video_type_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_not: str
+        """
+
+        self._video_type_not = video_type_not
+
+    @property
+    def video_type_not_contains(self):
+        """Gets the video_type_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_not_contains
+
+    @video_type_not_contains.setter
+    def video_type_not_contains(self, video_type_not_contains):
+        """Sets the video_type_not_contains of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_not_contains: The video_type_not_contains of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_not_contains: str
+        """
+
+        self._video_type_not_contains = video_type_not_contains
+
+    @property
+    def video_type_not_ends_with(self):
+        """Gets the video_type_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_not_ends_with
+
+    @video_type_not_ends_with.setter
+    def video_type_not_ends_with(self, video_type_not_ends_with):
+        """Sets the video_type_not_ends_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_not_ends_with: The video_type_not_ends_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_not_ends_with: str
+        """
+
+        self._video_type_not_ends_with = video_type_not_ends_with
+
+    @property
+    def video_type_not_in(self):
+        """Gets the video_type_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._video_type_not_in
+
+    @video_type_not_in.setter
+    def video_type_not_in(self, video_type_not_in):
+        """Sets the video_type_not_in of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_not_in: The video_type_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_not_in: list[str]
+        """
+
+        self._video_type_not_in = video_type_not_in
+
+    @property
+    def video_type_not_starts_with(self):
+        """Gets the video_type_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_not_starts_with
+
+    @video_type_not_starts_with.setter
+    def video_type_not_starts_with(self, video_type_not_starts_with):
+        """Sets the video_type_not_starts_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_not_starts_with: The video_type_not_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_not_starts_with: str
+        """
+
+        self._video_type_not_starts_with = video_type_not_starts_with
+
+    @property
+    def video_type_starts_with(self):
+        """Gets the video_type_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The video_type_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._video_type_starts_with
+
+    @video_type_starts_with.setter
+    def video_type_starts_with(self, video_type_starts_with):
+        """Sets the video_type_starts_with of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param video_type_starts_with: The video_type_starts_with of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type video_type_starts_with: str
+        """
+
+        self._video_type_starts_with = video_type_starts_with
+
+    @property
     def vm_templates_every(self):
         """Gets the vm_templates_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
 
@@ -2786,6 +4444,48 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._vm_templates_some = vm_templates_some
+
+    @property
+    def win_opt(self):
+        """Gets the win_opt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The win_opt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._win_opt
+
+    @win_opt.setter
+    def win_opt(self, win_opt):
+        """Sets the win_opt of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param win_opt: The win_opt of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type win_opt: bool
+        """
+
+        self._win_opt = win_opt
+
+    @property
+    def win_opt_not(self):
+        """Gets the win_opt_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The win_opt_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._win_opt_not
+
+    @win_opt_not.setter
+    def win_opt_not(self, win_opt_not):
+        """Sets the win_opt_not of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param win_opt_not: The win_opt_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type win_opt_not: bool
+        """
+
+        self._win_opt_not = win_opt_not
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

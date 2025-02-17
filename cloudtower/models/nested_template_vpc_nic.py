@@ -25,11 +25,13 @@ class NestedTemplateVpcNic(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'use_floating_ip': 'bool',
         'vpc_local_id': 'str',
         'vpc_subnet_local_id': 'str'
     }
 
     attribute_map = {
+        'use_floating_ip': 'use_floating_ip',
         'vpc_local_id': 'vpc_local_id',
         'vpc_subnet_local_id': 'vpc_subnet_local_id'
     }
@@ -38,14 +40,40 @@ class NestedTemplateVpcNic(object):
         """NestedTemplateVpcNic - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._use_floating_ip = None
         self._vpc_local_id = None
         self._vpc_subnet_local_id = None
         self.discriminator = None
 
+        if "use_floating_ip" in kwargs:
+            self.use_floating_ip = kwargs["use_floating_ip"]
         if "vpc_local_id" in kwargs:
             self.vpc_local_id = kwargs["vpc_local_id"]
         if "vpc_subnet_local_id" in kwargs:
             self.vpc_subnet_local_id = kwargs["vpc_subnet_local_id"]
+
+    @property
+    def use_floating_ip(self):
+        """Gets the use_floating_ip of this NestedTemplateVpcNic.  # noqa: E501
+
+
+        :return: The use_floating_ip of this NestedTemplateVpcNic.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_floating_ip
+
+    @use_floating_ip.setter
+    def use_floating_ip(self, use_floating_ip):
+        """Sets the use_floating_ip of this NestedTemplateVpcNic.
+
+
+        :param use_floating_ip: The use_floating_ip of this NestedTemplateVpcNic.  # noqa: E501
+        :type use_floating_ip: bool
+        """
+        if self.local_vars_configuration.client_side_validation and use_floating_ip is None:  # noqa: E501
+            raise ValueError("Invalid value for `use_floating_ip`, must not be `None`")  # noqa: E501
+
+        self._use_floating_ip = use_floating_ip
 
     @property
     def vpc_local_id(self):
