@@ -82,6 +82,8 @@ class Vm(object):
         'unique_logical_size': 'float',
         'unique_size': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
+        'used_size': 'int',
+        'used_size_usage': 'float',
         'vcpu': 'int',
         'video_type': 'VmVideoType',
         'vm_disks': 'list[NestedVmDisk]',
@@ -151,6 +153,8 @@ class Vm(object):
         'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
         'usb_devices': 'usb_devices',
+        'used_size': 'used_size',
+        'used_size_usage': 'used_size_usage',
         'vcpu': 'vcpu',
         'video_type': 'video_type',
         'vm_disks': 'vm_disks',
@@ -223,6 +227,8 @@ class Vm(object):
         self._unique_logical_size = None
         self._unique_size = None
         self._usb_devices = None
+        self._used_size = None
+        self._used_size_usage = None
         self._vcpu = None
         self._video_type = None
         self._vm_disks = None
@@ -309,6 +315,8 @@ class Vm(object):
         self.unique_logical_size = kwargs.get("unique_logical_size", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.usb_devices = kwargs.get("usb_devices", None)
+        self.used_size = kwargs.get("used_size", None)
+        self.used_size_usage = kwargs.get("used_size_usage", None)
         if "vcpu" in kwargs:
             self.vcpu = kwargs["vcpu"]
         self.video_type = kwargs.get("video_type", None)
@@ -1554,6 +1562,48 @@ class Vm(object):
         """
 
         self._usb_devices = usb_devices
+
+    @property
+    def used_size(self):
+        """Gets the used_size of this Vm.  # noqa: E501
+
+
+        :return: The used_size of this Vm.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size
+
+    @used_size.setter
+    def used_size(self, used_size):
+        """Sets the used_size of this Vm.
+
+
+        :param used_size: The used_size of this Vm.  # noqa: E501
+        :type used_size: int
+        """
+
+        self._used_size = used_size
+
+    @property
+    def used_size_usage(self):
+        """Gets the used_size_usage of this Vm.  # noqa: E501
+
+
+        :return: The used_size_usage of this Vm.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage
+
+    @used_size_usage.setter
+    def used_size_usage(self, used_size_usage):
+        """Sets the used_size_usage of this Vm.
+
+
+        :param used_size_usage: The used_size_usage of this Vm.  # noqa: E501
+        :type used_size_usage: float
+        """
+
+        self._used_size_usage = used_size_usage
 
     @property
     def vcpu(self):

@@ -47,6 +47,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         'external_ip_not_starts_with': 'str',
         'external_ip_starts_with': 'str',
         'external_subnet': 'VirtualPrivateCloudExternalSubnetWhereInput',
+        'external_subnet_group': 'VirtualPrivateCloudExternalSubnetGroupWhereInput',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -101,6 +102,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         'external_ip_not_starts_with': 'external_ip_not_starts_with',
         'external_ip_starts_with': 'external_ip_starts_with',
         'external_subnet': 'external_subnet',
+        'external_subnet_group': 'external_subnet_group',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -158,6 +160,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         self._external_ip_not_starts_with = None
         self._external_ip_starts_with = None
         self._external_subnet = None
+        self._external_subnet_group = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -211,6 +214,7 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         self.external_ip_not_starts_with = kwargs.get("external_ip_not_starts_with", None)
         self.external_ip_starts_with = kwargs.get("external_ip_starts_with", None)
         self.external_subnet = kwargs.get("external_subnet", None)
+        self.external_subnet_group = kwargs.get("external_subnet_group", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -702,6 +706,27 @@ class VirtualPrivateCloudFloatingIpWhereInput(object):
         """
 
         self._external_subnet = external_subnet
+
+    @property
+    def external_subnet_group(self):
+        """Gets the external_subnet_group of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
+
+
+        :return: The external_subnet_group of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudExternalSubnetGroupWhereInput
+        """
+        return self._external_subnet_group
+
+    @external_subnet_group.setter
+    def external_subnet_group(self, external_subnet_group):
+        """Sets the external_subnet_group of this VirtualPrivateCloudFloatingIpWhereInput.
+
+
+        :param external_subnet_group: The external_subnet_group of this VirtualPrivateCloudFloatingIpWhereInput.  # noqa: E501
+        :type external_subnet_group: VirtualPrivateCloudExternalSubnetGroupWhereInput
+        """
+
+        self._external_subnet_group = external_subnet_group
 
     @property
     def id(self):

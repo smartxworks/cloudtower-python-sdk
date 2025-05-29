@@ -50,6 +50,7 @@ class IsolationPolicyWhereInput(object):
         'mode_in': 'list[IsolationMode]',
         'mode_not': 'IsolationMode',
         'mode_not_in': 'list[IsolationMode]',
+        'statistics': 'SecurityPolicyStatisticsWhereInput',
         'vm': 'VmWhereInput'
     }
 
@@ -79,6 +80,7 @@ class IsolationPolicyWhereInput(object):
         'mode_in': 'mode_in',
         'mode_not': 'mode_not',
         'mode_not_in': 'mode_not_in',
+        'statistics': 'statistics',
         'vm': 'vm'
     }
 
@@ -111,6 +113,7 @@ class IsolationPolicyWhereInput(object):
         self._mode_in = None
         self._mode_not = None
         self._mode_not_in = None
+        self._statistics = None
         self._vm = None
         self.discriminator = None
 
@@ -139,6 +142,7 @@ class IsolationPolicyWhereInput(object):
         self.mode_in = kwargs.get("mode_in", None)
         self.mode_not = kwargs.get("mode_not", None)
         self.mode_not_in = kwargs.get("mode_not_in", None)
+        self.statistics = kwargs.get("statistics", None)
         self.vm = kwargs.get("vm", None)
 
     @property
@@ -665,6 +669,27 @@ class IsolationPolicyWhereInput(object):
         """
 
         self._mode_not_in = mode_not_in
+
+    @property
+    def statistics(self):
+        """Gets the statistics of this IsolationPolicyWhereInput.  # noqa: E501
+
+
+        :return: The statistics of this IsolationPolicyWhereInput.  # noqa: E501
+        :rtype: SecurityPolicyStatisticsWhereInput
+        """
+        return self._statistics
+
+    @statistics.setter
+    def statistics(self, statistics):
+        """Sets the statistics of this IsolationPolicyWhereInput.
+
+
+        :param statistics: The statistics of this IsolationPolicyWhereInput.  # noqa: E501
+        :type statistics: SecurityPolicyStatisticsWhereInput
+        """
+
+        self._statistics = statistics
 
     @property
     def vm(self):

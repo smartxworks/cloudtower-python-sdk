@@ -31,6 +31,7 @@ class IsolationPolicy(object):
         'ingress': 'list[NestedNetworkPolicyRule]',
         'labels': 'list[NestedLabel]',
         'mode': 'IsolationMode',
+        'statistics': 'NestedSecurityPolicyStatistics',
         'vm': 'NestedVm'
     }
 
@@ -41,6 +42,7 @@ class IsolationPolicy(object):
         'ingress': 'ingress',
         'labels': 'labels',
         'mode': 'mode',
+        'statistics': 'statistics',
         'vm': 'vm'
     }
 
@@ -54,6 +56,7 @@ class IsolationPolicy(object):
         self._ingress = None
         self._labels = None
         self._mode = None
+        self._statistics = None
         self._vm = None
         self.discriminator = None
 
@@ -66,6 +69,7 @@ class IsolationPolicy(object):
         self.labels = kwargs.get("labels", None)
         if "mode" in kwargs:
             self.mode = kwargs["mode"]
+        self.statistics = kwargs.get("statistics", None)
         if "vm" in kwargs:
             self.vm = kwargs["vm"]
 
@@ -200,6 +204,27 @@ class IsolationPolicy(object):
             raise ValueError("Invalid value for `mode`, must not be `None`")  # noqa: E501
 
         self._mode = mode
+
+    @property
+    def statistics(self):
+        """Gets the statistics of this IsolationPolicy.  # noqa: E501
+
+
+        :return: The statistics of this IsolationPolicy.  # noqa: E501
+        :rtype: NestedSecurityPolicyStatistics
+        """
+        return self._statistics
+
+    @statistics.setter
+    def statistics(self, statistics):
+        """Sets the statistics of this IsolationPolicy.
+
+
+        :param statistics: The statistics of this IsolationPolicy.  # noqa: E501
+        :type statistics: NestedSecurityPolicyStatistics
+        """
+
+        self._statistics = statistics
 
     @property
     def vm(self):

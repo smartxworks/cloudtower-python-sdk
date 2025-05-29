@@ -25,11 +25,13 @@ class VirtualPrivateCloudRouterGatewayRuleInputType(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'nexthops': 'list[VirtualPrivateCloudRouterGatewayNexthopInputType]',
         'dst': 'str',
         'nexthop': 'str'
     }
 
     attribute_map = {
+        'nexthops': 'nexthops',
         'dst': 'dst',
         'nexthop': 'nexthop'
     }
@@ -38,14 +40,38 @@ class VirtualPrivateCloudRouterGatewayRuleInputType(object):
         """VirtualPrivateCloudRouterGatewayRuleInputType - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._nexthops = None
         self._dst = None
         self._nexthop = None
         self.discriminator = None
 
+        if "nexthops" in kwargs:
+            self.nexthops = kwargs["nexthops"]
         if "dst" in kwargs:
             self.dst = kwargs["dst"]
         if "nexthop" in kwargs:
             self.nexthop = kwargs["nexthop"]
+
+    @property
+    def nexthops(self):
+        """Gets the nexthops of this VirtualPrivateCloudRouterGatewayRuleInputType.  # noqa: E501
+
+
+        :return: The nexthops of this VirtualPrivateCloudRouterGatewayRuleInputType.  # noqa: E501
+        :rtype: list[VirtualPrivateCloudRouterGatewayNexthopInputType]
+        """
+        return self._nexthops
+
+    @nexthops.setter
+    def nexthops(self, nexthops):
+        """Sets the nexthops of this VirtualPrivateCloudRouterGatewayRuleInputType.
+
+
+        :param nexthops: The nexthops of this VirtualPrivateCloudRouterGatewayRuleInputType.  # noqa: E501
+        :type nexthops: list[VirtualPrivateCloudRouterGatewayNexthopInputType]
+        """
+
+        self._nexthops = nexthops
 
     @property
     def dst(self):

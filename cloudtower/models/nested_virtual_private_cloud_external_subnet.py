@@ -25,6 +25,7 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'edge_gateway': 'NestedVirtualPrivateCloudEdgeGateway',
         'floating_ip_cidr': 'str',
         'id': 'str',
         'name': 'str',
@@ -33,6 +34,7 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
     }
 
     attribute_map = {
+        'edge_gateway': 'edge_gateway',
         'floating_ip_cidr': 'floating_ip_cidr',
         'id': 'id',
         'name': 'name',
@@ -44,6 +46,7 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
         """NestedVirtualPrivateCloudExternalSubnet - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._edge_gateway = None
         self._floating_ip_cidr = None
         self._id = None
         self._name = None
@@ -51,6 +54,7 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
         self._router_gateway_cidr = None
         self.discriminator = None
 
+        self.edge_gateway = kwargs.get("edge_gateway", None)
         self.floating_ip_cidr = kwargs.get("floating_ip_cidr", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -58,6 +62,27 @@ class NestedVirtualPrivateCloudExternalSubnet(object):
             self.name = kwargs["name"]
         self.nat_gateway_cidr = kwargs.get("nat_gateway_cidr", None)
         self.router_gateway_cidr = kwargs.get("router_gateway_cidr", None)
+
+    @property
+    def edge_gateway(self):
+        """Gets the edge_gateway of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+
+
+        :return: The edge_gateway of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :rtype: NestedVirtualPrivateCloudEdgeGateway
+        """
+        return self._edge_gateway
+
+    @edge_gateway.setter
+    def edge_gateway(self, edge_gateway):
+        """Sets the edge_gateway of this NestedVirtualPrivateCloudExternalSubnet.
+
+
+        :param edge_gateway: The edge_gateway of this NestedVirtualPrivateCloudExternalSubnet.  # noqa: E501
+        :type edge_gateway: NestedVirtualPrivateCloudEdgeGateway
+        """
+
+        self._edge_gateway = edge_gateway
 
     @property
     def floating_ip_cidr(self):

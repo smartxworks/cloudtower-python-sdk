@@ -25,7 +25,9 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'external_ips': 'list[VirtualPrivateCloudExternalIpsParams]',
         'external_ip': 'str',
+        'external_subnet_group_id': 'str',
         'external_subnet_id': 'str',
         'dnat_rules': 'list[VirtualPrivateCloudDnatRuleParams]',
         'enable_dnat': 'bool',
@@ -35,7 +37,9 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
     }
 
     attribute_map = {
+        'external_ips': 'external_ips',
         'external_ip': 'external_ip',
+        'external_subnet_group_id': 'external_subnet_group_id',
         'external_subnet_id': 'external_subnet_id',
         'dnat_rules': 'dnat_rules',
         'enable_dnat': 'enable_dnat',
@@ -48,7 +52,9 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
         """VirtualPrivateCloudNatGatewayCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._external_ips = None
         self._external_ip = None
+        self._external_subnet_group_id = None
         self._external_subnet_id = None
         self._dnat_rules = None
         self._enable_dnat = None
@@ -57,8 +63,12 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
         self._name = None
         self.discriminator = None
 
+        if "external_ips" in kwargs:
+            self.external_ips = kwargs["external_ips"]
         if "external_ip" in kwargs:
             self.external_ip = kwargs["external_ip"]
+        if "external_subnet_group_id" in kwargs:
+            self.external_subnet_group_id = kwargs["external_subnet_group_id"]
         if "external_subnet_id" in kwargs:
             self.external_subnet_id = kwargs["external_subnet_id"]
         if "dnat_rules" in kwargs:
@@ -71,6 +81,27 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
             self.vpc_id = kwargs["vpc_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def external_ips(self):
+        """Gets the external_ips of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+
+
+        :return: The external_ips of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+        :rtype: list[VirtualPrivateCloudExternalIpsParams]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this VirtualPrivateCloudNatGatewayCreationParams.
+
+
+        :param external_ips: The external_ips of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+        :type external_ips: list[VirtualPrivateCloudExternalIpsParams]
+        """
+
+        self._external_ips = external_ips
 
     @property
     def external_ip(self):
@@ -94,6 +125,27 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
         self._external_ip = external_ip
 
     @property
+    def external_subnet_group_id(self):
+        """Gets the external_subnet_group_id of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+
+
+        :return: The external_subnet_group_id of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_subnet_group_id
+
+    @external_subnet_group_id.setter
+    def external_subnet_group_id(self, external_subnet_group_id):
+        """Sets the external_subnet_group_id of this VirtualPrivateCloudNatGatewayCreationParams.
+
+
+        :param external_subnet_group_id: The external_subnet_group_id of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
+        :type external_subnet_group_id: str
+        """
+
+        self._external_subnet_group_id = external_subnet_group_id
+
+    @property
     def external_subnet_id(self):
         """Gets the external_subnet_id of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
 
@@ -111,8 +163,6 @@ class VirtualPrivateCloudNatGatewayCreationParams(object):
         :param external_subnet_id: The external_subnet_id of this VirtualPrivateCloudNatGatewayCreationParams.  # noqa: E501
         :type external_subnet_id: str
         """
-        if self.local_vars_configuration.client_side_validation and external_subnet_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `external_subnet_id`, must not be `None`")  # noqa: E501
 
         self._external_subnet_id = external_subnet_id
 

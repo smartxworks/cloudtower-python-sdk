@@ -25,12 +25,14 @@ class SecurityPolicyIngressEgressInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'service_ids': 'list[str]',
         'type': 'SecurityPolicyFlowControlType',
         'ports': 'list[NetworkPolicyRulePortInput]',
         'target': 'SecurityPolicyIngressEgressInputTarget'
     }
 
     attribute_map = {
+        'service_ids': 'service_ids',
         'type': 'type',
         'ports': 'ports',
         'target': 'target'
@@ -40,17 +42,41 @@ class SecurityPolicyIngressEgressInput(object):
         """SecurityPolicyIngressEgressInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._service_ids = None
         self._type = None
         self._ports = None
         self._target = None
         self.discriminator = None
 
+        if "service_ids" in kwargs:
+            self.service_ids = kwargs["service_ids"]
         if "type" in kwargs:
             self.type = kwargs["type"]
         if "ports" in kwargs:
             self.ports = kwargs["ports"]
         if "target" in kwargs:
             self.target = kwargs["target"]
+
+    @property
+    def service_ids(self):
+        """Gets the service_ids of this SecurityPolicyIngressEgressInput.  # noqa: E501
+
+
+        :return: The service_ids of this SecurityPolicyIngressEgressInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._service_ids
+
+    @service_ids.setter
+    def service_ids(self, service_ids):
+        """Sets the service_ids of this SecurityPolicyIngressEgressInput.
+
+
+        :param service_ids: The service_ids of this SecurityPolicyIngressEgressInput.  # noqa: E501
+        :type service_ids: list[str]
+        """
+
+        self._service_ids = service_ids
 
     @property
     def type(self):

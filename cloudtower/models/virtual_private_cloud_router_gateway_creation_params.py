@@ -27,6 +27,8 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
     openapi_types = {
         'rules': 'list[VirtualPrivateCloudRouterGatewayRuleInputType]',
         'associated_subnets_ids': 'list[str]',
+        'external_ips': 'list[VirtualPrivateCloudExternalIpsParams]',
+        'external_subnet_group_id': 'str',
         'external_ip': 'str',
         'external_subnet_id': 'str',
         'vpc_id': 'str',
@@ -36,6 +38,8 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
     attribute_map = {
         'rules': 'rules',
         'associated_subnets_ids': 'associated_subnets_ids',
+        'external_ips': 'external_ips',
+        'external_subnet_group_id': 'external_subnet_group_id',
         'external_ip': 'external_ip',
         'external_subnet_id': 'external_subnet_id',
         'vpc_id': 'vpc_id',
@@ -48,6 +52,8 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
 
         self._rules = None
         self._associated_subnets_ids = None
+        self._external_ips = None
+        self._external_subnet_group_id = None
         self._external_ip = None
         self._external_subnet_id = None
         self._vpc_id = None
@@ -58,6 +64,10 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
             self.rules = kwargs["rules"]
         if "associated_subnets_ids" in kwargs:
             self.associated_subnets_ids = kwargs["associated_subnets_ids"]
+        if "external_ips" in kwargs:
+            self.external_ips = kwargs["external_ips"]
+        if "external_subnet_group_id" in kwargs:
+            self.external_subnet_group_id = kwargs["external_subnet_group_id"]
         if "external_ip" in kwargs:
             self.external_ip = kwargs["external_ip"]
         if "external_subnet_id" in kwargs:
@@ -114,6 +124,48 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
         self._associated_subnets_ids = associated_subnets_ids
 
     @property
+    def external_ips(self):
+        """Gets the external_ips of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+
+
+        :return: The external_ips of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+        :rtype: list[VirtualPrivateCloudExternalIpsParams]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this VirtualPrivateCloudRouterGatewayCreationParams.
+
+
+        :param external_ips: The external_ips of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+        :type external_ips: list[VirtualPrivateCloudExternalIpsParams]
+        """
+
+        self._external_ips = external_ips
+
+    @property
+    def external_subnet_group_id(self):
+        """Gets the external_subnet_group_id of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+
+
+        :return: The external_subnet_group_id of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_subnet_group_id
+
+    @external_subnet_group_id.setter
+    def external_subnet_group_id(self, external_subnet_group_id):
+        """Sets the external_subnet_group_id of this VirtualPrivateCloudRouterGatewayCreationParams.
+
+
+        :param external_subnet_group_id: The external_subnet_group_id of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
+        :type external_subnet_group_id: str
+        """
+
+        self._external_subnet_group_id = external_subnet_group_id
+
+    @property
     def external_ip(self):
         """Gets the external_ip of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
 
@@ -152,8 +204,6 @@ class VirtualPrivateCloudRouterGatewayCreationParams(object):
         :param external_subnet_id: The external_subnet_id of this VirtualPrivateCloudRouterGatewayCreationParams.  # noqa: E501
         :type external_subnet_id: str
         """
-        if self.local_vars_configuration.client_side_validation and external_subnet_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `external_subnet_id`, must not be `None`")  # noqa: E501
 
         self._external_subnet_id = external_subnet_id
 

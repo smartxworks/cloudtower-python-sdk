@@ -44,6 +44,8 @@ class VmVolume(object):
         'type': 'VmVolumeType',
         'unique_logical_size': 'float',
         'unique_size': 'int',
+        'used_size': 'int',
+        'used_size_usage': 'float',
         'vm_disks': 'list[NestedVmDisk]'
     }
 
@@ -67,6 +69,8 @@ class VmVolume(object):
         'type': 'type',
         'unique_logical_size': 'unique_logical_size',
         'unique_size': 'unique_size',
+        'used_size': 'used_size',
+        'used_size_usage': 'used_size_usage',
         'vm_disks': 'vm_disks'
     }
 
@@ -93,6 +97,8 @@ class VmVolume(object):
         self._type = None
         self._unique_logical_size = None
         self._unique_size = None
+        self._used_size = None
+        self._used_size_usage = None
         self._vm_disks = None
         self.discriminator = None
 
@@ -125,6 +131,8 @@ class VmVolume(object):
         self.type = kwargs.get("type", None)
         self.unique_logical_size = kwargs.get("unique_logical_size", None)
         self.unique_size = kwargs.get("unique_size", None)
+        self.used_size = kwargs.get("used_size", None)
+        self.used_size_usage = kwargs.get("used_size_usage", None)
         self.vm_disks = kwargs.get("vm_disks", None)
 
     @property
@@ -545,6 +553,48 @@ class VmVolume(object):
         """
 
         self._unique_size = unique_size
+
+    @property
+    def used_size(self):
+        """Gets the used_size of this VmVolume.  # noqa: E501
+
+
+        :return: The used_size of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size
+
+    @used_size.setter
+    def used_size(self, used_size):
+        """Sets the used_size of this VmVolume.
+
+
+        :param used_size: The used_size of this VmVolume.  # noqa: E501
+        :type used_size: int
+        """
+
+        self._used_size = used_size
+
+    @property
+    def used_size_usage(self):
+        """Gets the used_size_usage of this VmVolume.  # noqa: E501
+
+
+        :return: The used_size_usage of this VmVolume.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage
+
+    @used_size_usage.setter
+    def used_size_usage(self, used_size_usage):
+        """Sets the used_size_usage of this VmVolume.
+
+
+        :param used_size_usage: The used_size_usage of this VmVolume.  # noqa: E501
+        :type used_size_usage: float
+        """
+
+        self._used_size_usage = used_size_usage
 
     @property
     def vm_disks(self):

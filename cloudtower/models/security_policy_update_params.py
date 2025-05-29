@@ -25,6 +25,7 @@ class SecurityPolicyUpdateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'is_blocklist': 'bool',
         'ingress': 'list[SecurityPolicyIngressEgressInput]',
         'egress': 'list[SecurityPolicyIngressEgressInput]',
         'apply_to': 'list[SecurityPolicyApplyToInput]',
@@ -32,6 +33,7 @@ class SecurityPolicyUpdateParams(object):
     }
 
     attribute_map = {
+        'is_blocklist': 'is_blocklist',
         'ingress': 'ingress',
         'egress': 'egress',
         'apply_to': 'apply_to',
@@ -42,12 +44,15 @@ class SecurityPolicyUpdateParams(object):
         """SecurityPolicyUpdateParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._is_blocklist = None
         self._ingress = None
         self._egress = None
         self._apply_to = None
         self._policy_mode = None
         self.discriminator = None
 
+        if "is_blocklist" in kwargs:
+            self.is_blocklist = kwargs["is_blocklist"]
         if "ingress" in kwargs:
             self.ingress = kwargs["ingress"]
         if "egress" in kwargs:
@@ -56,6 +61,27 @@ class SecurityPolicyUpdateParams(object):
             self.apply_to = kwargs["apply_to"]
         if "policy_mode" in kwargs:
             self.policy_mode = kwargs["policy_mode"]
+
+    @property
+    def is_blocklist(self):
+        """Gets the is_blocklist of this SecurityPolicyUpdateParams.  # noqa: E501
+
+
+        :return: The is_blocklist of this SecurityPolicyUpdateParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_blocklist
+
+    @is_blocklist.setter
+    def is_blocklist(self, is_blocklist):
+        """Sets the is_blocklist of this SecurityPolicyUpdateParams.
+
+
+        :param is_blocklist: The is_blocklist of this SecurityPolicyUpdateParams.  # noqa: E501
+        :type is_blocklist: bool
+        """
+
+        self._is_blocklist = is_blocklist
 
     @property
     def ingress(self):

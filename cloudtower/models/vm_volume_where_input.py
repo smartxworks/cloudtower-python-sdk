@@ -167,6 +167,22 @@ class VmVolumeWhereInput(object):
         'unique_size_lte': 'int',
         'unique_size_not': 'int',
         'unique_size_not_in': 'list[int]',
+        'used_size': 'int',
+        'used_size_gt': 'int',
+        'used_size_gte': 'int',
+        'used_size_in': 'list[int]',
+        'used_size_lt': 'int',
+        'used_size_lte': 'int',
+        'used_size_not': 'int',
+        'used_size_not_in': 'list[int]',
+        'used_size_usage': 'float',
+        'used_size_usage_gt': 'float',
+        'used_size_usage_gte': 'float',
+        'used_size_usage_in': 'list[float]',
+        'used_size_usage_lt': 'float',
+        'used_size_usage_lte': 'float',
+        'used_size_usage_not': 'float',
+        'used_size_usage_not_in': 'list[float]',
         'vm_disks_every': 'VmDiskWhereInput',
         'vm_disks_none': 'VmDiskWhereInput',
         'vm_disks_some': 'VmDiskWhereInput'
@@ -315,6 +331,22 @@ class VmVolumeWhereInput(object):
         'unique_size_lte': 'unique_size_lte',
         'unique_size_not': 'unique_size_not',
         'unique_size_not_in': 'unique_size_not_in',
+        'used_size': 'used_size',
+        'used_size_gt': 'used_size_gt',
+        'used_size_gte': 'used_size_gte',
+        'used_size_in': 'used_size_in',
+        'used_size_lt': 'used_size_lt',
+        'used_size_lte': 'used_size_lte',
+        'used_size_not': 'used_size_not',
+        'used_size_not_in': 'used_size_not_in',
+        'used_size_usage': 'used_size_usage',
+        'used_size_usage_gt': 'used_size_usage_gt',
+        'used_size_usage_gte': 'used_size_usage_gte',
+        'used_size_usage_in': 'used_size_usage_in',
+        'used_size_usage_lt': 'used_size_usage_lt',
+        'used_size_usage_lte': 'used_size_usage_lte',
+        'used_size_usage_not': 'used_size_usage_not',
+        'used_size_usage_not_in': 'used_size_usage_not_in',
         'vm_disks_every': 'vm_disks_every',
         'vm_disks_none': 'vm_disks_none',
         'vm_disks_some': 'vm_disks_some'
@@ -466,6 +498,22 @@ class VmVolumeWhereInput(object):
         self._unique_size_lte = None
         self._unique_size_not = None
         self._unique_size_not_in = None
+        self._used_size = None
+        self._used_size_gt = None
+        self._used_size_gte = None
+        self._used_size_in = None
+        self._used_size_lt = None
+        self._used_size_lte = None
+        self._used_size_not = None
+        self._used_size_not_in = None
+        self._used_size_usage = None
+        self._used_size_usage_gt = None
+        self._used_size_usage_gte = None
+        self._used_size_usage_in = None
+        self._used_size_usage_lt = None
+        self._used_size_usage_lte = None
+        self._used_size_usage_not = None
+        self._used_size_usage_not_in = None
         self._vm_disks_every = None
         self._vm_disks_none = None
         self._vm_disks_some = None
@@ -613,6 +661,22 @@ class VmVolumeWhereInput(object):
         self.unique_size_lte = kwargs.get("unique_size_lte", None)
         self.unique_size_not = kwargs.get("unique_size_not", None)
         self.unique_size_not_in = kwargs.get("unique_size_not_in", None)
+        self.used_size = kwargs.get("used_size", None)
+        self.used_size_gt = kwargs.get("used_size_gt", None)
+        self.used_size_gte = kwargs.get("used_size_gte", None)
+        self.used_size_in = kwargs.get("used_size_in", None)
+        self.used_size_lt = kwargs.get("used_size_lt", None)
+        self.used_size_lte = kwargs.get("used_size_lte", None)
+        self.used_size_not = kwargs.get("used_size_not", None)
+        self.used_size_not_in = kwargs.get("used_size_not_in", None)
+        self.used_size_usage = kwargs.get("used_size_usage", None)
+        self.used_size_usage_gt = kwargs.get("used_size_usage_gt", None)
+        self.used_size_usage_gte = kwargs.get("used_size_usage_gte", None)
+        self.used_size_usage_in = kwargs.get("used_size_usage_in", None)
+        self.used_size_usage_lt = kwargs.get("used_size_usage_lt", None)
+        self.used_size_usage_lte = kwargs.get("used_size_usage_lte", None)
+        self.used_size_usage_not = kwargs.get("used_size_usage_not", None)
+        self.used_size_usage_not_in = kwargs.get("used_size_usage_not_in", None)
         self.vm_disks_every = kwargs.get("vm_disks_every", None)
         self.vm_disks_none = kwargs.get("vm_disks_none", None)
         self.vm_disks_some = kwargs.get("vm_disks_some", None)
@@ -3598,6 +3662,342 @@ class VmVolumeWhereInput(object):
         """
 
         self._unique_size_not_in = unique_size_not_in
+
+    @property
+    def used_size(self):
+        """Gets the used_size of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size
+
+    @used_size.setter
+    def used_size(self, used_size):
+        """Sets the used_size of this VmVolumeWhereInput.
+
+
+        :param used_size: The used_size of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size: int
+        """
+
+        self._used_size = used_size
+
+    @property
+    def used_size_gt(self):
+        """Gets the used_size_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size_gt
+
+    @used_size_gt.setter
+    def used_size_gt(self, used_size_gt):
+        """Sets the used_size_gt of this VmVolumeWhereInput.
+
+
+        :param used_size_gt: The used_size_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_gt: int
+        """
+
+        self._used_size_gt = used_size_gt
+
+    @property
+    def used_size_gte(self):
+        """Gets the used_size_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size_gte
+
+    @used_size_gte.setter
+    def used_size_gte(self, used_size_gte):
+        """Sets the used_size_gte of this VmVolumeWhereInput.
+
+
+        :param used_size_gte: The used_size_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_gte: int
+        """
+
+        self._used_size_gte = used_size_gte
+
+    @property
+    def used_size_in(self):
+        """Gets the used_size_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._used_size_in
+
+    @used_size_in.setter
+    def used_size_in(self, used_size_in):
+        """Sets the used_size_in of this VmVolumeWhereInput.
+
+
+        :param used_size_in: The used_size_in of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_in: list[int]
+        """
+
+        self._used_size_in = used_size_in
+
+    @property
+    def used_size_lt(self):
+        """Gets the used_size_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size_lt
+
+    @used_size_lt.setter
+    def used_size_lt(self, used_size_lt):
+        """Sets the used_size_lt of this VmVolumeWhereInput.
+
+
+        :param used_size_lt: The used_size_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_lt: int
+        """
+
+        self._used_size_lt = used_size_lt
+
+    @property
+    def used_size_lte(self):
+        """Gets the used_size_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size_lte
+
+    @used_size_lte.setter
+    def used_size_lte(self, used_size_lte):
+        """Sets the used_size_lte of this VmVolumeWhereInput.
+
+
+        :param used_size_lte: The used_size_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_lte: int
+        """
+
+        self._used_size_lte = used_size_lte
+
+    @property
+    def used_size_not(self):
+        """Gets the used_size_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_size_not
+
+    @used_size_not.setter
+    def used_size_not(self, used_size_not):
+        """Sets the used_size_not of this VmVolumeWhereInput.
+
+
+        :param used_size_not: The used_size_not of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_not: int
+        """
+
+        self._used_size_not = used_size_not
+
+    @property
+    def used_size_not_in(self):
+        """Gets the used_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._used_size_not_in
+
+    @used_size_not_in.setter
+    def used_size_not_in(self, used_size_not_in):
+        """Sets the used_size_not_in of this VmVolumeWhereInput.
+
+
+        :param used_size_not_in: The used_size_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_not_in: list[int]
+        """
+
+        self._used_size_not_in = used_size_not_in
+
+    @property
+    def used_size_usage(self):
+        """Gets the used_size_usage of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage
+
+    @used_size_usage.setter
+    def used_size_usage(self, used_size_usage):
+        """Sets the used_size_usage of this VmVolumeWhereInput.
+
+
+        :param used_size_usage: The used_size_usage of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage: float
+        """
+
+        self._used_size_usage = used_size_usage
+
+    @property
+    def used_size_usage_gt(self):
+        """Gets the used_size_usage_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage_gt
+
+    @used_size_usage_gt.setter
+    def used_size_usage_gt(self, used_size_usage_gt):
+        """Sets the used_size_usage_gt of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_gt: The used_size_usage_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_gt: float
+        """
+
+        self._used_size_usage_gt = used_size_usage_gt
+
+    @property
+    def used_size_usage_gte(self):
+        """Gets the used_size_usage_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage_gte
+
+    @used_size_usage_gte.setter
+    def used_size_usage_gte(self, used_size_usage_gte):
+        """Sets the used_size_usage_gte of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_gte: The used_size_usage_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_gte: float
+        """
+
+        self._used_size_usage_gte = used_size_usage_gte
+
+    @property
+    def used_size_usage_in(self):
+        """Gets the used_size_usage_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._used_size_usage_in
+
+    @used_size_usage_in.setter
+    def used_size_usage_in(self, used_size_usage_in):
+        """Sets the used_size_usage_in of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_in: The used_size_usage_in of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_in: list[float]
+        """
+
+        self._used_size_usage_in = used_size_usage_in
+
+    @property
+    def used_size_usage_lt(self):
+        """Gets the used_size_usage_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage_lt
+
+    @used_size_usage_lt.setter
+    def used_size_usage_lt(self, used_size_usage_lt):
+        """Sets the used_size_usage_lt of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_lt: The used_size_usage_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_lt: float
+        """
+
+        self._used_size_usage_lt = used_size_usage_lt
+
+    @property
+    def used_size_usage_lte(self):
+        """Gets the used_size_usage_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage_lte
+
+    @used_size_usage_lte.setter
+    def used_size_usage_lte(self, used_size_usage_lte):
+        """Sets the used_size_usage_lte of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_lte: The used_size_usage_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_lte: float
+        """
+
+        self._used_size_usage_lte = used_size_usage_lte
+
+    @property
+    def used_size_usage_not(self):
+        """Gets the used_size_usage_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._used_size_usage_not
+
+    @used_size_usage_not.setter
+    def used_size_usage_not(self, used_size_usage_not):
+        """Sets the used_size_usage_not of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_not: The used_size_usage_not of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_not: float
+        """
+
+        self._used_size_usage_not = used_size_usage_not
+
+    @property
+    def used_size_usage_not_in(self):
+        """Gets the used_size_usage_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The used_size_usage_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._used_size_usage_not_in
+
+    @used_size_usage_not_in.setter
+    def used_size_usage_not_in(self, used_size_usage_not_in):
+        """Sets the used_size_usage_not_in of this VmVolumeWhereInput.
+
+
+        :param used_size_usage_not_in: The used_size_usage_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type used_size_usage_not_in: list[float]
+        """
+
+        self._used_size_usage_not_in = used_size_usage_not_in
 
     @property
     def vm_disks_every(self):
