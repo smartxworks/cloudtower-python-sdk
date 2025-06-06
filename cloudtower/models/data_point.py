@@ -26,7 +26,7 @@ class DataPoint(object):
     """
     openapi_types = {
         'v': 'float',
-        't': 'int',
+        't': 'float',
         'typename': 'str'
     }
 
@@ -78,7 +78,7 @@ class DataPoint(object):
 
 
         :return: The t of this DataPoint.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._t
 
@@ -88,7 +88,7 @@ class DataPoint(object):
 
 
         :param t: The t of this DataPoint.  # noqa: E501
-        :type t: int
+        :type t: float
         """
         if self.local_vars_configuration.client_side_validation and t is None:  # noqa: E501
             raise ValueError("Invalid value for `t`, must not be `None`")  # noqa: E501

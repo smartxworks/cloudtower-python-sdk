@@ -27,9 +27,7 @@ class VirtualPrivateCloudExternalSubnet(object):
     openapi_types = {
         'cidr': 'str',
         'description': 'str',
-        'edge_gateway': 'NestedVirtualPrivateCloudEdgeGateway',
         'entity_async_status': 'EntityAsyncStatus',
-        'exclusive': 'bool',
         'floating_ip_cidr': 'str',
         'floating_ips': 'list[NestedVirtualPrivateCloudFloatingIp]',
         'gateway': 'str',
@@ -47,9 +45,7 @@ class VirtualPrivateCloudExternalSubnet(object):
     attribute_map = {
         'cidr': 'cidr',
         'description': 'description',
-        'edge_gateway': 'edge_gateway',
         'entity_async_status': 'entityAsyncStatus',
-        'exclusive': 'exclusive',
         'floating_ip_cidr': 'floating_ip_cidr',
         'floating_ips': 'floating_ips',
         'gateway': 'gateway',
@@ -70,9 +66,7 @@ class VirtualPrivateCloudExternalSubnet(object):
 
         self._cidr = None
         self._description = None
-        self._edge_gateway = None
         self._entity_async_status = None
-        self._exclusive = None
         self._floating_ip_cidr = None
         self._floating_ips = None
         self._gateway = None
@@ -90,10 +84,7 @@ class VirtualPrivateCloudExternalSubnet(object):
         if "cidr" in kwargs:
             self.cidr = kwargs["cidr"]
         self.description = kwargs.get("description", None)
-        self.edge_gateway = kwargs.get("edge_gateway", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
-        if "exclusive" in kwargs:
-            self.exclusive = kwargs["exclusive"]
         self.floating_ip_cidr = kwargs.get("floating_ip_cidr", None)
         self.floating_ips = kwargs.get("floating_ips", None)
         if "gateway" in kwargs:
@@ -157,27 +148,6 @@ class VirtualPrivateCloudExternalSubnet(object):
         self._description = description
 
     @property
-    def edge_gateway(self):
-        """Gets the edge_gateway of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-
-
-        :return: The edge_gateway of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-        :rtype: NestedVirtualPrivateCloudEdgeGateway
-        """
-        return self._edge_gateway
-
-    @edge_gateway.setter
-    def edge_gateway(self, edge_gateway):
-        """Sets the edge_gateway of this VirtualPrivateCloudExternalSubnet.
-
-
-        :param edge_gateway: The edge_gateway of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-        :type edge_gateway: NestedVirtualPrivateCloudEdgeGateway
-        """
-
-        self._edge_gateway = edge_gateway
-
-    @property
     def entity_async_status(self):
         """Gets the entity_async_status of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
 
@@ -197,29 +167,6 @@ class VirtualPrivateCloudExternalSubnet(object):
         """
 
         self._entity_async_status = entity_async_status
-
-    @property
-    def exclusive(self):
-        """Gets the exclusive of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-
-
-        :return: The exclusive of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclusive
-
-    @exclusive.setter
-    def exclusive(self, exclusive):
-        """Sets the exclusive of this VirtualPrivateCloudExternalSubnet.
-
-
-        :param exclusive: The exclusive of this VirtualPrivateCloudExternalSubnet.  # noqa: E501
-        :type exclusive: bool
-        """
-        if self.local_vars_configuration.client_side_validation and exclusive is None:  # noqa: E501
-            raise ValueError("Invalid value for `exclusive`, must not be `None`")  # noqa: E501
-
-        self._exclusive = exclusive
 
     @property
     def floating_ip_cidr(self):

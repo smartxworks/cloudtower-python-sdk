@@ -25,15 +25,11 @@ class NestedVirtualPrivateCloudService(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'internal_cidr': 'str',
-        'tep_ip_pools': 'list[NestedVirtualPrivateCloudServiceTepIpPool]'
+        'id': 'str'
     }
 
     attribute_map = {
-        'id': 'id',
-        'internal_cidr': 'internal_cidr',
-        'tep_ip_pools': 'tep_ip_pools'
+        'id': 'id'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -41,16 +37,10 @@ class NestedVirtualPrivateCloudService(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._id = None
-        self._internal_cidr = None
-        self._tep_ip_pools = None
         self.discriminator = None
 
         if "id" in kwargs:
             self.id = kwargs["id"]
-        if "internal_cidr" in kwargs:
-            self.internal_cidr = kwargs["internal_cidr"]
-        if "tep_ip_pools" in kwargs:
-            self.tep_ip_pools = kwargs["tep_ip_pools"]
 
     @property
     def id(self):
@@ -74,52 +64,6 @@ class NestedVirtualPrivateCloudService(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
-    @property
-    def internal_cidr(self):
-        """Gets the internal_cidr of this NestedVirtualPrivateCloudService.  # noqa: E501
-
-
-        :return: The internal_cidr of this NestedVirtualPrivateCloudService.  # noqa: E501
-        :rtype: str
-        """
-        return self._internal_cidr
-
-    @internal_cidr.setter
-    def internal_cidr(self, internal_cidr):
-        """Sets the internal_cidr of this NestedVirtualPrivateCloudService.
-
-
-        :param internal_cidr: The internal_cidr of this NestedVirtualPrivateCloudService.  # noqa: E501
-        :type internal_cidr: str
-        """
-        if self.local_vars_configuration.client_side_validation and internal_cidr is None:  # noqa: E501
-            raise ValueError("Invalid value for `internal_cidr`, must not be `None`")  # noqa: E501
-
-        self._internal_cidr = internal_cidr
-
-    @property
-    def tep_ip_pools(self):
-        """Gets the tep_ip_pools of this NestedVirtualPrivateCloudService.  # noqa: E501
-
-
-        :return: The tep_ip_pools of this NestedVirtualPrivateCloudService.  # noqa: E501
-        :rtype: list[NestedVirtualPrivateCloudServiceTepIpPool]
-        """
-        return self._tep_ip_pools
-
-    @tep_ip_pools.setter
-    def tep_ip_pools(self, tep_ip_pools):
-        """Sets the tep_ip_pools of this NestedVirtualPrivateCloudService.
-
-
-        :param tep_ip_pools: The tep_ip_pools of this NestedVirtualPrivateCloudService.  # noqa: E501
-        :type tep_ip_pools: list[NestedVirtualPrivateCloudServiceTepIpPool]
-        """
-        if self.local_vars_configuration.client_side_validation and tep_ip_pools is None:  # noqa: E501
-            raise ValueError("Invalid value for `tep_ip_pools`, must not be `None`")  # noqa: E501
-
-        self._tep_ip_pools = tep_ip_pools
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
