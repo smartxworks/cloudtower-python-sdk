@@ -30,8 +30,7 @@ class VirtualPrivateCloudClusterBinding(object):
         'id': 'str',
         'mtu': 'int',
         'vds': 'NestedVds',
-        'vlan_id': 'int',
-        'vpc_service': 'NestedVirtualPrivateCloudService'
+        'vlan_id': 'int'
     }
 
     attribute_map = {
@@ -40,8 +39,7 @@ class VirtualPrivateCloudClusterBinding(object):
         'id': 'id',
         'mtu': 'mtu',
         'vds': 'vds',
-        'vlan_id': 'vlan_id',
-        'vpc_service': 'vpc_service'
+        'vlan_id': 'vlan_id'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -54,7 +52,6 @@ class VirtualPrivateCloudClusterBinding(object):
         self._mtu = None
         self._vds = None
         self._vlan_id = None
-        self._vpc_service = None
         self.discriminator = None
 
         if "cluster" in kwargs:
@@ -67,8 +64,6 @@ class VirtualPrivateCloudClusterBinding(object):
             self.vds = kwargs["vds"]
         if "vlan_id" in kwargs:
             self.vlan_id = kwargs["vlan_id"]
-        if "vpc_service" in kwargs:
-            self.vpc_service = kwargs["vpc_service"]
 
     @property
     def cluster(self):
@@ -203,29 +198,6 @@ class VirtualPrivateCloudClusterBinding(object):
             raise ValueError("Invalid value for `vlan_id`, must not be `None`")  # noqa: E501
 
         self._vlan_id = vlan_id
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudClusterBinding.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudClusterBinding.  # noqa: E501
-        :rtype: NestedVirtualPrivateCloudService
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudClusterBinding.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudClusterBinding.  # noqa: E501
-        :type vpc_service: NestedVirtualPrivateCloudService
-        """
-        if self.local_vars_configuration.client_side_validation and vpc_service is None:  # noqa: E501
-            raise ValueError("Invalid value for `vpc_service`, must not be `None`")  # noqa: E501
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

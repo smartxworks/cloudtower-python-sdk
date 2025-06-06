@@ -26,7 +26,6 @@ class NestedFrozenVlan(object):
     """
     openapi_types = {
         'name': 'str',
-        'network_ids': 'list[str]',
         'vds_ovs': 'str',
         'vlan_id': 'int',
         'vlan_local_id': 'str'
@@ -34,7 +33,6 @@ class NestedFrozenVlan(object):
 
     attribute_map = {
         'name': 'name',
-        'network_ids': 'network_ids',
         'vds_ovs': 'vds_ovs',
         'vlan_id': 'vlan_id',
         'vlan_local_id': 'vlan_local_id'
@@ -45,7 +43,6 @@ class NestedFrozenVlan(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._name = None
-        self._network_ids = None
         self._vds_ovs = None
         self._vlan_id = None
         self._vlan_local_id = None
@@ -53,7 +50,6 @@ class NestedFrozenVlan(object):
 
         if "name" in kwargs:
             self.name = kwargs["name"]
-        self.network_ids = kwargs.get("network_ids", None)
         if "vds_ovs" in kwargs:
             self.vds_ovs = kwargs["vds_ovs"]
         if "vlan_id" in kwargs:
@@ -83,27 +79,6 @@ class NestedFrozenVlan(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def network_ids(self):
-        """Gets the network_ids of this NestedFrozenVlan.  # noqa: E501
-
-
-        :return: The network_ids of this NestedFrozenVlan.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._network_ids
-
-    @network_ids.setter
-    def network_ids(self, network_ids):
-        """Sets the network_ids of this NestedFrozenVlan.
-
-
-        :param network_ids: The network_ids of this NestedFrozenVlan.  # noqa: E501
-        :type network_ids: list[str]
-        """
-
-        self._network_ids = network_ids
 
     @property
     def vds_ovs(self):

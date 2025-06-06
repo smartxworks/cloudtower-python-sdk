@@ -23,9 +23,8 @@ class UserSource(object):
     AUTHN = "AUTHN"
     LDAP = "LDAP"
     LOCAL = "LOCAL"
-    SSO = "SSO"
 
-    allowable_values = [AUTHN, LDAP, LOCAL, SSO]  # noqa: E501
+    allowable_values = [AUTHN, LDAP, LOCAL]  # noqa: E501
 
     """
     Attributes:

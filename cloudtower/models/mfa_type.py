@@ -21,9 +21,8 @@ class MfaType(object):
     allowed enum values
     """
     MAIL = "Mail"
-    SMS = "Sms"
 
-    allowable_values = [MAIL, SMS]  # noqa: E501
+    allowable_values = [MAIL]  # noqa: E501
 
     """
     Attributes:

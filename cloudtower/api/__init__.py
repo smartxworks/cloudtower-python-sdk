@@ -59,7 +59,6 @@ from cloudtower.api.nfs_export_api import NfsExportApi
 from cloudtower.api.nfs_inode_api import NfsInodeApi
 from cloudtower.api.nic_api import NicApi
 from cloudtower.api.node_topo_api import NodeTopoApi
-from cloudtower.api.ntp_api import NtpApi
 from cloudtower.api.nvmf_namespace_api import NvmfNamespaceApi
 from cloudtower.api.nvmf_namespace_snapshot_api import NvmfNamespaceSnapshotApi
 from cloudtower.api.nvmf_subsystem_api import NvmfSubsystemApi

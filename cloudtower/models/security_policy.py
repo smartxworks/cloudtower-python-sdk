@@ -31,7 +31,6 @@ class SecurityPolicy(object):
         'everoute_cluster': 'NestedEverouteCluster',
         'id': 'str',
         'ingress': 'list[NestedNetworkPolicyRule]',
-        'is_blocklist': 'bool',
         'name': 'str',
         'policy_mode': 'PolicyMode'
     }
@@ -43,7 +42,6 @@ class SecurityPolicy(object):
         'everoute_cluster': 'everoute_cluster',
         'id': 'id',
         'ingress': 'ingress',
-        'is_blocklist': 'is_blocklist',
         'name': 'name',
         'policy_mode': 'policy_mode'
     }
@@ -58,7 +56,6 @@ class SecurityPolicy(object):
         self._everoute_cluster = None
         self._id = None
         self._ingress = None
-        self._is_blocklist = None
         self._name = None
         self._policy_mode = None
         self.discriminator = None
@@ -73,8 +70,6 @@ class SecurityPolicy(object):
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.ingress = kwargs.get("ingress", None)
-        if "is_blocklist" in kwargs:
-            self.is_blocklist = kwargs["is_blocklist"]
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.policy_mode = kwargs.get("policy_mode", None)
@@ -212,29 +207,6 @@ class SecurityPolicy(object):
         """
 
         self._ingress = ingress
-
-    @property
-    def is_blocklist(self):
-        """Gets the is_blocklist of this SecurityPolicy.  # noqa: E501
-
-
-        :return: The is_blocklist of this SecurityPolicy.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_blocklist
-
-    @is_blocklist.setter
-    def is_blocklist(self, is_blocklist):
-        """Sets the is_blocklist of this SecurityPolicy.
-
-
-        :param is_blocklist: The is_blocklist of this SecurityPolicy.  # noqa: E501
-        :type is_blocklist: bool
-        """
-        if self.local_vars_configuration.client_side_validation and is_blocklist is None:  # noqa: E501
-            raise ValueError("Invalid value for `is_blocklist`, must not be `None`")  # noqa: E501
-
-        self._is_blocklist = is_blocklist
 
     @property
     def name(self):

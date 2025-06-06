@@ -60,7 +60,6 @@ cloudtower/api/nfs_export_api.py
 cloudtower/api/nfs_inode_api.py
 cloudtower/api/nic_api.py
 cloudtower/api/node_topo_api.py
-cloudtower/api/ntp_api.py
 cloudtower/api/nvmf_namespace_api.py
 cloudtower/api/nvmf_namespace_snapshot_api.py
 cloudtower/api/nvmf_subsystem_api.py
@@ -147,9 +146,6 @@ cloudtower/models/alert_rule_thresholds.py
 cloudtower/models/alert_rule_unit.py
 cloudtower/models/alert_rule_where_input.py
 cloudtower/models/alert_where_input.py
-cloudtower/models/allocatable_ec_storage_capacity.py
-cloudtower/models/allocatable_replica_storage_capacity.py
-cloudtower/models/allocatable_storage_capacity.py
 cloudtower/models/application.py
 cloudtower/models/application_connection.py
 cloudtower/models/application_order_by_input.py
@@ -189,7 +185,6 @@ cloudtower/models/backup_plan_execution_where_input.py
 cloudtower/models/backup_plan_keep_policy.py
 cloudtower/models/backup_plan_order_by_input.py
 cloudtower/models/backup_plan_period.py
-cloudtower/models/backup_plan_phase.py
 cloudtower/models/backup_plan_resume_params.py
 cloudtower/models/backup_plan_status.py
 cloudtower/models/backup_plan_suspend_params.py
@@ -214,7 +209,6 @@ cloudtower/models/backup_restore_point_restore_in_place_params.py
 cloudtower/models/backup_restore_point_restore_in_place_params_data.py
 cloudtower/models/backup_restore_point_type.py
 cloudtower/models/backup_restore_point_where_input.py
-cloudtower/models/backup_restore_point_where_unique_input.py
 cloudtower/models/backup_service.py
 cloudtower/models/backup_service_connection.py
 cloudtower/models/backup_service_network_status_enum.py
@@ -289,8 +283,6 @@ cloudtower/models/cluster_settings.py
 cloudtower/models/cluster_settings_connection.py
 cloudtower/models/cluster_settings_order_by_input.py
 cloudtower/models/cluster_settings_where_input.py
-cloudtower/models/cluster_storage_info.py
-cloudtower/models/cluster_storage_info_ec_config.py
 cloudtower/models/cluster_topo.py
 cloudtower/models/cluster_topo_connection.py
 cloudtower/models/cluster_topo_order_by_input.py
@@ -501,6 +493,9 @@ cloudtower/models/everoute_package.py
 cloudtower/models/everoute_package_connection.py
 cloudtower/models/everoute_package_order_by_input.py
 cloudtower/models/everoute_package_where_input.py
+cloudtower/models/execute_command_in_vm_params.py
+cloudtower/models/execute_command_in_vm_params_data.py
+cloudtower/models/execute_command_in_vm_response.py
 cloudtower/models/execute_plan.py
 cloudtower/models/exit_maintenance_mode_input.py
 cloudtower/models/exit_maintenance_mode_params.py
@@ -530,7 +525,6 @@ cloudtower/models/get_backup_plans_connection_request_body.py
 cloudtower/models/get_backup_plans_request_body.py
 cloudtower/models/get_backup_restore_executions_connection_request_body.py
 cloudtower/models/get_backup_restore_executions_request_body.py
-cloudtower/models/get_backup_restore_point_metadata_request_body.py
 cloudtower/models/get_backup_restore_points_connection_request_body.py
 cloudtower/models/get_backup_restore_points_request_body.py
 cloudtower/models/get_backup_services_connection_request_body.py
@@ -550,8 +544,6 @@ cloudtower/models/get_cluster_images_request_body.py
 cloudtower/models/get_cluster_metric_input.py
 cloudtower/models/get_cluster_settingses_connection_request_body.py
 cloudtower/models/get_cluster_settingses_request_body.py
-cloudtower/models/get_cluster_storage_info_effect.py
-cloudtower/models/get_cluster_storage_info_request_body.py
 cloudtower/models/get_cluster_topoes_connection_request_body.py
 cloudtower/models/get_cluster_topoes_request_body.py
 cloudtower/models/get_cluster_upgrade_histories_connection_request_body.py
@@ -1038,8 +1030,6 @@ cloudtower/models/nested_consistency_group.py
 cloudtower/models/nested_consistency_group_snapshot.py
 cloudtower/models/nested_content_library_image.py
 cloudtower/models/nested_content_library_vm_template.py
-cloudtower/models/nested_content_library_vm_template_disk.py
-cloudtower/models/nested_content_library_vm_template_nic.py
 cloudtower/models/nested_cpu.py
 cloudtower/models/nested_datacenter.py
 cloudtower/models/nested_discovered_host_dimms.py
@@ -1112,15 +1102,12 @@ cloudtower/models/nested_smtp_server.py
 cloudtower/models/nested_snapshot_group.py
 cloudtower/models/nested_snapshot_group_vm_disk_info.py
 cloudtower/models/nested_snapshot_group_vm_info.py
-cloudtower/models/nested_snapshot_info.py
 cloudtower/models/nested_snapshot_plan.py
 cloudtower/models/nested_snapshot_plan_task.py
 cloudtower/models/nested_step.py
-cloudtower/models/nested_storage_policy_config.py
 cloudtower/models/nested_svt_image.py
 cloudtower/models/nested_tag_position.py
 cloudtower/models/nested_task.py
-cloudtower/models/nested_template_config.py
 cloudtower/models/nested_template_nic.py
 cloudtower/models/nested_template_vpc_nic.py
 cloudtower/models/nested_thresholds.py
@@ -1132,7 +1119,6 @@ cloudtower/models/nested_vds.py
 cloudtower/models/nested_vgpu_type.py
 cloudtower/models/nested_view.py
 cloudtower/models/nested_virtual_private_cloud.py
-cloudtower/models/nested_virtual_private_cloud_edge_gateway.py
 cloudtower/models/nested_virtual_private_cloud_external_subnet.py
 cloudtower/models/nested_virtual_private_cloud_floating_ip.py
 cloudtower/models/nested_virtual_private_cloud_isolation_policy.py
@@ -1148,7 +1134,6 @@ cloudtower/models/nested_virtual_private_cloud_security_group.py
 cloudtower/models/nested_virtual_private_cloud_security_policy.py
 cloudtower/models/nested_virtual_private_cloud_security_policy_apply.py
 cloudtower/models/nested_virtual_private_cloud_service.py
-cloudtower/models/nested_virtual_private_cloud_service_tep_ip_pool.py
 cloudtower/models/nested_virtual_private_cloud_subnet.py
 cloudtower/models/nested_vlan.py
 cloudtower/models/nested_vm.py
@@ -1167,7 +1152,6 @@ cloudtower/models/nested_vpc_router_gateway_rule_type.py
 cloudtower/models/nested_vpc_subnet_ip_poo_type.py
 cloudtower/models/nested_vsphere_esxi_account.py
 cloudtower/models/nested_witness.py
-cloudtower/models/nested_zbs_storage_info.py
 cloudtower/models/nested_zone.py
 cloudtower/models/nested_zone_topo.py
 cloudtower/models/network_policy_rule_alg_protocol.py
@@ -1205,7 +1189,6 @@ cloudtower/models/node_topo_where_unique_input.py
 cloudtower/models/notifier_language_code.py
 cloudtower/models/notifier_security_mode.py
 cloudtower/models/ntp_mode.py
-cloudtower/models/ntp_service_url.py
 cloudtower/models/nvmf_namespace.py
 cloudtower/models/nvmf_namespace_clone_params.py
 cloudtower/models/nvmf_namespace_common_params.py
@@ -1487,11 +1470,9 @@ cloudtower/models/virtual_private_cloud_connection.py
 cloudtower/models/virtual_private_cloud_creation_params.py
 cloudtower/models/virtual_private_cloud_deletion_params.py
 cloudtower/models/virtual_private_cloud_dnat_rule_params.py
-cloudtower/models/virtual_private_cloud_edge_gateway_group_where_input.py
 cloudtower/models/virtual_private_cloud_edge_gateway_where_input.py
 cloudtower/models/virtual_private_cloud_external_subnet.py
 cloudtower/models/virtual_private_cloud_external_subnet_connection.py
-cloudtower/models/virtual_private_cloud_external_subnet_group_where_input.py
 cloudtower/models/virtual_private_cloud_external_subnet_order_by_input.py
 cloudtower/models/virtual_private_cloud_external_subnet_where_input.py
 cloudtower/models/virtual_private_cloud_floating_ip.py
@@ -1602,7 +1583,6 @@ cloudtower/models/vm_disk.py
 cloudtower/models/vm_disk_connection.py
 cloudtower/models/vm_disk_io_policy.py
 cloudtower/models/vm_disk_io_restrict_type.py
-cloudtower/models/vm_disk_meta_data.py
 cloudtower/models/vm_disk_operate.py
 cloudtower/models/vm_disk_operate_remove_disks.py
 cloudtower/models/vm_disk_order_by_input.py
@@ -1637,16 +1617,13 @@ cloudtower/models/vm_gpu_detail.py
 cloudtower/models/vm_gpu_info.py
 cloudtower/models/vm_gpu_operation_params.py
 cloudtower/models/vm_guests_operation_system.py
-cloudtower/models/vm_ha_priority.py
 cloudtower/models/vm_import_nic_params.py
 cloudtower/models/vm_import_params.py
-cloudtower/models/vm_meta_data.py
 cloudtower/models/vm_migrate_across_cluster_params.py
 cloudtower/models/vm_migrate_across_cluster_params_data.py
 cloudtower/models/vm_migrate_params.py
 cloudtower/models/vm_nic.py
 cloudtower/models/vm_nic_connection.py
-cloudtower/models/vm_nic_meta_data.py
 cloudtower/models/vm_nic_model.py
 cloudtower/models/vm_nic_order_by_input.py
 cloudtower/models/vm_nic_params.py
