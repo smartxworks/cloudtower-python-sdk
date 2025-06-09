@@ -25,6 +25,8 @@ class UserAuditLogCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'api_key_name': 'str',
+        'id': 'str',
         'started_at': 'str',
         'finished_at': 'str',
         'cluster_id': 'str',
@@ -32,12 +34,15 @@ class UserAuditLogCreationParams(object):
         'ip_address': 'str',
         'status': 'UserAuditLogStatus',
         'user_id': 'str',
+        'key': 'str',
         'message': 'UserAuditLogMessage',
         'resource_type': 'str',
         'action': 'str'
     }
 
     attribute_map = {
+        'api_key_name': 'api_key_name',
+        'id': 'id',
         'started_at': 'started_at',
         'finished_at': 'finished_at',
         'cluster_id': 'cluster_id',
@@ -45,6 +50,7 @@ class UserAuditLogCreationParams(object):
         'ip_address': 'ip_address',
         'status': 'status',
         'user_id': 'user_id',
+        'key': 'key',
         'message': 'message',
         'resource_type': 'resource_type',
         'action': 'action'
@@ -54,6 +60,8 @@ class UserAuditLogCreationParams(object):
         """UserAuditLogCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._api_key_name = None
+        self._id = None
         self._started_at = None
         self._finished_at = None
         self._cluster_id = None
@@ -61,11 +69,16 @@ class UserAuditLogCreationParams(object):
         self._ip_address = None
         self._status = None
         self._user_id = None
+        self._key = None
         self._message = None
         self._resource_type = None
         self._action = None
         self.discriminator = None
 
+        if "api_key_name" in kwargs:
+            self.api_key_name = kwargs["api_key_name"]
+        if "id" in kwargs:
+            self.id = kwargs["id"]
         if "started_at" in kwargs:
             self.started_at = kwargs["started_at"]
         if "finished_at" in kwargs:
@@ -80,12 +93,56 @@ class UserAuditLogCreationParams(object):
             self.status = kwargs["status"]
         if "user_id" in kwargs:
             self.user_id = kwargs["user_id"]
+        if "key" in kwargs:
+            self.key = kwargs["key"]
         if "message" in kwargs:
             self.message = kwargs["message"]
         if "resource_type" in kwargs:
             self.resource_type = kwargs["resource_type"]
         if "action" in kwargs:
             self.action = kwargs["action"]
+
+    @property
+    def api_key_name(self):
+        """Gets the api_key_name of this UserAuditLogCreationParams.  # noqa: E501
+
+
+        :return: The api_key_name of this UserAuditLogCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_key_name
+
+    @api_key_name.setter
+    def api_key_name(self, api_key_name):
+        """Sets the api_key_name of this UserAuditLogCreationParams.
+
+
+        :param api_key_name: The api_key_name of this UserAuditLogCreationParams.  # noqa: E501
+        :type api_key_name: str
+        """
+
+        self._api_key_name = api_key_name
+
+    @property
+    def id(self):
+        """Gets the id of this UserAuditLogCreationParams.  # noqa: E501
+
+
+        :return: The id of this UserAuditLogCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this UserAuditLogCreationParams.
+
+
+        :param id: The id of this UserAuditLogCreationParams.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
 
     @property
     def started_at(self):
@@ -237,6 +294,27 @@ class UserAuditLogCreationParams(object):
             raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
 
         self._user_id = user_id
+
+    @property
+    def key(self):
+        """Gets the key of this UserAuditLogCreationParams.  # noqa: E501
+
+
+        :return: The key of this UserAuditLogCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this UserAuditLogCreationParams.
+
+
+        :param key: The key of this UserAuditLogCreationParams.  # noqa: E501
+        :type key: str
+        """
+
+        self._key = key
 
     @property
     def message(self):

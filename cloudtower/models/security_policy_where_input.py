@@ -76,7 +76,8 @@ class SecurityPolicyWhereInput(object):
         'policy_mode': 'PolicyMode',
         'policy_mode_in': 'list[PolicyMode]',
         'policy_mode_not': 'PolicyMode',
-        'policy_mode_not_in': 'list[PolicyMode]'
+        'policy_mode_not_in': 'list[PolicyMode]',
+        'statistics': 'SecurityPolicyStatisticsWhereInput'
     }
 
     attribute_map = {
@@ -131,7 +132,8 @@ class SecurityPolicyWhereInput(object):
         'policy_mode': 'policy_mode',
         'policy_mode_in': 'policy_mode_in',
         'policy_mode_not': 'policy_mode_not',
-        'policy_mode_not_in': 'policy_mode_not_in'
+        'policy_mode_not_in': 'policy_mode_not_in',
+        'statistics': 'statistics'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -190,6 +192,7 @@ class SecurityPolicyWhereInput(object):
         self._policy_mode_in = None
         self._policy_mode_not = None
         self._policy_mode_not_in = None
+        self._statistics = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -244,6 +247,7 @@ class SecurityPolicyWhereInput(object):
         self.policy_mode_in = kwargs.get("policy_mode_in", None)
         self.policy_mode_not = kwargs.get("policy_mode_not", None)
         self.policy_mode_not_in = kwargs.get("policy_mode_not_in", None)
+        self.statistics = kwargs.get("statistics", None)
 
     @property
     def _and(self):
@@ -1336,6 +1340,27 @@ class SecurityPolicyWhereInput(object):
         """
 
         self._policy_mode_not_in = policy_mode_not_in
+
+    @property
+    def statistics(self):
+        """Gets the statistics of this SecurityPolicyWhereInput.  # noqa: E501
+
+
+        :return: The statistics of this SecurityPolicyWhereInput.  # noqa: E501
+        :rtype: SecurityPolicyStatisticsWhereInput
+        """
+        return self._statistics
+
+    @statistics.setter
+    def statistics(self, statistics):
+        """Sets the statistics of this SecurityPolicyWhereInput.
+
+
+        :param statistics: The statistics of this SecurityPolicyWhereInput.  # noqa: E501
+        :type statistics: SecurityPolicyStatisticsWhereInput
+        """
+
+        self._statistics = statistics
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

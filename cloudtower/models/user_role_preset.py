@@ -26,8 +26,9 @@ class UserRolePreset(object):
     ROOT = "ROOT"
     USER_ADMIN = "USER_ADMIN"
     VM_USER = "VM_USER"
+    WORKLOAD_CLUSTER_USER = "WORKLOAD_CLUSTER_USER"
 
-    allowable_values = [ADMIN, AUDITOR, READ_ONLY, ROOT, USER_ADMIN, VM_USER]  # noqa: E501
+    allowable_values = [ADMIN, AUDITOR, READ_ONLY, ROOT, USER_ADMIN, VM_USER, WORKLOAD_CLUSTER_USER]  # noqa: E501
 
     """
     Attributes:

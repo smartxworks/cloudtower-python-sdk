@@ -26,12 +26,14 @@ class NestedVpcRouterGatewayRuleType(object):
     """
     openapi_types = {
         'dst': 'str',
-        'nexthop': 'str'
+        'nexthop': 'str',
+        'nexthops': 'list[NestedVpcRouterGatewayRuleNextHopsItemType]'
     }
 
     attribute_map = {
         'dst': 'dst',
-        'nexthop': 'nexthop'
+        'nexthop': 'nexthop',
+        'nexthops': 'nexthops'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -40,11 +42,13 @@ class NestedVpcRouterGatewayRuleType(object):
 
         self._dst = None
         self._nexthop = None
+        self._nexthops = None
         self.discriminator = None
 
         if "dst" in kwargs:
             self.dst = kwargs["dst"]
         self.nexthop = kwargs.get("nexthop", None)
+        self.nexthops = kwargs.get("nexthops", None)
 
     @property
     def dst(self):
@@ -89,6 +93,27 @@ class NestedVpcRouterGatewayRuleType(object):
         """
 
         self._nexthop = nexthop
+
+    @property
+    def nexthops(self):
+        """Gets the nexthops of this NestedVpcRouterGatewayRuleType.  # noqa: E501
+
+
+        :return: The nexthops of this NestedVpcRouterGatewayRuleType.  # noqa: E501
+        :rtype: list[NestedVpcRouterGatewayRuleNextHopsItemType]
+        """
+        return self._nexthops
+
+    @nexthops.setter
+    def nexthops(self, nexthops):
+        """Sets the nexthops of this NestedVpcRouterGatewayRuleType.
+
+
+        :param nexthops: The nexthops of this NestedVpcRouterGatewayRuleType.  # noqa: E501
+        :type nexthops: list[NestedVpcRouterGatewayRuleNextHopsItemType]
+        """
+
+        self._nexthops = nexthops
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

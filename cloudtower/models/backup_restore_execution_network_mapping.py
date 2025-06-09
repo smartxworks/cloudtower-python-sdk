@@ -25,13 +25,17 @@ class BackupRestoreExecutionNetworkMapping(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'target': 'BackupRestoreExecutionNetworkInformation',
         'src_vlan_id': 'str',
+        'source': 'BackupRestoreExecutionNetworkInformation',
         'dst_vlan_id': 'str',
         'typename': 'str'
     }
 
     attribute_map = {
+        'target': 'target',
         'src_vlan_id': 'src_vlan_id',
+        'source': 'source',
         'dst_vlan_id': 'dst_vlan_id',
         'typename': '__typename'
     }
@@ -40,17 +44,42 @@ class BackupRestoreExecutionNetworkMapping(object):
         """BackupRestoreExecutionNetworkMapping - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._target = None
         self._src_vlan_id = None
+        self._source = None
         self._dst_vlan_id = None
         self._typename = None
         self.discriminator = None
 
+        self.target = kwargs.get("target", None)
         if "src_vlan_id" in kwargs:
             self.src_vlan_id = kwargs["src_vlan_id"]
+        self.source = kwargs.get("source", None)
         if "dst_vlan_id" in kwargs:
             self.dst_vlan_id = kwargs["dst_vlan_id"]
         if "typename" in kwargs:
             self.typename = kwargs["typename"]
+
+    @property
+    def target(self):
+        """Gets the target of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+
+
+        :return: The target of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+        :rtype: BackupRestoreExecutionNetworkInformation
+        """
+        return self._target
+
+    @target.setter
+    def target(self, target):
+        """Sets the target of this BackupRestoreExecutionNetworkMapping.
+
+
+        :param target: The target of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+        :type target: BackupRestoreExecutionNetworkInformation
+        """
+
+        self._target = target
 
     @property
     def src_vlan_id(self):
@@ -74,6 +103,27 @@ class BackupRestoreExecutionNetworkMapping(object):
             raise ValueError("Invalid value for `src_vlan_id`, must not be `None`")  # noqa: E501
 
         self._src_vlan_id = src_vlan_id
+
+    @property
+    def source(self):
+        """Gets the source of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+
+
+        :return: The source of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+        :rtype: BackupRestoreExecutionNetworkInformation
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this BackupRestoreExecutionNetworkMapping.
+
+
+        :param source: The source of this BackupRestoreExecutionNetworkMapping.  # noqa: E501
+        :type source: BackupRestoreExecutionNetworkInformation
+        """
+
+        self._source = source
 
     @property
     def dst_vlan_id(self):

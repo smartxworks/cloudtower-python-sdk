@@ -90,6 +90,22 @@ conf = cloudtower.Configuration(
 
     The following cookie will be added to the HTTP request:
        Cookie: JSESSIONID abc123
+
+    HTTP Basic Authentication Example.
+    Given the following security scheme in the OpenAPI specification:
+      components:
+        securitySchemes:
+          http_basic_auth:
+            type: http
+            scheme: basic
+
+    Configure API client with HTTP basic authentication:
+
+conf = cloudtower.Configuration(
+    username='the-user',
+    password='the-password',
+)
+
     """
 
     _default = None
@@ -388,6 +404,13 @@ conf = cloudtower.Configuration(
                     'Authorization',
                 ),
             }
+        if self.username is not None and self.password is not None:
+            auth['Basic'] = {
+                'type': 'basic',
+                'in': 'header',
+                'key': 'Authorization',
+                'value': self.get_basic_auth_token()
+            }
         return auth
 
     def to_debug_report(self):
@@ -398,8 +421,8 @@ conf = cloudtower.Configuration(
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 2.19.0\n"\
-               "SDK Package Version: 2.19.0".\
+               "Version of the API: 2.20.0\n"\
+               "SDK Package Version: 2.20.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

@@ -22,9 +22,10 @@ class TimeUnit(object):
     """
     DAY = "DAY"
     HOUR = "HOUR"
+    MINUTE = "MINUTE"
     MONTH = "MONTH"
 
-    allowable_values = [DAY, HOUR, MONTH]  # noqa: E501
+    allowable_values = [DAY, HOUR, MINUTE, MONTH]  # noqa: E501
 
     """
     Attributes:

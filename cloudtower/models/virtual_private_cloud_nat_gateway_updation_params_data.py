@@ -25,6 +25,7 @@ class VirtualPrivateCloudNatGatewayUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'external_ips': 'list[VirtualPrivateCloudExternalIpsParams]',
         'external_ip': 'str',
         'dnat_rules': 'list[VirtualPrivateCloudDnatRuleParams]',
         'enable_dnat': 'bool',
@@ -33,6 +34,7 @@ class VirtualPrivateCloudNatGatewayUpdationParamsData(object):
     }
 
     attribute_map = {
+        'external_ips': 'external_ips',
         'external_ip': 'external_ip',
         'dnat_rules': 'dnat_rules',
         'enable_dnat': 'enable_dnat',
@@ -44,6 +46,7 @@ class VirtualPrivateCloudNatGatewayUpdationParamsData(object):
         """VirtualPrivateCloudNatGatewayUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._external_ips = None
         self._external_ip = None
         self._dnat_rules = None
         self._enable_dnat = None
@@ -51,6 +54,8 @@ class VirtualPrivateCloudNatGatewayUpdationParamsData(object):
         self._name = None
         self.discriminator = None
 
+        if "external_ips" in kwargs:
+            self.external_ips = kwargs["external_ips"]
         if "external_ip" in kwargs:
             self.external_ip = kwargs["external_ip"]
         if "dnat_rules" in kwargs:
@@ -61,6 +66,27 @@ class VirtualPrivateCloudNatGatewayUpdationParamsData(object):
             self.enable_snat = kwargs["enable_snat"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def external_ips(self):
+        """Gets the external_ips of this VirtualPrivateCloudNatGatewayUpdationParamsData.  # noqa: E501
+
+
+        :return: The external_ips of this VirtualPrivateCloudNatGatewayUpdationParamsData.  # noqa: E501
+        :rtype: list[VirtualPrivateCloudExternalIpsParams]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this VirtualPrivateCloudNatGatewayUpdationParamsData.
+
+
+        :param external_ips: The external_ips of this VirtualPrivateCloudNatGatewayUpdationParamsData.  # noqa: E501
+        :type external_ips: list[VirtualPrivateCloudExternalIpsParams]
+        """
+
+        self._external_ips = external_ips
 
     @property
     def external_ip(self):

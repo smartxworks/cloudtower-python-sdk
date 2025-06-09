@@ -23,9 +23,10 @@ class BackupRestorePointCreation(object):
     AUTO = "AUTO"
     FAILBACK = "FAILBACK"
     FAILOVER = "FAILOVER"
+    FAILOVER_TEST = "FAILOVER_TEST"
     MANUAL = "MANUAL"
 
-    allowable_values = [AUTO, FAILBACK, FAILOVER, MANUAL]  # noqa: E501
+    allowable_values = [AUTO, FAILBACK, FAILOVER, FAILOVER_TEST, MANUAL]  # noqa: E501
 
     """
     Attributes:

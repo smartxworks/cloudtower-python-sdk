@@ -26,12 +26,14 @@ class NestedVirtualPrivateCloudNatGateway(object):
     """
     openapi_types = {
         'external_ip': 'str',
+        'external_ips': 'list[NestedVpcGatewaysCommonExternalIpsType]',
         'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'external_ip': 'external_ip',
+        'external_ips': 'external_ips',
         'id': 'id',
         'name': 'name'
     }
@@ -41,11 +43,13 @@ class NestedVirtualPrivateCloudNatGateway(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._external_ip = None
+        self._external_ips = None
         self._id = None
         self._name = None
         self.discriminator = None
 
         self.external_ip = kwargs.get("external_ip", None)
+        self.external_ips = kwargs.get("external_ips", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "name" in kwargs:
@@ -71,6 +75,27 @@ class NestedVirtualPrivateCloudNatGateway(object):
         """
 
         self._external_ip = external_ip
+
+    @property
+    def external_ips(self):
+        """Gets the external_ips of this NestedVirtualPrivateCloudNatGateway.  # noqa: E501
+
+
+        :return: The external_ips of this NestedVirtualPrivateCloudNatGateway.  # noqa: E501
+        :rtype: list[NestedVpcGatewaysCommonExternalIpsType]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this NestedVirtualPrivateCloudNatGateway.
+
+
+        :param external_ips: The external_ips of this NestedVirtualPrivateCloudNatGateway.  # noqa: E501
+        :type external_ips: list[NestedVpcGatewaysCommonExternalIpsType]
+        """
+
+        self._external_ips = external_ips
 
     @property
     def id(self):

@@ -25,22 +25,28 @@ class NestedNetworkPolicyRule(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'except_ip_block': 'list[str]',
         'ip_block': 'str',
         'ports': 'list[NestedNetworkPolicyRulePort]',
         'security_group': 'NestedSecurityGroup',
         'security_group_id': 'str',
         'selector': 'list[NestedLabel]',
         'selector_ids': 'list[str]',
+        'service_ids': 'list[str]',
+        'services': 'list[NestedNetworkPolicyRuleService]',
         'type': 'NetworkPolicyRuleType'
     }
 
     attribute_map = {
+        'except_ip_block': 'except_ip_block',
         'ip_block': 'ip_block',
         'ports': 'ports',
         'security_group': 'security_group',
         'security_group_id': 'security_group_id',
         'selector': 'selector',
         'selector_ids': 'selector_ids',
+        'service_ids': 'service_ids',
+        'services': 'services',
         'type': 'type'
     }
 
@@ -48,23 +54,50 @@ class NestedNetworkPolicyRule(object):
         """NestedNetworkPolicyRule - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._except_ip_block = None
         self._ip_block = None
         self._ports = None
         self._security_group = None
         self._security_group_id = None
         self._selector = None
         self._selector_ids = None
+        self._service_ids = None
+        self._services = None
         self._type = None
         self.discriminator = None
 
+        self.except_ip_block = kwargs.get("except_ip_block", None)
         self.ip_block = kwargs.get("ip_block", None)
         self.ports = kwargs.get("ports", None)
         self.security_group = kwargs.get("security_group", None)
         self.security_group_id = kwargs.get("security_group_id", None)
         self.selector = kwargs.get("selector", None)
         self.selector_ids = kwargs.get("selector_ids", None)
+        self.service_ids = kwargs.get("service_ids", None)
+        self.services = kwargs.get("services", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
+
+    @property
+    def except_ip_block(self):
+        """Gets the except_ip_block of this NestedNetworkPolicyRule.  # noqa: E501
+
+
+        :return: The except_ip_block of this NestedNetworkPolicyRule.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._except_ip_block
+
+    @except_ip_block.setter
+    def except_ip_block(self, except_ip_block):
+        """Sets the except_ip_block of this NestedNetworkPolicyRule.
+
+
+        :param except_ip_block: The except_ip_block of this NestedNetworkPolicyRule.  # noqa: E501
+        :type except_ip_block: list[str]
+        """
+
+        self._except_ip_block = except_ip_block
 
     @property
     def ip_block(self):
@@ -191,6 +224,48 @@ class NestedNetworkPolicyRule(object):
         """
 
         self._selector_ids = selector_ids
+
+    @property
+    def service_ids(self):
+        """Gets the service_ids of this NestedNetworkPolicyRule.  # noqa: E501
+
+
+        :return: The service_ids of this NestedNetworkPolicyRule.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._service_ids
+
+    @service_ids.setter
+    def service_ids(self, service_ids):
+        """Sets the service_ids of this NestedNetworkPolicyRule.
+
+
+        :param service_ids: The service_ids of this NestedNetworkPolicyRule.  # noqa: E501
+        :type service_ids: list[str]
+        """
+
+        self._service_ids = service_ids
+
+    @property
+    def services(self):
+        """Gets the services of this NestedNetworkPolicyRule.  # noqa: E501
+
+
+        :return: The services of this NestedNetworkPolicyRule.  # noqa: E501
+        :rtype: list[NestedNetworkPolicyRuleService]
+        """
+        return self._services
+
+    @services.setter
+    def services(self, services):
+        """Sets the services of this NestedNetworkPolicyRule.
+
+
+        :param services: The services of this NestedNetworkPolicyRule.  # noqa: E501
+        :type services: list[NestedNetworkPolicyRuleService]
+        """
+
+        self._services = services
 
     @property
     def type(self):

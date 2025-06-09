@@ -70,8 +70,6 @@ class SmtpServerWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'is_record_password': 'bool',
-        'is_record_password_not': 'bool',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -86,20 +84,6 @@ class SmtpServerWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
-        'password': 'str',
-        'password_contains': 'str',
-        'password_ends_with': 'str',
-        'password_gt': 'str',
-        'password_gte': 'str',
-        'password_in': 'list[str]',
-        'password_lt': 'str',
-        'password_lte': 'str',
-        'password_not': 'str',
-        'password_not_contains': 'str',
-        'password_not_ends_with': 'str',
-        'password_not_in': 'list[str]',
-        'password_not_starts_with': 'str',
-        'password_starts_with': 'str',
         'port': 'int',
         'port_gt': 'int',
         'port_gte': 'int',
@@ -174,8 +158,6 @@ class SmtpServerWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'is_record_password': 'is_record_password',
-        'is_record_password_not': 'is_record_password_not',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -190,20 +172,6 @@ class SmtpServerWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
-        'password': 'password',
-        'password_contains': 'password_contains',
-        'password_ends_with': 'password_ends_with',
-        'password_gt': 'password_gt',
-        'password_gte': 'password_gte',
-        'password_in': 'password_in',
-        'password_lt': 'password_lt',
-        'password_lte': 'password_lte',
-        'password_not': 'password_not',
-        'password_not_contains': 'password_not_contains',
-        'password_not_ends_with': 'password_not_ends_with',
-        'password_not_in': 'password_not_in',
-        'password_not_starts_with': 'password_not_starts_with',
-        'password_starts_with': 'password_starts_with',
         'port': 'port',
         'port_gt': 'port_gt',
         'port_gte': 'port_gte',
@@ -281,8 +249,6 @@ class SmtpServerWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._is_record_password = None
-        self._is_record_password_not = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -297,20 +263,6 @@ class SmtpServerWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
-        self._password = None
-        self._password_contains = None
-        self._password_ends_with = None
-        self._password_gt = None
-        self._password_gte = None
-        self._password_in = None
-        self._password_lt = None
-        self._password_lte = None
-        self._password_not = None
-        self._password_not_contains = None
-        self._password_not_ends_with = None
-        self._password_not_in = None
-        self._password_not_starts_with = None
-        self._password_starts_with = None
         self._port = None
         self._port_gt = None
         self._port_gte = None
@@ -384,8 +336,6 @@ class SmtpServerWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.is_record_password = kwargs.get("is_record_password", None)
-        self.is_record_password_not = kwargs.get("is_record_password_not", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -400,20 +350,6 @@ class SmtpServerWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
-        self.password = kwargs.get("password", None)
-        self.password_contains = kwargs.get("password_contains", None)
-        self.password_ends_with = kwargs.get("password_ends_with", None)
-        self.password_gt = kwargs.get("password_gt", None)
-        self.password_gte = kwargs.get("password_gte", None)
-        self.password_in = kwargs.get("password_in", None)
-        self.password_lt = kwargs.get("password_lt", None)
-        self.password_lte = kwargs.get("password_lte", None)
-        self.password_not = kwargs.get("password_not", None)
-        self.password_not_contains = kwargs.get("password_not_contains", None)
-        self.password_not_ends_with = kwargs.get("password_not_ends_with", None)
-        self.password_not_in = kwargs.get("password_not_in", None)
-        self.password_not_starts_with = kwargs.get("password_not_starts_with", None)
-        self.password_starts_with = kwargs.get("password_starts_with", None)
         self.port = kwargs.get("port", None)
         self.port_gt = kwargs.get("port_gt", None)
         self.port_gte = kwargs.get("port_gte", None)
@@ -1387,48 +1323,6 @@ class SmtpServerWhereInput(object):
         self._id_starts_with = id_starts_with
 
     @property
-    def is_record_password(self):
-        """Gets the is_record_password of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The is_record_password of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_record_password
-
-    @is_record_password.setter
-    def is_record_password(self, is_record_password):
-        """Sets the is_record_password of this SmtpServerWhereInput.
-
-
-        :param is_record_password: The is_record_password of this SmtpServerWhereInput.  # noqa: E501
-        :type is_record_password: bool
-        """
-
-        self._is_record_password = is_record_password
-
-    @property
-    def is_record_password_not(self):
-        """Gets the is_record_password_not of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The is_record_password_not of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_record_password_not
-
-    @is_record_password_not.setter
-    def is_record_password_not(self, is_record_password_not):
-        """Sets the is_record_password_not of this SmtpServerWhereInput.
-
-
-        :param is_record_password_not: The is_record_password_not of this SmtpServerWhereInput.  # noqa: E501
-        :type is_record_password_not: bool
-        """
-
-        self._is_record_password_not = is_record_password_not
-
-    @property
     def name(self):
         """Gets the name of this SmtpServerWhereInput.  # noqa: E501
 
@@ -1721,300 +1615,6 @@ class SmtpServerWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
-
-    @property
-    def password(self):
-        """Gets the password of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this SmtpServerWhereInput.
-
-
-        :param password: The password of this SmtpServerWhereInput.  # noqa: E501
-        :type password: str
-        """
-
-        self._password = password
-
-    @property
-    def password_contains(self):
-        """Gets the password_contains of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_contains of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_contains
-
-    @password_contains.setter
-    def password_contains(self, password_contains):
-        """Sets the password_contains of this SmtpServerWhereInput.
-
-
-        :param password_contains: The password_contains of this SmtpServerWhereInput.  # noqa: E501
-        :type password_contains: str
-        """
-
-        self._password_contains = password_contains
-
-    @property
-    def password_ends_with(self):
-        """Gets the password_ends_with of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_ends_with of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_ends_with
-
-    @password_ends_with.setter
-    def password_ends_with(self, password_ends_with):
-        """Sets the password_ends_with of this SmtpServerWhereInput.
-
-
-        :param password_ends_with: The password_ends_with of this SmtpServerWhereInput.  # noqa: E501
-        :type password_ends_with: str
-        """
-
-        self._password_ends_with = password_ends_with
-
-    @property
-    def password_gt(self):
-        """Gets the password_gt of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_gt of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_gt
-
-    @password_gt.setter
-    def password_gt(self, password_gt):
-        """Sets the password_gt of this SmtpServerWhereInput.
-
-
-        :param password_gt: The password_gt of this SmtpServerWhereInput.  # noqa: E501
-        :type password_gt: str
-        """
-
-        self._password_gt = password_gt
-
-    @property
-    def password_gte(self):
-        """Gets the password_gte of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_gte of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_gte
-
-    @password_gte.setter
-    def password_gte(self, password_gte):
-        """Sets the password_gte of this SmtpServerWhereInput.
-
-
-        :param password_gte: The password_gte of this SmtpServerWhereInput.  # noqa: E501
-        :type password_gte: str
-        """
-
-        self._password_gte = password_gte
-
-    @property
-    def password_in(self):
-        """Gets the password_in of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_in of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._password_in
-
-    @password_in.setter
-    def password_in(self, password_in):
-        """Sets the password_in of this SmtpServerWhereInput.
-
-
-        :param password_in: The password_in of this SmtpServerWhereInput.  # noqa: E501
-        :type password_in: list[str]
-        """
-
-        self._password_in = password_in
-
-    @property
-    def password_lt(self):
-        """Gets the password_lt of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_lt of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_lt
-
-    @password_lt.setter
-    def password_lt(self, password_lt):
-        """Sets the password_lt of this SmtpServerWhereInput.
-
-
-        :param password_lt: The password_lt of this SmtpServerWhereInput.  # noqa: E501
-        :type password_lt: str
-        """
-
-        self._password_lt = password_lt
-
-    @property
-    def password_lte(self):
-        """Gets the password_lte of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_lte of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_lte
-
-    @password_lte.setter
-    def password_lte(self, password_lte):
-        """Sets the password_lte of this SmtpServerWhereInput.
-
-
-        :param password_lte: The password_lte of this SmtpServerWhereInput.  # noqa: E501
-        :type password_lte: str
-        """
-
-        self._password_lte = password_lte
-
-    @property
-    def password_not(self):
-        """Gets the password_not of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_not of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_not
-
-    @password_not.setter
-    def password_not(self, password_not):
-        """Sets the password_not of this SmtpServerWhereInput.
-
-
-        :param password_not: The password_not of this SmtpServerWhereInput.  # noqa: E501
-        :type password_not: str
-        """
-
-        self._password_not = password_not
-
-    @property
-    def password_not_contains(self):
-        """Gets the password_not_contains of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_not_contains of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_not_contains
-
-    @password_not_contains.setter
-    def password_not_contains(self, password_not_contains):
-        """Sets the password_not_contains of this SmtpServerWhereInput.
-
-
-        :param password_not_contains: The password_not_contains of this SmtpServerWhereInput.  # noqa: E501
-        :type password_not_contains: str
-        """
-
-        self._password_not_contains = password_not_contains
-
-    @property
-    def password_not_ends_with(self):
-        """Gets the password_not_ends_with of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_not_ends_with of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_not_ends_with
-
-    @password_not_ends_with.setter
-    def password_not_ends_with(self, password_not_ends_with):
-        """Sets the password_not_ends_with of this SmtpServerWhereInput.
-
-
-        :param password_not_ends_with: The password_not_ends_with of this SmtpServerWhereInput.  # noqa: E501
-        :type password_not_ends_with: str
-        """
-
-        self._password_not_ends_with = password_not_ends_with
-
-    @property
-    def password_not_in(self):
-        """Gets the password_not_in of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_not_in of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._password_not_in
-
-    @password_not_in.setter
-    def password_not_in(self, password_not_in):
-        """Sets the password_not_in of this SmtpServerWhereInput.
-
-
-        :param password_not_in: The password_not_in of this SmtpServerWhereInput.  # noqa: E501
-        :type password_not_in: list[str]
-        """
-
-        self._password_not_in = password_not_in
-
-    @property
-    def password_not_starts_with(self):
-        """Gets the password_not_starts_with of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_not_starts_with of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_not_starts_with
-
-    @password_not_starts_with.setter
-    def password_not_starts_with(self, password_not_starts_with):
-        """Sets the password_not_starts_with of this SmtpServerWhereInput.
-
-
-        :param password_not_starts_with: The password_not_starts_with of this SmtpServerWhereInput.  # noqa: E501
-        :type password_not_starts_with: str
-        """
-
-        self._password_not_starts_with = password_not_starts_with
-
-    @property
-    def password_starts_with(self):
-        """Gets the password_starts_with of this SmtpServerWhereInput.  # noqa: E501
-
-
-        :return: The password_starts_with of this SmtpServerWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._password_starts_with
-
-    @password_starts_with.setter
-    def password_starts_with(self, password_starts_with):
-        """Sets the password_starts_with of this SmtpServerWhereInput.
-
-
-        :param password_starts_with: The password_starts_with of this SmtpServerWhereInput.  # noqa: E501
-        :type password_starts_with: str
-        """
-
-        self._password_starts_with = password_starts_with
 
     @property
     def port(self):

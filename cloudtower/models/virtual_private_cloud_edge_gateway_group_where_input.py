@@ -28,14 +28,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         '_and': 'list[VirtualPrivateCloudEdgeGatewayGroupWhereInput]',
         '_not': 'list[VirtualPrivateCloudEdgeGatewayGroupWhereInput]',
         '_or': 'list[VirtualPrivateCloudEdgeGatewayGroupWhereInput]',
-        'created_at': 'str',
-        'created_at_gt': 'str',
-        'created_at_gte': 'str',
-        'created_at_in': 'list[str]',
-        'created_at_lt': 'str',
-        'created_at_lte': 'str',
-        'created_at_not': 'str',
-        'created_at_not_in': 'list[str]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -57,9 +49,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
-        'external_subnet_groups_every': 'VirtualPrivateCloudExternalSubnetGroupWhereInput',
-        'external_subnet_groups_none': 'VirtualPrivateCloudExternalSubnetGroupWhereInput',
-        'external_subnet_groups_some': 'VirtualPrivateCloudExternalSubnetGroupWhereInput',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -74,20 +63,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'local_id': 'str',
-        'local_id_contains': 'str',
-        'local_id_ends_with': 'str',
-        'local_id_gt': 'str',
-        'local_id_gte': 'str',
-        'local_id_in': 'list[str]',
-        'local_id_lt': 'str',
-        'local_id_lte': 'str',
-        'local_id_not': 'str',
-        'local_id_not_contains': 'str',
-        'local_id_not_ends_with': 'str',
-        'local_id_not_in': 'list[str]',
-        'local_id_not_starts_with': 'str',
-        'local_id_starts_with': 'str',
         'name': 'str',
         'name_contains': 'str',
         'name_ends_with': 'str',
@@ -115,22 +90,13 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'primary_edge_gateway_id_not_ends_with': 'str',
         'primary_edge_gateway_id_not_in': 'list[str]',
         'primary_edge_gateway_id_not_starts_with': 'str',
-        'primary_edge_gateway_id_starts_with': 'str',
-        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
+        'primary_edge_gateway_id_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
-        'created_at': 'createdAt',
-        'created_at_gt': 'createdAt_gt',
-        'created_at_gte': 'createdAt_gte',
-        'created_at_in': 'createdAt_in',
-        'created_at_lt': 'createdAt_lt',
-        'created_at_lte': 'createdAt_lte',
-        'created_at_not': 'createdAt_not',
-        'created_at_not_in': 'createdAt_not_in',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -152,9 +118,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
-        'external_subnet_groups_every': 'external_subnet_groups_every',
-        'external_subnet_groups_none': 'external_subnet_groups_none',
-        'external_subnet_groups_some': 'external_subnet_groups_some',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -169,20 +132,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'local_id': 'local_id',
-        'local_id_contains': 'local_id_contains',
-        'local_id_ends_with': 'local_id_ends_with',
-        'local_id_gt': 'local_id_gt',
-        'local_id_gte': 'local_id_gte',
-        'local_id_in': 'local_id_in',
-        'local_id_lt': 'local_id_lt',
-        'local_id_lte': 'local_id_lte',
-        'local_id_not': 'local_id_not',
-        'local_id_not_contains': 'local_id_not_contains',
-        'local_id_not_ends_with': 'local_id_not_ends_with',
-        'local_id_not_in': 'local_id_not_in',
-        'local_id_not_starts_with': 'local_id_not_starts_with',
-        'local_id_starts_with': 'local_id_starts_with',
         'name': 'name',
         'name_contains': 'name_contains',
         'name_ends_with': 'name_ends_with',
@@ -210,8 +159,7 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'primary_edge_gateway_id_not_ends_with': 'primary_edge_gateway_id_not_ends_with',
         'primary_edge_gateway_id_not_in': 'primary_edge_gateway_id_not_in',
         'primary_edge_gateway_id_not_starts_with': 'primary_edge_gateway_id_not_starts_with',
-        'primary_edge_gateway_id_starts_with': 'primary_edge_gateway_id_starts_with',
-        'vpc_service': 'vpc_service'
+        'primary_edge_gateway_id_starts_with': 'primary_edge_gateway_id_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -221,14 +169,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
-        self._created_at = None
-        self._created_at_gt = None
-        self._created_at_gte = None
-        self._created_at_in = None
-        self._created_at_lt = None
-        self._created_at_lte = None
-        self._created_at_not = None
-        self._created_at_not_in = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -250,9 +190,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
-        self._external_subnet_groups_every = None
-        self._external_subnet_groups_none = None
-        self._external_subnet_groups_some = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -267,20 +204,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._local_id = None
-        self._local_id_contains = None
-        self._local_id_ends_with = None
-        self._local_id_gt = None
-        self._local_id_gte = None
-        self._local_id_in = None
-        self._local_id_lt = None
-        self._local_id_lte = None
-        self._local_id_not = None
-        self._local_id_not_contains = None
-        self._local_id_not_ends_with = None
-        self._local_id_not_in = None
-        self._local_id_not_starts_with = None
-        self._local_id_starts_with = None
         self._name = None
         self._name_contains = None
         self._name_ends_with = None
@@ -309,20 +232,11 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self._primary_edge_gateway_id_not_in = None
         self._primary_edge_gateway_id_not_starts_with = None
         self._primary_edge_gateway_id_starts_with = None
-        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
-        self.created_at = kwargs.get("created_at", None)
-        self.created_at_gt = kwargs.get("created_at_gt", None)
-        self.created_at_gte = kwargs.get("created_at_gte", None)
-        self.created_at_in = kwargs.get("created_at_in", None)
-        self.created_at_lt = kwargs.get("created_at_lt", None)
-        self.created_at_lte = kwargs.get("created_at_lte", None)
-        self.created_at_not = kwargs.get("created_at_not", None)
-        self.created_at_not_in = kwargs.get("created_at_not_in", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -344,9 +258,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
-        self.external_subnet_groups_every = kwargs.get("external_subnet_groups_every", None)
-        self.external_subnet_groups_none = kwargs.get("external_subnet_groups_none", None)
-        self.external_subnet_groups_some = kwargs.get("external_subnet_groups_some", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -361,20 +272,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.local_id = kwargs.get("local_id", None)
-        self.local_id_contains = kwargs.get("local_id_contains", None)
-        self.local_id_ends_with = kwargs.get("local_id_ends_with", None)
-        self.local_id_gt = kwargs.get("local_id_gt", None)
-        self.local_id_gte = kwargs.get("local_id_gte", None)
-        self.local_id_in = kwargs.get("local_id_in", None)
-        self.local_id_lt = kwargs.get("local_id_lt", None)
-        self.local_id_lte = kwargs.get("local_id_lte", None)
-        self.local_id_not = kwargs.get("local_id_not", None)
-        self.local_id_not_contains = kwargs.get("local_id_not_contains", None)
-        self.local_id_not_ends_with = kwargs.get("local_id_not_ends_with", None)
-        self.local_id_not_in = kwargs.get("local_id_not_in", None)
-        self.local_id_not_starts_with = kwargs.get("local_id_not_starts_with", None)
-        self.local_id_starts_with = kwargs.get("local_id_starts_with", None)
         self.name = kwargs.get("name", None)
         self.name_contains = kwargs.get("name_contains", None)
         self.name_ends_with = kwargs.get("name_ends_with", None)
@@ -403,7 +300,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self.primary_edge_gateway_id_not_in = kwargs.get("primary_edge_gateway_id_not_in", None)
         self.primary_edge_gateway_id_not_starts_with = kwargs.get("primary_edge_gateway_id_not_starts_with", None)
         self.primary_edge_gateway_id_starts_with = kwargs.get("primary_edge_gateway_id_starts_with", None)
-        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -467,174 +363,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         """
 
         self.__or = _or
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at: The created_at of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at: str
-        """
-
-        self._created_at = created_at
-
-    @property
-    def created_at_gt(self):
-        """Gets the created_at_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_gt
-
-    @created_at_gt.setter
-    def created_at_gt(self, created_at_gt):
-        """Sets the created_at_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_gt: The created_at_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_gt: str
-        """
-
-        self._created_at_gt = created_at_gt
-
-    @property
-    def created_at_gte(self):
-        """Gets the created_at_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_gte
-
-    @created_at_gte.setter
-    def created_at_gte(self, created_at_gte):
-        """Sets the created_at_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_gte: The created_at_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_gte: str
-        """
-
-        self._created_at_gte = created_at_gte
-
-    @property
-    def created_at_in(self):
-        """Gets the created_at_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._created_at_in
-
-    @created_at_in.setter
-    def created_at_in(self, created_at_in):
-        """Sets the created_at_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_in: The created_at_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_in: list[str]
-        """
-
-        self._created_at_in = created_at_in
-
-    @property
-    def created_at_lt(self):
-        """Gets the created_at_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_lt
-
-    @created_at_lt.setter
-    def created_at_lt(self, created_at_lt):
-        """Sets the created_at_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_lt: The created_at_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_lt: str
-        """
-
-        self._created_at_lt = created_at_lt
-
-    @property
-    def created_at_lte(self):
-        """Gets the created_at_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_lte
-
-    @created_at_lte.setter
-    def created_at_lte(self, created_at_lte):
-        """Sets the created_at_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_lte: The created_at_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_lte: str
-        """
-
-        self._created_at_lte = created_at_lte
-
-    @property
-    def created_at_not(self):
-        """Gets the created_at_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_not
-
-    @created_at_not.setter
-    def created_at_not(self, created_at_not):
-        """Sets the created_at_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_not: The created_at_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_not: str
-        """
-
-        self._created_at_not = created_at_not
-
-    @property
-    def created_at_not_in(self):
-        """Gets the created_at_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._created_at_not_in
-
-    @created_at_not_in.setter
-    def created_at_not_in(self, created_at_not_in):
-        """Sets the created_at_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param created_at_not_in: The created_at_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type created_at_not_in: list[str]
-        """
-
-        self._created_at_not_in = created_at_not_in
 
     @property
     def description(self):
@@ -1078,69 +806,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self._entity_async_status_not_in = entity_async_status_not_in
 
     @property
-    def external_subnet_groups_every(self):
-        """Gets the external_subnet_groups_every of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The external_subnet_groups_every of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-        return self._external_subnet_groups_every
-
-    @external_subnet_groups_every.setter
-    def external_subnet_groups_every(self, external_subnet_groups_every):
-        """Sets the external_subnet_groups_every of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param external_subnet_groups_every: The external_subnet_groups_every of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type external_subnet_groups_every: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-
-        self._external_subnet_groups_every = external_subnet_groups_every
-
-    @property
-    def external_subnet_groups_none(self):
-        """Gets the external_subnet_groups_none of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The external_subnet_groups_none of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-        return self._external_subnet_groups_none
-
-    @external_subnet_groups_none.setter
-    def external_subnet_groups_none(self, external_subnet_groups_none):
-        """Sets the external_subnet_groups_none of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param external_subnet_groups_none: The external_subnet_groups_none of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type external_subnet_groups_none: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-
-        self._external_subnet_groups_none = external_subnet_groups_none
-
-    @property
-    def external_subnet_groups_some(self):
-        """Gets the external_subnet_groups_some of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The external_subnet_groups_some of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-        return self._external_subnet_groups_some
-
-    @external_subnet_groups_some.setter
-    def external_subnet_groups_some(self, external_subnet_groups_some):
-        """Sets the external_subnet_groups_some of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param external_subnet_groups_some: The external_subnet_groups_some of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type external_subnet_groups_some: VirtualPrivateCloudExternalSubnetGroupWhereInput
-        """
-
-        self._external_subnet_groups_some = external_subnet_groups_some
-
-    @property
     def id(self):
         """Gets the id of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
 
@@ -1433,300 +1098,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def local_id(self):
-        """Gets the local_id of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id
-
-    @local_id.setter
-    def local_id(self, local_id):
-        """Sets the local_id of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id: The local_id of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id: str
-        """
-
-        self._local_id = local_id
-
-    @property
-    def local_id_contains(self):
-        """Gets the local_id_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_contains
-
-    @local_id_contains.setter
-    def local_id_contains(self, local_id_contains):
-        """Sets the local_id_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_contains: The local_id_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_contains: str
-        """
-
-        self._local_id_contains = local_id_contains
-
-    @property
-    def local_id_ends_with(self):
-        """Gets the local_id_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_ends_with
-
-    @local_id_ends_with.setter
-    def local_id_ends_with(self, local_id_ends_with):
-        """Sets the local_id_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_ends_with: The local_id_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_ends_with: str
-        """
-
-        self._local_id_ends_with = local_id_ends_with
-
-    @property
-    def local_id_gt(self):
-        """Gets the local_id_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_gt
-
-    @local_id_gt.setter
-    def local_id_gt(self, local_id_gt):
-        """Sets the local_id_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_gt: The local_id_gt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_gt: str
-        """
-
-        self._local_id_gt = local_id_gt
-
-    @property
-    def local_id_gte(self):
-        """Gets the local_id_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_gte
-
-    @local_id_gte.setter
-    def local_id_gte(self, local_id_gte):
-        """Sets the local_id_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_gte: The local_id_gte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_gte: str
-        """
-
-        self._local_id_gte = local_id_gte
-
-    @property
-    def local_id_in(self):
-        """Gets the local_id_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._local_id_in
-
-    @local_id_in.setter
-    def local_id_in(self, local_id_in):
-        """Sets the local_id_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_in: The local_id_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_in: list[str]
-        """
-
-        self._local_id_in = local_id_in
-
-    @property
-    def local_id_lt(self):
-        """Gets the local_id_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_lt
-
-    @local_id_lt.setter
-    def local_id_lt(self, local_id_lt):
-        """Sets the local_id_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_lt: The local_id_lt of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_lt: str
-        """
-
-        self._local_id_lt = local_id_lt
-
-    @property
-    def local_id_lte(self):
-        """Gets the local_id_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_lte
-
-    @local_id_lte.setter
-    def local_id_lte(self, local_id_lte):
-        """Sets the local_id_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_lte: The local_id_lte of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_lte: str
-        """
-
-        self._local_id_lte = local_id_lte
-
-    @property
-    def local_id_not(self):
-        """Gets the local_id_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_not
-
-    @local_id_not.setter
-    def local_id_not(self, local_id_not):
-        """Sets the local_id_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_not: The local_id_not of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_not: str
-        """
-
-        self._local_id_not = local_id_not
-
-    @property
-    def local_id_not_contains(self):
-        """Gets the local_id_not_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_not_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_not_contains
-
-    @local_id_not_contains.setter
-    def local_id_not_contains(self, local_id_not_contains):
-        """Sets the local_id_not_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_not_contains: The local_id_not_contains of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_not_contains: str
-        """
-
-        self._local_id_not_contains = local_id_not_contains
-
-    @property
-    def local_id_not_ends_with(self):
-        """Gets the local_id_not_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_not_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_not_ends_with
-
-    @local_id_not_ends_with.setter
-    def local_id_not_ends_with(self, local_id_not_ends_with):
-        """Sets the local_id_not_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_not_ends_with: The local_id_not_ends_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_not_ends_with: str
-        """
-
-        self._local_id_not_ends_with = local_id_not_ends_with
-
-    @property
-    def local_id_not_in(self):
-        """Gets the local_id_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._local_id_not_in
-
-    @local_id_not_in.setter
-    def local_id_not_in(self, local_id_not_in):
-        """Sets the local_id_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_not_in: The local_id_not_in of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_not_in: list[str]
-        """
-
-        self._local_id_not_in = local_id_not_in
-
-    @property
-    def local_id_not_starts_with(self):
-        """Gets the local_id_not_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_not_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_not_starts_with
-
-    @local_id_not_starts_with.setter
-    def local_id_not_starts_with(self, local_id_not_starts_with):
-        """Sets the local_id_not_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_not_starts_with: The local_id_not_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_not_starts_with: str
-        """
-
-        self._local_id_not_starts_with = local_id_not_starts_with
-
-    @property
-    def local_id_starts_with(self):
-        """Gets the local_id_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The local_id_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._local_id_starts_with
-
-    @local_id_starts_with.setter
-    def local_id_starts_with(self, local_id_starts_with):
-        """Sets the local_id_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param local_id_starts_with: The local_id_starts_with of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type local_id_starts_with: str
-        """
-
-        self._local_id_starts_with = local_id_starts_with
 
     @property
     def name(self):
@@ -2315,27 +1686,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         """
 
         self._primary_edge_gateway_id_starts_with = primary_edge_gateway_id_starts_with
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudServiceWhereInput
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type vpc_service: VirtualPrivateCloudServiceWhereInput
-        """
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

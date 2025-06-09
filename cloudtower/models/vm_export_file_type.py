@@ -23,8 +23,9 @@ class VmExportFileType(object):
     OVF = "OVF"
     QCOW2 = "QCOW2"
     RAW = "RAW"
+    VMDK = "VMDK"
 
-    allowable_values = [OVF, QCOW2, RAW]  # noqa: E501
+    allowable_values = [OVF, QCOW2, RAW, VMDK]  # noqa: E501
 
     """
     Attributes:
