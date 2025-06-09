@@ -43,6 +43,7 @@ from cloudtower.api.global_settings_api import GlobalSettingsApi
 from cloudtower.api.gpu_device_api import GpuDeviceApi
 from cloudtower.api.graph_api import GraphApi
 from cloudtower.api.host_api import HostApi
+from cloudtower.api.internal_api import InternalApi
 from cloudtower.api.ipmi_api import IpmiApi
 from cloudtower.api.iscsi_connection_api import IscsiConnectionApi
 from cloudtower.api.iscsi_lun_api import IscsiLunApi
@@ -55,6 +56,7 @@ from cloudtower.api.log_collection_api import LogCollectionApi
 from cloudtower.api.log_service_config_api import LogServiceConfigApi
 from cloudtower.api.metrics_api import MetricsApi
 from cloudtower.api.namespace_group_api import NamespaceGroupApi
+from cloudtower.api.network_policy_rule_service_api import NetworkPolicyRuleServiceApi
 from cloudtower.api.nfs_export_api import NfsExportApi
 from cloudtower.api.nfs_inode_api import NfsInodeApi
 from cloudtower.api.nic_api import NicApi
@@ -66,12 +68,17 @@ from cloudtower.api.nvmf_subsystem_api import NvmfSubsystemApi
 from cloudtower.api.observability_api import ObservabilityApi
 from cloudtower.api.organization_api import OrganizationApi
 from cloudtower.api.ovf_api import OvfApi
+from cloudtower.api.pci_device_api import PciDeviceApi
 from cloudtower.api.pmem_dimm_api import PmemDimmApi
 from cloudtower.api.rack_topo_api import RackTopoApi
+from cloudtower.api.replica_vm_api import ReplicaVmApi
+from cloudtower.api.replication_plan_api import ReplicationPlanApi
 from cloudtower.api.report_task_api import ReportTaskApi
 from cloudtower.api.report_template_api import ReportTemplateApi
+from cloudtower.api.resource_change_api import ResourceChangeApi
 from cloudtower.api.security_group_api import SecurityGroupApi
 from cloudtower.api.security_policy_api import SecurityPolicyApi
+from cloudtower.api.smtp_server_api import SmtpServerApi
 from cloudtower.api.snapshot_group_api import SnapshotGroupApi
 from cloudtower.api.snapshot_plan_api import SnapshotPlanApi
 from cloudtower.api.snapshot_plan_task_api import SnapshotPlanTaskApi
@@ -92,7 +99,10 @@ from cloudtower.api.vds_api import VdsApi
 from cloudtower.api.view_api import ViewApi
 from cloudtower.api.virtual_private_cloud_api import VirtualPrivateCloudApi
 from cloudtower.api.virtual_private_cloud_cluster_binding_api import VirtualPrivateCloudClusterBindingApi
+from cloudtower.api.virtual_private_cloud_edge_gateway_api import VirtualPrivateCloudEdgeGatewayApi
+from cloudtower.api.virtual_private_cloud_edge_gateway_group_api import VirtualPrivateCloudEdgeGatewayGroupApi
 from cloudtower.api.virtual_private_cloud_external_subnet_api import VirtualPrivateCloudExternalSubnetApi
+from cloudtower.api.virtual_private_cloud_external_subnet_group_api import VirtualPrivateCloudExternalSubnetGroupApi
 from cloudtower.api.virtual_private_cloud_floating_ip_api import VirtualPrivateCloudFloatingIpApi
 from cloudtower.api.virtual_private_cloud_nat_gateway_api import VirtualPrivateCloudNatGatewayApi
 from cloudtower.api.virtual_private_cloud_route_table_api import VirtualPrivateCloudRouteTableApi

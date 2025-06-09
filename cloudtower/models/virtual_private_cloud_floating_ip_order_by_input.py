@@ -24,12 +24,14 @@ class VirtualPrivateCloudFloatingIpOrderByInput(object):
     ENTITYASYNCSTATUS_DESC = "entityAsyncStatus_DESC"
     EXTERNAL_IP_ASC = "external_ip_ASC"
     EXTERNAL_IP_DESC = "external_ip_DESC"
+    EXTERNAL_IPS_ASC = "external_ips_ASC"
+    EXTERNAL_IPS_DESC = "external_ips_DESC"
     ID_ASC = "id_ASC"
     ID_DESC = "id_DESC"
     LOCAL_ID_ASC = "local_id_ASC"
     LOCAL_ID_DESC = "local_id_DESC"
 
-    allowable_values = [ENTITYASYNCSTATUS_ASC, ENTITYASYNCSTATUS_DESC, EXTERNAL_IP_ASC, EXTERNAL_IP_DESC, ID_ASC, ID_DESC, LOCAL_ID_ASC, LOCAL_ID_DESC]  # noqa: E501
+    allowable_values = [ENTITYASYNCSTATUS_ASC, ENTITYASYNCSTATUS_DESC, EXTERNAL_IP_ASC, EXTERNAL_IP_DESC, EXTERNAL_IPS_ASC, EXTERNAL_IPS_DESC, ID_ASC, ID_DESC, LOCAL_ID_ASC, LOCAL_ID_DESC]  # noqa: E501
 
     """
     Attributes:

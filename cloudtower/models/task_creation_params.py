@@ -25,6 +25,10 @@ class TaskCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'api_key_name': 'str',
+        'snapshot': 'str',
+        'status': 'TaskStatus',
+        'id': 'str',
         'finished_at': 'str',
         'started_at': 'str',
         'steps': 'list[TaskStepCreationParams]',
@@ -41,6 +45,10 @@ class TaskCreationParams(object):
     }
 
     attribute_map = {
+        'api_key_name': 'api_key_name',
+        'snapshot': 'snapshot',
+        'status': 'status',
+        'id': 'id',
         'finished_at': 'finished_at',
         'started_at': 'started_at',
         'steps': 'steps',
@@ -60,6 +68,10 @@ class TaskCreationParams(object):
         """TaskCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._api_key_name = None
+        self._snapshot = None
+        self._status = None
+        self._id = None
         self._finished_at = None
         self._started_at = None
         self._steps = None
@@ -75,6 +87,14 @@ class TaskCreationParams(object):
         self._resource_type = None
         self.discriminator = None
 
+        if "api_key_name" in kwargs:
+            self.api_key_name = kwargs["api_key_name"]
+        if "snapshot" in kwargs:
+            self.snapshot = kwargs["snapshot"]
+        if "status" in kwargs:
+            self.status = kwargs["status"]
+        if "id" in kwargs:
+            self.id = kwargs["id"]
         if "finished_at" in kwargs:
             self.finished_at = kwargs["finished_at"]
         if "started_at" in kwargs:
@@ -101,6 +121,90 @@ class TaskCreationParams(object):
             self.resource_mutation = kwargs["resource_mutation"]
         if "resource_type" in kwargs:
             self.resource_type = kwargs["resource_type"]
+
+    @property
+    def api_key_name(self):
+        """Gets the api_key_name of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The api_key_name of this TaskCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._api_key_name
+
+    @api_key_name.setter
+    def api_key_name(self, api_key_name):
+        """Sets the api_key_name of this TaskCreationParams.
+
+
+        :param api_key_name: The api_key_name of this TaskCreationParams.  # noqa: E501
+        :type api_key_name: str
+        """
+
+        self._api_key_name = api_key_name
+
+    @property
+    def snapshot(self):
+        """Gets the snapshot of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The snapshot of this TaskCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._snapshot
+
+    @snapshot.setter
+    def snapshot(self, snapshot):
+        """Sets the snapshot of this TaskCreationParams.
+
+
+        :param snapshot: The snapshot of this TaskCreationParams.  # noqa: E501
+        :type snapshot: str
+        """
+
+        self._snapshot = snapshot
+
+    @property
+    def status(self):
+        """Gets the status of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The status of this TaskCreationParams.  # noqa: E501
+        :rtype: TaskStatus
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this TaskCreationParams.
+
+
+        :param status: The status of this TaskCreationParams.  # noqa: E501
+        :type status: TaskStatus
+        """
+
+        self._status = status
+
+    @property
+    def id(self):
+        """Gets the id of this TaskCreationParams.  # noqa: E501
+
+
+        :return: The id of this TaskCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this TaskCreationParams.
+
+
+        :param id: The id of this TaskCreationParams.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
 
     @property
     def finished_at(self):

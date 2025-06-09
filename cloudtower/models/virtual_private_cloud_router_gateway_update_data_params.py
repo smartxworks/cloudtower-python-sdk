@@ -27,6 +27,7 @@ class VirtualPrivateCloudRouterGatewayUpdateDataParams(object):
     openapi_types = {
         'rules': 'list[VirtualPrivateCloudRouterGatewayRuleInputType]',
         'associated_subnets_ids': 'list[str]',
+        'external_ips': 'list[VirtualPrivateCloudExternalIpsParams]',
         'external_ip': 'str',
         'name': 'str'
     }
@@ -34,6 +35,7 @@ class VirtualPrivateCloudRouterGatewayUpdateDataParams(object):
     attribute_map = {
         'rules': 'rules',
         'associated_subnets_ids': 'associated_subnets_ids',
+        'external_ips': 'external_ips',
         'external_ip': 'external_ip',
         'name': 'name'
     }
@@ -44,6 +46,7 @@ class VirtualPrivateCloudRouterGatewayUpdateDataParams(object):
 
         self._rules = None
         self._associated_subnets_ids = None
+        self._external_ips = None
         self._external_ip = None
         self._name = None
         self.discriminator = None
@@ -52,6 +55,8 @@ class VirtualPrivateCloudRouterGatewayUpdateDataParams(object):
             self.rules = kwargs["rules"]
         if "associated_subnets_ids" in kwargs:
             self.associated_subnets_ids = kwargs["associated_subnets_ids"]
+        if "external_ips" in kwargs:
+            self.external_ips = kwargs["external_ips"]
         if "external_ip" in kwargs:
             self.external_ip = kwargs["external_ip"]
         if "name" in kwargs:
@@ -98,6 +103,27 @@ class VirtualPrivateCloudRouterGatewayUpdateDataParams(object):
         """
 
         self._associated_subnets_ids = associated_subnets_ids
+
+    @property
+    def external_ips(self):
+        """Gets the external_ips of this VirtualPrivateCloudRouterGatewayUpdateDataParams.  # noqa: E501
+
+
+        :return: The external_ips of this VirtualPrivateCloudRouterGatewayUpdateDataParams.  # noqa: E501
+        :rtype: list[VirtualPrivateCloudExternalIpsParams]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this VirtualPrivateCloudRouterGatewayUpdateDataParams.
+
+
+        :param external_ips: The external_ips of this VirtualPrivateCloudRouterGatewayUpdateDataParams.  # noqa: E501
+        :type external_ips: list[VirtualPrivateCloudExternalIpsParams]
+        """
+
+        self._external_ips = external_ips
 
     @property
     def external_ip(self):

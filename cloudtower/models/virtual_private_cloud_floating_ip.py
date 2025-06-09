@@ -27,7 +27,9 @@ class VirtualPrivateCloudFloatingIp(object):
     openapi_types = {
         'entity_async_status': 'EntityAsyncStatus',
         'external_ip': 'str',
+        'external_ips': 'list[NestedVpcGatewaysCommonExternalIpsType]',
         'external_subnet': 'NestedVirtualPrivateCloudExternalSubnet',
+        'external_subnet_group': 'NestedVirtualPrivateCloudExternalSubnetGroup',
         'id': 'str',
         'local_id': 'str',
         'vpc': 'NestedVirtualPrivateCloud'
@@ -36,7 +38,9 @@ class VirtualPrivateCloudFloatingIp(object):
     attribute_map = {
         'entity_async_status': 'entityAsyncStatus',
         'external_ip': 'external_ip',
+        'external_ips': 'external_ips',
         'external_subnet': 'external_subnet',
+        'external_subnet_group': 'external_subnet_group',
         'id': 'id',
         'local_id': 'local_id',
         'vpc': 'vpc'
@@ -48,7 +52,9 @@ class VirtualPrivateCloudFloatingIp(object):
 
         self._entity_async_status = None
         self._external_ip = None
+        self._external_ips = None
         self._external_subnet = None
+        self._external_subnet_group = None
         self._id = None
         self._local_id = None
         self._vpc = None
@@ -56,7 +62,9 @@ class VirtualPrivateCloudFloatingIp(object):
 
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.external_ip = kwargs.get("external_ip", None)
+        self.external_ips = kwargs.get("external_ips", None)
         self.external_subnet = kwargs.get("external_subnet", None)
+        self.external_subnet_group = kwargs.get("external_subnet_group", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "local_id" in kwargs:
@@ -107,6 +115,27 @@ class VirtualPrivateCloudFloatingIp(object):
         self._external_ip = external_ip
 
     @property
+    def external_ips(self):
+        """Gets the external_ips of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+
+
+        :return: The external_ips of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+        :rtype: list[NestedVpcGatewaysCommonExternalIpsType]
+        """
+        return self._external_ips
+
+    @external_ips.setter
+    def external_ips(self, external_ips):
+        """Sets the external_ips of this VirtualPrivateCloudFloatingIp.
+
+
+        :param external_ips: The external_ips of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+        :type external_ips: list[NestedVpcGatewaysCommonExternalIpsType]
+        """
+
+        self._external_ips = external_ips
+
+    @property
     def external_subnet(self):
         """Gets the external_subnet of this VirtualPrivateCloudFloatingIp.  # noqa: E501
 
@@ -126,6 +155,27 @@ class VirtualPrivateCloudFloatingIp(object):
         """
 
         self._external_subnet = external_subnet
+
+    @property
+    def external_subnet_group(self):
+        """Gets the external_subnet_group of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+
+
+        :return: The external_subnet_group of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+        :rtype: NestedVirtualPrivateCloudExternalSubnetGroup
+        """
+        return self._external_subnet_group
+
+    @external_subnet_group.setter
+    def external_subnet_group(self, external_subnet_group):
+        """Sets the external_subnet_group of this VirtualPrivateCloudFloatingIp.
+
+
+        :param external_subnet_group: The external_subnet_group of this VirtualPrivateCloudFloatingIp.  # noqa: E501
+        :type external_subnet_group: NestedVirtualPrivateCloudExternalSubnetGroup
+        """
+
+        self._external_subnet_group = external_subnet_group
 
     @property
     def id(self):

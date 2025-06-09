@@ -33,7 +33,8 @@ class SecurityPolicy(object):
         'ingress': 'list[NestedNetworkPolicyRule]',
         'is_blocklist': 'bool',
         'name': 'str',
-        'policy_mode': 'PolicyMode'
+        'policy_mode': 'PolicyMode',
+        'statistics': 'NestedSecurityPolicyStatistics'
     }
 
     attribute_map = {
@@ -45,7 +46,8 @@ class SecurityPolicy(object):
         'ingress': 'ingress',
         'is_blocklist': 'is_blocklist',
         'name': 'name',
-        'policy_mode': 'policy_mode'
+        'policy_mode': 'policy_mode',
+        'statistics': 'statistics'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -61,6 +63,7 @@ class SecurityPolicy(object):
         self._is_blocklist = None
         self._name = None
         self._policy_mode = None
+        self._statistics = None
         self.discriminator = None
 
         if "apply_to" in kwargs:
@@ -78,6 +81,7 @@ class SecurityPolicy(object):
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.policy_mode = kwargs.get("policy_mode", None)
+        self.statistics = kwargs.get("statistics", None)
 
     @property
     def apply_to(self):
@@ -279,6 +283,27 @@ class SecurityPolicy(object):
         """
 
         self._policy_mode = policy_mode
+
+    @property
+    def statistics(self):
+        """Gets the statistics of this SecurityPolicy.  # noqa: E501
+
+
+        :return: The statistics of this SecurityPolicy.  # noqa: E501
+        :rtype: NestedSecurityPolicyStatistics
+        """
+        return self._statistics
+
+    @statistics.setter
+    def statistics(self, statistics):
+        """Sets the statistics of this SecurityPolicy.
+
+
+        :param statistics: The statistics of this SecurityPolicy.  # noqa: E501
+        :type statistics: NestedSecurityPolicyStatistics
+        """
+
+        self._statistics = statistics
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

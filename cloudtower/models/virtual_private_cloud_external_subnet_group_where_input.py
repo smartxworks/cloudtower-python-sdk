@@ -28,14 +28,6 @@ class VirtualPrivateCloudExternalSubnetGroupWhereInput(object):
         '_and': 'list[VirtualPrivateCloudExternalSubnetGroupWhereInput]',
         '_not': 'list[VirtualPrivateCloudExternalSubnetGroupWhereInput]',
         '_or': 'list[VirtualPrivateCloudExternalSubnetGroupWhereInput]',
-        'created_at': 'str',
-        'created_at_gt': 'str',
-        'created_at_gte': 'str',
-        'created_at_in': 'list[str]',
-        'created_at_lt': 'str',
-        'created_at_lte': 'str',
-        'created_at_not': 'str',
-        'created_at_not_in': 'list[str]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -117,14 +109,6 @@ class VirtualPrivateCloudExternalSubnetGroupWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
-        'created_at': 'createdAt',
-        'created_at_gt': 'createdAt_gt',
-        'created_at_gte': 'createdAt_gte',
-        'created_at_in': 'createdAt_in',
-        'created_at_lt': 'createdAt_lt',
-        'created_at_lte': 'createdAt_lte',
-        'created_at_not': 'createdAt_not',
-        'created_at_not_in': 'createdAt_not_in',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -209,14 +193,6 @@ class VirtualPrivateCloudExternalSubnetGroupWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
-        self._created_at = None
-        self._created_at_gt = None
-        self._created_at_gte = None
-        self._created_at_in = None
-        self._created_at_lt = None
-        self._created_at_lte = None
-        self._created_at_not = None
-        self._created_at_not_in = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -297,14 +273,6 @@ class VirtualPrivateCloudExternalSubnetGroupWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
-        self.created_at = kwargs.get("created_at", None)
-        self.created_at_gt = kwargs.get("created_at_gt", None)
-        self.created_at_gte = kwargs.get("created_at_gte", None)
-        self.created_at_in = kwargs.get("created_at_in", None)
-        self.created_at_lt = kwargs.get("created_at_lt", None)
-        self.created_at_lte = kwargs.get("created_at_lte", None)
-        self.created_at_not = kwargs.get("created_at_not", None)
-        self.created_at_not_in = kwargs.get("created_at_not_in", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -443,174 +411,6 @@ class VirtualPrivateCloudExternalSubnetGroupWhereInput(object):
         """
 
         self.__or = _or
-
-    @property
-    def created_at(self):
-        """Gets the created_at of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at
-
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at: The created_at of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at: str
-        """
-
-        self._created_at = created_at
-
-    @property
-    def created_at_gt(self):
-        """Gets the created_at_gt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_gt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_gt
-
-    @created_at_gt.setter
-    def created_at_gt(self, created_at_gt):
-        """Sets the created_at_gt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_gt: The created_at_gt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_gt: str
-        """
-
-        self._created_at_gt = created_at_gt
-
-    @property
-    def created_at_gte(self):
-        """Gets the created_at_gte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_gte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_gte
-
-    @created_at_gte.setter
-    def created_at_gte(self, created_at_gte):
-        """Sets the created_at_gte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_gte: The created_at_gte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_gte: str
-        """
-
-        self._created_at_gte = created_at_gte
-
-    @property
-    def created_at_in(self):
-        """Gets the created_at_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._created_at_in
-
-    @created_at_in.setter
-    def created_at_in(self, created_at_in):
-        """Sets the created_at_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_in: The created_at_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_in: list[str]
-        """
-
-        self._created_at_in = created_at_in
-
-    @property
-    def created_at_lt(self):
-        """Gets the created_at_lt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_lt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_lt
-
-    @created_at_lt.setter
-    def created_at_lt(self, created_at_lt):
-        """Sets the created_at_lt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_lt: The created_at_lt of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_lt: str
-        """
-
-        self._created_at_lt = created_at_lt
-
-    @property
-    def created_at_lte(self):
-        """Gets the created_at_lte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_lte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_lte
-
-    @created_at_lte.setter
-    def created_at_lte(self, created_at_lte):
-        """Sets the created_at_lte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_lte: The created_at_lte of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_lte: str
-        """
-
-        self._created_at_lte = created_at_lte
-
-    @property
-    def created_at_not(self):
-        """Gets the created_at_not of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_not of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_at_not
-
-    @created_at_not.setter
-    def created_at_not(self, created_at_not):
-        """Sets the created_at_not of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_not: The created_at_not of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_not: str
-        """
-
-        self._created_at_not = created_at_not
-
-    @property
-    def created_at_not_in(self):
-        """Gets the created_at_not_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-
-
-        :return: The created_at_not_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._created_at_not_in
-
-    @created_at_not_in.setter
-    def created_at_not_in(self, created_at_not_in):
-        """Sets the created_at_not_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.
-
-
-        :param created_at_not_in: The created_at_not_in of this VirtualPrivateCloudExternalSubnetGroupWhereInput.  # noqa: E501
-        :type created_at_not_in: list[str]
-        """
-
-        self._created_at_not_in = created_at_not_in
 
     @property
     def description(self):
