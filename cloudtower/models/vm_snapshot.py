@@ -34,6 +34,7 @@ class VmSnapshot(object):
         'entity_async_status': 'EntityAsyncStatus',
         'firmware': 'VmFirmware',
         'ha': 'bool',
+        'ha_priority': 'VmHaPriority',
         'id': 'str',
         'io_policy': 'VmDiskIoPolicy',
         'labels': 'list[NestedLabel]',
@@ -64,6 +65,7 @@ class VmSnapshot(object):
         'entity_async_status': 'entityAsyncStatus',
         'firmware': 'firmware',
         'ha': 'ha',
+        'ha_priority': 'ha_priority',
         'id': 'id',
         'io_policy': 'io_policy',
         'labels': 'labels',
@@ -97,6 +99,7 @@ class VmSnapshot(object):
         self._entity_async_status = None
         self._firmware = None
         self._ha = None
+        self._ha_priority = None
         self._id = None
         self._io_policy = None
         self._labels = None
@@ -134,6 +137,7 @@ class VmSnapshot(object):
             self.firmware = kwargs["firmware"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
+        self.ha_priority = kwargs.get("ha_priority", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.io_policy = kwargs.get("io_policy", None)
@@ -364,6 +368,27 @@ class VmSnapshot(object):
             raise ValueError("Invalid value for `ha`, must not be `None`")  # noqa: E501
 
         self._ha = ha
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this VmSnapshot.  # noqa: E501
+
+
+        :return: The ha_priority of this VmSnapshot.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this VmSnapshot.
+
+
+        :param ha_priority: The ha_priority of this VmSnapshot.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
 
     @property
     def id(self):

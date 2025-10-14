@@ -25,6 +25,8 @@ class VmdkDiskModify(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
+        'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
         'bus': 'Bus',
         'volume_name': 'str',
@@ -33,6 +35,8 @@ class VmdkDiskModify(object):
     }
 
     attribute_map = {
+        'elf_ec_storage_policy': 'elf_ec_storage_policy',
+        'elf_replica_storage_policy': 'elf_replica_storage_policy',
         'elf_storage_policy': 'elf_storage_policy',
         'bus': 'bus',
         'volume_name': 'volume_name',
@@ -44,6 +48,8 @@ class VmdkDiskModify(object):
         """VmdkDiskModify - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._elf_ec_storage_policy = None
+        self._elf_replica_storage_policy = None
         self._elf_storage_policy = None
         self._bus = None
         self._volume_name = None
@@ -51,6 +57,10 @@ class VmdkDiskModify(object):
         self._vmdk_name = None
         self.discriminator = None
 
+        if "elf_ec_storage_policy" in kwargs:
+            self.elf_ec_storage_policy = kwargs["elf_ec_storage_policy"]
+        if "elf_replica_storage_policy" in kwargs:
+            self.elf_replica_storage_policy = kwargs["elf_replica_storage_policy"]
         if "elf_storage_policy" in kwargs:
             self.elf_storage_policy = kwargs["elf_storage_policy"]
         if "bus" in kwargs:
@@ -61,6 +71,48 @@ class VmdkDiskModify(object):
             self.boot = kwargs["boot"]
         if "vmdk_name" in kwargs:
             self.vmdk_name = kwargs["vmdk_name"]
+
+    @property
+    def elf_ec_storage_policy(self):
+        """Gets the elf_ec_storage_policy of this VmdkDiskModify.  # noqa: E501
+
+
+        :return: The elf_ec_storage_policy of this VmdkDiskModify.  # noqa: E501
+        :rtype: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+        return self._elf_ec_storage_policy
+
+    @elf_ec_storage_policy.setter
+    def elf_ec_storage_policy(self, elf_ec_storage_policy):
+        """Sets the elf_ec_storage_policy of this VmdkDiskModify.
+
+
+        :param elf_ec_storage_policy: The elf_ec_storage_policy of this VmdkDiskModify.  # noqa: E501
+        :type elf_ec_storage_policy: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+
+        self._elf_ec_storage_policy = elf_ec_storage_policy
+
+    @property
+    def elf_replica_storage_policy(self):
+        """Gets the elf_replica_storage_policy of this VmdkDiskModify.  # noqa: E501
+
+
+        :return: The elf_replica_storage_policy of this VmdkDiskModify.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_replica_storage_policy
+
+    @elf_replica_storage_policy.setter
+    def elf_replica_storage_policy(self, elf_replica_storage_policy):
+        """Sets the elf_replica_storage_policy of this VmdkDiskModify.
+
+
+        :param elf_replica_storage_policy: The elf_replica_storage_policy of this VmdkDiskModify.  # noqa: E501
+        :type elf_replica_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_replica_storage_policy = elf_replica_storage_policy
 
     @property
     def elf_storage_policy(self):

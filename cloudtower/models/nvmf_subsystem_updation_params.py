@@ -25,7 +25,7 @@ class NvmfSubsystemUpdationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'data': 'NvmfSubsystemCommonParams',
+        'data': 'NvmfSubsystemUpdationParamsData',
         'where': 'NvmfSubsystemWhereInput'
     }
 
@@ -53,7 +53,7 @@ class NvmfSubsystemUpdationParams(object):
 
 
         :return: The data of this NvmfSubsystemUpdationParams.  # noqa: E501
-        :rtype: NvmfSubsystemCommonParams
+        :rtype: NvmfSubsystemUpdationParamsData
         """
         return self._data
 
@@ -63,7 +63,7 @@ class NvmfSubsystemUpdationParams(object):
 
 
         :param data: The data of this NvmfSubsystemUpdationParams.  # noqa: E501
-        :type data: NvmfSubsystemCommonParams
+        :type data: NvmfSubsystemUpdationParamsData
         """
         if self.local_vars_configuration.client_side_validation and data is None:  # noqa: E501
             raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501

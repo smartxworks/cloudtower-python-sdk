@@ -16,6 +16,8 @@ from cloudtower.api.backup_service_api import BackupServiceApi
 from cloudtower.api.backup_store_repository_api import BackupStoreRepositoryApi
 from cloudtower.api.backup_target_execution_api import BackupTargetExecutionApi
 from cloudtower.api.brick_topo_api import BrickTopoApi
+from cloudtower.api.business_host_api import BusinessHostApi
+from cloudtower.api.business_host_group_api import BusinessHostGroupApi
 from cloudtower.api.cloud_tower_application_api import CloudTowerApplicationApi
 from cloudtower.api.cloud_tower_application_package_api import CloudTowerApplicationPackageApi
 from cloudtower.api.cluster_api import ClusterApi
@@ -31,6 +33,8 @@ from cloudtower.api.datacenter_api import DatacenterApi
 from cloudtower.api.deploy_api import DeployApi
 from cloudtower.api.discovered_host_api import DiscoveredHostApi
 from cloudtower.api.disk_api import DiskApi
+from cloudtower.api.disk_pool_api import DiskPoolApi
+from cloudtower.api.ecp_license_api import EcpLicenseApi
 from cloudtower.api.elf_data_store_api import ElfDataStoreApi
 from cloudtower.api.elf_image_api import ElfImageApi
 from cloudtower.api.elf_storage_policy_api import ElfStoragePolicyApi
@@ -73,6 +77,7 @@ from cloudtower.api.pmem_dimm_api import PmemDimmApi
 from cloudtower.api.rack_topo_api import RackTopoApi
 from cloudtower.api.replica_vm_api import ReplicaVmApi
 from cloudtower.api.replication_plan_api import ReplicationPlanApi
+from cloudtower.api.replication_service_api import ReplicationServiceApi
 from cloudtower.api.report_task_api import ReportTaskApi
 from cloudtower.api.report_template_api import ReportTemplateApi
 from cloudtower.api.resource_change_api import ResourceChangeApi

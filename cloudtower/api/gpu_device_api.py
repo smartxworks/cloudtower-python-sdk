@@ -38,6 +38,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_request_body: GetGpuDevicesRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -69,6 +71,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_request_body: GetGpuDevicesRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -97,7 +101,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'get_gpu_devices_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -133,6 +138,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -191,6 +198,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_request_body: GetGpuDevicesRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -222,6 +231,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_request_body: GetGpuDevicesRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -250,7 +261,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'get_gpu_devices_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -286,6 +298,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -343,6 +357,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_connection_request_body: GetGpuDevicesConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -374,6 +390,8 @@ class GpuDeviceApi(object):
         :type get_gpu_devices_connection_request_body: GetGpuDevicesConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -402,7 +420,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'get_gpu_devices_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -438,6 +457,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -495,6 +516,8 @@ class GpuDeviceApi(object):
         :type gpu_device_sriov_switch_params: GpuDeviceSriovSwitchParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -526,6 +549,8 @@ class GpuDeviceApi(object):
         :type gpu_device_sriov_switch_params: GpuDeviceSriovSwitchParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -554,7 +579,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'gpu_device_sriov_switch_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -590,6 +616,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -648,6 +676,8 @@ class GpuDeviceApi(object):
         :type gpu_device_description_updation_params: GpuDeviceDescriptionUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -679,6 +709,8 @@ class GpuDeviceApi(object):
         :type gpu_device_description_updation_params: GpuDeviceDescriptionUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -707,7 +739,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'gpu_device_description_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -743,6 +776,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -801,6 +836,8 @@ class GpuDeviceApi(object):
         :type gpu_device_usage_updation_params: GpuDeviceUsageUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -832,6 +869,8 @@ class GpuDeviceApi(object):
         :type gpu_device_usage_updation_params: GpuDeviceUsageUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -860,7 +899,8 @@ class GpuDeviceApi(object):
 
         all_params = [
             'gpu_device_usage_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -896,6 +936,8 @@ class GpuDeviceApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

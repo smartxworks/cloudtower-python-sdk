@@ -26,6 +26,7 @@ class VmUpdateParamsData(object):
     """
     openapi_types = {
         'vcpu': 'int',
+        'ha_priority': 'VmHaPriority',
         'ha': 'bool',
         'memory_unit': 'ByteUnit',
         'memory': 'int',
@@ -37,6 +38,7 @@ class VmUpdateParamsData(object):
 
     attribute_map = {
         'vcpu': 'vcpu',
+        'ha_priority': 'ha_priority',
         'ha': 'ha',
         'memory_unit': 'memory_unit',
         'memory': 'memory',
@@ -51,6 +53,7 @@ class VmUpdateParamsData(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._vcpu = None
+        self._ha_priority = None
         self._ha = None
         self._memory_unit = None
         self._memory = None
@@ -62,6 +65,8 @@ class VmUpdateParamsData(object):
 
         if "vcpu" in kwargs:
             self.vcpu = kwargs["vcpu"]
+        if "ha_priority" in kwargs:
+            self.ha_priority = kwargs["ha_priority"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
         if "memory_unit" in kwargs:
@@ -97,6 +102,27 @@ class VmUpdateParamsData(object):
         """
 
         self._vcpu = vcpu
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this VmUpdateParamsData.  # noqa: E501
+
+
+        :return: The ha_priority of this VmUpdateParamsData.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this VmUpdateParamsData.
+
+
+        :param ha_priority: The ha_priority of this VmUpdateParamsData.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
 
     @property
     def ha(self):

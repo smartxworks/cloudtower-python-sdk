@@ -25,12 +25,16 @@ class IscsiLunUpdationParamsDataAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'replica_num': 'int',
+        'thin_provision': 'bool',
         'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'name': 'str'
     }
 
     attribute_map = {
+        'replica_num': 'replica_num',
+        'thin_provision': 'thin_provision',
         'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'name': 'name'
@@ -40,17 +44,65 @@ class IscsiLunUpdationParamsDataAllOf(object):
         """IscsiLunUpdationParamsDataAllOf - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._replica_num = None
+        self._thin_provision = None
         self._assigned_size_unit = None
         self._assigned_size = None
         self._name = None
         self.discriminator = None
 
+        if "replica_num" in kwargs:
+            self.replica_num = kwargs["replica_num"]
+        if "thin_provision" in kwargs:
+            self.thin_provision = kwargs["thin_provision"]
         if "assigned_size_unit" in kwargs:
             self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def replica_num(self):
+        """Gets the replica_num of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+
+
+        :return: The replica_num of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :rtype: int
+        """
+        return self._replica_num
+
+    @replica_num.setter
+    def replica_num(self, replica_num):
+        """Sets the replica_num of this IscsiLunUpdationParamsDataAllOf.
+
+
+        :param replica_num: The replica_num of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :type replica_num: int
+        """
+
+        self._replica_num = replica_num
+
+    @property
+    def thin_provision(self):
+        """Gets the thin_provision of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+
+
+        :return: The thin_provision of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :rtype: bool
+        """
+        return self._thin_provision
+
+    @thin_provision.setter
+    def thin_provision(self, thin_provision):
+        """Sets the thin_provision of this IscsiLunUpdationParamsDataAllOf.
+
+
+        :param thin_provision: The thin_provision of this IscsiLunUpdationParamsDataAllOf.  # noqa: E501
+        :type thin_provision: bool
+        """
+
+        self._thin_provision = thin_provision
 
     @property
     def assigned_size_unit(self):

@@ -25,12 +25,18 @@ class NestedStoragePolicyConfig(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'ec_k': 'int',
+        'ec_m': 'int',
         'replica_num': 'int',
+        'resiliency_type': 'ResiliencyType',
         'thin_provision': 'bool'
     }
 
     attribute_map = {
+        'ec_k': 'ec_k',
+        'ec_m': 'ec_m',
         'replica_num': 'replica_num',
+        'resiliency_type': 'resiliency_type',
         'thin_provision': 'thin_provision'
     }
 
@@ -38,12 +44,60 @@ class NestedStoragePolicyConfig(object):
         """NestedStoragePolicyConfig - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._ec_k = None
+        self._ec_m = None
         self._replica_num = None
+        self._resiliency_type = None
         self._thin_provision = None
         self.discriminator = None
 
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_m = kwargs.get("ec_m", None)
         self.replica_num = kwargs.get("replica_num", None)
+        self.resiliency_type = kwargs.get("resiliency_type", None)
         self.thin_provision = kwargs.get("thin_provision", None)
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NestedStoragePolicyConfig.  # noqa: E501
+
+
+        :return: The ec_k of this NestedStoragePolicyConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NestedStoragePolicyConfig.
+
+
+        :param ec_k: The ec_k of this NestedStoragePolicyConfig.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NestedStoragePolicyConfig.  # noqa: E501
+
+
+        :return: The ec_m of this NestedStoragePolicyConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NestedStoragePolicyConfig.
+
+
+        :param ec_m: The ec_m of this NestedStoragePolicyConfig.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
 
     @property
     def replica_num(self):
@@ -65,6 +119,27 @@ class NestedStoragePolicyConfig(object):
         """
 
         self._replica_num = replica_num
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NestedStoragePolicyConfig.  # noqa: E501
+
+
+        :return: The resiliency_type of this NestedStoragePolicyConfig.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NestedStoragePolicyConfig.
+
+
+        :param resiliency_type: The resiliency_type of this NestedStoragePolicyConfig.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def thin_provision(self):

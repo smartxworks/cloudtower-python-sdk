@@ -161,6 +161,10 @@ class VmWhereInput(object):
         'guest_used_size_not_in': 'list[int]',
         'ha': 'bool',
         'ha_not': 'bool',
+        'ha_priority': 'VmHaPriority',
+        'ha_priority_in': 'list[VmHaPriority]',
+        'ha_priority_not': 'VmHaPriority',
+        'ha_priority_not_in': 'list[VmHaPriority]',
         'host': 'HostWhereInput',
         'hostname': 'str',
         'hostname_contains': 'str',
@@ -614,6 +618,10 @@ class VmWhereInput(object):
         'guest_used_size_not_in': 'guest_used_size_not_in',
         'ha': 'ha',
         'ha_not': 'ha_not',
+        'ha_priority': 'ha_priority',
+        'ha_priority_in': 'ha_priority_in',
+        'ha_priority_not': 'ha_priority_not',
+        'ha_priority_not_in': 'ha_priority_not_in',
         'host': 'host',
         'hostname': 'hostname',
         'hostname_contains': 'hostname_contains',
@@ -1070,6 +1078,10 @@ class VmWhereInput(object):
         self._guest_used_size_not_in = None
         self._ha = None
         self._ha_not = None
+        self._ha_priority = None
+        self._ha_priority_in = None
+        self._ha_priority_not = None
+        self._ha_priority_not_in = None
         self._host = None
         self._hostname = None
         self._hostname_contains = None
@@ -1522,6 +1534,10 @@ class VmWhereInput(object):
         self.guest_used_size_not_in = kwargs.get("guest_used_size_not_in", None)
         self.ha = kwargs.get("ha", None)
         self.ha_not = kwargs.get("ha_not", None)
+        self.ha_priority = kwargs.get("ha_priority", None)
+        self.ha_priority_in = kwargs.get("ha_priority_in", None)
+        self.ha_priority_not = kwargs.get("ha_priority_not", None)
+        self.ha_priority_not_in = kwargs.get("ha_priority_not_in", None)
         self.host = kwargs.get("host", None)
         self.hostname = kwargs.get("hostname", None)
         self.hostname_contains = kwargs.get("hostname_contains", None)
@@ -4692,6 +4708,90 @@ class VmWhereInput(object):
         """
 
         self._ha_not = ha_not
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this VmWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority of this VmWhereInput.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this VmWhereInput.
+
+
+        :param ha_priority: The ha_priority of this VmWhereInput.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
+
+    @property
+    def ha_priority_in(self):
+        """Gets the ha_priority_in of this VmWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_in of this VmWhereInput.  # noqa: E501
+        :rtype: list[VmHaPriority]
+        """
+        return self._ha_priority_in
+
+    @ha_priority_in.setter
+    def ha_priority_in(self, ha_priority_in):
+        """Sets the ha_priority_in of this VmWhereInput.
+
+
+        :param ha_priority_in: The ha_priority_in of this VmWhereInput.  # noqa: E501
+        :type ha_priority_in: list[VmHaPriority]
+        """
+
+        self._ha_priority_in = ha_priority_in
+
+    @property
+    def ha_priority_not(self):
+        """Gets the ha_priority_not of this VmWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_not of this VmWhereInput.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority_not
+
+    @ha_priority_not.setter
+    def ha_priority_not(self, ha_priority_not):
+        """Sets the ha_priority_not of this VmWhereInput.
+
+
+        :param ha_priority_not: The ha_priority_not of this VmWhereInput.  # noqa: E501
+        :type ha_priority_not: VmHaPriority
+        """
+
+        self._ha_priority_not = ha_priority_not
+
+    @property
+    def ha_priority_not_in(self):
+        """Gets the ha_priority_not_in of this VmWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_not_in of this VmWhereInput.  # noqa: E501
+        :rtype: list[VmHaPriority]
+        """
+        return self._ha_priority_not_in
+
+    @ha_priority_not_in.setter
+    def ha_priority_not_in(self, ha_priority_not_in):
+        """Sets the ha_priority_not_in of this VmWhereInput.
+
+
+        :param ha_priority_not_in: The ha_priority_not_in of this VmWhereInput.  # noqa: E501
+        :type ha_priority_not_in: list[VmHaPriority]
+        """
+
+        self._ha_priority_not_in = ha_priority_not_in
 
     @property
     def host(self):

@@ -25,6 +25,10 @@ class NvmfNamespaceCreationParamsAllOf(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'ec_m': 'float',
+        'ec_k': 'float',
+        'resiliency_type': 'ResiliencyType',
+        'thin_provision': 'bool',
         'namespace_id': 'int',
         'group_id': 'str',
         'is_shared': 'bool',
@@ -36,6 +40,10 @@ class NvmfNamespaceCreationParamsAllOf(object):
     }
 
     attribute_map = {
+        'ec_m': 'ec_m',
+        'ec_k': 'ec_k',
+        'resiliency_type': 'resiliency_type',
+        'thin_provision': 'thin_provision',
         'namespace_id': 'namespace_id',
         'group_id': 'group_id',
         'is_shared': 'is_shared',
@@ -50,6 +58,10 @@ class NvmfNamespaceCreationParamsAllOf(object):
         """NvmfNamespaceCreationParamsAllOf - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._ec_m = None
+        self._ec_k = None
+        self._resiliency_type = None
+        self._thin_provision = None
         self._namespace_id = None
         self._group_id = None
         self._is_shared = None
@@ -60,6 +72,14 @@ class NvmfNamespaceCreationParamsAllOf(object):
         self._name = None
         self.discriminator = None
 
+        if "ec_m" in kwargs:
+            self.ec_m = kwargs["ec_m"]
+        if "ec_k" in kwargs:
+            self.ec_k = kwargs["ec_k"]
+        if "resiliency_type" in kwargs:
+            self.resiliency_type = kwargs["resiliency_type"]
+        if "thin_provision" in kwargs:
+            self.thin_provision = kwargs["thin_provision"]
         if "namespace_id" in kwargs:
             self.namespace_id = kwargs["namespace_id"]
         if "group_id" in kwargs:
@@ -76,6 +96,90 @@ class NvmfNamespaceCreationParamsAllOf(object):
             self.nvmf_subsystem_id = kwargs["nvmf_subsystem_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfNamespaceCreationParamsAllOf.
+
+
+        :param ec_m: The ec_m of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :type ec_m: float
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfNamespaceCreationParamsAllOf.
+
+
+        :param ec_k: The ec_k of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :type ec_k: float
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfNamespaceCreationParamsAllOf.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def thin_provision(self):
+        """Gets the thin_provision of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+
+
+        :return: The thin_provision of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :rtype: bool
+        """
+        return self._thin_provision
+
+    @thin_provision.setter
+    def thin_provision(self, thin_provision):
+        """Sets the thin_provision of this NvmfNamespaceCreationParamsAllOf.
+
+
+        :param thin_provision: The thin_provision of this NvmfNamespaceCreationParamsAllOf.  # noqa: E501
+        :type thin_provision: bool
+        """
+
+        self._thin_provision = thin_provision
 
     @property
     def namespace_id(self):

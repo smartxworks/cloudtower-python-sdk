@@ -46,6 +46,7 @@ class Vm(object):
         'guest_size_usage': 'float',
         'guest_used_size': 'int',
         'ha': 'bool',
+        'ha_priority': 'VmHaPriority',
         'host': 'NestedHost',
         'hostname': 'str',
         'id': 'str',
@@ -117,6 +118,7 @@ class Vm(object):
         'guest_size_usage': 'guest_size_usage',
         'guest_used_size': 'guest_used_size',
         'ha': 'ha',
+        'ha_priority': 'ha_priority',
         'host': 'host',
         'hostname': 'hostname',
         'id': 'id',
@@ -191,6 +193,7 @@ class Vm(object):
         self._guest_size_usage = None
         self._guest_used_size = None
         self._ha = None
+        self._ha_priority = None
         self._host = None
         self._hostname = None
         self._id = None
@@ -267,6 +270,7 @@ class Vm(object):
         self.guest_used_size = kwargs.get("guest_used_size", None)
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
+        self.ha_priority = kwargs.get("ha_priority", None)
         self.host = kwargs.get("host", None)
         self.hostname = kwargs.get("hostname", None)
         if "id" in kwargs:
@@ -782,6 +786,27 @@ class Vm(object):
             raise ValueError("Invalid value for `ha`, must not be `None`")  # noqa: E501
 
         self._ha = ha
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this Vm.  # noqa: E501
+
+
+        :return: The ha_priority of this Vm.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this Vm.
+
+
+        :param ha_priority: The ha_priority of this Vm.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
 
     @property
     def host(self):

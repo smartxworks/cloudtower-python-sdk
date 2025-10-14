@@ -58,6 +58,22 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'int',
         'allocatable_memory_bytes_not': 'int',
         'allocatable_memory_bytes_not_in': 'list[int]',
+        'allocated_prioritized_space': 'int',
+        'allocated_prioritized_space_gt': 'int',
+        'allocated_prioritized_space_gte': 'int',
+        'allocated_prioritized_space_in': 'list[int]',
+        'allocated_prioritized_space_lt': 'int',
+        'allocated_prioritized_space_lte': 'int',
+        'allocated_prioritized_space_not': 'int',
+        'allocated_prioritized_space_not_in': 'list[int]',
+        'allocated_prioritized_space_usage': 'float',
+        'allocated_prioritized_space_usage_gt': 'float',
+        'allocated_prioritized_space_usage_gte': 'float',
+        'allocated_prioritized_space_usage_in': 'list[float]',
+        'allocated_prioritized_space_usage_lt': 'float',
+        'allocated_prioritized_space_usage_lte': 'float',
+        'allocated_prioritized_space_usage_not': 'float',
+        'allocated_prioritized_space_usage_not_in': 'list[float]',
         'chunk_id': 'str',
         'chunk_id_contains': 'str',
         'chunk_id_ends_with': 'str',
@@ -73,6 +89,18 @@ class HostWhereInput(object):
         'chunk_id_not_starts_with': 'str',
         'chunk_id_starts_with': 'str',
         'cluster': 'ClusterWhereInput',
+        'commited_memory_bytes': 'int',
+        'commited_memory_bytes_gt': 'int',
+        'commited_memory_bytes_gte': 'int',
+        'commited_memory_bytes_in': 'list[int]',
+        'commited_memory_bytes_lt': 'int',
+        'commited_memory_bytes_lte': 'int',
+        'commited_memory_bytes_not': 'int',
+        'commited_memory_bytes_not_in': 'list[int]',
+        'connect_status': 'HostConnectStatus',
+        'connect_status_in': 'list[HostConnectStatus]',
+        'connect_status_not': 'HostConnectStatus',
+        'connect_status_not_in': 'list[HostConnectStatus]',
         'cpu_brand': 'str',
         'cpu_brand_contains': 'str',
         'cpu_brand_ends_with': 'str',
@@ -141,9 +169,20 @@ class HostWhereInput(object):
         'data_ip_not_in': 'list[str]',
         'data_ip_not_starts_with': 'str',
         'data_ip_starts_with': 'str',
+        'disk_pools_every': 'DiskPoolWhereInput',
+        'disk_pools_none': 'DiskPoolWhereInput',
+        'disk_pools_some': 'DiskPoolWhereInput',
         'disks_every': 'DiskWhereInput',
         'disks_none': 'DiskWhereInput',
         'disks_some': 'DiskWhereInput',
+        'downgraded_prioritized_space': 'int',
+        'downgraded_prioritized_space_gt': 'int',
+        'downgraded_prioritized_space_gte': 'int',
+        'downgraded_prioritized_space_in': 'list[int]',
+        'downgraded_prioritized_space_lt': 'int',
+        'downgraded_prioritized_space_lte': 'int',
+        'downgraded_prioritized_space_not': 'int',
+        'downgraded_prioritized_space_not_in': 'list[int]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -243,6 +282,10 @@ class HostWhereInput(object):
         'management_ip_not_in': 'list[str]',
         'management_ip_not_starts_with': 'str',
         'management_ip_starts_with': 'str',
+        'merged_status': 'HostMergedStatus',
+        'merged_status_in': 'list[HostMergedStatus]',
+        'merged_status_not': 'HostMergedStatus',
+        'merged_status_not_in': 'list[HostMergedStatus]',
         'model': 'str',
         'model_contains': 'str',
         'model_ends_with': 'str',
@@ -320,6 +363,54 @@ class HostWhereInput(object):
         'os_version_not_in': 'list[str]',
         'os_version_not_starts_with': 'str',
         'os_version_starts_with': 'str',
+        'perf_allocated_data_space': 'int',
+        'perf_allocated_data_space_gt': 'int',
+        'perf_allocated_data_space_gte': 'int',
+        'perf_allocated_data_space_in': 'list[int]',
+        'perf_allocated_data_space_lt': 'int',
+        'perf_allocated_data_space_lte': 'int',
+        'perf_allocated_data_space_not': 'int',
+        'perf_allocated_data_space_not_in': 'list[int]',
+        'perf_failure_data_space': 'int',
+        'perf_failure_data_space_gt': 'int',
+        'perf_failure_data_space_gte': 'int',
+        'perf_failure_data_space_in': 'list[int]',
+        'perf_failure_data_space_lt': 'int',
+        'perf_failure_data_space_lte': 'int',
+        'perf_failure_data_space_not': 'int',
+        'perf_failure_data_space_not_in': 'list[int]',
+        'perf_total_data_capacity': 'int',
+        'perf_total_data_capacity_gt': 'int',
+        'perf_total_data_capacity_gte': 'int',
+        'perf_total_data_capacity_in': 'list[int]',
+        'perf_total_data_capacity_lt': 'int',
+        'perf_total_data_capacity_lte': 'int',
+        'perf_total_data_capacity_not': 'int',
+        'perf_total_data_capacity_not_in': 'list[int]',
+        'perf_used_data_space': 'int',
+        'perf_used_data_space_gt': 'int',
+        'perf_used_data_space_gte': 'int',
+        'perf_used_data_space_in': 'list[int]',
+        'perf_used_data_space_lt': 'int',
+        'perf_used_data_space_lte': 'int',
+        'perf_used_data_space_not': 'int',
+        'perf_used_data_space_not_in': 'list[int]',
+        'perf_valid_data_space': 'int',
+        'perf_valid_data_space_gt': 'int',
+        'perf_valid_data_space_gte': 'int',
+        'perf_valid_data_space_in': 'list[int]',
+        'perf_valid_data_space_lt': 'int',
+        'perf_valid_data_space_lte': 'int',
+        'perf_valid_data_space_not': 'int',
+        'perf_valid_data_space_not_in': 'list[int]',
+        'planned_prioritized_space': 'int',
+        'planned_prioritized_space_gt': 'int',
+        'planned_prioritized_space_gte': 'int',
+        'planned_prioritized_space_in': 'list[int]',
+        'planned_prioritized_space_lt': 'int',
+        'planned_prioritized_space_lte': 'int',
+        'planned_prioritized_space_not': 'int',
+        'planned_prioritized_space_not_in': 'list[int]',
         'pmem_dimm_capacity': 'int',
         'pmem_dimm_capacity_gt': 'int',
         'pmem_dimm_capacity_gte': 'int',
@@ -347,6 +438,14 @@ class HostWhereInput(object):
         'pmem_disk_count_lte': 'int',
         'pmem_disk_count_not': 'int',
         'pmem_disk_count_not_in': 'list[int]',
+        'prio_space_percentage': 'float',
+        'prio_space_percentage_gt': 'float',
+        'prio_space_percentage_gte': 'float',
+        'prio_space_percentage_in': 'list[float]',
+        'prio_space_percentage_lt': 'float',
+        'prio_space_percentage_lte': 'float',
+        'prio_space_percentage_not': 'float',
+        'prio_space_percentage_not_in': 'list[float]',
         'provisioned_cpu_cores': 'int',
         'provisioned_cpu_cores_gt': 'int',
         'provisioned_cpu_cores_gte': 'int',
@@ -514,6 +613,14 @@ class HostWhereInput(object):
         'usb_devices_every': 'UsbDeviceWhereInput',
         'usb_devices_none': 'UsbDeviceWhereInput',
         'usb_devices_some': 'UsbDeviceWhereInput',
+        'used_cache_space': 'int',
+        'used_cache_space_gt': 'int',
+        'used_cache_space_gte': 'int',
+        'used_cache_space_in': 'list[int]',
+        'used_cache_space_lt': 'int',
+        'used_cache_space_lte': 'int',
+        'used_cache_space_not': 'int',
+        'used_cache_space_not_in': 'list[int]',
         'used_cpu_hz': 'float',
         'used_cpu_hz_gt': 'float',
         'used_cpu_hz_gte': 'float',
@@ -538,6 +645,22 @@ class HostWhereInput(object):
         'used_memory_bytes_lte': 'float',
         'used_memory_bytes_not': 'float',
         'used_memory_bytes_not_in': 'list[float]',
+        'valid_cache_space': 'int',
+        'valid_cache_space_gt': 'int',
+        'valid_cache_space_gte': 'int',
+        'valid_cache_space_in': 'list[int]',
+        'valid_cache_space_lt': 'int',
+        'valid_cache_space_lte': 'int',
+        'valid_cache_space_not': 'int',
+        'valid_cache_space_not_in': 'list[int]',
+        'valid_free_cache_space': 'int',
+        'valid_free_cache_space_gt': 'int',
+        'valid_free_cache_space_gte': 'int',
+        'valid_free_cache_space_in': 'list[int]',
+        'valid_free_cache_space_lt': 'int',
+        'valid_free_cache_space_lte': 'int',
+        'valid_free_cache_space_not': 'int',
+        'valid_free_cache_space_not_in': 'list[int]',
         'vm_num': 'int',
         'vm_num_gt': 'int',
         'vm_num_gte': 'int',
@@ -603,6 +726,22 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'allocatable_memory_bytes_lte',
         'allocatable_memory_bytes_not': 'allocatable_memory_bytes_not',
         'allocatable_memory_bytes_not_in': 'allocatable_memory_bytes_not_in',
+        'allocated_prioritized_space': 'allocated_prioritized_space',
+        'allocated_prioritized_space_gt': 'allocated_prioritized_space_gt',
+        'allocated_prioritized_space_gte': 'allocated_prioritized_space_gte',
+        'allocated_prioritized_space_in': 'allocated_prioritized_space_in',
+        'allocated_prioritized_space_lt': 'allocated_prioritized_space_lt',
+        'allocated_prioritized_space_lte': 'allocated_prioritized_space_lte',
+        'allocated_prioritized_space_not': 'allocated_prioritized_space_not',
+        'allocated_prioritized_space_not_in': 'allocated_prioritized_space_not_in',
+        'allocated_prioritized_space_usage': 'allocated_prioritized_space_usage',
+        'allocated_prioritized_space_usage_gt': 'allocated_prioritized_space_usage_gt',
+        'allocated_prioritized_space_usage_gte': 'allocated_prioritized_space_usage_gte',
+        'allocated_prioritized_space_usage_in': 'allocated_prioritized_space_usage_in',
+        'allocated_prioritized_space_usage_lt': 'allocated_prioritized_space_usage_lt',
+        'allocated_prioritized_space_usage_lte': 'allocated_prioritized_space_usage_lte',
+        'allocated_prioritized_space_usage_not': 'allocated_prioritized_space_usage_not',
+        'allocated_prioritized_space_usage_not_in': 'allocated_prioritized_space_usage_not_in',
         'chunk_id': 'chunk_id',
         'chunk_id_contains': 'chunk_id_contains',
         'chunk_id_ends_with': 'chunk_id_ends_with',
@@ -618,6 +757,18 @@ class HostWhereInput(object):
         'chunk_id_not_starts_with': 'chunk_id_not_starts_with',
         'chunk_id_starts_with': 'chunk_id_starts_with',
         'cluster': 'cluster',
+        'commited_memory_bytes': 'commited_memory_bytes',
+        'commited_memory_bytes_gt': 'commited_memory_bytes_gt',
+        'commited_memory_bytes_gte': 'commited_memory_bytes_gte',
+        'commited_memory_bytes_in': 'commited_memory_bytes_in',
+        'commited_memory_bytes_lt': 'commited_memory_bytes_lt',
+        'commited_memory_bytes_lte': 'commited_memory_bytes_lte',
+        'commited_memory_bytes_not': 'commited_memory_bytes_not',
+        'commited_memory_bytes_not_in': 'commited_memory_bytes_not_in',
+        'connect_status': 'connect_status',
+        'connect_status_in': 'connect_status_in',
+        'connect_status_not': 'connect_status_not',
+        'connect_status_not_in': 'connect_status_not_in',
         'cpu_brand': 'cpu_brand',
         'cpu_brand_contains': 'cpu_brand_contains',
         'cpu_brand_ends_with': 'cpu_brand_ends_with',
@@ -686,9 +837,20 @@ class HostWhereInput(object):
         'data_ip_not_in': 'data_ip_not_in',
         'data_ip_not_starts_with': 'data_ip_not_starts_with',
         'data_ip_starts_with': 'data_ip_starts_with',
+        'disk_pools_every': 'disk_pools_every',
+        'disk_pools_none': 'disk_pools_none',
+        'disk_pools_some': 'disk_pools_some',
         'disks_every': 'disks_every',
         'disks_none': 'disks_none',
         'disks_some': 'disks_some',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
+        'downgraded_prioritized_space_gt': 'downgraded_prioritized_space_gt',
+        'downgraded_prioritized_space_gte': 'downgraded_prioritized_space_gte',
+        'downgraded_prioritized_space_in': 'downgraded_prioritized_space_in',
+        'downgraded_prioritized_space_lt': 'downgraded_prioritized_space_lt',
+        'downgraded_prioritized_space_lte': 'downgraded_prioritized_space_lte',
+        'downgraded_prioritized_space_not': 'downgraded_prioritized_space_not',
+        'downgraded_prioritized_space_not_in': 'downgraded_prioritized_space_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -788,6 +950,10 @@ class HostWhereInput(object):
         'management_ip_not_in': 'management_ip_not_in',
         'management_ip_not_starts_with': 'management_ip_not_starts_with',
         'management_ip_starts_with': 'management_ip_starts_with',
+        'merged_status': 'merged_status',
+        'merged_status_in': 'merged_status_in',
+        'merged_status_not': 'merged_status_not',
+        'merged_status_not_in': 'merged_status_not_in',
         'model': 'model',
         'model_contains': 'model_contains',
         'model_ends_with': 'model_ends_with',
@@ -865,6 +1031,54 @@ class HostWhereInput(object):
         'os_version_not_in': 'os_version_not_in',
         'os_version_not_starts_with': 'os_version_not_starts_with',
         'os_version_starts_with': 'os_version_starts_with',
+        'perf_allocated_data_space': 'perf_allocated_data_space',
+        'perf_allocated_data_space_gt': 'perf_allocated_data_space_gt',
+        'perf_allocated_data_space_gte': 'perf_allocated_data_space_gte',
+        'perf_allocated_data_space_in': 'perf_allocated_data_space_in',
+        'perf_allocated_data_space_lt': 'perf_allocated_data_space_lt',
+        'perf_allocated_data_space_lte': 'perf_allocated_data_space_lte',
+        'perf_allocated_data_space_not': 'perf_allocated_data_space_not',
+        'perf_allocated_data_space_not_in': 'perf_allocated_data_space_not_in',
+        'perf_failure_data_space': 'perf_failure_data_space',
+        'perf_failure_data_space_gt': 'perf_failure_data_space_gt',
+        'perf_failure_data_space_gte': 'perf_failure_data_space_gte',
+        'perf_failure_data_space_in': 'perf_failure_data_space_in',
+        'perf_failure_data_space_lt': 'perf_failure_data_space_lt',
+        'perf_failure_data_space_lte': 'perf_failure_data_space_lte',
+        'perf_failure_data_space_not': 'perf_failure_data_space_not',
+        'perf_failure_data_space_not_in': 'perf_failure_data_space_not_in',
+        'perf_total_data_capacity': 'perf_total_data_capacity',
+        'perf_total_data_capacity_gt': 'perf_total_data_capacity_gt',
+        'perf_total_data_capacity_gte': 'perf_total_data_capacity_gte',
+        'perf_total_data_capacity_in': 'perf_total_data_capacity_in',
+        'perf_total_data_capacity_lt': 'perf_total_data_capacity_lt',
+        'perf_total_data_capacity_lte': 'perf_total_data_capacity_lte',
+        'perf_total_data_capacity_not': 'perf_total_data_capacity_not',
+        'perf_total_data_capacity_not_in': 'perf_total_data_capacity_not_in',
+        'perf_used_data_space': 'perf_used_data_space',
+        'perf_used_data_space_gt': 'perf_used_data_space_gt',
+        'perf_used_data_space_gte': 'perf_used_data_space_gte',
+        'perf_used_data_space_in': 'perf_used_data_space_in',
+        'perf_used_data_space_lt': 'perf_used_data_space_lt',
+        'perf_used_data_space_lte': 'perf_used_data_space_lte',
+        'perf_used_data_space_not': 'perf_used_data_space_not',
+        'perf_used_data_space_not_in': 'perf_used_data_space_not_in',
+        'perf_valid_data_space': 'perf_valid_data_space',
+        'perf_valid_data_space_gt': 'perf_valid_data_space_gt',
+        'perf_valid_data_space_gte': 'perf_valid_data_space_gte',
+        'perf_valid_data_space_in': 'perf_valid_data_space_in',
+        'perf_valid_data_space_lt': 'perf_valid_data_space_lt',
+        'perf_valid_data_space_lte': 'perf_valid_data_space_lte',
+        'perf_valid_data_space_not': 'perf_valid_data_space_not',
+        'perf_valid_data_space_not_in': 'perf_valid_data_space_not_in',
+        'planned_prioritized_space': 'planned_prioritized_space',
+        'planned_prioritized_space_gt': 'planned_prioritized_space_gt',
+        'planned_prioritized_space_gte': 'planned_prioritized_space_gte',
+        'planned_prioritized_space_in': 'planned_prioritized_space_in',
+        'planned_prioritized_space_lt': 'planned_prioritized_space_lt',
+        'planned_prioritized_space_lte': 'planned_prioritized_space_lte',
+        'planned_prioritized_space_not': 'planned_prioritized_space_not',
+        'planned_prioritized_space_not_in': 'planned_prioritized_space_not_in',
         'pmem_dimm_capacity': 'pmem_dimm_capacity',
         'pmem_dimm_capacity_gt': 'pmem_dimm_capacity_gt',
         'pmem_dimm_capacity_gte': 'pmem_dimm_capacity_gte',
@@ -892,6 +1106,14 @@ class HostWhereInput(object):
         'pmem_disk_count_lte': 'pmem_disk_count_lte',
         'pmem_disk_count_not': 'pmem_disk_count_not',
         'pmem_disk_count_not_in': 'pmem_disk_count_not_in',
+        'prio_space_percentage': 'prio_space_percentage',
+        'prio_space_percentage_gt': 'prio_space_percentage_gt',
+        'prio_space_percentage_gte': 'prio_space_percentage_gte',
+        'prio_space_percentage_in': 'prio_space_percentage_in',
+        'prio_space_percentage_lt': 'prio_space_percentage_lt',
+        'prio_space_percentage_lte': 'prio_space_percentage_lte',
+        'prio_space_percentage_not': 'prio_space_percentage_not',
+        'prio_space_percentage_not_in': 'prio_space_percentage_not_in',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
         'provisioned_cpu_cores_gt': 'provisioned_cpu_cores_gt',
         'provisioned_cpu_cores_gte': 'provisioned_cpu_cores_gte',
@@ -1059,6 +1281,14 @@ class HostWhereInput(object):
         'usb_devices_every': 'usb_devices_every',
         'usb_devices_none': 'usb_devices_none',
         'usb_devices_some': 'usb_devices_some',
+        'used_cache_space': 'used_cache_space',
+        'used_cache_space_gt': 'used_cache_space_gt',
+        'used_cache_space_gte': 'used_cache_space_gte',
+        'used_cache_space_in': 'used_cache_space_in',
+        'used_cache_space_lt': 'used_cache_space_lt',
+        'used_cache_space_lte': 'used_cache_space_lte',
+        'used_cache_space_not': 'used_cache_space_not',
+        'used_cache_space_not_in': 'used_cache_space_not_in',
         'used_cpu_hz': 'used_cpu_hz',
         'used_cpu_hz_gt': 'used_cpu_hz_gt',
         'used_cpu_hz_gte': 'used_cpu_hz_gte',
@@ -1083,6 +1313,22 @@ class HostWhereInput(object):
         'used_memory_bytes_lte': 'used_memory_bytes_lte',
         'used_memory_bytes_not': 'used_memory_bytes_not',
         'used_memory_bytes_not_in': 'used_memory_bytes_not_in',
+        'valid_cache_space': 'valid_cache_space',
+        'valid_cache_space_gt': 'valid_cache_space_gt',
+        'valid_cache_space_gte': 'valid_cache_space_gte',
+        'valid_cache_space_in': 'valid_cache_space_in',
+        'valid_cache_space_lt': 'valid_cache_space_lt',
+        'valid_cache_space_lte': 'valid_cache_space_lte',
+        'valid_cache_space_not': 'valid_cache_space_not',
+        'valid_cache_space_not_in': 'valid_cache_space_not_in',
+        'valid_free_cache_space': 'valid_free_cache_space',
+        'valid_free_cache_space_gt': 'valid_free_cache_space_gt',
+        'valid_free_cache_space_gte': 'valid_free_cache_space_gte',
+        'valid_free_cache_space_in': 'valid_free_cache_space_in',
+        'valid_free_cache_space_lt': 'valid_free_cache_space_lt',
+        'valid_free_cache_space_lte': 'valid_free_cache_space_lte',
+        'valid_free_cache_space_not': 'valid_free_cache_space_not',
+        'valid_free_cache_space_not_in': 'valid_free_cache_space_not_in',
         'vm_num': 'vm_num',
         'vm_num_gt': 'vm_num_gt',
         'vm_num_gte': 'vm_num_gte',
@@ -1151,6 +1397,22 @@ class HostWhereInput(object):
         self._allocatable_memory_bytes_lte = None
         self._allocatable_memory_bytes_not = None
         self._allocatable_memory_bytes_not_in = None
+        self._allocated_prioritized_space = None
+        self._allocated_prioritized_space_gt = None
+        self._allocated_prioritized_space_gte = None
+        self._allocated_prioritized_space_in = None
+        self._allocated_prioritized_space_lt = None
+        self._allocated_prioritized_space_lte = None
+        self._allocated_prioritized_space_not = None
+        self._allocated_prioritized_space_not_in = None
+        self._allocated_prioritized_space_usage = None
+        self._allocated_prioritized_space_usage_gt = None
+        self._allocated_prioritized_space_usage_gte = None
+        self._allocated_prioritized_space_usage_in = None
+        self._allocated_prioritized_space_usage_lt = None
+        self._allocated_prioritized_space_usage_lte = None
+        self._allocated_prioritized_space_usage_not = None
+        self._allocated_prioritized_space_usage_not_in = None
         self._chunk_id = None
         self._chunk_id_contains = None
         self._chunk_id_ends_with = None
@@ -1166,6 +1428,18 @@ class HostWhereInput(object):
         self._chunk_id_not_starts_with = None
         self._chunk_id_starts_with = None
         self._cluster = None
+        self._commited_memory_bytes = None
+        self._commited_memory_bytes_gt = None
+        self._commited_memory_bytes_gte = None
+        self._commited_memory_bytes_in = None
+        self._commited_memory_bytes_lt = None
+        self._commited_memory_bytes_lte = None
+        self._commited_memory_bytes_not = None
+        self._commited_memory_bytes_not_in = None
+        self._connect_status = None
+        self._connect_status_in = None
+        self._connect_status_not = None
+        self._connect_status_not_in = None
         self._cpu_brand = None
         self._cpu_brand_contains = None
         self._cpu_brand_ends_with = None
@@ -1234,9 +1508,20 @@ class HostWhereInput(object):
         self._data_ip_not_in = None
         self._data_ip_not_starts_with = None
         self._data_ip_starts_with = None
+        self._disk_pools_every = None
+        self._disk_pools_none = None
+        self._disk_pools_some = None
         self._disks_every = None
         self._disks_none = None
         self._disks_some = None
+        self._downgraded_prioritized_space = None
+        self._downgraded_prioritized_space_gt = None
+        self._downgraded_prioritized_space_gte = None
+        self._downgraded_prioritized_space_in = None
+        self._downgraded_prioritized_space_lt = None
+        self._downgraded_prioritized_space_lte = None
+        self._downgraded_prioritized_space_not = None
+        self._downgraded_prioritized_space_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -1336,6 +1621,10 @@ class HostWhereInput(object):
         self._management_ip_not_in = None
         self._management_ip_not_starts_with = None
         self._management_ip_starts_with = None
+        self._merged_status = None
+        self._merged_status_in = None
+        self._merged_status_not = None
+        self._merged_status_not_in = None
         self._model = None
         self._model_contains = None
         self._model_ends_with = None
@@ -1413,6 +1702,54 @@ class HostWhereInput(object):
         self._os_version_not_in = None
         self._os_version_not_starts_with = None
         self._os_version_starts_with = None
+        self._perf_allocated_data_space = None
+        self._perf_allocated_data_space_gt = None
+        self._perf_allocated_data_space_gte = None
+        self._perf_allocated_data_space_in = None
+        self._perf_allocated_data_space_lt = None
+        self._perf_allocated_data_space_lte = None
+        self._perf_allocated_data_space_not = None
+        self._perf_allocated_data_space_not_in = None
+        self._perf_failure_data_space = None
+        self._perf_failure_data_space_gt = None
+        self._perf_failure_data_space_gte = None
+        self._perf_failure_data_space_in = None
+        self._perf_failure_data_space_lt = None
+        self._perf_failure_data_space_lte = None
+        self._perf_failure_data_space_not = None
+        self._perf_failure_data_space_not_in = None
+        self._perf_total_data_capacity = None
+        self._perf_total_data_capacity_gt = None
+        self._perf_total_data_capacity_gte = None
+        self._perf_total_data_capacity_in = None
+        self._perf_total_data_capacity_lt = None
+        self._perf_total_data_capacity_lte = None
+        self._perf_total_data_capacity_not = None
+        self._perf_total_data_capacity_not_in = None
+        self._perf_used_data_space = None
+        self._perf_used_data_space_gt = None
+        self._perf_used_data_space_gte = None
+        self._perf_used_data_space_in = None
+        self._perf_used_data_space_lt = None
+        self._perf_used_data_space_lte = None
+        self._perf_used_data_space_not = None
+        self._perf_used_data_space_not_in = None
+        self._perf_valid_data_space = None
+        self._perf_valid_data_space_gt = None
+        self._perf_valid_data_space_gte = None
+        self._perf_valid_data_space_in = None
+        self._perf_valid_data_space_lt = None
+        self._perf_valid_data_space_lte = None
+        self._perf_valid_data_space_not = None
+        self._perf_valid_data_space_not_in = None
+        self._planned_prioritized_space = None
+        self._planned_prioritized_space_gt = None
+        self._planned_prioritized_space_gte = None
+        self._planned_prioritized_space_in = None
+        self._planned_prioritized_space_lt = None
+        self._planned_prioritized_space_lte = None
+        self._planned_prioritized_space_not = None
+        self._planned_prioritized_space_not_in = None
         self._pmem_dimm_capacity = None
         self._pmem_dimm_capacity_gt = None
         self._pmem_dimm_capacity_gte = None
@@ -1440,6 +1777,14 @@ class HostWhereInput(object):
         self._pmem_disk_count_lte = None
         self._pmem_disk_count_not = None
         self._pmem_disk_count_not_in = None
+        self._prio_space_percentage = None
+        self._prio_space_percentage_gt = None
+        self._prio_space_percentage_gte = None
+        self._prio_space_percentage_in = None
+        self._prio_space_percentage_lt = None
+        self._prio_space_percentage_lte = None
+        self._prio_space_percentage_not = None
+        self._prio_space_percentage_not_in = None
         self._provisioned_cpu_cores = None
         self._provisioned_cpu_cores_gt = None
         self._provisioned_cpu_cores_gte = None
@@ -1607,6 +1952,14 @@ class HostWhereInput(object):
         self._usb_devices_every = None
         self._usb_devices_none = None
         self._usb_devices_some = None
+        self._used_cache_space = None
+        self._used_cache_space_gt = None
+        self._used_cache_space_gte = None
+        self._used_cache_space_in = None
+        self._used_cache_space_lt = None
+        self._used_cache_space_lte = None
+        self._used_cache_space_not = None
+        self._used_cache_space_not_in = None
         self._used_cpu_hz = None
         self._used_cpu_hz_gt = None
         self._used_cpu_hz_gte = None
@@ -1631,6 +1984,22 @@ class HostWhereInput(object):
         self._used_memory_bytes_lte = None
         self._used_memory_bytes_not = None
         self._used_memory_bytes_not_in = None
+        self._valid_cache_space = None
+        self._valid_cache_space_gt = None
+        self._valid_cache_space_gte = None
+        self._valid_cache_space_in = None
+        self._valid_cache_space_lt = None
+        self._valid_cache_space_lte = None
+        self._valid_cache_space_not = None
+        self._valid_cache_space_not_in = None
+        self._valid_free_cache_space = None
+        self._valid_free_cache_space_gt = None
+        self._valid_free_cache_space_gte = None
+        self._valid_free_cache_space_in = None
+        self._valid_free_cache_space_lt = None
+        self._valid_free_cache_space_lte = None
+        self._valid_free_cache_space_not = None
+        self._valid_free_cache_space_not_in = None
         self._vm_num = None
         self._vm_num_gt = None
         self._vm_num_gte = None
@@ -1695,6 +2064,22 @@ class HostWhereInput(object):
         self.allocatable_memory_bytes_lte = kwargs.get("allocatable_memory_bytes_lte", None)
         self.allocatable_memory_bytes_not = kwargs.get("allocatable_memory_bytes_not", None)
         self.allocatable_memory_bytes_not_in = kwargs.get("allocatable_memory_bytes_not_in", None)
+        self.allocated_prioritized_space = kwargs.get("allocated_prioritized_space", None)
+        self.allocated_prioritized_space_gt = kwargs.get("allocated_prioritized_space_gt", None)
+        self.allocated_prioritized_space_gte = kwargs.get("allocated_prioritized_space_gte", None)
+        self.allocated_prioritized_space_in = kwargs.get("allocated_prioritized_space_in", None)
+        self.allocated_prioritized_space_lt = kwargs.get("allocated_prioritized_space_lt", None)
+        self.allocated_prioritized_space_lte = kwargs.get("allocated_prioritized_space_lte", None)
+        self.allocated_prioritized_space_not = kwargs.get("allocated_prioritized_space_not", None)
+        self.allocated_prioritized_space_not_in = kwargs.get("allocated_prioritized_space_not_in", None)
+        self.allocated_prioritized_space_usage = kwargs.get("allocated_prioritized_space_usage", None)
+        self.allocated_prioritized_space_usage_gt = kwargs.get("allocated_prioritized_space_usage_gt", None)
+        self.allocated_prioritized_space_usage_gte = kwargs.get("allocated_prioritized_space_usage_gte", None)
+        self.allocated_prioritized_space_usage_in = kwargs.get("allocated_prioritized_space_usage_in", None)
+        self.allocated_prioritized_space_usage_lt = kwargs.get("allocated_prioritized_space_usage_lt", None)
+        self.allocated_prioritized_space_usage_lte = kwargs.get("allocated_prioritized_space_usage_lte", None)
+        self.allocated_prioritized_space_usage_not = kwargs.get("allocated_prioritized_space_usage_not", None)
+        self.allocated_prioritized_space_usage_not_in = kwargs.get("allocated_prioritized_space_usage_not_in", None)
         self.chunk_id = kwargs.get("chunk_id", None)
         self.chunk_id_contains = kwargs.get("chunk_id_contains", None)
         self.chunk_id_ends_with = kwargs.get("chunk_id_ends_with", None)
@@ -1710,6 +2095,18 @@ class HostWhereInput(object):
         self.chunk_id_not_starts_with = kwargs.get("chunk_id_not_starts_with", None)
         self.chunk_id_starts_with = kwargs.get("chunk_id_starts_with", None)
         self.cluster = kwargs.get("cluster", None)
+        self.commited_memory_bytes = kwargs.get("commited_memory_bytes", None)
+        self.commited_memory_bytes_gt = kwargs.get("commited_memory_bytes_gt", None)
+        self.commited_memory_bytes_gte = kwargs.get("commited_memory_bytes_gte", None)
+        self.commited_memory_bytes_in = kwargs.get("commited_memory_bytes_in", None)
+        self.commited_memory_bytes_lt = kwargs.get("commited_memory_bytes_lt", None)
+        self.commited_memory_bytes_lte = kwargs.get("commited_memory_bytes_lte", None)
+        self.commited_memory_bytes_not = kwargs.get("commited_memory_bytes_not", None)
+        self.commited_memory_bytes_not_in = kwargs.get("commited_memory_bytes_not_in", None)
+        self.connect_status = kwargs.get("connect_status", None)
+        self.connect_status_in = kwargs.get("connect_status_in", None)
+        self.connect_status_not = kwargs.get("connect_status_not", None)
+        self.connect_status_not_in = kwargs.get("connect_status_not_in", None)
         self.cpu_brand = kwargs.get("cpu_brand", None)
         self.cpu_brand_contains = kwargs.get("cpu_brand_contains", None)
         self.cpu_brand_ends_with = kwargs.get("cpu_brand_ends_with", None)
@@ -1778,9 +2175,20 @@ class HostWhereInput(object):
         self.data_ip_not_in = kwargs.get("data_ip_not_in", None)
         self.data_ip_not_starts_with = kwargs.get("data_ip_not_starts_with", None)
         self.data_ip_starts_with = kwargs.get("data_ip_starts_with", None)
+        self.disk_pools_every = kwargs.get("disk_pools_every", None)
+        self.disk_pools_none = kwargs.get("disk_pools_none", None)
+        self.disk_pools_some = kwargs.get("disk_pools_some", None)
         self.disks_every = kwargs.get("disks_every", None)
         self.disks_none = kwargs.get("disks_none", None)
         self.disks_some = kwargs.get("disks_some", None)
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
+        self.downgraded_prioritized_space_gt = kwargs.get("downgraded_prioritized_space_gt", None)
+        self.downgraded_prioritized_space_gte = kwargs.get("downgraded_prioritized_space_gte", None)
+        self.downgraded_prioritized_space_in = kwargs.get("downgraded_prioritized_space_in", None)
+        self.downgraded_prioritized_space_lt = kwargs.get("downgraded_prioritized_space_lt", None)
+        self.downgraded_prioritized_space_lte = kwargs.get("downgraded_prioritized_space_lte", None)
+        self.downgraded_prioritized_space_not = kwargs.get("downgraded_prioritized_space_not", None)
+        self.downgraded_prioritized_space_not_in = kwargs.get("downgraded_prioritized_space_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -1880,6 +2288,10 @@ class HostWhereInput(object):
         self.management_ip_not_in = kwargs.get("management_ip_not_in", None)
         self.management_ip_not_starts_with = kwargs.get("management_ip_not_starts_with", None)
         self.management_ip_starts_with = kwargs.get("management_ip_starts_with", None)
+        self.merged_status = kwargs.get("merged_status", None)
+        self.merged_status_in = kwargs.get("merged_status_in", None)
+        self.merged_status_not = kwargs.get("merged_status_not", None)
+        self.merged_status_not_in = kwargs.get("merged_status_not_in", None)
         self.model = kwargs.get("model", None)
         self.model_contains = kwargs.get("model_contains", None)
         self.model_ends_with = kwargs.get("model_ends_with", None)
@@ -1957,6 +2369,54 @@ class HostWhereInput(object):
         self.os_version_not_in = kwargs.get("os_version_not_in", None)
         self.os_version_not_starts_with = kwargs.get("os_version_not_starts_with", None)
         self.os_version_starts_with = kwargs.get("os_version_starts_with", None)
+        self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
+        self.perf_allocated_data_space_gt = kwargs.get("perf_allocated_data_space_gt", None)
+        self.perf_allocated_data_space_gte = kwargs.get("perf_allocated_data_space_gte", None)
+        self.perf_allocated_data_space_in = kwargs.get("perf_allocated_data_space_in", None)
+        self.perf_allocated_data_space_lt = kwargs.get("perf_allocated_data_space_lt", None)
+        self.perf_allocated_data_space_lte = kwargs.get("perf_allocated_data_space_lte", None)
+        self.perf_allocated_data_space_not = kwargs.get("perf_allocated_data_space_not", None)
+        self.perf_allocated_data_space_not_in = kwargs.get("perf_allocated_data_space_not_in", None)
+        self.perf_failure_data_space = kwargs.get("perf_failure_data_space", None)
+        self.perf_failure_data_space_gt = kwargs.get("perf_failure_data_space_gt", None)
+        self.perf_failure_data_space_gte = kwargs.get("perf_failure_data_space_gte", None)
+        self.perf_failure_data_space_in = kwargs.get("perf_failure_data_space_in", None)
+        self.perf_failure_data_space_lt = kwargs.get("perf_failure_data_space_lt", None)
+        self.perf_failure_data_space_lte = kwargs.get("perf_failure_data_space_lte", None)
+        self.perf_failure_data_space_not = kwargs.get("perf_failure_data_space_not", None)
+        self.perf_failure_data_space_not_in = kwargs.get("perf_failure_data_space_not_in", None)
+        self.perf_total_data_capacity = kwargs.get("perf_total_data_capacity", None)
+        self.perf_total_data_capacity_gt = kwargs.get("perf_total_data_capacity_gt", None)
+        self.perf_total_data_capacity_gte = kwargs.get("perf_total_data_capacity_gte", None)
+        self.perf_total_data_capacity_in = kwargs.get("perf_total_data_capacity_in", None)
+        self.perf_total_data_capacity_lt = kwargs.get("perf_total_data_capacity_lt", None)
+        self.perf_total_data_capacity_lte = kwargs.get("perf_total_data_capacity_lte", None)
+        self.perf_total_data_capacity_not = kwargs.get("perf_total_data_capacity_not", None)
+        self.perf_total_data_capacity_not_in = kwargs.get("perf_total_data_capacity_not_in", None)
+        self.perf_used_data_space = kwargs.get("perf_used_data_space", None)
+        self.perf_used_data_space_gt = kwargs.get("perf_used_data_space_gt", None)
+        self.perf_used_data_space_gte = kwargs.get("perf_used_data_space_gte", None)
+        self.perf_used_data_space_in = kwargs.get("perf_used_data_space_in", None)
+        self.perf_used_data_space_lt = kwargs.get("perf_used_data_space_lt", None)
+        self.perf_used_data_space_lte = kwargs.get("perf_used_data_space_lte", None)
+        self.perf_used_data_space_not = kwargs.get("perf_used_data_space_not", None)
+        self.perf_used_data_space_not_in = kwargs.get("perf_used_data_space_not_in", None)
+        self.perf_valid_data_space = kwargs.get("perf_valid_data_space", None)
+        self.perf_valid_data_space_gt = kwargs.get("perf_valid_data_space_gt", None)
+        self.perf_valid_data_space_gte = kwargs.get("perf_valid_data_space_gte", None)
+        self.perf_valid_data_space_in = kwargs.get("perf_valid_data_space_in", None)
+        self.perf_valid_data_space_lt = kwargs.get("perf_valid_data_space_lt", None)
+        self.perf_valid_data_space_lte = kwargs.get("perf_valid_data_space_lte", None)
+        self.perf_valid_data_space_not = kwargs.get("perf_valid_data_space_not", None)
+        self.perf_valid_data_space_not_in = kwargs.get("perf_valid_data_space_not_in", None)
+        self.planned_prioritized_space = kwargs.get("planned_prioritized_space", None)
+        self.planned_prioritized_space_gt = kwargs.get("planned_prioritized_space_gt", None)
+        self.planned_prioritized_space_gte = kwargs.get("planned_prioritized_space_gte", None)
+        self.planned_prioritized_space_in = kwargs.get("planned_prioritized_space_in", None)
+        self.planned_prioritized_space_lt = kwargs.get("planned_prioritized_space_lt", None)
+        self.planned_prioritized_space_lte = kwargs.get("planned_prioritized_space_lte", None)
+        self.planned_prioritized_space_not = kwargs.get("planned_prioritized_space_not", None)
+        self.planned_prioritized_space_not_in = kwargs.get("planned_prioritized_space_not_in", None)
         self.pmem_dimm_capacity = kwargs.get("pmem_dimm_capacity", None)
         self.pmem_dimm_capacity_gt = kwargs.get("pmem_dimm_capacity_gt", None)
         self.pmem_dimm_capacity_gte = kwargs.get("pmem_dimm_capacity_gte", None)
@@ -1984,6 +2444,14 @@ class HostWhereInput(object):
         self.pmem_disk_count_lte = kwargs.get("pmem_disk_count_lte", None)
         self.pmem_disk_count_not = kwargs.get("pmem_disk_count_not", None)
         self.pmem_disk_count_not_in = kwargs.get("pmem_disk_count_not_in", None)
+        self.prio_space_percentage = kwargs.get("prio_space_percentage", None)
+        self.prio_space_percentage_gt = kwargs.get("prio_space_percentage_gt", None)
+        self.prio_space_percentage_gte = kwargs.get("prio_space_percentage_gte", None)
+        self.prio_space_percentage_in = kwargs.get("prio_space_percentage_in", None)
+        self.prio_space_percentage_lt = kwargs.get("prio_space_percentage_lt", None)
+        self.prio_space_percentage_lte = kwargs.get("prio_space_percentage_lte", None)
+        self.prio_space_percentage_not = kwargs.get("prio_space_percentage_not", None)
+        self.prio_space_percentage_not_in = kwargs.get("prio_space_percentage_not_in", None)
         self.provisioned_cpu_cores = kwargs.get("provisioned_cpu_cores", None)
         self.provisioned_cpu_cores_gt = kwargs.get("provisioned_cpu_cores_gt", None)
         self.provisioned_cpu_cores_gte = kwargs.get("provisioned_cpu_cores_gte", None)
@@ -2151,6 +2619,14 @@ class HostWhereInput(object):
         self.usb_devices_every = kwargs.get("usb_devices_every", None)
         self.usb_devices_none = kwargs.get("usb_devices_none", None)
         self.usb_devices_some = kwargs.get("usb_devices_some", None)
+        self.used_cache_space = kwargs.get("used_cache_space", None)
+        self.used_cache_space_gt = kwargs.get("used_cache_space_gt", None)
+        self.used_cache_space_gte = kwargs.get("used_cache_space_gte", None)
+        self.used_cache_space_in = kwargs.get("used_cache_space_in", None)
+        self.used_cache_space_lt = kwargs.get("used_cache_space_lt", None)
+        self.used_cache_space_lte = kwargs.get("used_cache_space_lte", None)
+        self.used_cache_space_not = kwargs.get("used_cache_space_not", None)
+        self.used_cache_space_not_in = kwargs.get("used_cache_space_not_in", None)
         self.used_cpu_hz = kwargs.get("used_cpu_hz", None)
         self.used_cpu_hz_gt = kwargs.get("used_cpu_hz_gt", None)
         self.used_cpu_hz_gte = kwargs.get("used_cpu_hz_gte", None)
@@ -2175,6 +2651,22 @@ class HostWhereInput(object):
         self.used_memory_bytes_lte = kwargs.get("used_memory_bytes_lte", None)
         self.used_memory_bytes_not = kwargs.get("used_memory_bytes_not", None)
         self.used_memory_bytes_not_in = kwargs.get("used_memory_bytes_not_in", None)
+        self.valid_cache_space = kwargs.get("valid_cache_space", None)
+        self.valid_cache_space_gt = kwargs.get("valid_cache_space_gt", None)
+        self.valid_cache_space_gte = kwargs.get("valid_cache_space_gte", None)
+        self.valid_cache_space_in = kwargs.get("valid_cache_space_in", None)
+        self.valid_cache_space_lt = kwargs.get("valid_cache_space_lt", None)
+        self.valid_cache_space_lte = kwargs.get("valid_cache_space_lte", None)
+        self.valid_cache_space_not = kwargs.get("valid_cache_space_not", None)
+        self.valid_cache_space_not_in = kwargs.get("valid_cache_space_not_in", None)
+        self.valid_free_cache_space = kwargs.get("valid_free_cache_space", None)
+        self.valid_free_cache_space_gt = kwargs.get("valid_free_cache_space_gt", None)
+        self.valid_free_cache_space_gte = kwargs.get("valid_free_cache_space_gte", None)
+        self.valid_free_cache_space_in = kwargs.get("valid_free_cache_space_in", None)
+        self.valid_free_cache_space_lt = kwargs.get("valid_free_cache_space_lt", None)
+        self.valid_free_cache_space_lte = kwargs.get("valid_free_cache_space_lte", None)
+        self.valid_free_cache_space_not = kwargs.get("valid_free_cache_space_not", None)
+        self.valid_free_cache_space_not_in = kwargs.get("valid_free_cache_space_not_in", None)
         self.vm_num = kwargs.get("vm_num", None)
         self.vm_num_gt = kwargs.get("vm_num_gt", None)
         self.vm_num_gte = kwargs.get("vm_num_gte", None)
@@ -2899,6 +3391,342 @@ class HostWhereInput(object):
         self._allocatable_memory_bytes_not_in = allocatable_memory_bytes_not_in
 
     @property
+    def allocated_prioritized_space(self):
+        """Gets the allocated_prioritized_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space
+
+    @allocated_prioritized_space.setter
+    def allocated_prioritized_space(self, allocated_prioritized_space):
+        """Sets the allocated_prioritized_space of this HostWhereInput.
+
+
+        :param allocated_prioritized_space: The allocated_prioritized_space of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space: int
+        """
+
+        self._allocated_prioritized_space = allocated_prioritized_space
+
+    @property
+    def allocated_prioritized_space_gt(self):
+        """Gets the allocated_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space_gt
+
+    @allocated_prioritized_space_gt.setter
+    def allocated_prioritized_space_gt(self, allocated_prioritized_space_gt):
+        """Sets the allocated_prioritized_space_gt of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_gt: The allocated_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_gt: int
+        """
+
+        self._allocated_prioritized_space_gt = allocated_prioritized_space_gt
+
+    @property
+    def allocated_prioritized_space_gte(self):
+        """Gets the allocated_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space_gte
+
+    @allocated_prioritized_space_gte.setter
+    def allocated_prioritized_space_gte(self, allocated_prioritized_space_gte):
+        """Sets the allocated_prioritized_space_gte of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_gte: The allocated_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_gte: int
+        """
+
+        self._allocated_prioritized_space_gte = allocated_prioritized_space_gte
+
+    @property
+    def allocated_prioritized_space_in(self):
+        """Gets the allocated_prioritized_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocated_prioritized_space_in
+
+    @allocated_prioritized_space_in.setter
+    def allocated_prioritized_space_in(self, allocated_prioritized_space_in):
+        """Sets the allocated_prioritized_space_in of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_in: The allocated_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_in: list[int]
+        """
+
+        self._allocated_prioritized_space_in = allocated_prioritized_space_in
+
+    @property
+    def allocated_prioritized_space_lt(self):
+        """Gets the allocated_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space_lt
+
+    @allocated_prioritized_space_lt.setter
+    def allocated_prioritized_space_lt(self, allocated_prioritized_space_lt):
+        """Sets the allocated_prioritized_space_lt of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_lt: The allocated_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_lt: int
+        """
+
+        self._allocated_prioritized_space_lt = allocated_prioritized_space_lt
+
+    @property
+    def allocated_prioritized_space_lte(self):
+        """Gets the allocated_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space_lte
+
+    @allocated_prioritized_space_lte.setter
+    def allocated_prioritized_space_lte(self, allocated_prioritized_space_lte):
+        """Sets the allocated_prioritized_space_lte of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_lte: The allocated_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_lte: int
+        """
+
+        self._allocated_prioritized_space_lte = allocated_prioritized_space_lte
+
+    @property
+    def allocated_prioritized_space_not(self):
+        """Gets the allocated_prioritized_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space_not
+
+    @allocated_prioritized_space_not.setter
+    def allocated_prioritized_space_not(self, allocated_prioritized_space_not):
+        """Sets the allocated_prioritized_space_not of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_not: The allocated_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_not: int
+        """
+
+        self._allocated_prioritized_space_not = allocated_prioritized_space_not
+
+    @property
+    def allocated_prioritized_space_not_in(self):
+        """Gets the allocated_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocated_prioritized_space_not_in
+
+    @allocated_prioritized_space_not_in.setter
+    def allocated_prioritized_space_not_in(self, allocated_prioritized_space_not_in):
+        """Sets the allocated_prioritized_space_not_in of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_not_in: The allocated_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_not_in: list[int]
+        """
+
+        self._allocated_prioritized_space_not_in = allocated_prioritized_space_not_in
+
+    @property
+    def allocated_prioritized_space_usage(self):
+        """Gets the allocated_prioritized_space_usage of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage
+
+    @allocated_prioritized_space_usage.setter
+    def allocated_prioritized_space_usage(self, allocated_prioritized_space_usage):
+        """Sets the allocated_prioritized_space_usage of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage: The allocated_prioritized_space_usage of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage: float
+        """
+
+        self._allocated_prioritized_space_usage = allocated_prioritized_space_usage
+
+    @property
+    def allocated_prioritized_space_usage_gt(self):
+        """Gets the allocated_prioritized_space_usage_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_gt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage_gt
+
+    @allocated_prioritized_space_usage_gt.setter
+    def allocated_prioritized_space_usage_gt(self, allocated_prioritized_space_usage_gt):
+        """Sets the allocated_prioritized_space_usage_gt of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_gt: The allocated_prioritized_space_usage_gt of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_gt: float
+        """
+
+        self._allocated_prioritized_space_usage_gt = allocated_prioritized_space_usage_gt
+
+    @property
+    def allocated_prioritized_space_usage_gte(self):
+        """Gets the allocated_prioritized_space_usage_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_gte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage_gte
+
+    @allocated_prioritized_space_usage_gte.setter
+    def allocated_prioritized_space_usage_gte(self, allocated_prioritized_space_usage_gte):
+        """Sets the allocated_prioritized_space_usage_gte of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_gte: The allocated_prioritized_space_usage_gte of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_gte: float
+        """
+
+        self._allocated_prioritized_space_usage_gte = allocated_prioritized_space_usage_gte
+
+    @property
+    def allocated_prioritized_space_usage_in(self):
+        """Gets the allocated_prioritized_space_usage_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._allocated_prioritized_space_usage_in
+
+    @allocated_prioritized_space_usage_in.setter
+    def allocated_prioritized_space_usage_in(self, allocated_prioritized_space_usage_in):
+        """Sets the allocated_prioritized_space_usage_in of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_in: The allocated_prioritized_space_usage_in of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_in: list[float]
+        """
+
+        self._allocated_prioritized_space_usage_in = allocated_prioritized_space_usage_in
+
+    @property
+    def allocated_prioritized_space_usage_lt(self):
+        """Gets the allocated_prioritized_space_usage_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_lt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage_lt
+
+    @allocated_prioritized_space_usage_lt.setter
+    def allocated_prioritized_space_usage_lt(self, allocated_prioritized_space_usage_lt):
+        """Sets the allocated_prioritized_space_usage_lt of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_lt: The allocated_prioritized_space_usage_lt of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_lt: float
+        """
+
+        self._allocated_prioritized_space_usage_lt = allocated_prioritized_space_usage_lt
+
+    @property
+    def allocated_prioritized_space_usage_lte(self):
+        """Gets the allocated_prioritized_space_usage_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_lte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage_lte
+
+    @allocated_prioritized_space_usage_lte.setter
+    def allocated_prioritized_space_usage_lte(self, allocated_prioritized_space_usage_lte):
+        """Sets the allocated_prioritized_space_usage_lte of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_lte: The allocated_prioritized_space_usage_lte of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_lte: float
+        """
+
+        self._allocated_prioritized_space_usage_lte = allocated_prioritized_space_usage_lte
+
+    @property
+    def allocated_prioritized_space_usage_not(self):
+        """Gets the allocated_prioritized_space_usage_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_not of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage_not
+
+    @allocated_prioritized_space_usage_not.setter
+    def allocated_prioritized_space_usage_not(self, allocated_prioritized_space_usage_not):
+        """Sets the allocated_prioritized_space_usage_not of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_not: The allocated_prioritized_space_usage_not of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_not: float
+        """
+
+        self._allocated_prioritized_space_usage_not = allocated_prioritized_space_usage_not
+
+    @property
+    def allocated_prioritized_space_usage_not_in(self):
+        """Gets the allocated_prioritized_space_usage_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._allocated_prioritized_space_usage_not_in
+
+    @allocated_prioritized_space_usage_not_in.setter
+    def allocated_prioritized_space_usage_not_in(self, allocated_prioritized_space_usage_not_in):
+        """Sets the allocated_prioritized_space_usage_not_in of this HostWhereInput.
+
+
+        :param allocated_prioritized_space_usage_not_in: The allocated_prioritized_space_usage_not_in of this HostWhereInput.  # noqa: E501
+        :type allocated_prioritized_space_usage_not_in: list[float]
+        """
+
+        self._allocated_prioritized_space_usage_not_in = allocated_prioritized_space_usage_not_in
+
+    @property
     def chunk_id(self):
         """Gets the chunk_id of this HostWhereInput.  # noqa: E501
 
@@ -3212,6 +4040,258 @@ class HostWhereInput(object):
         """
 
         self._cluster = cluster
+
+    @property
+    def commited_memory_bytes(self):
+        """Gets the commited_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes
+
+    @commited_memory_bytes.setter
+    def commited_memory_bytes(self, commited_memory_bytes):
+        """Sets the commited_memory_bytes of this HostWhereInput.
+
+
+        :param commited_memory_bytes: The commited_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes: int
+        """
+
+        self._commited_memory_bytes = commited_memory_bytes
+
+    @property
+    def commited_memory_bytes_gt(self):
+        """Gets the commited_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes_gt
+
+    @commited_memory_bytes_gt.setter
+    def commited_memory_bytes_gt(self, commited_memory_bytes_gt):
+        """Sets the commited_memory_bytes_gt of this HostWhereInput.
+
+
+        :param commited_memory_bytes_gt: The commited_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_gt: int
+        """
+
+        self._commited_memory_bytes_gt = commited_memory_bytes_gt
+
+    @property
+    def commited_memory_bytes_gte(self):
+        """Gets the commited_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes_gte
+
+    @commited_memory_bytes_gte.setter
+    def commited_memory_bytes_gte(self, commited_memory_bytes_gte):
+        """Sets the commited_memory_bytes_gte of this HostWhereInput.
+
+
+        :param commited_memory_bytes_gte: The commited_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_gte: int
+        """
+
+        self._commited_memory_bytes_gte = commited_memory_bytes_gte
+
+    @property
+    def commited_memory_bytes_in(self):
+        """Gets the commited_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._commited_memory_bytes_in
+
+    @commited_memory_bytes_in.setter
+    def commited_memory_bytes_in(self, commited_memory_bytes_in):
+        """Sets the commited_memory_bytes_in of this HostWhereInput.
+
+
+        :param commited_memory_bytes_in: The commited_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_in: list[int]
+        """
+
+        self._commited_memory_bytes_in = commited_memory_bytes_in
+
+    @property
+    def commited_memory_bytes_lt(self):
+        """Gets the commited_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes_lt
+
+    @commited_memory_bytes_lt.setter
+    def commited_memory_bytes_lt(self, commited_memory_bytes_lt):
+        """Sets the commited_memory_bytes_lt of this HostWhereInput.
+
+
+        :param commited_memory_bytes_lt: The commited_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_lt: int
+        """
+
+        self._commited_memory_bytes_lt = commited_memory_bytes_lt
+
+    @property
+    def commited_memory_bytes_lte(self):
+        """Gets the commited_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes_lte
+
+    @commited_memory_bytes_lte.setter
+    def commited_memory_bytes_lte(self, commited_memory_bytes_lte):
+        """Sets the commited_memory_bytes_lte of this HostWhereInput.
+
+
+        :param commited_memory_bytes_lte: The commited_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_lte: int
+        """
+
+        self._commited_memory_bytes_lte = commited_memory_bytes_lte
+
+    @property
+    def commited_memory_bytes_not(self):
+        """Gets the commited_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes_not
+
+    @commited_memory_bytes_not.setter
+    def commited_memory_bytes_not(self, commited_memory_bytes_not):
+        """Sets the commited_memory_bytes_not of this HostWhereInput.
+
+
+        :param commited_memory_bytes_not: The commited_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_not: int
+        """
+
+        self._commited_memory_bytes_not = commited_memory_bytes_not
+
+    @property
+    def commited_memory_bytes_not_in(self):
+        """Gets the commited_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The commited_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._commited_memory_bytes_not_in
+
+    @commited_memory_bytes_not_in.setter
+    def commited_memory_bytes_not_in(self, commited_memory_bytes_not_in):
+        """Sets the commited_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param commited_memory_bytes_not_in: The commited_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type commited_memory_bytes_not_in: list[int]
+        """
+
+        self._commited_memory_bytes_not_in = commited_memory_bytes_not_in
+
+    @property
+    def connect_status(self):
+        """Gets the connect_status of this HostWhereInput.  # noqa: E501
+
+
+        :return: The connect_status of this HostWhereInput.  # noqa: E501
+        :rtype: HostConnectStatus
+        """
+        return self._connect_status
+
+    @connect_status.setter
+    def connect_status(self, connect_status):
+        """Sets the connect_status of this HostWhereInput.
+
+
+        :param connect_status: The connect_status of this HostWhereInput.  # noqa: E501
+        :type connect_status: HostConnectStatus
+        """
+
+        self._connect_status = connect_status
+
+    @property
+    def connect_status_in(self):
+        """Gets the connect_status_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The connect_status_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostConnectStatus]
+        """
+        return self._connect_status_in
+
+    @connect_status_in.setter
+    def connect_status_in(self, connect_status_in):
+        """Sets the connect_status_in of this HostWhereInput.
+
+
+        :param connect_status_in: The connect_status_in of this HostWhereInput.  # noqa: E501
+        :type connect_status_in: list[HostConnectStatus]
+        """
+
+        self._connect_status_in = connect_status_in
+
+    @property
+    def connect_status_not(self):
+        """Gets the connect_status_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The connect_status_not of this HostWhereInput.  # noqa: E501
+        :rtype: HostConnectStatus
+        """
+        return self._connect_status_not
+
+    @connect_status_not.setter
+    def connect_status_not(self, connect_status_not):
+        """Sets the connect_status_not of this HostWhereInput.
+
+
+        :param connect_status_not: The connect_status_not of this HostWhereInput.  # noqa: E501
+        :type connect_status_not: HostConnectStatus
+        """
+
+        self._connect_status_not = connect_status_not
+
+    @property
+    def connect_status_not_in(self):
+        """Gets the connect_status_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The connect_status_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostConnectStatus]
+        """
+        return self._connect_status_not_in
+
+    @connect_status_not_in.setter
+    def connect_status_not_in(self, connect_status_not_in):
+        """Sets the connect_status_not_in of this HostWhereInput.
+
+
+        :param connect_status_not_in: The connect_status_not_in of this HostWhereInput.  # noqa: E501
+        :type connect_status_not_in: list[HostConnectStatus]
+        """
+
+        self._connect_status_not_in = connect_status_not_in
 
     @property
     def cpu_brand(self):
@@ -4642,6 +5722,69 @@ class HostWhereInput(object):
         self._data_ip_starts_with = data_ip_starts_with
 
     @property
+    def disk_pools_every(self):
+        """Gets the disk_pools_every of this HostWhereInput.  # noqa: E501
+
+
+        :return: The disk_pools_every of this HostWhereInput.  # noqa: E501
+        :rtype: DiskPoolWhereInput
+        """
+        return self._disk_pools_every
+
+    @disk_pools_every.setter
+    def disk_pools_every(self, disk_pools_every):
+        """Sets the disk_pools_every of this HostWhereInput.
+
+
+        :param disk_pools_every: The disk_pools_every of this HostWhereInput.  # noqa: E501
+        :type disk_pools_every: DiskPoolWhereInput
+        """
+
+        self._disk_pools_every = disk_pools_every
+
+    @property
+    def disk_pools_none(self):
+        """Gets the disk_pools_none of this HostWhereInput.  # noqa: E501
+
+
+        :return: The disk_pools_none of this HostWhereInput.  # noqa: E501
+        :rtype: DiskPoolWhereInput
+        """
+        return self._disk_pools_none
+
+    @disk_pools_none.setter
+    def disk_pools_none(self, disk_pools_none):
+        """Sets the disk_pools_none of this HostWhereInput.
+
+
+        :param disk_pools_none: The disk_pools_none of this HostWhereInput.  # noqa: E501
+        :type disk_pools_none: DiskPoolWhereInput
+        """
+
+        self._disk_pools_none = disk_pools_none
+
+    @property
+    def disk_pools_some(self):
+        """Gets the disk_pools_some of this HostWhereInput.  # noqa: E501
+
+
+        :return: The disk_pools_some of this HostWhereInput.  # noqa: E501
+        :rtype: DiskPoolWhereInput
+        """
+        return self._disk_pools_some
+
+    @disk_pools_some.setter
+    def disk_pools_some(self, disk_pools_some):
+        """Sets the disk_pools_some of this HostWhereInput.
+
+
+        :param disk_pools_some: The disk_pools_some of this HostWhereInput.  # noqa: E501
+        :type disk_pools_some: DiskPoolWhereInput
+        """
+
+        self._disk_pools_some = disk_pools_some
+
+    @property
     def disks_every(self):
         """Gets the disks_every of this HostWhereInput.  # noqa: E501
 
@@ -4703,6 +5846,174 @@ class HostWhereInput(object):
         """
 
         self._disks_some = disks_some
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
+
+    @property
+    def downgraded_prioritized_space_gt(self):
+        """Gets the downgraded_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_gt
+
+    @downgraded_prioritized_space_gt.setter
+    def downgraded_prioritized_space_gt(self, downgraded_prioritized_space_gt):
+        """Sets the downgraded_prioritized_space_gt of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_gt: The downgraded_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_gt: int
+        """
+
+        self._downgraded_prioritized_space_gt = downgraded_prioritized_space_gt
+
+    @property
+    def downgraded_prioritized_space_gte(self):
+        """Gets the downgraded_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_gte
+
+    @downgraded_prioritized_space_gte.setter
+    def downgraded_prioritized_space_gte(self, downgraded_prioritized_space_gte):
+        """Sets the downgraded_prioritized_space_gte of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_gte: The downgraded_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_gte: int
+        """
+
+        self._downgraded_prioritized_space_gte = downgraded_prioritized_space_gte
+
+    @property
+    def downgraded_prioritized_space_in(self):
+        """Gets the downgraded_prioritized_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._downgraded_prioritized_space_in
+
+    @downgraded_prioritized_space_in.setter
+    def downgraded_prioritized_space_in(self, downgraded_prioritized_space_in):
+        """Sets the downgraded_prioritized_space_in of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_in: The downgraded_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_in: list[int]
+        """
+
+        self._downgraded_prioritized_space_in = downgraded_prioritized_space_in
+
+    @property
+    def downgraded_prioritized_space_lt(self):
+        """Gets the downgraded_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_lt
+
+    @downgraded_prioritized_space_lt.setter
+    def downgraded_prioritized_space_lt(self, downgraded_prioritized_space_lt):
+        """Sets the downgraded_prioritized_space_lt of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_lt: The downgraded_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_lt: int
+        """
+
+        self._downgraded_prioritized_space_lt = downgraded_prioritized_space_lt
+
+    @property
+    def downgraded_prioritized_space_lte(self):
+        """Gets the downgraded_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_lte
+
+    @downgraded_prioritized_space_lte.setter
+    def downgraded_prioritized_space_lte(self, downgraded_prioritized_space_lte):
+        """Sets the downgraded_prioritized_space_lte of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_lte: The downgraded_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_lte: int
+        """
+
+        self._downgraded_prioritized_space_lte = downgraded_prioritized_space_lte
+
+    @property
+    def downgraded_prioritized_space_not(self):
+        """Gets the downgraded_prioritized_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_not
+
+    @downgraded_prioritized_space_not.setter
+    def downgraded_prioritized_space_not(self, downgraded_prioritized_space_not):
+        """Sets the downgraded_prioritized_space_not of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_not: The downgraded_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_not: int
+        """
+
+        self._downgraded_prioritized_space_not = downgraded_prioritized_space_not
+
+    @property
+    def downgraded_prioritized_space_not_in(self):
+        """Gets the downgraded_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._downgraded_prioritized_space_not_in
+
+    @downgraded_prioritized_space_not_in.setter
+    def downgraded_prioritized_space_not_in(self, downgraded_prioritized_space_not_in):
+        """Sets the downgraded_prioritized_space_not_in of this HostWhereInput.
+
+
+        :param downgraded_prioritized_space_not_in: The downgraded_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_not_in: list[int]
+        """
+
+        self._downgraded_prioritized_space_not_in = downgraded_prioritized_space_not_in
 
     @property
     def entity_async_status(self):
@@ -6784,6 +8095,90 @@ class HostWhereInput(object):
         self._management_ip_starts_with = management_ip_starts_with
 
     @property
+    def merged_status(self):
+        """Gets the merged_status of this HostWhereInput.  # noqa: E501
+
+
+        :return: The merged_status of this HostWhereInput.  # noqa: E501
+        :rtype: HostMergedStatus
+        """
+        return self._merged_status
+
+    @merged_status.setter
+    def merged_status(self, merged_status):
+        """Sets the merged_status of this HostWhereInput.
+
+
+        :param merged_status: The merged_status of this HostWhereInput.  # noqa: E501
+        :type merged_status: HostMergedStatus
+        """
+
+        self._merged_status = merged_status
+
+    @property
+    def merged_status_in(self):
+        """Gets the merged_status_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The merged_status_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostMergedStatus]
+        """
+        return self._merged_status_in
+
+    @merged_status_in.setter
+    def merged_status_in(self, merged_status_in):
+        """Sets the merged_status_in of this HostWhereInput.
+
+
+        :param merged_status_in: The merged_status_in of this HostWhereInput.  # noqa: E501
+        :type merged_status_in: list[HostMergedStatus]
+        """
+
+        self._merged_status_in = merged_status_in
+
+    @property
+    def merged_status_not(self):
+        """Gets the merged_status_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The merged_status_not of this HostWhereInput.  # noqa: E501
+        :rtype: HostMergedStatus
+        """
+        return self._merged_status_not
+
+    @merged_status_not.setter
+    def merged_status_not(self, merged_status_not):
+        """Sets the merged_status_not of this HostWhereInput.
+
+
+        :param merged_status_not: The merged_status_not of this HostWhereInput.  # noqa: E501
+        :type merged_status_not: HostMergedStatus
+        """
+
+        self._merged_status_not = merged_status_not
+
+    @property
+    def merged_status_not_in(self):
+        """Gets the merged_status_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The merged_status_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[HostMergedStatus]
+        """
+        return self._merged_status_not_in
+
+    @merged_status_not_in.setter
+    def merged_status_not_in(self, merged_status_not_in):
+        """Sets the merged_status_not_in of this HostWhereInput.
+
+
+        :param merged_status_not_in: The merged_status_not_in of this HostWhereInput.  # noqa: E501
+        :type merged_status_not_in: list[HostMergedStatus]
+        """
+
+        self._merged_status_not_in = merged_status_not_in
+
+    @property
     def model(self):
         """Gets the model of this HostWhereInput.  # noqa: E501
 
@@ -8401,6 +9796,1014 @@ class HostWhereInput(object):
         self._os_version_starts_with = os_version_starts_with
 
     @property
+    def perf_allocated_data_space(self):
+        """Gets the perf_allocated_data_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space
+
+    @perf_allocated_data_space.setter
+    def perf_allocated_data_space(self, perf_allocated_data_space):
+        """Sets the perf_allocated_data_space of this HostWhereInput.
+
+
+        :param perf_allocated_data_space: The perf_allocated_data_space of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space: int
+        """
+
+        self._perf_allocated_data_space = perf_allocated_data_space
+
+    @property
+    def perf_allocated_data_space_gt(self):
+        """Gets the perf_allocated_data_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space_gt
+
+    @perf_allocated_data_space_gt.setter
+    def perf_allocated_data_space_gt(self, perf_allocated_data_space_gt):
+        """Sets the perf_allocated_data_space_gt of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_gt: The perf_allocated_data_space_gt of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_gt: int
+        """
+
+        self._perf_allocated_data_space_gt = perf_allocated_data_space_gt
+
+    @property
+    def perf_allocated_data_space_gte(self):
+        """Gets the perf_allocated_data_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space_gte
+
+    @perf_allocated_data_space_gte.setter
+    def perf_allocated_data_space_gte(self, perf_allocated_data_space_gte):
+        """Sets the perf_allocated_data_space_gte of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_gte: The perf_allocated_data_space_gte of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_gte: int
+        """
+
+        self._perf_allocated_data_space_gte = perf_allocated_data_space_gte
+
+    @property
+    def perf_allocated_data_space_in(self):
+        """Gets the perf_allocated_data_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_allocated_data_space_in
+
+    @perf_allocated_data_space_in.setter
+    def perf_allocated_data_space_in(self, perf_allocated_data_space_in):
+        """Sets the perf_allocated_data_space_in of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_in: The perf_allocated_data_space_in of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_in: list[int]
+        """
+
+        self._perf_allocated_data_space_in = perf_allocated_data_space_in
+
+    @property
+    def perf_allocated_data_space_lt(self):
+        """Gets the perf_allocated_data_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space_lt
+
+    @perf_allocated_data_space_lt.setter
+    def perf_allocated_data_space_lt(self, perf_allocated_data_space_lt):
+        """Sets the perf_allocated_data_space_lt of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_lt: The perf_allocated_data_space_lt of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_lt: int
+        """
+
+        self._perf_allocated_data_space_lt = perf_allocated_data_space_lt
+
+    @property
+    def perf_allocated_data_space_lte(self):
+        """Gets the perf_allocated_data_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space_lte
+
+    @perf_allocated_data_space_lte.setter
+    def perf_allocated_data_space_lte(self, perf_allocated_data_space_lte):
+        """Sets the perf_allocated_data_space_lte of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_lte: The perf_allocated_data_space_lte of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_lte: int
+        """
+
+        self._perf_allocated_data_space_lte = perf_allocated_data_space_lte
+
+    @property
+    def perf_allocated_data_space_not(self):
+        """Gets the perf_allocated_data_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space_not
+
+    @perf_allocated_data_space_not.setter
+    def perf_allocated_data_space_not(self, perf_allocated_data_space_not):
+        """Sets the perf_allocated_data_space_not of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_not: The perf_allocated_data_space_not of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_not: int
+        """
+
+        self._perf_allocated_data_space_not = perf_allocated_data_space_not
+
+    @property
+    def perf_allocated_data_space_not_in(self):
+        """Gets the perf_allocated_data_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_allocated_data_space_not_in
+
+    @perf_allocated_data_space_not_in.setter
+    def perf_allocated_data_space_not_in(self, perf_allocated_data_space_not_in):
+        """Sets the perf_allocated_data_space_not_in of this HostWhereInput.
+
+
+        :param perf_allocated_data_space_not_in: The perf_allocated_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :type perf_allocated_data_space_not_in: list[int]
+        """
+
+        self._perf_allocated_data_space_not_in = perf_allocated_data_space_not_in
+
+    @property
+    def perf_failure_data_space(self):
+        """Gets the perf_failure_data_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space
+
+    @perf_failure_data_space.setter
+    def perf_failure_data_space(self, perf_failure_data_space):
+        """Sets the perf_failure_data_space of this HostWhereInput.
+
+
+        :param perf_failure_data_space: The perf_failure_data_space of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space: int
+        """
+
+        self._perf_failure_data_space = perf_failure_data_space
+
+    @property
+    def perf_failure_data_space_gt(self):
+        """Gets the perf_failure_data_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space_gt
+
+    @perf_failure_data_space_gt.setter
+    def perf_failure_data_space_gt(self, perf_failure_data_space_gt):
+        """Sets the perf_failure_data_space_gt of this HostWhereInput.
+
+
+        :param perf_failure_data_space_gt: The perf_failure_data_space_gt of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_gt: int
+        """
+
+        self._perf_failure_data_space_gt = perf_failure_data_space_gt
+
+    @property
+    def perf_failure_data_space_gte(self):
+        """Gets the perf_failure_data_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space_gte
+
+    @perf_failure_data_space_gte.setter
+    def perf_failure_data_space_gte(self, perf_failure_data_space_gte):
+        """Sets the perf_failure_data_space_gte of this HostWhereInput.
+
+
+        :param perf_failure_data_space_gte: The perf_failure_data_space_gte of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_gte: int
+        """
+
+        self._perf_failure_data_space_gte = perf_failure_data_space_gte
+
+    @property
+    def perf_failure_data_space_in(self):
+        """Gets the perf_failure_data_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_failure_data_space_in
+
+    @perf_failure_data_space_in.setter
+    def perf_failure_data_space_in(self, perf_failure_data_space_in):
+        """Sets the perf_failure_data_space_in of this HostWhereInput.
+
+
+        :param perf_failure_data_space_in: The perf_failure_data_space_in of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_in: list[int]
+        """
+
+        self._perf_failure_data_space_in = perf_failure_data_space_in
+
+    @property
+    def perf_failure_data_space_lt(self):
+        """Gets the perf_failure_data_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space_lt
+
+    @perf_failure_data_space_lt.setter
+    def perf_failure_data_space_lt(self, perf_failure_data_space_lt):
+        """Sets the perf_failure_data_space_lt of this HostWhereInput.
+
+
+        :param perf_failure_data_space_lt: The perf_failure_data_space_lt of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_lt: int
+        """
+
+        self._perf_failure_data_space_lt = perf_failure_data_space_lt
+
+    @property
+    def perf_failure_data_space_lte(self):
+        """Gets the perf_failure_data_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space_lte
+
+    @perf_failure_data_space_lte.setter
+    def perf_failure_data_space_lte(self, perf_failure_data_space_lte):
+        """Sets the perf_failure_data_space_lte of this HostWhereInput.
+
+
+        :param perf_failure_data_space_lte: The perf_failure_data_space_lte of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_lte: int
+        """
+
+        self._perf_failure_data_space_lte = perf_failure_data_space_lte
+
+    @property
+    def perf_failure_data_space_not(self):
+        """Gets the perf_failure_data_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space_not
+
+    @perf_failure_data_space_not.setter
+    def perf_failure_data_space_not(self, perf_failure_data_space_not):
+        """Sets the perf_failure_data_space_not of this HostWhereInput.
+
+
+        :param perf_failure_data_space_not: The perf_failure_data_space_not of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_not: int
+        """
+
+        self._perf_failure_data_space_not = perf_failure_data_space_not
+
+    @property
+    def perf_failure_data_space_not_in(self):
+        """Gets the perf_failure_data_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_failure_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_failure_data_space_not_in
+
+    @perf_failure_data_space_not_in.setter
+    def perf_failure_data_space_not_in(self, perf_failure_data_space_not_in):
+        """Sets the perf_failure_data_space_not_in of this HostWhereInput.
+
+
+        :param perf_failure_data_space_not_in: The perf_failure_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :type perf_failure_data_space_not_in: list[int]
+        """
+
+        self._perf_failure_data_space_not_in = perf_failure_data_space_not_in
+
+    @property
+    def perf_total_data_capacity(self):
+        """Gets the perf_total_data_capacity of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity
+
+    @perf_total_data_capacity.setter
+    def perf_total_data_capacity(self, perf_total_data_capacity):
+        """Sets the perf_total_data_capacity of this HostWhereInput.
+
+
+        :param perf_total_data_capacity: The perf_total_data_capacity of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity: int
+        """
+
+        self._perf_total_data_capacity = perf_total_data_capacity
+
+    @property
+    def perf_total_data_capacity_gt(self):
+        """Gets the perf_total_data_capacity_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity_gt
+
+    @perf_total_data_capacity_gt.setter
+    def perf_total_data_capacity_gt(self, perf_total_data_capacity_gt):
+        """Sets the perf_total_data_capacity_gt of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_gt: The perf_total_data_capacity_gt of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_gt: int
+        """
+
+        self._perf_total_data_capacity_gt = perf_total_data_capacity_gt
+
+    @property
+    def perf_total_data_capacity_gte(self):
+        """Gets the perf_total_data_capacity_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity_gte
+
+    @perf_total_data_capacity_gte.setter
+    def perf_total_data_capacity_gte(self, perf_total_data_capacity_gte):
+        """Sets the perf_total_data_capacity_gte of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_gte: The perf_total_data_capacity_gte of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_gte: int
+        """
+
+        self._perf_total_data_capacity_gte = perf_total_data_capacity_gte
+
+    @property
+    def perf_total_data_capacity_in(self):
+        """Gets the perf_total_data_capacity_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_total_data_capacity_in
+
+    @perf_total_data_capacity_in.setter
+    def perf_total_data_capacity_in(self, perf_total_data_capacity_in):
+        """Sets the perf_total_data_capacity_in of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_in: The perf_total_data_capacity_in of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_in: list[int]
+        """
+
+        self._perf_total_data_capacity_in = perf_total_data_capacity_in
+
+    @property
+    def perf_total_data_capacity_lt(self):
+        """Gets the perf_total_data_capacity_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity_lt
+
+    @perf_total_data_capacity_lt.setter
+    def perf_total_data_capacity_lt(self, perf_total_data_capacity_lt):
+        """Sets the perf_total_data_capacity_lt of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_lt: The perf_total_data_capacity_lt of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_lt: int
+        """
+
+        self._perf_total_data_capacity_lt = perf_total_data_capacity_lt
+
+    @property
+    def perf_total_data_capacity_lte(self):
+        """Gets the perf_total_data_capacity_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity_lte
+
+    @perf_total_data_capacity_lte.setter
+    def perf_total_data_capacity_lte(self, perf_total_data_capacity_lte):
+        """Sets the perf_total_data_capacity_lte of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_lte: The perf_total_data_capacity_lte of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_lte: int
+        """
+
+        self._perf_total_data_capacity_lte = perf_total_data_capacity_lte
+
+    @property
+    def perf_total_data_capacity_not(self):
+        """Gets the perf_total_data_capacity_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity_not
+
+    @perf_total_data_capacity_not.setter
+    def perf_total_data_capacity_not(self, perf_total_data_capacity_not):
+        """Sets the perf_total_data_capacity_not of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_not: The perf_total_data_capacity_not of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_not: int
+        """
+
+        self._perf_total_data_capacity_not = perf_total_data_capacity_not
+
+    @property
+    def perf_total_data_capacity_not_in(self):
+        """Gets the perf_total_data_capacity_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_total_data_capacity_not_in
+
+    @perf_total_data_capacity_not_in.setter
+    def perf_total_data_capacity_not_in(self, perf_total_data_capacity_not_in):
+        """Sets the perf_total_data_capacity_not_in of this HostWhereInput.
+
+
+        :param perf_total_data_capacity_not_in: The perf_total_data_capacity_not_in of this HostWhereInput.  # noqa: E501
+        :type perf_total_data_capacity_not_in: list[int]
+        """
+
+        self._perf_total_data_capacity_not_in = perf_total_data_capacity_not_in
+
+    @property
+    def perf_used_data_space(self):
+        """Gets the perf_used_data_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space
+
+    @perf_used_data_space.setter
+    def perf_used_data_space(self, perf_used_data_space):
+        """Sets the perf_used_data_space of this HostWhereInput.
+
+
+        :param perf_used_data_space: The perf_used_data_space of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space: int
+        """
+
+        self._perf_used_data_space = perf_used_data_space
+
+    @property
+    def perf_used_data_space_gt(self):
+        """Gets the perf_used_data_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space_gt
+
+    @perf_used_data_space_gt.setter
+    def perf_used_data_space_gt(self, perf_used_data_space_gt):
+        """Sets the perf_used_data_space_gt of this HostWhereInput.
+
+
+        :param perf_used_data_space_gt: The perf_used_data_space_gt of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_gt: int
+        """
+
+        self._perf_used_data_space_gt = perf_used_data_space_gt
+
+    @property
+    def perf_used_data_space_gte(self):
+        """Gets the perf_used_data_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space_gte
+
+    @perf_used_data_space_gte.setter
+    def perf_used_data_space_gte(self, perf_used_data_space_gte):
+        """Sets the perf_used_data_space_gte of this HostWhereInput.
+
+
+        :param perf_used_data_space_gte: The perf_used_data_space_gte of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_gte: int
+        """
+
+        self._perf_used_data_space_gte = perf_used_data_space_gte
+
+    @property
+    def perf_used_data_space_in(self):
+        """Gets the perf_used_data_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_used_data_space_in
+
+    @perf_used_data_space_in.setter
+    def perf_used_data_space_in(self, perf_used_data_space_in):
+        """Sets the perf_used_data_space_in of this HostWhereInput.
+
+
+        :param perf_used_data_space_in: The perf_used_data_space_in of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_in: list[int]
+        """
+
+        self._perf_used_data_space_in = perf_used_data_space_in
+
+    @property
+    def perf_used_data_space_lt(self):
+        """Gets the perf_used_data_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space_lt
+
+    @perf_used_data_space_lt.setter
+    def perf_used_data_space_lt(self, perf_used_data_space_lt):
+        """Sets the perf_used_data_space_lt of this HostWhereInput.
+
+
+        :param perf_used_data_space_lt: The perf_used_data_space_lt of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_lt: int
+        """
+
+        self._perf_used_data_space_lt = perf_used_data_space_lt
+
+    @property
+    def perf_used_data_space_lte(self):
+        """Gets the perf_used_data_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space_lte
+
+    @perf_used_data_space_lte.setter
+    def perf_used_data_space_lte(self, perf_used_data_space_lte):
+        """Sets the perf_used_data_space_lte of this HostWhereInput.
+
+
+        :param perf_used_data_space_lte: The perf_used_data_space_lte of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_lte: int
+        """
+
+        self._perf_used_data_space_lte = perf_used_data_space_lte
+
+    @property
+    def perf_used_data_space_not(self):
+        """Gets the perf_used_data_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space_not
+
+    @perf_used_data_space_not.setter
+    def perf_used_data_space_not(self, perf_used_data_space_not):
+        """Sets the perf_used_data_space_not of this HostWhereInput.
+
+
+        :param perf_used_data_space_not: The perf_used_data_space_not of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_not: int
+        """
+
+        self._perf_used_data_space_not = perf_used_data_space_not
+
+    @property
+    def perf_used_data_space_not_in(self):
+        """Gets the perf_used_data_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_used_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_used_data_space_not_in
+
+    @perf_used_data_space_not_in.setter
+    def perf_used_data_space_not_in(self, perf_used_data_space_not_in):
+        """Sets the perf_used_data_space_not_in of this HostWhereInput.
+
+
+        :param perf_used_data_space_not_in: The perf_used_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :type perf_used_data_space_not_in: list[int]
+        """
+
+        self._perf_used_data_space_not_in = perf_used_data_space_not_in
+
+    @property
+    def perf_valid_data_space(self):
+        """Gets the perf_valid_data_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space
+
+    @perf_valid_data_space.setter
+    def perf_valid_data_space(self, perf_valid_data_space):
+        """Sets the perf_valid_data_space of this HostWhereInput.
+
+
+        :param perf_valid_data_space: The perf_valid_data_space of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space: int
+        """
+
+        self._perf_valid_data_space = perf_valid_data_space
+
+    @property
+    def perf_valid_data_space_gt(self):
+        """Gets the perf_valid_data_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space_gt
+
+    @perf_valid_data_space_gt.setter
+    def perf_valid_data_space_gt(self, perf_valid_data_space_gt):
+        """Sets the perf_valid_data_space_gt of this HostWhereInput.
+
+
+        :param perf_valid_data_space_gt: The perf_valid_data_space_gt of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_gt: int
+        """
+
+        self._perf_valid_data_space_gt = perf_valid_data_space_gt
+
+    @property
+    def perf_valid_data_space_gte(self):
+        """Gets the perf_valid_data_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space_gte
+
+    @perf_valid_data_space_gte.setter
+    def perf_valid_data_space_gte(self, perf_valid_data_space_gte):
+        """Sets the perf_valid_data_space_gte of this HostWhereInput.
+
+
+        :param perf_valid_data_space_gte: The perf_valid_data_space_gte of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_gte: int
+        """
+
+        self._perf_valid_data_space_gte = perf_valid_data_space_gte
+
+    @property
+    def perf_valid_data_space_in(self):
+        """Gets the perf_valid_data_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_valid_data_space_in
+
+    @perf_valid_data_space_in.setter
+    def perf_valid_data_space_in(self, perf_valid_data_space_in):
+        """Sets the perf_valid_data_space_in of this HostWhereInput.
+
+
+        :param perf_valid_data_space_in: The perf_valid_data_space_in of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_in: list[int]
+        """
+
+        self._perf_valid_data_space_in = perf_valid_data_space_in
+
+    @property
+    def perf_valid_data_space_lt(self):
+        """Gets the perf_valid_data_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space_lt
+
+    @perf_valid_data_space_lt.setter
+    def perf_valid_data_space_lt(self, perf_valid_data_space_lt):
+        """Sets the perf_valid_data_space_lt of this HostWhereInput.
+
+
+        :param perf_valid_data_space_lt: The perf_valid_data_space_lt of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_lt: int
+        """
+
+        self._perf_valid_data_space_lt = perf_valid_data_space_lt
+
+    @property
+    def perf_valid_data_space_lte(self):
+        """Gets the perf_valid_data_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space_lte
+
+    @perf_valid_data_space_lte.setter
+    def perf_valid_data_space_lte(self, perf_valid_data_space_lte):
+        """Sets the perf_valid_data_space_lte of this HostWhereInput.
+
+
+        :param perf_valid_data_space_lte: The perf_valid_data_space_lte of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_lte: int
+        """
+
+        self._perf_valid_data_space_lte = perf_valid_data_space_lte
+
+    @property
+    def perf_valid_data_space_not(self):
+        """Gets the perf_valid_data_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space_not
+
+    @perf_valid_data_space_not.setter
+    def perf_valid_data_space_not(self, perf_valid_data_space_not):
+        """Sets the perf_valid_data_space_not of this HostWhereInput.
+
+
+        :param perf_valid_data_space_not: The perf_valid_data_space_not of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_not: int
+        """
+
+        self._perf_valid_data_space_not = perf_valid_data_space_not
+
+    @property
+    def perf_valid_data_space_not_in(self):
+        """Gets the perf_valid_data_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The perf_valid_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._perf_valid_data_space_not_in
+
+    @perf_valid_data_space_not_in.setter
+    def perf_valid_data_space_not_in(self, perf_valid_data_space_not_in):
+        """Sets the perf_valid_data_space_not_in of this HostWhereInput.
+
+
+        :param perf_valid_data_space_not_in: The perf_valid_data_space_not_in of this HostWhereInput.  # noqa: E501
+        :type perf_valid_data_space_not_in: list[int]
+        """
+
+        self._perf_valid_data_space_not_in = perf_valid_data_space_not_in
+
+    @property
+    def planned_prioritized_space(self):
+        """Gets the planned_prioritized_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space
+
+    @planned_prioritized_space.setter
+    def planned_prioritized_space(self, planned_prioritized_space):
+        """Sets the planned_prioritized_space of this HostWhereInput.
+
+
+        :param planned_prioritized_space: The planned_prioritized_space of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space: int
+        """
+
+        self._planned_prioritized_space = planned_prioritized_space
+
+    @property
+    def planned_prioritized_space_gt(self):
+        """Gets the planned_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space_gt
+
+    @planned_prioritized_space_gt.setter
+    def planned_prioritized_space_gt(self, planned_prioritized_space_gt):
+        """Sets the planned_prioritized_space_gt of this HostWhereInput.
+
+
+        :param planned_prioritized_space_gt: The planned_prioritized_space_gt of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_gt: int
+        """
+
+        self._planned_prioritized_space_gt = planned_prioritized_space_gt
+
+    @property
+    def planned_prioritized_space_gte(self):
+        """Gets the planned_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space_gte
+
+    @planned_prioritized_space_gte.setter
+    def planned_prioritized_space_gte(self, planned_prioritized_space_gte):
+        """Sets the planned_prioritized_space_gte of this HostWhereInput.
+
+
+        :param planned_prioritized_space_gte: The planned_prioritized_space_gte of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_gte: int
+        """
+
+        self._planned_prioritized_space_gte = planned_prioritized_space_gte
+
+    @property
+    def planned_prioritized_space_in(self):
+        """Gets the planned_prioritized_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._planned_prioritized_space_in
+
+    @planned_prioritized_space_in.setter
+    def planned_prioritized_space_in(self, planned_prioritized_space_in):
+        """Sets the planned_prioritized_space_in of this HostWhereInput.
+
+
+        :param planned_prioritized_space_in: The planned_prioritized_space_in of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_in: list[int]
+        """
+
+        self._planned_prioritized_space_in = planned_prioritized_space_in
+
+    @property
+    def planned_prioritized_space_lt(self):
+        """Gets the planned_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space_lt
+
+    @planned_prioritized_space_lt.setter
+    def planned_prioritized_space_lt(self, planned_prioritized_space_lt):
+        """Sets the planned_prioritized_space_lt of this HostWhereInput.
+
+
+        :param planned_prioritized_space_lt: The planned_prioritized_space_lt of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_lt: int
+        """
+
+        self._planned_prioritized_space_lt = planned_prioritized_space_lt
+
+    @property
+    def planned_prioritized_space_lte(self):
+        """Gets the planned_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space_lte
+
+    @planned_prioritized_space_lte.setter
+    def planned_prioritized_space_lte(self, planned_prioritized_space_lte):
+        """Sets the planned_prioritized_space_lte of this HostWhereInput.
+
+
+        :param planned_prioritized_space_lte: The planned_prioritized_space_lte of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_lte: int
+        """
+
+        self._planned_prioritized_space_lte = planned_prioritized_space_lte
+
+    @property
+    def planned_prioritized_space_not(self):
+        """Gets the planned_prioritized_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space_not
+
+    @planned_prioritized_space_not.setter
+    def planned_prioritized_space_not(self, planned_prioritized_space_not):
+        """Sets the planned_prioritized_space_not of this HostWhereInput.
+
+
+        :param planned_prioritized_space_not: The planned_prioritized_space_not of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_not: int
+        """
+
+        self._planned_prioritized_space_not = planned_prioritized_space_not
+
+    @property
+    def planned_prioritized_space_not_in(self):
+        """Gets the planned_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The planned_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._planned_prioritized_space_not_in
+
+    @planned_prioritized_space_not_in.setter
+    def planned_prioritized_space_not_in(self, planned_prioritized_space_not_in):
+        """Sets the planned_prioritized_space_not_in of this HostWhereInput.
+
+
+        :param planned_prioritized_space_not_in: The planned_prioritized_space_not_in of this HostWhereInput.  # noqa: E501
+        :type planned_prioritized_space_not_in: list[int]
+        """
+
+        self._planned_prioritized_space_not_in = planned_prioritized_space_not_in
+
+    @property
     def pmem_dimm_capacity(self):
         """Gets the pmem_dimm_capacity of this HostWhereInput.  # noqa: E501
 
@@ -8966,6 +11369,174 @@ class HostWhereInput(object):
         """
 
         self._pmem_disk_count_not_in = pmem_disk_count_not_in
+
+    @property
+    def prio_space_percentage(self):
+        """Gets the prio_space_percentage of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage
+
+    @prio_space_percentage.setter
+    def prio_space_percentage(self, prio_space_percentage):
+        """Sets the prio_space_percentage of this HostWhereInput.
+
+
+        :param prio_space_percentage: The prio_space_percentage of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage: float
+        """
+
+        self._prio_space_percentage = prio_space_percentage
+
+    @property
+    def prio_space_percentage_gt(self):
+        """Gets the prio_space_percentage_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_gt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage_gt
+
+    @prio_space_percentage_gt.setter
+    def prio_space_percentage_gt(self, prio_space_percentage_gt):
+        """Sets the prio_space_percentage_gt of this HostWhereInput.
+
+
+        :param prio_space_percentage_gt: The prio_space_percentage_gt of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_gt: float
+        """
+
+        self._prio_space_percentage_gt = prio_space_percentage_gt
+
+    @property
+    def prio_space_percentage_gte(self):
+        """Gets the prio_space_percentage_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_gte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage_gte
+
+    @prio_space_percentage_gte.setter
+    def prio_space_percentage_gte(self, prio_space_percentage_gte):
+        """Sets the prio_space_percentage_gte of this HostWhereInput.
+
+
+        :param prio_space_percentage_gte: The prio_space_percentage_gte of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_gte: float
+        """
+
+        self._prio_space_percentage_gte = prio_space_percentage_gte
+
+    @property
+    def prio_space_percentage_in(self):
+        """Gets the prio_space_percentage_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._prio_space_percentage_in
+
+    @prio_space_percentage_in.setter
+    def prio_space_percentage_in(self, prio_space_percentage_in):
+        """Sets the prio_space_percentage_in of this HostWhereInput.
+
+
+        :param prio_space_percentage_in: The prio_space_percentage_in of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_in: list[float]
+        """
+
+        self._prio_space_percentage_in = prio_space_percentage_in
+
+    @property
+    def prio_space_percentage_lt(self):
+        """Gets the prio_space_percentage_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_lt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage_lt
+
+    @prio_space_percentage_lt.setter
+    def prio_space_percentage_lt(self, prio_space_percentage_lt):
+        """Sets the prio_space_percentage_lt of this HostWhereInput.
+
+
+        :param prio_space_percentage_lt: The prio_space_percentage_lt of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_lt: float
+        """
+
+        self._prio_space_percentage_lt = prio_space_percentage_lt
+
+    @property
+    def prio_space_percentage_lte(self):
+        """Gets the prio_space_percentage_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_lte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage_lte
+
+    @prio_space_percentage_lte.setter
+    def prio_space_percentage_lte(self, prio_space_percentage_lte):
+        """Sets the prio_space_percentage_lte of this HostWhereInput.
+
+
+        :param prio_space_percentage_lte: The prio_space_percentage_lte of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_lte: float
+        """
+
+        self._prio_space_percentage_lte = prio_space_percentage_lte
+
+    @property
+    def prio_space_percentage_not(self):
+        """Gets the prio_space_percentage_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_not of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage_not
+
+    @prio_space_percentage_not.setter
+    def prio_space_percentage_not(self, prio_space_percentage_not):
+        """Sets the prio_space_percentage_not of this HostWhereInput.
+
+
+        :param prio_space_percentage_not: The prio_space_percentage_not of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_not: float
+        """
+
+        self._prio_space_percentage_not = prio_space_percentage_not
+
+    @property
+    def prio_space_percentage_not_in(self):
+        """Gets the prio_space_percentage_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The prio_space_percentage_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._prio_space_percentage_not_in
+
+    @prio_space_percentage_not_in.setter
+    def prio_space_percentage_not_in(self, prio_space_percentage_not_in):
+        """Sets the prio_space_percentage_not_in of this HostWhereInput.
+
+
+        :param prio_space_percentage_not_in: The prio_space_percentage_not_in of this HostWhereInput.  # noqa: E501
+        :type prio_space_percentage_not_in: list[float]
+        """
+
+        self._prio_space_percentage_not_in = prio_space_percentage_not_in
 
     @property
     def provisioned_cpu_cores(self):
@@ -12475,6 +15046,174 @@ class HostWhereInput(object):
         self._usb_devices_some = usb_devices_some
 
     @property
+    def used_cache_space(self):
+        """Gets the used_cache_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space
+
+    @used_cache_space.setter
+    def used_cache_space(self, used_cache_space):
+        """Sets the used_cache_space of this HostWhereInput.
+
+
+        :param used_cache_space: The used_cache_space of this HostWhereInput.  # noqa: E501
+        :type used_cache_space: int
+        """
+
+        self._used_cache_space = used_cache_space
+
+    @property
+    def used_cache_space_gt(self):
+        """Gets the used_cache_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space_gt
+
+    @used_cache_space_gt.setter
+    def used_cache_space_gt(self, used_cache_space_gt):
+        """Sets the used_cache_space_gt of this HostWhereInput.
+
+
+        :param used_cache_space_gt: The used_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_gt: int
+        """
+
+        self._used_cache_space_gt = used_cache_space_gt
+
+    @property
+    def used_cache_space_gte(self):
+        """Gets the used_cache_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space_gte
+
+    @used_cache_space_gte.setter
+    def used_cache_space_gte(self, used_cache_space_gte):
+        """Sets the used_cache_space_gte of this HostWhereInput.
+
+
+        :param used_cache_space_gte: The used_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_gte: int
+        """
+
+        self._used_cache_space_gte = used_cache_space_gte
+
+    @property
+    def used_cache_space_in(self):
+        """Gets the used_cache_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._used_cache_space_in
+
+    @used_cache_space_in.setter
+    def used_cache_space_in(self, used_cache_space_in):
+        """Sets the used_cache_space_in of this HostWhereInput.
+
+
+        :param used_cache_space_in: The used_cache_space_in of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_in: list[int]
+        """
+
+        self._used_cache_space_in = used_cache_space_in
+
+    @property
+    def used_cache_space_lt(self):
+        """Gets the used_cache_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space_lt
+
+    @used_cache_space_lt.setter
+    def used_cache_space_lt(self, used_cache_space_lt):
+        """Sets the used_cache_space_lt of this HostWhereInput.
+
+
+        :param used_cache_space_lt: The used_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_lt: int
+        """
+
+        self._used_cache_space_lt = used_cache_space_lt
+
+    @property
+    def used_cache_space_lte(self):
+        """Gets the used_cache_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space_lte
+
+    @used_cache_space_lte.setter
+    def used_cache_space_lte(self, used_cache_space_lte):
+        """Sets the used_cache_space_lte of this HostWhereInput.
+
+
+        :param used_cache_space_lte: The used_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_lte: int
+        """
+
+        self._used_cache_space_lte = used_cache_space_lte
+
+    @property
+    def used_cache_space_not(self):
+        """Gets the used_cache_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space_not
+
+    @used_cache_space_not.setter
+    def used_cache_space_not(self, used_cache_space_not):
+        """Sets the used_cache_space_not of this HostWhereInput.
+
+
+        :param used_cache_space_not: The used_cache_space_not of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_not: int
+        """
+
+        self._used_cache_space_not = used_cache_space_not
+
+    @property
+    def used_cache_space_not_in(self):
+        """Gets the used_cache_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The used_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._used_cache_space_not_in
+
+    @used_cache_space_not_in.setter
+    def used_cache_space_not_in(self, used_cache_space_not_in):
+        """Sets the used_cache_space_not_in of this HostWhereInput.
+
+
+        :param used_cache_space_not_in: The used_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :type used_cache_space_not_in: list[int]
+        """
+
+        self._used_cache_space_not_in = used_cache_space_not_in
+
+    @property
     def used_cpu_hz(self):
         """Gets the used_cpu_hz of this HostWhereInput.  # noqa: E501
 
@@ -12977,6 +15716,342 @@ class HostWhereInput(object):
         """
 
         self._used_memory_bytes_not_in = used_memory_bytes_not_in
+
+    @property
+    def valid_cache_space(self):
+        """Gets the valid_cache_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space
+
+    @valid_cache_space.setter
+    def valid_cache_space(self, valid_cache_space):
+        """Sets the valid_cache_space of this HostWhereInput.
+
+
+        :param valid_cache_space: The valid_cache_space of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space: int
+        """
+
+        self._valid_cache_space = valid_cache_space
+
+    @property
+    def valid_cache_space_gt(self):
+        """Gets the valid_cache_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space_gt
+
+    @valid_cache_space_gt.setter
+    def valid_cache_space_gt(self, valid_cache_space_gt):
+        """Sets the valid_cache_space_gt of this HostWhereInput.
+
+
+        :param valid_cache_space_gt: The valid_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_gt: int
+        """
+
+        self._valid_cache_space_gt = valid_cache_space_gt
+
+    @property
+    def valid_cache_space_gte(self):
+        """Gets the valid_cache_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space_gte
+
+    @valid_cache_space_gte.setter
+    def valid_cache_space_gte(self, valid_cache_space_gte):
+        """Sets the valid_cache_space_gte of this HostWhereInput.
+
+
+        :param valid_cache_space_gte: The valid_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_gte: int
+        """
+
+        self._valid_cache_space_gte = valid_cache_space_gte
+
+    @property
+    def valid_cache_space_in(self):
+        """Gets the valid_cache_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_cache_space_in
+
+    @valid_cache_space_in.setter
+    def valid_cache_space_in(self, valid_cache_space_in):
+        """Sets the valid_cache_space_in of this HostWhereInput.
+
+
+        :param valid_cache_space_in: The valid_cache_space_in of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_in: list[int]
+        """
+
+        self._valid_cache_space_in = valid_cache_space_in
+
+    @property
+    def valid_cache_space_lt(self):
+        """Gets the valid_cache_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space_lt
+
+    @valid_cache_space_lt.setter
+    def valid_cache_space_lt(self, valid_cache_space_lt):
+        """Sets the valid_cache_space_lt of this HostWhereInput.
+
+
+        :param valid_cache_space_lt: The valid_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_lt: int
+        """
+
+        self._valid_cache_space_lt = valid_cache_space_lt
+
+    @property
+    def valid_cache_space_lte(self):
+        """Gets the valid_cache_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space_lte
+
+    @valid_cache_space_lte.setter
+    def valid_cache_space_lte(self, valid_cache_space_lte):
+        """Sets the valid_cache_space_lte of this HostWhereInput.
+
+
+        :param valid_cache_space_lte: The valid_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_lte: int
+        """
+
+        self._valid_cache_space_lte = valid_cache_space_lte
+
+    @property
+    def valid_cache_space_not(self):
+        """Gets the valid_cache_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space_not
+
+    @valid_cache_space_not.setter
+    def valid_cache_space_not(self, valid_cache_space_not):
+        """Sets the valid_cache_space_not of this HostWhereInput.
+
+
+        :param valid_cache_space_not: The valid_cache_space_not of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_not: int
+        """
+
+        self._valid_cache_space_not = valid_cache_space_not
+
+    @property
+    def valid_cache_space_not_in(self):
+        """Gets the valid_cache_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_cache_space_not_in
+
+    @valid_cache_space_not_in.setter
+    def valid_cache_space_not_in(self, valid_cache_space_not_in):
+        """Sets the valid_cache_space_not_in of this HostWhereInput.
+
+
+        :param valid_cache_space_not_in: The valid_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :type valid_cache_space_not_in: list[int]
+        """
+
+        self._valid_cache_space_not_in = valid_cache_space_not_in
+
+    @property
+    def valid_free_cache_space(self):
+        """Gets the valid_free_cache_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space
+
+    @valid_free_cache_space.setter
+    def valid_free_cache_space(self, valid_free_cache_space):
+        """Sets the valid_free_cache_space of this HostWhereInput.
+
+
+        :param valid_free_cache_space: The valid_free_cache_space of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space: int
+        """
+
+        self._valid_free_cache_space = valid_free_cache_space
+
+    @property
+    def valid_free_cache_space_gt(self):
+        """Gets the valid_free_cache_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space_gt
+
+    @valid_free_cache_space_gt.setter
+    def valid_free_cache_space_gt(self, valid_free_cache_space_gt):
+        """Sets the valid_free_cache_space_gt of this HostWhereInput.
+
+
+        :param valid_free_cache_space_gt: The valid_free_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_gt: int
+        """
+
+        self._valid_free_cache_space_gt = valid_free_cache_space_gt
+
+    @property
+    def valid_free_cache_space_gte(self):
+        """Gets the valid_free_cache_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space_gte
+
+    @valid_free_cache_space_gte.setter
+    def valid_free_cache_space_gte(self, valid_free_cache_space_gte):
+        """Sets the valid_free_cache_space_gte of this HostWhereInput.
+
+
+        :param valid_free_cache_space_gte: The valid_free_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_gte: int
+        """
+
+        self._valid_free_cache_space_gte = valid_free_cache_space_gte
+
+    @property
+    def valid_free_cache_space_in(self):
+        """Gets the valid_free_cache_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_free_cache_space_in
+
+    @valid_free_cache_space_in.setter
+    def valid_free_cache_space_in(self, valid_free_cache_space_in):
+        """Sets the valid_free_cache_space_in of this HostWhereInput.
+
+
+        :param valid_free_cache_space_in: The valid_free_cache_space_in of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_in: list[int]
+        """
+
+        self._valid_free_cache_space_in = valid_free_cache_space_in
+
+    @property
+    def valid_free_cache_space_lt(self):
+        """Gets the valid_free_cache_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space_lt
+
+    @valid_free_cache_space_lt.setter
+    def valid_free_cache_space_lt(self, valid_free_cache_space_lt):
+        """Sets the valid_free_cache_space_lt of this HostWhereInput.
+
+
+        :param valid_free_cache_space_lt: The valid_free_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_lt: int
+        """
+
+        self._valid_free_cache_space_lt = valid_free_cache_space_lt
+
+    @property
+    def valid_free_cache_space_lte(self):
+        """Gets the valid_free_cache_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space_lte
+
+    @valid_free_cache_space_lte.setter
+    def valid_free_cache_space_lte(self, valid_free_cache_space_lte):
+        """Sets the valid_free_cache_space_lte of this HostWhereInput.
+
+
+        :param valid_free_cache_space_lte: The valid_free_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_lte: int
+        """
+
+        self._valid_free_cache_space_lte = valid_free_cache_space_lte
+
+    @property
+    def valid_free_cache_space_not(self):
+        """Gets the valid_free_cache_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space_not
+
+    @valid_free_cache_space_not.setter
+    def valid_free_cache_space_not(self, valid_free_cache_space_not):
+        """Sets the valid_free_cache_space_not of this HostWhereInput.
+
+
+        :param valid_free_cache_space_not: The valid_free_cache_space_not of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_not: int
+        """
+
+        self._valid_free_cache_space_not = valid_free_cache_space_not
+
+    @property
+    def valid_free_cache_space_not_in(self):
+        """Gets the valid_free_cache_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The valid_free_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._valid_free_cache_space_not_in
+
+    @valid_free_cache_space_not_in.setter
+    def valid_free_cache_space_not_in(self, valid_free_cache_space_not_in):
+        """Sets the valid_free_cache_space_not_in of this HostWhereInput.
+
+
+        :param valid_free_cache_space_not_in: The valid_free_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :type valid_free_cache_space_not_in: list[int]
+        """
+
+        self._valid_free_cache_space_not_in = valid_free_cache_space_not_in
 
     @property
     def vm_num(self):

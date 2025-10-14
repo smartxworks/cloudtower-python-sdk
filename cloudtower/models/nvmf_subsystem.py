@@ -34,8 +34,15 @@ class NvmfSubsystem(object):
         'bps_wr': 'int',
         'bps_wr_max': 'int',
         'bps_wr_max_length': 'int',
+        'business_host_groups': 'list[NestedBusinessHostGroup]',
+        'business_hosts': 'list[NestedBusinessHost]',
         'cluster': 'NestedCluster',
+        'configuration_adaptive': 'bool',
+        'configuration_method': 'ConfigurationMethod',
         'description': 'str',
+        'ec_k': 'int',
+        'ec_m': 'int',
+        'encrypt_method': 'EncryptMethod',
         'entity_async_status': 'EntityAsyncStatus',
         'external_use': 'bool',
         'id': 'str',
@@ -51,6 +58,7 @@ class NvmfSubsystem(object):
         'iops_wr_max': 'int',
         'iops_wr_max_length': 'int',
         'ip_whitelist': 'str',
+        'iscsi_connections': 'list[NestedIscsiConnection]',
         'labels': 'list[NestedLabel]',
         'local_id': 'str',
         'name': 'str',
@@ -58,8 +66,11 @@ class NvmfSubsystem(object):
         'namespaces': 'list[NestedNvmfNamespace]',
         'nqn_name': 'str',
         'nqn_whitelist': 'str',
+        'nvmf_namespaces_num': 'int',
         'policy': 'NvmfSubsystemPolicyType',
+        'prioritized': 'bool',
         'replica_num': 'int',
+        'resiliency_type': 'ResiliencyType',
         'stripe_num': 'int',
         'stripe_size': 'int',
         'thin_provision': 'bool'
@@ -75,8 +86,15 @@ class NvmfSubsystem(object):
         'bps_wr': 'bps_wr',
         'bps_wr_max': 'bps_wr_max',
         'bps_wr_max_length': 'bps_wr_max_length',
+        'business_host_groups': 'business_host_groups',
+        'business_hosts': 'business_hosts',
         'cluster': 'cluster',
+        'configuration_adaptive': 'configuration_adaptive',
+        'configuration_method': 'configuration_method',
         'description': 'description',
+        'ec_k': 'ec_k',
+        'ec_m': 'ec_m',
+        'encrypt_method': 'encrypt_method',
         'entity_async_status': 'entityAsyncStatus',
         'external_use': 'external_use',
         'id': 'id',
@@ -92,6 +110,7 @@ class NvmfSubsystem(object):
         'iops_wr_max': 'iops_wr_max',
         'iops_wr_max_length': 'iops_wr_max_length',
         'ip_whitelist': 'ip_whitelist',
+        'iscsi_connections': 'iscsi_connections',
         'labels': 'labels',
         'local_id': 'local_id',
         'name': 'name',
@@ -99,8 +118,11 @@ class NvmfSubsystem(object):
         'namespaces': 'namespaces',
         'nqn_name': 'nqn_name',
         'nqn_whitelist': 'nqn_whitelist',
+        'nvmf_namespaces_num': 'nvmf_namespaces_num',
         'policy': 'policy',
+        'prioritized': 'prioritized',
         'replica_num': 'replica_num',
+        'resiliency_type': 'resiliency_type',
         'stripe_num': 'stripe_num',
         'stripe_size': 'stripe_size',
         'thin_provision': 'thin_provision'
@@ -119,8 +141,15 @@ class NvmfSubsystem(object):
         self._bps_wr = None
         self._bps_wr_max = None
         self._bps_wr_max_length = None
+        self._business_host_groups = None
+        self._business_hosts = None
         self._cluster = None
+        self._configuration_adaptive = None
+        self._configuration_method = None
         self._description = None
+        self._ec_k = None
+        self._ec_m = None
+        self._encrypt_method = None
         self._entity_async_status = None
         self._external_use = None
         self._id = None
@@ -136,6 +165,7 @@ class NvmfSubsystem(object):
         self._iops_wr_max = None
         self._iops_wr_max_length = None
         self._ip_whitelist = None
+        self._iscsi_connections = None
         self._labels = None
         self._local_id = None
         self._name = None
@@ -143,8 +173,11 @@ class NvmfSubsystem(object):
         self._namespaces = None
         self._nqn_name = None
         self._nqn_whitelist = None
+        self._nvmf_namespaces_num = None
         self._policy = None
+        self._prioritized = None
         self._replica_num = None
+        self._resiliency_type = None
         self._stripe_num = None
         self._stripe_size = None
         self._thin_provision = None
@@ -159,10 +192,17 @@ class NvmfSubsystem(object):
         self.bps_wr = kwargs.get("bps_wr", None)
         self.bps_wr_max = kwargs.get("bps_wr_max", None)
         self.bps_wr_max_length = kwargs.get("bps_wr_max_length", None)
+        self.business_host_groups = kwargs.get("business_host_groups", None)
+        self.business_hosts = kwargs.get("business_hosts", None)
         if "cluster" in kwargs:
             self.cluster = kwargs["cluster"]
+        self.configuration_adaptive = kwargs.get("configuration_adaptive", None)
+        self.configuration_method = kwargs.get("configuration_method", None)
         if "description" in kwargs:
             self.description = kwargs["description"]
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "external_use" in kwargs:
             self.external_use = kwargs["external_use"]
@@ -182,6 +222,7 @@ class NvmfSubsystem(object):
         self.iops_wr_max_length = kwargs.get("iops_wr_max_length", None)
         if "ip_whitelist" in kwargs:
             self.ip_whitelist = kwargs["ip_whitelist"]
+        self.iscsi_connections = kwargs.get("iscsi_connections", None)
         self.labels = kwargs.get("labels", None)
         if "local_id" in kwargs:
             self.local_id = kwargs["local_id"]
@@ -193,10 +234,13 @@ class NvmfSubsystem(object):
             self.nqn_name = kwargs["nqn_name"]
         if "nqn_whitelist" in kwargs:
             self.nqn_whitelist = kwargs["nqn_whitelist"]
+        self.nvmf_namespaces_num = kwargs.get("nvmf_namespaces_num", None)
         if "policy" in kwargs:
             self.policy = kwargs["policy"]
+        self.prioritized = kwargs.get("prioritized", None)
         if "replica_num" in kwargs:
             self.replica_num = kwargs["replica_num"]
+        self.resiliency_type = kwargs.get("resiliency_type", None)
         if "stripe_num" in kwargs:
             self.stripe_num = kwargs["stripe_num"]
         if "stripe_size" in kwargs:
@@ -394,6 +438,48 @@ class NvmfSubsystem(object):
         self._bps_wr_max_length = bps_wr_max_length
 
     @property
+    def business_host_groups(self):
+        """Gets the business_host_groups of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The business_host_groups of this NvmfSubsystem.  # noqa: E501
+        :rtype: list[NestedBusinessHostGroup]
+        """
+        return self._business_host_groups
+
+    @business_host_groups.setter
+    def business_host_groups(self, business_host_groups):
+        """Sets the business_host_groups of this NvmfSubsystem.
+
+
+        :param business_host_groups: The business_host_groups of this NvmfSubsystem.  # noqa: E501
+        :type business_host_groups: list[NestedBusinessHostGroup]
+        """
+
+        self._business_host_groups = business_host_groups
+
+    @property
+    def business_hosts(self):
+        """Gets the business_hosts of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The business_hosts of this NvmfSubsystem.  # noqa: E501
+        :rtype: list[NestedBusinessHost]
+        """
+        return self._business_hosts
+
+    @business_hosts.setter
+    def business_hosts(self, business_hosts):
+        """Sets the business_hosts of this NvmfSubsystem.
+
+
+        :param business_hosts: The business_hosts of this NvmfSubsystem.  # noqa: E501
+        :type business_hosts: list[NestedBusinessHost]
+        """
+
+        self._business_hosts = business_hosts
+
+    @property
     def cluster(self):
         """Gets the cluster of this NvmfSubsystem.  # noqa: E501
 
@@ -417,6 +503,48 @@ class NvmfSubsystem(object):
         self._cluster = cluster
 
     @property
+    def configuration_adaptive(self):
+        """Gets the configuration_adaptive of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The configuration_adaptive of this NvmfSubsystem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._configuration_adaptive
+
+    @configuration_adaptive.setter
+    def configuration_adaptive(self, configuration_adaptive):
+        """Sets the configuration_adaptive of this NvmfSubsystem.
+
+
+        :param configuration_adaptive: The configuration_adaptive of this NvmfSubsystem.  # noqa: E501
+        :type configuration_adaptive: bool
+        """
+
+        self._configuration_adaptive = configuration_adaptive
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The configuration_method of this NvmfSubsystem.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this NvmfSubsystem.
+
+
+        :param configuration_method: The configuration_method of this NvmfSubsystem.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
     def description(self):
         """Gets the description of this NvmfSubsystem.  # noqa: E501
 
@@ -438,6 +566,69 @@ class NvmfSubsystem(object):
             raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
 
         self._description = description
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfSubsystem.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfSubsystem.
+
+
+        :param ec_k: The ec_k of this NvmfSubsystem.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfSubsystem.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfSubsystem.
+
+
+        :param ec_m: The ec_m of this NvmfSubsystem.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The encrypt_method of this NvmfSubsystem.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NvmfSubsystem.
+
+
+        :param encrypt_method: The encrypt_method of this NvmfSubsystem.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
 
     @property
     def entity_async_status(self):
@@ -763,6 +954,27 @@ class NvmfSubsystem(object):
         self._ip_whitelist = ip_whitelist
 
     @property
+    def iscsi_connections(self):
+        """Gets the iscsi_connections of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The iscsi_connections of this NvmfSubsystem.  # noqa: E501
+        :rtype: list[NestedIscsiConnection]
+        """
+        return self._iscsi_connections
+
+    @iscsi_connections.setter
+    def iscsi_connections(self, iscsi_connections):
+        """Sets the iscsi_connections of this NvmfSubsystem.
+
+
+        :param iscsi_connections: The iscsi_connections of this NvmfSubsystem.  # noqa: E501
+        :type iscsi_connections: list[NestedIscsiConnection]
+        """
+
+        self._iscsi_connections = iscsi_connections
+
+    @property
     def labels(self):
         """Gets the labels of this NvmfSubsystem.  # noqa: E501
 
@@ -918,6 +1130,27 @@ class NvmfSubsystem(object):
         self._nqn_whitelist = nqn_whitelist
 
     @property
+    def nvmf_namespaces_num(self):
+        """Gets the nvmf_namespaces_num of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The nvmf_namespaces_num of this NvmfSubsystem.  # noqa: E501
+        :rtype: int
+        """
+        return self._nvmf_namespaces_num
+
+    @nvmf_namespaces_num.setter
+    def nvmf_namespaces_num(self, nvmf_namespaces_num):
+        """Sets the nvmf_namespaces_num of this NvmfSubsystem.
+
+
+        :param nvmf_namespaces_num: The nvmf_namespaces_num of this NvmfSubsystem.  # noqa: E501
+        :type nvmf_namespaces_num: int
+        """
+
+        self._nvmf_namespaces_num = nvmf_namespaces_num
+
+    @property
     def policy(self):
         """Gets the policy of this NvmfSubsystem.  # noqa: E501
 
@@ -941,6 +1174,27 @@ class NvmfSubsystem(object):
         self._policy = policy
 
     @property
+    def prioritized(self):
+        """Gets the prioritized of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The prioritized of this NvmfSubsystem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NvmfSubsystem.
+
+
+        :param prioritized: The prioritized of this NvmfSubsystem.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
     def replica_num(self):
         """Gets the replica_num of this NvmfSubsystem.  # noqa: E501
 
@@ -962,6 +1216,27 @@ class NvmfSubsystem(object):
             raise ValueError("Invalid value for `replica_num`, must not be `None`")  # noqa: E501
 
         self._replica_num = replica_num
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfSubsystem.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfSubsystem.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfSubsystem.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfSubsystem.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def stripe_num(self):

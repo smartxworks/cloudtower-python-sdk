@@ -45,6 +45,7 @@ class MetricLabel(object):
         'esxi_uuid': 'str',
         'device': 'str',
         'cluster': 'str',
+        'cid': 'str',
         'chunk': 'str',
         'typename': 'str'
     }
@@ -70,6 +71,7 @@ class MetricLabel(object):
         'esxi_uuid': '_esxi_uuid',
         'device': '_device',
         'cluster': '_cluster',
+        'cid': '_cid',
         'chunk': '_chunk',
         'typename': '__typename'
     }
@@ -98,6 +100,7 @@ class MetricLabel(object):
         self._esxi_uuid = None
         self._device = None
         self._cluster = None
+        self._cid = None
         self._chunk = None
         self._typename = None
         self.discriminator = None
@@ -122,6 +125,7 @@ class MetricLabel(object):
         self.esxi_uuid = kwargs.get("esxi_uuid", None)
         self.device = kwargs.get("device", None)
         self.cluster = kwargs.get("cluster", None)
+        self.cid = kwargs.get("cid", None)
         self.chunk = kwargs.get("chunk", None)
         if "typename" in kwargs:
             self.typename = kwargs["typename"]
@@ -545,6 +549,27 @@ class MetricLabel(object):
         """
 
         self._cluster = cluster
+
+    @property
+    def cid(self):
+        """Gets the cid of this MetricLabel.  # noqa: E501
+
+
+        :return: The cid of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._cid
+
+    @cid.setter
+    def cid(self, cid):
+        """Sets the cid of this MetricLabel.
+
+
+        :param cid: The cid of this MetricLabel.  # noqa: E501
+        :type cid: str
+        """
+
+        self._cid = cid
 
     @property
     def chunk(self):

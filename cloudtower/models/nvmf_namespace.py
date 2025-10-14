@@ -35,7 +35,15 @@ class NvmfNamespace(object):
         'bps_wr': 'int',
         'bps_wr_max': 'int',
         'bps_wr_max_length': 'int',
+        'business_host_groups': 'list[NestedBusinessHostGroup]',
+        'business_host_is_same_with_parent': 'bool',
+        'business_hosts': 'list[NestedBusinessHost]',
+        'configuration_method': 'ConfigurationMethod',
         'consistency_group': 'NestedConsistencyGroup',
+        'downgraded_prioritized_space': 'int',
+        'ec_k': 'int',
+        'ec_m': 'int',
+        'encrypt_method': 'EncryptMethod',
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'io_size': 'int',
@@ -57,9 +65,12 @@ class NvmfNamespace(object):
         'namespace_id': 'int',
         'nqn_whitelist': 'str',
         'nvmf_subsystem': 'NestedNvmfSubsystem',
+        'prioritized': 'bool',
         'replica_num': 'int',
+        'resiliency_type': 'ResiliencyType',
         'shared_size': 'int',
         'snapshot_num': 'int',
+        'snapshot_plans': 'list[NestedSnapshotPlan]',
         'stripe_num': 'int',
         'stripe_size': 'int',
         'thin_provision': 'bool',
@@ -79,7 +90,15 @@ class NvmfNamespace(object):
         'bps_wr': 'bps_wr',
         'bps_wr_max': 'bps_wr_max',
         'bps_wr_max_length': 'bps_wr_max_length',
+        'business_host_groups': 'business_host_groups',
+        'business_host_is_same_with_parent': 'business_host_is_same_with_parent',
+        'business_hosts': 'business_hosts',
+        'configuration_method': 'configuration_method',
         'consistency_group': 'consistency_group',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
+        'ec_k': 'ec_k',
+        'ec_m': 'ec_m',
+        'encrypt_method': 'encrypt_method',
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'io_size': 'io_size',
@@ -101,9 +120,12 @@ class NvmfNamespace(object):
         'namespace_id': 'namespace_id',
         'nqn_whitelist': 'nqn_whitelist',
         'nvmf_subsystem': 'nvmf_subsystem',
+        'prioritized': 'prioritized',
         'replica_num': 'replica_num',
+        'resiliency_type': 'resiliency_type',
         'shared_size': 'shared_size',
         'snapshot_num': 'snapshot_num',
+        'snapshot_plans': 'snapshot_plans',
         'stripe_num': 'stripe_num',
         'stripe_size': 'stripe_size',
         'thin_provision': 'thin_provision',
@@ -126,7 +148,15 @@ class NvmfNamespace(object):
         self._bps_wr = None
         self._bps_wr_max = None
         self._bps_wr_max_length = None
+        self._business_host_groups = None
+        self._business_host_is_same_with_parent = None
+        self._business_hosts = None
+        self._configuration_method = None
         self._consistency_group = None
+        self._downgraded_prioritized_space = None
+        self._ec_k = None
+        self._ec_m = None
+        self._encrypt_method = None
         self._entity_async_status = None
         self._id = None
         self._io_size = None
@@ -148,9 +178,12 @@ class NvmfNamespace(object):
         self._namespace_id = None
         self._nqn_whitelist = None
         self._nvmf_subsystem = None
+        self._prioritized = None
         self._replica_num = None
+        self._resiliency_type = None
         self._shared_size = None
         self._snapshot_num = None
+        self._snapshot_plans = None
         self._stripe_num = None
         self._stripe_size = None
         self._thin_provision = None
@@ -179,7 +212,15 @@ class NvmfNamespace(object):
             self.bps_wr_max = kwargs["bps_wr_max"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
+        self.business_host_groups = kwargs.get("business_host_groups", None)
+        self.business_host_is_same_with_parent = kwargs.get("business_host_is_same_with_parent", None)
+        self.business_hosts = kwargs.get("business_hosts", None)
+        self.configuration_method = kwargs.get("configuration_method", None)
         self.consistency_group = kwargs.get("consistency_group", None)
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -219,12 +260,15 @@ class NvmfNamespace(object):
             self.nqn_whitelist = kwargs["nqn_whitelist"]
         if "nvmf_subsystem" in kwargs:
             self.nvmf_subsystem = kwargs["nvmf_subsystem"]
+        self.prioritized = kwargs.get("prioritized", None)
         if "replica_num" in kwargs:
             self.replica_num = kwargs["replica_num"]
+        self.resiliency_type = kwargs.get("resiliency_type", None)
         if "shared_size" in kwargs:
             self.shared_size = kwargs["shared_size"]
         if "snapshot_num" in kwargs:
             self.snapshot_num = kwargs["snapshot_num"]
+        self.snapshot_plans = kwargs.get("snapshot_plans", None)
         if "stripe_num" in kwargs:
             self.stripe_num = kwargs["stripe_num"]
         if "stripe_size" in kwargs:
@@ -468,6 +512,90 @@ class NvmfNamespace(object):
         self._bps_wr_max_length = bps_wr_max_length
 
     @property
+    def business_host_groups(self):
+        """Gets the business_host_groups of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The business_host_groups of this NvmfNamespace.  # noqa: E501
+        :rtype: list[NestedBusinessHostGroup]
+        """
+        return self._business_host_groups
+
+    @business_host_groups.setter
+    def business_host_groups(self, business_host_groups):
+        """Sets the business_host_groups of this NvmfNamespace.
+
+
+        :param business_host_groups: The business_host_groups of this NvmfNamespace.  # noqa: E501
+        :type business_host_groups: list[NestedBusinessHostGroup]
+        """
+
+        self._business_host_groups = business_host_groups
+
+    @property
+    def business_host_is_same_with_parent(self):
+        """Gets the business_host_is_same_with_parent of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The business_host_is_same_with_parent of this NvmfNamespace.  # noqa: E501
+        :rtype: bool
+        """
+        return self._business_host_is_same_with_parent
+
+    @business_host_is_same_with_parent.setter
+    def business_host_is_same_with_parent(self, business_host_is_same_with_parent):
+        """Sets the business_host_is_same_with_parent of this NvmfNamespace.
+
+
+        :param business_host_is_same_with_parent: The business_host_is_same_with_parent of this NvmfNamespace.  # noqa: E501
+        :type business_host_is_same_with_parent: bool
+        """
+
+        self._business_host_is_same_with_parent = business_host_is_same_with_parent
+
+    @property
+    def business_hosts(self):
+        """Gets the business_hosts of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The business_hosts of this NvmfNamespace.  # noqa: E501
+        :rtype: list[NestedBusinessHost]
+        """
+        return self._business_hosts
+
+    @business_hosts.setter
+    def business_hosts(self, business_hosts):
+        """Sets the business_hosts of this NvmfNamespace.
+
+
+        :param business_hosts: The business_hosts of this NvmfNamespace.  # noqa: E501
+        :type business_hosts: list[NestedBusinessHost]
+        """
+
+        self._business_hosts = business_hosts
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The configuration_method of this NvmfNamespace.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this NvmfNamespace.
+
+
+        :param configuration_method: The configuration_method of this NvmfNamespace.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
     def consistency_group(self):
         """Gets the consistency_group of this NvmfNamespace.  # noqa: E501
 
@@ -487,6 +615,90 @@ class NvmfNamespace(object):
         """
 
         self._consistency_group = consistency_group
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this NvmfNamespace.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this NvmfNamespace.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this NvmfNamespace.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfNamespace.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfNamespace.
+
+
+        :param ec_k: The ec_k of this NvmfNamespace.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfNamespace.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfNamespace.
+
+
+        :param ec_m: The ec_m of this NvmfNamespace.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The encrypt_method of this NvmfNamespace.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NvmfNamespace.
+
+
+        :param encrypt_method: The encrypt_method of this NvmfNamespace.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
 
     @property
     def entity_async_status(self):
@@ -966,6 +1178,27 @@ class NvmfNamespace(object):
         self._nvmf_subsystem = nvmf_subsystem
 
     @property
+    def prioritized(self):
+        """Gets the prioritized of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The prioritized of this NvmfNamespace.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NvmfNamespace.
+
+
+        :param prioritized: The prioritized of this NvmfNamespace.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
     def replica_num(self):
         """Gets the replica_num of this NvmfNamespace.  # noqa: E501
 
@@ -987,6 +1220,27 @@ class NvmfNamespace(object):
             raise ValueError("Invalid value for `replica_num`, must not be `None`")  # noqa: E501
 
         self._replica_num = replica_num
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfNamespace.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfNamespace.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfNamespace.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def shared_size(self):
@@ -1033,6 +1287,27 @@ class NvmfNamespace(object):
             raise ValueError("Invalid value for `snapshot_num`, must not be `None`")  # noqa: E501
 
         self._snapshot_num = snapshot_num
+
+    @property
+    def snapshot_plans(self):
+        """Gets the snapshot_plans of this NvmfNamespace.  # noqa: E501
+
+
+        :return: The snapshot_plans of this NvmfNamespace.  # noqa: E501
+        :rtype: list[NestedSnapshotPlan]
+        """
+        return self._snapshot_plans
+
+    @snapshot_plans.setter
+    def snapshot_plans(self, snapshot_plans):
+        """Sets the snapshot_plans of this NvmfNamespace.
+
+
+        :param snapshot_plans: The snapshot_plans of this NvmfNamespace.  # noqa: E501
+        :type snapshot_plans: list[NestedSnapshotPlan]
+        """
+
+        self._snapshot_plans = snapshot_plans
 
     @property
     def stripe_num(self):

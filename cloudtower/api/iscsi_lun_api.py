@@ -38,6 +38,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_clone_params: list[IscsiLunCloneParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -69,6 +71,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_clone_params: list[IscsiLunCloneParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -97,7 +101,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'iscsi_lun_clone_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -133,6 +138,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -190,6 +197,8 @@ class IscsiLunApi(object):
         :type copy_iscsi_lun_params: list[CopyIscsiLunParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -221,6 +230,8 @@ class IscsiLunApi(object):
         :type copy_iscsi_lun_params: list[CopyIscsiLunParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -249,7 +260,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'copy_iscsi_lun_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -285,6 +297,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -342,6 +356,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_creation_params: list[IscsiLunCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -373,6 +389,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_creation_params: list[IscsiLunCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -401,7 +419,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'iscsi_lun_creation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -437,6 +456,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -494,6 +515,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_deletion_params: IscsiLunDeletionParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -525,6 +548,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_deletion_params: IscsiLunDeletionParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -553,7 +578,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'iscsi_lun_deletion_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -589,6 +615,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -646,6 +674,8 @@ class IscsiLunApi(object):
         :type get_iscsi_luns_request_body: GetIscsiLunsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -677,6 +707,8 @@ class IscsiLunApi(object):
         :type get_iscsi_luns_request_body: GetIscsiLunsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -705,7 +737,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'get_iscsi_luns_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -741,6 +774,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -798,6 +833,8 @@ class IscsiLunApi(object):
         :type get_iscsi_luns_connection_request_body: GetIscsiLunsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -829,6 +866,8 @@ class IscsiLunApi(object):
         :type get_iscsi_luns_connection_request_body: GetIscsiLunsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -857,7 +896,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'get_iscsi_luns_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -893,6 +933,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -950,6 +992,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_rollback_params: list[IscsiLunRollbackParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -981,6 +1025,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_rollback_params: list[IscsiLunRollbackParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1009,7 +1055,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'iscsi_lun_rollback_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1045,6 +1092,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1102,6 +1151,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_updation_params: IscsiLunUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1133,6 +1184,8 @@ class IscsiLunApi(object):
         :type iscsi_lun_updation_params: IscsiLunUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1161,7 +1214,8 @@ class IscsiLunApi(object):
 
         all_params = [
             'iscsi_lun_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1197,6 +1251,8 @@ class IscsiLunApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

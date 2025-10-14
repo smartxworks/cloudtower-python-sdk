@@ -27,6 +27,9 @@ class NfsExport(object):
     openapi_types = {
         'cluster': 'NestedCluster',
         'description': 'str',
+        'ec_k': 'int',
+        'ec_m': 'int',
+        'encrypt_method': 'EncryptMethod',
         'entity_async_status': 'EntityAsyncStatus',
         'export_inode_id': 'str',
         'id': 'str',
@@ -36,13 +39,18 @@ class NfsExport(object):
         'labels': 'list[NestedLabel]',
         'local_id': 'str',
         'name': 'str',
+        'prioritized': 'bool',
         'replica_num': 'int',
+        'resiliency_type': 'ResiliencyType',
         'thin_provision': 'bool'
     }
 
     attribute_map = {
         'cluster': 'cluster',
         'description': 'description',
+        'ec_k': 'ec_k',
+        'ec_m': 'ec_m',
+        'encrypt_method': 'encrypt_method',
         'entity_async_status': 'entityAsyncStatus',
         'export_inode_id': 'export_inode_id',
         'id': 'id',
@@ -52,7 +60,9 @@ class NfsExport(object):
         'labels': 'labels',
         'local_id': 'local_id',
         'name': 'name',
+        'prioritized': 'prioritized',
         'replica_num': 'replica_num',
+        'resiliency_type': 'resiliency_type',
         'thin_provision': 'thin_provision'
     }
 
@@ -62,6 +72,9 @@ class NfsExport(object):
 
         self._cluster = None
         self._description = None
+        self._ec_k = None
+        self._ec_m = None
+        self._encrypt_method = None
         self._entity_async_status = None
         self._export_inode_id = None
         self._id = None
@@ -71,7 +84,9 @@ class NfsExport(object):
         self._labels = None
         self._local_id = None
         self._name = None
+        self._prioritized = None
         self._replica_num = None
+        self._resiliency_type = None
         self._thin_provision = None
         self.discriminator = None
 
@@ -79,6 +94,9 @@ class NfsExport(object):
             self.cluster = kwargs["cluster"]
         if "description" in kwargs:
             self.description = kwargs["description"]
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "export_inode_id" in kwargs:
             self.export_inode_id = kwargs["export_inode_id"]
@@ -94,8 +112,10 @@ class NfsExport(object):
             self.local_id = kwargs["local_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.prioritized = kwargs.get("prioritized", None)
         if "replica_num" in kwargs:
             self.replica_num = kwargs["replica_num"]
+        self.resiliency_type = kwargs.get("resiliency_type", None)
         if "thin_provision" in kwargs:
             self.thin_provision = kwargs["thin_provision"]
 
@@ -144,6 +164,69 @@ class NfsExport(object):
             raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
 
         self._description = description
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NfsExport.  # noqa: E501
+
+
+        :return: The ec_k of this NfsExport.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NfsExport.
+
+
+        :param ec_k: The ec_k of this NfsExport.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NfsExport.  # noqa: E501
+
+
+        :return: The ec_m of this NfsExport.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NfsExport.
+
+
+        :param ec_m: The ec_m of this NfsExport.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NfsExport.  # noqa: E501
+
+
+        :return: The encrypt_method of this NfsExport.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NfsExport.
+
+
+        :param encrypt_method: The encrypt_method of this NfsExport.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
 
     @property
     def entity_async_status(self):
@@ -347,6 +430,27 @@ class NfsExport(object):
         self._name = name
 
     @property
+    def prioritized(self):
+        """Gets the prioritized of this NfsExport.  # noqa: E501
+
+
+        :return: The prioritized of this NfsExport.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NfsExport.
+
+
+        :param prioritized: The prioritized of this NfsExport.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
     def replica_num(self):
         """Gets the replica_num of this NfsExport.  # noqa: E501
 
@@ -368,6 +472,27 @@ class NfsExport(object):
             raise ValueError("Invalid value for `replica_num`, must not be `None`")  # noqa: E501
 
         self._replica_num = replica_num
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NfsExport.  # noqa: E501
+
+
+        :return: The resiliency_type of this NfsExport.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NfsExport.
+
+
+        :param resiliency_type: The resiliency_type of this NfsExport.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def thin_provision(self):

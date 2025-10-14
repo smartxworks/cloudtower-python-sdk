@@ -38,6 +38,7 @@ class VmRebuildParams(object):
         'vcpu': 'int',
         'status': 'VmStatus',
         'firmware': 'VmFirmware',
+        'ha_priority': 'VmHaPriority',
         'ha': 'bool',
         'pci_nics': 'NicWhereInput',
         'vm_placement_group': 'VmPlacementGroupWhereInput',
@@ -69,6 +70,7 @@ class VmRebuildParams(object):
         'vcpu': 'vcpu',
         'status': 'status',
         'firmware': 'firmware',
+        'ha_priority': 'ha_priority',
         'ha': 'ha',
         'pci_nics': 'pci_nics',
         'vm_placement_group': 'vm_placement_group',
@@ -103,6 +105,7 @@ class VmRebuildParams(object):
         self._vcpu = None
         self._status = None
         self._firmware = None
+        self._ha_priority = None
         self._ha = None
         self._pci_nics = None
         self._vm_placement_group = None
@@ -146,6 +149,8 @@ class VmRebuildParams(object):
             self.status = kwargs["status"]
         if "firmware" in kwargs:
             self.firmware = kwargs["firmware"]
+        if "ha_priority" in kwargs:
+            self.ha_priority = kwargs["ha_priority"]
         if "ha" in kwargs:
             self.ha = kwargs["ha"]
         if "pci_nics" in kwargs:
@@ -451,6 +456,27 @@ class VmRebuildParams(object):
         """
 
         self._firmware = firmware
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this VmRebuildParams.  # noqa: E501
+
+
+        :return: The ha_priority of this VmRebuildParams.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this VmRebuildParams.
+
+
+        :param ha_priority: The ha_priority of this VmRebuildParams.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
 
     @property
     def ha(self):

@@ -20,6 +20,10 @@ class IscsiLunSnapshotOrderByInput(object):
     """
     allowed enum values
     """
+    EC_K_ASC = "ec_k_ASC"
+    EC_K_DESC = "ec_k_DESC"
+    EC_M_ASC = "ec_m_ASC"
+    EC_M_DESC = "ec_m_DESC"
     ENTITYASYNCSTATUS_ASC = "entityAsyncStatus_ASC"
     ENTITYASYNCSTATUS_DESC = "entityAsyncStatus_DESC"
     ID_ASC = "id_ASC"
@@ -30,10 +34,12 @@ class IscsiLunSnapshotOrderByInput(object):
     LOCAL_ID_DESC = "local_id_DESC"
     NAME_ASC = "name_ASC"
     NAME_DESC = "name_DESC"
+    RESILIENCY_TYPE_ASC = "resiliency_type_ASC"
+    RESILIENCY_TYPE_DESC = "resiliency_type_DESC"
     UNIQUE_SIZE_ASC = "unique_size_ASC"
     UNIQUE_SIZE_DESC = "unique_size_DESC"
 
-    allowable_values = [ENTITYASYNCSTATUS_ASC, ENTITYASYNCSTATUS_DESC, ID_ASC, ID_DESC, LOCAL_CREATED_AT_ASC, LOCAL_CREATED_AT_DESC, LOCAL_ID_ASC, LOCAL_ID_DESC, NAME_ASC, NAME_DESC, UNIQUE_SIZE_ASC, UNIQUE_SIZE_DESC]  # noqa: E501
+    allowable_values = [EC_K_ASC, EC_K_DESC, EC_M_ASC, EC_M_DESC, ENTITYASYNCSTATUS_ASC, ENTITYASYNCSTATUS_DESC, ID_ASC, ID_DESC, LOCAL_CREATED_AT_ASC, LOCAL_CREATED_AT_DESC, LOCAL_ID_ASC, LOCAL_ID_DESC, NAME_ASC, NAME_DESC, RESILIENCY_TYPE_ASC, RESILIENCY_TYPE_DESC, UNIQUE_SIZE_ASC, UNIQUE_SIZE_DESC]  # noqa: E501
 
     """
     Attributes:

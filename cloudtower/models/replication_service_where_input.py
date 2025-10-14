@@ -149,14 +149,6 @@ class ReplicationServiceWhereInput(object):
         'replication_plans_every': 'ReplicationPlanWhereInput',
         'replication_plans_none': 'ReplicationPlanWhereInput',
         'replication_plans_some': 'ReplicationPlanWhereInput',
-        'resource_version': 'int',
-        'resource_version_gt': 'int',
-        'resource_version_gte': 'int',
-        'resource_version_in': 'list[int]',
-        'resource_version_lt': 'int',
-        'resource_version_lte': 'int',
-        'resource_version_not': 'int',
-        'resource_version_not_in': 'list[int]',
         'retry_interval': 'int',
         'retry_interval_gt': 'int',
         'retry_interval_gte': 'int',
@@ -300,14 +292,6 @@ class ReplicationServiceWhereInput(object):
         'replication_plans_every': 'replication_plans_every',
         'replication_plans_none': 'replication_plans_none',
         'replication_plans_some': 'replication_plans_some',
-        'resource_version': 'resource_version',
-        'resource_version_gt': 'resource_version_gt',
-        'resource_version_gte': 'resource_version_gte',
-        'resource_version_in': 'resource_version_in',
-        'resource_version_lt': 'resource_version_lt',
-        'resource_version_lte': 'resource_version_lte',
-        'resource_version_not': 'resource_version_not',
-        'resource_version_not_in': 'resource_version_not_in',
         'retry_interval': 'retry_interval',
         'retry_interval_gt': 'retry_interval_gt',
         'retry_interval_gte': 'retry_interval_gte',
@@ -454,14 +438,6 @@ class ReplicationServiceWhereInput(object):
         self._replication_plans_every = None
         self._replication_plans_none = None
         self._replication_plans_some = None
-        self._resource_version = None
-        self._resource_version_gt = None
-        self._resource_version_gte = None
-        self._resource_version_in = None
-        self._resource_version_lt = None
-        self._resource_version_lte = None
-        self._resource_version_not = None
-        self._resource_version_not_in = None
         self._retry_interval = None
         self._retry_interval_gt = None
         self._retry_interval_gte = None
@@ -604,14 +580,6 @@ class ReplicationServiceWhereInput(object):
         self.replication_plans_every = kwargs.get("replication_plans_every", None)
         self.replication_plans_none = kwargs.get("replication_plans_none", None)
         self.replication_plans_some = kwargs.get("replication_plans_some", None)
-        self.resource_version = kwargs.get("resource_version", None)
-        self.resource_version_gt = kwargs.get("resource_version_gt", None)
-        self.resource_version_gte = kwargs.get("resource_version_gte", None)
-        self.resource_version_in = kwargs.get("resource_version_in", None)
-        self.resource_version_lt = kwargs.get("resource_version_lt", None)
-        self.resource_version_lte = kwargs.get("resource_version_lte", None)
-        self.resource_version_not = kwargs.get("resource_version_not", None)
-        self.resource_version_not_in = kwargs.get("resource_version_not_in", None)
         self.retry_interval = kwargs.get("retry_interval", None)
         self.retry_interval_gt = kwargs.get("retry_interval_gt", None)
         self.retry_interval_gte = kwargs.get("retry_interval_gte", None)
@@ -3232,174 +3200,6 @@ class ReplicationServiceWhereInput(object):
         """
 
         self._replication_plans_some = replication_plans_some
-
-    @property
-    def resource_version(self):
-        """Gets the resource_version of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version
-
-    @resource_version.setter
-    def resource_version(self, resource_version):
-        """Sets the resource_version of this ReplicationServiceWhereInput.
-
-
-        :param resource_version: The resource_version of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version: int
-        """
-
-        self._resource_version = resource_version
-
-    @property
-    def resource_version_gt(self):
-        """Gets the resource_version_gt of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_gt of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version_gt
-
-    @resource_version_gt.setter
-    def resource_version_gt(self, resource_version_gt):
-        """Sets the resource_version_gt of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_gt: The resource_version_gt of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_gt: int
-        """
-
-        self._resource_version_gt = resource_version_gt
-
-    @property
-    def resource_version_gte(self):
-        """Gets the resource_version_gte of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_gte of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version_gte
-
-    @resource_version_gte.setter
-    def resource_version_gte(self, resource_version_gte):
-        """Sets the resource_version_gte of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_gte: The resource_version_gte of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_gte: int
-        """
-
-        self._resource_version_gte = resource_version_gte
-
-    @property
-    def resource_version_in(self):
-        """Gets the resource_version_in of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_in of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._resource_version_in
-
-    @resource_version_in.setter
-    def resource_version_in(self, resource_version_in):
-        """Sets the resource_version_in of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_in: The resource_version_in of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_in: list[int]
-        """
-
-        self._resource_version_in = resource_version_in
-
-    @property
-    def resource_version_lt(self):
-        """Gets the resource_version_lt of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_lt of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version_lt
-
-    @resource_version_lt.setter
-    def resource_version_lt(self, resource_version_lt):
-        """Sets the resource_version_lt of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_lt: The resource_version_lt of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_lt: int
-        """
-
-        self._resource_version_lt = resource_version_lt
-
-    @property
-    def resource_version_lte(self):
-        """Gets the resource_version_lte of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_lte of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version_lte
-
-    @resource_version_lte.setter
-    def resource_version_lte(self, resource_version_lte):
-        """Sets the resource_version_lte of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_lte: The resource_version_lte of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_lte: int
-        """
-
-        self._resource_version_lte = resource_version_lte
-
-    @property
-    def resource_version_not(self):
-        """Gets the resource_version_not of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_not of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._resource_version_not
-
-    @resource_version_not.setter
-    def resource_version_not(self, resource_version_not):
-        """Sets the resource_version_not of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_not: The resource_version_not of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_not: int
-        """
-
-        self._resource_version_not = resource_version_not
-
-    @property
-    def resource_version_not_in(self):
-        """Gets the resource_version_not_in of this ReplicationServiceWhereInput.  # noqa: E501
-
-
-        :return: The resource_version_not_in of this ReplicationServiceWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._resource_version_not_in
-
-    @resource_version_not_in.setter
-    def resource_version_not_in(self, resource_version_not_in):
-        """Sets the resource_version_not_in of this ReplicationServiceWhereInput.
-
-
-        :param resource_version_not_in: The resource_version_not_in of this ReplicationServiceWhereInput.  # noqa: E501
-        :type resource_version_not_in: list[int]
-        """
-
-        self._resource_version_not_in = resource_version_not_in
 
     @property
     def retry_interval(self):

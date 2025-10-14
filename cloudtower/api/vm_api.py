@@ -38,6 +38,8 @@ class VmApi(object):
         :type abort_migrate_vm_across_cluster_params: AbortMigrateVmAcrossClusterParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -69,6 +71,8 @@ class VmApi(object):
         :type abort_migrate_vm_across_cluster_params: AbortMigrateVmAcrossClusterParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -97,7 +101,8 @@ class VmApi(object):
 
         all_params = [
             'abort_migrate_vm_across_cluster_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -133,6 +138,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -190,6 +197,8 @@ class VmApi(object):
         :type vm_add_cd_rom_params: VmAddCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -221,6 +230,8 @@ class VmApi(object):
         :type vm_add_cd_rom_params: VmAddCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -249,7 +260,8 @@ class VmApi(object):
 
         all_params = [
             'vm_add_cd_rom_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -285,6 +297,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -343,6 +357,8 @@ class VmApi(object):
         :type vm_add_disk_params: VmAddDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -374,6 +390,8 @@ class VmApi(object):
         :type vm_add_disk_params: VmAddDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -402,7 +420,8 @@ class VmApi(object):
 
         all_params = [
             'vm_add_disk_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -438,6 +457,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -495,6 +516,8 @@ class VmApi(object):
         :type vm_add_gpu_device_params: VmAddGpuDeviceParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -526,6 +549,8 @@ class VmApi(object):
         :type vm_add_gpu_device_params: VmAddGpuDeviceParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -554,7 +579,8 @@ class VmApi(object):
 
         all_params = [
             'vm_add_gpu_device_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -590,6 +616,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -647,6 +675,8 @@ class VmApi(object):
         :type vm_add_nic_params: VmAddNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -678,6 +708,8 @@ class VmApi(object):
         :type vm_add_nic_params: VmAddNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -706,7 +738,8 @@ class VmApi(object):
 
         all_params = [
             'vm_add_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -742,6 +775,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -799,6 +834,8 @@ class VmApi(object):
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -830,6 +867,8 @@ class VmApi(object):
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -858,7 +897,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_pci_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -894,6 +934,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -952,6 +994,8 @@ class VmApi(object):
         :type vm_add_folder_params: VmAddFolderParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -983,6 +1027,8 @@ class VmApi(object):
         :type vm_add_folder_params: VmAddFolderParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1011,7 +1057,8 @@ class VmApi(object):
 
         all_params = [
             'vm_add_folder_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1047,6 +1094,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1104,6 +1153,8 @@ class VmApi(object):
         :type vm_clone_params: list[VmCloneParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1135,6 +1186,8 @@ class VmApi(object):
         :type vm_clone_params: list[VmCloneParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1163,7 +1216,8 @@ class VmApi(object):
 
         all_params = [
             'vm_clone_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1199,6 +1253,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1256,6 +1312,8 @@ class VmApi(object):
         :type convert_vm_template_to_vm_params: list[ConvertVmTemplateToVmParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1287,6 +1345,8 @@ class VmApi(object):
         :type convert_vm_template_to_vm_params: list[ConvertVmTemplateToVmParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1315,7 +1375,8 @@ class VmApi(object):
 
         all_params = [
             'convert_vm_template_to_vm_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1351,6 +1412,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1408,6 +1471,8 @@ class VmApi(object):
         :type vm_creation_params: list[VmCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1439,6 +1504,8 @@ class VmApi(object):
         :type vm_creation_params: list[VmCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1467,7 +1534,8 @@ class VmApi(object):
 
         all_params = [
             'vm_creation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1503,6 +1571,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1560,6 +1630,8 @@ class VmApi(object):
         :type vm_create_vm_from_content_library_template_params: list[VmCreateVmFromContentLibraryTemplateParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1591,6 +1663,8 @@ class VmApi(object):
         :type vm_create_vm_from_content_library_template_params: list[VmCreateVmFromContentLibraryTemplateParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1619,7 +1693,8 @@ class VmApi(object):
 
         all_params = [
             'vm_create_vm_from_content_library_template_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1655,6 +1730,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1712,6 +1789,8 @@ class VmApi(object):
         :type vm_create_vm_from_content_library_template_batch_params: VmCreateVmFromContentLibraryTemplateBatchParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1743,6 +1822,8 @@ class VmApi(object):
         :type vm_create_vm_from_content_library_template_batch_params: VmCreateVmFromContentLibraryTemplateBatchParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1771,7 +1852,8 @@ class VmApi(object):
 
         all_params = [
             'vm_create_vm_from_content_library_template_batch_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1807,6 +1889,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1864,6 +1948,8 @@ class VmApi(object):
         :type vm_create_vm_from_template_params: list[VmCreateVmFromTemplateParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1895,6 +1981,8 @@ class VmApi(object):
         :type vm_create_vm_from_template_params: list[VmCreateVmFromTemplateParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1923,7 +2011,8 @@ class VmApi(object):
 
         all_params = [
             'vm_create_vm_from_template_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1959,6 +2048,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2016,6 +2107,8 @@ class VmApi(object):
         :type vm_delete_params: VmDeleteParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2047,6 +2140,8 @@ class VmApi(object):
         :type vm_delete_params: VmDeleteParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2075,7 +2170,8 @@ class VmApi(object):
 
         all_params = [
             'vm_delete_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2111,6 +2207,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2168,6 +2266,8 @@ class VmApi(object):
         :type vm_eject_cd_rom_params: VmEjectCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2199,6 +2299,8 @@ class VmApi(object):
         :type vm_eject_cd_rom_params: VmEjectCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2227,7 +2329,8 @@ class VmApi(object):
 
         all_params = [
             'vm_eject_cd_rom_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2263,6 +2366,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2320,6 +2425,8 @@ class VmApi(object):
         :type vm_expand_vm_disk_params: VmExpandVmDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2351,6 +2458,8 @@ class VmApi(object):
         :type vm_expand_vm_disk_params: VmExpandVmDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2379,7 +2488,8 @@ class VmApi(object):
 
         all_params = [
             'vm_expand_vm_disk_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2415,6 +2525,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2472,6 +2584,8 @@ class VmApi(object):
         :type vm_export_params: VmExportParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2503,6 +2617,8 @@ class VmApi(object):
         :type vm_export_params: VmExportParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2531,7 +2647,8 @@ class VmApi(object):
 
         all_params = [
             'vm_export_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2567,6 +2684,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2625,6 +2744,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2656,6 +2777,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2684,7 +2807,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2720,6 +2844,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2777,6 +2903,8 @@ class VmApi(object):
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2808,6 +2936,8 @@ class VmApi(object):
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2836,7 +2966,8 @@ class VmApi(object):
 
         all_params = [
             'get_vms_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2872,6 +3003,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2929,6 +3062,8 @@ class VmApi(object):
         :type get_vm_vnc_info_params: GetVmVncInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2960,6 +3095,8 @@ class VmApi(object):
         :type get_vm_vnc_info_params: GetVmVncInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2988,7 +3125,8 @@ class VmApi(object):
 
         all_params = [
             'get_vm_vnc_info_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3024,6 +3162,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3081,6 +3221,8 @@ class VmApi(object):
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3112,6 +3254,8 @@ class VmApi(object):
         :type get_vms_request_body: GetVmsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3140,7 +3284,8 @@ class VmApi(object):
 
         all_params = [
             'get_vms_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3176,6 +3321,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3233,6 +3380,8 @@ class VmApi(object):
         :type get_vms_connection_request_body: GetVmsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3264,6 +3413,8 @@ class VmApi(object):
         :type get_vms_connection_request_body: GetVmsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3292,7 +3443,8 @@ class VmApi(object):
 
         all_params = [
             'get_vms_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3328,6 +3480,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3385,6 +3539,8 @@ class VmApi(object):
         :type vm_import_params: list[VmImportParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3416,6 +3572,8 @@ class VmApi(object):
         :type vm_import_params: list[VmImportParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3444,7 +3602,8 @@ class VmApi(object):
 
         all_params = [
             'vm_import_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3480,6 +3639,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3537,6 +3698,8 @@ class VmApi(object):
         :type install_vmtools_params: InstallVmtoolsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3568,6 +3731,8 @@ class VmApi(object):
         :type install_vmtools_params: InstallVmtoolsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3596,7 +3761,8 @@ class VmApi(object):
 
         all_params = [
             'install_vmtools_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3632,6 +3798,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3689,6 +3857,8 @@ class VmApi(object):
         :type vm_migrate_params: VmMigrateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3720,6 +3890,8 @@ class VmApi(object):
         :type vm_migrate_params: VmMigrateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3748,7 +3920,8 @@ class VmApi(object):
 
         all_params = [
             'vm_migrate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3784,6 +3957,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3841,6 +4016,8 @@ class VmApi(object):
         :type vm_migrate_across_cluster_params: VmMigrateAcrossClusterParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3872,6 +4049,8 @@ class VmApi(object):
         :type vm_migrate_across_cluster_params: VmMigrateAcrossClusterParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -3900,7 +4079,8 @@ class VmApi(object):
 
         all_params = [
             'vm_migrate_across_cluster_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -3936,6 +4116,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -3994,6 +4176,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4025,6 +4209,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4053,7 +4239,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4089,6 +4276,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4146,6 +4335,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4177,6 +4368,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4205,7 +4398,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4241,6 +4435,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4298,6 +4494,8 @@ class VmApi(object):
         :type vm_rebuild_params: list[VmRebuildParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4329,6 +4527,8 @@ class VmApi(object):
         :type vm_rebuild_params: list[VmRebuildParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4357,7 +4557,8 @@ class VmApi(object):
 
         all_params = [
             'vm_rebuild_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4393,6 +4594,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4450,6 +4653,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4481,6 +4686,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4509,7 +4716,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4545,6 +4753,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4602,6 +4812,8 @@ class VmApi(object):
         :type vm_remove_cd_rom_params: VmRemoveCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4633,6 +4845,8 @@ class VmApi(object):
         :type vm_remove_cd_rom_params: VmRemoveCdRomParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4661,7 +4875,8 @@ class VmApi(object):
 
         all_params = [
             'vm_remove_cd_rom_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4697,6 +4912,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4754,6 +4971,8 @@ class VmApi(object):
         :type vm_remove_disk_params: VmRemoveDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4785,6 +5004,8 @@ class VmApi(object):
         :type vm_remove_disk_params: VmRemoveDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4813,7 +5034,8 @@ class VmApi(object):
 
         all_params = [
             'vm_remove_disk_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -4849,6 +5071,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -4906,6 +5130,8 @@ class VmApi(object):
         :type vm_remove_gpu_device_params: VmRemoveGpuDeviceParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4937,6 +5163,8 @@ class VmApi(object):
         :type vm_remove_gpu_device_params: VmRemoveGpuDeviceParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -4965,7 +5193,8 @@ class VmApi(object):
 
         all_params = [
             'vm_remove_gpu_device_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5001,6 +5230,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5058,6 +5289,8 @@ class VmApi(object):
         :type vm_remove_nic_params: VmRemoveNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5089,6 +5322,8 @@ class VmApi(object):
         :type vm_remove_nic_params: VmRemoveNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5117,7 +5352,8 @@ class VmApi(object):
 
         all_params = [
             'vm_remove_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5153,6 +5389,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5210,6 +5448,8 @@ class VmApi(object):
         :type vm_remove_nic_by_where_params: VmRemoveNicByWhereParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5241,6 +5481,8 @@ class VmApi(object):
         :type vm_remove_nic_by_where_params: VmRemoveNicByWhereParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5269,7 +5511,8 @@ class VmApi(object):
 
         all_params = [
             'vm_remove_nic_by_where_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5305,6 +5548,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5362,6 +5607,8 @@ class VmApi(object):
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5393,6 +5640,8 @@ class VmApi(object):
         :type vm_operate_pci_nic_params: VmOperatePciNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5421,7 +5670,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_pci_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5457,6 +5707,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5515,6 +5767,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5546,6 +5800,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5574,7 +5830,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5610,6 +5867,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5667,6 +5926,8 @@ class VmApi(object):
         :type vm_reset_guest_os_password_params: VmResetGuestOsPasswordParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5698,6 +5959,8 @@ class VmApi(object):
         :type vm_reset_guest_os_password_params: VmResetGuestOsPasswordParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5726,7 +5989,8 @@ class VmApi(object):
 
         all_params = [
             'vm_reset_guest_os_password_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5762,6 +6026,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5820,6 +6086,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -5851,6 +6119,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -5879,7 +6149,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -5915,6 +6186,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -5972,6 +6245,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6003,6 +6278,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6031,7 +6308,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6067,6 +6345,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6124,6 +6404,8 @@ class VmApi(object):
         :type vm_rollback_params: VmRollbackParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6155,6 +6437,8 @@ class VmApi(object):
         :type vm_rollback_params: VmRollbackParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6183,7 +6467,8 @@ class VmApi(object):
 
         all_params = [
             'vm_rollback_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6219,6 +6504,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6263,6 +6550,165 @@ class VmApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
+    def set_vm_disk_resident_in_cache(self, vm_set_vm_disk_resident_in_cache_params, **kwargs):  # noqa: E501
+        """set_vm_disk_resident_in_cache  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.set_vm_disk_resident_in_cache(vm_set_vm_disk_resident_in_cache_params, async_req=True)
+        >>> result = thread.get()
+
+        :param vm_set_vm_disk_resident_in_cache_params: (required)
+        :type vm_set_vm_disk_resident_in_cache_params: VmSetVmDiskResidentInCacheParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[WithTaskVm]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.set_vm_disk_resident_in_cache_with_http_info(vm_set_vm_disk_resident_in_cache_params, **kwargs)  # noqa: E501
+
+    def set_vm_disk_resident_in_cache_with_http_info(self, vm_set_vm_disk_resident_in_cache_params, **kwargs):  # noqa: E501
+        """set_vm_disk_resident_in_cache  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.set_vm_disk_resident_in_cache_with_http_info(vm_set_vm_disk_resident_in_cache_params, async_req=True)
+        >>> result = thread.get()
+
+        :param vm_set_vm_disk_resident_in_cache_params: (required)
+        :type vm_set_vm_disk_resident_in_cache_params: VmSetVmDiskResidentInCacheParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[WithTaskVm], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'vm_set_vm_disk_resident_in_cache_params',
+            'content_language',
+            'external_cloudtower_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method set_vm_disk_resident_in_cache" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'vm_set_vm_disk_resident_in_cache_params' is set
+        if self.api_client.client_side_validation and ('vm_set_vm_disk_resident_in_cache_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['vm_set_vm_disk_resident_in_cache_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `vm_set_vm_disk_resident_in_cache_params` when calling `set_vm_disk_resident_in_cache`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'vm_set_vm_disk_resident_in_cache_params' in local_var_params:
+            body_params = local_var_params['vm_set_vm_disk_resident_in_cache_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[WithTaskVm]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/set-vm-disk-resident-in-cache', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
     def shut_down_vm(self, vm_operate_params, **kwargs):  # noqa: E501
         """shut_down_vm  # noqa: E501
 
@@ -6276,6 +6722,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6307,6 +6755,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6335,7 +6785,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6371,6 +6822,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6428,6 +6881,8 @@ class VmApi(object):
         :type vm_start_params: VmStartParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6459,6 +6914,8 @@ class VmApi(object):
         :type vm_start_params: VmStartParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6487,7 +6944,8 @@ class VmApi(object):
 
         all_params = [
             'vm_start_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6523,6 +6981,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6580,6 +7040,8 @@ class VmApi(object):
         :type stop_vm_in_cutover_migration_params: StopVmInCutoverMigrationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6611,6 +7073,8 @@ class VmApi(object):
         :type stop_vm_in_cutover_migration_params: StopVmInCutoverMigrationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6639,7 +7103,8 @@ class VmApi(object):
 
         all_params = [
             'stop_vm_in_cutover_migration_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6675,6 +7140,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6732,6 +7199,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6763,6 +7232,8 @@ class VmApi(object):
         :type vm_operate_params: VmOperateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6791,7 +7262,8 @@ class VmApi(object):
 
         all_params = [
             'vm_operate_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6827,6 +7299,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -6884,6 +7358,8 @@ class VmApi(object):
         :type vm_toggle_cd_rom_disable_params: VmToggleCdRomDisableParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -6915,6 +7391,8 @@ class VmApi(object):
         :type vm_toggle_cd_rom_disable_params: VmToggleCdRomDisableParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -6943,7 +7421,8 @@ class VmApi(object):
 
         all_params = [
             'vm_toggle_cd_rom_disable_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -6979,6 +7458,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7036,6 +7517,8 @@ class VmApi(object):
         :type vm_update_params: VmUpdateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7067,6 +7550,8 @@ class VmApi(object):
         :type vm_update_params: VmUpdateParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7095,7 +7580,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7131,6 +7617,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7188,6 +7676,8 @@ class VmApi(object):
         :type vm_update_advanced_options_params: VmUpdateAdvancedOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7219,6 +7709,8 @@ class VmApi(object):
         :type vm_update_advanced_options_params: VmUpdateAdvancedOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7247,7 +7739,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_advanced_options_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7283,6 +7776,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7341,6 +7836,8 @@ class VmApi(object):
         :type vm_update_disk_params: VmUpdateDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7372,6 +7869,8 @@ class VmApi(object):
         :type vm_update_disk_params: VmUpdateDiskParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7400,7 +7899,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_disk_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7436,6 +7936,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7493,6 +7995,8 @@ class VmApi(object):
         :type vm_update_host_options_params: VmUpdateHostOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7524,6 +8028,8 @@ class VmApi(object):
         :type vm_update_host_options_params: VmUpdateHostOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7552,7 +8058,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_host_options_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7588,6 +8095,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7646,6 +8155,8 @@ class VmApi(object):
         :type vm_update_io_policy_params: VmUpdateIoPolicyParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7677,6 +8188,8 @@ class VmApi(object):
         :type vm_update_io_policy_params: VmUpdateIoPolicyParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7705,7 +8218,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_io_policy_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7741,6 +8255,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7799,6 +8315,8 @@ class VmApi(object):
         :type vm_update_nic_params: VmUpdateNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7830,6 +8348,8 @@ class VmApi(object):
         :type vm_update_nic_params: VmUpdateNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -7858,7 +8378,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -7894,6 +8415,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -7951,6 +8474,8 @@ class VmApi(object):
         :type vm_update_nic_advance_info_params: VmUpdateNicAdvanceInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -7982,6 +8507,8 @@ class VmApi(object):
         :type vm_update_nic_advance_info_params: VmUpdateNicAdvanceInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8010,7 +8537,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_nic_advance_info_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -8046,6 +8574,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -8104,6 +8634,8 @@ class VmApi(object):
         :type vm_update_nic_basic_info_params: VmUpdateNicBasicInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8135,6 +8667,8 @@ class VmApi(object):
         :type vm_update_nic_basic_info_params: VmUpdateNicBasicInfoParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8163,7 +8697,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_nic_basic_info_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -8199,6 +8734,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -8257,6 +8794,8 @@ class VmApi(object):
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8288,6 +8827,8 @@ class VmApi(object):
         :type vm_update_nic_qos_options_params: VmUpdateNicQosOptionsParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8316,7 +8857,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_nic_qos_options_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -8352,6 +8894,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -8410,6 +8954,8 @@ class VmApi(object):
         :type vm_update_vpc_nic_params: VmUpdateVpcNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8441,6 +8987,8 @@ class VmApi(object):
         :type vm_update_vpc_nic_params: VmUpdateVpcNicParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8469,7 +9017,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_vpc_nic_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -8505,6 +9054,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -8563,6 +9114,8 @@ class VmApi(object):
         :type vm_update_owner_params: VmUpdateOwnerParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -8594,6 +9147,8 @@ class VmApi(object):
         :type vm_update_owner_params: VmUpdateOwnerParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -8622,7 +9177,8 @@ class VmApi(object):
 
         all_params = [
             'vm_update_owner_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -8658,6 +9214,8 @@ class VmApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

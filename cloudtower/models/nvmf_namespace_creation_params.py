@@ -25,6 +25,10 @@ class NvmfNamespaceCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'ec_m': 'float',
+        'ec_k': 'float',
+        'resiliency_type': 'ResiliencyType',
+        'thin_provision': 'bool',
         'namespace_id': 'int',
         'group_id': 'str',
         'is_shared': 'bool',
@@ -33,6 +37,12 @@ class NvmfNamespaceCreationParams(object):
         'replica_num': 'int',
         'nvmf_subsystem_id': 'str',
         'name': 'str',
+        'business_host_groups': 'BusinessHostGroupWhereInput',
+        'business_hosts': 'BusinessHostWhereInput',
+        'business_host_is_same_with_parent': 'bool',
+        'configuration_method': 'ConfigurationMethod',
+        'encrypt_method': 'EncryptMethod',
+        'prioritized': 'bool',
         'bps_wr_max_length': 'int',
         'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max': 'int',
@@ -61,6 +71,10 @@ class NvmfNamespaceCreationParams(object):
     }
 
     attribute_map = {
+        'ec_m': 'ec_m',
+        'ec_k': 'ec_k',
+        'resiliency_type': 'resiliency_type',
+        'thin_provision': 'thin_provision',
         'namespace_id': 'namespace_id',
         'group_id': 'group_id',
         'is_shared': 'is_shared',
@@ -69,6 +83,12 @@ class NvmfNamespaceCreationParams(object):
         'replica_num': 'replica_num',
         'nvmf_subsystem_id': 'nvmf_subsystem_id',
         'name': 'name',
+        'business_host_groups': 'business_host_groups',
+        'business_hosts': 'business_hosts',
+        'business_host_is_same_with_parent': 'business_host_is_same_with_parent',
+        'configuration_method': 'configuration_method',
+        'encrypt_method': 'encrypt_method',
+        'prioritized': 'prioritized',
         'bps_wr_max_length': 'bps_wr_max_length',
         'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max': 'bps_wr_max',
@@ -100,6 +120,10 @@ class NvmfNamespaceCreationParams(object):
         """NvmfNamespaceCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._ec_m = None
+        self._ec_k = None
+        self._resiliency_type = None
+        self._thin_provision = None
         self._namespace_id = None
         self._group_id = None
         self._is_shared = None
@@ -108,6 +132,12 @@ class NvmfNamespaceCreationParams(object):
         self._replica_num = None
         self._nvmf_subsystem_id = None
         self._name = None
+        self._business_host_groups = None
+        self._business_hosts = None
+        self._business_host_is_same_with_parent = None
+        self._configuration_method = None
+        self._encrypt_method = None
+        self._prioritized = None
         self._bps_wr_max_length = None
         self._bps_wr_max_unit = None
         self._bps_wr_max = None
@@ -135,6 +165,14 @@ class NvmfNamespaceCreationParams(object):
         self._nqn_whitelist = None
         self.discriminator = None
 
+        if "ec_m" in kwargs:
+            self.ec_m = kwargs["ec_m"]
+        if "ec_k" in kwargs:
+            self.ec_k = kwargs["ec_k"]
+        if "resiliency_type" in kwargs:
+            self.resiliency_type = kwargs["resiliency_type"]
+        if "thin_provision" in kwargs:
+            self.thin_provision = kwargs["thin_provision"]
         if "namespace_id" in kwargs:
             self.namespace_id = kwargs["namespace_id"]
         if "group_id" in kwargs:
@@ -151,6 +189,18 @@ class NvmfNamespaceCreationParams(object):
             self.nvmf_subsystem_id = kwargs["nvmf_subsystem_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        if "business_host_groups" in kwargs:
+            self.business_host_groups = kwargs["business_host_groups"]
+        if "business_hosts" in kwargs:
+            self.business_hosts = kwargs["business_hosts"]
+        if "business_host_is_same_with_parent" in kwargs:
+            self.business_host_is_same_with_parent = kwargs["business_host_is_same_with_parent"]
+        if "configuration_method" in kwargs:
+            self.configuration_method = kwargs["configuration_method"]
+        if "encrypt_method" in kwargs:
+            self.encrypt_method = kwargs["encrypt_method"]
+        if "prioritized" in kwargs:
+            self.prioritized = kwargs["prioritized"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
         if "bps_wr_max_unit" in kwargs:
@@ -201,6 +251,90 @@ class NvmfNamespaceCreationParams(object):
             self.iops = kwargs["iops"]
         if "nqn_whitelist" in kwargs:
             self.nqn_whitelist = kwargs["nqn_whitelist"]
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfNamespaceCreationParams.
+
+
+        :param ec_m: The ec_m of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type ec_m: float
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfNamespaceCreationParams.
+
+
+        :param ec_k: The ec_k of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type ec_k: float
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfNamespaceCreationParams.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def thin_provision(self):
+        """Gets the thin_provision of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The thin_provision of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._thin_provision
+
+    @thin_provision.setter
+    def thin_provision(self, thin_provision):
+        """Sets the thin_provision of this NvmfNamespaceCreationParams.
+
+
+        :param thin_provision: The thin_provision of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type thin_provision: bool
+        """
+
+        self._thin_provision = thin_provision
 
     @property
     def namespace_id(self):
@@ -377,6 +511,132 @@ class NvmfNamespaceCreationParams(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def business_host_groups(self):
+        """Gets the business_host_groups of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The business_host_groups of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups
+
+    @business_host_groups.setter
+    def business_host_groups(self, business_host_groups):
+        """Sets the business_host_groups of this NvmfNamespaceCreationParams.
+
+
+        :param business_host_groups: The business_host_groups of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type business_host_groups: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups = business_host_groups
+
+    @property
+    def business_hosts(self):
+        """Gets the business_hosts of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The business_hosts of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts
+
+    @business_hosts.setter
+    def business_hosts(self, business_hosts):
+        """Sets the business_hosts of this NvmfNamespaceCreationParams.
+
+
+        :param business_hosts: The business_hosts of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type business_hosts: BusinessHostWhereInput
+        """
+
+        self._business_hosts = business_hosts
+
+    @property
+    def business_host_is_same_with_parent(self):
+        """Gets the business_host_is_same_with_parent of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The business_host_is_same_with_parent of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._business_host_is_same_with_parent
+
+    @business_host_is_same_with_parent.setter
+    def business_host_is_same_with_parent(self, business_host_is_same_with_parent):
+        """Sets the business_host_is_same_with_parent of this NvmfNamespaceCreationParams.
+
+
+        :param business_host_is_same_with_parent: The business_host_is_same_with_parent of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type business_host_is_same_with_parent: bool
+        """
+
+        self._business_host_is_same_with_parent = business_host_is_same_with_parent
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The configuration_method of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this NvmfNamespaceCreationParams.
+
+
+        :param configuration_method: The configuration_method of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The encrypt_method of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NvmfNamespaceCreationParams.
+
+
+        :param encrypt_method: The encrypt_method of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def prioritized(self):
+        """Gets the prioritized of this NvmfNamespaceCreationParams.  # noqa: E501
+
+
+        :return: The prioritized of this NvmfNamespaceCreationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NvmfNamespaceCreationParams.
+
+
+        :param prioritized: The prioritized of this NvmfNamespaceCreationParams.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
 
     @property
     def bps_wr_max_length(self):

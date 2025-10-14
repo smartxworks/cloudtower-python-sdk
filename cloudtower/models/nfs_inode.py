@@ -26,6 +26,10 @@ class NfsInode(object):
     """
     openapi_types = {
         'assigned_size': 'int',
+        'downgraded_prioritized_space': 'int',
+        'ec_k': 'int',
+        'ec_m': 'int',
+        'encrypt_method': 'EncryptMethod',
         'entity_async_status': 'EntityAsyncStatus',
         'file': 'bool',
         'id': 'str',
@@ -35,6 +39,8 @@ class NfsInode(object):
         'name': 'str',
         'nfs_export': 'NestedNfsExport',
         'parent_id': 'str',
+        'prioritized': 'bool',
+        'resiliency_type': 'ResiliencyType',
         'shared_size': 'int',
         'snapshot_num': 'int',
         'unique_logical_size': 'float',
@@ -43,6 +49,10 @@ class NfsInode(object):
 
     attribute_map = {
         'assigned_size': 'assigned_size',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
+        'ec_k': 'ec_k',
+        'ec_m': 'ec_m',
+        'encrypt_method': 'encrypt_method',
         'entity_async_status': 'entityAsyncStatus',
         'file': 'file',
         'id': 'id',
@@ -52,6 +62,8 @@ class NfsInode(object):
         'name': 'name',
         'nfs_export': 'nfs_export',
         'parent_id': 'parent_id',
+        'prioritized': 'prioritized',
+        'resiliency_type': 'resiliency_type',
         'shared_size': 'shared_size',
         'snapshot_num': 'snapshot_num',
         'unique_logical_size': 'unique_logical_size',
@@ -63,6 +75,10 @@ class NfsInode(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._assigned_size = None
+        self._downgraded_prioritized_space = None
+        self._ec_k = None
+        self._ec_m = None
+        self._encrypt_method = None
         self._entity_async_status = None
         self._file = None
         self._id = None
@@ -72,6 +88,8 @@ class NfsInode(object):
         self._name = None
         self._nfs_export = None
         self._parent_id = None
+        self._prioritized = None
+        self._resiliency_type = None
         self._shared_size = None
         self._snapshot_num = None
         self._unique_logical_size = None
@@ -80,6 +98,10 @@ class NfsInode(object):
 
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "file" in kwargs:
             self.file = kwargs["file"]
@@ -96,6 +118,8 @@ class NfsInode(object):
             self.nfs_export = kwargs["nfs_export"]
         if "parent_id" in kwargs:
             self.parent_id = kwargs["parent_id"]
+        self.prioritized = kwargs.get("prioritized", None)
+        self.resiliency_type = kwargs.get("resiliency_type", None)
         if "shared_size" in kwargs:
             self.shared_size = kwargs["shared_size"]
         if "snapshot_num" in kwargs:
@@ -126,6 +150,90 @@ class NfsInode(object):
             raise ValueError("Invalid value for `assigned_size`, must not be `None`")  # noqa: E501
 
         self._assigned_size = assigned_size
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this NfsInode.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this NfsInode.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this NfsInode.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this NfsInode.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NfsInode.  # noqa: E501
+
+
+        :return: The ec_k of this NfsInode.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NfsInode.
+
+
+        :param ec_k: The ec_k of this NfsInode.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NfsInode.  # noqa: E501
+
+
+        :return: The ec_m of this NfsInode.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NfsInode.
+
+
+        :param ec_m: The ec_m of this NfsInode.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NfsInode.  # noqa: E501
+
+
+        :return: The encrypt_method of this NfsInode.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NfsInode.
+
+
+        :param encrypt_method: The encrypt_method of this NfsInode.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
 
     @property
     def entity_async_status(self):
@@ -329,6 +437,48 @@ class NfsInode(object):
             raise ValueError("Invalid value for `parent_id`, must not be `None`")  # noqa: E501
 
         self._parent_id = parent_id
+
+    @property
+    def prioritized(self):
+        """Gets the prioritized of this NfsInode.  # noqa: E501
+
+
+        :return: The prioritized of this NfsInode.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NfsInode.
+
+
+        :param prioritized: The prioritized of this NfsInode.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NfsInode.  # noqa: E501
+
+
+        :return: The resiliency_type of this NfsInode.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NfsInode.
+
+
+        :param resiliency_type: The resiliency_type of this NfsInode.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def shared_size(self):

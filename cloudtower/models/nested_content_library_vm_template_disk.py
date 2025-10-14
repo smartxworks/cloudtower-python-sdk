@@ -30,6 +30,10 @@ class NestedContentLibraryVmTemplateDisk(object):
         'content_library_image_id': 'str',
         'disabled': 'bool',
         'disk_name': 'str',
+        'elf_storage_policy_ec_k': 'int',
+        'elf_storage_policy_ec_m': 'int',
+        'elf_storage_policy_replica_num': 'int',
+        'elf_storage_policy_thin_provision': 'bool',
         'index': 'int',
         'max_bandwidth': 'int',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
@@ -49,6 +53,10 @@ class NestedContentLibraryVmTemplateDisk(object):
         'content_library_image_id': 'content_library_image_id',
         'disabled': 'disabled',
         'disk_name': 'disk_name',
+        'elf_storage_policy_ec_k': 'elf_storage_policy_ec_k',
+        'elf_storage_policy_ec_m': 'elf_storage_policy_ec_m',
+        'elf_storage_policy_replica_num': 'elf_storage_policy_replica_num',
+        'elf_storage_policy_thin_provision': 'elf_storage_policy_thin_provision',
         'index': 'index',
         'max_bandwidth': 'max_bandwidth',
         'max_bandwidth_policy': 'max_bandwidth_policy',
@@ -71,6 +79,10 @@ class NestedContentLibraryVmTemplateDisk(object):
         self._content_library_image_id = None
         self._disabled = None
         self._disk_name = None
+        self._elf_storage_policy_ec_k = None
+        self._elf_storage_policy_ec_m = None
+        self._elf_storage_policy_replica_num = None
+        self._elf_storage_policy_thin_provision = None
         self._index = None
         self._max_bandwidth = None
         self._max_bandwidth_policy = None
@@ -91,6 +103,10 @@ class NestedContentLibraryVmTemplateDisk(object):
         self.content_library_image_id = kwargs.get("content_library_image_id", None)
         self.disabled = kwargs.get("disabled", None)
         self.disk_name = kwargs.get("disk_name", None)
+        self.elf_storage_policy_ec_k = kwargs.get("elf_storage_policy_ec_k", None)
+        self.elf_storage_policy_ec_m = kwargs.get("elf_storage_policy_ec_m", None)
+        self.elf_storage_policy_replica_num = kwargs.get("elf_storage_policy_replica_num", None)
+        self.elf_storage_policy_thin_provision = kwargs.get("elf_storage_policy_thin_provision", None)
         if "index" in kwargs:
             self.index = kwargs["index"]
         self.max_bandwidth = kwargs.get("max_bandwidth", None)
@@ -213,6 +229,90 @@ class NestedContentLibraryVmTemplateDisk(object):
         """
 
         self._disk_name = disk_name
+
+    @property
+    def elf_storage_policy_ec_k(self):
+        """Gets the elf_storage_policy_ec_k of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k
+
+    @elf_storage_policy_ec_k.setter
+    def elf_storage_policy_ec_k(self, elf_storage_policy_ec_k):
+        """Sets the elf_storage_policy_ec_k of this NestedContentLibraryVmTemplateDisk.
+
+
+        :param elf_storage_policy_ec_k: The elf_storage_policy_ec_k of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :type elf_storage_policy_ec_k: int
+        """
+
+        self._elf_storage_policy_ec_k = elf_storage_policy_ec_k
+
+    @property
+    def elf_storage_policy_ec_m(self):
+        """Gets the elf_storage_policy_ec_m of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m
+
+    @elf_storage_policy_ec_m.setter
+    def elf_storage_policy_ec_m(self, elf_storage_policy_ec_m):
+        """Sets the elf_storage_policy_ec_m of this NestedContentLibraryVmTemplateDisk.
+
+
+        :param elf_storage_policy_ec_m: The elf_storage_policy_ec_m of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :type elf_storage_policy_ec_m: int
+        """
+
+        self._elf_storage_policy_ec_m = elf_storage_policy_ec_m
+
+    @property
+    def elf_storage_policy_replica_num(self):
+        """Gets the elf_storage_policy_replica_num of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num
+
+    @elf_storage_policy_replica_num.setter
+    def elf_storage_policy_replica_num(self, elf_storage_policy_replica_num):
+        """Sets the elf_storage_policy_replica_num of this NestedContentLibraryVmTemplateDisk.
+
+
+        :param elf_storage_policy_replica_num: The elf_storage_policy_replica_num of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :type elf_storage_policy_replica_num: int
+        """
+
+        self._elf_storage_policy_replica_num = elf_storage_policy_replica_num
+
+    @property
+    def elf_storage_policy_thin_provision(self):
+        """Gets the elf_storage_policy_thin_provision of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+
+
+        :return: The elf_storage_policy_thin_provision of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :rtype: bool
+        """
+        return self._elf_storage_policy_thin_provision
+
+    @elf_storage_policy_thin_provision.setter
+    def elf_storage_policy_thin_provision(self, elf_storage_policy_thin_provision):
+        """Sets the elf_storage_policy_thin_provision of this NestedContentLibraryVmTemplateDisk.
+
+
+        :param elf_storage_policy_thin_provision: The elf_storage_policy_thin_provision of this NestedContentLibraryVmTemplateDisk.  # noqa: E501
+        :type elf_storage_policy_thin_provision: bool
+        """
+
+        self._elf_storage_policy_thin_provision = elf_storage_policy_thin_provision
 
     @property
     def index(self):

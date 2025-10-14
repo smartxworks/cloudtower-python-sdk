@@ -34,6 +34,8 @@ class ApiInfoApi(object):
         >>> thread = api.get_api_version(async_req=True)
         >>> result = thread.get()
 
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -61,6 +63,8 @@ class ApiInfoApi(object):
         >>> thread = api.get_api_version_with_http_info(async_req=True)
         >>> result = thread.get()
 
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -88,6 +92,7 @@ class ApiInfoApi(object):
         local_var_params = locals()
 
         all_params = [
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -117,6 +122,8 @@ class ApiInfoApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

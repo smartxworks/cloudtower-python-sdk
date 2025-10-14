@@ -108,7 +108,47 @@ class NvmfNamespaceWhereInput(object):
         'bps_wr_max_not_in': 'list[int]',
         'bps_wr_not': 'int',
         'bps_wr_not_in': 'list[int]',
+        'business_host_groups_every': 'BusinessHostGroupWhereInput',
+        'business_host_groups_none': 'BusinessHostGroupWhereInput',
+        'business_host_groups_some': 'BusinessHostGroupWhereInput',
+        'business_host_is_same_with_parent': 'bool',
+        'business_host_is_same_with_parent_not': 'bool',
+        'business_hosts_every': 'BusinessHostWhereInput',
+        'business_hosts_none': 'BusinessHostWhereInput',
+        'business_hosts_some': 'BusinessHostWhereInput',
+        'configuration_method': 'ConfigurationMethod',
+        'configuration_method_in': 'list[ConfigurationMethod]',
+        'configuration_method_not': 'ConfigurationMethod',
+        'configuration_method_not_in': 'list[ConfigurationMethod]',
         'consistency_group': 'ConsistencyGroupWhereInput',
+        'downgraded_prioritized_space': 'int',
+        'downgraded_prioritized_space_gt': 'int',
+        'downgraded_prioritized_space_gte': 'int',
+        'downgraded_prioritized_space_in': 'list[int]',
+        'downgraded_prioritized_space_lt': 'int',
+        'downgraded_prioritized_space_lte': 'int',
+        'downgraded_prioritized_space_not': 'int',
+        'downgraded_prioritized_space_not_in': 'list[int]',
+        'ec_k': 'int',
+        'ec_k_gt': 'int',
+        'ec_k_gte': 'int',
+        'ec_k_in': 'list[int]',
+        'ec_k_lt': 'int',
+        'ec_k_lte': 'int',
+        'ec_k_not': 'int',
+        'ec_k_not_in': 'list[int]',
+        'ec_m': 'int',
+        'ec_m_gt': 'int',
+        'ec_m_gte': 'int',
+        'ec_m_in': 'list[int]',
+        'ec_m_lt': 'int',
+        'ec_m_lte': 'int',
+        'ec_m_not': 'int',
+        'ec_m_not_in': 'list[int]',
+        'encrypt_method': 'EncryptMethod',
+        'encrypt_method_in': 'list[EncryptMethod]',
+        'encrypt_method_not': 'EncryptMethod',
+        'encrypt_method_not_in': 'list[EncryptMethod]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -272,6 +312,8 @@ class NvmfNamespaceWhereInput(object):
         'nqn_whitelist_not_starts_with': 'str',
         'nqn_whitelist_starts_with': 'str',
         'nvmf_subsystem': 'NvmfSubsystemWhereInput',
+        'prioritized': 'bool',
+        'prioritized_not': 'bool',
         'replica_num': 'int',
         'replica_num_gt': 'int',
         'replica_num_gte': 'int',
@@ -280,6 +322,10 @@ class NvmfNamespaceWhereInput(object):
         'replica_num_lte': 'int',
         'replica_num_not': 'int',
         'replica_num_not_in': 'list[int]',
+        'resiliency_type': 'ResiliencyType',
+        'resiliency_type_in': 'list[ResiliencyType]',
+        'resiliency_type_not': 'ResiliencyType',
+        'resiliency_type_not_in': 'list[ResiliencyType]',
         'shared_size': 'int',
         'shared_size_gt': 'int',
         'shared_size_gte': 'int',
@@ -296,6 +342,9 @@ class NvmfNamespaceWhereInput(object):
         'snapshot_num_lte': 'int',
         'snapshot_num_not': 'int',
         'snapshot_num_not_in': 'list[int]',
+        'snapshot_plans_every': 'SnapshotPlanWhereInput',
+        'snapshot_plans_none': 'SnapshotPlanWhereInput',
+        'snapshot_plans_some': 'SnapshotPlanWhereInput',
         'stripe_num': 'int',
         'stripe_num_gt': 'int',
         'stripe_num_gte': 'int',
@@ -430,7 +479,47 @@ class NvmfNamespaceWhereInput(object):
         'bps_wr_max_not_in': 'bps_wr_max_not_in',
         'bps_wr_not': 'bps_wr_not',
         'bps_wr_not_in': 'bps_wr_not_in',
+        'business_host_groups_every': 'business_host_groups_every',
+        'business_host_groups_none': 'business_host_groups_none',
+        'business_host_groups_some': 'business_host_groups_some',
+        'business_host_is_same_with_parent': 'business_host_is_same_with_parent',
+        'business_host_is_same_with_parent_not': 'business_host_is_same_with_parent_not',
+        'business_hosts_every': 'business_hosts_every',
+        'business_hosts_none': 'business_hosts_none',
+        'business_hosts_some': 'business_hosts_some',
+        'configuration_method': 'configuration_method',
+        'configuration_method_in': 'configuration_method_in',
+        'configuration_method_not': 'configuration_method_not',
+        'configuration_method_not_in': 'configuration_method_not_in',
         'consistency_group': 'consistency_group',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
+        'downgraded_prioritized_space_gt': 'downgraded_prioritized_space_gt',
+        'downgraded_prioritized_space_gte': 'downgraded_prioritized_space_gte',
+        'downgraded_prioritized_space_in': 'downgraded_prioritized_space_in',
+        'downgraded_prioritized_space_lt': 'downgraded_prioritized_space_lt',
+        'downgraded_prioritized_space_lte': 'downgraded_prioritized_space_lte',
+        'downgraded_prioritized_space_not': 'downgraded_prioritized_space_not',
+        'downgraded_prioritized_space_not_in': 'downgraded_prioritized_space_not_in',
+        'ec_k': 'ec_k',
+        'ec_k_gt': 'ec_k_gt',
+        'ec_k_gte': 'ec_k_gte',
+        'ec_k_in': 'ec_k_in',
+        'ec_k_lt': 'ec_k_lt',
+        'ec_k_lte': 'ec_k_lte',
+        'ec_k_not': 'ec_k_not',
+        'ec_k_not_in': 'ec_k_not_in',
+        'ec_m': 'ec_m',
+        'ec_m_gt': 'ec_m_gt',
+        'ec_m_gte': 'ec_m_gte',
+        'ec_m_in': 'ec_m_in',
+        'ec_m_lt': 'ec_m_lt',
+        'ec_m_lte': 'ec_m_lte',
+        'ec_m_not': 'ec_m_not',
+        'ec_m_not_in': 'ec_m_not_in',
+        'encrypt_method': 'encrypt_method',
+        'encrypt_method_in': 'encrypt_method_in',
+        'encrypt_method_not': 'encrypt_method_not',
+        'encrypt_method_not_in': 'encrypt_method_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -594,6 +683,8 @@ class NvmfNamespaceWhereInput(object):
         'nqn_whitelist_not_starts_with': 'nqn_whitelist_not_starts_with',
         'nqn_whitelist_starts_with': 'nqn_whitelist_starts_with',
         'nvmf_subsystem': 'nvmf_subsystem',
+        'prioritized': 'prioritized',
+        'prioritized_not': 'prioritized_not',
         'replica_num': 'replica_num',
         'replica_num_gt': 'replica_num_gt',
         'replica_num_gte': 'replica_num_gte',
@@ -602,6 +693,10 @@ class NvmfNamespaceWhereInput(object):
         'replica_num_lte': 'replica_num_lte',
         'replica_num_not': 'replica_num_not',
         'replica_num_not_in': 'replica_num_not_in',
+        'resiliency_type': 'resiliency_type',
+        'resiliency_type_in': 'resiliency_type_in',
+        'resiliency_type_not': 'resiliency_type_not',
+        'resiliency_type_not_in': 'resiliency_type_not_in',
         'shared_size': 'shared_size',
         'shared_size_gt': 'shared_size_gt',
         'shared_size_gte': 'shared_size_gte',
@@ -618,6 +713,9 @@ class NvmfNamespaceWhereInput(object):
         'snapshot_num_lte': 'snapshot_num_lte',
         'snapshot_num_not': 'snapshot_num_not',
         'snapshot_num_not_in': 'snapshot_num_not_in',
+        'snapshot_plans_every': 'snapshot_plans_every',
+        'snapshot_plans_none': 'snapshot_plans_none',
+        'snapshot_plans_some': 'snapshot_plans_some',
         'stripe_num': 'stripe_num',
         'stripe_num_gt': 'stripe_num_gt',
         'stripe_num_gte': 'stripe_num_gte',
@@ -755,7 +853,47 @@ class NvmfNamespaceWhereInput(object):
         self._bps_wr_max_not_in = None
         self._bps_wr_not = None
         self._bps_wr_not_in = None
+        self._business_host_groups_every = None
+        self._business_host_groups_none = None
+        self._business_host_groups_some = None
+        self._business_host_is_same_with_parent = None
+        self._business_host_is_same_with_parent_not = None
+        self._business_hosts_every = None
+        self._business_hosts_none = None
+        self._business_hosts_some = None
+        self._configuration_method = None
+        self._configuration_method_in = None
+        self._configuration_method_not = None
+        self._configuration_method_not_in = None
         self._consistency_group = None
+        self._downgraded_prioritized_space = None
+        self._downgraded_prioritized_space_gt = None
+        self._downgraded_prioritized_space_gte = None
+        self._downgraded_prioritized_space_in = None
+        self._downgraded_prioritized_space_lt = None
+        self._downgraded_prioritized_space_lte = None
+        self._downgraded_prioritized_space_not = None
+        self._downgraded_prioritized_space_not_in = None
+        self._ec_k = None
+        self._ec_k_gt = None
+        self._ec_k_gte = None
+        self._ec_k_in = None
+        self._ec_k_lt = None
+        self._ec_k_lte = None
+        self._ec_k_not = None
+        self._ec_k_not_in = None
+        self._ec_m = None
+        self._ec_m_gt = None
+        self._ec_m_gte = None
+        self._ec_m_in = None
+        self._ec_m_lt = None
+        self._ec_m_lte = None
+        self._ec_m_not = None
+        self._ec_m_not_in = None
+        self._encrypt_method = None
+        self._encrypt_method_in = None
+        self._encrypt_method_not = None
+        self._encrypt_method_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -919,6 +1057,8 @@ class NvmfNamespaceWhereInput(object):
         self._nqn_whitelist_not_starts_with = None
         self._nqn_whitelist_starts_with = None
         self._nvmf_subsystem = None
+        self._prioritized = None
+        self._prioritized_not = None
         self._replica_num = None
         self._replica_num_gt = None
         self._replica_num_gte = None
@@ -927,6 +1067,10 @@ class NvmfNamespaceWhereInput(object):
         self._replica_num_lte = None
         self._replica_num_not = None
         self._replica_num_not_in = None
+        self._resiliency_type = None
+        self._resiliency_type_in = None
+        self._resiliency_type_not = None
+        self._resiliency_type_not_in = None
         self._shared_size = None
         self._shared_size_gt = None
         self._shared_size_gte = None
@@ -943,6 +1087,9 @@ class NvmfNamespaceWhereInput(object):
         self._snapshot_num_lte = None
         self._snapshot_num_not = None
         self._snapshot_num_not_in = None
+        self._snapshot_plans_every = None
+        self._snapshot_plans_none = None
+        self._snapshot_plans_some = None
         self._stripe_num = None
         self._stripe_num_gt = None
         self._stripe_num_gte = None
@@ -1076,7 +1223,47 @@ class NvmfNamespaceWhereInput(object):
         self.bps_wr_max_not_in = kwargs.get("bps_wr_max_not_in", None)
         self.bps_wr_not = kwargs.get("bps_wr_not", None)
         self.bps_wr_not_in = kwargs.get("bps_wr_not_in", None)
+        self.business_host_groups_every = kwargs.get("business_host_groups_every", None)
+        self.business_host_groups_none = kwargs.get("business_host_groups_none", None)
+        self.business_host_groups_some = kwargs.get("business_host_groups_some", None)
+        self.business_host_is_same_with_parent = kwargs.get("business_host_is_same_with_parent", None)
+        self.business_host_is_same_with_parent_not = kwargs.get("business_host_is_same_with_parent_not", None)
+        self.business_hosts_every = kwargs.get("business_hosts_every", None)
+        self.business_hosts_none = kwargs.get("business_hosts_none", None)
+        self.business_hosts_some = kwargs.get("business_hosts_some", None)
+        self.configuration_method = kwargs.get("configuration_method", None)
+        self.configuration_method_in = kwargs.get("configuration_method_in", None)
+        self.configuration_method_not = kwargs.get("configuration_method_not", None)
+        self.configuration_method_not_in = kwargs.get("configuration_method_not_in", None)
         self.consistency_group = kwargs.get("consistency_group", None)
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
+        self.downgraded_prioritized_space_gt = kwargs.get("downgraded_prioritized_space_gt", None)
+        self.downgraded_prioritized_space_gte = kwargs.get("downgraded_prioritized_space_gte", None)
+        self.downgraded_prioritized_space_in = kwargs.get("downgraded_prioritized_space_in", None)
+        self.downgraded_prioritized_space_lt = kwargs.get("downgraded_prioritized_space_lt", None)
+        self.downgraded_prioritized_space_lte = kwargs.get("downgraded_prioritized_space_lte", None)
+        self.downgraded_prioritized_space_not = kwargs.get("downgraded_prioritized_space_not", None)
+        self.downgraded_prioritized_space_not_in = kwargs.get("downgraded_prioritized_space_not_in", None)
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_k_gt = kwargs.get("ec_k_gt", None)
+        self.ec_k_gte = kwargs.get("ec_k_gte", None)
+        self.ec_k_in = kwargs.get("ec_k_in", None)
+        self.ec_k_lt = kwargs.get("ec_k_lt", None)
+        self.ec_k_lte = kwargs.get("ec_k_lte", None)
+        self.ec_k_not = kwargs.get("ec_k_not", None)
+        self.ec_k_not_in = kwargs.get("ec_k_not_in", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.ec_m_gt = kwargs.get("ec_m_gt", None)
+        self.ec_m_gte = kwargs.get("ec_m_gte", None)
+        self.ec_m_in = kwargs.get("ec_m_in", None)
+        self.ec_m_lt = kwargs.get("ec_m_lt", None)
+        self.ec_m_lte = kwargs.get("ec_m_lte", None)
+        self.ec_m_not = kwargs.get("ec_m_not", None)
+        self.ec_m_not_in = kwargs.get("ec_m_not_in", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
+        self.encrypt_method_in = kwargs.get("encrypt_method_in", None)
+        self.encrypt_method_not = kwargs.get("encrypt_method_not", None)
+        self.encrypt_method_not_in = kwargs.get("encrypt_method_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -1240,6 +1427,8 @@ class NvmfNamespaceWhereInput(object):
         self.nqn_whitelist_not_starts_with = kwargs.get("nqn_whitelist_not_starts_with", None)
         self.nqn_whitelist_starts_with = kwargs.get("nqn_whitelist_starts_with", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
+        self.prioritized = kwargs.get("prioritized", None)
+        self.prioritized_not = kwargs.get("prioritized_not", None)
         self.replica_num = kwargs.get("replica_num", None)
         self.replica_num_gt = kwargs.get("replica_num_gt", None)
         self.replica_num_gte = kwargs.get("replica_num_gte", None)
@@ -1248,6 +1437,10 @@ class NvmfNamespaceWhereInput(object):
         self.replica_num_lte = kwargs.get("replica_num_lte", None)
         self.replica_num_not = kwargs.get("replica_num_not", None)
         self.replica_num_not_in = kwargs.get("replica_num_not_in", None)
+        self.resiliency_type = kwargs.get("resiliency_type", None)
+        self.resiliency_type_in = kwargs.get("resiliency_type_in", None)
+        self.resiliency_type_not = kwargs.get("resiliency_type_not", None)
+        self.resiliency_type_not_in = kwargs.get("resiliency_type_not_in", None)
         self.shared_size = kwargs.get("shared_size", None)
         self.shared_size_gt = kwargs.get("shared_size_gt", None)
         self.shared_size_gte = kwargs.get("shared_size_gte", None)
@@ -1264,6 +1457,9 @@ class NvmfNamespaceWhereInput(object):
         self.snapshot_num_lte = kwargs.get("snapshot_num_lte", None)
         self.snapshot_num_not = kwargs.get("snapshot_num_not", None)
         self.snapshot_num_not_in = kwargs.get("snapshot_num_not_in", None)
+        self.snapshot_plans_every = kwargs.get("snapshot_plans_every", None)
+        self.snapshot_plans_none = kwargs.get("snapshot_plans_none", None)
+        self.snapshot_plans_some = kwargs.get("snapshot_plans_some", None)
         self.stripe_num = kwargs.get("stripe_num", None)
         self.stripe_num_gt = kwargs.get("stripe_num_gt", None)
         self.stripe_num_gte = kwargs.get("stripe_num_gte", None)
@@ -3057,6 +3253,258 @@ class NvmfNamespaceWhereInput(object):
         self._bps_wr_not_in = bps_wr_not_in
 
     @property
+    def business_host_groups_every(self):
+        """Gets the business_host_groups_every of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_every
+
+    @business_host_groups_every.setter
+    def business_host_groups_every(self, business_host_groups_every):
+        """Sets the business_host_groups_every of this NvmfNamespaceWhereInput.
+
+
+        :param business_host_groups_every: The business_host_groups_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_host_groups_every: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_every = business_host_groups_every
+
+    @property
+    def business_host_groups_none(self):
+        """Gets the business_host_groups_none of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_none
+
+    @business_host_groups_none.setter
+    def business_host_groups_none(self, business_host_groups_none):
+        """Sets the business_host_groups_none of this NvmfNamespaceWhereInput.
+
+
+        :param business_host_groups_none: The business_host_groups_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_host_groups_none: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_none = business_host_groups_none
+
+    @property
+    def business_host_groups_some(self):
+        """Gets the business_host_groups_some of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_some
+
+    @business_host_groups_some.setter
+    def business_host_groups_some(self, business_host_groups_some):
+        """Sets the business_host_groups_some of this NvmfNamespaceWhereInput.
+
+
+        :param business_host_groups_some: The business_host_groups_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_host_groups_some: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_some = business_host_groups_some
+
+    @property
+    def business_host_is_same_with_parent(self):
+        """Gets the business_host_is_same_with_parent of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_host_is_same_with_parent of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._business_host_is_same_with_parent
+
+    @business_host_is_same_with_parent.setter
+    def business_host_is_same_with_parent(self, business_host_is_same_with_parent):
+        """Sets the business_host_is_same_with_parent of this NvmfNamespaceWhereInput.
+
+
+        :param business_host_is_same_with_parent: The business_host_is_same_with_parent of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_host_is_same_with_parent: bool
+        """
+
+        self._business_host_is_same_with_parent = business_host_is_same_with_parent
+
+    @property
+    def business_host_is_same_with_parent_not(self):
+        """Gets the business_host_is_same_with_parent_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_host_is_same_with_parent_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._business_host_is_same_with_parent_not
+
+    @business_host_is_same_with_parent_not.setter
+    def business_host_is_same_with_parent_not(self, business_host_is_same_with_parent_not):
+        """Sets the business_host_is_same_with_parent_not of this NvmfNamespaceWhereInput.
+
+
+        :param business_host_is_same_with_parent_not: The business_host_is_same_with_parent_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_host_is_same_with_parent_not: bool
+        """
+
+        self._business_host_is_same_with_parent_not = business_host_is_same_with_parent_not
+
+    @property
+    def business_hosts_every(self):
+        """Gets the business_hosts_every of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_every
+
+    @business_hosts_every.setter
+    def business_hosts_every(self, business_hosts_every):
+        """Sets the business_hosts_every of this NvmfNamespaceWhereInput.
+
+
+        :param business_hosts_every: The business_hosts_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_hosts_every: BusinessHostWhereInput
+        """
+
+        self._business_hosts_every = business_hosts_every
+
+    @property
+    def business_hosts_none(self):
+        """Gets the business_hosts_none of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_none
+
+    @business_hosts_none.setter
+    def business_hosts_none(self, business_hosts_none):
+        """Sets the business_hosts_none of this NvmfNamespaceWhereInput.
+
+
+        :param business_hosts_none: The business_hosts_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_hosts_none: BusinessHostWhereInput
+        """
+
+        self._business_hosts_none = business_hosts_none
+
+    @property
+    def business_hosts_some(self):
+        """Gets the business_hosts_some of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_some
+
+    @business_hosts_some.setter
+    def business_hosts_some(self, business_hosts_some):
+        """Sets the business_hosts_some of this NvmfNamespaceWhereInput.
+
+
+        :param business_hosts_some: The business_hosts_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type business_hosts_some: BusinessHostWhereInput
+        """
+
+        self._business_hosts_some = business_hosts_some
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this NvmfNamespaceWhereInput.
+
+
+        :param configuration_method: The configuration_method of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
+    def configuration_method_in(self):
+        """Gets the configuration_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[ConfigurationMethod]
+        """
+        return self._configuration_method_in
+
+    @configuration_method_in.setter
+    def configuration_method_in(self, configuration_method_in):
+        """Sets the configuration_method_in of this NvmfNamespaceWhereInput.
+
+
+        :param configuration_method_in: The configuration_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type configuration_method_in: list[ConfigurationMethod]
+        """
+
+        self._configuration_method_in = configuration_method_in
+
+    @property
+    def configuration_method_not(self):
+        """Gets the configuration_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method_not
+
+    @configuration_method_not.setter
+    def configuration_method_not(self, configuration_method_not):
+        """Sets the configuration_method_not of this NvmfNamespaceWhereInput.
+
+
+        :param configuration_method_not: The configuration_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type configuration_method_not: ConfigurationMethod
+        """
+
+        self._configuration_method_not = configuration_method_not
+
+    @property
+    def configuration_method_not_in(self):
+        """Gets the configuration_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[ConfigurationMethod]
+        """
+        return self._configuration_method_not_in
+
+    @configuration_method_not_in.setter
+    def configuration_method_not_in(self, configuration_method_not_in):
+        """Sets the configuration_method_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param configuration_method_not_in: The configuration_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type configuration_method_not_in: list[ConfigurationMethod]
+        """
+
+        self._configuration_method_not_in = configuration_method_not_in
+
+    @property
     def consistency_group(self):
         """Gets the consistency_group of this NvmfNamespaceWhereInput.  # noqa: E501
 
@@ -3076,6 +3524,594 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self._consistency_group = consistency_group
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
+
+    @property
+    def downgraded_prioritized_space_gt(self):
+        """Gets the downgraded_prioritized_space_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_gt
+
+    @downgraded_prioritized_space_gt.setter
+    def downgraded_prioritized_space_gt(self, downgraded_prioritized_space_gt):
+        """Sets the downgraded_prioritized_space_gt of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_gt: The downgraded_prioritized_space_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_gt: int
+        """
+
+        self._downgraded_prioritized_space_gt = downgraded_prioritized_space_gt
+
+    @property
+    def downgraded_prioritized_space_gte(self):
+        """Gets the downgraded_prioritized_space_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_gte
+
+    @downgraded_prioritized_space_gte.setter
+    def downgraded_prioritized_space_gte(self, downgraded_prioritized_space_gte):
+        """Sets the downgraded_prioritized_space_gte of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_gte: The downgraded_prioritized_space_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_gte: int
+        """
+
+        self._downgraded_prioritized_space_gte = downgraded_prioritized_space_gte
+
+    @property
+    def downgraded_prioritized_space_in(self):
+        """Gets the downgraded_prioritized_space_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._downgraded_prioritized_space_in
+
+    @downgraded_prioritized_space_in.setter
+    def downgraded_prioritized_space_in(self, downgraded_prioritized_space_in):
+        """Sets the downgraded_prioritized_space_in of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_in: The downgraded_prioritized_space_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_in: list[int]
+        """
+
+        self._downgraded_prioritized_space_in = downgraded_prioritized_space_in
+
+    @property
+    def downgraded_prioritized_space_lt(self):
+        """Gets the downgraded_prioritized_space_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_lt
+
+    @downgraded_prioritized_space_lt.setter
+    def downgraded_prioritized_space_lt(self, downgraded_prioritized_space_lt):
+        """Sets the downgraded_prioritized_space_lt of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_lt: The downgraded_prioritized_space_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_lt: int
+        """
+
+        self._downgraded_prioritized_space_lt = downgraded_prioritized_space_lt
+
+    @property
+    def downgraded_prioritized_space_lte(self):
+        """Gets the downgraded_prioritized_space_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_lte
+
+    @downgraded_prioritized_space_lte.setter
+    def downgraded_prioritized_space_lte(self, downgraded_prioritized_space_lte):
+        """Sets the downgraded_prioritized_space_lte of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_lte: The downgraded_prioritized_space_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_lte: int
+        """
+
+        self._downgraded_prioritized_space_lte = downgraded_prioritized_space_lte
+
+    @property
+    def downgraded_prioritized_space_not(self):
+        """Gets the downgraded_prioritized_space_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space_not
+
+    @downgraded_prioritized_space_not.setter
+    def downgraded_prioritized_space_not(self, downgraded_prioritized_space_not):
+        """Sets the downgraded_prioritized_space_not of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_not: The downgraded_prioritized_space_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_not: int
+        """
+
+        self._downgraded_prioritized_space_not = downgraded_prioritized_space_not
+
+    @property
+    def downgraded_prioritized_space_not_in(self):
+        """Gets the downgraded_prioritized_space_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._downgraded_prioritized_space_not_in
+
+    @downgraded_prioritized_space_not_in.setter
+    def downgraded_prioritized_space_not_in(self, downgraded_prioritized_space_not_in):
+        """Sets the downgraded_prioritized_space_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param downgraded_prioritized_space_not_in: The downgraded_prioritized_space_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type downgraded_prioritized_space_not_in: list[int]
+        """
+
+        self._downgraded_prioritized_space_not_in = downgraded_prioritized_space_not_in
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k: The ec_k of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_k_gt(self):
+        """Gets the ec_k_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gt
+
+    @ec_k_gt.setter
+    def ec_k_gt(self, ec_k_gt):
+        """Sets the ec_k_gt of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_gt: The ec_k_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_gt: int
+        """
+
+        self._ec_k_gt = ec_k_gt
+
+    @property
+    def ec_k_gte(self):
+        """Gets the ec_k_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gte
+
+    @ec_k_gte.setter
+    def ec_k_gte(self, ec_k_gte):
+        """Sets the ec_k_gte of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_gte: The ec_k_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_gte: int
+        """
+
+        self._ec_k_gte = ec_k_gte
+
+    @property
+    def ec_k_in(self):
+        """Gets the ec_k_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_in
+
+    @ec_k_in.setter
+    def ec_k_in(self, ec_k_in):
+        """Sets the ec_k_in of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_in: The ec_k_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_in: list[int]
+        """
+
+        self._ec_k_in = ec_k_in
+
+    @property
+    def ec_k_lt(self):
+        """Gets the ec_k_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lt
+
+    @ec_k_lt.setter
+    def ec_k_lt(self, ec_k_lt):
+        """Sets the ec_k_lt of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_lt: The ec_k_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_lt: int
+        """
+
+        self._ec_k_lt = ec_k_lt
+
+    @property
+    def ec_k_lte(self):
+        """Gets the ec_k_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lte
+
+    @ec_k_lte.setter
+    def ec_k_lte(self, ec_k_lte):
+        """Sets the ec_k_lte of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_lte: The ec_k_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_lte: int
+        """
+
+        self._ec_k_lte = ec_k_lte
+
+    @property
+    def ec_k_not(self):
+        """Gets the ec_k_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_not
+
+    @ec_k_not.setter
+    def ec_k_not(self, ec_k_not):
+        """Sets the ec_k_not of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_not: The ec_k_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_not: int
+        """
+
+        self._ec_k_not = ec_k_not
+
+    @property
+    def ec_k_not_in(self):
+        """Gets the ec_k_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_not_in
+
+    @ec_k_not_in.setter
+    def ec_k_not_in(self, ec_k_not_in):
+        """Sets the ec_k_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param ec_k_not_in: The ec_k_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_k_not_in: list[int]
+        """
+
+        self._ec_k_not_in = ec_k_not_in
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m: The ec_m of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_m_gt(self):
+        """Gets the ec_m_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gt
+
+    @ec_m_gt.setter
+    def ec_m_gt(self, ec_m_gt):
+        """Sets the ec_m_gt of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_gt: The ec_m_gt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_gt: int
+        """
+
+        self._ec_m_gt = ec_m_gt
+
+    @property
+    def ec_m_gte(self):
+        """Gets the ec_m_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gte
+
+    @ec_m_gte.setter
+    def ec_m_gte(self, ec_m_gte):
+        """Sets the ec_m_gte of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_gte: The ec_m_gte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_gte: int
+        """
+
+        self._ec_m_gte = ec_m_gte
+
+    @property
+    def ec_m_in(self):
+        """Gets the ec_m_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_in
+
+    @ec_m_in.setter
+    def ec_m_in(self, ec_m_in):
+        """Sets the ec_m_in of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_in: The ec_m_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_in: list[int]
+        """
+
+        self._ec_m_in = ec_m_in
+
+    @property
+    def ec_m_lt(self):
+        """Gets the ec_m_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lt
+
+    @ec_m_lt.setter
+    def ec_m_lt(self, ec_m_lt):
+        """Sets the ec_m_lt of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_lt: The ec_m_lt of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_lt: int
+        """
+
+        self._ec_m_lt = ec_m_lt
+
+    @property
+    def ec_m_lte(self):
+        """Gets the ec_m_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lte
+
+    @ec_m_lte.setter
+    def ec_m_lte(self, ec_m_lte):
+        """Sets the ec_m_lte of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_lte: The ec_m_lte of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_lte: int
+        """
+
+        self._ec_m_lte = ec_m_lte
+
+    @property
+    def ec_m_not(self):
+        """Gets the ec_m_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_not
+
+    @ec_m_not.setter
+    def ec_m_not(self, ec_m_not):
+        """Sets the ec_m_not of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_not: The ec_m_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_not: int
+        """
+
+        self._ec_m_not = ec_m_not
+
+    @property
+    def ec_m_not_in(self):
+        """Gets the ec_m_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_not_in
+
+    @ec_m_not_in.setter
+    def ec_m_not_in(self, ec_m_not_in):
+        """Sets the ec_m_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param ec_m_not_in: The ec_m_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type ec_m_not_in: list[int]
+        """
+
+        self._ec_m_not_in = ec_m_not_in
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NvmfNamespaceWhereInput.
+
+
+        :param encrypt_method: The encrypt_method of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def encrypt_method_in(self):
+        """Gets the encrypt_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[EncryptMethod]
+        """
+        return self._encrypt_method_in
+
+    @encrypt_method_in.setter
+    def encrypt_method_in(self, encrypt_method_in):
+        """Sets the encrypt_method_in of this NvmfNamespaceWhereInput.
+
+
+        :param encrypt_method_in: The encrypt_method_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type encrypt_method_in: list[EncryptMethod]
+        """
+
+        self._encrypt_method_in = encrypt_method_in
+
+    @property
+    def encrypt_method_not(self):
+        """Gets the encrypt_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method_not
+
+    @encrypt_method_not.setter
+    def encrypt_method_not(self, encrypt_method_not):
+        """Sets the encrypt_method_not of this NvmfNamespaceWhereInput.
+
+
+        :param encrypt_method_not: The encrypt_method_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type encrypt_method_not: EncryptMethod
+        """
+
+        self._encrypt_method_not = encrypt_method_not
+
+    @property
+    def encrypt_method_not_in(self):
+        """Gets the encrypt_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[EncryptMethod]
+        """
+        return self._encrypt_method_not_in
+
+    @encrypt_method_not_in.setter
+    def encrypt_method_not_in(self, encrypt_method_not_in):
+        """Sets the encrypt_method_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param encrypt_method_not_in: The encrypt_method_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type encrypt_method_not_in: list[EncryptMethod]
+        """
+
+        self._encrypt_method_not_in = encrypt_method_not_in
 
     @property
     def entity_async_status(self):
@@ -6501,6 +7537,48 @@ class NvmfNamespaceWhereInput(object):
         self._nvmf_subsystem = nvmf_subsystem
 
     @property
+    def prioritized(self):
+        """Gets the prioritized of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The prioritized of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NvmfNamespaceWhereInput.
+
+
+        :param prioritized: The prioritized of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
+    def prioritized_not(self):
+        """Gets the prioritized_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The prioritized_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized_not
+
+    @prioritized_not.setter
+    def prioritized_not(self, prioritized_not):
+        """Sets the prioritized_not of this NvmfNamespaceWhereInput.
+
+
+        :param prioritized_not: The prioritized_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type prioritized_not: bool
+        """
+
+        self._prioritized_not = prioritized_not
+
+    @property
     def replica_num(self):
         """Gets the replica_num of this NvmfNamespaceWhereInput.  # noqa: E501
 
@@ -6667,6 +7745,90 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self._replica_num_not_in = replica_num_not_in
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfNamespaceWhereInput.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def resiliency_type_in(self):
+        """Gets the resiliency_type_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_in
+
+    @resiliency_type_in.setter
+    def resiliency_type_in(self, resiliency_type_in):
+        """Sets the resiliency_type_in of this NvmfNamespaceWhereInput.
+
+
+        :param resiliency_type_in: The resiliency_type_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type resiliency_type_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_in = resiliency_type_in
+
+    @property
+    def resiliency_type_not(self):
+        """Gets the resiliency_type_not of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type_not
+
+    @resiliency_type_not.setter
+    def resiliency_type_not(self, resiliency_type_not):
+        """Sets the resiliency_type_not of this NvmfNamespaceWhereInput.
+
+
+        :param resiliency_type_not: The resiliency_type_not of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type resiliency_type_not: ResiliencyType
+        """
+
+        self._resiliency_type_not = resiliency_type_not
+
+    @property
+    def resiliency_type_not_in(self):
+        """Gets the resiliency_type_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_not_in
+
+    @resiliency_type_not_in.setter
+    def resiliency_type_not_in(self, resiliency_type_not_in):
+        """Sets the resiliency_type_not_in of this NvmfNamespaceWhereInput.
+
+
+        :param resiliency_type_not_in: The resiliency_type_not_in of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type resiliency_type_not_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_not_in = resiliency_type_not_in
 
     @property
     def shared_size(self):
@@ -7003,6 +8165,69 @@ class NvmfNamespaceWhereInput(object):
         """
 
         self._snapshot_num_not_in = snapshot_num_not_in
+
+    @property
+    def snapshot_plans_every(self):
+        """Gets the snapshot_plans_every of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The snapshot_plans_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: SnapshotPlanWhereInput
+        """
+        return self._snapshot_plans_every
+
+    @snapshot_plans_every.setter
+    def snapshot_plans_every(self, snapshot_plans_every):
+        """Sets the snapshot_plans_every of this NvmfNamespaceWhereInput.
+
+
+        :param snapshot_plans_every: The snapshot_plans_every of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type snapshot_plans_every: SnapshotPlanWhereInput
+        """
+
+        self._snapshot_plans_every = snapshot_plans_every
+
+    @property
+    def snapshot_plans_none(self):
+        """Gets the snapshot_plans_none of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The snapshot_plans_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: SnapshotPlanWhereInput
+        """
+        return self._snapshot_plans_none
+
+    @snapshot_plans_none.setter
+    def snapshot_plans_none(self, snapshot_plans_none):
+        """Sets the snapshot_plans_none of this NvmfNamespaceWhereInput.
+
+
+        :param snapshot_plans_none: The snapshot_plans_none of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type snapshot_plans_none: SnapshotPlanWhereInput
+        """
+
+        self._snapshot_plans_none = snapshot_plans_none
+
+    @property
+    def snapshot_plans_some(self):
+        """Gets the snapshot_plans_some of this NvmfNamespaceWhereInput.  # noqa: E501
+
+
+        :return: The snapshot_plans_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :rtype: SnapshotPlanWhereInput
+        """
+        return self._snapshot_plans_some
+
+    @snapshot_plans_some.setter
+    def snapshot_plans_some(self, snapshot_plans_some):
+        """Sets the snapshot_plans_some of this NvmfNamespaceWhereInput.
+
+
+        :param snapshot_plans_some: The snapshot_plans_some of this NvmfNamespaceWhereInput.  # noqa: E501
+        :type snapshot_plans_some: SnapshotPlanWhereInput
+        """
+
+        self._snapshot_plans_some = snapshot_plans_some
 
     @property
     def stripe_num(self):

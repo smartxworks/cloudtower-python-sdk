@@ -100,6 +100,12 @@ class IscsiTargetWhereInput(object):
         'bps_wr_max_not_in': 'list[int]',
         'bps_wr_not': 'int',
         'bps_wr_not_in': 'list[int]',
+        'business_host_groups_every': 'BusinessHostGroupWhereInput',
+        'business_host_groups_none': 'BusinessHostGroupWhereInput',
+        'business_host_groups_some': 'BusinessHostGroupWhereInput',
+        'business_hosts_every': 'BusinessHostWhereInput',
+        'business_hosts_none': 'BusinessHostWhereInput',
+        'business_hosts_some': 'BusinessHostWhereInput',
         'chap_enabled': 'bool',
         'chap_enabled_not': 'bool',
         'chap_name': 'str',
@@ -131,6 +137,12 @@ class IscsiTargetWhereInput(object):
         'chap_secret_not_starts_with': 'str',
         'chap_secret_starts_with': 'str',
         'cluster': 'ClusterWhereInput',
+        'configuration_adaptive': 'bool',
+        'configuration_adaptive_not': 'bool',
+        'configuration_method': 'ConfigurationMethod',
+        'configuration_method_in': 'list[ConfigurationMethod]',
+        'configuration_method_not': 'ConfigurationMethod',
+        'configuration_method_not_in': 'list[ConfigurationMethod]',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -145,6 +157,26 @@ class IscsiTargetWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'ec_k': 'int',
+        'ec_k_gt': 'int',
+        'ec_k_gte': 'int',
+        'ec_k_in': 'list[int]',
+        'ec_k_lt': 'int',
+        'ec_k_lte': 'int',
+        'ec_k_not': 'int',
+        'ec_k_not_in': 'list[int]',
+        'ec_m': 'int',
+        'ec_m_gt': 'int',
+        'ec_m_gte': 'int',
+        'ec_m_in': 'list[int]',
+        'ec_m_lt': 'int',
+        'ec_m_lte': 'int',
+        'ec_m_not': 'int',
+        'ec_m_not_in': 'list[int]',
+        'encrypt_method': 'EncryptMethod',
+        'encrypt_method_in': 'list[EncryptMethod]',
+        'encrypt_method_not': 'EncryptMethod',
+        'encrypt_method_not_in': 'list[EncryptMethod]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -289,6 +321,17 @@ class IscsiTargetWhereInput(object):
         'iqn_whitelist_not_in': 'list[str]',
         'iqn_whitelist_not_starts_with': 'str',
         'iqn_whitelist_starts_with': 'str',
+        'iscsi_connections_every': 'IscsiConnectionWhereInput',
+        'iscsi_connections_none': 'IscsiConnectionWhereInput',
+        'iscsi_connections_some': 'IscsiConnectionWhereInput',
+        'iscsi_luns_num': 'int',
+        'iscsi_luns_num_gt': 'int',
+        'iscsi_luns_num_gte': 'int',
+        'iscsi_luns_num_in': 'list[int]',
+        'iscsi_luns_num_lt': 'int',
+        'iscsi_luns_num_lte': 'int',
+        'iscsi_luns_num_not': 'int',
+        'iscsi_luns_num_not_in': 'list[int]',
         'labels_every': 'LabelWhereInput',
         'labels_none': 'LabelWhereInput',
         'labels_some': 'LabelWhereInput',
@@ -323,6 +366,8 @@ class IscsiTargetWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
+        'prioritized': 'bool',
+        'prioritized_not': 'bool',
         'replica_num': 'int',
         'replica_num_gt': 'int',
         'replica_num_gte': 'int',
@@ -331,6 +376,10 @@ class IscsiTargetWhereInput(object):
         'replica_num_lte': 'int',
         'replica_num_not': 'int',
         'replica_num_not_in': 'list[int]',
+        'resiliency_type': 'ResiliencyType',
+        'resiliency_type_in': 'list[ResiliencyType]',
+        'resiliency_type_not': 'ResiliencyType',
+        'resiliency_type_not_in': 'list[ResiliencyType]',
         'stripe_num': 'int',
         'stripe_num_gt': 'int',
         'stripe_num_gte': 'int',
@@ -427,6 +476,12 @@ class IscsiTargetWhereInput(object):
         'bps_wr_max_not_in': 'bps_wr_max_not_in',
         'bps_wr_not': 'bps_wr_not',
         'bps_wr_not_in': 'bps_wr_not_in',
+        'business_host_groups_every': 'business_host_groups_every',
+        'business_host_groups_none': 'business_host_groups_none',
+        'business_host_groups_some': 'business_host_groups_some',
+        'business_hosts_every': 'business_hosts_every',
+        'business_hosts_none': 'business_hosts_none',
+        'business_hosts_some': 'business_hosts_some',
         'chap_enabled': 'chap_enabled',
         'chap_enabled_not': 'chap_enabled_not',
         'chap_name': 'chap_name',
@@ -458,6 +513,12 @@ class IscsiTargetWhereInput(object):
         'chap_secret_not_starts_with': 'chap_secret_not_starts_with',
         'chap_secret_starts_with': 'chap_secret_starts_with',
         'cluster': 'cluster',
+        'configuration_adaptive': 'configuration_adaptive',
+        'configuration_adaptive_not': 'configuration_adaptive_not',
+        'configuration_method': 'configuration_method',
+        'configuration_method_in': 'configuration_method_in',
+        'configuration_method_not': 'configuration_method_not',
+        'configuration_method_not_in': 'configuration_method_not_in',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -472,6 +533,26 @@ class IscsiTargetWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'ec_k': 'ec_k',
+        'ec_k_gt': 'ec_k_gt',
+        'ec_k_gte': 'ec_k_gte',
+        'ec_k_in': 'ec_k_in',
+        'ec_k_lt': 'ec_k_lt',
+        'ec_k_lte': 'ec_k_lte',
+        'ec_k_not': 'ec_k_not',
+        'ec_k_not_in': 'ec_k_not_in',
+        'ec_m': 'ec_m',
+        'ec_m_gt': 'ec_m_gt',
+        'ec_m_gte': 'ec_m_gte',
+        'ec_m_in': 'ec_m_in',
+        'ec_m_lt': 'ec_m_lt',
+        'ec_m_lte': 'ec_m_lte',
+        'ec_m_not': 'ec_m_not',
+        'ec_m_not_in': 'ec_m_not_in',
+        'encrypt_method': 'encrypt_method',
+        'encrypt_method_in': 'encrypt_method_in',
+        'encrypt_method_not': 'encrypt_method_not',
+        'encrypt_method_not_in': 'encrypt_method_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -616,6 +697,17 @@ class IscsiTargetWhereInput(object):
         'iqn_whitelist_not_in': 'iqn_whitelist_not_in',
         'iqn_whitelist_not_starts_with': 'iqn_whitelist_not_starts_with',
         'iqn_whitelist_starts_with': 'iqn_whitelist_starts_with',
+        'iscsi_connections_every': 'iscsi_connections_every',
+        'iscsi_connections_none': 'iscsi_connections_none',
+        'iscsi_connections_some': 'iscsi_connections_some',
+        'iscsi_luns_num': 'iscsi_luns_num',
+        'iscsi_luns_num_gt': 'iscsi_luns_num_gt',
+        'iscsi_luns_num_gte': 'iscsi_luns_num_gte',
+        'iscsi_luns_num_in': 'iscsi_luns_num_in',
+        'iscsi_luns_num_lt': 'iscsi_luns_num_lt',
+        'iscsi_luns_num_lte': 'iscsi_luns_num_lte',
+        'iscsi_luns_num_not': 'iscsi_luns_num_not',
+        'iscsi_luns_num_not_in': 'iscsi_luns_num_not_in',
         'labels_every': 'labels_every',
         'labels_none': 'labels_none',
         'labels_some': 'labels_some',
@@ -650,6 +742,8 @@ class IscsiTargetWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
+        'prioritized': 'prioritized',
+        'prioritized_not': 'prioritized_not',
         'replica_num': 'replica_num',
         'replica_num_gt': 'replica_num_gt',
         'replica_num_gte': 'replica_num_gte',
@@ -658,6 +752,10 @@ class IscsiTargetWhereInput(object):
         'replica_num_lte': 'replica_num_lte',
         'replica_num_not': 'replica_num_not',
         'replica_num_not_in': 'replica_num_not_in',
+        'resiliency_type': 'resiliency_type',
+        'resiliency_type_in': 'resiliency_type_in',
+        'resiliency_type_not': 'resiliency_type_not',
+        'resiliency_type_not_in': 'resiliency_type_not_in',
         'stripe_num': 'stripe_num',
         'stripe_num_gt': 'stripe_num_gt',
         'stripe_num_gte': 'stripe_num_gte',
@@ -757,6 +855,12 @@ class IscsiTargetWhereInput(object):
         self._bps_wr_max_not_in = None
         self._bps_wr_not = None
         self._bps_wr_not_in = None
+        self._business_host_groups_every = None
+        self._business_host_groups_none = None
+        self._business_host_groups_some = None
+        self._business_hosts_every = None
+        self._business_hosts_none = None
+        self._business_hosts_some = None
         self._chap_enabled = None
         self._chap_enabled_not = None
         self._chap_name = None
@@ -788,6 +892,12 @@ class IscsiTargetWhereInput(object):
         self._chap_secret_not_starts_with = None
         self._chap_secret_starts_with = None
         self._cluster = None
+        self._configuration_adaptive = None
+        self._configuration_adaptive_not = None
+        self._configuration_method = None
+        self._configuration_method_in = None
+        self._configuration_method_not = None
+        self._configuration_method_not_in = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -802,6 +912,26 @@ class IscsiTargetWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._ec_k = None
+        self._ec_k_gt = None
+        self._ec_k_gte = None
+        self._ec_k_in = None
+        self._ec_k_lt = None
+        self._ec_k_lte = None
+        self._ec_k_not = None
+        self._ec_k_not_in = None
+        self._ec_m = None
+        self._ec_m_gt = None
+        self._ec_m_gte = None
+        self._ec_m_in = None
+        self._ec_m_lt = None
+        self._ec_m_lte = None
+        self._ec_m_not = None
+        self._ec_m_not_in = None
+        self._encrypt_method = None
+        self._encrypt_method_in = None
+        self._encrypt_method_not = None
+        self._encrypt_method_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -946,6 +1076,17 @@ class IscsiTargetWhereInput(object):
         self._iqn_whitelist_not_in = None
         self._iqn_whitelist_not_starts_with = None
         self._iqn_whitelist_starts_with = None
+        self._iscsi_connections_every = None
+        self._iscsi_connections_none = None
+        self._iscsi_connections_some = None
+        self._iscsi_luns_num = None
+        self._iscsi_luns_num_gt = None
+        self._iscsi_luns_num_gte = None
+        self._iscsi_luns_num_in = None
+        self._iscsi_luns_num_lt = None
+        self._iscsi_luns_num_lte = None
+        self._iscsi_luns_num_not = None
+        self._iscsi_luns_num_not_in = None
         self._labels_every = None
         self._labels_none = None
         self._labels_some = None
@@ -980,6 +1121,8 @@ class IscsiTargetWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
+        self._prioritized = None
+        self._prioritized_not = None
         self._replica_num = None
         self._replica_num_gt = None
         self._replica_num_gte = None
@@ -988,6 +1131,10 @@ class IscsiTargetWhereInput(object):
         self._replica_num_lte = None
         self._replica_num_not = None
         self._replica_num_not_in = None
+        self._resiliency_type = None
+        self._resiliency_type_in = None
+        self._resiliency_type_not = None
+        self._resiliency_type_not_in = None
         self._stripe_num = None
         self._stripe_num_gt = None
         self._stripe_num_gte = None
@@ -1083,6 +1230,12 @@ class IscsiTargetWhereInput(object):
         self.bps_wr_max_not_in = kwargs.get("bps_wr_max_not_in", None)
         self.bps_wr_not = kwargs.get("bps_wr_not", None)
         self.bps_wr_not_in = kwargs.get("bps_wr_not_in", None)
+        self.business_host_groups_every = kwargs.get("business_host_groups_every", None)
+        self.business_host_groups_none = kwargs.get("business_host_groups_none", None)
+        self.business_host_groups_some = kwargs.get("business_host_groups_some", None)
+        self.business_hosts_every = kwargs.get("business_hosts_every", None)
+        self.business_hosts_none = kwargs.get("business_hosts_none", None)
+        self.business_hosts_some = kwargs.get("business_hosts_some", None)
         self.chap_enabled = kwargs.get("chap_enabled", None)
         self.chap_enabled_not = kwargs.get("chap_enabled_not", None)
         self.chap_name = kwargs.get("chap_name", None)
@@ -1114,6 +1267,12 @@ class IscsiTargetWhereInput(object):
         self.chap_secret_not_starts_with = kwargs.get("chap_secret_not_starts_with", None)
         self.chap_secret_starts_with = kwargs.get("chap_secret_starts_with", None)
         self.cluster = kwargs.get("cluster", None)
+        self.configuration_adaptive = kwargs.get("configuration_adaptive", None)
+        self.configuration_adaptive_not = kwargs.get("configuration_adaptive_not", None)
+        self.configuration_method = kwargs.get("configuration_method", None)
+        self.configuration_method_in = kwargs.get("configuration_method_in", None)
+        self.configuration_method_not = kwargs.get("configuration_method_not", None)
+        self.configuration_method_not_in = kwargs.get("configuration_method_not_in", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -1128,6 +1287,26 @@ class IscsiTargetWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_k_gt = kwargs.get("ec_k_gt", None)
+        self.ec_k_gte = kwargs.get("ec_k_gte", None)
+        self.ec_k_in = kwargs.get("ec_k_in", None)
+        self.ec_k_lt = kwargs.get("ec_k_lt", None)
+        self.ec_k_lte = kwargs.get("ec_k_lte", None)
+        self.ec_k_not = kwargs.get("ec_k_not", None)
+        self.ec_k_not_in = kwargs.get("ec_k_not_in", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.ec_m_gt = kwargs.get("ec_m_gt", None)
+        self.ec_m_gte = kwargs.get("ec_m_gte", None)
+        self.ec_m_in = kwargs.get("ec_m_in", None)
+        self.ec_m_lt = kwargs.get("ec_m_lt", None)
+        self.ec_m_lte = kwargs.get("ec_m_lte", None)
+        self.ec_m_not = kwargs.get("ec_m_not", None)
+        self.ec_m_not_in = kwargs.get("ec_m_not_in", None)
+        self.encrypt_method = kwargs.get("encrypt_method", None)
+        self.encrypt_method_in = kwargs.get("encrypt_method_in", None)
+        self.encrypt_method_not = kwargs.get("encrypt_method_not", None)
+        self.encrypt_method_not_in = kwargs.get("encrypt_method_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -1272,6 +1451,17 @@ class IscsiTargetWhereInput(object):
         self.iqn_whitelist_not_in = kwargs.get("iqn_whitelist_not_in", None)
         self.iqn_whitelist_not_starts_with = kwargs.get("iqn_whitelist_not_starts_with", None)
         self.iqn_whitelist_starts_with = kwargs.get("iqn_whitelist_starts_with", None)
+        self.iscsi_connections_every = kwargs.get("iscsi_connections_every", None)
+        self.iscsi_connections_none = kwargs.get("iscsi_connections_none", None)
+        self.iscsi_connections_some = kwargs.get("iscsi_connections_some", None)
+        self.iscsi_luns_num = kwargs.get("iscsi_luns_num", None)
+        self.iscsi_luns_num_gt = kwargs.get("iscsi_luns_num_gt", None)
+        self.iscsi_luns_num_gte = kwargs.get("iscsi_luns_num_gte", None)
+        self.iscsi_luns_num_in = kwargs.get("iscsi_luns_num_in", None)
+        self.iscsi_luns_num_lt = kwargs.get("iscsi_luns_num_lt", None)
+        self.iscsi_luns_num_lte = kwargs.get("iscsi_luns_num_lte", None)
+        self.iscsi_luns_num_not = kwargs.get("iscsi_luns_num_not", None)
+        self.iscsi_luns_num_not_in = kwargs.get("iscsi_luns_num_not_in", None)
         self.labels_every = kwargs.get("labels_every", None)
         self.labels_none = kwargs.get("labels_none", None)
         self.labels_some = kwargs.get("labels_some", None)
@@ -1306,6 +1496,8 @@ class IscsiTargetWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.prioritized = kwargs.get("prioritized", None)
+        self.prioritized_not = kwargs.get("prioritized_not", None)
         self.replica_num = kwargs.get("replica_num", None)
         self.replica_num_gt = kwargs.get("replica_num_gt", None)
         self.replica_num_gte = kwargs.get("replica_num_gte", None)
@@ -1314,6 +1506,10 @@ class IscsiTargetWhereInput(object):
         self.replica_num_lte = kwargs.get("replica_num_lte", None)
         self.replica_num_not = kwargs.get("replica_num_not", None)
         self.replica_num_not_in = kwargs.get("replica_num_not_in", None)
+        self.resiliency_type = kwargs.get("resiliency_type", None)
+        self.resiliency_type_in = kwargs.get("resiliency_type_in", None)
+        self.resiliency_type_not = kwargs.get("resiliency_type_not", None)
+        self.resiliency_type_not_in = kwargs.get("resiliency_type_not_in", None)
         self.stripe_num = kwargs.get("stripe_num", None)
         self.stripe_num_gt = kwargs.get("stripe_num_gt", None)
         self.stripe_num_gte = kwargs.get("stripe_num_gte", None)
@@ -2909,6 +3105,132 @@ class IscsiTargetWhereInput(object):
         self._bps_wr_not_in = bps_wr_not_in
 
     @property
+    def business_host_groups_every(self):
+        """Gets the business_host_groups_every of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_every of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_every
+
+    @business_host_groups_every.setter
+    def business_host_groups_every(self, business_host_groups_every):
+        """Sets the business_host_groups_every of this IscsiTargetWhereInput.
+
+
+        :param business_host_groups_every: The business_host_groups_every of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_host_groups_every: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_every = business_host_groups_every
+
+    @property
+    def business_host_groups_none(self):
+        """Gets the business_host_groups_none of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_none of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_none
+
+    @business_host_groups_none.setter
+    def business_host_groups_none(self, business_host_groups_none):
+        """Sets the business_host_groups_none of this IscsiTargetWhereInput.
+
+
+        :param business_host_groups_none: The business_host_groups_none of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_host_groups_none: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_none = business_host_groups_none
+
+    @property
+    def business_host_groups_some(self):
+        """Gets the business_host_groups_some of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_host_groups_some of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups_some
+
+    @business_host_groups_some.setter
+    def business_host_groups_some(self, business_host_groups_some):
+        """Sets the business_host_groups_some of this IscsiTargetWhereInput.
+
+
+        :param business_host_groups_some: The business_host_groups_some of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_host_groups_some: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups_some = business_host_groups_some
+
+    @property
+    def business_hosts_every(self):
+        """Gets the business_hosts_every of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_every of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_every
+
+    @business_hosts_every.setter
+    def business_hosts_every(self, business_hosts_every):
+        """Sets the business_hosts_every of this IscsiTargetWhereInput.
+
+
+        :param business_hosts_every: The business_hosts_every of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_hosts_every: BusinessHostWhereInput
+        """
+
+        self._business_hosts_every = business_hosts_every
+
+    @property
+    def business_hosts_none(self):
+        """Gets the business_hosts_none of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_none of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_none
+
+    @business_hosts_none.setter
+    def business_hosts_none(self, business_hosts_none):
+        """Sets the business_hosts_none of this IscsiTargetWhereInput.
+
+
+        :param business_hosts_none: The business_hosts_none of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_hosts_none: BusinessHostWhereInput
+        """
+
+        self._business_hosts_none = business_hosts_none
+
+    @property
+    def business_hosts_some(self):
+        """Gets the business_hosts_some of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The business_hosts_some of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts_some
+
+    @business_hosts_some.setter
+    def business_hosts_some(self, business_hosts_some):
+        """Sets the business_hosts_some of this IscsiTargetWhereInput.
+
+
+        :param business_hosts_some: The business_hosts_some of this IscsiTargetWhereInput.  # noqa: E501
+        :type business_hosts_some: BusinessHostWhereInput
+        """
+
+        self._business_hosts_some = business_hosts_some
+
+    @property
     def chap_enabled(self):
         """Gets the chap_enabled of this IscsiTargetWhereInput.  # noqa: E501
 
@@ -3560,6 +3882,132 @@ class IscsiTargetWhereInput(object):
         self._cluster = cluster
 
     @property
+    def configuration_adaptive(self):
+        """Gets the configuration_adaptive of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_adaptive of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._configuration_adaptive
+
+    @configuration_adaptive.setter
+    def configuration_adaptive(self, configuration_adaptive):
+        """Sets the configuration_adaptive of this IscsiTargetWhereInput.
+
+
+        :param configuration_adaptive: The configuration_adaptive of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_adaptive: bool
+        """
+
+        self._configuration_adaptive = configuration_adaptive
+
+    @property
+    def configuration_adaptive_not(self):
+        """Gets the configuration_adaptive_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_adaptive_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._configuration_adaptive_not
+
+    @configuration_adaptive_not.setter
+    def configuration_adaptive_not(self, configuration_adaptive_not):
+        """Sets the configuration_adaptive_not of this IscsiTargetWhereInput.
+
+
+        :param configuration_adaptive_not: The configuration_adaptive_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_adaptive_not: bool
+        """
+
+        self._configuration_adaptive_not = configuration_adaptive_not
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this IscsiTargetWhereInput.
+
+
+        :param configuration_method: The configuration_method of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
+    def configuration_method_in(self):
+        """Gets the configuration_method_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[ConfigurationMethod]
+        """
+        return self._configuration_method_in
+
+    @configuration_method_in.setter
+    def configuration_method_in(self, configuration_method_in):
+        """Sets the configuration_method_in of this IscsiTargetWhereInput.
+
+
+        :param configuration_method_in: The configuration_method_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_method_in: list[ConfigurationMethod]
+        """
+
+        self._configuration_method_in = configuration_method_in
+
+    @property
+    def configuration_method_not(self):
+        """Gets the configuration_method_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method_not
+
+    @configuration_method_not.setter
+    def configuration_method_not(self, configuration_method_not):
+        """Sets the configuration_method_not of this IscsiTargetWhereInput.
+
+
+        :param configuration_method_not: The configuration_method_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_method_not: ConfigurationMethod
+        """
+
+        self._configuration_method_not = configuration_method_not
+
+    @property
+    def configuration_method_not_in(self):
+        """Gets the configuration_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The configuration_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[ConfigurationMethod]
+        """
+        return self._configuration_method_not_in
+
+    @configuration_method_not_in.setter
+    def configuration_method_not_in(self, configuration_method_not_in):
+        """Sets the configuration_method_not_in of this IscsiTargetWhereInput.
+
+
+        :param configuration_method_not_in: The configuration_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type configuration_method_not_in: list[ConfigurationMethod]
+        """
+
+        self._configuration_method_not_in = configuration_method_not_in
+
+    @property
     def description(self):
         """Gets the description of this IscsiTargetWhereInput.  # noqa: E501
 
@@ -3852,6 +4300,426 @@ class IscsiTargetWhereInput(object):
         """
 
         self._description_starts_with = description_starts_with
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this IscsiTargetWhereInput.
+
+
+        :param ec_k: The ec_k of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_k_gt(self):
+        """Gets the ec_k_gt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gt
+
+    @ec_k_gt.setter
+    def ec_k_gt(self, ec_k_gt):
+        """Sets the ec_k_gt of this IscsiTargetWhereInput.
+
+
+        :param ec_k_gt: The ec_k_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_gt: int
+        """
+
+        self._ec_k_gt = ec_k_gt
+
+    @property
+    def ec_k_gte(self):
+        """Gets the ec_k_gte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gte
+
+    @ec_k_gte.setter
+    def ec_k_gte(self, ec_k_gte):
+        """Sets the ec_k_gte of this IscsiTargetWhereInput.
+
+
+        :param ec_k_gte: The ec_k_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_gte: int
+        """
+
+        self._ec_k_gte = ec_k_gte
+
+    @property
+    def ec_k_in(self):
+        """Gets the ec_k_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_in
+
+    @ec_k_in.setter
+    def ec_k_in(self, ec_k_in):
+        """Sets the ec_k_in of this IscsiTargetWhereInput.
+
+
+        :param ec_k_in: The ec_k_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_in: list[int]
+        """
+
+        self._ec_k_in = ec_k_in
+
+    @property
+    def ec_k_lt(self):
+        """Gets the ec_k_lt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lt
+
+    @ec_k_lt.setter
+    def ec_k_lt(self, ec_k_lt):
+        """Sets the ec_k_lt of this IscsiTargetWhereInput.
+
+
+        :param ec_k_lt: The ec_k_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_lt: int
+        """
+
+        self._ec_k_lt = ec_k_lt
+
+    @property
+    def ec_k_lte(self):
+        """Gets the ec_k_lte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lte
+
+    @ec_k_lte.setter
+    def ec_k_lte(self, ec_k_lte):
+        """Sets the ec_k_lte of this IscsiTargetWhereInput.
+
+
+        :param ec_k_lte: The ec_k_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_lte: int
+        """
+
+        self._ec_k_lte = ec_k_lte
+
+    @property
+    def ec_k_not(self):
+        """Gets the ec_k_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_not
+
+    @ec_k_not.setter
+    def ec_k_not(self, ec_k_not):
+        """Sets the ec_k_not of this IscsiTargetWhereInput.
+
+
+        :param ec_k_not: The ec_k_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_not: int
+        """
+
+        self._ec_k_not = ec_k_not
+
+    @property
+    def ec_k_not_in(self):
+        """Gets the ec_k_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_not_in
+
+    @ec_k_not_in.setter
+    def ec_k_not_in(self, ec_k_not_in):
+        """Sets the ec_k_not_in of this IscsiTargetWhereInput.
+
+
+        :param ec_k_not_in: The ec_k_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_k_not_in: list[int]
+        """
+
+        self._ec_k_not_in = ec_k_not_in
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this IscsiTargetWhereInput.
+
+
+        :param ec_m: The ec_m of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_m_gt(self):
+        """Gets the ec_m_gt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gt
+
+    @ec_m_gt.setter
+    def ec_m_gt(self, ec_m_gt):
+        """Sets the ec_m_gt of this IscsiTargetWhereInput.
+
+
+        :param ec_m_gt: The ec_m_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_gt: int
+        """
+
+        self._ec_m_gt = ec_m_gt
+
+    @property
+    def ec_m_gte(self):
+        """Gets the ec_m_gte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gte
+
+    @ec_m_gte.setter
+    def ec_m_gte(self, ec_m_gte):
+        """Sets the ec_m_gte of this IscsiTargetWhereInput.
+
+
+        :param ec_m_gte: The ec_m_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_gte: int
+        """
+
+        self._ec_m_gte = ec_m_gte
+
+    @property
+    def ec_m_in(self):
+        """Gets the ec_m_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_in
+
+    @ec_m_in.setter
+    def ec_m_in(self, ec_m_in):
+        """Sets the ec_m_in of this IscsiTargetWhereInput.
+
+
+        :param ec_m_in: The ec_m_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_in: list[int]
+        """
+
+        self._ec_m_in = ec_m_in
+
+    @property
+    def ec_m_lt(self):
+        """Gets the ec_m_lt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lt
+
+    @ec_m_lt.setter
+    def ec_m_lt(self, ec_m_lt):
+        """Sets the ec_m_lt of this IscsiTargetWhereInput.
+
+
+        :param ec_m_lt: The ec_m_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_lt: int
+        """
+
+        self._ec_m_lt = ec_m_lt
+
+    @property
+    def ec_m_lte(self):
+        """Gets the ec_m_lte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lte
+
+    @ec_m_lte.setter
+    def ec_m_lte(self, ec_m_lte):
+        """Sets the ec_m_lte of this IscsiTargetWhereInput.
+
+
+        :param ec_m_lte: The ec_m_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_lte: int
+        """
+
+        self._ec_m_lte = ec_m_lte
+
+    @property
+    def ec_m_not(self):
+        """Gets the ec_m_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_not
+
+    @ec_m_not.setter
+    def ec_m_not(self, ec_m_not):
+        """Sets the ec_m_not of this IscsiTargetWhereInput.
+
+
+        :param ec_m_not: The ec_m_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_not: int
+        """
+
+        self._ec_m_not = ec_m_not
+
+    @property
+    def ec_m_not_in(self):
+        """Gets the ec_m_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_not_in
+
+    @ec_m_not_in.setter
+    def ec_m_not_in(self, ec_m_not_in):
+        """Sets the ec_m_not_in of this IscsiTargetWhereInput.
+
+
+        :param ec_m_not_in: The ec_m_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type ec_m_not_in: list[int]
+        """
+
+        self._ec_m_not_in = ec_m_not_in
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this IscsiTargetWhereInput.
+
+
+        :param encrypt_method: The encrypt_method of this IscsiTargetWhereInput.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def encrypt_method_in(self):
+        """Gets the encrypt_method_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[EncryptMethod]
+        """
+        return self._encrypt_method_in
+
+    @encrypt_method_in.setter
+    def encrypt_method_in(self, encrypt_method_in):
+        """Sets the encrypt_method_in of this IscsiTargetWhereInput.
+
+
+        :param encrypt_method_in: The encrypt_method_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type encrypt_method_in: list[EncryptMethod]
+        """
+
+        self._encrypt_method_in = encrypt_method_in
+
+    @property
+    def encrypt_method_not(self):
+        """Gets the encrypt_method_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method_not
+
+    @encrypt_method_not.setter
+    def encrypt_method_not(self, encrypt_method_not):
+        """Sets the encrypt_method_not of this IscsiTargetWhereInput.
+
+
+        :param encrypt_method_not: The encrypt_method_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type encrypt_method_not: EncryptMethod
+        """
+
+        self._encrypt_method_not = encrypt_method_not
+
+    @property
+    def encrypt_method_not_in(self):
+        """Gets the encrypt_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The encrypt_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[EncryptMethod]
+        """
+        return self._encrypt_method_not_in
+
+    @encrypt_method_not_in.setter
+    def encrypt_method_not_in(self, encrypt_method_not_in):
+        """Sets the encrypt_method_not_in of this IscsiTargetWhereInput.
+
+
+        :param encrypt_method_not_in: The encrypt_method_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type encrypt_method_not_in: list[EncryptMethod]
+        """
+
+        self._encrypt_method_not_in = encrypt_method_not_in
 
     @property
     def entity_async_status(self):
@@ -6878,6 +7746,237 @@ class IscsiTargetWhereInput(object):
         self._iqn_whitelist_starts_with = iqn_whitelist_starts_with
 
     @property
+    def iscsi_connections_every(self):
+        """Gets the iscsi_connections_every of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_connections_every of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: IscsiConnectionWhereInput
+        """
+        return self._iscsi_connections_every
+
+    @iscsi_connections_every.setter
+    def iscsi_connections_every(self, iscsi_connections_every):
+        """Sets the iscsi_connections_every of this IscsiTargetWhereInput.
+
+
+        :param iscsi_connections_every: The iscsi_connections_every of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_connections_every: IscsiConnectionWhereInput
+        """
+
+        self._iscsi_connections_every = iscsi_connections_every
+
+    @property
+    def iscsi_connections_none(self):
+        """Gets the iscsi_connections_none of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_connections_none of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: IscsiConnectionWhereInput
+        """
+        return self._iscsi_connections_none
+
+    @iscsi_connections_none.setter
+    def iscsi_connections_none(self, iscsi_connections_none):
+        """Sets the iscsi_connections_none of this IscsiTargetWhereInput.
+
+
+        :param iscsi_connections_none: The iscsi_connections_none of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_connections_none: IscsiConnectionWhereInput
+        """
+
+        self._iscsi_connections_none = iscsi_connections_none
+
+    @property
+    def iscsi_connections_some(self):
+        """Gets the iscsi_connections_some of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_connections_some of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: IscsiConnectionWhereInput
+        """
+        return self._iscsi_connections_some
+
+    @iscsi_connections_some.setter
+    def iscsi_connections_some(self, iscsi_connections_some):
+        """Sets the iscsi_connections_some of this IscsiTargetWhereInput.
+
+
+        :param iscsi_connections_some: The iscsi_connections_some of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_connections_some: IscsiConnectionWhereInput
+        """
+
+        self._iscsi_connections_some = iscsi_connections_some
+
+    @property
+    def iscsi_luns_num(self):
+        """Gets the iscsi_luns_num of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num
+
+    @iscsi_luns_num.setter
+    def iscsi_luns_num(self, iscsi_luns_num):
+        """Sets the iscsi_luns_num of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num: The iscsi_luns_num of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num: int
+        """
+
+        self._iscsi_luns_num = iscsi_luns_num
+
+    @property
+    def iscsi_luns_num_gt(self):
+        """Gets the iscsi_luns_num_gt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num_gt
+
+    @iscsi_luns_num_gt.setter
+    def iscsi_luns_num_gt(self, iscsi_luns_num_gt):
+        """Sets the iscsi_luns_num_gt of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_gt: The iscsi_luns_num_gt of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_gt: int
+        """
+
+        self._iscsi_luns_num_gt = iscsi_luns_num_gt
+
+    @property
+    def iscsi_luns_num_gte(self):
+        """Gets the iscsi_luns_num_gte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num_gte
+
+    @iscsi_luns_num_gte.setter
+    def iscsi_luns_num_gte(self, iscsi_luns_num_gte):
+        """Sets the iscsi_luns_num_gte of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_gte: The iscsi_luns_num_gte of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_gte: int
+        """
+
+        self._iscsi_luns_num_gte = iscsi_luns_num_gte
+
+    @property
+    def iscsi_luns_num_in(self):
+        """Gets the iscsi_luns_num_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._iscsi_luns_num_in
+
+    @iscsi_luns_num_in.setter
+    def iscsi_luns_num_in(self, iscsi_luns_num_in):
+        """Sets the iscsi_luns_num_in of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_in: The iscsi_luns_num_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_in: list[int]
+        """
+
+        self._iscsi_luns_num_in = iscsi_luns_num_in
+
+    @property
+    def iscsi_luns_num_lt(self):
+        """Gets the iscsi_luns_num_lt of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num_lt
+
+    @iscsi_luns_num_lt.setter
+    def iscsi_luns_num_lt(self, iscsi_luns_num_lt):
+        """Sets the iscsi_luns_num_lt of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_lt: The iscsi_luns_num_lt of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_lt: int
+        """
+
+        self._iscsi_luns_num_lt = iscsi_luns_num_lt
+
+    @property
+    def iscsi_luns_num_lte(self):
+        """Gets the iscsi_luns_num_lte of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num_lte
+
+    @iscsi_luns_num_lte.setter
+    def iscsi_luns_num_lte(self, iscsi_luns_num_lte):
+        """Sets the iscsi_luns_num_lte of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_lte: The iscsi_luns_num_lte of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_lte: int
+        """
+
+        self._iscsi_luns_num_lte = iscsi_luns_num_lte
+
+    @property
+    def iscsi_luns_num_not(self):
+        """Gets the iscsi_luns_num_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._iscsi_luns_num_not
+
+    @iscsi_luns_num_not.setter
+    def iscsi_luns_num_not(self, iscsi_luns_num_not):
+        """Sets the iscsi_luns_num_not of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_not: The iscsi_luns_num_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_not: int
+        """
+
+        self._iscsi_luns_num_not = iscsi_luns_num_not
+
+    @property
+    def iscsi_luns_num_not_in(self):
+        """Gets the iscsi_luns_num_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The iscsi_luns_num_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._iscsi_luns_num_not_in
+
+    @iscsi_luns_num_not_in.setter
+    def iscsi_luns_num_not_in(self, iscsi_luns_num_not_in):
+        """Sets the iscsi_luns_num_not_in of this IscsiTargetWhereInput.
+
+
+        :param iscsi_luns_num_not_in: The iscsi_luns_num_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type iscsi_luns_num_not_in: list[int]
+        """
+
+        self._iscsi_luns_num_not_in = iscsi_luns_num_not_in
+
+    @property
     def labels_every(self):
         """Gets the labels_every of this IscsiTargetWhereInput.  # noqa: E501
 
@@ -7592,6 +8691,48 @@ class IscsiTargetWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
+    def prioritized(self):
+        """Gets the prioritized of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The prioritized of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this IscsiTargetWhereInput.
+
+
+        :param prioritized: The prioritized of this IscsiTargetWhereInput.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
+    def prioritized_not(self):
+        """Gets the prioritized_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The prioritized_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized_not
+
+    @prioritized_not.setter
+    def prioritized_not(self, prioritized_not):
+        """Sets the prioritized_not of this IscsiTargetWhereInput.
+
+
+        :param prioritized_not: The prioritized_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type prioritized_not: bool
+        """
+
+        self._prioritized_not = prioritized_not
+
+    @property
     def replica_num(self):
         """Gets the replica_num of this IscsiTargetWhereInput.  # noqa: E501
 
@@ -7758,6 +8899,90 @@ class IscsiTargetWhereInput(object):
         """
 
         self._replica_num_not_in = replica_num_not_in
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this IscsiTargetWhereInput.
+
+
+        :param resiliency_type: The resiliency_type of this IscsiTargetWhereInput.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def resiliency_type_in(self):
+        """Gets the resiliency_type_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_in
+
+    @resiliency_type_in.setter
+    def resiliency_type_in(self, resiliency_type_in):
+        """Sets the resiliency_type_in of this IscsiTargetWhereInput.
+
+
+        :param resiliency_type_in: The resiliency_type_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type resiliency_type_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_in = resiliency_type_in
+
+    @property
+    def resiliency_type_not(self):
+        """Gets the resiliency_type_not of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type_not
+
+    @resiliency_type_not.setter
+    def resiliency_type_not(self, resiliency_type_not):
+        """Sets the resiliency_type_not of this IscsiTargetWhereInput.
+
+
+        :param resiliency_type_not: The resiliency_type_not of this IscsiTargetWhereInput.  # noqa: E501
+        :type resiliency_type_not: ResiliencyType
+        """
+
+        self._resiliency_type_not = resiliency_type_not
+
+    @property
+    def resiliency_type_not_in(self):
+        """Gets the resiliency_type_not_in of this IscsiTargetWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_not_in
+
+    @resiliency_type_not_in.setter
+    def resiliency_type_not_in(self, resiliency_type_not_in):
+        """Sets the resiliency_type_not_in of this IscsiTargetWhereInput.
+
+
+        :param resiliency_type_not_in: The resiliency_type_not_in of this IscsiTargetWhereInput.  # noqa: E501
+        :type resiliency_type_not_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_not_in = resiliency_type_not_in
 
     @property
     def stripe_num(self):

@@ -44,9 +44,35 @@ class VmVolumeWhereInput(object):
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'elf_storage_policy_ec_k': 'int',
+        'elf_storage_policy_ec_k_gt': 'int',
+        'elf_storage_policy_ec_k_gte': 'int',
+        'elf_storage_policy_ec_k_in': 'list[int]',
+        'elf_storage_policy_ec_k_lt': 'int',
+        'elf_storage_policy_ec_k_lte': 'int',
+        'elf_storage_policy_ec_k_not': 'int',
+        'elf_storage_policy_ec_k_not_in': 'list[int]',
+        'elf_storage_policy_ec_m': 'int',
+        'elf_storage_policy_ec_m_gt': 'int',
+        'elf_storage_policy_ec_m_gte': 'int',
+        'elf_storage_policy_ec_m_in': 'list[int]',
+        'elf_storage_policy_ec_m_lt': 'int',
+        'elf_storage_policy_ec_m_lte': 'int',
+        'elf_storage_policy_ec_m_not': 'int',
+        'elf_storage_policy_ec_m_not_in': 'list[int]',
         'elf_storage_policy_in': 'list[VmVolumeElfStoragePolicyType]',
         'elf_storage_policy_not': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy_not_in': 'list[VmVolumeElfStoragePolicyType]',
+        'elf_storage_policy_replica_num': 'int',
+        'elf_storage_policy_replica_num_gt': 'int',
+        'elf_storage_policy_replica_num_gte': 'int',
+        'elf_storage_policy_replica_num_in': 'list[int]',
+        'elf_storage_policy_replica_num_lt': 'int',
+        'elf_storage_policy_replica_num_lte': 'int',
+        'elf_storage_policy_replica_num_not': 'int',
+        'elf_storage_policy_replica_num_not_in': 'list[int]',
+        'elf_storage_policy_thin_provision': 'bool',
+        'elf_storage_policy_thin_provision_not': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -137,6 +163,8 @@ class VmVolumeWhereInput(object):
         'path_not_in': 'list[str]',
         'path_not_starts_with': 'str',
         'path_starts_with': 'str',
+        'resident_in_cache': 'bool',
+        'resident_in_cache_not': 'bool',
         'sharing': 'bool',
         'sharing_not': 'bool',
         'size': 'int',
@@ -208,9 +236,35 @@ class VmVolumeWhereInput(object):
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
         'elf_storage_policy': 'elf_storage_policy',
+        'elf_storage_policy_ec_k': 'elf_storage_policy_ec_k',
+        'elf_storage_policy_ec_k_gt': 'elf_storage_policy_ec_k_gt',
+        'elf_storage_policy_ec_k_gte': 'elf_storage_policy_ec_k_gte',
+        'elf_storage_policy_ec_k_in': 'elf_storage_policy_ec_k_in',
+        'elf_storage_policy_ec_k_lt': 'elf_storage_policy_ec_k_lt',
+        'elf_storage_policy_ec_k_lte': 'elf_storage_policy_ec_k_lte',
+        'elf_storage_policy_ec_k_not': 'elf_storage_policy_ec_k_not',
+        'elf_storage_policy_ec_k_not_in': 'elf_storage_policy_ec_k_not_in',
+        'elf_storage_policy_ec_m': 'elf_storage_policy_ec_m',
+        'elf_storage_policy_ec_m_gt': 'elf_storage_policy_ec_m_gt',
+        'elf_storage_policy_ec_m_gte': 'elf_storage_policy_ec_m_gte',
+        'elf_storage_policy_ec_m_in': 'elf_storage_policy_ec_m_in',
+        'elf_storage_policy_ec_m_lt': 'elf_storage_policy_ec_m_lt',
+        'elf_storage_policy_ec_m_lte': 'elf_storage_policy_ec_m_lte',
+        'elf_storage_policy_ec_m_not': 'elf_storage_policy_ec_m_not',
+        'elf_storage_policy_ec_m_not_in': 'elf_storage_policy_ec_m_not_in',
         'elf_storage_policy_in': 'elf_storage_policy_in',
         'elf_storage_policy_not': 'elf_storage_policy_not',
         'elf_storage_policy_not_in': 'elf_storage_policy_not_in',
+        'elf_storage_policy_replica_num': 'elf_storage_policy_replica_num',
+        'elf_storage_policy_replica_num_gt': 'elf_storage_policy_replica_num_gt',
+        'elf_storage_policy_replica_num_gte': 'elf_storage_policy_replica_num_gte',
+        'elf_storage_policy_replica_num_in': 'elf_storage_policy_replica_num_in',
+        'elf_storage_policy_replica_num_lt': 'elf_storage_policy_replica_num_lt',
+        'elf_storage_policy_replica_num_lte': 'elf_storage_policy_replica_num_lte',
+        'elf_storage_policy_replica_num_not': 'elf_storage_policy_replica_num_not',
+        'elf_storage_policy_replica_num_not_in': 'elf_storage_policy_replica_num_not_in',
+        'elf_storage_policy_thin_provision': 'elf_storage_policy_thin_provision',
+        'elf_storage_policy_thin_provision_not': 'elf_storage_policy_thin_provision_not',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -301,6 +355,8 @@ class VmVolumeWhereInput(object):
         'path_not_in': 'path_not_in',
         'path_not_starts_with': 'path_not_starts_with',
         'path_starts_with': 'path_starts_with',
+        'resident_in_cache': 'resident_in_cache',
+        'resident_in_cache_not': 'resident_in_cache_not',
         'sharing': 'sharing',
         'sharing_not': 'sharing_not',
         'size': 'size',
@@ -375,9 +431,35 @@ class VmVolumeWhereInput(object):
         self._description_not_starts_with = None
         self._description_starts_with = None
         self._elf_storage_policy = None
+        self._elf_storage_policy_ec_k = None
+        self._elf_storage_policy_ec_k_gt = None
+        self._elf_storage_policy_ec_k_gte = None
+        self._elf_storage_policy_ec_k_in = None
+        self._elf_storage_policy_ec_k_lt = None
+        self._elf_storage_policy_ec_k_lte = None
+        self._elf_storage_policy_ec_k_not = None
+        self._elf_storage_policy_ec_k_not_in = None
+        self._elf_storage_policy_ec_m = None
+        self._elf_storage_policy_ec_m_gt = None
+        self._elf_storage_policy_ec_m_gte = None
+        self._elf_storage_policy_ec_m_in = None
+        self._elf_storage_policy_ec_m_lt = None
+        self._elf_storage_policy_ec_m_lte = None
+        self._elf_storage_policy_ec_m_not = None
+        self._elf_storage_policy_ec_m_not_in = None
         self._elf_storage_policy_in = None
         self._elf_storage_policy_not = None
         self._elf_storage_policy_not_in = None
+        self._elf_storage_policy_replica_num = None
+        self._elf_storage_policy_replica_num_gt = None
+        self._elf_storage_policy_replica_num_gte = None
+        self._elf_storage_policy_replica_num_in = None
+        self._elf_storage_policy_replica_num_lt = None
+        self._elf_storage_policy_replica_num_lte = None
+        self._elf_storage_policy_replica_num_not = None
+        self._elf_storage_policy_replica_num_not_in = None
+        self._elf_storage_policy_thin_provision = None
+        self._elf_storage_policy_thin_provision_not = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -468,6 +550,8 @@ class VmVolumeWhereInput(object):
         self._path_not_in = None
         self._path_not_starts_with = None
         self._path_starts_with = None
+        self._resident_in_cache = None
+        self._resident_in_cache_not = None
         self._sharing = None
         self._sharing_not = None
         self._size = None
@@ -538,9 +622,35 @@ class VmVolumeWhereInput(object):
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
         self.elf_storage_policy = kwargs.get("elf_storage_policy", None)
+        self.elf_storage_policy_ec_k = kwargs.get("elf_storage_policy_ec_k", None)
+        self.elf_storage_policy_ec_k_gt = kwargs.get("elf_storage_policy_ec_k_gt", None)
+        self.elf_storage_policy_ec_k_gte = kwargs.get("elf_storage_policy_ec_k_gte", None)
+        self.elf_storage_policy_ec_k_in = kwargs.get("elf_storage_policy_ec_k_in", None)
+        self.elf_storage_policy_ec_k_lt = kwargs.get("elf_storage_policy_ec_k_lt", None)
+        self.elf_storage_policy_ec_k_lte = kwargs.get("elf_storage_policy_ec_k_lte", None)
+        self.elf_storage_policy_ec_k_not = kwargs.get("elf_storage_policy_ec_k_not", None)
+        self.elf_storage_policy_ec_k_not_in = kwargs.get("elf_storage_policy_ec_k_not_in", None)
+        self.elf_storage_policy_ec_m = kwargs.get("elf_storage_policy_ec_m", None)
+        self.elf_storage_policy_ec_m_gt = kwargs.get("elf_storage_policy_ec_m_gt", None)
+        self.elf_storage_policy_ec_m_gte = kwargs.get("elf_storage_policy_ec_m_gte", None)
+        self.elf_storage_policy_ec_m_in = kwargs.get("elf_storage_policy_ec_m_in", None)
+        self.elf_storage_policy_ec_m_lt = kwargs.get("elf_storage_policy_ec_m_lt", None)
+        self.elf_storage_policy_ec_m_lte = kwargs.get("elf_storage_policy_ec_m_lte", None)
+        self.elf_storage_policy_ec_m_not = kwargs.get("elf_storage_policy_ec_m_not", None)
+        self.elf_storage_policy_ec_m_not_in = kwargs.get("elf_storage_policy_ec_m_not_in", None)
         self.elf_storage_policy_in = kwargs.get("elf_storage_policy_in", None)
         self.elf_storage_policy_not = kwargs.get("elf_storage_policy_not", None)
         self.elf_storage_policy_not_in = kwargs.get("elf_storage_policy_not_in", None)
+        self.elf_storage_policy_replica_num = kwargs.get("elf_storage_policy_replica_num", None)
+        self.elf_storage_policy_replica_num_gt = kwargs.get("elf_storage_policy_replica_num_gt", None)
+        self.elf_storage_policy_replica_num_gte = kwargs.get("elf_storage_policy_replica_num_gte", None)
+        self.elf_storage_policy_replica_num_in = kwargs.get("elf_storage_policy_replica_num_in", None)
+        self.elf_storage_policy_replica_num_lt = kwargs.get("elf_storage_policy_replica_num_lt", None)
+        self.elf_storage_policy_replica_num_lte = kwargs.get("elf_storage_policy_replica_num_lte", None)
+        self.elf_storage_policy_replica_num_not = kwargs.get("elf_storage_policy_replica_num_not", None)
+        self.elf_storage_policy_replica_num_not_in = kwargs.get("elf_storage_policy_replica_num_not_in", None)
+        self.elf_storage_policy_thin_provision = kwargs.get("elf_storage_policy_thin_provision", None)
+        self.elf_storage_policy_thin_provision_not = kwargs.get("elf_storage_policy_thin_provision_not", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -631,6 +741,8 @@ class VmVolumeWhereInput(object):
         self.path_not_in = kwargs.get("path_not_in", None)
         self.path_not_starts_with = kwargs.get("path_not_starts_with", None)
         self.path_starts_with = kwargs.get("path_starts_with", None)
+        self.resident_in_cache = kwargs.get("resident_in_cache", None)
+        self.resident_in_cache_not = kwargs.get("resident_in_cache_not", None)
         self.sharing = kwargs.get("sharing", None)
         self.sharing_not = kwargs.get("sharing_not", None)
         self.size = kwargs.get("size", None)
@@ -1081,6 +1193,342 @@ class VmVolumeWhereInput(object):
         self._elf_storage_policy = elf_storage_policy
 
     @property
+    def elf_storage_policy_ec_k(self):
+        """Gets the elf_storage_policy_ec_k of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k
+
+    @elf_storage_policy_ec_k.setter
+    def elf_storage_policy_ec_k(self, elf_storage_policy_ec_k):
+        """Sets the elf_storage_policy_ec_k of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k: The elf_storage_policy_ec_k of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k: int
+        """
+
+        self._elf_storage_policy_ec_k = elf_storage_policy_ec_k
+
+    @property
+    def elf_storage_policy_ec_k_gt(self):
+        """Gets the elf_storage_policy_ec_k_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k_gt
+
+    @elf_storage_policy_ec_k_gt.setter
+    def elf_storage_policy_ec_k_gt(self, elf_storage_policy_ec_k_gt):
+        """Sets the elf_storage_policy_ec_k_gt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_gt: The elf_storage_policy_ec_k_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_gt: int
+        """
+
+        self._elf_storage_policy_ec_k_gt = elf_storage_policy_ec_k_gt
+
+    @property
+    def elf_storage_policy_ec_k_gte(self):
+        """Gets the elf_storage_policy_ec_k_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k_gte
+
+    @elf_storage_policy_ec_k_gte.setter
+    def elf_storage_policy_ec_k_gte(self, elf_storage_policy_ec_k_gte):
+        """Sets the elf_storage_policy_ec_k_gte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_gte: The elf_storage_policy_ec_k_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_gte: int
+        """
+
+        self._elf_storage_policy_ec_k_gte = elf_storage_policy_ec_k_gte
+
+    @property
+    def elf_storage_policy_ec_k_in(self):
+        """Gets the elf_storage_policy_ec_k_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_ec_k_in
+
+    @elf_storage_policy_ec_k_in.setter
+    def elf_storage_policy_ec_k_in(self, elf_storage_policy_ec_k_in):
+        """Sets the elf_storage_policy_ec_k_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_in: The elf_storage_policy_ec_k_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_in: list[int]
+        """
+
+        self._elf_storage_policy_ec_k_in = elf_storage_policy_ec_k_in
+
+    @property
+    def elf_storage_policy_ec_k_lt(self):
+        """Gets the elf_storage_policy_ec_k_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k_lt
+
+    @elf_storage_policy_ec_k_lt.setter
+    def elf_storage_policy_ec_k_lt(self, elf_storage_policy_ec_k_lt):
+        """Sets the elf_storage_policy_ec_k_lt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_lt: The elf_storage_policy_ec_k_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_lt: int
+        """
+
+        self._elf_storage_policy_ec_k_lt = elf_storage_policy_ec_k_lt
+
+    @property
+    def elf_storage_policy_ec_k_lte(self):
+        """Gets the elf_storage_policy_ec_k_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k_lte
+
+    @elf_storage_policy_ec_k_lte.setter
+    def elf_storage_policy_ec_k_lte(self, elf_storage_policy_ec_k_lte):
+        """Sets the elf_storage_policy_ec_k_lte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_lte: The elf_storage_policy_ec_k_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_lte: int
+        """
+
+        self._elf_storage_policy_ec_k_lte = elf_storage_policy_ec_k_lte
+
+    @property
+    def elf_storage_policy_ec_k_not(self):
+        """Gets the elf_storage_policy_ec_k_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k_not
+
+    @elf_storage_policy_ec_k_not.setter
+    def elf_storage_policy_ec_k_not(self, elf_storage_policy_ec_k_not):
+        """Sets the elf_storage_policy_ec_k_not of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_not: The elf_storage_policy_ec_k_not of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_not: int
+        """
+
+        self._elf_storage_policy_ec_k_not = elf_storage_policy_ec_k_not
+
+    @property
+    def elf_storage_policy_ec_k_not_in(self):
+        """Gets the elf_storage_policy_ec_k_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_ec_k_not_in
+
+    @elf_storage_policy_ec_k_not_in.setter
+    def elf_storage_policy_ec_k_not_in(self, elf_storage_policy_ec_k_not_in):
+        """Sets the elf_storage_policy_ec_k_not_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_k_not_in: The elf_storage_policy_ec_k_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_k_not_in: list[int]
+        """
+
+        self._elf_storage_policy_ec_k_not_in = elf_storage_policy_ec_k_not_in
+
+    @property
+    def elf_storage_policy_ec_m(self):
+        """Gets the elf_storage_policy_ec_m of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m
+
+    @elf_storage_policy_ec_m.setter
+    def elf_storage_policy_ec_m(self, elf_storage_policy_ec_m):
+        """Sets the elf_storage_policy_ec_m of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m: The elf_storage_policy_ec_m of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m: int
+        """
+
+        self._elf_storage_policy_ec_m = elf_storage_policy_ec_m
+
+    @property
+    def elf_storage_policy_ec_m_gt(self):
+        """Gets the elf_storage_policy_ec_m_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m_gt
+
+    @elf_storage_policy_ec_m_gt.setter
+    def elf_storage_policy_ec_m_gt(self, elf_storage_policy_ec_m_gt):
+        """Sets the elf_storage_policy_ec_m_gt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_gt: The elf_storage_policy_ec_m_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_gt: int
+        """
+
+        self._elf_storage_policy_ec_m_gt = elf_storage_policy_ec_m_gt
+
+    @property
+    def elf_storage_policy_ec_m_gte(self):
+        """Gets the elf_storage_policy_ec_m_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m_gte
+
+    @elf_storage_policy_ec_m_gte.setter
+    def elf_storage_policy_ec_m_gte(self, elf_storage_policy_ec_m_gte):
+        """Sets the elf_storage_policy_ec_m_gte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_gte: The elf_storage_policy_ec_m_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_gte: int
+        """
+
+        self._elf_storage_policy_ec_m_gte = elf_storage_policy_ec_m_gte
+
+    @property
+    def elf_storage_policy_ec_m_in(self):
+        """Gets the elf_storage_policy_ec_m_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_ec_m_in
+
+    @elf_storage_policy_ec_m_in.setter
+    def elf_storage_policy_ec_m_in(self, elf_storage_policy_ec_m_in):
+        """Sets the elf_storage_policy_ec_m_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_in: The elf_storage_policy_ec_m_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_in: list[int]
+        """
+
+        self._elf_storage_policy_ec_m_in = elf_storage_policy_ec_m_in
+
+    @property
+    def elf_storage_policy_ec_m_lt(self):
+        """Gets the elf_storage_policy_ec_m_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m_lt
+
+    @elf_storage_policy_ec_m_lt.setter
+    def elf_storage_policy_ec_m_lt(self, elf_storage_policy_ec_m_lt):
+        """Sets the elf_storage_policy_ec_m_lt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_lt: The elf_storage_policy_ec_m_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_lt: int
+        """
+
+        self._elf_storage_policy_ec_m_lt = elf_storage_policy_ec_m_lt
+
+    @property
+    def elf_storage_policy_ec_m_lte(self):
+        """Gets the elf_storage_policy_ec_m_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m_lte
+
+    @elf_storage_policy_ec_m_lte.setter
+    def elf_storage_policy_ec_m_lte(self, elf_storage_policy_ec_m_lte):
+        """Sets the elf_storage_policy_ec_m_lte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_lte: The elf_storage_policy_ec_m_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_lte: int
+        """
+
+        self._elf_storage_policy_ec_m_lte = elf_storage_policy_ec_m_lte
+
+    @property
+    def elf_storage_policy_ec_m_not(self):
+        """Gets the elf_storage_policy_ec_m_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m_not
+
+    @elf_storage_policy_ec_m_not.setter
+    def elf_storage_policy_ec_m_not(self, elf_storage_policy_ec_m_not):
+        """Sets the elf_storage_policy_ec_m_not of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_not: The elf_storage_policy_ec_m_not of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_not: int
+        """
+
+        self._elf_storage_policy_ec_m_not = elf_storage_policy_ec_m_not
+
+    @property
+    def elf_storage_policy_ec_m_not_in(self):
+        """Gets the elf_storage_policy_ec_m_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_ec_m_not_in
+
+    @elf_storage_policy_ec_m_not_in.setter
+    def elf_storage_policy_ec_m_not_in(self, elf_storage_policy_ec_m_not_in):
+        """Sets the elf_storage_policy_ec_m_not_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_ec_m_not_in: The elf_storage_policy_ec_m_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_ec_m_not_in: list[int]
+        """
+
+        self._elf_storage_policy_ec_m_not_in = elf_storage_policy_ec_m_not_in
+
+    @property
     def elf_storage_policy_in(self):
         """Gets the elf_storage_policy_in of this VmVolumeWhereInput.  # noqa: E501
 
@@ -1142,6 +1590,216 @@ class VmVolumeWhereInput(object):
         """
 
         self._elf_storage_policy_not_in = elf_storage_policy_not_in
+
+    @property
+    def elf_storage_policy_replica_num(self):
+        """Gets the elf_storage_policy_replica_num of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num
+
+    @elf_storage_policy_replica_num.setter
+    def elf_storage_policy_replica_num(self, elf_storage_policy_replica_num):
+        """Sets the elf_storage_policy_replica_num of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num: The elf_storage_policy_replica_num of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num: int
+        """
+
+        self._elf_storage_policy_replica_num = elf_storage_policy_replica_num
+
+    @property
+    def elf_storage_policy_replica_num_gt(self):
+        """Gets the elf_storage_policy_replica_num_gt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_gt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num_gt
+
+    @elf_storage_policy_replica_num_gt.setter
+    def elf_storage_policy_replica_num_gt(self, elf_storage_policy_replica_num_gt):
+        """Sets the elf_storage_policy_replica_num_gt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_gt: The elf_storage_policy_replica_num_gt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_gt: int
+        """
+
+        self._elf_storage_policy_replica_num_gt = elf_storage_policy_replica_num_gt
+
+    @property
+    def elf_storage_policy_replica_num_gte(self):
+        """Gets the elf_storage_policy_replica_num_gte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_gte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num_gte
+
+    @elf_storage_policy_replica_num_gte.setter
+    def elf_storage_policy_replica_num_gte(self, elf_storage_policy_replica_num_gte):
+        """Sets the elf_storage_policy_replica_num_gte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_gte: The elf_storage_policy_replica_num_gte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_gte: int
+        """
+
+        self._elf_storage_policy_replica_num_gte = elf_storage_policy_replica_num_gte
+
+    @property
+    def elf_storage_policy_replica_num_in(self):
+        """Gets the elf_storage_policy_replica_num_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_replica_num_in
+
+    @elf_storage_policy_replica_num_in.setter
+    def elf_storage_policy_replica_num_in(self, elf_storage_policy_replica_num_in):
+        """Sets the elf_storage_policy_replica_num_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_in: The elf_storage_policy_replica_num_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_in: list[int]
+        """
+
+        self._elf_storage_policy_replica_num_in = elf_storage_policy_replica_num_in
+
+    @property
+    def elf_storage_policy_replica_num_lt(self):
+        """Gets the elf_storage_policy_replica_num_lt of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_lt of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num_lt
+
+    @elf_storage_policy_replica_num_lt.setter
+    def elf_storage_policy_replica_num_lt(self, elf_storage_policy_replica_num_lt):
+        """Sets the elf_storage_policy_replica_num_lt of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_lt: The elf_storage_policy_replica_num_lt of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_lt: int
+        """
+
+        self._elf_storage_policy_replica_num_lt = elf_storage_policy_replica_num_lt
+
+    @property
+    def elf_storage_policy_replica_num_lte(self):
+        """Gets the elf_storage_policy_replica_num_lte of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_lte of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num_lte
+
+    @elf_storage_policy_replica_num_lte.setter
+    def elf_storage_policy_replica_num_lte(self, elf_storage_policy_replica_num_lte):
+        """Sets the elf_storage_policy_replica_num_lte of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_lte: The elf_storage_policy_replica_num_lte of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_lte: int
+        """
+
+        self._elf_storage_policy_replica_num_lte = elf_storage_policy_replica_num_lte
+
+    @property
+    def elf_storage_policy_replica_num_not(self):
+        """Gets the elf_storage_policy_replica_num_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num_not
+
+    @elf_storage_policy_replica_num_not.setter
+    def elf_storage_policy_replica_num_not(self, elf_storage_policy_replica_num_not):
+        """Sets the elf_storage_policy_replica_num_not of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_not: The elf_storage_policy_replica_num_not of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_not: int
+        """
+
+        self._elf_storage_policy_replica_num_not = elf_storage_policy_replica_num_not
+
+    @property
+    def elf_storage_policy_replica_num_not_in(self):
+        """Gets the elf_storage_policy_replica_num_not_in of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._elf_storage_policy_replica_num_not_in
+
+    @elf_storage_policy_replica_num_not_in.setter
+    def elf_storage_policy_replica_num_not_in(self, elf_storage_policy_replica_num_not_in):
+        """Sets the elf_storage_policy_replica_num_not_in of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_replica_num_not_in: The elf_storage_policy_replica_num_not_in of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_replica_num_not_in: list[int]
+        """
+
+        self._elf_storage_policy_replica_num_not_in = elf_storage_policy_replica_num_not_in
+
+    @property
+    def elf_storage_policy_thin_provision(self):
+        """Gets the elf_storage_policy_thin_provision of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_thin_provision of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._elf_storage_policy_thin_provision
+
+    @elf_storage_policy_thin_provision.setter
+    def elf_storage_policy_thin_provision(self, elf_storage_policy_thin_provision):
+        """Sets the elf_storage_policy_thin_provision of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_thin_provision: The elf_storage_policy_thin_provision of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_thin_provision: bool
+        """
+
+        self._elf_storage_policy_thin_provision = elf_storage_policy_thin_provision
+
+    @property
+    def elf_storage_policy_thin_provision_not(self):
+        """Gets the elf_storage_policy_thin_provision_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The elf_storage_policy_thin_provision_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._elf_storage_policy_thin_provision_not
+
+    @elf_storage_policy_thin_provision_not.setter
+    def elf_storage_policy_thin_provision_not(self, elf_storage_policy_thin_provision_not):
+        """Sets the elf_storage_policy_thin_provision_not of this VmVolumeWhereInput.
+
+
+        :param elf_storage_policy_thin_provision_not: The elf_storage_policy_thin_provision_not of this VmVolumeWhereInput.  # noqa: E501
+        :type elf_storage_policy_thin_provision_not: bool
+        """
+
+        self._elf_storage_policy_thin_provision_not = elf_storage_policy_thin_provision_not
 
     @property
     def entity_async_status(self):
@@ -3032,6 +3690,48 @@ class VmVolumeWhereInput(object):
         """
 
         self._path_starts_with = path_starts_with
+
+    @property
+    def resident_in_cache(self):
+        """Gets the resident_in_cache of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The resident_in_cache of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._resident_in_cache
+
+    @resident_in_cache.setter
+    def resident_in_cache(self, resident_in_cache):
+        """Sets the resident_in_cache of this VmVolumeWhereInput.
+
+
+        :param resident_in_cache: The resident_in_cache of this VmVolumeWhereInput.  # noqa: E501
+        :type resident_in_cache: bool
+        """
+
+        self._resident_in_cache = resident_in_cache
+
+    @property
+    def resident_in_cache_not(self):
+        """Gets the resident_in_cache_not of this VmVolumeWhereInput.  # noqa: E501
+
+
+        :return: The resident_in_cache_not of this VmVolumeWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._resident_in_cache_not
+
+    @resident_in_cache_not.setter
+    def resident_in_cache_not(self, resident_in_cache_not):
+        """Sets the resident_in_cache_not of this VmVolumeWhereInput.
+
+
+        :param resident_in_cache_not: The resident_in_cache_not of this VmVolumeWhereInput.  # noqa: E501
+        :type resident_in_cache_not: bool
+        """
+
+        self._resident_in_cache_not = resident_in_cache_not
 
     @property
     def sharing(self):

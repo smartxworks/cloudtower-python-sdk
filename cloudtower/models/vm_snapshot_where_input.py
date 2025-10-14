@@ -75,6 +75,10 @@ class VmSnapshotWhereInput(object):
         'firmware_not_in': 'list[VmFirmware]',
         'ha': 'bool',
         'ha_not': 'bool',
+        'ha_priority': 'VmHaPriority',
+        'ha_priority_in': 'list[VmHaPriority]',
+        'ha_priority_not': 'VmHaPriority',
+        'ha_priority_not_in': 'list[VmHaPriority]',
         'id': 'str',
         'id_contains': 'str',
         'id_ends_with': 'str',
@@ -237,6 +241,10 @@ class VmSnapshotWhereInput(object):
         'firmware_not_in': 'firmware_not_in',
         'ha': 'ha',
         'ha_not': 'ha_not',
+        'ha_priority': 'ha_priority',
+        'ha_priority_in': 'ha_priority_in',
+        'ha_priority_not': 'ha_priority_not',
+        'ha_priority_not_in': 'ha_priority_not_in',
         'id': 'id',
         'id_contains': 'id_contains',
         'id_ends_with': 'id_ends_with',
@@ -402,6 +410,10 @@ class VmSnapshotWhereInput(object):
         self._firmware_not_in = None
         self._ha = None
         self._ha_not = None
+        self._ha_priority = None
+        self._ha_priority_in = None
+        self._ha_priority_not = None
+        self._ha_priority_not_in = None
         self._id = None
         self._id_contains = None
         self._id_ends_with = None
@@ -563,6 +575,10 @@ class VmSnapshotWhereInput(object):
         self.firmware_not_in = kwargs.get("firmware_not_in", None)
         self.ha = kwargs.get("ha", None)
         self.ha_not = kwargs.get("ha_not", None)
+        self.ha_priority = kwargs.get("ha_priority", None)
+        self.ha_priority_in = kwargs.get("ha_priority_in", None)
+        self.ha_priority_not = kwargs.get("ha_priority_not", None)
+        self.ha_priority_not_in = kwargs.get("ha_priority_not_in", None)
         self.id = kwargs.get("id", None)
         self.id_contains = kwargs.get("id_contains", None)
         self.id_ends_with = kwargs.get("id_ends_with", None)
@@ -1722,6 +1738,90 @@ class VmSnapshotWhereInput(object):
         """
 
         self._ha_not = ha_not
+
+    @property
+    def ha_priority(self):
+        """Gets the ha_priority of this VmSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority of this VmSnapshotWhereInput.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority
+
+    @ha_priority.setter
+    def ha_priority(self, ha_priority):
+        """Sets the ha_priority of this VmSnapshotWhereInput.
+
+
+        :param ha_priority: The ha_priority of this VmSnapshotWhereInput.  # noqa: E501
+        :type ha_priority: VmHaPriority
+        """
+
+        self._ha_priority = ha_priority
+
+    @property
+    def ha_priority_in(self):
+        """Gets the ha_priority_in of this VmSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_in of this VmSnapshotWhereInput.  # noqa: E501
+        :rtype: list[VmHaPriority]
+        """
+        return self._ha_priority_in
+
+    @ha_priority_in.setter
+    def ha_priority_in(self, ha_priority_in):
+        """Sets the ha_priority_in of this VmSnapshotWhereInput.
+
+
+        :param ha_priority_in: The ha_priority_in of this VmSnapshotWhereInput.  # noqa: E501
+        :type ha_priority_in: list[VmHaPriority]
+        """
+
+        self._ha_priority_in = ha_priority_in
+
+    @property
+    def ha_priority_not(self):
+        """Gets the ha_priority_not of this VmSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_not of this VmSnapshotWhereInput.  # noqa: E501
+        :rtype: VmHaPriority
+        """
+        return self._ha_priority_not
+
+    @ha_priority_not.setter
+    def ha_priority_not(self, ha_priority_not):
+        """Sets the ha_priority_not of this VmSnapshotWhereInput.
+
+
+        :param ha_priority_not: The ha_priority_not of this VmSnapshotWhereInput.  # noqa: E501
+        :type ha_priority_not: VmHaPriority
+        """
+
+        self._ha_priority_not = ha_priority_not
+
+    @property
+    def ha_priority_not_in(self):
+        """Gets the ha_priority_not_in of this VmSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ha_priority_not_in of this VmSnapshotWhereInput.  # noqa: E501
+        :rtype: list[VmHaPriority]
+        """
+        return self._ha_priority_not_in
+
+    @ha_priority_not_in.setter
+    def ha_priority_not_in(self, ha_priority_not_in):
+        """Sets the ha_priority_not_in of this VmSnapshotWhereInput.
+
+
+        :param ha_priority_not_in: The ha_priority_not_in of this VmSnapshotWhereInput.  # noqa: E501
+        :type ha_priority_not_in: list[VmHaPriority]
+        """
+
+        self._ha_priority_not_in = ha_priority_not_in
 
     @property
     def id(self):
