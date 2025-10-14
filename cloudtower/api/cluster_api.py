@@ -38,6 +38,8 @@ class ClusterApi(object):
         :type cluster_creation_params: list[ClusterCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -69,6 +71,8 @@ class ClusterApi(object):
         :type cluster_creation_params: list[ClusterCreationParams]
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -97,7 +101,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_creation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -133,6 +138,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -190,6 +197,8 @@ class ClusterApi(object):
         :type cluster_deletion_params: ClusterDeletionParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -221,6 +230,8 @@ class ClusterApi(object):
         :type cluster_deletion_params: ClusterDeletionParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -249,7 +260,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_deletion_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -285,6 +297,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -329,6 +343,158 @@ class ClusterApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
+    def get_cluster_pin_in_performance_info(self, get_cluster_pin_in_performance_info_request_body, **kwargs):  # noqa: E501
+        """get_cluster_pin_in_performance_info  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_cluster_pin_in_performance_info(get_cluster_pin_in_performance_info_request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param get_cluster_pin_in_performance_info_request_body: (required)
+        :type get_cluster_pin_in_performance_info_request_body: GetClusterPinInPerformanceInfoRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[ClusterPinInPerformanceInfo]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_cluster_pin_in_performance_info_with_http_info(get_cluster_pin_in_performance_info_request_body, **kwargs)  # noqa: E501
+
+    def get_cluster_pin_in_performance_info_with_http_info(self, get_cluster_pin_in_performance_info_request_body, **kwargs):  # noqa: E501
+        """get_cluster_pin_in_performance_info  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_cluster_pin_in_performance_info_with_http_info(get_cluster_pin_in_performance_info_request_body, async_req=True)
+        >>> result = thread.get()
+
+        :param get_cluster_pin_in_performance_info_request_body: (required)
+        :type get_cluster_pin_in_performance_info_request_body: GetClusterPinInPerformanceInfoRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[ClusterPinInPerformanceInfo], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'get_cluster_pin_in_performance_info_request_body',
+            'external_cloudtower_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_cluster_pin_in_performance_info" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'get_cluster_pin_in_performance_info_request_body' is set
+        if self.api_client.client_side_validation and ('get_cluster_pin_in_performance_info_request_body' not in local_var_params or  # noqa: E501
+                                                        local_var_params['get_cluster_pin_in_performance_info_request_body'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `get_cluster_pin_in_performance_info_request_body` when calling `get_cluster_pin_in_performance_info`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'get_cluster_pin_in_performance_info_request_body' in local_var_params:
+            body_params = local_var_params['get_cluster_pin_in_performance_info_request_body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[ClusterPinInPerformanceInfo]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/get-cluster-pin-in-performance-info', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
     def get_cluster_storage_info(self, get_cluster_storage_info_request_body, **kwargs):  # noqa: E501
         """get_cluster_storage_info  # noqa: E501
 
@@ -340,6 +506,8 @@ class ClusterApi(object):
 
         :param get_cluster_storage_info_request_body: (required)
         :type get_cluster_storage_info_request_body: GetClusterStorageInfoRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -369,6 +537,8 @@ class ClusterApi(object):
 
         :param get_cluster_storage_info_request_body: (required)
         :type get_cluster_storage_info_request_body: GetClusterStorageInfoRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -396,7 +566,8 @@ class ClusterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_cluster_storage_info_request_body'
+            'get_cluster_storage_info_request_body',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -430,6 +601,8 @@ class ClusterApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -487,6 +660,8 @@ class ClusterApi(object):
         :type get_clusters_request_body: GetClustersRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -518,6 +693,8 @@ class ClusterApi(object):
         :type get_clusters_request_body: GetClustersRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -546,7 +723,8 @@ class ClusterApi(object):
 
         all_params = [
             'get_clusters_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -582,6 +760,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -639,6 +819,8 @@ class ClusterApi(object):
         :type get_clusters_connection_request_body: GetClustersConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -670,6 +852,8 @@ class ClusterApi(object):
         :type get_clusters_connection_request_body: GetClustersConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -698,7 +882,8 @@ class ClusterApi(object):
 
         all_params = [
             'get_clusters_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -734,6 +919,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -789,6 +976,8 @@ class ClusterApi(object):
 
         :param get_meta_leader_request_body: (required)
         :type get_meta_leader_request_body: GetMetaLeaderRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -818,6 +1007,8 @@ class ClusterApi(object):
 
         :param get_meta_leader_request_body: (required)
         :type get_meta_leader_request_body: GetMetaLeaderRequestBody
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -845,7 +1036,8 @@ class ClusterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_meta_leader_request_body'
+            'get_meta_leader_request_body',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -879,6 +1071,8 @@ class ClusterApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -936,6 +1130,8 @@ class ClusterApi(object):
         :type cluster_updation_params: ClusterUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -967,6 +1163,8 @@ class ClusterApi(object):
         :type cluster_updation_params: ClusterUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -995,7 +1193,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1031,6 +1230,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1075,6 +1276,165 @@ class ClusterApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
+    def update_cluster_disable_pin_in_performance(self, cluster_disable_pin_in_performance_params, **kwargs):  # noqa: E501
+        """update_cluster_disable_pin_in_performance  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_cluster_disable_pin_in_performance(cluster_disable_pin_in_performance_params, async_req=True)
+        >>> result = thread.get()
+
+        :param cluster_disable_pin_in_performance_params: (required)
+        :type cluster_disable_pin_in_performance_params: ClusterDisablePinInPerformanceParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[WithTaskClusterPinInPerformanceInfo]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_cluster_disable_pin_in_performance_with_http_info(cluster_disable_pin_in_performance_params, **kwargs)  # noqa: E501
+
+    def update_cluster_disable_pin_in_performance_with_http_info(self, cluster_disable_pin_in_performance_params, **kwargs):  # noqa: E501
+        """update_cluster_disable_pin_in_performance  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_cluster_disable_pin_in_performance_with_http_info(cluster_disable_pin_in_performance_params, async_req=True)
+        >>> result = thread.get()
+
+        :param cluster_disable_pin_in_performance_params: (required)
+        :type cluster_disable_pin_in_performance_params: ClusterDisablePinInPerformanceParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[WithTaskClusterPinInPerformanceInfo], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cluster_disable_pin_in_performance_params',
+            'content_language',
+            'external_cloudtower_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_cluster_disable_pin_in_performance" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cluster_disable_pin_in_performance_params' is set
+        if self.api_client.client_side_validation and ('cluster_disable_pin_in_performance_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cluster_disable_pin_in_performance_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cluster_disable_pin_in_performance_params` when calling `update_cluster_disable_pin_in_performance`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'cluster_disable_pin_in_performance_params' in local_var_params:
+            body_params = local_var_params['cluster_disable_pin_in_performance_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[WithTaskClusterPinInPerformanceInfo]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/disable-cluster-pin-in-performance', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
     def update_cluster_enable_iscsi_setting(self, cluster_enable_iscsi_updation_params, **kwargs):  # noqa: E501
         """update_cluster_enable_iscsi_setting  # noqa: E501
 
@@ -1088,6 +1448,8 @@ class ClusterApi(object):
         :type cluster_enable_iscsi_updation_params: ClusterEnableIscsiUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1119,6 +1481,8 @@ class ClusterApi(object):
         :type cluster_enable_iscsi_updation_params: ClusterEnableIscsiUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1147,7 +1511,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_enable_iscsi_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1183,6 +1548,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1227,6 +1594,165 @@ class ClusterApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
+    def update_cluster_enable_pin_in_performance(self, cluster_enable_pin_in_performance_params, **kwargs):  # noqa: E501
+        """update_cluster_enable_pin_in_performance  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_cluster_enable_pin_in_performance(cluster_enable_pin_in_performance_params, async_req=True)
+        >>> result = thread.get()
+
+        :param cluster_enable_pin_in_performance_params: (required)
+        :type cluster_enable_pin_in_performance_params: ClusterEnablePinInPerformanceParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[WithTaskClusterPinInPerformanceInfo]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_cluster_enable_pin_in_performance_with_http_info(cluster_enable_pin_in_performance_params, **kwargs)  # noqa: E501
+
+    def update_cluster_enable_pin_in_performance_with_http_info(self, cluster_enable_pin_in_performance_params, **kwargs):  # noqa: E501
+        """update_cluster_enable_pin_in_performance  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_cluster_enable_pin_in_performance_with_http_info(cluster_enable_pin_in_performance_params, async_req=True)
+        >>> result = thread.get()
+
+        :param cluster_enable_pin_in_performance_params: (required)
+        :type cluster_enable_pin_in_performance_params: ClusterEnablePinInPerformanceParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[WithTaskClusterPinInPerformanceInfo], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cluster_enable_pin_in_performance_params',
+            'content_language',
+            'external_cloudtower_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_cluster_enable_pin_in_performance" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cluster_enable_pin_in_performance_params' is set
+        if self.api_client.client_side_validation and ('cluster_enable_pin_in_performance_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cluster_enable_pin_in_performance_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cluster_enable_pin_in_performance_params` when calling `update_cluster_enable_pin_in_performance`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'cluster_enable_pin_in_performance_params' in local_var_params:
+            body_params = local_var_params['cluster_enable_pin_in_performance_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[WithTaskClusterPinInPerformanceInfo]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/enable-cluster-pin-in-performance', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
     def update_cluster_ha_setting(self, cluster_ha_updation_params, **kwargs):  # noqa: E501
         """update_cluster_ha_setting  # noqa: E501
 
@@ -1240,6 +1766,8 @@ class ClusterApi(object):
         :type cluster_ha_updation_params: ClusterHaUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1271,6 +1799,8 @@ class ClusterApi(object):
         :type cluster_ha_updation_params: ClusterHaUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1299,7 +1829,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_ha_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1335,6 +1866,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1392,6 +1925,8 @@ class ClusterApi(object):
         :type cluster_license_updation_params: ClusterLicenseUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1423,6 +1958,8 @@ class ClusterApi(object):
         :type cluster_license_updation_params: ClusterLicenseUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1451,7 +1988,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_license_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1487,6 +2025,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1544,6 +2084,8 @@ class ClusterApi(object):
         :type cluster_network_setting_updation_params: ClusterNetworkSettingUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1575,6 +2117,8 @@ class ClusterApi(object):
         :type cluster_network_setting_updation_params: ClusterNetworkSettingUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1603,7 +2147,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_network_setting_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1639,6 +2184,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1696,6 +2243,8 @@ class ClusterApi(object):
         :type cluster_virtualization_updation_params: ClusterVirtualizationUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1727,6 +2276,8 @@ class ClusterApi(object):
         :type cluster_virtualization_updation_params: ClusterVirtualizationUpdationParams
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1755,7 +2306,8 @@ class ClusterApi(object):
 
         all_params = [
             'cluster_virtualization_updation_params',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1791,6 +2343,8 @@ class ClusterApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

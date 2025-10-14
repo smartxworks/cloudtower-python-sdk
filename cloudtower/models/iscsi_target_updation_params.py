@@ -25,7 +25,7 @@ class IscsiTargetUpdationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'data': 'IscsiTargetCommonParams',
+        'data': 'IscsiTargetUpdationParamsData',
         'where': 'IscsiTargetWhereInput'
     }
 
@@ -53,7 +53,7 @@ class IscsiTargetUpdationParams(object):
 
 
         :return: The data of this IscsiTargetUpdationParams.  # noqa: E501
-        :rtype: IscsiTargetCommonParams
+        :rtype: IscsiTargetUpdationParamsData
         """
         return self._data
 
@@ -63,7 +63,7 @@ class IscsiTargetUpdationParams(object):
 
 
         :param data: The data of this IscsiTargetUpdationParams.  # noqa: E501
-        :type data: IscsiTargetCommonParams
+        :type data: IscsiTargetUpdationParamsData
         """
         if self.local_vars_configuration.client_side_validation and data is None:  # noqa: E501
             raise ValueError("Invalid value for `data`, must not be `None`")  # noqa: E501

@@ -36,6 +36,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_creation_params: (required)
         :type alert_notifier_creation_params: list[AlertNotifierCreationParams]
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -65,6 +67,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_creation_params: (required)
         :type alert_notifier_creation_params: list[AlertNotifierCreationParams]
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -92,7 +96,8 @@ class AlertNotifierApi(object):
         local_var_params = locals()
 
         all_params = [
-            'alert_notifier_creation_params'
+            'alert_notifier_creation_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -126,6 +131,8 @@ class AlertNotifierApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -181,6 +188,8 @@ class AlertNotifierApi(object):
 
         :param delete_alert_notifier_params: (required)
         :type delete_alert_notifier_params: DeleteAlertNotifierParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -210,6 +219,8 @@ class AlertNotifierApi(object):
 
         :param delete_alert_notifier_params: (required)
         :type delete_alert_notifier_params: DeleteAlertNotifierParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -237,7 +248,8 @@ class AlertNotifierApi(object):
         local_var_params = locals()
 
         all_params = [
-            'delete_alert_notifier_params'
+            'delete_alert_notifier_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -271,6 +283,8 @@ class AlertNotifierApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -328,6 +342,8 @@ class AlertNotifierApi(object):
         :type get_alert_notifiers_request_body: GetAlertNotifiersRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -359,6 +375,8 @@ class AlertNotifierApi(object):
         :type get_alert_notifiers_request_body: GetAlertNotifiersRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -387,7 +405,8 @@ class AlertNotifierApi(object):
 
         all_params = [
             'get_alert_notifiers_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -423,6 +442,8 @@ class AlertNotifierApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -480,6 +501,8 @@ class AlertNotifierApi(object):
         :type get_alert_notifiers_connection_request_body: GetAlertNotifiersConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -511,6 +534,8 @@ class AlertNotifierApi(object):
         :type get_alert_notifiers_connection_request_body: GetAlertNotifiersConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -539,7 +564,8 @@ class AlertNotifierApi(object):
 
         all_params = [
             'get_alert_notifiers_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -575,6 +601,8 @@ class AlertNotifierApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -630,6 +658,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_updation_params: (required)
         :type alert_notifier_updation_params: AlertNotifierUpdationParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -659,6 +689,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_updation_params: (required)
         :type alert_notifier_updation_params: AlertNotifierUpdationParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -686,7 +718,8 @@ class AlertNotifierApi(object):
         local_var_params = locals()
 
         all_params = [
-            'alert_notifier_updation_params'
+            'alert_notifier_updation_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -720,6 +753,8 @@ class AlertNotifierApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -775,6 +810,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_many_updation_params: (required)
         :type alert_notifier_many_updation_params: AlertNotifierManyUpdationParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -804,6 +841,8 @@ class AlertNotifierApi(object):
 
         :param alert_notifier_many_updation_params: (required)
         :type alert_notifier_many_updation_params: AlertNotifierManyUpdationParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -831,7 +870,8 @@ class AlertNotifierApi(object):
         local_var_params = locals()
 
         all_params = [
-            'alert_notifier_many_updation_params'
+            'alert_notifier_many_updation_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -865,6 +905,8 @@ class AlertNotifierApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

@@ -25,6 +25,10 @@ class NfsExportCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'encrypt_method': 'EncryptMethod',
+        'ec_m': 'float',
+        'ec_k': 'float',
+        'resiliency_type': 'ResiliencyType',
         'cluster_id': 'str',
         'ip_whitelist': 'str',
         'thin_provision': 'bool',
@@ -33,6 +37,10 @@ class NfsExportCreationParams(object):
     }
 
     attribute_map = {
+        'encrypt_method': 'encrypt_method',
+        'ec_m': 'ec_m',
+        'ec_k': 'ec_k',
+        'resiliency_type': 'resiliency_type',
         'cluster_id': 'cluster_id',
         'ip_whitelist': 'ip_whitelist',
         'thin_provision': 'thin_provision',
@@ -44,6 +52,10 @@ class NfsExportCreationParams(object):
         """NfsExportCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._encrypt_method = None
+        self._ec_m = None
+        self._ec_k = None
+        self._resiliency_type = None
         self._cluster_id = None
         self._ip_whitelist = None
         self._thin_provision = None
@@ -51,6 +63,14 @@ class NfsExportCreationParams(object):
         self._name = None
         self.discriminator = None
 
+        if "encrypt_method" in kwargs:
+            self.encrypt_method = kwargs["encrypt_method"]
+        if "ec_m" in kwargs:
+            self.ec_m = kwargs["ec_m"]
+        if "ec_k" in kwargs:
+            self.ec_k = kwargs["ec_k"]
+        if "resiliency_type" in kwargs:
+            self.resiliency_type = kwargs["resiliency_type"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
         if "ip_whitelist" in kwargs:
@@ -61,6 +81,90 @@ class NfsExportCreationParams(object):
             self.replica_num = kwargs["replica_num"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NfsExportCreationParams.  # noqa: E501
+
+
+        :return: The encrypt_method of this NfsExportCreationParams.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NfsExportCreationParams.
+
+
+        :param encrypt_method: The encrypt_method of this NfsExportCreationParams.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NfsExportCreationParams.  # noqa: E501
+
+
+        :return: The ec_m of this NfsExportCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NfsExportCreationParams.
+
+
+        :param ec_m: The ec_m of this NfsExportCreationParams.  # noqa: E501
+        :type ec_m: float
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NfsExportCreationParams.  # noqa: E501
+
+
+        :return: The ec_k of this NfsExportCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NfsExportCreationParams.
+
+
+        :param ec_k: The ec_k of this NfsExportCreationParams.  # noqa: E501
+        :type ec_k: float
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NfsExportCreationParams.  # noqa: E501
+
+
+        :return: The resiliency_type of this NfsExportCreationParams.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NfsExportCreationParams.
+
+
+        :param resiliency_type: The resiliency_type of this NfsExportCreationParams.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def cluster_id(self):

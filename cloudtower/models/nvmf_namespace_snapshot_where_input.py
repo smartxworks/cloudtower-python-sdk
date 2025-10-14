@@ -29,6 +29,22 @@ class NvmfNamespaceSnapshotWhereInput(object):
         '_not': 'list[NvmfNamespaceSnapshotWhereInput]',
         '_or': 'list[NvmfNamespaceSnapshotWhereInput]',
         'consistency_group_snapshot': 'ConsistencyGroupSnapshotWhereInput',
+        'ec_k': 'int',
+        'ec_k_gt': 'int',
+        'ec_k_gte': 'int',
+        'ec_k_in': 'list[int]',
+        'ec_k_lt': 'int',
+        'ec_k_lte': 'int',
+        'ec_k_not': 'int',
+        'ec_k_not_in': 'list[int]',
+        'ec_m': 'int',
+        'ec_m_gt': 'int',
+        'ec_m_gte': 'int',
+        'ec_m_in': 'list[int]',
+        'ec_m_lt': 'int',
+        'ec_m_lte': 'int',
+        'ec_m_not': 'int',
+        'ec_m_not_in': 'list[int]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -88,6 +104,11 @@ class NvmfNamespaceSnapshotWhereInput(object):
         'name_starts_with': 'str',
         'nvmf_namespace': 'NvmfNamespaceWhereInput',
         'nvmf_subsystem': 'NvmfSubsystemWhereInput',
+        'resiliency_type': 'ResiliencyType',
+        'resiliency_type_in': 'list[ResiliencyType]',
+        'resiliency_type_not': 'ResiliencyType',
+        'resiliency_type_not_in': 'list[ResiliencyType]',
+        'snapshot_group': 'SnapshotGroupWhereInput',
         'unique_size': 'int',
         'unique_size_gt': 'int',
         'unique_size_gte': 'int',
@@ -103,6 +124,22 @@ class NvmfNamespaceSnapshotWhereInput(object):
         '_not': 'NOT',
         '_or': 'OR',
         'consistency_group_snapshot': 'consistency_group_snapshot',
+        'ec_k': 'ec_k',
+        'ec_k_gt': 'ec_k_gt',
+        'ec_k_gte': 'ec_k_gte',
+        'ec_k_in': 'ec_k_in',
+        'ec_k_lt': 'ec_k_lt',
+        'ec_k_lte': 'ec_k_lte',
+        'ec_k_not': 'ec_k_not',
+        'ec_k_not_in': 'ec_k_not_in',
+        'ec_m': 'ec_m',
+        'ec_m_gt': 'ec_m_gt',
+        'ec_m_gte': 'ec_m_gte',
+        'ec_m_in': 'ec_m_in',
+        'ec_m_lt': 'ec_m_lt',
+        'ec_m_lte': 'ec_m_lte',
+        'ec_m_not': 'ec_m_not',
+        'ec_m_not_in': 'ec_m_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -162,6 +199,11 @@ class NvmfNamespaceSnapshotWhereInput(object):
         'name_starts_with': 'name_starts_with',
         'nvmf_namespace': 'nvmf_namespace',
         'nvmf_subsystem': 'nvmf_subsystem',
+        'resiliency_type': 'resiliency_type',
+        'resiliency_type_in': 'resiliency_type_in',
+        'resiliency_type_not': 'resiliency_type_not',
+        'resiliency_type_not_in': 'resiliency_type_not_in',
+        'snapshot_group': 'snapshot_group',
         'unique_size': 'unique_size',
         'unique_size_gt': 'unique_size_gt',
         'unique_size_gte': 'unique_size_gte',
@@ -180,6 +222,22 @@ class NvmfNamespaceSnapshotWhereInput(object):
         self.__not = None
         self.__or = None
         self._consistency_group_snapshot = None
+        self._ec_k = None
+        self._ec_k_gt = None
+        self._ec_k_gte = None
+        self._ec_k_in = None
+        self._ec_k_lt = None
+        self._ec_k_lte = None
+        self._ec_k_not = None
+        self._ec_k_not_in = None
+        self._ec_m = None
+        self._ec_m_gt = None
+        self._ec_m_gte = None
+        self._ec_m_in = None
+        self._ec_m_lt = None
+        self._ec_m_lte = None
+        self._ec_m_not = None
+        self._ec_m_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -239,6 +297,11 @@ class NvmfNamespaceSnapshotWhereInput(object):
         self._name_starts_with = None
         self._nvmf_namespace = None
         self._nvmf_subsystem = None
+        self._resiliency_type = None
+        self._resiliency_type_in = None
+        self._resiliency_type_not = None
+        self._resiliency_type_not_in = None
+        self._snapshot_group = None
         self._unique_size = None
         self._unique_size_gt = None
         self._unique_size_gte = None
@@ -253,6 +316,22 @@ class NvmfNamespaceSnapshotWhereInput(object):
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
         self.consistency_group_snapshot = kwargs.get("consistency_group_snapshot", None)
+        self.ec_k = kwargs.get("ec_k", None)
+        self.ec_k_gt = kwargs.get("ec_k_gt", None)
+        self.ec_k_gte = kwargs.get("ec_k_gte", None)
+        self.ec_k_in = kwargs.get("ec_k_in", None)
+        self.ec_k_lt = kwargs.get("ec_k_lt", None)
+        self.ec_k_lte = kwargs.get("ec_k_lte", None)
+        self.ec_k_not = kwargs.get("ec_k_not", None)
+        self.ec_k_not_in = kwargs.get("ec_k_not_in", None)
+        self.ec_m = kwargs.get("ec_m", None)
+        self.ec_m_gt = kwargs.get("ec_m_gt", None)
+        self.ec_m_gte = kwargs.get("ec_m_gte", None)
+        self.ec_m_in = kwargs.get("ec_m_in", None)
+        self.ec_m_lt = kwargs.get("ec_m_lt", None)
+        self.ec_m_lte = kwargs.get("ec_m_lte", None)
+        self.ec_m_not = kwargs.get("ec_m_not", None)
+        self.ec_m_not_in = kwargs.get("ec_m_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -312,6 +391,11 @@ class NvmfNamespaceSnapshotWhereInput(object):
         self.name_starts_with = kwargs.get("name_starts_with", None)
         self.nvmf_namespace = kwargs.get("nvmf_namespace", None)
         self.nvmf_subsystem = kwargs.get("nvmf_subsystem", None)
+        self.resiliency_type = kwargs.get("resiliency_type", None)
+        self.resiliency_type_in = kwargs.get("resiliency_type_in", None)
+        self.resiliency_type_not = kwargs.get("resiliency_type_not", None)
+        self.resiliency_type_not_in = kwargs.get("resiliency_type_not_in", None)
+        self.snapshot_group = kwargs.get("snapshot_group", None)
         self.unique_size = kwargs.get("unique_size", None)
         self.unique_size_gt = kwargs.get("unique_size_gt", None)
         self.unique_size_gte = kwargs.get("unique_size_gte", None)
@@ -404,6 +488,342 @@ class NvmfNamespaceSnapshotWhereInput(object):
         """
 
         self._consistency_group_snapshot = consistency_group_snapshot
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k: The ec_k of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k: int
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def ec_k_gt(self):
+        """Gets the ec_k_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gt
+
+    @ec_k_gt.setter
+    def ec_k_gt(self, ec_k_gt):
+        """Sets the ec_k_gt of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_gt: The ec_k_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_gt: int
+        """
+
+        self._ec_k_gt = ec_k_gt
+
+    @property
+    def ec_k_gte(self):
+        """Gets the ec_k_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_gte
+
+    @ec_k_gte.setter
+    def ec_k_gte(self, ec_k_gte):
+        """Sets the ec_k_gte of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_gte: The ec_k_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_gte: int
+        """
+
+        self._ec_k_gte = ec_k_gte
+
+    @property
+    def ec_k_in(self):
+        """Gets the ec_k_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_in
+
+    @ec_k_in.setter
+    def ec_k_in(self, ec_k_in):
+        """Sets the ec_k_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_in: The ec_k_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_in: list[int]
+        """
+
+        self._ec_k_in = ec_k_in
+
+    @property
+    def ec_k_lt(self):
+        """Gets the ec_k_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lt
+
+    @ec_k_lt.setter
+    def ec_k_lt(self, ec_k_lt):
+        """Sets the ec_k_lt of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_lt: The ec_k_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_lt: int
+        """
+
+        self._ec_k_lt = ec_k_lt
+
+    @property
+    def ec_k_lte(self):
+        """Gets the ec_k_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_lte
+
+    @ec_k_lte.setter
+    def ec_k_lte(self, ec_k_lte):
+        """Sets the ec_k_lte of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_lte: The ec_k_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_lte: int
+        """
+
+        self._ec_k_lte = ec_k_lte
+
+    @property
+    def ec_k_not(self):
+        """Gets the ec_k_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_k_not
+
+    @ec_k_not.setter
+    def ec_k_not(self, ec_k_not):
+        """Sets the ec_k_not of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_not: The ec_k_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_not: int
+        """
+
+        self._ec_k_not = ec_k_not
+
+    @property
+    def ec_k_not_in(self):
+        """Gets the ec_k_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_k_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_k_not_in
+
+    @ec_k_not_in.setter
+    def ec_k_not_in(self, ec_k_not_in):
+        """Sets the ec_k_not_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_k_not_in: The ec_k_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_k_not_in: list[int]
+        """
+
+        self._ec_k_not_in = ec_k_not_in
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m: The ec_m of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m: int
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_m_gt(self):
+        """Gets the ec_m_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gt
+
+    @ec_m_gt.setter
+    def ec_m_gt(self, ec_m_gt):
+        """Sets the ec_m_gt of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_gt: The ec_m_gt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_gt: int
+        """
+
+        self._ec_m_gt = ec_m_gt
+
+    @property
+    def ec_m_gte(self):
+        """Gets the ec_m_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_gte
+
+    @ec_m_gte.setter
+    def ec_m_gte(self, ec_m_gte):
+        """Sets the ec_m_gte of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_gte: The ec_m_gte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_gte: int
+        """
+
+        self._ec_m_gte = ec_m_gte
+
+    @property
+    def ec_m_in(self):
+        """Gets the ec_m_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_in
+
+    @ec_m_in.setter
+    def ec_m_in(self, ec_m_in):
+        """Sets the ec_m_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_in: The ec_m_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_in: list[int]
+        """
+
+        self._ec_m_in = ec_m_in
+
+    @property
+    def ec_m_lt(self):
+        """Gets the ec_m_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lt
+
+    @ec_m_lt.setter
+    def ec_m_lt(self, ec_m_lt):
+        """Sets the ec_m_lt of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_lt: The ec_m_lt of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_lt: int
+        """
+
+        self._ec_m_lt = ec_m_lt
+
+    @property
+    def ec_m_lte(self):
+        """Gets the ec_m_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_lte
+
+    @ec_m_lte.setter
+    def ec_m_lte(self, ec_m_lte):
+        """Sets the ec_m_lte of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_lte: The ec_m_lte of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_lte: int
+        """
+
+        self._ec_m_lte = ec_m_lte
+
+    @property
+    def ec_m_not(self):
+        """Gets the ec_m_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._ec_m_not
+
+    @ec_m_not.setter
+    def ec_m_not(self, ec_m_not):
+        """Sets the ec_m_not of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_not: The ec_m_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_not: int
+        """
+
+        self._ec_m_not = ec_m_not
+
+    @property
+    def ec_m_not_in(self):
+        """Gets the ec_m_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The ec_m_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._ec_m_not_in
+
+    @ec_m_not_in.setter
+    def ec_m_not_in(self, ec_m_not_in):
+        """Sets the ec_m_not_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param ec_m_not_in: The ec_m_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type ec_m_not_in: list[int]
+        """
+
+        self._ec_m_not_in = ec_m_not_in
 
     @property
     def entity_async_status(self):
@@ -1643,6 +2063,111 @@ class NvmfNamespaceSnapshotWhereInput(object):
         """
 
         self._nvmf_subsystem = nvmf_subsystem
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def resiliency_type_in(self):
+        """Gets the resiliency_type_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_in
+
+    @resiliency_type_in.setter
+    def resiliency_type_in(self, resiliency_type_in):
+        """Sets the resiliency_type_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param resiliency_type_in: The resiliency_type_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type resiliency_type_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_in = resiliency_type_in
+
+    @property
+    def resiliency_type_not(self):
+        """Gets the resiliency_type_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type_not
+
+    @resiliency_type_not.setter
+    def resiliency_type_not(self, resiliency_type_not):
+        """Sets the resiliency_type_not of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param resiliency_type_not: The resiliency_type_not of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type resiliency_type_not: ResiliencyType
+        """
+
+        self._resiliency_type_not = resiliency_type_not
+
+    @property
+    def resiliency_type_not_in(self):
+        """Gets the resiliency_type_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The resiliency_type_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: list[ResiliencyType]
+        """
+        return self._resiliency_type_not_in
+
+    @resiliency_type_not_in.setter
+    def resiliency_type_not_in(self, resiliency_type_not_in):
+        """Sets the resiliency_type_not_in of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param resiliency_type_not_in: The resiliency_type_not_in of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type resiliency_type_not_in: list[ResiliencyType]
+        """
+
+        self._resiliency_type_not_in = resiliency_type_not_in
+
+    @property
+    def snapshot_group(self):
+        """Gets the snapshot_group of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The snapshot_group of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :rtype: SnapshotGroupWhereInput
+        """
+        return self._snapshot_group
+
+    @snapshot_group.setter
+    def snapshot_group(self, snapshot_group):
+        """Sets the snapshot_group of this NvmfNamespaceSnapshotWhereInput.
+
+
+        :param snapshot_group: The snapshot_group of this NvmfNamespaceSnapshotWhereInput.  # noqa: E501
+        :type snapshot_group: SnapshotGroupWhereInput
+        """
+
+        self._snapshot_group = snapshot_group
 
     @property
     def unique_size(self):

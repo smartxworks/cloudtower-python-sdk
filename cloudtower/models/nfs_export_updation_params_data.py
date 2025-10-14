@@ -25,11 +25,19 @@ class NfsExportUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'ec_m': 'float',
+        'ec_k': 'float',
+        'resiliency_type': 'ResiliencyType',
+        'replica_num': 'float',
         'ip_whitelist': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'ec_m': 'ec_m',
+        'ec_k': 'ec_k',
+        'resiliency_type': 'resiliency_type',
+        'replica_num': 'replica_num',
         'ip_whitelist': 'ip_whitelist',
         'name': 'name'
     }
@@ -38,14 +46,110 @@ class NfsExportUpdationParamsData(object):
         """NfsExportUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._ec_m = None
+        self._ec_k = None
+        self._resiliency_type = None
+        self._replica_num = None
         self._ip_whitelist = None
         self._name = None
         self.discriminator = None
 
+        if "ec_m" in kwargs:
+            self.ec_m = kwargs["ec_m"]
+        if "ec_k" in kwargs:
+            self.ec_k = kwargs["ec_k"]
+        if "resiliency_type" in kwargs:
+            self.resiliency_type = kwargs["resiliency_type"]
+        if "replica_num" in kwargs:
+            self.replica_num = kwargs["replica_num"]
         if "ip_whitelist" in kwargs:
             self.ip_whitelist = kwargs["ip_whitelist"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NfsExportUpdationParamsData.  # noqa: E501
+
+
+        :return: The ec_m of this NfsExportUpdationParamsData.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NfsExportUpdationParamsData.
+
+
+        :param ec_m: The ec_m of this NfsExportUpdationParamsData.  # noqa: E501
+        :type ec_m: float
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NfsExportUpdationParamsData.  # noqa: E501
+
+
+        :return: The ec_k of this NfsExportUpdationParamsData.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NfsExportUpdationParamsData.
+
+
+        :param ec_k: The ec_k of this NfsExportUpdationParamsData.  # noqa: E501
+        :type ec_k: float
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NfsExportUpdationParamsData.  # noqa: E501
+
+
+        :return: The resiliency_type of this NfsExportUpdationParamsData.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NfsExportUpdationParamsData.
+
+
+        :param resiliency_type: The resiliency_type of this NfsExportUpdationParamsData.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
+
+    @property
+    def replica_num(self):
+        """Gets the replica_num of this NfsExportUpdationParamsData.  # noqa: E501
+
+
+        :return: The replica_num of this NfsExportUpdationParamsData.  # noqa: E501
+        :rtype: float
+        """
+        return self._replica_num
+
+    @replica_num.setter
+    def replica_num(self, replica_num):
+        """Sets the replica_num of this NfsExportUpdationParamsData.
+
+
+        :param replica_num: The replica_num of this NfsExportUpdationParamsData.  # noqa: E501
+        :type replica_num: float
+        """
+
+        self._replica_num = replica_num
 
     @property
     def ip_whitelist(self):

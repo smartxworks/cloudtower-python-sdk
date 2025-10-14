@@ -33,6 +33,15 @@ class NvmfSubsystemCreationParams(object):
         'policy': 'NvmfSubsystemPolicyType',
         'cluster_id': 'str',
         'name': 'str',
+        'business_host_groups': 'BusinessHostGroupWhereInput',
+        'business_hosts': 'BusinessHostWhereInput',
+        'configuration_adaptive': 'bool',
+        'configuration_method': 'ConfigurationMethod',
+        'encrypt_method': 'EncryptMethod',
+        'prioritized': 'bool',
+        'ec_m': 'float',
+        'ec_k': 'float',
+        'resiliency_type': 'ResiliencyType',
         'bps_wr_max_length': 'int',
         'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max': 'int',
@@ -71,6 +80,15 @@ class NvmfSubsystemCreationParams(object):
         'policy': 'policy',
         'cluster_id': 'cluster_id',
         'name': 'name',
+        'business_host_groups': 'business_host_groups',
+        'business_hosts': 'business_hosts',
+        'configuration_adaptive': 'configuration_adaptive',
+        'configuration_method': 'configuration_method',
+        'encrypt_method': 'encrypt_method',
+        'prioritized': 'prioritized',
+        'ec_m': 'ec_m',
+        'ec_k': 'ec_k',
+        'resiliency_type': 'resiliency_type',
         'bps_wr_max_length': 'bps_wr_max_length',
         'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max': 'bps_wr_max',
@@ -112,6 +130,15 @@ class NvmfSubsystemCreationParams(object):
         self._policy = None
         self._cluster_id = None
         self._name = None
+        self._business_host_groups = None
+        self._business_hosts = None
+        self._configuration_adaptive = None
+        self._configuration_method = None
+        self._encrypt_method = None
+        self._prioritized = None
+        self._ec_m = None
+        self._ec_k = None
+        self._resiliency_type = None
         self._bps_wr_max_length = None
         self._bps_wr_max_unit = None
         self._bps_wr_max = None
@@ -157,6 +184,24 @@ class NvmfSubsystemCreationParams(object):
             self.cluster_id = kwargs["cluster_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        if "business_host_groups" in kwargs:
+            self.business_host_groups = kwargs["business_host_groups"]
+        if "business_hosts" in kwargs:
+            self.business_hosts = kwargs["business_hosts"]
+        if "configuration_adaptive" in kwargs:
+            self.configuration_adaptive = kwargs["configuration_adaptive"]
+        if "configuration_method" in kwargs:
+            self.configuration_method = kwargs["configuration_method"]
+        if "encrypt_method" in kwargs:
+            self.encrypt_method = kwargs["encrypt_method"]
+        if "prioritized" in kwargs:
+            self.prioritized = kwargs["prioritized"]
+        if "ec_m" in kwargs:
+            self.ec_m = kwargs["ec_m"]
+        if "ec_k" in kwargs:
+            self.ec_k = kwargs["ec_k"]
+        if "resiliency_type" in kwargs:
+            self.resiliency_type = kwargs["resiliency_type"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
         if "bps_wr_max_unit" in kwargs:
@@ -393,6 +438,195 @@ class NvmfSubsystemCreationParams(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def business_host_groups(self):
+        """Gets the business_host_groups of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The business_host_groups of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups
+
+    @business_host_groups.setter
+    def business_host_groups(self, business_host_groups):
+        """Sets the business_host_groups of this NvmfSubsystemCreationParams.
+
+
+        :param business_host_groups: The business_host_groups of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type business_host_groups: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups = business_host_groups
+
+    @property
+    def business_hosts(self):
+        """Gets the business_hosts of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The business_hosts of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts
+
+    @business_hosts.setter
+    def business_hosts(self, business_hosts):
+        """Sets the business_hosts of this NvmfSubsystemCreationParams.
+
+
+        :param business_hosts: The business_hosts of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type business_hosts: BusinessHostWhereInput
+        """
+
+        self._business_hosts = business_hosts
+
+    @property
+    def configuration_adaptive(self):
+        """Gets the configuration_adaptive of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The configuration_adaptive of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._configuration_adaptive
+
+    @configuration_adaptive.setter
+    def configuration_adaptive(self, configuration_adaptive):
+        """Sets the configuration_adaptive of this NvmfSubsystemCreationParams.
+
+
+        :param configuration_adaptive: The configuration_adaptive of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type configuration_adaptive: bool
+        """
+
+        self._configuration_adaptive = configuration_adaptive
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The configuration_method of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this NvmfSubsystemCreationParams.
+
+
+        :param configuration_method: The configuration_method of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The encrypt_method of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this NvmfSubsystemCreationParams.
+
+
+        :param encrypt_method: The encrypt_method of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def prioritized(self):
+        """Gets the prioritized of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The prioritized of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this NvmfSubsystemCreationParams.
+
+
+        :param prioritized: The prioritized of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
+
+    @property
+    def ec_m(self):
+        """Gets the ec_m of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The ec_m of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_m
+
+    @ec_m.setter
+    def ec_m(self, ec_m):
+        """Sets the ec_m of this NvmfSubsystemCreationParams.
+
+
+        :param ec_m: The ec_m of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type ec_m: float
+        """
+
+        self._ec_m = ec_m
+
+    @property
+    def ec_k(self):
+        """Gets the ec_k of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The ec_k of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: float
+        """
+        return self._ec_k
+
+    @ec_k.setter
+    def ec_k(self, ec_k):
+        """Sets the ec_k of this NvmfSubsystemCreationParams.
+
+
+        :param ec_k: The ec_k of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type ec_k: float
+        """
+
+        self._ec_k = ec_k
+
+    @property
+    def resiliency_type(self):
+        """Gets the resiliency_type of this NvmfSubsystemCreationParams.  # noqa: E501
+
+
+        :return: The resiliency_type of this NvmfSubsystemCreationParams.  # noqa: E501
+        :rtype: ResiliencyType
+        """
+        return self._resiliency_type
+
+    @resiliency_type.setter
+    def resiliency_type(self, resiliency_type):
+        """Sets the resiliency_type of this NvmfSubsystemCreationParams.
+
+
+        :param resiliency_type: The resiliency_type of this NvmfSubsystemCreationParams.  # noqa: E501
+        :type resiliency_type: ResiliencyType
+        """
+
+        self._resiliency_type = resiliency_type
 
     @property
     def bps_wr_max_length(self):

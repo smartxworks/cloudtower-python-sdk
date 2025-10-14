@@ -27,6 +27,8 @@ class ImportVmVolumeParams(object):
     openapi_types = {
         'upload_task_id': 'str',
         'name': 'str',
+        'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
+        'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
         'storage_policy': 'VmVolumeElfStoragePolicyType',
         'cluster_id': 'str'
     }
@@ -34,6 +36,8 @@ class ImportVmVolumeParams(object):
     attribute_map = {
         'upload_task_id': 'upload_task_id',
         'name': 'name',
+        'elf_ec_storage_policy': 'elf_ec_storage_policy',
+        'elf_replica_storage_policy': 'elf_replica_storage_policy',
         'storage_policy': 'storage_policy',
         'cluster_id': 'cluster_id'
     }
@@ -44,6 +48,8 @@ class ImportVmVolumeParams(object):
 
         self._upload_task_id = None
         self._name = None
+        self._elf_ec_storage_policy = None
+        self._elf_replica_storage_policy = None
         self._storage_policy = None
         self._cluster_id = None
         self.discriminator = None
@@ -52,6 +58,10 @@ class ImportVmVolumeParams(object):
             self.upload_task_id = kwargs["upload_task_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        if "elf_ec_storage_policy" in kwargs:
+            self.elf_ec_storage_policy = kwargs["elf_ec_storage_policy"]
+        if "elf_replica_storage_policy" in kwargs:
+            self.elf_replica_storage_policy = kwargs["elf_replica_storage_policy"]
         if "storage_policy" in kwargs:
             self.storage_policy = kwargs["storage_policy"]
         if "cluster_id" in kwargs:
@@ -104,6 +114,48 @@ class ImportVmVolumeParams(object):
         self._name = name
 
     @property
+    def elf_ec_storage_policy(self):
+        """Gets the elf_ec_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+
+
+        :return: The elf_ec_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+        :rtype: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+        return self._elf_ec_storage_policy
+
+    @elf_ec_storage_policy.setter
+    def elf_ec_storage_policy(self, elf_ec_storage_policy):
+        """Sets the elf_ec_storage_policy of this ImportVmVolumeParams.
+
+
+        :param elf_ec_storage_policy: The elf_ec_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+        :type elf_ec_storage_policy: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+
+        self._elf_ec_storage_policy = elf_ec_storage_policy
+
+    @property
+    def elf_replica_storage_policy(self):
+        """Gets the elf_replica_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+
+
+        :return: The elf_replica_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_replica_storage_policy
+
+    @elf_replica_storage_policy.setter
+    def elf_replica_storage_policy(self, elf_replica_storage_policy):
+        """Sets the elf_replica_storage_policy of this ImportVmVolumeParams.
+
+
+        :param elf_replica_storage_policy: The elf_replica_storage_policy of this ImportVmVolumeParams.  # noqa: E501
+        :type elf_replica_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_replica_storage_policy = elf_replica_storage_policy
+
+    @property
     def storage_policy(self):
         """Gets the storage_policy of this ImportVmVolumeParams.  # noqa: E501
 
@@ -121,8 +173,6 @@ class ImportVmVolumeParams(object):
         :param storage_policy: The storage_policy of this ImportVmVolumeParams.  # noqa: E501
         :type storage_policy: VmVolumeElfStoragePolicyType
         """
-        if self.local_vars_configuration.client_side_validation and storage_policy is None:  # noqa: E501
-            raise ValueError("Invalid value for `storage_policy`, must not be `None`")  # noqa: E501
 
         self._storage_policy = storage_policy
 

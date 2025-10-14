@@ -220,17 +220,21 @@ class BackupPlan(object):
         self.last_manual_execute_success_job_count = kwargs.get("last_manual_execute_success_job_count", None)
         self.last_manual_execute_total_job_count = kwargs.get("last_manual_execute_total_job_count", None)
         self.last_manual_executed_at = kwargs.get("last_manual_executed_at", None)
-        self.logical_size = kwargs.get("logical_size", None)
+        if "logical_size" in kwargs:
+            self.logical_size = kwargs["logical_size"]
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.next_execute_time = kwargs.get("next_execute_time", None)
         self.phase = kwargs.get("phase", None)
-        self.physical_size = kwargs.get("physical_size", None)
+        if "physical_size" in kwargs:
+            self.physical_size = kwargs["physical_size"]
         self.snapshot_consistent_type = kwargs.get("snapshot_consistent_type", None)
         if "status" in kwargs:
             self.status = kwargs["status"]
-        self.valid_size_of_backup_object = kwargs.get("valid_size_of_backup_object", None)
-        self.valid_size_of_restore_point = kwargs.get("valid_size_of_restore_point", None)
+        if "valid_size_of_backup_object" in kwargs:
+            self.valid_size_of_backup_object = kwargs["valid_size_of_backup_object"]
+        if "valid_size_of_restore_point" in kwargs:
+            self.valid_size_of_restore_point = kwargs["valid_size_of_restore_point"]
         self.vms = kwargs.get("vms", None)
         self.window_end = kwargs.get("window_end", None)
         self.window_start = kwargs.get("window_start", None)
@@ -991,6 +995,8 @@ class BackupPlan(object):
         :param logical_size: The logical_size of this BackupPlan.  # noqa: E501
         :type logical_size: int
         """
+        if self.local_vars_configuration.client_side_validation and logical_size is None:  # noqa: E501
+            raise ValueError("Invalid value for `logical_size`, must not be `None`")  # noqa: E501
 
         self._logical_size = logical_size
 
@@ -1077,6 +1083,8 @@ class BackupPlan(object):
         :param physical_size: The physical_size of this BackupPlan.  # noqa: E501
         :type physical_size: int
         """
+        if self.local_vars_configuration.client_side_validation and physical_size is None:  # noqa: E501
+            raise ValueError("Invalid value for `physical_size`, must not be `None`")  # noqa: E501
 
         self._physical_size = physical_size
 
@@ -1142,6 +1150,8 @@ class BackupPlan(object):
         :param valid_size_of_backup_object: The valid_size_of_backup_object of this BackupPlan.  # noqa: E501
         :type valid_size_of_backup_object: int
         """
+        if self.local_vars_configuration.client_side_validation and valid_size_of_backup_object is None:  # noqa: E501
+            raise ValueError("Invalid value for `valid_size_of_backup_object`, must not be `None`")  # noqa: E501
 
         self._valid_size_of_backup_object = valid_size_of_backup_object
 
@@ -1163,6 +1173,8 @@ class BackupPlan(object):
         :param valid_size_of_restore_point: The valid_size_of_restore_point of this BackupPlan.  # noqa: E501
         :type valid_size_of_restore_point: int
         """
+        if self.local_vars_configuration.client_side_validation and valid_size_of_restore_point is None:  # noqa: E501
+            raise ValueError("Invalid value for `valid_size_of_restore_point`, must not be `None`")  # noqa: E501
 
         self._valid_size_of_restore_point = valid_size_of_restore_point
 

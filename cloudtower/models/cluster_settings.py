@@ -28,6 +28,10 @@ class ClusterSettings(object):
         'cluster': 'NestedCluster',
         'default_ha': 'bool',
         'default_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'default_storage_policy_ec_k': 'int',
+        'default_storage_policy_ec_m': 'int',
+        'default_storage_policy_replica_num': 'int',
+        'default_storage_policy_thin_provision': 'bool',
         'enabled_iscsi': 'bool',
         'id': 'str',
         'vm_recycle_bin': 'NestedVmRecycleBin'
@@ -37,6 +41,10 @@ class ClusterSettings(object):
         'cluster': 'cluster',
         'default_ha': 'default_ha',
         'default_storage_policy': 'default_storage_policy',
+        'default_storage_policy_ec_k': 'default_storage_policy_ec_k',
+        'default_storage_policy_ec_m': 'default_storage_policy_ec_m',
+        'default_storage_policy_replica_num': 'default_storage_policy_replica_num',
+        'default_storage_policy_thin_provision': 'default_storage_policy_thin_provision',
         'enabled_iscsi': 'enabled_iscsi',
         'id': 'id',
         'vm_recycle_bin': 'vm_recycle_bin'
@@ -49,6 +57,10 @@ class ClusterSettings(object):
         self._cluster = None
         self._default_ha = None
         self._default_storage_policy = None
+        self._default_storage_policy_ec_k = None
+        self._default_storage_policy_ec_m = None
+        self._default_storage_policy_replica_num = None
+        self._default_storage_policy_thin_provision = None
         self._enabled_iscsi = None
         self._id = None
         self._vm_recycle_bin = None
@@ -58,6 +70,10 @@ class ClusterSettings(object):
             self.cluster = kwargs["cluster"]
         self.default_ha = kwargs.get("default_ha", None)
         self.default_storage_policy = kwargs.get("default_storage_policy", None)
+        self.default_storage_policy_ec_k = kwargs.get("default_storage_policy_ec_k", None)
+        self.default_storage_policy_ec_m = kwargs.get("default_storage_policy_ec_m", None)
+        self.default_storage_policy_replica_num = kwargs.get("default_storage_policy_replica_num", None)
+        self.default_storage_policy_thin_provision = kwargs.get("default_storage_policy_thin_provision", None)
         self.enabled_iscsi = kwargs.get("enabled_iscsi", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -127,6 +143,90 @@ class ClusterSettings(object):
         """
 
         self._default_storage_policy = default_storage_policy
+
+    @property
+    def default_storage_policy_ec_k(self):
+        """Gets the default_storage_policy_ec_k of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy_ec_k of this ClusterSettings.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_storage_policy_ec_k
+
+    @default_storage_policy_ec_k.setter
+    def default_storage_policy_ec_k(self, default_storage_policy_ec_k):
+        """Sets the default_storage_policy_ec_k of this ClusterSettings.
+
+
+        :param default_storage_policy_ec_k: The default_storage_policy_ec_k of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy_ec_k: int
+        """
+
+        self._default_storage_policy_ec_k = default_storage_policy_ec_k
+
+    @property
+    def default_storage_policy_ec_m(self):
+        """Gets the default_storage_policy_ec_m of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy_ec_m of this ClusterSettings.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_storage_policy_ec_m
+
+    @default_storage_policy_ec_m.setter
+    def default_storage_policy_ec_m(self, default_storage_policy_ec_m):
+        """Sets the default_storage_policy_ec_m of this ClusterSettings.
+
+
+        :param default_storage_policy_ec_m: The default_storage_policy_ec_m of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy_ec_m: int
+        """
+
+        self._default_storage_policy_ec_m = default_storage_policy_ec_m
+
+    @property
+    def default_storage_policy_replica_num(self):
+        """Gets the default_storage_policy_replica_num of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy_replica_num of this ClusterSettings.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_storage_policy_replica_num
+
+    @default_storage_policy_replica_num.setter
+    def default_storage_policy_replica_num(self, default_storage_policy_replica_num):
+        """Sets the default_storage_policy_replica_num of this ClusterSettings.
+
+
+        :param default_storage_policy_replica_num: The default_storage_policy_replica_num of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy_replica_num: int
+        """
+
+        self._default_storage_policy_replica_num = default_storage_policy_replica_num
+
+    @property
+    def default_storage_policy_thin_provision(self):
+        """Gets the default_storage_policy_thin_provision of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy_thin_provision of this ClusterSettings.  # noqa: E501
+        :rtype: bool
+        """
+        return self._default_storage_policy_thin_provision
+
+    @default_storage_policy_thin_provision.setter
+    def default_storage_policy_thin_provision(self, default_storage_policy_thin_provision):
+        """Sets the default_storage_policy_thin_provision of this ClusterSettings.
+
+
+        :param default_storage_policy_thin_provision: The default_storage_policy_thin_provision of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy_thin_provision: bool
+        """
+
+        self._default_storage_policy_thin_provision = default_storage_policy_thin_provision
 
     @property
     def enabled_iscsi(self):

@@ -29,6 +29,8 @@ class MigrateVmConfig(object):
         'new_name': 'str',
         'network_mapping': 'list[VlanMapping]',
         'migrate_type': 'MigrateType',
+        'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
+        'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
         'delete_src_vm': 'bool'
     }
@@ -38,6 +40,8 @@ class MigrateVmConfig(object):
         'new_name': 'new_name',
         'network_mapping': 'network_mapping',
         'migrate_type': 'migrate_type',
+        'elf_ec_storage_policy': 'elf_ec_storage_policy',
+        'elf_replica_storage_policy': 'elf_replica_storage_policy',
         'elf_storage_policy': 'elf_storage_policy',
         'delete_src_vm': 'delete_src_vm'
     }
@@ -50,6 +54,8 @@ class MigrateVmConfig(object):
         self._new_name = None
         self._network_mapping = None
         self._migrate_type = None
+        self._elf_ec_storage_policy = None
+        self._elf_replica_storage_policy = None
         self._elf_storage_policy = None
         self._delete_src_vm = None
         self.discriminator = None
@@ -62,6 +68,10 @@ class MigrateVmConfig(object):
             self.network_mapping = kwargs["network_mapping"]
         if "migrate_type" in kwargs:
             self.migrate_type = kwargs["migrate_type"]
+        if "elf_ec_storage_policy" in kwargs:
+            self.elf_ec_storage_policy = kwargs["elf_ec_storage_policy"]
+        if "elf_replica_storage_policy" in kwargs:
+            self.elf_replica_storage_policy = kwargs["elf_replica_storage_policy"]
         if "elf_storage_policy" in kwargs:
             self.elf_storage_policy = kwargs["elf_storage_policy"]
         if "delete_src_vm" in kwargs:
@@ -156,6 +166,48 @@ class MigrateVmConfig(object):
         self._migrate_type = migrate_type
 
     @property
+    def elf_ec_storage_policy(self):
+        """Gets the elf_ec_storage_policy of this MigrateVmConfig.  # noqa: E501
+
+
+        :return: The elf_ec_storage_policy of this MigrateVmConfig.  # noqa: E501
+        :rtype: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+        return self._elf_ec_storage_policy
+
+    @elf_ec_storage_policy.setter
+    def elf_ec_storage_policy(self, elf_ec_storage_policy):
+        """Sets the elf_ec_storage_policy of this MigrateVmConfig.
+
+
+        :param elf_ec_storage_policy: The elf_ec_storage_policy of this MigrateVmConfig.  # noqa: E501
+        :type elf_ec_storage_policy: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+
+        self._elf_ec_storage_policy = elf_ec_storage_policy
+
+    @property
+    def elf_replica_storage_policy(self):
+        """Gets the elf_replica_storage_policy of this MigrateVmConfig.  # noqa: E501
+
+
+        :return: The elf_replica_storage_policy of this MigrateVmConfig.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_replica_storage_policy
+
+    @elf_replica_storage_policy.setter
+    def elf_replica_storage_policy(self, elf_replica_storage_policy):
+        """Sets the elf_replica_storage_policy of this MigrateVmConfig.
+
+
+        :param elf_replica_storage_policy: The elf_replica_storage_policy of this MigrateVmConfig.  # noqa: E501
+        :type elf_replica_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_replica_storage_policy = elf_replica_storage_policy
+
+    @property
     def elf_storage_policy(self):
         """Gets the elf_storage_policy of this MigrateVmConfig.  # noqa: E501
 
@@ -173,8 +225,6 @@ class MigrateVmConfig(object):
         :param elf_storage_policy: The elf_storage_policy of this MigrateVmConfig.  # noqa: E501
         :type elf_storage_policy: VmVolumeElfStoragePolicyType
         """
-        if self.local_vars_configuration.client_side_validation and elf_storage_policy is None:  # noqa: E501
-            raise ValueError("Invalid value for `elf_storage_policy`, must not be `None`")  # noqa: E501
 
         self._elf_storage_policy = elf_storage_policy
 

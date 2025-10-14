@@ -25,6 +25,9 @@ class MountNewCreateDisksParamsVmVolume(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'resident_in_cache': 'bool',
+        'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
+        'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
         'path': 'str',
         'size_unit': 'ByteUnit',
@@ -33,6 +36,9 @@ class MountNewCreateDisksParamsVmVolume(object):
     }
 
     attribute_map = {
+        'resident_in_cache': 'resident_in_cache',
+        'elf_ec_storage_policy': 'elf_ec_storage_policy',
+        'elf_replica_storage_policy': 'elf_replica_storage_policy',
         'elf_storage_policy': 'elf_storage_policy',
         'path': 'path',
         'size_unit': 'size_unit',
@@ -44,6 +50,9 @@ class MountNewCreateDisksParamsVmVolume(object):
         """MountNewCreateDisksParamsVmVolume - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._resident_in_cache = None
+        self._elf_ec_storage_policy = None
+        self._elf_replica_storage_policy = None
         self._elf_storage_policy = None
         self._path = None
         self._size_unit = None
@@ -51,6 +60,12 @@ class MountNewCreateDisksParamsVmVolume(object):
         self._name = None
         self.discriminator = None
 
+        if "resident_in_cache" in kwargs:
+            self.resident_in_cache = kwargs["resident_in_cache"]
+        if "elf_ec_storage_policy" in kwargs:
+            self.elf_ec_storage_policy = kwargs["elf_ec_storage_policy"]
+        if "elf_replica_storage_policy" in kwargs:
+            self.elf_replica_storage_policy = kwargs["elf_replica_storage_policy"]
         if "elf_storage_policy" in kwargs:
             self.elf_storage_policy = kwargs["elf_storage_policy"]
         if "path" in kwargs:
@@ -61,6 +76,69 @@ class MountNewCreateDisksParamsVmVolume(object):
             self.size = kwargs["size"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def resident_in_cache(self):
+        """Gets the resident_in_cache of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+
+
+        :return: The resident_in_cache of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :rtype: bool
+        """
+        return self._resident_in_cache
+
+    @resident_in_cache.setter
+    def resident_in_cache(self, resident_in_cache):
+        """Sets the resident_in_cache of this MountNewCreateDisksParamsVmVolume.
+
+
+        :param resident_in_cache: The resident_in_cache of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :type resident_in_cache: bool
+        """
+
+        self._resident_in_cache = resident_in_cache
+
+    @property
+    def elf_ec_storage_policy(self):
+        """Gets the elf_ec_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+
+
+        :return: The elf_ec_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :rtype: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+        return self._elf_ec_storage_policy
+
+    @elf_ec_storage_policy.setter
+    def elf_ec_storage_policy(self, elf_ec_storage_policy):
+        """Sets the elf_ec_storage_policy of this MountNewCreateDisksParamsVmVolume.
+
+
+        :param elf_ec_storage_policy: The elf_ec_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :type elf_ec_storage_policy: MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy
+        """
+
+        self._elf_ec_storage_policy = elf_ec_storage_policy
+
+    @property
+    def elf_replica_storage_policy(self):
+        """Gets the elf_replica_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+
+
+        :return: The elf_replica_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :rtype: VmVolumeElfStoragePolicyType
+        """
+        return self._elf_replica_storage_policy
+
+    @elf_replica_storage_policy.setter
+    def elf_replica_storage_policy(self, elf_replica_storage_policy):
+        """Sets the elf_replica_storage_policy of this MountNewCreateDisksParamsVmVolume.
+
+
+        :param elf_replica_storage_policy: The elf_replica_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :type elf_replica_storage_policy: VmVolumeElfStoragePolicyType
+        """
+
+        self._elf_replica_storage_policy = elf_replica_storage_policy
 
     @property
     def elf_storage_policy(self):
@@ -80,8 +158,6 @@ class MountNewCreateDisksParamsVmVolume(object):
         :param elf_storage_policy: The elf_storage_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
         :type elf_storage_policy: VmVolumeElfStoragePolicyType
         """
-        if self.local_vars_configuration.client_side_validation and elf_storage_policy is None:  # noqa: E501
-            raise ValueError("Invalid value for `elf_storage_policy`, must not be `None`")  # noqa: E501
 
         self._elf_storage_policy = elf_storage_policy
 

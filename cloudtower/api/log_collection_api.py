@@ -36,6 +36,8 @@ class LogCollectionApi(object):
 
         :param log_collection_creation_params: (required)
         :type log_collection_creation_params: list[LogCollectionCreationParams]
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -65,6 +67,8 @@ class LogCollectionApi(object):
 
         :param log_collection_creation_params: (required)
         :type log_collection_creation_params: list[LogCollectionCreationParams]
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -92,7 +96,8 @@ class LogCollectionApi(object):
         local_var_params = locals()
 
         all_params = [
-            'log_collection_creation_params'
+            'log_collection_creation_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -126,6 +131,8 @@ class LogCollectionApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -181,6 +188,8 @@ class LogCollectionApi(object):
 
         :param log_collection_deletion_params: (required)
         :type log_collection_deletion_params: LogCollectionDeletionParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -210,6 +219,8 @@ class LogCollectionApi(object):
 
         :param log_collection_deletion_params: (required)
         :type log_collection_deletion_params: LogCollectionDeletionParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -237,7 +248,8 @@ class LogCollectionApi(object):
         local_var_params = locals()
 
         all_params = [
-            'log_collection_deletion_params'
+            'log_collection_deletion_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -271,6 +283,8 @@ class LogCollectionApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -326,6 +340,8 @@ class LogCollectionApi(object):
 
         :param force_stop_log_collection_params: (required)
         :type force_stop_log_collection_params: ForceStopLogCollectionParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -355,6 +371,8 @@ class LogCollectionApi(object):
 
         :param force_stop_log_collection_params: (required)
         :type force_stop_log_collection_params: ForceStopLogCollectionParams
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -382,7 +400,8 @@ class LogCollectionApi(object):
         local_var_params = locals()
 
         all_params = [
-            'force_stop_log_collection_params'
+            'force_stop_log_collection_params',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -416,6 +435,8 @@ class LogCollectionApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -473,6 +494,8 @@ class LogCollectionApi(object):
         :type get_log_collections_request_body: GetLogCollectionsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -504,6 +527,8 @@ class LogCollectionApi(object):
         :type get_log_collections_request_body: GetLogCollectionsRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -532,7 +557,8 @@ class LogCollectionApi(object):
 
         all_params = [
             'get_log_collections_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -568,6 +594,8 @@ class LogCollectionApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -625,6 +653,8 @@ class LogCollectionApi(object):
         :type get_log_collections_connection_request_body: GetLogCollectionsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -656,6 +686,8 @@ class LogCollectionApi(object):
         :type get_log_collections_connection_request_body: GetLogCollectionsConnectionRequestBody
         :param content_language:
         :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -684,7 +716,8 @@ class LogCollectionApi(object):
 
         all_params = [
             'get_log_collections_connection_request_body',
-            'content_language'
+            'content_language',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -720,6 +753,8 @@ class LogCollectionApi(object):
         header_params = dict(local_var_params.get('_headers', {}))
         if 'content_language' in local_var_params:
             header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

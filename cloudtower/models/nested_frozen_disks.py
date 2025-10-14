@@ -38,6 +38,7 @@ class NestedFrozenDisks(object):
         'max_iops': 'int',
         'max_iops_policy': 'VmDiskIoRestrictType',
         'path': 'str',
+        'resident_in_cache': 'bool',
         'size': 'int',
         'snapshot_local_id': 'str',
         'storage_policy_uuid': 'str',
@@ -62,6 +63,7 @@ class NestedFrozenDisks(object):
         'max_iops': 'max_iops',
         'max_iops_policy': 'max_iops_policy',
         'path': 'path',
+        'resident_in_cache': 'resident_in_cache',
         'size': 'size',
         'snapshot_local_id': 'snapshot_local_id',
         'storage_policy_uuid': 'storage_policy_uuid',
@@ -89,6 +91,7 @@ class NestedFrozenDisks(object):
         self._max_iops = None
         self._max_iops_policy = None
         self._path = None
+        self._resident_in_cache = None
         self._size = None
         self._snapshot_local_id = None
         self._storage_policy_uuid = None
@@ -117,6 +120,7 @@ class NestedFrozenDisks(object):
         self.max_iops_policy = kwargs.get("max_iops_policy", None)
         if "path" in kwargs:
             self.path = kwargs["path"]
+        self.resident_in_cache = kwargs.get("resident_in_cache", None)
         if "size" in kwargs:
             self.size = kwargs["size"]
         self.snapshot_local_id = kwargs.get("snapshot_local_id", None)
@@ -413,6 +417,27 @@ class NestedFrozenDisks(object):
             raise ValueError("Invalid value for `path`, must not be `None`")  # noqa: E501
 
         self._path = path
+
+    @property
+    def resident_in_cache(self):
+        """Gets the resident_in_cache of this NestedFrozenDisks.  # noqa: E501
+
+
+        :return: The resident_in_cache of this NestedFrozenDisks.  # noqa: E501
+        :rtype: bool
+        """
+        return self._resident_in_cache
+
+    @resident_in_cache.setter
+    def resident_in_cache(self, resident_in_cache):
+        """Sets the resident_in_cache of this NestedFrozenDisks.
+
+
+        :param resident_in_cache: The resident_in_cache of this NestedFrozenDisks.  # noqa: E501
+        :type resident_in_cache: bool
+        """
+
+        self._resident_in_cache = resident_in_cache
 
     @property
     def size(self):

@@ -25,10 +25,12 @@ class ClusterDeletionParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'force': 'bool',
         'where': 'ClusterWhereInput'
     }
 
     attribute_map = {
+        'force': 'force',
         'where': 'where'
     }
 
@@ -36,11 +38,35 @@ class ClusterDeletionParams(object):
         """ClusterDeletionParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._force = None
         self._where = None
         self.discriminator = None
 
+        if "force" in kwargs:
+            self.force = kwargs["force"]
         if "where" in kwargs:
             self.where = kwargs["where"]
+
+    @property
+    def force(self):
+        """Gets the force of this ClusterDeletionParams.  # noqa: E501
+
+
+        :return: The force of this ClusterDeletionParams.  # noqa: E501
+        :rtype: bool
+        """
+        return self._force
+
+    @force.setter
+    def force(self, force):
+        """Sets the force of this ClusterDeletionParams.
+
+
+        :param force: The force of this ClusterDeletionParams.  # noqa: E501
+        :type force: bool
+        """
+
+        self._force = force
 
     @property
     def where(self):

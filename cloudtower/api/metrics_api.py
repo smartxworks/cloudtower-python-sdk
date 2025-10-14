@@ -36,6 +36,8 @@ class MetricsApi(object):
 
         :param get_cluster_metric_input: (required)
         :type get_cluster_metric_input: GetClusterMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -65,6 +67,8 @@ class MetricsApi(object):
 
         :param get_cluster_metric_input: (required)
         :type get_cluster_metric_input: GetClusterMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -92,7 +96,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_cluster_metric_input'
+            'get_cluster_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -126,6 +131,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -181,6 +188,8 @@ class MetricsApi(object):
 
         :param get_disk_metric_input: (required)
         :type get_disk_metric_input: GetDiskMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -210,6 +219,8 @@ class MetricsApi(object):
 
         :param get_disk_metric_input: (required)
         :type get_disk_metric_input: GetDiskMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -237,7 +248,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_disk_metric_input'
+            'get_disk_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -271,6 +283,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -326,6 +340,8 @@ class MetricsApi(object):
 
         :param get_host_metric_input: (required)
         :type get_host_metric_input: GetHostMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -355,6 +371,8 @@ class MetricsApi(object):
 
         :param get_host_metric_input: (required)
         :type get_host_metric_input: GetHostMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -382,7 +400,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_host_metric_input'
+            'get_host_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -416,6 +435,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -471,6 +492,8 @@ class MetricsApi(object):
 
         :param get_host_network_metric_input: (required)
         :type get_host_network_metric_input: GetHostNetworkMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -500,6 +523,8 @@ class MetricsApi(object):
 
         :param get_host_network_metric_input: (required)
         :type get_host_network_metric_input: GetHostNetworkMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -527,7 +552,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_host_network_metric_input'
+            'get_host_network_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -561,6 +587,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -616,6 +644,8 @@ class MetricsApi(object):
 
         :param get_host_service_metric_input: (required)
         :type get_host_service_metric_input: GetHostServiceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -645,6 +675,8 @@ class MetricsApi(object):
 
         :param get_host_service_metric_input: (required)
         :type get_host_service_metric_input: GetHostServiceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -672,7 +704,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_host_service_metric_input'
+            'get_host_service_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -706,6 +739,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -761,6 +796,8 @@ class MetricsApi(object):
 
         :param get_lun_metric_input: (required)
         :type get_lun_metric_input: GetLunMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -790,6 +827,8 @@ class MetricsApi(object):
 
         :param get_lun_metric_input: (required)
         :type get_lun_metric_input: GetLunMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -817,7 +856,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_lun_metric_input'
+            'get_lun_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -851,6 +891,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -906,6 +948,8 @@ class MetricsApi(object):
 
         :param get_nvmf_namespace_metric_input: (required)
         :type get_nvmf_namespace_metric_input: GetNvmfNamespaceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -935,6 +979,8 @@ class MetricsApi(object):
 
         :param get_nvmf_namespace_metric_input: (required)
         :type get_nvmf_namespace_metric_input: GetNvmfNamespaceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -962,7 +1008,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_nvmf_namespace_metric_input'
+            'get_nvmf_namespace_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -996,6 +1043,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1051,6 +1100,8 @@ class MetricsApi(object):
 
         :param get_scvm_disk_metric_input: (required)
         :type get_scvm_disk_metric_input: GetSCVMDiskMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1080,6 +1131,8 @@ class MetricsApi(object):
 
         :param get_scvm_disk_metric_input: (required)
         :type get_scvm_disk_metric_input: GetSCVMDiskMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1107,7 +1160,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_scvm_disk_metric_input'
+            'get_scvm_disk_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1141,6 +1195,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1196,6 +1252,8 @@ class MetricsApi(object):
 
         :param get_scvm_metric_input: (required)
         :type get_scvm_metric_input: GetScvmMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1225,6 +1283,8 @@ class MetricsApi(object):
 
         :param get_scvm_metric_input: (required)
         :type get_scvm_metric_input: GetScvmMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1252,7 +1312,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_scvm_metric_input'
+            'get_scvm_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1286,6 +1347,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1341,6 +1404,8 @@ class MetricsApi(object):
 
         :param get_scvm_network_input: (required)
         :type get_scvm_network_input: GetScvmNetworkInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1370,6 +1435,8 @@ class MetricsApi(object):
 
         :param get_scvm_network_input: (required)
         :type get_scvm_network_input: GetScvmNetworkInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1397,7 +1464,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_scvm_network_input'
+            'get_scvm_network_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1431,6 +1499,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1486,6 +1556,8 @@ class MetricsApi(object):
 
         :param get_scvm_service_metric_input: (required)
         :type get_scvm_service_metric_input: GetScvmServiceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1515,6 +1587,8 @@ class MetricsApi(object):
 
         :param get_scvm_service_metric_input: (required)
         :type get_scvm_service_metric_input: GetScvmServiceMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1542,7 +1616,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_scvm_service_metric_input'
+            'get_scvm_service_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1576,6 +1651,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1631,6 +1708,8 @@ class MetricsApi(object):
 
         :param get_top_n_metric_input: (required)
         :type get_top_n_metric_input: GetTopNMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1660,6 +1739,8 @@ class MetricsApi(object):
 
         :param get_top_n_metric_input: (required)
         :type get_top_n_metric_input: GetTopNMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1687,7 +1768,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_top_n_metric_input'
+            'get_top_n_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1721,6 +1803,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1776,6 +1860,8 @@ class MetricsApi(object):
 
         :param get_vm_metric_input: (required)
         :type get_vm_metric_input: GetVmMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1805,6 +1891,8 @@ class MetricsApi(object):
 
         :param get_vm_metric_input: (required)
         :type get_vm_metric_input: GetVmMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1832,7 +1920,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_vm_metric_input'
+            'get_vm_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -1866,6 +1955,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -1921,6 +2012,8 @@ class MetricsApi(object):
 
         :param get_vm_net_work_metric_input: (required)
         :type get_vm_net_work_metric_input: GetVmNetWorkMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1950,6 +2043,8 @@ class MetricsApi(object):
 
         :param get_vm_net_work_metric_input: (required)
         :type get_vm_net_work_metric_input: GetVmNetWorkMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1977,7 +2072,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_vm_net_work_metric_input'
+            'get_vm_net_work_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2011,6 +2107,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2066,6 +2164,8 @@ class MetricsApi(object):
 
         :param get_vm_volume_metric_input: (required)
         :type get_vm_volume_metric_input: GetVmVolumeMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2095,6 +2195,8 @@ class MetricsApi(object):
 
         :param get_vm_volume_metric_input: (required)
         :type get_vm_volume_metric_input: GetVmVolumeMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2122,7 +2224,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_vm_volume_metric_input'
+            'get_vm_volume_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2156,6 +2259,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2211,6 +2316,8 @@ class MetricsApi(object):
 
         :param get_witness_metric_input: (required)
         :type get_witness_metric_input: GetWitnessMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2240,6 +2347,8 @@ class MetricsApi(object):
 
         :param get_witness_metric_input: (required)
         :type get_witness_metric_input: GetWitnessMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2267,7 +2376,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_witness_metric_input'
+            'get_witness_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2301,6 +2411,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -2356,6 +2468,8 @@ class MetricsApi(object):
 
         :param get_zone_metric_input: (required)
         :type get_zone_metric_input: GetZoneMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2385,6 +2499,8 @@ class MetricsApi(object):
 
         :param get_zone_metric_input: (required)
         :type get_zone_metric_input: GetZoneMetricInput
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2412,7 +2528,8 @@ class MetricsApi(object):
         local_var_params = locals()
 
         all_params = [
-            'get_zone_metric_input'
+            'get_zone_metric_input',
+            'external_cloudtower_id'
         ]
         all_params.extend(
             [
@@ -2446,6 +2563,8 @@ class MetricsApi(object):
         query_params = []
 
         header_params = dict(local_var_params.get('_headers', {}))
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
 
         form_params = []
         local_var_files = {}

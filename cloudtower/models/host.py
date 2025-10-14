@@ -28,9 +28,13 @@ class Host(object):
         'access_ip': 'str',
         'allocable_cpu_cores_for_vm_exclusive': 'int',
         'allocatable_memory_bytes': 'int',
+        'allocated_prioritized_space': 'int',
+        'allocated_prioritized_space_usage': 'float',
         'chunk_id': 'str',
         'cluster': 'NestedCluster',
+        'commited_memory_bytes': 'int',
         'compatible_cpu_models': 'list[str]',
+        'connect_status': 'HostConnectStatus',
         'cpu_brand': 'str',
         'cpu_fan_speed': 'list[float]',
         'cpu_fan_speed_unit': 'CpuFanSpeedUnit',
@@ -39,7 +43,9 @@ class Host(object):
         'cpu_temperature_celsius': 'list[int]',
         'cpu_vendor': 'str',
         'data_ip': 'str',
+        'disk_pools': 'list[NestedDiskPool]',
         'disks': 'list[NestedDisk]',
+        'downgraded_prioritized_space': 'int',
         'entity_async_status': 'EntityAsyncStatus',
         'failure_data_space': 'int',
         'gpu_devices': 'list[NestedGpuDevice]',
@@ -55,6 +61,7 @@ class Host(object):
         'local_id': 'str',
         'lsm_cap_disk_safe_umount': 'bool',
         'management_ip': 'str',
+        'merged_status': 'HostMergedStatus',
         'model': 'str',
         'name': 'str',
         'nested_virtualization': 'bool',
@@ -63,10 +70,17 @@ class Host(object):
         'node_topo_local_id': 'str',
         'os_memory_bytes': 'int',
         'os_version': 'str',
+        'perf_allocated_data_space': 'int',
+        'perf_failure_data_space': 'int',
+        'perf_total_data_capacity': 'int',
+        'perf_used_data_space': 'int',
+        'perf_valid_data_space': 'int',
+        'planned_prioritized_space': 'int',
         'pmem_dimm_capacity': 'int',
         'pmem_dimm_count': 'int',
         'pmem_dimms': 'list[NestedPmemDimm]',
         'pmem_disk_count': 'int',
+        'prio_space_percentage': 'float',
         'provisioned_cpu_cores': 'int',
         'provisioned_memory_bytes': 'int',
         'running_pause_vm_memory_bytes': 'int',
@@ -88,9 +102,12 @@ class Host(object):
         'total_data_capacity': 'int',
         'total_memory_bytes': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
+        'used_cache_space': 'int',
         'used_cpu_hz': 'float',
         'used_data_space': 'int',
         'used_memory_bytes': 'float',
+        'valid_cache_space': 'int',
+        'valid_free_cache_space': 'int',
         'vm_num': 'int',
         'vmotion_ip': 'str',
         'vms': 'list[NestedVm]',
@@ -103,9 +120,13 @@ class Host(object):
         'access_ip': 'access_ip',
         'allocable_cpu_cores_for_vm_exclusive': 'allocable_cpu_cores_for_vm_exclusive',
         'allocatable_memory_bytes': 'allocatable_memory_bytes',
+        'allocated_prioritized_space': 'allocated_prioritized_space',
+        'allocated_prioritized_space_usage': 'allocated_prioritized_space_usage',
         'chunk_id': 'chunk_id',
         'cluster': 'cluster',
+        'commited_memory_bytes': 'commited_memory_bytes',
         'compatible_cpu_models': 'compatible_cpu_models',
+        'connect_status': 'connect_status',
         'cpu_brand': 'cpu_brand',
         'cpu_fan_speed': 'cpu_fan_speed',
         'cpu_fan_speed_unit': 'cpu_fan_speed_unit',
@@ -114,7 +135,9 @@ class Host(object):
         'cpu_temperature_celsius': 'cpu_temperature_celsius',
         'cpu_vendor': 'cpu_vendor',
         'data_ip': 'data_ip',
+        'disk_pools': 'disk_pools',
         'disks': 'disks',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
         'entity_async_status': 'entityAsyncStatus',
         'failure_data_space': 'failure_data_space',
         'gpu_devices': 'gpu_devices',
@@ -130,6 +153,7 @@ class Host(object):
         'local_id': 'local_id',
         'lsm_cap_disk_safe_umount': 'lsm_cap_disk_safe_umount',
         'management_ip': 'management_ip',
+        'merged_status': 'merged_status',
         'model': 'model',
         'name': 'name',
         'nested_virtualization': 'nested_virtualization',
@@ -138,10 +162,17 @@ class Host(object):
         'node_topo_local_id': 'node_topo_local_id',
         'os_memory_bytes': 'os_memory_bytes',
         'os_version': 'os_version',
+        'perf_allocated_data_space': 'perf_allocated_data_space',
+        'perf_failure_data_space': 'perf_failure_data_space',
+        'perf_total_data_capacity': 'perf_total_data_capacity',
+        'perf_used_data_space': 'perf_used_data_space',
+        'perf_valid_data_space': 'perf_valid_data_space',
+        'planned_prioritized_space': 'planned_prioritized_space',
         'pmem_dimm_capacity': 'pmem_dimm_capacity',
         'pmem_dimm_count': 'pmem_dimm_count',
         'pmem_dimms': 'pmem_dimms',
         'pmem_disk_count': 'pmem_disk_count',
+        'prio_space_percentage': 'prio_space_percentage',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
         'provisioned_memory_bytes': 'provisioned_memory_bytes',
         'running_pause_vm_memory_bytes': 'running_pause_vm_memory_bytes',
@@ -163,9 +194,12 @@ class Host(object):
         'total_data_capacity': 'total_data_capacity',
         'total_memory_bytes': 'total_memory_bytes',
         'usb_devices': 'usb_devices',
+        'used_cache_space': 'used_cache_space',
         'used_cpu_hz': 'used_cpu_hz',
         'used_data_space': 'used_data_space',
         'used_memory_bytes': 'used_memory_bytes',
+        'valid_cache_space': 'valid_cache_space',
+        'valid_free_cache_space': 'valid_free_cache_space',
         'vm_num': 'vm_num',
         'vmotion_ip': 'vmotion_ip',
         'vms': 'vms',
@@ -181,9 +215,13 @@ class Host(object):
         self._access_ip = None
         self._allocable_cpu_cores_for_vm_exclusive = None
         self._allocatable_memory_bytes = None
+        self._allocated_prioritized_space = None
+        self._allocated_prioritized_space_usage = None
         self._chunk_id = None
         self._cluster = None
+        self._commited_memory_bytes = None
         self._compatible_cpu_models = None
+        self._connect_status = None
         self._cpu_brand = None
         self._cpu_fan_speed = None
         self._cpu_fan_speed_unit = None
@@ -192,7 +230,9 @@ class Host(object):
         self._cpu_temperature_celsius = None
         self._cpu_vendor = None
         self._data_ip = None
+        self._disk_pools = None
         self._disks = None
+        self._downgraded_prioritized_space = None
         self._entity_async_status = None
         self._failure_data_space = None
         self._gpu_devices = None
@@ -208,6 +248,7 @@ class Host(object):
         self._local_id = None
         self._lsm_cap_disk_safe_umount = None
         self._management_ip = None
+        self._merged_status = None
         self._model = None
         self._name = None
         self._nested_virtualization = None
@@ -216,10 +257,17 @@ class Host(object):
         self._node_topo_local_id = None
         self._os_memory_bytes = None
         self._os_version = None
+        self._perf_allocated_data_space = None
+        self._perf_failure_data_space = None
+        self._perf_total_data_capacity = None
+        self._perf_used_data_space = None
+        self._perf_valid_data_space = None
+        self._planned_prioritized_space = None
         self._pmem_dimm_capacity = None
         self._pmem_dimm_count = None
         self._pmem_dimms = None
         self._pmem_disk_count = None
+        self._prio_space_percentage = None
         self._provisioned_cpu_cores = None
         self._provisioned_memory_bytes = None
         self._running_pause_vm_memory_bytes = None
@@ -241,9 +289,12 @@ class Host(object):
         self._total_data_capacity = None
         self._total_memory_bytes = None
         self._usb_devices = None
+        self._used_cache_space = None
         self._used_cpu_hz = None
         self._used_data_space = None
         self._used_memory_bytes = None
+        self._valid_cache_space = None
+        self._valid_free_cache_space = None
         self._vm_num = None
         self._vmotion_ip = None
         self._vms = None
@@ -256,12 +307,16 @@ class Host(object):
         self.allocable_cpu_cores_for_vm_exclusive = kwargs.get("allocable_cpu_cores_for_vm_exclusive", None)
         if "allocatable_memory_bytes" in kwargs:
             self.allocatable_memory_bytes = kwargs["allocatable_memory_bytes"]
+        self.allocated_prioritized_space = kwargs.get("allocated_prioritized_space", None)
+        self.allocated_prioritized_space_usage = kwargs.get("allocated_prioritized_space_usage", None)
         if "chunk_id" in kwargs:
             self.chunk_id = kwargs["chunk_id"]
         if "cluster" in kwargs:
             self.cluster = kwargs["cluster"]
+        self.commited_memory_bytes = kwargs.get("commited_memory_bytes", None)
         if "compatible_cpu_models" in kwargs:
             self.compatible_cpu_models = kwargs["compatible_cpu_models"]
+        self.connect_status = kwargs.get("connect_status", None)
         if "cpu_brand" in kwargs:
             self.cpu_brand = kwargs["cpu_brand"]
         if "cpu_fan_speed" in kwargs:
@@ -275,7 +330,9 @@ class Host(object):
             self.cpu_temperature_celsius = kwargs["cpu_temperature_celsius"]
         self.cpu_vendor = kwargs.get("cpu_vendor", None)
         self.data_ip = kwargs.get("data_ip", None)
+        self.disk_pools = kwargs.get("disk_pools", None)
         self.disks = kwargs.get("disks", None)
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "failure_data_space" in kwargs:
             self.failure_data_space = kwargs["failure_data_space"]
@@ -298,6 +355,7 @@ class Host(object):
             self.lsm_cap_disk_safe_umount = kwargs["lsm_cap_disk_safe_umount"]
         if "management_ip" in kwargs:
             self.management_ip = kwargs["management_ip"]
+        self.merged_status = kwargs.get("merged_status", None)
         if "model" in kwargs:
             self.model = kwargs["model"]
         if "name" in kwargs:
@@ -311,6 +369,12 @@ class Host(object):
         if "os_memory_bytes" in kwargs:
             self.os_memory_bytes = kwargs["os_memory_bytes"]
         self.os_version = kwargs.get("os_version", None)
+        self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
+        self.perf_failure_data_space = kwargs.get("perf_failure_data_space", None)
+        self.perf_total_data_capacity = kwargs.get("perf_total_data_capacity", None)
+        self.perf_used_data_space = kwargs.get("perf_used_data_space", None)
+        self.perf_valid_data_space = kwargs.get("perf_valid_data_space", None)
+        self.planned_prioritized_space = kwargs.get("planned_prioritized_space", None)
         if "pmem_dimm_capacity" in kwargs:
             self.pmem_dimm_capacity = kwargs["pmem_dimm_capacity"]
         if "pmem_dimm_count" in kwargs:
@@ -318,6 +382,7 @@ class Host(object):
         self.pmem_dimms = kwargs.get("pmem_dimms", None)
         if "pmem_disk_count" in kwargs:
             self.pmem_disk_count = kwargs["pmem_disk_count"]
+        self.prio_space_percentage = kwargs.get("prio_space_percentage", None)
         if "provisioned_cpu_cores" in kwargs:
             self.provisioned_cpu_cores = kwargs["provisioned_cpu_cores"]
         if "provisioned_memory_bytes" in kwargs:
@@ -350,10 +415,13 @@ class Host(object):
         if "total_memory_bytes" in kwargs:
             self.total_memory_bytes = kwargs["total_memory_bytes"]
         self.usb_devices = kwargs.get("usb_devices", None)
+        self.used_cache_space = kwargs.get("used_cache_space", None)
         self.used_cpu_hz = kwargs.get("used_cpu_hz", None)
         if "used_data_space" in kwargs:
             self.used_data_space = kwargs["used_data_space"]
         self.used_memory_bytes = kwargs.get("used_memory_bytes", None)
+        self.valid_cache_space = kwargs.get("valid_cache_space", None)
+        self.valid_free_cache_space = kwargs.get("valid_free_cache_space", None)
         self.vm_num = kwargs.get("vm_num", None)
         self.vmotion_ip = kwargs.get("vmotion_ip", None)
         self.vms = kwargs.get("vms", None)
@@ -427,6 +495,48 @@ class Host(object):
         self._allocatable_memory_bytes = allocatable_memory_bytes
 
     @property
+    def allocated_prioritized_space(self):
+        """Gets the allocated_prioritized_space of this Host.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space
+
+    @allocated_prioritized_space.setter
+    def allocated_prioritized_space(self, allocated_prioritized_space):
+        """Sets the allocated_prioritized_space of this Host.
+
+
+        :param allocated_prioritized_space: The allocated_prioritized_space of this Host.  # noqa: E501
+        :type allocated_prioritized_space: int
+        """
+
+        self._allocated_prioritized_space = allocated_prioritized_space
+
+    @property
+    def allocated_prioritized_space_usage(self):
+        """Gets the allocated_prioritized_space_usage of this Host.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage of this Host.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage
+
+    @allocated_prioritized_space_usage.setter
+    def allocated_prioritized_space_usage(self, allocated_prioritized_space_usage):
+        """Sets the allocated_prioritized_space_usage of this Host.
+
+
+        :param allocated_prioritized_space_usage: The allocated_prioritized_space_usage of this Host.  # noqa: E501
+        :type allocated_prioritized_space_usage: float
+        """
+
+        self._allocated_prioritized_space_usage = allocated_prioritized_space_usage
+
+    @property
     def chunk_id(self):
         """Gets the chunk_id of this Host.  # noqa: E501
 
@@ -473,6 +583,27 @@ class Host(object):
         self._cluster = cluster
 
     @property
+    def commited_memory_bytes(self):
+        """Gets the commited_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The commited_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes
+
+    @commited_memory_bytes.setter
+    def commited_memory_bytes(self, commited_memory_bytes):
+        """Sets the commited_memory_bytes of this Host.
+
+
+        :param commited_memory_bytes: The commited_memory_bytes of this Host.  # noqa: E501
+        :type commited_memory_bytes: int
+        """
+
+        self._commited_memory_bytes = commited_memory_bytes
+
+    @property
     def compatible_cpu_models(self):
         """Gets the compatible_cpu_models of this Host.  # noqa: E501
 
@@ -494,6 +625,27 @@ class Host(object):
             raise ValueError("Invalid value for `compatible_cpu_models`, must not be `None`")  # noqa: E501
 
         self._compatible_cpu_models = compatible_cpu_models
+
+    @property
+    def connect_status(self):
+        """Gets the connect_status of this Host.  # noqa: E501
+
+
+        :return: The connect_status of this Host.  # noqa: E501
+        :rtype: HostConnectStatus
+        """
+        return self._connect_status
+
+    @connect_status.setter
+    def connect_status(self, connect_status):
+        """Sets the connect_status of this Host.
+
+
+        :param connect_status: The connect_status of this Host.  # noqa: E501
+        :type connect_status: HostConnectStatus
+        """
+
+        self._connect_status = connect_status
 
     @property
     def cpu_brand(self):
@@ -674,6 +826,27 @@ class Host(object):
         self._data_ip = data_ip
 
     @property
+    def disk_pools(self):
+        """Gets the disk_pools of this Host.  # noqa: E501
+
+
+        :return: The disk_pools of this Host.  # noqa: E501
+        :rtype: list[NestedDiskPool]
+        """
+        return self._disk_pools
+
+    @disk_pools.setter
+    def disk_pools(self, disk_pools):
+        """Sets the disk_pools of this Host.
+
+
+        :param disk_pools: The disk_pools of this Host.  # noqa: E501
+        :type disk_pools: list[NestedDiskPool]
+        """
+
+        self._disk_pools = disk_pools
+
+    @property
     def disks(self):
         """Gets the disks of this Host.  # noqa: E501
 
@@ -693,6 +866,27 @@ class Host(object):
         """
 
         self._disks = disks
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this Host.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this Host.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this Host.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
 
     @property
     def entity_async_status(self):
@@ -1024,6 +1218,27 @@ class Host(object):
         self._management_ip = management_ip
 
     @property
+    def merged_status(self):
+        """Gets the merged_status of this Host.  # noqa: E501
+
+
+        :return: The merged_status of this Host.  # noqa: E501
+        :rtype: HostMergedStatus
+        """
+        return self._merged_status
+
+    @merged_status.setter
+    def merged_status(self, merged_status):
+        """Sets the merged_status of this Host.
+
+
+        :param merged_status: The merged_status of this Host.  # noqa: E501
+        :type merged_status: HostMergedStatus
+        """
+
+        self._merged_status = merged_status
+
+    @property
     def model(self):
         """Gets the model of this Host.  # noqa: E501
 
@@ -1202,6 +1417,132 @@ class Host(object):
         self._os_version = os_version
 
     @property
+    def perf_allocated_data_space(self):
+        """Gets the perf_allocated_data_space of this Host.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space
+
+    @perf_allocated_data_space.setter
+    def perf_allocated_data_space(self, perf_allocated_data_space):
+        """Sets the perf_allocated_data_space of this Host.
+
+
+        :param perf_allocated_data_space: The perf_allocated_data_space of this Host.  # noqa: E501
+        :type perf_allocated_data_space: int
+        """
+
+        self._perf_allocated_data_space = perf_allocated_data_space
+
+    @property
+    def perf_failure_data_space(self):
+        """Gets the perf_failure_data_space of this Host.  # noqa: E501
+
+
+        :return: The perf_failure_data_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space
+
+    @perf_failure_data_space.setter
+    def perf_failure_data_space(self, perf_failure_data_space):
+        """Sets the perf_failure_data_space of this Host.
+
+
+        :param perf_failure_data_space: The perf_failure_data_space of this Host.  # noqa: E501
+        :type perf_failure_data_space: int
+        """
+
+        self._perf_failure_data_space = perf_failure_data_space
+
+    @property
+    def perf_total_data_capacity(self):
+        """Gets the perf_total_data_capacity of this Host.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity
+
+    @perf_total_data_capacity.setter
+    def perf_total_data_capacity(self, perf_total_data_capacity):
+        """Sets the perf_total_data_capacity of this Host.
+
+
+        :param perf_total_data_capacity: The perf_total_data_capacity of this Host.  # noqa: E501
+        :type perf_total_data_capacity: int
+        """
+
+        self._perf_total_data_capacity = perf_total_data_capacity
+
+    @property
+    def perf_used_data_space(self):
+        """Gets the perf_used_data_space of this Host.  # noqa: E501
+
+
+        :return: The perf_used_data_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space
+
+    @perf_used_data_space.setter
+    def perf_used_data_space(self, perf_used_data_space):
+        """Sets the perf_used_data_space of this Host.
+
+
+        :param perf_used_data_space: The perf_used_data_space of this Host.  # noqa: E501
+        :type perf_used_data_space: int
+        """
+
+        self._perf_used_data_space = perf_used_data_space
+
+    @property
+    def perf_valid_data_space(self):
+        """Gets the perf_valid_data_space of this Host.  # noqa: E501
+
+
+        :return: The perf_valid_data_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space
+
+    @perf_valid_data_space.setter
+    def perf_valid_data_space(self, perf_valid_data_space):
+        """Sets the perf_valid_data_space of this Host.
+
+
+        :param perf_valid_data_space: The perf_valid_data_space of this Host.  # noqa: E501
+        :type perf_valid_data_space: int
+        """
+
+        self._perf_valid_data_space = perf_valid_data_space
+
+    @property
+    def planned_prioritized_space(self):
+        """Gets the planned_prioritized_space of this Host.  # noqa: E501
+
+
+        :return: The planned_prioritized_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space
+
+    @planned_prioritized_space.setter
+    def planned_prioritized_space(self, planned_prioritized_space):
+        """Sets the planned_prioritized_space of this Host.
+
+
+        :param planned_prioritized_space: The planned_prioritized_space of this Host.  # noqa: E501
+        :type planned_prioritized_space: int
+        """
+
+        self._planned_prioritized_space = planned_prioritized_space
+
+    @property
     def pmem_dimm_capacity(self):
         """Gets the pmem_dimm_capacity of this Host.  # noqa: E501
 
@@ -1290,6 +1631,27 @@ class Host(object):
             raise ValueError("Invalid value for `pmem_disk_count`, must not be `None`")  # noqa: E501
 
         self._pmem_disk_count = pmem_disk_count
+
+    @property
+    def prio_space_percentage(self):
+        """Gets the prio_space_percentage of this Host.  # noqa: E501
+
+
+        :return: The prio_space_percentage of this Host.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage
+
+    @prio_space_percentage.setter
+    def prio_space_percentage(self, prio_space_percentage):
+        """Sets the prio_space_percentage of this Host.
+
+
+        :param prio_space_percentage: The prio_space_percentage of this Host.  # noqa: E501
+        :type prio_space_percentage: float
+        """
+
+        self._prio_space_percentage = prio_space_percentage
 
     @property
     def provisioned_cpu_cores(self):
@@ -1755,6 +2117,27 @@ class Host(object):
         self._usb_devices = usb_devices
 
     @property
+    def used_cache_space(self):
+        """Gets the used_cache_space of this Host.  # noqa: E501
+
+
+        :return: The used_cache_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space
+
+    @used_cache_space.setter
+    def used_cache_space(self, used_cache_space):
+        """Sets the used_cache_space of this Host.
+
+
+        :param used_cache_space: The used_cache_space of this Host.  # noqa: E501
+        :type used_cache_space: int
+        """
+
+        self._used_cache_space = used_cache_space
+
+    @property
     def used_cpu_hz(self):
         """Gets the used_cpu_hz of this Host.  # noqa: E501
 
@@ -1818,6 +2201,48 @@ class Host(object):
         """
 
         self._used_memory_bytes = used_memory_bytes
+
+    @property
+    def valid_cache_space(self):
+        """Gets the valid_cache_space of this Host.  # noqa: E501
+
+
+        :return: The valid_cache_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space
+
+    @valid_cache_space.setter
+    def valid_cache_space(self, valid_cache_space):
+        """Sets the valid_cache_space of this Host.
+
+
+        :param valid_cache_space: The valid_cache_space of this Host.  # noqa: E501
+        :type valid_cache_space: int
+        """
+
+        self._valid_cache_space = valid_cache_space
+
+    @property
+    def valid_free_cache_space(self):
+        """Gets the valid_free_cache_space of this Host.  # noqa: E501
+
+
+        :return: The valid_free_cache_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_free_cache_space
+
+    @valid_free_cache_space.setter
+    def valid_free_cache_space(self, valid_free_cache_space):
+        """Sets the valid_free_cache_space of this Host.
+
+
+        :param valid_free_cache_space: The valid_free_cache_space of this Host.  # noqa: E501
+        :type valid_free_cache_space: int
+        """
+
+        self._valid_free_cache_space = valid_free_cache_space
 
     @property
     def vm_num(self):

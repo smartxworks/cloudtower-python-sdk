@@ -28,6 +28,10 @@ class VmVolume(object):
         'cluster': 'NestedCluster',
         'description': 'str',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
+        'elf_storage_policy_ec_k': 'int',
+        'elf_storage_policy_ec_m': 'int',
+        'elf_storage_policy_replica_num': 'int',
+        'elf_storage_policy_thin_provision': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'guest_size_usage': 'float',
         'guest_used_size': 'int',
@@ -39,6 +43,7 @@ class VmVolume(object):
         'mounting': 'bool',
         'name': 'str',
         'path': 'str',
+        'resident_in_cache': 'bool',
         'sharing': 'bool',
         'size': 'int',
         'type': 'VmVolumeType',
@@ -53,6 +58,10 @@ class VmVolume(object):
         'cluster': 'cluster',
         'description': 'description',
         'elf_storage_policy': 'elf_storage_policy',
+        'elf_storage_policy_ec_k': 'elf_storage_policy_ec_k',
+        'elf_storage_policy_ec_m': 'elf_storage_policy_ec_m',
+        'elf_storage_policy_replica_num': 'elf_storage_policy_replica_num',
+        'elf_storage_policy_thin_provision': 'elf_storage_policy_thin_provision',
         'entity_async_status': 'entityAsyncStatus',
         'guest_size_usage': 'guest_size_usage',
         'guest_used_size': 'guest_used_size',
@@ -64,6 +73,7 @@ class VmVolume(object):
         'mounting': 'mounting',
         'name': 'name',
         'path': 'path',
+        'resident_in_cache': 'resident_in_cache',
         'sharing': 'sharing',
         'size': 'size',
         'type': 'type',
@@ -81,6 +91,10 @@ class VmVolume(object):
         self._cluster = None
         self._description = None
         self._elf_storage_policy = None
+        self._elf_storage_policy_ec_k = None
+        self._elf_storage_policy_ec_m = None
+        self._elf_storage_policy_replica_num = None
+        self._elf_storage_policy_thin_provision = None
         self._entity_async_status = None
         self._guest_size_usage = None
         self._guest_used_size = None
@@ -92,6 +106,7 @@ class VmVolume(object):
         self._mounting = None
         self._name = None
         self._path = None
+        self._resident_in_cache = None
         self._sharing = None
         self._size = None
         self._type = None
@@ -107,6 +122,10 @@ class VmVolume(object):
         self.description = kwargs.get("description", None)
         if "elf_storage_policy" in kwargs:
             self.elf_storage_policy = kwargs["elf_storage_policy"]
+        self.elf_storage_policy_ec_k = kwargs.get("elf_storage_policy_ec_k", None)
+        self.elf_storage_policy_ec_m = kwargs.get("elf_storage_policy_ec_m", None)
+        self.elf_storage_policy_replica_num = kwargs.get("elf_storage_policy_replica_num", None)
+        self.elf_storage_policy_thin_provision = kwargs.get("elf_storage_policy_thin_provision", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.guest_size_usage = kwargs.get("guest_size_usage", None)
         self.guest_used_size = kwargs.get("guest_used_size", None)
@@ -124,6 +143,7 @@ class VmVolume(object):
             self.name = kwargs["name"]
         if "path" in kwargs:
             self.path = kwargs["path"]
+        self.resident_in_cache = kwargs.get("resident_in_cache", None)
         if "sharing" in kwargs:
             self.sharing = kwargs["sharing"]
         if "size" in kwargs:
@@ -201,6 +221,90 @@ class VmVolume(object):
             raise ValueError("Invalid value for `elf_storage_policy`, must not be `None`")  # noqa: E501
 
         self._elf_storage_policy = elf_storage_policy
+
+    @property
+    def elf_storage_policy_ec_k(self):
+        """Gets the elf_storage_policy_ec_k of this VmVolume.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_k of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_k
+
+    @elf_storage_policy_ec_k.setter
+    def elf_storage_policy_ec_k(self, elf_storage_policy_ec_k):
+        """Sets the elf_storage_policy_ec_k of this VmVolume.
+
+
+        :param elf_storage_policy_ec_k: The elf_storage_policy_ec_k of this VmVolume.  # noqa: E501
+        :type elf_storage_policy_ec_k: int
+        """
+
+        self._elf_storage_policy_ec_k = elf_storage_policy_ec_k
+
+    @property
+    def elf_storage_policy_ec_m(self):
+        """Gets the elf_storage_policy_ec_m of this VmVolume.  # noqa: E501
+
+
+        :return: The elf_storage_policy_ec_m of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_ec_m
+
+    @elf_storage_policy_ec_m.setter
+    def elf_storage_policy_ec_m(self, elf_storage_policy_ec_m):
+        """Sets the elf_storage_policy_ec_m of this VmVolume.
+
+
+        :param elf_storage_policy_ec_m: The elf_storage_policy_ec_m of this VmVolume.  # noqa: E501
+        :type elf_storage_policy_ec_m: int
+        """
+
+        self._elf_storage_policy_ec_m = elf_storage_policy_ec_m
+
+    @property
+    def elf_storage_policy_replica_num(self):
+        """Gets the elf_storage_policy_replica_num of this VmVolume.  # noqa: E501
+
+
+        :return: The elf_storage_policy_replica_num of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_replica_num
+
+    @elf_storage_policy_replica_num.setter
+    def elf_storage_policy_replica_num(self, elf_storage_policy_replica_num):
+        """Sets the elf_storage_policy_replica_num of this VmVolume.
+
+
+        :param elf_storage_policy_replica_num: The elf_storage_policy_replica_num of this VmVolume.  # noqa: E501
+        :type elf_storage_policy_replica_num: int
+        """
+
+        self._elf_storage_policy_replica_num = elf_storage_policy_replica_num
+
+    @property
+    def elf_storage_policy_thin_provision(self):
+        """Gets the elf_storage_policy_thin_provision of this VmVolume.  # noqa: E501
+
+
+        :return: The elf_storage_policy_thin_provision of this VmVolume.  # noqa: E501
+        :rtype: bool
+        """
+        return self._elf_storage_policy_thin_provision
+
+    @elf_storage_policy_thin_provision.setter
+    def elf_storage_policy_thin_provision(self, elf_storage_policy_thin_provision):
+        """Sets the elf_storage_policy_thin_provision of this VmVolume.
+
+
+        :param elf_storage_policy_thin_provision: The elf_storage_policy_thin_provision of this VmVolume.  # noqa: E501
+        :type elf_storage_policy_thin_provision: bool
+        """
+
+        self._elf_storage_policy_thin_provision = elf_storage_policy_thin_provision
 
     @property
     def entity_async_status(self):
@@ -444,6 +548,27 @@ class VmVolume(object):
             raise ValueError("Invalid value for `path`, must not be `None`")  # noqa: E501
 
         self._path = path
+
+    @property
+    def resident_in_cache(self):
+        """Gets the resident_in_cache of this VmVolume.  # noqa: E501
+
+
+        :return: The resident_in_cache of this VmVolume.  # noqa: E501
+        :rtype: bool
+        """
+        return self._resident_in_cache
+
+    @resident_in_cache.setter
+    def resident_in_cache(self, resident_in_cache):
+        """Sets the resident_in_cache of this VmVolume.
+
+
+        :param resident_in_cache: The resident_in_cache of this VmVolume.  # noqa: E501
+        :type resident_in_cache: bool
+        """
+
+        self._resident_in_cache = resident_in_cache
 
     @property
     def sharing(self):

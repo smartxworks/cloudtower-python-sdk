@@ -28,14 +28,16 @@ class HostBatchCreateDiskInput(object):
         'type': 'DiskType',
         'size': 'float',
         'function': 'DiskFunction',
-        'drive': 'str'
+        'drive': 'str',
+        'chunk_ins_id': 'int'
     }
 
     attribute_map = {
         'type': 'type',
         'size': 'size',
         'function': 'function',
-        'drive': 'drive'
+        'drive': 'drive',
+        'chunk_ins_id': 'chunk_ins_id'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -46,6 +48,7 @@ class HostBatchCreateDiskInput(object):
         self._size = None
         self._function = None
         self._drive = None
+        self._chunk_ins_id = None
         self.discriminator = None
 
         self.type = kwargs.get("type", None)
@@ -53,6 +56,7 @@ class HostBatchCreateDiskInput(object):
         self.function = kwargs.get("function", None)
         if "drive" in kwargs:
             self.drive = kwargs["drive"]
+        self.chunk_ins_id = kwargs.get("chunk_ins_id", None)
 
     @property
     def type(self):
@@ -139,6 +143,27 @@ class HostBatchCreateDiskInput(object):
             raise ValueError("Invalid value for `drive`, must not be `None`")  # noqa: E501
 
         self._drive = drive
+
+    @property
+    def chunk_ins_id(self):
+        """Gets the chunk_ins_id of this HostBatchCreateDiskInput.  # noqa: E501
+
+
+        :return: The chunk_ins_id of this HostBatchCreateDiskInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._chunk_ins_id
+
+    @chunk_ins_id.setter
+    def chunk_ins_id(self, chunk_ins_id):
+        """Sets the chunk_ins_id of this HostBatchCreateDiskInput.
+
+
+        :param chunk_ins_id: The chunk_ins_id of this HostBatchCreateDiskInput.  # noqa: E501
+        :type chunk_ins_id: int
+        """
+
+        self._chunk_ins_id = chunk_ins_id
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

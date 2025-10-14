@@ -25,17 +25,26 @@ class Cluster(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'access_write_compress_enabled': 'bool',
+        'allocated_prioritized_space': 'int',
+        'allocated_prioritized_space_usage': 'float',
         'application_highest_version': 'str',
         'applications': 'list[NestedApplication]',
         'architecture': 'Architecture',
         'auto_converge': 'bool',
+        'commited_memory_bytes': 'int',
         'connect_state': 'ConnectState',
         'consistency_groups': 'list[NestedConsistencyGroup]',
         'current_cpu_model': 'str',
+        'data_reduction_ratio': 'float',
+        'data_reduction_saving': 'float',
         'datacenters': 'list[NestedDatacenter]',
         'disconnected_date': 'str',
         'disconnected_reason': 'ClusterConnectorErrorCode',
         'dns': 'list[str]',
+        'downgraded_prioritized_space': 'int',
+        'ecp_license': 'NestedEcpLicense',
+        'enable_tiering': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'everoute_cluster': 'NestedEverouteCluster',
         'failure_data_space': 'int',
@@ -53,6 +62,7 @@ class Cluster(object):
         'license_sign_date': 'str',
         'license_type': 'LicenseType',
         'local_id': 'str',
+        'logical_used_data_space': 'int',
         'maintenance_end_date': 'str',
         'maintenance_start_date': 'str',
         'management_vip': 'str',
@@ -65,12 +75,21 @@ class Cluster(object):
         'migration_data_size': 'int',
         'migration_speed': 'int',
         'name': 'str',
+        'no_performance_layer': 'bool',
         'ntp_mode': 'NtpMode',
         'ntp_servers': 'list[str]',
         'nvme_over_rdma_enabled': 'bool',
         'nvme_over_tcp_enabled': 'bool',
         'nvmf_enabled': 'bool',
+        'overall_efficiency': 'float',
+        'perf_allocated_data_space': 'int',
+        'perf_failure_data_space': 'int',
+        'perf_total_data_capacity': 'int',
+        'perf_used_data_space': 'int',
+        'perf_valid_data_space': 'int',
+        'planned_prioritized_space': 'int',
         'pmem_enabled': 'bool',
+        'prio_space_percentage': 'float',
         'provisioned_cpu_cores': 'int',
         'provisioned_cpu_cores_for_active_vm': 'int',
         'provisioned_for_active_vm_ratio': 'float',
@@ -80,6 +99,7 @@ class Cluster(object):
         'recommended_cpu_models': 'list[str]',
         'recover_data_size': 'int',
         'recover_speed': 'int',
+        'replica_capacity_only': 'bool',
         'reserved_cpu_cores_for_system_service': 'int',
         'running_vm_num': 'int',
         'settings': 'NestedClusterSettings',
@@ -94,11 +114,16 @@ class Cluster(object):
         'total_cpu_sockets': 'int',
         'total_data_capacity': 'int',
         'total_memory_bytes': 'int',
+        'total_prio_volume_size': 'int',
+        'total_prio_volume_size_usage': 'float',
         'type': 'ClusterType',
+        'upgrade_for_tiering': 'bool',
         'upgrade_tool_version': 'str',
+        'used_cache_space': 'int',
         'used_cpu_hz': 'float',
         'used_data_space': 'int',
         'used_memory_bytes': 'float',
+        'valid_cache_space': 'int',
         'valid_data_space': 'int',
         'vcenter_account': 'NestedVcenterAccount',
         'vdses': 'list[NestedVds]',
@@ -113,17 +138,26 @@ class Cluster(object):
     }
 
     attribute_map = {
+        'access_write_compress_enabled': 'access_write_compress_enabled',
+        'allocated_prioritized_space': 'allocated_prioritized_space',
+        'allocated_prioritized_space_usage': 'allocated_prioritized_space_usage',
         'application_highest_version': 'application_highest_version',
         'applications': 'applications',
         'architecture': 'architecture',
         'auto_converge': 'auto_converge',
+        'commited_memory_bytes': 'commited_memory_bytes',
         'connect_state': 'connect_state',
         'consistency_groups': 'consistency_groups',
         'current_cpu_model': 'current_cpu_model',
+        'data_reduction_ratio': 'data_reduction_ratio',
+        'data_reduction_saving': 'data_reduction_saving',
         'datacenters': 'datacenters',
         'disconnected_date': 'disconnected_date',
         'disconnected_reason': 'disconnected_reason',
         'dns': 'dns',
+        'downgraded_prioritized_space': 'downgraded_prioritized_space',
+        'ecp_license': 'ecp_license',
+        'enable_tiering': 'enable_tiering',
         'entity_async_status': 'entityAsyncStatus',
         'everoute_cluster': 'everoute_cluster',
         'failure_data_space': 'failure_data_space',
@@ -141,6 +175,7 @@ class Cluster(object):
         'license_sign_date': 'license_sign_date',
         'license_type': 'license_type',
         'local_id': 'local_id',
+        'logical_used_data_space': 'logical_used_data_space',
         'maintenance_end_date': 'maintenance_end_date',
         'maintenance_start_date': 'maintenance_start_date',
         'management_vip': 'management_vip',
@@ -153,12 +188,21 @@ class Cluster(object):
         'migration_data_size': 'migration_data_size',
         'migration_speed': 'migration_speed',
         'name': 'name',
+        'no_performance_layer': 'no_performance_layer',
         'ntp_mode': 'ntp_mode',
         'ntp_servers': 'ntp_servers',
         'nvme_over_rdma_enabled': 'nvme_over_rdma_enabled',
         'nvme_over_tcp_enabled': 'nvme_over_tcp_enabled',
         'nvmf_enabled': 'nvmf_enabled',
+        'overall_efficiency': 'overall_efficiency',
+        'perf_allocated_data_space': 'perf_allocated_data_space',
+        'perf_failure_data_space': 'perf_failure_data_space',
+        'perf_total_data_capacity': 'perf_total_data_capacity',
+        'perf_used_data_space': 'perf_used_data_space',
+        'perf_valid_data_space': 'perf_valid_data_space',
+        'planned_prioritized_space': 'planned_prioritized_space',
         'pmem_enabled': 'pmem_enabled',
+        'prio_space_percentage': 'prio_space_percentage',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
         'provisioned_cpu_cores_for_active_vm': 'provisioned_cpu_cores_for_active_vm',
         'provisioned_for_active_vm_ratio': 'provisioned_for_active_vm_ratio',
@@ -168,6 +212,7 @@ class Cluster(object):
         'recommended_cpu_models': 'recommended_cpu_models',
         'recover_data_size': 'recover_data_size',
         'recover_speed': 'recover_speed',
+        'replica_capacity_only': 'replica_capacity_only',
         'reserved_cpu_cores_for_system_service': 'reserved_cpu_cores_for_system_service',
         'running_vm_num': 'running_vm_num',
         'settings': 'settings',
@@ -182,11 +227,16 @@ class Cluster(object):
         'total_cpu_sockets': 'total_cpu_sockets',
         'total_data_capacity': 'total_data_capacity',
         'total_memory_bytes': 'total_memory_bytes',
+        'total_prio_volume_size': 'total_prio_volume_size',
+        'total_prio_volume_size_usage': 'total_prio_volume_size_usage',
         'type': 'type',
+        'upgrade_for_tiering': 'upgrade_for_tiering',
         'upgrade_tool_version': 'upgrade_tool_version',
+        'used_cache_space': 'used_cache_space',
         'used_cpu_hz': 'used_cpu_hz',
         'used_data_space': 'used_data_space',
         'used_memory_bytes': 'used_memory_bytes',
+        'valid_cache_space': 'valid_cache_space',
         'valid_data_space': 'valid_data_space',
         'vcenter_account': 'vcenterAccount',
         'vdses': 'vdses',
@@ -204,17 +254,26 @@ class Cluster(object):
         """Cluster - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._access_write_compress_enabled = None
+        self._allocated_prioritized_space = None
+        self._allocated_prioritized_space_usage = None
         self._application_highest_version = None
         self._applications = None
         self._architecture = None
         self._auto_converge = None
+        self._commited_memory_bytes = None
         self._connect_state = None
         self._consistency_groups = None
         self._current_cpu_model = None
+        self._data_reduction_ratio = None
+        self._data_reduction_saving = None
         self._datacenters = None
         self._disconnected_date = None
         self._disconnected_reason = None
         self._dns = None
+        self._downgraded_prioritized_space = None
+        self._ecp_license = None
+        self._enable_tiering = None
         self._entity_async_status = None
         self._everoute_cluster = None
         self._failure_data_space = None
@@ -232,6 +291,7 @@ class Cluster(object):
         self._license_sign_date = None
         self._license_type = None
         self._local_id = None
+        self._logical_used_data_space = None
         self._maintenance_end_date = None
         self._maintenance_start_date = None
         self._management_vip = None
@@ -244,12 +304,21 @@ class Cluster(object):
         self._migration_data_size = None
         self._migration_speed = None
         self._name = None
+        self._no_performance_layer = None
         self._ntp_mode = None
         self._ntp_servers = None
         self._nvme_over_rdma_enabled = None
         self._nvme_over_tcp_enabled = None
         self._nvmf_enabled = None
+        self._overall_efficiency = None
+        self._perf_allocated_data_space = None
+        self._perf_failure_data_space = None
+        self._perf_total_data_capacity = None
+        self._perf_used_data_space = None
+        self._perf_valid_data_space = None
+        self._planned_prioritized_space = None
         self._pmem_enabled = None
+        self._prio_space_percentage = None
         self._provisioned_cpu_cores = None
         self._provisioned_cpu_cores_for_active_vm = None
         self._provisioned_for_active_vm_ratio = None
@@ -259,6 +328,7 @@ class Cluster(object):
         self._recommended_cpu_models = None
         self._recover_data_size = None
         self._recover_speed = None
+        self._replica_capacity_only = None
         self._reserved_cpu_cores_for_system_service = None
         self._running_vm_num = None
         self._settings = None
@@ -273,11 +343,16 @@ class Cluster(object):
         self._total_cpu_sockets = None
         self._total_data_capacity = None
         self._total_memory_bytes = None
+        self._total_prio_volume_size = None
+        self._total_prio_volume_size_usage = None
         self._type = None
+        self._upgrade_for_tiering = None
         self._upgrade_tool_version = None
+        self._used_cache_space = None
         self._used_cpu_hz = None
         self._used_data_space = None
         self._used_memory_bytes = None
+        self._valid_cache_space = None
         self._valid_data_space = None
         self._vcenter_account = None
         self._vdses = None
@@ -291,20 +366,29 @@ class Cluster(object):
         self._zones = None
         self.discriminator = None
 
+        self.access_write_compress_enabled = kwargs.get("access_write_compress_enabled", None)
+        self.allocated_prioritized_space = kwargs.get("allocated_prioritized_space", None)
+        self.allocated_prioritized_space_usage = kwargs.get("allocated_prioritized_space_usage", None)
         self.application_highest_version = kwargs.get("application_highest_version", None)
         self.applications = kwargs.get("applications", None)
         if "architecture" in kwargs:
             self.architecture = kwargs["architecture"]
         self.auto_converge = kwargs.get("auto_converge", None)
+        self.commited_memory_bytes = kwargs.get("commited_memory_bytes", None)
         if "connect_state" in kwargs:
             self.connect_state = kwargs["connect_state"]
         self.consistency_groups = kwargs.get("consistency_groups", None)
         self.current_cpu_model = kwargs.get("current_cpu_model", None)
+        self.data_reduction_ratio = kwargs.get("data_reduction_ratio", None)
+        self.data_reduction_saving = kwargs.get("data_reduction_saving", None)
         self.datacenters = kwargs.get("datacenters", None)
         self.disconnected_date = kwargs.get("disconnected_date", None)
         self.disconnected_reason = kwargs.get("disconnected_reason", None)
         if "dns" in kwargs:
             self.dns = kwargs["dns"]
+        self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
+        self.ecp_license = kwargs.get("ecp_license", None)
+        self.enable_tiering = kwargs.get("enable_tiering", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.everoute_cluster = kwargs.get("everoute_cluster", None)
         self.failure_data_space = kwargs.get("failure_data_space", None)
@@ -324,6 +408,7 @@ class Cluster(object):
         self.license_sign_date = kwargs.get("license_sign_date", None)
         self.license_type = kwargs.get("license_type", None)
         self.local_id = kwargs.get("local_id", None)
+        self.logical_used_data_space = kwargs.get("logical_used_data_space", None)
         self.maintenance_end_date = kwargs.get("maintenance_end_date", None)
         self.maintenance_start_date = kwargs.get("maintenance_start_date", None)
         self.management_vip = kwargs.get("management_vip", None)
@@ -337,13 +422,22 @@ class Cluster(object):
         self.migration_speed = kwargs.get("migration_speed", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.no_performance_layer = kwargs.get("no_performance_layer", None)
         self.ntp_mode = kwargs.get("ntp_mode", None)
         if "ntp_servers" in kwargs:
             self.ntp_servers = kwargs["ntp_servers"]
         self.nvme_over_rdma_enabled = kwargs.get("nvme_over_rdma_enabled", None)
         self.nvme_over_tcp_enabled = kwargs.get("nvme_over_tcp_enabled", None)
         self.nvmf_enabled = kwargs.get("nvmf_enabled", None)
+        self.overall_efficiency = kwargs.get("overall_efficiency", None)
+        self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
+        self.perf_failure_data_space = kwargs.get("perf_failure_data_space", None)
+        self.perf_total_data_capacity = kwargs.get("perf_total_data_capacity", None)
+        self.perf_used_data_space = kwargs.get("perf_used_data_space", None)
+        self.perf_valid_data_space = kwargs.get("perf_valid_data_space", None)
+        self.planned_prioritized_space = kwargs.get("planned_prioritized_space", None)
         self.pmem_enabled = kwargs.get("pmem_enabled", None)
+        self.prio_space_percentage = kwargs.get("prio_space_percentage", None)
         self.provisioned_cpu_cores = kwargs.get("provisioned_cpu_cores", None)
         self.provisioned_cpu_cores_for_active_vm = kwargs.get("provisioned_cpu_cores_for_active_vm", None)
         self.provisioned_for_active_vm_ratio = kwargs.get("provisioned_for_active_vm_ratio", None)
@@ -354,6 +448,7 @@ class Cluster(object):
             self.recommended_cpu_models = kwargs["recommended_cpu_models"]
         self.recover_data_size = kwargs.get("recover_data_size", None)
         self.recover_speed = kwargs.get("recover_speed", None)
+        self.replica_capacity_only = kwargs.get("replica_capacity_only", None)
         self.reserved_cpu_cores_for_system_service = kwargs.get("reserved_cpu_cores_for_system_service", None)
         self.running_vm_num = kwargs.get("running_vm_num", None)
         self.settings = kwargs.get("settings", None)
@@ -369,12 +464,17 @@ class Cluster(object):
         self.total_cpu_sockets = kwargs.get("total_cpu_sockets", None)
         self.total_data_capacity = kwargs.get("total_data_capacity", None)
         self.total_memory_bytes = kwargs.get("total_memory_bytes", None)
+        self.total_prio_volume_size = kwargs.get("total_prio_volume_size", None)
+        self.total_prio_volume_size_usage = kwargs.get("total_prio_volume_size_usage", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
+        self.upgrade_for_tiering = kwargs.get("upgrade_for_tiering", None)
         self.upgrade_tool_version = kwargs.get("upgrade_tool_version", None)
+        self.used_cache_space = kwargs.get("used_cache_space", None)
         self.used_cpu_hz = kwargs.get("used_cpu_hz", None)
         self.used_data_space = kwargs.get("used_data_space", None)
         self.used_memory_bytes = kwargs.get("used_memory_bytes", None)
+        self.valid_cache_space = kwargs.get("valid_cache_space", None)
         self.valid_data_space = kwargs.get("valid_data_space", None)
         self.vcenter_account = kwargs.get("vcenter_account", None)
         self.vdses = kwargs.get("vdses", None)
@@ -387,6 +487,69 @@ class Cluster(object):
         self.vms = kwargs.get("vms", None)
         self.witness = kwargs.get("witness", None)
         self.zones = kwargs.get("zones", None)
+
+    @property
+    def access_write_compress_enabled(self):
+        """Gets the access_write_compress_enabled of this Cluster.  # noqa: E501
+
+
+        :return: The access_write_compress_enabled of this Cluster.  # noqa: E501
+        :rtype: bool
+        """
+        return self._access_write_compress_enabled
+
+    @access_write_compress_enabled.setter
+    def access_write_compress_enabled(self, access_write_compress_enabled):
+        """Sets the access_write_compress_enabled of this Cluster.
+
+
+        :param access_write_compress_enabled: The access_write_compress_enabled of this Cluster.  # noqa: E501
+        :type access_write_compress_enabled: bool
+        """
+
+        self._access_write_compress_enabled = access_write_compress_enabled
+
+    @property
+    def allocated_prioritized_space(self):
+        """Gets the allocated_prioritized_space of this Cluster.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_prioritized_space
+
+    @allocated_prioritized_space.setter
+    def allocated_prioritized_space(self, allocated_prioritized_space):
+        """Sets the allocated_prioritized_space of this Cluster.
+
+
+        :param allocated_prioritized_space: The allocated_prioritized_space of this Cluster.  # noqa: E501
+        :type allocated_prioritized_space: int
+        """
+
+        self._allocated_prioritized_space = allocated_prioritized_space
+
+    @property
+    def allocated_prioritized_space_usage(self):
+        """Gets the allocated_prioritized_space_usage of this Cluster.  # noqa: E501
+
+
+        :return: The allocated_prioritized_space_usage of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._allocated_prioritized_space_usage
+
+    @allocated_prioritized_space_usage.setter
+    def allocated_prioritized_space_usage(self, allocated_prioritized_space_usage):
+        """Sets the allocated_prioritized_space_usage of this Cluster.
+
+
+        :param allocated_prioritized_space_usage: The allocated_prioritized_space_usage of this Cluster.  # noqa: E501
+        :type allocated_prioritized_space_usage: float
+        """
+
+        self._allocated_prioritized_space_usage = allocated_prioritized_space_usage
 
     @property
     def application_highest_version(self):
@@ -475,6 +638,27 @@ class Cluster(object):
         self._auto_converge = auto_converge
 
     @property
+    def commited_memory_bytes(self):
+        """Gets the commited_memory_bytes of this Cluster.  # noqa: E501
+
+
+        :return: The commited_memory_bytes of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._commited_memory_bytes
+
+    @commited_memory_bytes.setter
+    def commited_memory_bytes(self, commited_memory_bytes):
+        """Sets the commited_memory_bytes of this Cluster.
+
+
+        :param commited_memory_bytes: The commited_memory_bytes of this Cluster.  # noqa: E501
+        :type commited_memory_bytes: int
+        """
+
+        self._commited_memory_bytes = commited_memory_bytes
+
+    @property
     def connect_state(self):
         """Gets the connect_state of this Cluster.  # noqa: E501
 
@@ -538,6 +722,48 @@ class Cluster(object):
         """
 
         self._current_cpu_model = current_cpu_model
+
+    @property
+    def data_reduction_ratio(self):
+        """Gets the data_reduction_ratio of this Cluster.  # noqa: E501
+
+
+        :return: The data_reduction_ratio of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._data_reduction_ratio
+
+    @data_reduction_ratio.setter
+    def data_reduction_ratio(self, data_reduction_ratio):
+        """Sets the data_reduction_ratio of this Cluster.
+
+
+        :param data_reduction_ratio: The data_reduction_ratio of this Cluster.  # noqa: E501
+        :type data_reduction_ratio: float
+        """
+
+        self._data_reduction_ratio = data_reduction_ratio
+
+    @property
+    def data_reduction_saving(self):
+        """Gets the data_reduction_saving of this Cluster.  # noqa: E501
+
+
+        :return: The data_reduction_saving of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._data_reduction_saving
+
+    @data_reduction_saving.setter
+    def data_reduction_saving(self, data_reduction_saving):
+        """Sets the data_reduction_saving of this Cluster.
+
+
+        :param data_reduction_saving: The data_reduction_saving of this Cluster.  # noqa: E501
+        :type data_reduction_saving: float
+        """
+
+        self._data_reduction_saving = data_reduction_saving
 
     @property
     def datacenters(self):
@@ -624,6 +850,69 @@ class Cluster(object):
             raise ValueError("Invalid value for `dns`, must not be `None`")  # noqa: E501
 
         self._dns = dns
+
+    @property
+    def downgraded_prioritized_space(self):
+        """Gets the downgraded_prioritized_space of this Cluster.  # noqa: E501
+
+
+        :return: The downgraded_prioritized_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._downgraded_prioritized_space
+
+    @downgraded_prioritized_space.setter
+    def downgraded_prioritized_space(self, downgraded_prioritized_space):
+        """Sets the downgraded_prioritized_space of this Cluster.
+
+
+        :param downgraded_prioritized_space: The downgraded_prioritized_space of this Cluster.  # noqa: E501
+        :type downgraded_prioritized_space: int
+        """
+
+        self._downgraded_prioritized_space = downgraded_prioritized_space
+
+    @property
+    def ecp_license(self):
+        """Gets the ecp_license of this Cluster.  # noqa: E501
+
+
+        :return: The ecp_license of this Cluster.  # noqa: E501
+        :rtype: NestedEcpLicense
+        """
+        return self._ecp_license
+
+    @ecp_license.setter
+    def ecp_license(self, ecp_license):
+        """Sets the ecp_license of this Cluster.
+
+
+        :param ecp_license: The ecp_license of this Cluster.  # noqa: E501
+        :type ecp_license: NestedEcpLicense
+        """
+
+        self._ecp_license = ecp_license
+
+    @property
+    def enable_tiering(self):
+        """Gets the enable_tiering of this Cluster.  # noqa: E501
+
+
+        :return: The enable_tiering of this Cluster.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_tiering
+
+    @enable_tiering.setter
+    def enable_tiering(self, enable_tiering):
+        """Sets the enable_tiering of this Cluster.
+
+
+        :param enable_tiering: The enable_tiering of this Cluster.  # noqa: E501
+        :type enable_tiering: bool
+        """
+
+        self._enable_tiering = enable_tiering
 
     @property
     def entity_async_status(self):
@@ -987,6 +1276,27 @@ class Cluster(object):
         self._local_id = local_id
 
     @property
+    def logical_used_data_space(self):
+        """Gets the logical_used_data_space of this Cluster.  # noqa: E501
+
+
+        :return: The logical_used_data_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._logical_used_data_space
+
+    @logical_used_data_space.setter
+    def logical_used_data_space(self, logical_used_data_space):
+        """Sets the logical_used_data_space of this Cluster.
+
+
+        :param logical_used_data_space: The logical_used_data_space of this Cluster.  # noqa: E501
+        :type logical_used_data_space: int
+        """
+
+        self._logical_used_data_space = logical_used_data_space
+
+    @property
     def maintenance_end_date(self):
         """Gets the maintenance_end_date of this Cluster.  # noqa: E501
 
@@ -1241,6 +1551,27 @@ class Cluster(object):
         self._name = name
 
     @property
+    def no_performance_layer(self):
+        """Gets the no_performance_layer of this Cluster.  # noqa: E501
+
+
+        :return: The no_performance_layer of this Cluster.  # noqa: E501
+        :rtype: bool
+        """
+        return self._no_performance_layer
+
+    @no_performance_layer.setter
+    def no_performance_layer(self, no_performance_layer):
+        """Sets the no_performance_layer of this Cluster.
+
+
+        :param no_performance_layer: The no_performance_layer of this Cluster.  # noqa: E501
+        :type no_performance_layer: bool
+        """
+
+        self._no_performance_layer = no_performance_layer
+
+    @property
     def ntp_mode(self):
         """Gets the ntp_mode of this Cluster.  # noqa: E501
 
@@ -1348,6 +1679,153 @@ class Cluster(object):
         self._nvmf_enabled = nvmf_enabled
 
     @property
+    def overall_efficiency(self):
+        """Gets the overall_efficiency of this Cluster.  # noqa: E501
+
+
+        :return: The overall_efficiency of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._overall_efficiency
+
+    @overall_efficiency.setter
+    def overall_efficiency(self, overall_efficiency):
+        """Sets the overall_efficiency of this Cluster.
+
+
+        :param overall_efficiency: The overall_efficiency of this Cluster.  # noqa: E501
+        :type overall_efficiency: float
+        """
+
+        self._overall_efficiency = overall_efficiency
+
+    @property
+    def perf_allocated_data_space(self):
+        """Gets the perf_allocated_data_space of this Cluster.  # noqa: E501
+
+
+        :return: The perf_allocated_data_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_allocated_data_space
+
+    @perf_allocated_data_space.setter
+    def perf_allocated_data_space(self, perf_allocated_data_space):
+        """Sets the perf_allocated_data_space of this Cluster.
+
+
+        :param perf_allocated_data_space: The perf_allocated_data_space of this Cluster.  # noqa: E501
+        :type perf_allocated_data_space: int
+        """
+
+        self._perf_allocated_data_space = perf_allocated_data_space
+
+    @property
+    def perf_failure_data_space(self):
+        """Gets the perf_failure_data_space of this Cluster.  # noqa: E501
+
+
+        :return: The perf_failure_data_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_failure_data_space
+
+    @perf_failure_data_space.setter
+    def perf_failure_data_space(self, perf_failure_data_space):
+        """Sets the perf_failure_data_space of this Cluster.
+
+
+        :param perf_failure_data_space: The perf_failure_data_space of this Cluster.  # noqa: E501
+        :type perf_failure_data_space: int
+        """
+
+        self._perf_failure_data_space = perf_failure_data_space
+
+    @property
+    def perf_total_data_capacity(self):
+        """Gets the perf_total_data_capacity of this Cluster.  # noqa: E501
+
+
+        :return: The perf_total_data_capacity of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_total_data_capacity
+
+    @perf_total_data_capacity.setter
+    def perf_total_data_capacity(self, perf_total_data_capacity):
+        """Sets the perf_total_data_capacity of this Cluster.
+
+
+        :param perf_total_data_capacity: The perf_total_data_capacity of this Cluster.  # noqa: E501
+        :type perf_total_data_capacity: int
+        """
+
+        self._perf_total_data_capacity = perf_total_data_capacity
+
+    @property
+    def perf_used_data_space(self):
+        """Gets the perf_used_data_space of this Cluster.  # noqa: E501
+
+
+        :return: The perf_used_data_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_used_data_space
+
+    @perf_used_data_space.setter
+    def perf_used_data_space(self, perf_used_data_space):
+        """Sets the perf_used_data_space of this Cluster.
+
+
+        :param perf_used_data_space: The perf_used_data_space of this Cluster.  # noqa: E501
+        :type perf_used_data_space: int
+        """
+
+        self._perf_used_data_space = perf_used_data_space
+
+    @property
+    def perf_valid_data_space(self):
+        """Gets the perf_valid_data_space of this Cluster.  # noqa: E501
+
+
+        :return: The perf_valid_data_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._perf_valid_data_space
+
+    @perf_valid_data_space.setter
+    def perf_valid_data_space(self, perf_valid_data_space):
+        """Sets the perf_valid_data_space of this Cluster.
+
+
+        :param perf_valid_data_space: The perf_valid_data_space of this Cluster.  # noqa: E501
+        :type perf_valid_data_space: int
+        """
+
+        self._perf_valid_data_space = perf_valid_data_space
+
+    @property
+    def planned_prioritized_space(self):
+        """Gets the planned_prioritized_space of this Cluster.  # noqa: E501
+
+
+        :return: The planned_prioritized_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._planned_prioritized_space
+
+    @planned_prioritized_space.setter
+    def planned_prioritized_space(self, planned_prioritized_space):
+        """Sets the planned_prioritized_space of this Cluster.
+
+
+        :param planned_prioritized_space: The planned_prioritized_space of this Cluster.  # noqa: E501
+        :type planned_prioritized_space: int
+        """
+
+        self._planned_prioritized_space = planned_prioritized_space
+
+    @property
     def pmem_enabled(self):
         """Gets the pmem_enabled of this Cluster.  # noqa: E501
 
@@ -1367,6 +1845,27 @@ class Cluster(object):
         """
 
         self._pmem_enabled = pmem_enabled
+
+    @property
+    def prio_space_percentage(self):
+        """Gets the prio_space_percentage of this Cluster.  # noqa: E501
+
+
+        :return: The prio_space_percentage of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._prio_space_percentage
+
+    @prio_space_percentage.setter
+    def prio_space_percentage(self, prio_space_percentage):
+        """Sets the prio_space_percentage of this Cluster.
+
+
+        :param prio_space_percentage: The prio_space_percentage of this Cluster.  # noqa: E501
+        :type prio_space_percentage: float
+        """
+
+        self._prio_space_percentage = prio_space_percentage
 
     @property
     def provisioned_cpu_cores(self):
@@ -1558,6 +2057,27 @@ class Cluster(object):
         """
 
         self._recover_speed = recover_speed
+
+    @property
+    def replica_capacity_only(self):
+        """Gets the replica_capacity_only of this Cluster.  # noqa: E501
+
+
+        :return: The replica_capacity_only of this Cluster.  # noqa: E501
+        :rtype: bool
+        """
+        return self._replica_capacity_only
+
+    @replica_capacity_only.setter
+    def replica_capacity_only(self, replica_capacity_only):
+        """Sets the replica_capacity_only of this Cluster.
+
+
+        :param replica_capacity_only: The replica_capacity_only of this Cluster.  # noqa: E501
+        :type replica_capacity_only: bool
+        """
+
+        self._replica_capacity_only = replica_capacity_only
 
     @property
     def reserved_cpu_cores_for_system_service(self):
@@ -1856,6 +2376,48 @@ class Cluster(object):
         self._total_memory_bytes = total_memory_bytes
 
     @property
+    def total_prio_volume_size(self):
+        """Gets the total_prio_volume_size of this Cluster.  # noqa: E501
+
+
+        :return: The total_prio_volume_size of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_prio_volume_size
+
+    @total_prio_volume_size.setter
+    def total_prio_volume_size(self, total_prio_volume_size):
+        """Sets the total_prio_volume_size of this Cluster.
+
+
+        :param total_prio_volume_size: The total_prio_volume_size of this Cluster.  # noqa: E501
+        :type total_prio_volume_size: int
+        """
+
+        self._total_prio_volume_size = total_prio_volume_size
+
+    @property
+    def total_prio_volume_size_usage(self):
+        """Gets the total_prio_volume_size_usage of this Cluster.  # noqa: E501
+
+
+        :return: The total_prio_volume_size_usage of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._total_prio_volume_size_usage
+
+    @total_prio_volume_size_usage.setter
+    def total_prio_volume_size_usage(self, total_prio_volume_size_usage):
+        """Sets the total_prio_volume_size_usage of this Cluster.
+
+
+        :param total_prio_volume_size_usage: The total_prio_volume_size_usage of this Cluster.  # noqa: E501
+        :type total_prio_volume_size_usage: float
+        """
+
+        self._total_prio_volume_size_usage = total_prio_volume_size_usage
+
+    @property
     def type(self):
         """Gets the type of this Cluster.  # noqa: E501
 
@@ -1879,6 +2441,27 @@ class Cluster(object):
         self._type = type
 
     @property
+    def upgrade_for_tiering(self):
+        """Gets the upgrade_for_tiering of this Cluster.  # noqa: E501
+
+
+        :return: The upgrade_for_tiering of this Cluster.  # noqa: E501
+        :rtype: bool
+        """
+        return self._upgrade_for_tiering
+
+    @upgrade_for_tiering.setter
+    def upgrade_for_tiering(self, upgrade_for_tiering):
+        """Sets the upgrade_for_tiering of this Cluster.
+
+
+        :param upgrade_for_tiering: The upgrade_for_tiering of this Cluster.  # noqa: E501
+        :type upgrade_for_tiering: bool
+        """
+
+        self._upgrade_for_tiering = upgrade_for_tiering
+
+    @property
     def upgrade_tool_version(self):
         """Gets the upgrade_tool_version of this Cluster.  # noqa: E501
 
@@ -1898,6 +2481,27 @@ class Cluster(object):
         """
 
         self._upgrade_tool_version = upgrade_tool_version
+
+    @property
+    def used_cache_space(self):
+        """Gets the used_cache_space of this Cluster.  # noqa: E501
+
+
+        :return: The used_cache_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._used_cache_space
+
+    @used_cache_space.setter
+    def used_cache_space(self, used_cache_space):
+        """Sets the used_cache_space of this Cluster.
+
+
+        :param used_cache_space: The used_cache_space of this Cluster.  # noqa: E501
+        :type used_cache_space: int
+        """
+
+        self._used_cache_space = used_cache_space
 
     @property
     def used_cpu_hz(self):
@@ -1961,6 +2565,27 @@ class Cluster(object):
         """
 
         self._used_memory_bytes = used_memory_bytes
+
+    @property
+    def valid_cache_space(self):
+        """Gets the valid_cache_space of this Cluster.  # noqa: E501
+
+
+        :return: The valid_cache_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._valid_cache_space
+
+    @valid_cache_space.setter
+    def valid_cache_space(self, valid_cache_space):
+        """Sets the valid_cache_space of this Cluster.
+
+
+        :param valid_cache_space: The valid_cache_space of this Cluster.  # noqa: E501
+        :type valid_cache_space: int
+        """
+
+        self._valid_cache_space = valid_cache_space
 
     @property
     def valid_data_space(self):

@@ -25,9 +25,17 @@ class IscsiLunUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'replica_num': 'int',
+        'thin_provision': 'bool',
         'assigned_size_unit': 'ByteUnit',
         'assigned_size': 'int',
         'name': 'str',
+        'business_host_groups': 'BusinessHostGroupWhereInput',
+        'business_hosts': 'BusinessHostWhereInput',
+        'business_host_is_same_with_parent': 'bool',
+        'configuration_method': 'ConfigurationMethod',
+        'encrypt_method': 'EncryptMethod',
+        'prioritized': 'bool',
         'bps_wr_max_length': 'int',
         'bps_wr_max_unit': 'BPSUnit',
         'bps_wr_max': 'int',
@@ -56,9 +64,17 @@ class IscsiLunUpdationParamsData(object):
     }
 
     attribute_map = {
+        'replica_num': 'replica_num',
+        'thin_provision': 'thin_provision',
         'assigned_size_unit': 'assigned_size_unit',
         'assigned_size': 'assigned_size',
         'name': 'name',
+        'business_host_groups': 'business_host_groups',
+        'business_hosts': 'business_hosts',
+        'business_host_is_same_with_parent': 'business_host_is_same_with_parent',
+        'configuration_method': 'configuration_method',
+        'encrypt_method': 'encrypt_method',
+        'prioritized': 'prioritized',
         'bps_wr_max_length': 'bps_wr_max_length',
         'bps_wr_max_unit': 'bps_wr_max_unit',
         'bps_wr_max': 'bps_wr_max',
@@ -90,9 +106,17 @@ class IscsiLunUpdationParamsData(object):
         """IscsiLunUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._replica_num = None
+        self._thin_provision = None
         self._assigned_size_unit = None
         self._assigned_size = None
         self._name = None
+        self._business_host_groups = None
+        self._business_hosts = None
+        self._business_host_is_same_with_parent = None
+        self._configuration_method = None
+        self._encrypt_method = None
+        self._prioritized = None
         self._bps_wr_max_length = None
         self._bps_wr_max_unit = None
         self._bps_wr_max = None
@@ -120,12 +144,28 @@ class IscsiLunUpdationParamsData(object):
         self._allowed_initiators = None
         self.discriminator = None
 
+        if "replica_num" in kwargs:
+            self.replica_num = kwargs["replica_num"]
+        if "thin_provision" in kwargs:
+            self.thin_provision = kwargs["thin_provision"]
         if "assigned_size_unit" in kwargs:
             self.assigned_size_unit = kwargs["assigned_size_unit"]
         if "assigned_size" in kwargs:
             self.assigned_size = kwargs["assigned_size"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        if "business_host_groups" in kwargs:
+            self.business_host_groups = kwargs["business_host_groups"]
+        if "business_hosts" in kwargs:
+            self.business_hosts = kwargs["business_hosts"]
+        if "business_host_is_same_with_parent" in kwargs:
+            self.business_host_is_same_with_parent = kwargs["business_host_is_same_with_parent"]
+        if "configuration_method" in kwargs:
+            self.configuration_method = kwargs["configuration_method"]
+        if "encrypt_method" in kwargs:
+            self.encrypt_method = kwargs["encrypt_method"]
+        if "prioritized" in kwargs:
+            self.prioritized = kwargs["prioritized"]
         if "bps_wr_max_length" in kwargs:
             self.bps_wr_max_length = kwargs["bps_wr_max_length"]
         if "bps_wr_max_unit" in kwargs:
@@ -176,6 +216,48 @@ class IscsiLunUpdationParamsData(object):
             self.iops = kwargs["iops"]
         if "allowed_initiators" in kwargs:
             self.allowed_initiators = kwargs["allowed_initiators"]
+
+    @property
+    def replica_num(self):
+        """Gets the replica_num of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The replica_num of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: int
+        """
+        return self._replica_num
+
+    @replica_num.setter
+    def replica_num(self, replica_num):
+        """Sets the replica_num of this IscsiLunUpdationParamsData.
+
+
+        :param replica_num: The replica_num of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type replica_num: int
+        """
+
+        self._replica_num = replica_num
+
+    @property
+    def thin_provision(self):
+        """Gets the thin_provision of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The thin_provision of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._thin_provision
+
+    @thin_provision.setter
+    def thin_provision(self, thin_provision):
+        """Sets the thin_provision of this IscsiLunUpdationParamsData.
+
+
+        :param thin_provision: The thin_provision of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type thin_provision: bool
+        """
+
+        self._thin_provision = thin_provision
 
     @property
     def assigned_size_unit(self):
@@ -239,6 +321,132 @@ class IscsiLunUpdationParamsData(object):
         """
 
         self._name = name
+
+    @property
+    def business_host_groups(self):
+        """Gets the business_host_groups of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The business_host_groups of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: BusinessHostGroupWhereInput
+        """
+        return self._business_host_groups
+
+    @business_host_groups.setter
+    def business_host_groups(self, business_host_groups):
+        """Sets the business_host_groups of this IscsiLunUpdationParamsData.
+
+
+        :param business_host_groups: The business_host_groups of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type business_host_groups: BusinessHostGroupWhereInput
+        """
+
+        self._business_host_groups = business_host_groups
+
+    @property
+    def business_hosts(self):
+        """Gets the business_hosts of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The business_hosts of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: BusinessHostWhereInput
+        """
+        return self._business_hosts
+
+    @business_hosts.setter
+    def business_hosts(self, business_hosts):
+        """Sets the business_hosts of this IscsiLunUpdationParamsData.
+
+
+        :param business_hosts: The business_hosts of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type business_hosts: BusinessHostWhereInput
+        """
+
+        self._business_hosts = business_hosts
+
+    @property
+    def business_host_is_same_with_parent(self):
+        """Gets the business_host_is_same_with_parent of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The business_host_is_same_with_parent of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._business_host_is_same_with_parent
+
+    @business_host_is_same_with_parent.setter
+    def business_host_is_same_with_parent(self, business_host_is_same_with_parent):
+        """Sets the business_host_is_same_with_parent of this IscsiLunUpdationParamsData.
+
+
+        :param business_host_is_same_with_parent: The business_host_is_same_with_parent of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type business_host_is_same_with_parent: bool
+        """
+
+        self._business_host_is_same_with_parent = business_host_is_same_with_parent
+
+    @property
+    def configuration_method(self):
+        """Gets the configuration_method of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The configuration_method of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: ConfigurationMethod
+        """
+        return self._configuration_method
+
+    @configuration_method.setter
+    def configuration_method(self, configuration_method):
+        """Sets the configuration_method of this IscsiLunUpdationParamsData.
+
+
+        :param configuration_method: The configuration_method of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type configuration_method: ConfigurationMethod
+        """
+
+        self._configuration_method = configuration_method
+
+    @property
+    def encrypt_method(self):
+        """Gets the encrypt_method of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The encrypt_method of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: EncryptMethod
+        """
+        return self._encrypt_method
+
+    @encrypt_method.setter
+    def encrypt_method(self, encrypt_method):
+        """Sets the encrypt_method of this IscsiLunUpdationParamsData.
+
+
+        :param encrypt_method: The encrypt_method of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type encrypt_method: EncryptMethod
+        """
+
+        self._encrypt_method = encrypt_method
+
+    @property
+    def prioritized(self):
+        """Gets the prioritized of this IscsiLunUpdationParamsData.  # noqa: E501
+
+
+        :return: The prioritized of this IscsiLunUpdationParamsData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._prioritized
+
+    @prioritized.setter
+    def prioritized(self, prioritized):
+        """Sets the prioritized of this IscsiLunUpdationParamsData.
+
+
+        :param prioritized: The prioritized of this IscsiLunUpdationParamsData.  # noqa: E501
+        :type prioritized: bool
+        """
+
+        self._prioritized = prioritized
 
     @property
     def bps_wr_max_length(self):
