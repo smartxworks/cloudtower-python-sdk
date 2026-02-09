@@ -138,6 +138,7 @@ class ReplicationRestorePointWhereInput(object):
         'snapshot_consistent_type_in': 'list[ConsistentType]',
         'snapshot_consistent_type_not': 'ConsistentType',
         'snapshot_consistent_type_not_in': 'list[ConsistentType]',
+        'sync_replication_plan': 'SyncReplicationPlanWhereInput',
         'tower_deploy_id': 'str',
         'tower_deploy_id_contains': 'str',
         'tower_deploy_id_ends_with': 'str',
@@ -301,6 +302,7 @@ class ReplicationRestorePointWhereInput(object):
         'snapshot_consistent_type_in': 'snapshot_consistent_type_in',
         'snapshot_consistent_type_not': 'snapshot_consistent_type_not',
         'snapshot_consistent_type_not_in': 'snapshot_consistent_type_not_in',
+        'sync_replication_plan': 'sync_replication_plan',
         'tower_deploy_id': 'tower_deploy_id',
         'tower_deploy_id_contains': 'tower_deploy_id_contains',
         'tower_deploy_id_ends_with': 'tower_deploy_id_ends_with',
@@ -467,6 +469,7 @@ class ReplicationRestorePointWhereInput(object):
         self._snapshot_consistent_type_in = None
         self._snapshot_consistent_type_not = None
         self._snapshot_consistent_type_not_in = None
+        self._sync_replication_plan = None
         self._tower_deploy_id = None
         self._tower_deploy_id_contains = None
         self._tower_deploy_id_ends_with = None
@@ -629,6 +632,7 @@ class ReplicationRestorePointWhereInput(object):
         self.snapshot_consistent_type_in = kwargs.get("snapshot_consistent_type_in", None)
         self.snapshot_consistent_type_not = kwargs.get("snapshot_consistent_type_not", None)
         self.snapshot_consistent_type_not_in = kwargs.get("snapshot_consistent_type_not_in", None)
+        self.sync_replication_plan = kwargs.get("sync_replication_plan", None)
         self.tower_deploy_id = kwargs.get("tower_deploy_id", None)
         self.tower_deploy_id_contains = kwargs.get("tower_deploy_id_contains", None)
         self.tower_deploy_id_ends_with = kwargs.get("tower_deploy_id_ends_with", None)
@@ -3049,6 +3053,27 @@ class ReplicationRestorePointWhereInput(object):
         """
 
         self._snapshot_consistent_type_not_in = snapshot_consistent_type_not_in
+
+    @property
+    def sync_replication_plan(self):
+        """Gets the sync_replication_plan of this ReplicationRestorePointWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plan of this ReplicationRestorePointWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plan
+
+    @sync_replication_plan.setter
+    def sync_replication_plan(self, sync_replication_plan):
+        """Sets the sync_replication_plan of this ReplicationRestorePointWhereInput.
+
+
+        :param sync_replication_plan: The sync_replication_plan of this ReplicationRestorePointWhereInput.  # noqa: E501
+        :type sync_replication_plan: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plan = sync_replication_plan
 
     @property
     def tower_deploy_id(self):

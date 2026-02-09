@@ -59,6 +59,8 @@ class PermanentFailoverTargetExecutionWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'is_sync_replication': 'bool',
+        'is_sync_replication_not': 'bool',
         'keep_snapshot': 'bool',
         'keep_snapshot_not': 'bool',
         'keep_test_vm': 'bool',
@@ -130,6 +132,8 @@ class PermanentFailoverTargetExecutionWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'is_sync_replication': 'is_sync_replication',
+        'is_sync_replication_not': 'is_sync_replication_not',
         'keep_snapshot': 'keep_snapshot',
         'keep_snapshot_not': 'keep_snapshot_not',
         'keep_test_vm': 'keep_test_vm',
@@ -204,6 +208,8 @@ class PermanentFailoverTargetExecutionWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._is_sync_replication = None
+        self._is_sync_replication_not = None
         self._keep_snapshot = None
         self._keep_snapshot_not = None
         self._keep_test_vm = None
@@ -274,6 +280,8 @@ class PermanentFailoverTargetExecutionWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.is_sync_replication = kwargs.get("is_sync_replication", None)
+        self.is_sync_replication_not = kwargs.get("is_sync_replication_not", None)
         self.keep_snapshot = kwargs.get("keep_snapshot", None)
         self.keep_snapshot_not = kwargs.get("keep_snapshot_not", None)
         self.keep_test_vm = kwargs.get("keep_test_vm", None)
@@ -1022,6 +1030,48 @@ class PermanentFailoverTargetExecutionWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def is_sync_replication(self):
+        """Gets the is_sync_replication of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The is_sync_replication of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_sync_replication
+
+    @is_sync_replication.setter
+    def is_sync_replication(self, is_sync_replication):
+        """Sets the is_sync_replication of this PermanentFailoverTargetExecutionWhereInput.
+
+
+        :param is_sync_replication: The is_sync_replication of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+        :type is_sync_replication: bool
+        """
+
+        self._is_sync_replication = is_sync_replication
+
+    @property
+    def is_sync_replication_not(self):
+        """Gets the is_sync_replication_not of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The is_sync_replication_not of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_sync_replication_not
+
+    @is_sync_replication_not.setter
+    def is_sync_replication_not(self, is_sync_replication_not):
+        """Sets the is_sync_replication_not of this PermanentFailoverTargetExecutionWhereInput.
+
+
+        :param is_sync_replication_not: The is_sync_replication_not of this PermanentFailoverTargetExecutionWhereInput.  # noqa: E501
+        :type is_sync_replication_not: bool
+        """
+
+        self._is_sync_replication_not = is_sync_replication_not
 
     @property
     def keep_snapshot(self):

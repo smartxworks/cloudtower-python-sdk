@@ -2,10 +2,9 @@ import logging
 from multiprocessing.pool import ThreadPool
 
 from cloudtower.models import UploadResourceType, UploadTaskStatus
-from cloudtower.api import UploadTaskApi, ContentLibraryImageApi
+from cloudtower.api import UploadTaskApi, ContentLibraryImageApi, ElfImageApi
 
 logger = logging.getLogger(__name__)
-
 
 def get_svt_image_version(path):
     p = ""

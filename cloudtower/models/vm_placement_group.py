@@ -34,6 +34,7 @@ class VmPlacementGroup(object):
         'local_id': 'str',
         'local_updated_at': 'str',
         'name': 'str',
+        'usage': 'VmPlacementGroupUsage',
         'vm_host_must_enabled': 'bool',
         'vm_host_must_host_uuids': 'list[NestedHost]',
         'vm_host_must_policy': 'bool',
@@ -55,6 +56,7 @@ class VmPlacementGroup(object):
         'local_id': 'local_id',
         'local_updated_at': 'local_updated_at',
         'name': 'name',
+        'usage': 'usage',
         'vm_host_must_enabled': 'vm_host_must_enabled',
         'vm_host_must_host_uuids': 'vm_host_must_host_uuids',
         'vm_host_must_policy': 'vm_host_must_policy',
@@ -79,6 +81,7 @@ class VmPlacementGroup(object):
         self._local_id = None
         self._local_updated_at = None
         self._name = None
+        self._usage = None
         self._vm_host_must_enabled = None
         self._vm_host_must_host_uuids = None
         self._vm_host_must_policy = None
@@ -107,6 +110,7 @@ class VmPlacementGroup(object):
             self.local_updated_at = kwargs["local_updated_at"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.usage = kwargs.get("usage", None)
         if "vm_host_must_enabled" in kwargs:
             self.vm_host_must_enabled = kwargs["vm_host_must_enabled"]
         self.vm_host_must_host_uuids = kwargs.get("vm_host_must_host_uuids", None)
@@ -327,6 +331,27 @@ class VmPlacementGroup(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def usage(self):
+        """Gets the usage of this VmPlacementGroup.  # noqa: E501
+
+
+        :return: The usage of this VmPlacementGroup.  # noqa: E501
+        :rtype: VmPlacementGroupUsage
+        """
+        return self._usage
+
+    @usage.setter
+    def usage(self, usage):
+        """Sets the usage of this VmPlacementGroup.
+
+
+        :param usage: The usage of this VmPlacementGroup.  # noqa: E501
+        :type usage: VmPlacementGroupUsage
+        """
+
+        self._usage = usage
 
     @property
     def vm_host_must_enabled(self):

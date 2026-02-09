@@ -39,6 +39,8 @@ class Cluster(object):
         'data_reduction_ratio': 'float',
         'data_reduction_saving': 'float',
         'datacenters': 'list[NestedDatacenter]',
+        'dirty_cache_space': 'int',
+        'dirty_cache_usage': 'float',
         'disconnected_date': 'str',
         'disconnected_reason': 'ClusterConnectorErrorCode',
         'dns': 'list[str]',
@@ -47,6 +49,7 @@ class Cluster(object):
         'enable_tiering': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'everoute_cluster': 'NestedEverouteCluster',
+        'failure_cache_space': 'int',
         'failure_data_space': 'int',
         'has_metrox': 'bool',
         'host_num': 'int',
@@ -152,6 +155,8 @@ class Cluster(object):
         'data_reduction_ratio': 'data_reduction_ratio',
         'data_reduction_saving': 'data_reduction_saving',
         'datacenters': 'datacenters',
+        'dirty_cache_space': 'dirty_cache_space',
+        'dirty_cache_usage': 'dirty_cache_usage',
         'disconnected_date': 'disconnected_date',
         'disconnected_reason': 'disconnected_reason',
         'dns': 'dns',
@@ -160,6 +165,7 @@ class Cluster(object):
         'enable_tiering': 'enable_tiering',
         'entity_async_status': 'entityAsyncStatus',
         'everoute_cluster': 'everoute_cluster',
+        'failure_cache_space': 'failure_cache_space',
         'failure_data_space': 'failure_data_space',
         'has_metrox': 'has_metrox',
         'host_num': 'host_num',
@@ -268,6 +274,8 @@ class Cluster(object):
         self._data_reduction_ratio = None
         self._data_reduction_saving = None
         self._datacenters = None
+        self._dirty_cache_space = None
+        self._dirty_cache_usage = None
         self._disconnected_date = None
         self._disconnected_reason = None
         self._dns = None
@@ -276,6 +284,7 @@ class Cluster(object):
         self._enable_tiering = None
         self._entity_async_status = None
         self._everoute_cluster = None
+        self._failure_cache_space = None
         self._failure_data_space = None
         self._has_metrox = None
         self._host_num = None
@@ -382,6 +391,8 @@ class Cluster(object):
         self.data_reduction_ratio = kwargs.get("data_reduction_ratio", None)
         self.data_reduction_saving = kwargs.get("data_reduction_saving", None)
         self.datacenters = kwargs.get("datacenters", None)
+        self.dirty_cache_space = kwargs.get("dirty_cache_space", None)
+        self.dirty_cache_usage = kwargs.get("dirty_cache_usage", None)
         self.disconnected_date = kwargs.get("disconnected_date", None)
         self.disconnected_reason = kwargs.get("disconnected_reason", None)
         if "dns" in kwargs:
@@ -391,6 +402,7 @@ class Cluster(object):
         self.enable_tiering = kwargs.get("enable_tiering", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.everoute_cluster = kwargs.get("everoute_cluster", None)
+        self.failure_cache_space = kwargs.get("failure_cache_space", None)
         self.failure_data_space = kwargs.get("failure_data_space", None)
         self.has_metrox = kwargs.get("has_metrox", None)
         self.host_num = kwargs.get("host_num", None)
@@ -787,6 +799,48 @@ class Cluster(object):
         self._datacenters = datacenters
 
     @property
+    def dirty_cache_space(self):
+        """Gets the dirty_cache_space of this Cluster.  # noqa: E501
+
+
+        :return: The dirty_cache_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space
+
+    @dirty_cache_space.setter
+    def dirty_cache_space(self, dirty_cache_space):
+        """Sets the dirty_cache_space of this Cluster.
+
+
+        :param dirty_cache_space: The dirty_cache_space of this Cluster.  # noqa: E501
+        :type dirty_cache_space: int
+        """
+
+        self._dirty_cache_space = dirty_cache_space
+
+    @property
+    def dirty_cache_usage(self):
+        """Gets the dirty_cache_usage of this Cluster.  # noqa: E501
+
+
+        :return: The dirty_cache_usage of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage
+
+    @dirty_cache_usage.setter
+    def dirty_cache_usage(self, dirty_cache_usage):
+        """Sets the dirty_cache_usage of this Cluster.
+
+
+        :param dirty_cache_usage: The dirty_cache_usage of this Cluster.  # noqa: E501
+        :type dirty_cache_usage: float
+        """
+
+        self._dirty_cache_usage = dirty_cache_usage
+
+    @property
     def disconnected_date(self):
         """Gets the disconnected_date of this Cluster.  # noqa: E501
 
@@ -955,6 +1009,27 @@ class Cluster(object):
         """
 
         self._everoute_cluster = everoute_cluster
+
+    @property
+    def failure_cache_space(self):
+        """Gets the failure_cache_space of this Cluster.  # noqa: E501
+
+
+        :return: The failure_cache_space of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space
+
+    @failure_cache_space.setter
+    def failure_cache_space(self, failure_cache_space):
+        """Sets the failure_cache_space of this Cluster.
+
+
+        :param failure_cache_space: The failure_cache_space of this Cluster.  # noqa: E501
+        :type failure_cache_space: int
+        """
+
+        self._failure_cache_space = failure_cache_space
 
     @property
     def failure_data_space(self):

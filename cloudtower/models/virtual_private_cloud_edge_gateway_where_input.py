@@ -42,6 +42,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'description_not_in': 'list[str]',
         'description_not_starts_with': 'str',
         'description_starts_with': 'str',
+        'edge_gateway_group': 'VirtualPrivateCloudEdgeGatewayGroupWhereInput',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -76,7 +77,8 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'name_starts_with': 'str',
         'vdses_every': 'VdsWhereInput',
         'vdses_none': 'VdsWhereInput',
-        'vdses_some': 'VdsWhereInput'
+        'vdses_some': 'VdsWhereInput',
+        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
     }
 
     attribute_map = {
@@ -97,6 +99,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'description_not_in': 'description_not_in',
         'description_not_starts_with': 'description_not_starts_with',
         'description_starts_with': 'description_starts_with',
+        'edge_gateway_group': 'edge_gateway_group',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -131,7 +134,8 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         'name_starts_with': 'name_starts_with',
         'vdses_every': 'vdses_every',
         'vdses_none': 'vdses_none',
-        'vdses_some': 'vdses_some'
+        'vdses_some': 'vdses_some',
+        'vpc_service': 'vpc_service'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -155,6 +159,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self._description_not_in = None
         self._description_not_starts_with = None
         self._description_starts_with = None
+        self._edge_gateway_group = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -190,6 +195,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self._vdses_every = None
         self._vdses_none = None
         self._vdses_some = None
+        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -209,6 +215,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self.description_not_in = kwargs.get("description_not_in", None)
         self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
         self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.edge_gateway_group = kwargs.get("edge_gateway_group", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -244,6 +251,7 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         self.vdses_every = kwargs.get("vdses_every", None)
         self.vdses_none = kwargs.get("vdses_none", None)
         self.vdses_some = kwargs.get("vdses_some", None)
+        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -601,6 +609,27 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         """
 
         self._description_starts_with = description_starts_with
+
+    @property
+    def edge_gateway_group(self):
+        """Gets the edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+        return self._edge_gateway_group
+
+    @edge_gateway_group.setter
+    def edge_gateway_group(self, edge_gateway_group):
+        """Sets the edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param edge_gateway_group: The edge_gateway_group of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type edge_gateway_group: VirtualPrivateCloudEdgeGatewayGroupWhereInput
+        """
+
+        self._edge_gateway_group = edge_gateway_group
 
     @property
     def entity_async_status(self):
@@ -1336,6 +1365,27 @@ class VirtualPrivateCloudEdgeGatewayWhereInput(object):
         """
 
         self._vdses_some = vdses_some
+
+    @property
+    def vpc_service(self):
+        """Gets the vpc_service of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+
+
+        :return: The vpc_service of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudServiceWhereInput
+        """
+        return self._vpc_service
+
+    @vpc_service.setter
+    def vpc_service(self, vpc_service):
+        """Sets the vpc_service of this VirtualPrivateCloudEdgeGatewayWhereInput.
+
+
+        :param vpc_service: The vpc_service of this VirtualPrivateCloudEdgeGatewayWhereInput.  # noqa: E501
+        :type vpc_service: VirtualPrivateCloudServiceWhereInput
+        """
+
+        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

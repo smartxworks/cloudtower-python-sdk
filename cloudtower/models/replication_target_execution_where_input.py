@@ -95,6 +95,7 @@ class ReplicationTargetExecutionWhereInput(object):
         'started_at_lte': 'str',
         'started_at_not': 'str',
         'started_at_not_in': 'list[str]',
+        'sync_replication_plan': 'SyncReplicationPlanWhereInput',
         'type': 'BackupExecutionType',
         'type_in': 'list[BackupExecutionType]',
         'type_not': 'BackupExecutionType',
@@ -172,6 +173,7 @@ class ReplicationTargetExecutionWhereInput(object):
         'started_at_lte': 'started_at_lte',
         'started_at_not': 'started_at_not',
         'started_at_not_in': 'started_at_not_in',
+        'sync_replication_plan': 'sync_replication_plan',
         'type': 'type',
         'type_in': 'type_in',
         'type_not': 'type_not',
@@ -252,6 +254,7 @@ class ReplicationTargetExecutionWhereInput(object):
         self._started_at_lte = None
         self._started_at_not = None
         self._started_at_not_in = None
+        self._sync_replication_plan = None
         self._type = None
         self._type_in = None
         self._type_not = None
@@ -328,6 +331,7 @@ class ReplicationTargetExecutionWhereInput(object):
         self.started_at_lte = kwargs.get("started_at_lte", None)
         self.started_at_not = kwargs.get("started_at_not", None)
         self.started_at_not_in = kwargs.get("started_at_not_in", None)
+        self.sync_replication_plan = kwargs.get("sync_replication_plan", None)
         self.type = kwargs.get("type", None)
         self.type_in = kwargs.get("type_in", None)
         self.type_not = kwargs.get("type_not", None)
@@ -1802,6 +1806,27 @@ class ReplicationTargetExecutionWhereInput(object):
         """
 
         self._started_at_not_in = started_at_not_in
+
+    @property
+    def sync_replication_plan(self):
+        """Gets the sync_replication_plan of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plan of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plan
+
+    @sync_replication_plan.setter
+    def sync_replication_plan(self, sync_replication_plan):
+        """Sets the sync_replication_plan of this ReplicationTargetExecutionWhereInput.
+
+
+        :param sync_replication_plan: The sync_replication_plan of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type sync_replication_plan: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plan = sync_replication_plan
 
     @property
     def type(self):

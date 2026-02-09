@@ -1,6 +1,5 @@
 .gitignore
-LICENSE
-README.md
+LICENSE.mustache
 README.md
 cloudtower/__init__.py
 cloudtower/api/__init__.py
@@ -76,6 +75,7 @@ cloudtower/api/ovf_api.py
 cloudtower/api/pci_device_api.py
 cloudtower/api/pmem_dimm_api.py
 cloudtower/api/rack_topo_api.py
+cloudtower/api/registry_service_api.py
 cloudtower/api/replica_vm_api.py
 cloudtower/api/replication_plan_api.py
 cloudtower/api/replication_service_api.py
@@ -389,6 +389,7 @@ cloudtower/models/content_library_vm_template_updation_cluster_params.py
 cloudtower/models/content_library_vm_template_updation_cluster_params_data.py
 cloudtower/models/content_library_vm_template_updation_params.py
 cloudtower/models/content_library_vm_template_updation_params_data.py
+cloudtower/models/content_library_vm_template_usage.py
 cloudtower/models/content_library_vm_template_where_input.py
 cloudtower/models/content_library_vmdk_cdrom_modify.py
 cloudtower/models/content_library_vmdk_cdrom_mount.py
@@ -715,6 +716,8 @@ cloudtower/models/get_pmem_dimms_connection_request_body.py
 cloudtower/models/get_pmem_dimms_request_body.py
 cloudtower/models/get_rack_topoes_connection_request_body.py
 cloudtower/models/get_rack_topoes_request_body.py
+cloudtower/models/get_registry_services_connection_request_body.py
+cloudtower/models/get_registry_services_request_body.py
 cloudtower/models/get_replica_vms_connection_request_body.py
 cloudtower/models/get_replica_vms_request_body.py
 cloudtower/models/get_replication_plans_connection_request_body.py
@@ -960,6 +963,8 @@ cloudtower/models/license_order_by_input.py
 cloudtower/models/license_type.py
 cloudtower/models/license_updation_params.py
 cloudtower/models/license_where_input.py
+cloudtower/models/load_balancer_instance_group_where_input.py
+cloudtower/models/load_balancer_instance_where_input.py
 cloudtower/models/load_balancer_service_where_input.py
 cloudtower/models/log_collection.py
 cloudtower/models/log_collection_connection.py
@@ -1065,6 +1070,7 @@ cloudtower/models/nested_aggregate_nvmf_subsystem.py
 cloudtower/models/nested_aggregate_organization.py
 cloudtower/models/nested_aggregate_pmem_dimm.py
 cloudtower/models/nested_aggregate_rack_topo.py
+cloudtower/models/nested_aggregate_registry_service.py
 cloudtower/models/nested_aggregate_replica_vm.py
 cloudtower/models/nested_aggregate_replication_plan.py
 cloudtower/models/nested_aggregate_replication_service.py
@@ -1428,6 +1434,11 @@ cloudtower/models/rack_topo_order_by_input.py
 cloudtower/models/rack_topo_updation_params.py
 cloudtower/models/rack_topo_updation_params_data.py
 cloudtower/models/rack_topo_where_input.py
+cloudtower/models/registry_service.py
+cloudtower/models/registry_service_connection.py
+cloudtower/models/registry_service_order_by_input.py
+cloudtower/models/registry_service_usage.py
+cloudtower/models/registry_service_where_input.py
 cloudtower/models/remove_clusters_from_datacenter_params.py
 cloudtower/models/replica_name_rule.py
 cloudtower/models/replica_vm.py
@@ -1565,6 +1576,7 @@ cloudtower/models/svt_image.py
 cloudtower/models/svt_image_connection.py
 cloudtower/models/svt_image_order_by_input.py
 cloudtower/models/svt_image_where_input.py
+cloudtower/models/sync_replication_plan_where_input.py
 cloudtower/models/system_audit_log.py
 cloudtower/models/system_audit_log_connection.py
 cloudtower/models/system_audit_log_order_by_input.py
@@ -1865,6 +1877,7 @@ cloudtower/models/vm_placement_group_deletion_params.py
 cloudtower/models/vm_placement_group_order_by_input.py
 cloudtower/models/vm_placement_group_updation_params.py
 cloudtower/models/vm_placement_group_updation_params_data.py
+cloudtower/models/vm_placement_group_usage.py
 cloudtower/models/vm_placement_group_where_input.py
 cloudtower/models/vm_rebuild_params.py
 cloudtower/models/vm_remove_cd_rom_params.py
@@ -1956,6 +1969,8 @@ cloudtower/models/vm_where_input.py
 cloudtower/models/vm_where_unique_input.py
 cloudtower/models/vmdk_cdrom_modify.py
 cloudtower/models/vmdk_disk_modify.py
+cloudtower/models/vnet_bond_group_where_input.py
+cloudtower/models/vnet_bond_network_type.py
 cloudtower/models/vnet_bond_where_input.py
 cloudtower/models/vpc_nic_params.py
 cloudtower/models/vsphere_esxi_account.py

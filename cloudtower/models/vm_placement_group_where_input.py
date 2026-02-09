@@ -107,6 +107,10 @@ class VmPlacementGroupWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
+        'usage': 'VmPlacementGroupUsage',
+        'usage_in': 'list[VmPlacementGroupUsage]',
+        'usage_not': 'VmPlacementGroupUsage',
+        'usage_not_in': 'list[VmPlacementGroupUsage]',
         'vm_host_must_enabled': 'bool',
         'vm_host_must_enabled_not': 'bool',
         'vm_host_must_host_uuids_every': 'HostWhereInput',
@@ -215,6 +219,10 @@ class VmPlacementGroupWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
+        'usage': 'usage',
+        'usage_in': 'usage_in',
+        'usage_not': 'usage_not',
+        'usage_not_in': 'usage_not_in',
         'vm_host_must_enabled': 'vm_host_must_enabled',
         'vm_host_must_enabled_not': 'vm_host_must_enabled_not',
         'vm_host_must_host_uuids_every': 'vm_host_must_host_uuids_every',
@@ -326,6 +334,10 @@ class VmPlacementGroupWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
+        self._usage = None
+        self._usage_in = None
+        self._usage_not = None
+        self._usage_not_in = None
         self._vm_host_must_enabled = None
         self._vm_host_must_enabled_not = None
         self._vm_host_must_host_uuids_every = None
@@ -433,6 +445,10 @@ class VmPlacementGroupWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.usage = kwargs.get("usage", None)
+        self.usage_in = kwargs.get("usage_in", None)
+        self.usage_not = kwargs.get("usage_not", None)
+        self.usage_not_in = kwargs.get("usage_not_in", None)
         self.vm_host_must_enabled = kwargs.get("vm_host_must_enabled", None)
         self.vm_host_must_enabled_not = kwargs.get("vm_host_must_enabled_not", None)
         self.vm_host_must_host_uuids_every = kwargs.get("vm_host_must_host_uuids_every", None)
@@ -2178,6 +2194,90 @@ class VmPlacementGroupWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
+
+    @property
+    def usage(self):
+        """Gets the usage of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The usage of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: VmPlacementGroupUsage
+        """
+        return self._usage
+
+    @usage.setter
+    def usage(self, usage):
+        """Sets the usage of this VmPlacementGroupWhereInput.
+
+
+        :param usage: The usage of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type usage: VmPlacementGroupUsage
+        """
+
+        self._usage = usage
+
+    @property
+    def usage_in(self):
+        """Gets the usage_in of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The usage_in of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: list[VmPlacementGroupUsage]
+        """
+        return self._usage_in
+
+    @usage_in.setter
+    def usage_in(self, usage_in):
+        """Sets the usage_in of this VmPlacementGroupWhereInput.
+
+
+        :param usage_in: The usage_in of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type usage_in: list[VmPlacementGroupUsage]
+        """
+
+        self._usage_in = usage_in
+
+    @property
+    def usage_not(self):
+        """Gets the usage_not of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The usage_not of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: VmPlacementGroupUsage
+        """
+        return self._usage_not
+
+    @usage_not.setter
+    def usage_not(self, usage_not):
+        """Sets the usage_not of this VmPlacementGroupWhereInput.
+
+
+        :param usage_not: The usage_not of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type usage_not: VmPlacementGroupUsage
+        """
+
+        self._usage_not = usage_not
+
+    @property
+    def usage_not_in(self):
+        """Gets the usage_not_in of this VmPlacementGroupWhereInput.  # noqa: E501
+
+
+        :return: The usage_not_in of this VmPlacementGroupWhereInput.  # noqa: E501
+        :rtype: list[VmPlacementGroupUsage]
+        """
+        return self._usage_not_in
+
+    @usage_not_in.setter
+    def usage_not_in(self, usage_not_in):
+        """Sets the usage_not_in of this VmPlacementGroupWhereInput.
+
+
+        :param usage_not_in: The usage_not_in of this VmPlacementGroupWhereInput.  # noqa: E501
+        :type usage_not_in: list[VmPlacementGroupUsage]
+        """
+
+        self._usage_not_in = usage_not_in
 
     @property
     def vm_host_must_enabled(self):

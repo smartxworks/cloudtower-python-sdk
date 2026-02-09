@@ -47,6 +47,12 @@ class LoadBalancerServiceWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'load_balancer_instance_groups_every': 'LoadBalancerInstanceGroupWhereInput',
+        'load_balancer_instance_groups_none': 'LoadBalancerInstanceGroupWhereInput',
+        'load_balancer_instance_groups_some': 'LoadBalancerInstanceGroupWhereInput',
+        'load_balancer_instances_every': 'LoadBalancerInstanceWhereInput',
+        'load_balancer_instances_none': 'LoadBalancerInstanceWhereInput',
+        'load_balancer_instances_some': 'LoadBalancerInstanceWhereInput',
         'phase': 'EverouteClusterPhase',
         'phase_in': 'list[EverouteClusterPhase]',
         'phase_not': 'EverouteClusterPhase',
@@ -82,6 +88,12 @@ class LoadBalancerServiceWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'load_balancer_instance_groups_every': 'load_balancer_instance_groups_every',
+        'load_balancer_instance_groups_none': 'load_balancer_instance_groups_none',
+        'load_balancer_instance_groups_some': 'load_balancer_instance_groups_some',
+        'load_balancer_instances_every': 'load_balancer_instances_every',
+        'load_balancer_instances_none': 'load_balancer_instances_none',
+        'load_balancer_instances_some': 'load_balancer_instances_some',
         'phase': 'phase',
         'phase_in': 'phase_in',
         'phase_not': 'phase_not',
@@ -120,6 +132,12 @@ class LoadBalancerServiceWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._load_balancer_instance_groups_every = None
+        self._load_balancer_instance_groups_none = None
+        self._load_balancer_instance_groups_some = None
+        self._load_balancer_instances_every = None
+        self._load_balancer_instances_none = None
+        self._load_balancer_instances_some = None
         self._phase = None
         self._phase_in = None
         self._phase_not = None
@@ -154,6 +172,12 @@ class LoadBalancerServiceWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.load_balancer_instance_groups_every = kwargs.get("load_balancer_instance_groups_every", None)
+        self.load_balancer_instance_groups_none = kwargs.get("load_balancer_instance_groups_none", None)
+        self.load_balancer_instance_groups_some = kwargs.get("load_balancer_instance_groups_some", None)
+        self.load_balancer_instances_every = kwargs.get("load_balancer_instances_every", None)
+        self.load_balancer_instances_none = kwargs.get("load_balancer_instances_none", None)
+        self.load_balancer_instances_some = kwargs.get("load_balancer_instances_some", None)
         self.phase = kwargs.get("phase", None)
         self.phase_in = kwargs.get("phase_in", None)
         self.phase_not = kwargs.get("phase_not", None)
@@ -626,6 +650,132 @@ class LoadBalancerServiceWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def load_balancer_instance_groups_every(self):
+        """Gets the load_balancer_instance_groups_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instance_groups_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceGroupWhereInput
+        """
+        return self._load_balancer_instance_groups_every
+
+    @load_balancer_instance_groups_every.setter
+    def load_balancer_instance_groups_every(self, load_balancer_instance_groups_every):
+        """Sets the load_balancer_instance_groups_every of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instance_groups_every: The load_balancer_instance_groups_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instance_groups_every: LoadBalancerInstanceGroupWhereInput
+        """
+
+        self._load_balancer_instance_groups_every = load_balancer_instance_groups_every
+
+    @property
+    def load_balancer_instance_groups_none(self):
+        """Gets the load_balancer_instance_groups_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instance_groups_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceGroupWhereInput
+        """
+        return self._load_balancer_instance_groups_none
+
+    @load_balancer_instance_groups_none.setter
+    def load_balancer_instance_groups_none(self, load_balancer_instance_groups_none):
+        """Sets the load_balancer_instance_groups_none of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instance_groups_none: The load_balancer_instance_groups_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instance_groups_none: LoadBalancerInstanceGroupWhereInput
+        """
+
+        self._load_balancer_instance_groups_none = load_balancer_instance_groups_none
+
+    @property
+    def load_balancer_instance_groups_some(self):
+        """Gets the load_balancer_instance_groups_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instance_groups_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceGroupWhereInput
+        """
+        return self._load_balancer_instance_groups_some
+
+    @load_balancer_instance_groups_some.setter
+    def load_balancer_instance_groups_some(self, load_balancer_instance_groups_some):
+        """Sets the load_balancer_instance_groups_some of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instance_groups_some: The load_balancer_instance_groups_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instance_groups_some: LoadBalancerInstanceGroupWhereInput
+        """
+
+        self._load_balancer_instance_groups_some = load_balancer_instance_groups_some
+
+    @property
+    def load_balancer_instances_every(self):
+        """Gets the load_balancer_instances_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instances_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceWhereInput
+        """
+        return self._load_balancer_instances_every
+
+    @load_balancer_instances_every.setter
+    def load_balancer_instances_every(self, load_balancer_instances_every):
+        """Sets the load_balancer_instances_every of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instances_every: The load_balancer_instances_every of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instances_every: LoadBalancerInstanceWhereInput
+        """
+
+        self._load_balancer_instances_every = load_balancer_instances_every
+
+    @property
+    def load_balancer_instances_none(self):
+        """Gets the load_balancer_instances_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instances_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceWhereInput
+        """
+        return self._load_balancer_instances_none
+
+    @load_balancer_instances_none.setter
+    def load_balancer_instances_none(self, load_balancer_instances_none):
+        """Sets the load_balancer_instances_none of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instances_none: The load_balancer_instances_none of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instances_none: LoadBalancerInstanceWhereInput
+        """
+
+        self._load_balancer_instances_none = load_balancer_instances_none
+
+    @property
+    def load_balancer_instances_some(self):
+        """Gets the load_balancer_instances_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instances_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceWhereInput
+        """
+        return self._load_balancer_instances_some
+
+    @load_balancer_instances_some.setter
+    def load_balancer_instances_some(self, load_balancer_instances_some):
+        """Sets the load_balancer_instances_some of this LoadBalancerServiceWhereInput.
+
+
+        :param load_balancer_instances_some: The load_balancer_instances_some of this LoadBalancerServiceWhereInput.  # noqa: E501
+        :type load_balancer_instances_some: LoadBalancerInstanceWhereInput
+        """
+
+        self._load_balancer_instances_some = load_balancer_instances_some
 
     @property
     def phase(self):
