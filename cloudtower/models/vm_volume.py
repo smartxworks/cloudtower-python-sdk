@@ -31,6 +31,7 @@ class VmVolume(object):
         'elf_storage_policy_ec_k': 'int',
         'elf_storage_policy_ec_m': 'int',
         'elf_storage_policy_replica_num': 'int',
+        'elf_storage_policy_stripe_num': 'int',
         'elf_storage_policy_thin_provision': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
         'guest_size_usage': 'float',
@@ -61,6 +62,7 @@ class VmVolume(object):
         'elf_storage_policy_ec_k': 'elf_storage_policy_ec_k',
         'elf_storage_policy_ec_m': 'elf_storage_policy_ec_m',
         'elf_storage_policy_replica_num': 'elf_storage_policy_replica_num',
+        'elf_storage_policy_stripe_num': 'elf_storage_policy_stripe_num',
         'elf_storage_policy_thin_provision': 'elf_storage_policy_thin_provision',
         'entity_async_status': 'entityAsyncStatus',
         'guest_size_usage': 'guest_size_usage',
@@ -94,6 +96,7 @@ class VmVolume(object):
         self._elf_storage_policy_ec_k = None
         self._elf_storage_policy_ec_m = None
         self._elf_storage_policy_replica_num = None
+        self._elf_storage_policy_stripe_num = None
         self._elf_storage_policy_thin_provision = None
         self._entity_async_status = None
         self._guest_size_usage = None
@@ -125,6 +128,7 @@ class VmVolume(object):
         self.elf_storage_policy_ec_k = kwargs.get("elf_storage_policy_ec_k", None)
         self.elf_storage_policy_ec_m = kwargs.get("elf_storage_policy_ec_m", None)
         self.elf_storage_policy_replica_num = kwargs.get("elf_storage_policy_replica_num", None)
+        self.elf_storage_policy_stripe_num = kwargs.get("elf_storage_policy_stripe_num", None)
         self.elf_storage_policy_thin_provision = kwargs.get("elf_storage_policy_thin_provision", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.guest_size_usage = kwargs.get("guest_size_usage", None)
@@ -284,6 +288,27 @@ class VmVolume(object):
         """
 
         self._elf_storage_policy_replica_num = elf_storage_policy_replica_num
+
+    @property
+    def elf_storage_policy_stripe_num(self):
+        """Gets the elf_storage_policy_stripe_num of this VmVolume.  # noqa: E501
+
+
+        :return: The elf_storage_policy_stripe_num of this VmVolume.  # noqa: E501
+        :rtype: int
+        """
+        return self._elf_storage_policy_stripe_num
+
+    @elf_storage_policy_stripe_num.setter
+    def elf_storage_policy_stripe_num(self, elf_storage_policy_stripe_num):
+        """Sets the elf_storage_policy_stripe_num of this VmVolume.
+
+
+        :param elf_storage_policy_stripe_num: The elf_storage_policy_stripe_num of this VmVolume.  # noqa: E501
+        :type elf_storage_policy_stripe_num: int
+        """
+
+        self._elf_storage_policy_stripe_num = elf_storage_policy_stripe_num
 
     @property
     def elf_storage_policy_thin_provision(self):

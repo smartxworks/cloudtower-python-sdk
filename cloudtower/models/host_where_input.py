@@ -169,6 +169,22 @@ class HostWhereInput(object):
         'data_ip_not_in': 'list[str]',
         'data_ip_not_starts_with': 'str',
         'data_ip_starts_with': 'str',
+        'dirty_cache_space': 'int',
+        'dirty_cache_space_gt': 'int',
+        'dirty_cache_space_gte': 'int',
+        'dirty_cache_space_in': 'list[int]',
+        'dirty_cache_space_lt': 'int',
+        'dirty_cache_space_lte': 'int',
+        'dirty_cache_space_not': 'int',
+        'dirty_cache_space_not_in': 'list[int]',
+        'dirty_cache_usage': 'float',
+        'dirty_cache_usage_gt': 'float',
+        'dirty_cache_usage_gte': 'float',
+        'dirty_cache_usage_in': 'list[float]',
+        'dirty_cache_usage_lt': 'float',
+        'dirty_cache_usage_lte': 'float',
+        'dirty_cache_usage_not': 'float',
+        'dirty_cache_usage_not_in': 'list[float]',
         'disk_pools_every': 'DiskPoolWhereInput',
         'disk_pools_none': 'DiskPoolWhereInput',
         'disk_pools_some': 'DiskPoolWhereInput',
@@ -187,6 +203,14 @@ class HostWhereInput(object):
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
         'entity_async_status_not_in': 'list[EntityAsyncStatus]',
+        'failure_cache_space': 'int',
+        'failure_cache_space_gt': 'int',
+        'failure_cache_space_gte': 'int',
+        'failure_cache_space_in': 'list[int]',
+        'failure_cache_space_lt': 'int',
+        'failure_cache_space_lte': 'int',
+        'failure_cache_space_not': 'int',
+        'failure_cache_space_not_in': 'list[int]',
         'failure_data_space': 'int',
         'failure_data_space_gt': 'int',
         'failure_data_space_gte': 'int',
@@ -837,6 +861,22 @@ class HostWhereInput(object):
         'data_ip_not_in': 'data_ip_not_in',
         'data_ip_not_starts_with': 'data_ip_not_starts_with',
         'data_ip_starts_with': 'data_ip_starts_with',
+        'dirty_cache_space': 'dirty_cache_space',
+        'dirty_cache_space_gt': 'dirty_cache_space_gt',
+        'dirty_cache_space_gte': 'dirty_cache_space_gte',
+        'dirty_cache_space_in': 'dirty_cache_space_in',
+        'dirty_cache_space_lt': 'dirty_cache_space_lt',
+        'dirty_cache_space_lte': 'dirty_cache_space_lte',
+        'dirty_cache_space_not': 'dirty_cache_space_not',
+        'dirty_cache_space_not_in': 'dirty_cache_space_not_in',
+        'dirty_cache_usage': 'dirty_cache_usage',
+        'dirty_cache_usage_gt': 'dirty_cache_usage_gt',
+        'dirty_cache_usage_gte': 'dirty_cache_usage_gte',
+        'dirty_cache_usage_in': 'dirty_cache_usage_in',
+        'dirty_cache_usage_lt': 'dirty_cache_usage_lt',
+        'dirty_cache_usage_lte': 'dirty_cache_usage_lte',
+        'dirty_cache_usage_not': 'dirty_cache_usage_not',
+        'dirty_cache_usage_not_in': 'dirty_cache_usage_not_in',
         'disk_pools_every': 'disk_pools_every',
         'disk_pools_none': 'disk_pools_none',
         'disk_pools_some': 'disk_pools_some',
@@ -855,6 +895,14 @@ class HostWhereInput(object):
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
         'entity_async_status_not_in': 'entityAsyncStatus_not_in',
+        'failure_cache_space': 'failure_cache_space',
+        'failure_cache_space_gt': 'failure_cache_space_gt',
+        'failure_cache_space_gte': 'failure_cache_space_gte',
+        'failure_cache_space_in': 'failure_cache_space_in',
+        'failure_cache_space_lt': 'failure_cache_space_lt',
+        'failure_cache_space_lte': 'failure_cache_space_lte',
+        'failure_cache_space_not': 'failure_cache_space_not',
+        'failure_cache_space_not_in': 'failure_cache_space_not_in',
         'failure_data_space': 'failure_data_space',
         'failure_data_space_gt': 'failure_data_space_gt',
         'failure_data_space_gte': 'failure_data_space_gte',
@@ -1508,6 +1556,22 @@ class HostWhereInput(object):
         self._data_ip_not_in = None
         self._data_ip_not_starts_with = None
         self._data_ip_starts_with = None
+        self._dirty_cache_space = None
+        self._dirty_cache_space_gt = None
+        self._dirty_cache_space_gte = None
+        self._dirty_cache_space_in = None
+        self._dirty_cache_space_lt = None
+        self._dirty_cache_space_lte = None
+        self._dirty_cache_space_not = None
+        self._dirty_cache_space_not_in = None
+        self._dirty_cache_usage = None
+        self._dirty_cache_usage_gt = None
+        self._dirty_cache_usage_gte = None
+        self._dirty_cache_usage_in = None
+        self._dirty_cache_usage_lt = None
+        self._dirty_cache_usage_lte = None
+        self._dirty_cache_usage_not = None
+        self._dirty_cache_usage_not_in = None
         self._disk_pools_every = None
         self._disk_pools_none = None
         self._disk_pools_some = None
@@ -1526,6 +1590,14 @@ class HostWhereInput(object):
         self._entity_async_status_in = None
         self._entity_async_status_not = None
         self._entity_async_status_not_in = None
+        self._failure_cache_space = None
+        self._failure_cache_space_gt = None
+        self._failure_cache_space_gte = None
+        self._failure_cache_space_in = None
+        self._failure_cache_space_lt = None
+        self._failure_cache_space_lte = None
+        self._failure_cache_space_not = None
+        self._failure_cache_space_not_in = None
         self._failure_data_space = None
         self._failure_data_space_gt = None
         self._failure_data_space_gte = None
@@ -2175,6 +2247,22 @@ class HostWhereInput(object):
         self.data_ip_not_in = kwargs.get("data_ip_not_in", None)
         self.data_ip_not_starts_with = kwargs.get("data_ip_not_starts_with", None)
         self.data_ip_starts_with = kwargs.get("data_ip_starts_with", None)
+        self.dirty_cache_space = kwargs.get("dirty_cache_space", None)
+        self.dirty_cache_space_gt = kwargs.get("dirty_cache_space_gt", None)
+        self.dirty_cache_space_gte = kwargs.get("dirty_cache_space_gte", None)
+        self.dirty_cache_space_in = kwargs.get("dirty_cache_space_in", None)
+        self.dirty_cache_space_lt = kwargs.get("dirty_cache_space_lt", None)
+        self.dirty_cache_space_lte = kwargs.get("dirty_cache_space_lte", None)
+        self.dirty_cache_space_not = kwargs.get("dirty_cache_space_not", None)
+        self.dirty_cache_space_not_in = kwargs.get("dirty_cache_space_not_in", None)
+        self.dirty_cache_usage = kwargs.get("dirty_cache_usage", None)
+        self.dirty_cache_usage_gt = kwargs.get("dirty_cache_usage_gt", None)
+        self.dirty_cache_usage_gte = kwargs.get("dirty_cache_usage_gte", None)
+        self.dirty_cache_usage_in = kwargs.get("dirty_cache_usage_in", None)
+        self.dirty_cache_usage_lt = kwargs.get("dirty_cache_usage_lt", None)
+        self.dirty_cache_usage_lte = kwargs.get("dirty_cache_usage_lte", None)
+        self.dirty_cache_usage_not = kwargs.get("dirty_cache_usage_not", None)
+        self.dirty_cache_usage_not_in = kwargs.get("dirty_cache_usage_not_in", None)
         self.disk_pools_every = kwargs.get("disk_pools_every", None)
         self.disk_pools_none = kwargs.get("disk_pools_none", None)
         self.disk_pools_some = kwargs.get("disk_pools_some", None)
@@ -2193,6 +2281,14 @@ class HostWhereInput(object):
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
         self.entity_async_status_not_in = kwargs.get("entity_async_status_not_in", None)
+        self.failure_cache_space = kwargs.get("failure_cache_space", None)
+        self.failure_cache_space_gt = kwargs.get("failure_cache_space_gt", None)
+        self.failure_cache_space_gte = kwargs.get("failure_cache_space_gte", None)
+        self.failure_cache_space_in = kwargs.get("failure_cache_space_in", None)
+        self.failure_cache_space_lt = kwargs.get("failure_cache_space_lt", None)
+        self.failure_cache_space_lte = kwargs.get("failure_cache_space_lte", None)
+        self.failure_cache_space_not = kwargs.get("failure_cache_space_not", None)
+        self.failure_cache_space_not_in = kwargs.get("failure_cache_space_not_in", None)
         self.failure_data_space = kwargs.get("failure_data_space", None)
         self.failure_data_space_gt = kwargs.get("failure_data_space_gt", None)
         self.failure_data_space_gte = kwargs.get("failure_data_space_gte", None)
@@ -5722,6 +5818,342 @@ class HostWhereInput(object):
         self._data_ip_starts_with = data_ip_starts_with
 
     @property
+    def dirty_cache_space(self):
+        """Gets the dirty_cache_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space
+
+    @dirty_cache_space.setter
+    def dirty_cache_space(self, dirty_cache_space):
+        """Sets the dirty_cache_space of this HostWhereInput.
+
+
+        :param dirty_cache_space: The dirty_cache_space of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space: int
+        """
+
+        self._dirty_cache_space = dirty_cache_space
+
+    @property
+    def dirty_cache_space_gt(self):
+        """Gets the dirty_cache_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space_gt
+
+    @dirty_cache_space_gt.setter
+    def dirty_cache_space_gt(self, dirty_cache_space_gt):
+        """Sets the dirty_cache_space_gt of this HostWhereInput.
+
+
+        :param dirty_cache_space_gt: The dirty_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_gt: int
+        """
+
+        self._dirty_cache_space_gt = dirty_cache_space_gt
+
+    @property
+    def dirty_cache_space_gte(self):
+        """Gets the dirty_cache_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space_gte
+
+    @dirty_cache_space_gte.setter
+    def dirty_cache_space_gte(self, dirty_cache_space_gte):
+        """Sets the dirty_cache_space_gte of this HostWhereInput.
+
+
+        :param dirty_cache_space_gte: The dirty_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_gte: int
+        """
+
+        self._dirty_cache_space_gte = dirty_cache_space_gte
+
+    @property
+    def dirty_cache_space_in(self):
+        """Gets the dirty_cache_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._dirty_cache_space_in
+
+    @dirty_cache_space_in.setter
+    def dirty_cache_space_in(self, dirty_cache_space_in):
+        """Sets the dirty_cache_space_in of this HostWhereInput.
+
+
+        :param dirty_cache_space_in: The dirty_cache_space_in of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_in: list[int]
+        """
+
+        self._dirty_cache_space_in = dirty_cache_space_in
+
+    @property
+    def dirty_cache_space_lt(self):
+        """Gets the dirty_cache_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space_lt
+
+    @dirty_cache_space_lt.setter
+    def dirty_cache_space_lt(self, dirty_cache_space_lt):
+        """Sets the dirty_cache_space_lt of this HostWhereInput.
+
+
+        :param dirty_cache_space_lt: The dirty_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_lt: int
+        """
+
+        self._dirty_cache_space_lt = dirty_cache_space_lt
+
+    @property
+    def dirty_cache_space_lte(self):
+        """Gets the dirty_cache_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space_lte
+
+    @dirty_cache_space_lte.setter
+    def dirty_cache_space_lte(self, dirty_cache_space_lte):
+        """Sets the dirty_cache_space_lte of this HostWhereInput.
+
+
+        :param dirty_cache_space_lte: The dirty_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_lte: int
+        """
+
+        self._dirty_cache_space_lte = dirty_cache_space_lte
+
+    @property
+    def dirty_cache_space_not(self):
+        """Gets the dirty_cache_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space_not
+
+    @dirty_cache_space_not.setter
+    def dirty_cache_space_not(self, dirty_cache_space_not):
+        """Sets the dirty_cache_space_not of this HostWhereInput.
+
+
+        :param dirty_cache_space_not: The dirty_cache_space_not of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_not: int
+        """
+
+        self._dirty_cache_space_not = dirty_cache_space_not
+
+    @property
+    def dirty_cache_space_not_in(self):
+        """Gets the dirty_cache_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._dirty_cache_space_not_in
+
+    @dirty_cache_space_not_in.setter
+    def dirty_cache_space_not_in(self, dirty_cache_space_not_in):
+        """Sets the dirty_cache_space_not_in of this HostWhereInput.
+
+
+        :param dirty_cache_space_not_in: The dirty_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_space_not_in: list[int]
+        """
+
+        self._dirty_cache_space_not_in = dirty_cache_space_not_in
+
+    @property
+    def dirty_cache_usage(self):
+        """Gets the dirty_cache_usage of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage
+
+    @dirty_cache_usage.setter
+    def dirty_cache_usage(self, dirty_cache_usage):
+        """Sets the dirty_cache_usage of this HostWhereInput.
+
+
+        :param dirty_cache_usage: The dirty_cache_usage of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage: float
+        """
+
+        self._dirty_cache_usage = dirty_cache_usage
+
+    @property
+    def dirty_cache_usage_gt(self):
+        """Gets the dirty_cache_usage_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_gt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage_gt
+
+    @dirty_cache_usage_gt.setter
+    def dirty_cache_usage_gt(self, dirty_cache_usage_gt):
+        """Sets the dirty_cache_usage_gt of this HostWhereInput.
+
+
+        :param dirty_cache_usage_gt: The dirty_cache_usage_gt of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_gt: float
+        """
+
+        self._dirty_cache_usage_gt = dirty_cache_usage_gt
+
+    @property
+    def dirty_cache_usage_gte(self):
+        """Gets the dirty_cache_usage_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_gte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage_gte
+
+    @dirty_cache_usage_gte.setter
+    def dirty_cache_usage_gte(self, dirty_cache_usage_gte):
+        """Sets the dirty_cache_usage_gte of this HostWhereInput.
+
+
+        :param dirty_cache_usage_gte: The dirty_cache_usage_gte of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_gte: float
+        """
+
+        self._dirty_cache_usage_gte = dirty_cache_usage_gte
+
+    @property
+    def dirty_cache_usage_in(self):
+        """Gets the dirty_cache_usage_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._dirty_cache_usage_in
+
+    @dirty_cache_usage_in.setter
+    def dirty_cache_usage_in(self, dirty_cache_usage_in):
+        """Sets the dirty_cache_usage_in of this HostWhereInput.
+
+
+        :param dirty_cache_usage_in: The dirty_cache_usage_in of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_in: list[float]
+        """
+
+        self._dirty_cache_usage_in = dirty_cache_usage_in
+
+    @property
+    def dirty_cache_usage_lt(self):
+        """Gets the dirty_cache_usage_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_lt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage_lt
+
+    @dirty_cache_usage_lt.setter
+    def dirty_cache_usage_lt(self, dirty_cache_usage_lt):
+        """Sets the dirty_cache_usage_lt of this HostWhereInput.
+
+
+        :param dirty_cache_usage_lt: The dirty_cache_usage_lt of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_lt: float
+        """
+
+        self._dirty_cache_usage_lt = dirty_cache_usage_lt
+
+    @property
+    def dirty_cache_usage_lte(self):
+        """Gets the dirty_cache_usage_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_lte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage_lte
+
+    @dirty_cache_usage_lte.setter
+    def dirty_cache_usage_lte(self, dirty_cache_usage_lte):
+        """Sets the dirty_cache_usage_lte of this HostWhereInput.
+
+
+        :param dirty_cache_usage_lte: The dirty_cache_usage_lte of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_lte: float
+        """
+
+        self._dirty_cache_usage_lte = dirty_cache_usage_lte
+
+    @property
+    def dirty_cache_usage_not(self):
+        """Gets the dirty_cache_usage_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_not of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage_not
+
+    @dirty_cache_usage_not.setter
+    def dirty_cache_usage_not(self, dirty_cache_usage_not):
+        """Sets the dirty_cache_usage_not of this HostWhereInput.
+
+
+        :param dirty_cache_usage_not: The dirty_cache_usage_not of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_not: float
+        """
+
+        self._dirty_cache_usage_not = dirty_cache_usage_not
+
+    @property
+    def dirty_cache_usage_not_in(self):
+        """Gets the dirty_cache_usage_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The dirty_cache_usage_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._dirty_cache_usage_not_in
+
+    @dirty_cache_usage_not_in.setter
+    def dirty_cache_usage_not_in(self, dirty_cache_usage_not_in):
+        """Sets the dirty_cache_usage_not_in of this HostWhereInput.
+
+
+        :param dirty_cache_usage_not_in: The dirty_cache_usage_not_in of this HostWhereInput.  # noqa: E501
+        :type dirty_cache_usage_not_in: list[float]
+        """
+
+        self._dirty_cache_usage_not_in = dirty_cache_usage_not_in
+
+    @property
     def disk_pools_every(self):
         """Gets the disk_pools_every of this HostWhereInput.  # noqa: E501
 
@@ -6098,6 +6530,174 @@ class HostWhereInput(object):
         """
 
         self._entity_async_status_not_in = entity_async_status_not_in
+
+    @property
+    def failure_cache_space(self):
+        """Gets the failure_cache_space of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space
+
+    @failure_cache_space.setter
+    def failure_cache_space(self, failure_cache_space):
+        """Sets the failure_cache_space of this HostWhereInput.
+
+
+        :param failure_cache_space: The failure_cache_space of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space: int
+        """
+
+        self._failure_cache_space = failure_cache_space
+
+    @property
+    def failure_cache_space_gt(self):
+        """Gets the failure_cache_space_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space_gt
+
+    @failure_cache_space_gt.setter
+    def failure_cache_space_gt(self, failure_cache_space_gt):
+        """Sets the failure_cache_space_gt of this HostWhereInput.
+
+
+        :param failure_cache_space_gt: The failure_cache_space_gt of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_gt: int
+        """
+
+        self._failure_cache_space_gt = failure_cache_space_gt
+
+    @property
+    def failure_cache_space_gte(self):
+        """Gets the failure_cache_space_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space_gte
+
+    @failure_cache_space_gte.setter
+    def failure_cache_space_gte(self, failure_cache_space_gte):
+        """Sets the failure_cache_space_gte of this HostWhereInput.
+
+
+        :param failure_cache_space_gte: The failure_cache_space_gte of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_gte: int
+        """
+
+        self._failure_cache_space_gte = failure_cache_space_gte
+
+    @property
+    def failure_cache_space_in(self):
+        """Gets the failure_cache_space_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._failure_cache_space_in
+
+    @failure_cache_space_in.setter
+    def failure_cache_space_in(self, failure_cache_space_in):
+        """Sets the failure_cache_space_in of this HostWhereInput.
+
+
+        :param failure_cache_space_in: The failure_cache_space_in of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_in: list[int]
+        """
+
+        self._failure_cache_space_in = failure_cache_space_in
+
+    @property
+    def failure_cache_space_lt(self):
+        """Gets the failure_cache_space_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space_lt
+
+    @failure_cache_space_lt.setter
+    def failure_cache_space_lt(self, failure_cache_space_lt):
+        """Sets the failure_cache_space_lt of this HostWhereInput.
+
+
+        :param failure_cache_space_lt: The failure_cache_space_lt of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_lt: int
+        """
+
+        self._failure_cache_space_lt = failure_cache_space_lt
+
+    @property
+    def failure_cache_space_lte(self):
+        """Gets the failure_cache_space_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space_lte
+
+    @failure_cache_space_lte.setter
+    def failure_cache_space_lte(self, failure_cache_space_lte):
+        """Sets the failure_cache_space_lte of this HostWhereInput.
+
+
+        :param failure_cache_space_lte: The failure_cache_space_lte of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_lte: int
+        """
+
+        self._failure_cache_space_lte = failure_cache_space_lte
+
+    @property
+    def failure_cache_space_not(self):
+        """Gets the failure_cache_space_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space_not
+
+    @failure_cache_space_not.setter
+    def failure_cache_space_not(self, failure_cache_space_not):
+        """Sets the failure_cache_space_not of this HostWhereInput.
+
+
+        :param failure_cache_space_not: The failure_cache_space_not of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_not: int
+        """
+
+        self._failure_cache_space_not = failure_cache_space_not
+
+    @property
+    def failure_cache_space_not_in(self):
+        """Gets the failure_cache_space_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The failure_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._failure_cache_space_not_in
+
+    @failure_cache_space_not_in.setter
+    def failure_cache_space_not_in(self, failure_cache_space_not_in):
+        """Sets the failure_cache_space_not_in of this HostWhereInput.
+
+
+        :param failure_cache_space_not_in: The failure_cache_space_not_in of this HostWhereInput.  # noqa: E501
+        :type failure_cache_space_not_in: list[int]
+        """
+
+        self._failure_cache_space_not_in = failure_cache_space_not_in
 
     @property
     def failure_data_space(self):

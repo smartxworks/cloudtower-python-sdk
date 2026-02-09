@@ -23,8 +23,9 @@ class ReplicationTargetExecutionCreation(object):
     FAILBACK = "FAILBACK"
     FAILOVER = "FAILOVER"
     REPLICATION = "REPLICATION"
+    SYNC_REPLICATION = "SYNC_REPLICATION"
 
-    allowable_values = [FAILBACK, FAILOVER, REPLICATION]  # noqa: E501
+    allowable_values = [FAILBACK, FAILOVER, REPLICATION, SYNC_REPLICATION]  # noqa: E501
 
     """
     Attributes:

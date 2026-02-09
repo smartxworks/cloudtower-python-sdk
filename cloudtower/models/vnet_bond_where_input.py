@@ -32,6 +32,14 @@ class VnetBondWhereInput(object):
         'bond_for_client_not': 'bool',
         'bond_for_server': 'bool',
         'bond_for_server_not': 'bool',
+        'created_at': 'str',
+        'created_at_gt': 'str',
+        'created_at_gte': 'str',
+        'created_at_in': 'list[str]',
+        'created_at_lt': 'str',
+        'created_at_lte': 'str',
+        'created_at_not': 'str',
+        'created_at_not_in': 'list[str]',
         'entity_async_status': 'EntityAsyncStatus',
         'entity_async_status_in': 'list[EntityAsyncStatus]',
         'entity_async_status_not': 'EntityAsyncStatus',
@@ -50,6 +58,7 @@ class VnetBondWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'load_balancer_instance': 'LoadBalancerInstanceWhereInput',
         'load_balancer_service': 'LoadBalancerServiceWhereInput',
         'local_id': 'str',
         'local_id_contains': 'str',
@@ -93,7 +102,14 @@ class VnetBondWhereInput(object):
         'namespace_not_in': 'list[str]',
         'namespace_not_starts_with': 'str',
         'namespace_starts_with': 'str',
-        'vlan': 'VlanWhereInput'
+        'network_type': 'VnetBondNetworkType',
+        'network_type_in': 'list[VnetBondNetworkType]',
+        'network_type_not': 'VnetBondNetworkType',
+        'network_type_not_in': 'list[VnetBondNetworkType]',
+        'vlan': 'VlanWhereInput',
+        'vnet_bond_group': 'VnetBondGroupWhereInput',
+        'vpc': 'VirtualPrivateCloudWhereInput',
+        'vpc_subnet': 'VirtualPrivateCloudSubnetWhereInput'
     }
 
     attribute_map = {
@@ -104,6 +120,14 @@ class VnetBondWhereInput(object):
         'bond_for_client_not': 'bond_for_client_not',
         'bond_for_server': 'bond_for_server',
         'bond_for_server_not': 'bond_for_server_not',
+        'created_at': 'createdAt',
+        'created_at_gt': 'createdAt_gt',
+        'created_at_gte': 'createdAt_gte',
+        'created_at_in': 'createdAt_in',
+        'created_at_lt': 'createdAt_lt',
+        'created_at_lte': 'createdAt_lte',
+        'created_at_not': 'createdAt_not',
+        'created_at_not_in': 'createdAt_not_in',
         'entity_async_status': 'entityAsyncStatus',
         'entity_async_status_in': 'entityAsyncStatus_in',
         'entity_async_status_not': 'entityAsyncStatus_not',
@@ -122,6 +146,7 @@ class VnetBondWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'load_balancer_instance': 'load_balancer_instance',
         'load_balancer_service': 'load_balancer_service',
         'local_id': 'local_id',
         'local_id_contains': 'local_id_contains',
@@ -165,7 +190,14 @@ class VnetBondWhereInput(object):
         'namespace_not_in': 'namespace_not_in',
         'namespace_not_starts_with': 'namespace_not_starts_with',
         'namespace_starts_with': 'namespace_starts_with',
-        'vlan': 'vlan'
+        'network_type': 'network_type',
+        'network_type_in': 'network_type_in',
+        'network_type_not': 'network_type_not',
+        'network_type_not_in': 'network_type_not_in',
+        'vlan': 'vlan',
+        'vnet_bond_group': 'vnet_bond_group',
+        'vpc': 'vpc',
+        'vpc_subnet': 'vpc_subnet'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -179,6 +211,14 @@ class VnetBondWhereInput(object):
         self._bond_for_client_not = None
         self._bond_for_server = None
         self._bond_for_server_not = None
+        self._created_at = None
+        self._created_at_gt = None
+        self._created_at_gte = None
+        self._created_at_in = None
+        self._created_at_lt = None
+        self._created_at_lte = None
+        self._created_at_not = None
+        self._created_at_not_in = None
         self._entity_async_status = None
         self._entity_async_status_in = None
         self._entity_async_status_not = None
@@ -197,6 +237,7 @@ class VnetBondWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._load_balancer_instance = None
         self._load_balancer_service = None
         self._local_id = None
         self._local_id_contains = None
@@ -240,7 +281,14 @@ class VnetBondWhereInput(object):
         self._namespace_not_in = None
         self._namespace_not_starts_with = None
         self._namespace_starts_with = None
+        self._network_type = None
+        self._network_type_in = None
+        self._network_type_not = None
+        self._network_type_not_in = None
         self._vlan = None
+        self._vnet_bond_group = None
+        self._vpc = None
+        self._vpc_subnet = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -250,6 +298,14 @@ class VnetBondWhereInput(object):
         self.bond_for_client_not = kwargs.get("bond_for_client_not", None)
         self.bond_for_server = kwargs.get("bond_for_server", None)
         self.bond_for_server_not = kwargs.get("bond_for_server_not", None)
+        self.created_at = kwargs.get("created_at", None)
+        self.created_at_gt = kwargs.get("created_at_gt", None)
+        self.created_at_gte = kwargs.get("created_at_gte", None)
+        self.created_at_in = kwargs.get("created_at_in", None)
+        self.created_at_lt = kwargs.get("created_at_lt", None)
+        self.created_at_lte = kwargs.get("created_at_lte", None)
+        self.created_at_not = kwargs.get("created_at_not", None)
+        self.created_at_not_in = kwargs.get("created_at_not_in", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         self.entity_async_status_in = kwargs.get("entity_async_status_in", None)
         self.entity_async_status_not = kwargs.get("entity_async_status_not", None)
@@ -268,6 +324,7 @@ class VnetBondWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.load_balancer_instance = kwargs.get("load_balancer_instance", None)
         self.load_balancer_service = kwargs.get("load_balancer_service", None)
         self.local_id = kwargs.get("local_id", None)
         self.local_id_contains = kwargs.get("local_id_contains", None)
@@ -311,7 +368,14 @@ class VnetBondWhereInput(object):
         self.namespace_not_in = kwargs.get("namespace_not_in", None)
         self.namespace_not_starts_with = kwargs.get("namespace_not_starts_with", None)
         self.namespace_starts_with = kwargs.get("namespace_starts_with", None)
+        self.network_type = kwargs.get("network_type", None)
+        self.network_type_in = kwargs.get("network_type_in", None)
+        self.network_type_not = kwargs.get("network_type_not", None)
+        self.network_type_not_in = kwargs.get("network_type_not_in", None)
         self.vlan = kwargs.get("vlan", None)
+        self.vnet_bond_group = kwargs.get("vnet_bond_group", None)
+        self.vpc = kwargs.get("vpc", None)
+        self.vpc_subnet = kwargs.get("vpc_subnet", None)
 
     @property
     def _and(self):
@@ -459,6 +523,174 @@ class VnetBondWhereInput(object):
         """
 
         self._bond_for_server_not = bond_for_server_not
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this VnetBondWhereInput.
+
+
+        :param created_at: The created_at of this VnetBondWhereInput.  # noqa: E501
+        :type created_at: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def created_at_gt(self):
+        """Gets the created_at_gt of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gt of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gt
+
+    @created_at_gt.setter
+    def created_at_gt(self, created_at_gt):
+        """Sets the created_at_gt of this VnetBondWhereInput.
+
+
+        :param created_at_gt: The created_at_gt of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_gt: str
+        """
+
+        self._created_at_gt = created_at_gt
+
+    @property
+    def created_at_gte(self):
+        """Gets the created_at_gte of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gte of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gte
+
+    @created_at_gte.setter
+    def created_at_gte(self, created_at_gte):
+        """Sets the created_at_gte of this VnetBondWhereInput.
+
+
+        :param created_at_gte: The created_at_gte of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_gte: str
+        """
+
+        self._created_at_gte = created_at_gte
+
+    @property
+    def created_at_in(self):
+        """Gets the created_at_in of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_in of this VnetBondWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_in
+
+    @created_at_in.setter
+    def created_at_in(self, created_at_in):
+        """Sets the created_at_in of this VnetBondWhereInput.
+
+
+        :param created_at_in: The created_at_in of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_in: list[str]
+        """
+
+        self._created_at_in = created_at_in
+
+    @property
+    def created_at_lt(self):
+        """Gets the created_at_lt of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lt of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lt
+
+    @created_at_lt.setter
+    def created_at_lt(self, created_at_lt):
+        """Sets the created_at_lt of this VnetBondWhereInput.
+
+
+        :param created_at_lt: The created_at_lt of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_lt: str
+        """
+
+        self._created_at_lt = created_at_lt
+
+    @property
+    def created_at_lte(self):
+        """Gets the created_at_lte of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lte of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lte
+
+    @created_at_lte.setter
+    def created_at_lte(self, created_at_lte):
+        """Sets the created_at_lte of this VnetBondWhereInput.
+
+
+        :param created_at_lte: The created_at_lte of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_lte: str
+        """
+
+        self._created_at_lte = created_at_lte
+
+    @property
+    def created_at_not(self):
+        """Gets the created_at_not of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not of this VnetBondWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_not
+
+    @created_at_not.setter
+    def created_at_not(self, created_at_not):
+        """Sets the created_at_not of this VnetBondWhereInput.
+
+
+        :param created_at_not: The created_at_not of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_not: str
+        """
+
+        self._created_at_not = created_at_not
+
+    @property
+    def created_at_not_in(self):
+        """Gets the created_at_not_in of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not_in of this VnetBondWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_not_in
+
+    @created_at_not_in.setter
+    def created_at_not_in(self, created_at_not_in):
+        """Sets the created_at_not_in of this VnetBondWhereInput.
+
+
+        :param created_at_not_in: The created_at_not_in of this VnetBondWhereInput.  # noqa: E501
+        :type created_at_not_in: list[str]
+        """
+
+        self._created_at_not_in = created_at_not_in
 
     @property
     def entity_async_status(self):
@@ -837,6 +1069,27 @@ class VnetBondWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def load_balancer_instance(self):
+        """Gets the load_balancer_instance of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The load_balancer_instance of this VnetBondWhereInput.  # noqa: E501
+        :rtype: LoadBalancerInstanceWhereInput
+        """
+        return self._load_balancer_instance
+
+    @load_balancer_instance.setter
+    def load_balancer_instance(self, load_balancer_instance):
+        """Sets the load_balancer_instance of this VnetBondWhereInput.
+
+
+        :param load_balancer_instance: The load_balancer_instance of this VnetBondWhereInput.  # noqa: E501
+        :type load_balancer_instance: LoadBalancerInstanceWhereInput
+        """
+
+        self._load_balancer_instance = load_balancer_instance
 
     @property
     def load_balancer_service(self):
@@ -1742,6 +1995,90 @@ class VnetBondWhereInput(object):
         self._namespace_starts_with = namespace_starts_with
 
     @property
+    def network_type(self):
+        """Gets the network_type of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The network_type of this VnetBondWhereInput.  # noqa: E501
+        :rtype: VnetBondNetworkType
+        """
+        return self._network_type
+
+    @network_type.setter
+    def network_type(self, network_type):
+        """Sets the network_type of this VnetBondWhereInput.
+
+
+        :param network_type: The network_type of this VnetBondWhereInput.  # noqa: E501
+        :type network_type: VnetBondNetworkType
+        """
+
+        self._network_type = network_type
+
+    @property
+    def network_type_in(self):
+        """Gets the network_type_in of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The network_type_in of this VnetBondWhereInput.  # noqa: E501
+        :rtype: list[VnetBondNetworkType]
+        """
+        return self._network_type_in
+
+    @network_type_in.setter
+    def network_type_in(self, network_type_in):
+        """Sets the network_type_in of this VnetBondWhereInput.
+
+
+        :param network_type_in: The network_type_in of this VnetBondWhereInput.  # noqa: E501
+        :type network_type_in: list[VnetBondNetworkType]
+        """
+
+        self._network_type_in = network_type_in
+
+    @property
+    def network_type_not(self):
+        """Gets the network_type_not of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The network_type_not of this VnetBondWhereInput.  # noqa: E501
+        :rtype: VnetBondNetworkType
+        """
+        return self._network_type_not
+
+    @network_type_not.setter
+    def network_type_not(self, network_type_not):
+        """Sets the network_type_not of this VnetBondWhereInput.
+
+
+        :param network_type_not: The network_type_not of this VnetBondWhereInput.  # noqa: E501
+        :type network_type_not: VnetBondNetworkType
+        """
+
+        self._network_type_not = network_type_not
+
+    @property
+    def network_type_not_in(self):
+        """Gets the network_type_not_in of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The network_type_not_in of this VnetBondWhereInput.  # noqa: E501
+        :rtype: list[VnetBondNetworkType]
+        """
+        return self._network_type_not_in
+
+    @network_type_not_in.setter
+    def network_type_not_in(self, network_type_not_in):
+        """Sets the network_type_not_in of this VnetBondWhereInput.
+
+
+        :param network_type_not_in: The network_type_not_in of this VnetBondWhereInput.  # noqa: E501
+        :type network_type_not_in: list[VnetBondNetworkType]
+        """
+
+        self._network_type_not_in = network_type_not_in
+
+    @property
     def vlan(self):
         """Gets the vlan of this VnetBondWhereInput.  # noqa: E501
 
@@ -1761,6 +2098,69 @@ class VnetBondWhereInput(object):
         """
 
         self._vlan = vlan
+
+    @property
+    def vnet_bond_group(self):
+        """Gets the vnet_bond_group of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The vnet_bond_group of this VnetBondWhereInput.  # noqa: E501
+        :rtype: VnetBondGroupWhereInput
+        """
+        return self._vnet_bond_group
+
+    @vnet_bond_group.setter
+    def vnet_bond_group(self, vnet_bond_group):
+        """Sets the vnet_bond_group of this VnetBondWhereInput.
+
+
+        :param vnet_bond_group: The vnet_bond_group of this VnetBondWhereInput.  # noqa: E501
+        :type vnet_bond_group: VnetBondGroupWhereInput
+        """
+
+        self._vnet_bond_group = vnet_bond_group
+
+    @property
+    def vpc(self):
+        """Gets the vpc of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The vpc of this VnetBondWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudWhereInput
+        """
+        return self._vpc
+
+    @vpc.setter
+    def vpc(self, vpc):
+        """Sets the vpc of this VnetBondWhereInput.
+
+
+        :param vpc: The vpc of this VnetBondWhereInput.  # noqa: E501
+        :type vpc: VirtualPrivateCloudWhereInput
+        """
+
+        self._vpc = vpc
+
+    @property
+    def vpc_subnet(self):
+        """Gets the vpc_subnet of this VnetBondWhereInput.  # noqa: E501
+
+
+        :return: The vpc_subnet of this VnetBondWhereInput.  # noqa: E501
+        :rtype: VirtualPrivateCloudSubnetWhereInput
+        """
+        return self._vpc_subnet
+
+    @vpc_subnet.setter
+    def vpc_subnet(self, vpc_subnet):
+        """Sets the vpc_subnet of this VnetBondWhereInput.
+
+
+        :param vpc_subnet: The vpc_subnet of this VnetBondWhereInput.  # noqa: E501
+        :type vpc_subnet: VirtualPrivateCloudSubnetWhereInput
+        """
+
+        self._vpc_subnet = vpc_subnet
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -63,6 +63,8 @@ class FailbackExecutionWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'is_sync_replication': 'bool',
+        'is_sync_replication_not': 'bool',
         'replication_failback_target_executions_every': 'ReplicationFailbackTargetExecutionWhereInput',
         'replication_failback_target_executions_none': 'ReplicationFailbackTargetExecutionWhereInput',
         'replication_failback_target_executions_some': 'ReplicationFailbackTargetExecutionWhereInput',
@@ -144,6 +146,8 @@ class FailbackExecutionWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'is_sync_replication': 'is_sync_replication',
+        'is_sync_replication_not': 'is_sync_replication_not',
         'replication_failback_target_executions_every': 'replication_failback_target_executions_every',
         'replication_failback_target_executions_none': 'replication_failback_target_executions_none',
         'replication_failback_target_executions_some': 'replication_failback_target_executions_some',
@@ -228,6 +232,8 @@ class FailbackExecutionWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._is_sync_replication = None
+        self._is_sync_replication_not = None
         self._replication_failback_target_executions_every = None
         self._replication_failback_target_executions_none = None
         self._replication_failback_target_executions_some = None
@@ -308,6 +314,8 @@ class FailbackExecutionWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.is_sync_replication = kwargs.get("is_sync_replication", None)
+        self.is_sync_replication_not = kwargs.get("is_sync_replication_not", None)
         self.replication_failback_target_executions_every = kwargs.get("replication_failback_target_executions_every", None)
         self.replication_failback_target_executions_none = kwargs.get("replication_failback_target_executions_none", None)
         self.replication_failback_target_executions_some = kwargs.get("replication_failback_target_executions_some", None)
@@ -1146,6 +1154,48 @@ class FailbackExecutionWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def is_sync_replication(self):
+        """Gets the is_sync_replication of this FailbackExecutionWhereInput.  # noqa: E501
+
+
+        :return: The is_sync_replication of this FailbackExecutionWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_sync_replication
+
+    @is_sync_replication.setter
+    def is_sync_replication(self, is_sync_replication):
+        """Sets the is_sync_replication of this FailbackExecutionWhereInput.
+
+
+        :param is_sync_replication: The is_sync_replication of this FailbackExecutionWhereInput.  # noqa: E501
+        :type is_sync_replication: bool
+        """
+
+        self._is_sync_replication = is_sync_replication
+
+    @property
+    def is_sync_replication_not(self):
+        """Gets the is_sync_replication_not of this FailbackExecutionWhereInput.  # noqa: E501
+
+
+        :return: The is_sync_replication_not of this FailbackExecutionWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_sync_replication_not
+
+    @is_sync_replication_not.setter
+    def is_sync_replication_not(self, is_sync_replication_not):
+        """Sets the is_sync_replication_not of this FailbackExecutionWhereInput.
+
+
+        :param is_sync_replication_not: The is_sync_replication_not of this FailbackExecutionWhereInput.  # noqa: E501
+        :type is_sync_replication_not: bool
+        """
+
+        self._is_sync_replication_not = is_sync_replication_not
 
     @property
     def replication_failback_target_executions_every(self):

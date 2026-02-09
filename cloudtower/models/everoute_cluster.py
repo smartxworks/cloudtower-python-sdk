@@ -85,8 +85,7 @@ class EverouteCluster(object):
         self.agent_elf_vdses = kwargs.get("agent_elf_vdses", None)
         if "controller_instances" in kwargs:
             self.controller_instances = kwargs["controller_instances"]
-        if "controller_template" in kwargs:
-            self.controller_template = kwargs["controller_template"]
+        self.controller_template = kwargs.get("controller_template", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "global_default_action" in kwargs:
             self.global_default_action = kwargs["global_default_action"]
@@ -186,8 +185,6 @@ class EverouteCluster(object):
         :param controller_template: The controller_template of this EverouteCluster.  # noqa: E501
         :type controller_template: NestedEverouteControllerTemplate
         """
-        if self.local_vars_configuration.client_side_validation and controller_template is None:  # noqa: E501
-            raise ValueError("Invalid value for `controller_template`, must not be `None`")  # noqa: E501
 
         self._controller_template = controller_template
 

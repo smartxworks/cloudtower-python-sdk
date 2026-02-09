@@ -1,5 +1,22 @@
 # RELEASE NOTE
 
+## release 日期 2026-02-09
+
+v2.22.0 release (tower version 4.8.0)
+
+### features
+
+- 增加 [RegistryServiceApi] 用于镜像仓库的查询
+- [BackupPlanApi] [get_backup_plan_without_executions] 提供不返回 execution 的备份计划查询 API
+- [ReplicationPlanApi] [get_replication_plan_without_executions] 提供不返回 execution 的复制计划查询 API
+- [Host] 新增字段 dirty_cache_space, dirty_cache_usage 和 failure_cache_space
+- [Cluster] 新增字段 dirty_cache_space, dirty_cache_usage 和 failure_cache_space
+- [ClusterSettings] 新增字段 default_storage_policy_stripe_num
+- [VmVolumeSnapshot] 新增字段 elf_storage_policy_stripe_num
+- [VmVolume] 新增字段 elf_storage_policy_stripe_num
+- [NestedVirtualPrivateCloudService] 新增字段 everoute_cluster
+- [VmNic] 新增字段 guest_info_ip_addresses 和 guest_info_ip_addresses_v6
+
 ## release 日期 2025-10-14
 
 v2.21.0 release (tower version 4.7.0)

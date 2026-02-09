@@ -75,6 +75,7 @@ from cloudtower.api.ovf_api import OvfApi
 from cloudtower.api.pci_device_api import PciDeviceApi
 from cloudtower.api.pmem_dimm_api import PmemDimmApi
 from cloudtower.api.rack_topo_api import RackTopoApi
+from cloudtower.api.registry_service_api import RegistryServiceApi
 from cloudtower.api.replica_vm_api import ReplicaVmApi
 from cloudtower.api.replication_plan_api import ReplicationPlanApi
 from cloudtower.api.replication_service_api import ReplicationServiceApi

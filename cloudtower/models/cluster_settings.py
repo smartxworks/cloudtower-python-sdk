@@ -31,6 +31,7 @@ class ClusterSettings(object):
         'default_storage_policy_ec_k': 'int',
         'default_storage_policy_ec_m': 'int',
         'default_storage_policy_replica_num': 'int',
+        'default_storage_policy_stripe_num': 'int',
         'default_storage_policy_thin_provision': 'bool',
         'enabled_iscsi': 'bool',
         'id': 'str',
@@ -44,6 +45,7 @@ class ClusterSettings(object):
         'default_storage_policy_ec_k': 'default_storage_policy_ec_k',
         'default_storage_policy_ec_m': 'default_storage_policy_ec_m',
         'default_storage_policy_replica_num': 'default_storage_policy_replica_num',
+        'default_storage_policy_stripe_num': 'default_storage_policy_stripe_num',
         'default_storage_policy_thin_provision': 'default_storage_policy_thin_provision',
         'enabled_iscsi': 'enabled_iscsi',
         'id': 'id',
@@ -60,6 +62,7 @@ class ClusterSettings(object):
         self._default_storage_policy_ec_k = None
         self._default_storage_policy_ec_m = None
         self._default_storage_policy_replica_num = None
+        self._default_storage_policy_stripe_num = None
         self._default_storage_policy_thin_provision = None
         self._enabled_iscsi = None
         self._id = None
@@ -73,6 +76,7 @@ class ClusterSettings(object):
         self.default_storage_policy_ec_k = kwargs.get("default_storage_policy_ec_k", None)
         self.default_storage_policy_ec_m = kwargs.get("default_storage_policy_ec_m", None)
         self.default_storage_policy_replica_num = kwargs.get("default_storage_policy_replica_num", None)
+        self.default_storage_policy_stripe_num = kwargs.get("default_storage_policy_stripe_num", None)
         self.default_storage_policy_thin_provision = kwargs.get("default_storage_policy_thin_provision", None)
         self.enabled_iscsi = kwargs.get("enabled_iscsi", None)
         if "id" in kwargs:
@@ -206,6 +210,27 @@ class ClusterSettings(object):
         """
 
         self._default_storage_policy_replica_num = default_storage_policy_replica_num
+
+    @property
+    def default_storage_policy_stripe_num(self):
+        """Gets the default_storage_policy_stripe_num of this ClusterSettings.  # noqa: E501
+
+
+        :return: The default_storage_policy_stripe_num of this ClusterSettings.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_storage_policy_stripe_num
+
+    @default_storage_policy_stripe_num.setter
+    def default_storage_policy_stripe_num(self, default_storage_policy_stripe_num):
+        """Sets the default_storage_policy_stripe_num of this ClusterSettings.
+
+
+        :param default_storage_policy_stripe_num: The default_storage_policy_stripe_num of this ClusterSettings.  # noqa: E501
+        :type default_storage_policy_stripe_num: int
+        """
+
+        self._default_storage_policy_stripe_num = default_storage_policy_stripe_num
 
     @property
     def default_storage_policy_thin_provision(self):

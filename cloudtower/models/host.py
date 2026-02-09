@@ -43,10 +43,13 @@ class Host(object):
         'cpu_temperature_celsius': 'list[int]',
         'cpu_vendor': 'str',
         'data_ip': 'str',
+        'dirty_cache_space': 'int',
+        'dirty_cache_usage': 'float',
         'disk_pools': 'list[NestedDiskPool]',
         'disks': 'list[NestedDisk]',
         'downgraded_prioritized_space': 'int',
         'entity_async_status': 'EntityAsyncStatus',
+        'failure_cache_space': 'int',
         'failure_data_space': 'int',
         'gpu_devices': 'list[NestedGpuDevice]',
         'hdd_data_capacity': 'int',
@@ -135,10 +138,13 @@ class Host(object):
         'cpu_temperature_celsius': 'cpu_temperature_celsius',
         'cpu_vendor': 'cpu_vendor',
         'data_ip': 'data_ip',
+        'dirty_cache_space': 'dirty_cache_space',
+        'dirty_cache_usage': 'dirty_cache_usage',
         'disk_pools': 'disk_pools',
         'disks': 'disks',
         'downgraded_prioritized_space': 'downgraded_prioritized_space',
         'entity_async_status': 'entityAsyncStatus',
+        'failure_cache_space': 'failure_cache_space',
         'failure_data_space': 'failure_data_space',
         'gpu_devices': 'gpu_devices',
         'hdd_data_capacity': 'hdd_data_capacity',
@@ -230,10 +236,13 @@ class Host(object):
         self._cpu_temperature_celsius = None
         self._cpu_vendor = None
         self._data_ip = None
+        self._dirty_cache_space = None
+        self._dirty_cache_usage = None
         self._disk_pools = None
         self._disks = None
         self._downgraded_prioritized_space = None
         self._entity_async_status = None
+        self._failure_cache_space = None
         self._failure_data_space = None
         self._gpu_devices = None
         self._hdd_data_capacity = None
@@ -330,10 +339,13 @@ class Host(object):
             self.cpu_temperature_celsius = kwargs["cpu_temperature_celsius"]
         self.cpu_vendor = kwargs.get("cpu_vendor", None)
         self.data_ip = kwargs.get("data_ip", None)
+        self.dirty_cache_space = kwargs.get("dirty_cache_space", None)
+        self.dirty_cache_usage = kwargs.get("dirty_cache_usage", None)
         self.disk_pools = kwargs.get("disk_pools", None)
         self.disks = kwargs.get("disks", None)
         self.downgraded_prioritized_space = kwargs.get("downgraded_prioritized_space", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
+        self.failure_cache_space = kwargs.get("failure_cache_space", None)
         if "failure_data_space" in kwargs:
             self.failure_data_space = kwargs["failure_data_space"]
         self.gpu_devices = kwargs.get("gpu_devices", None)
@@ -826,6 +838,48 @@ class Host(object):
         self._data_ip = data_ip
 
     @property
+    def dirty_cache_space(self):
+        """Gets the dirty_cache_space of this Host.  # noqa: E501
+
+
+        :return: The dirty_cache_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._dirty_cache_space
+
+    @dirty_cache_space.setter
+    def dirty_cache_space(self, dirty_cache_space):
+        """Sets the dirty_cache_space of this Host.
+
+
+        :param dirty_cache_space: The dirty_cache_space of this Host.  # noqa: E501
+        :type dirty_cache_space: int
+        """
+
+        self._dirty_cache_space = dirty_cache_space
+
+    @property
+    def dirty_cache_usage(self):
+        """Gets the dirty_cache_usage of this Host.  # noqa: E501
+
+
+        :return: The dirty_cache_usage of this Host.  # noqa: E501
+        :rtype: float
+        """
+        return self._dirty_cache_usage
+
+    @dirty_cache_usage.setter
+    def dirty_cache_usage(self, dirty_cache_usage):
+        """Sets the dirty_cache_usage of this Host.
+
+
+        :param dirty_cache_usage: The dirty_cache_usage of this Host.  # noqa: E501
+        :type dirty_cache_usage: float
+        """
+
+        self._dirty_cache_usage = dirty_cache_usage
+
+    @property
     def disk_pools(self):
         """Gets the disk_pools of this Host.  # noqa: E501
 
@@ -908,6 +962,27 @@ class Host(object):
         """
 
         self._entity_async_status = entity_async_status
+
+    @property
+    def failure_cache_space(self):
+        """Gets the failure_cache_space of this Host.  # noqa: E501
+
+
+        :return: The failure_cache_space of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._failure_cache_space
+
+    @failure_cache_space.setter
+    def failure_cache_space(self, failure_cache_space):
+        """Sets the failure_cache_space of this Host.
+
+
+        :param failure_cache_space: The failure_cache_space of this Host.  # noqa: E501
+        :type failure_cache_space: int
+        """
+
+        self._failure_cache_space = failure_cache_space
 
     @property
     def failure_data_space(self):
