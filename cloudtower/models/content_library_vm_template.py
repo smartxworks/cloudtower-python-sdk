@@ -48,7 +48,6 @@ class ContentLibraryVmTemplate(object):
         'os': 'str',
         'size': 'int',
         'template_config': 'NestedTemplateConfig',
-        'usage': 'ContentLibraryVmTemplateUsage',
         'vcpu': 'int',
         'video_type': 'str',
         'vm_disks': 'list[NestedContentLibraryVmTemplateDisk]',
@@ -83,7 +82,6 @@ class ContentLibraryVmTemplate(object):
         'os': 'os',
         'size': 'size',
         'template_config': 'template_config',
-        'usage': 'usage',
         'vcpu': 'vcpu',
         'video_type': 'video_type',
         'vm_disks': 'vm_disks',
@@ -121,7 +119,6 @@ class ContentLibraryVmTemplate(object):
         self._os = None
         self._size = None
         self._template_config = None
-        self._usage = None
         self._vcpu = None
         self._video_type = None
         self._vm_disks = None
@@ -163,7 +160,6 @@ class ContentLibraryVmTemplate(object):
         if "size" in kwargs:
             self.size = kwargs["size"]
         self.template_config = kwargs.get("template_config", None)
-        self.usage = kwargs.get("usage", None)
         if "vcpu" in kwargs:
             self.vcpu = kwargs["vcpu"]
         self.video_type = kwargs.get("video_type", None)
@@ -673,27 +669,6 @@ class ContentLibraryVmTemplate(object):
         """
 
         self._template_config = template_config
-
-    @property
-    def usage(self):
-        """Gets the usage of this ContentLibraryVmTemplate.  # noqa: E501
-
-
-        :return: The usage of this ContentLibraryVmTemplate.  # noqa: E501
-        :rtype: ContentLibraryVmTemplateUsage
-        """
-        return self._usage
-
-    @usage.setter
-    def usage(self, usage):
-        """Sets the usage of this ContentLibraryVmTemplate.
-
-
-        :param usage: The usage of this ContentLibraryVmTemplate.  # noqa: E501
-        :type usage: ContentLibraryVmTemplateUsage
-        """
-
-        self._usage = usage
 
     @property
     def vcpu(self):

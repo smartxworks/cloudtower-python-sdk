@@ -31,8 +31,7 @@ class VirtualPrivateCloudEdgeGatewayGroup(object):
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'name': 'str',
-        'primary_edge_gateway_id': 'str',
-        'vpc_service': 'NestedVirtualPrivateCloudService'
+        'primary_edge_gateway_id': 'str'
     }
 
     attribute_map = {
@@ -42,8 +41,7 @@ class VirtualPrivateCloudEdgeGatewayGroup(object):
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'name': 'name',
-        'primary_edge_gateway_id': 'primary_edge_gateway_id',
-        'vpc_service': 'vpc_service'
+        'primary_edge_gateway_id': 'primary_edge_gateway_id'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -57,7 +55,6 @@ class VirtualPrivateCloudEdgeGatewayGroup(object):
         self._id = None
         self._name = None
         self._primary_edge_gateway_id = None
-        self._vpc_service = None
         self.discriminator = None
 
         if "active_edge_gateway_ids" in kwargs:
@@ -70,8 +67,6 @@ class VirtualPrivateCloudEdgeGatewayGroup(object):
         if "name" in kwargs:
             self.name = kwargs["name"]
         self.primary_edge_gateway_id = kwargs.get("primary_edge_gateway_id", None)
-        if "vpc_service" in kwargs:
-            self.vpc_service = kwargs["vpc_service"]
 
     @property
     def active_edge_gateway_ids(self):
@@ -225,29 +220,6 @@ class VirtualPrivateCloudEdgeGatewayGroup(object):
         """
 
         self._primary_edge_gateway_id = primary_edge_gateway_id
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroup.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroup.  # noqa: E501
-        :rtype: NestedVirtualPrivateCloudService
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroup.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroup.  # noqa: E501
-        :type vpc_service: NestedVirtualPrivateCloudService
-        """
-        if self.local_vars_configuration.client_side_validation and vpc_service is None:  # noqa: E501
-            raise ValueError("Invalid value for `vpc_service`, must not be `None`")  # noqa: E501
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

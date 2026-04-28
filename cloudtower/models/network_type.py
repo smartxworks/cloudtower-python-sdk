@@ -21,7 +21,6 @@ class NetworkType(object):
     allowed enum values
     """
     ACCESS = "ACCESS"
-    ERSPAN = "ERSPAN"
     MANAGEMENT = "MANAGEMENT"
     MIGRATION = "MIGRATION"
     STORAGE = "STORAGE"
@@ -30,7 +29,7 @@ class NetworkType(object):
     VPC_SYS = "VPC_SYS"
     VPC_VM = "VPC_VM"
 
-    allowable_values = [ACCESS, ERSPAN, MANAGEMENT, MIGRATION, STORAGE, STORAGE_ACCESS, VM, VPC_SYS, VPC_VM]  # noqa: E501
+    allowable_values = [ACCESS, MANAGEMENT, MIGRATION, STORAGE, STORAGE_ACCESS, VM, VPC_SYS, VPC_VM]  # noqa: E501
 
     """
     Attributes:

@@ -28,8 +28,6 @@ class VmNicWhereInput(object):
         '_and': 'list[VmNicWhereInput]',
         '_not': 'list[VmNicWhereInput]',
         '_or': 'list[VmNicWhereInput]',
-        'dpi_enabled': 'bool',
-        'dpi_enabled_not': 'bool',
         'egress_rate_limit_burst_in_bit': 'float',
         'egress_rate_limit_burst_in_bit_gt': 'float',
         'egress_rate_limit_burst_in_bit_gte': 'float',
@@ -194,8 +192,6 @@ class VmNicWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
-        'dpi_enabled': 'dpi_enabled',
-        'dpi_enabled_not': 'dpi_enabled_not',
         'egress_rate_limit_burst_in_bit': 'egress_rate_limit_burst_in_bit',
         'egress_rate_limit_burst_in_bit_gt': 'egress_rate_limit_burst_in_bit_gt',
         'egress_rate_limit_burst_in_bit_gte': 'egress_rate_limit_burst_in_bit_gte',
@@ -363,8 +359,6 @@ class VmNicWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
-        self._dpi_enabled = None
-        self._dpi_enabled_not = None
         self._egress_rate_limit_burst_in_bit = None
         self._egress_rate_limit_burst_in_bit_gt = None
         self._egress_rate_limit_burst_in_bit_gte = None
@@ -528,8 +522,6 @@ class VmNicWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
-        self.dpi_enabled = kwargs.get("dpi_enabled", None)
-        self.dpi_enabled_not = kwargs.get("dpi_enabled_not", None)
         self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
         self.egress_rate_limit_burst_in_bit_gt = kwargs.get("egress_rate_limit_burst_in_bit_gt", None)
         self.egress_rate_limit_burst_in_bit_gte = kwargs.get("egress_rate_limit_burst_in_bit_gte", None)
@@ -751,48 +743,6 @@ class VmNicWhereInput(object):
         """
 
         self.__or = _or
-
-    @property
-    def dpi_enabled(self):
-        """Gets the dpi_enabled of this VmNicWhereInput.  # noqa: E501
-
-
-        :return: The dpi_enabled of this VmNicWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._dpi_enabled
-
-    @dpi_enabled.setter
-    def dpi_enabled(self, dpi_enabled):
-        """Sets the dpi_enabled of this VmNicWhereInput.
-
-
-        :param dpi_enabled: The dpi_enabled of this VmNicWhereInput.  # noqa: E501
-        :type dpi_enabled: bool
-        """
-
-        self._dpi_enabled = dpi_enabled
-
-    @property
-    def dpi_enabled_not(self):
-        """Gets the dpi_enabled_not of this VmNicWhereInput.  # noqa: E501
-
-
-        :return: The dpi_enabled_not of this VmNicWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._dpi_enabled_not
-
-    @dpi_enabled_not.setter
-    def dpi_enabled_not(self, dpi_enabled_not):
-        """Sets the dpi_enabled_not of this VmNicWhereInput.
-
-
-        :param dpi_enabled_not: The dpi_enabled_not of this VmNicWhereInput.  # noqa: E501
-        :type dpi_enabled_not: bool
-        """
-
-        self._dpi_enabled_not = dpi_enabled_not
 
     @property
     def egress_rate_limit_burst_in_bit(self):

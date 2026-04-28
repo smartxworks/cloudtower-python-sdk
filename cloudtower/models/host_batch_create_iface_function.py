@@ -21,13 +21,12 @@ class HostBatchCreateIfaceFunction(object):
     allowed enum values
     """
     ACCESS = "ACCESS"
-    ERSPAN = "ERSPAN"
     MANAGEMENT = "MANAGEMENT"
     MIGRATION = "MIGRATION"
     STORAGE = "STORAGE"
     VMWARE_ACCESS = "VMWARE_ACCESS"
 
-    allowable_values = [ACCESS, ERSPAN, MANAGEMENT, MIGRATION, STORAGE, VMWARE_ACCESS]  # noqa: E501
+    allowable_values = [ACCESS, MANAGEMENT, MIGRATION, STORAGE, VMWARE_ACCESS]  # noqa: E501
 
     """
     Attributes:

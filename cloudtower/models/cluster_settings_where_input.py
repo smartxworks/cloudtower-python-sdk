@@ -59,14 +59,6 @@ class ClusterSettingsWhereInput(object):
         'default_storage_policy_replica_num_lte': 'int',
         'default_storage_policy_replica_num_not': 'int',
         'default_storage_policy_replica_num_not_in': 'list[int]',
-        'default_storage_policy_stripe_num': 'int',
-        'default_storage_policy_stripe_num_gt': 'int',
-        'default_storage_policy_stripe_num_gte': 'int',
-        'default_storage_policy_stripe_num_in': 'list[int]',
-        'default_storage_policy_stripe_num_lt': 'int',
-        'default_storage_policy_stripe_num_lte': 'int',
-        'default_storage_policy_stripe_num_not': 'int',
-        'default_storage_policy_stripe_num_not_in': 'list[int]',
         'default_storage_policy_thin_provision': 'bool',
         'default_storage_policy_thin_provision_not': 'bool',
         'enabled_iscsi': 'bool',
@@ -122,14 +114,6 @@ class ClusterSettingsWhereInput(object):
         'default_storage_policy_replica_num_lte': 'default_storage_policy_replica_num_lte',
         'default_storage_policy_replica_num_not': 'default_storage_policy_replica_num_not',
         'default_storage_policy_replica_num_not_in': 'default_storage_policy_replica_num_not_in',
-        'default_storage_policy_stripe_num': 'default_storage_policy_stripe_num',
-        'default_storage_policy_stripe_num_gt': 'default_storage_policy_stripe_num_gt',
-        'default_storage_policy_stripe_num_gte': 'default_storage_policy_stripe_num_gte',
-        'default_storage_policy_stripe_num_in': 'default_storage_policy_stripe_num_in',
-        'default_storage_policy_stripe_num_lt': 'default_storage_policy_stripe_num_lt',
-        'default_storage_policy_stripe_num_lte': 'default_storage_policy_stripe_num_lte',
-        'default_storage_policy_stripe_num_not': 'default_storage_policy_stripe_num_not',
-        'default_storage_policy_stripe_num_not_in': 'default_storage_policy_stripe_num_not_in',
         'default_storage_policy_thin_provision': 'default_storage_policy_thin_provision',
         'default_storage_policy_thin_provision_not': 'default_storage_policy_thin_provision_not',
         'enabled_iscsi': 'enabled_iscsi',
@@ -188,14 +172,6 @@ class ClusterSettingsWhereInput(object):
         self._default_storage_policy_replica_num_lte = None
         self._default_storage_policy_replica_num_not = None
         self._default_storage_policy_replica_num_not_in = None
-        self._default_storage_policy_stripe_num = None
-        self._default_storage_policy_stripe_num_gt = None
-        self._default_storage_policy_stripe_num_gte = None
-        self._default_storage_policy_stripe_num_in = None
-        self._default_storage_policy_stripe_num_lt = None
-        self._default_storage_policy_stripe_num_lte = None
-        self._default_storage_policy_stripe_num_not = None
-        self._default_storage_policy_stripe_num_not_in = None
         self._default_storage_policy_thin_provision = None
         self._default_storage_policy_thin_provision_not = None
         self._enabled_iscsi = None
@@ -250,14 +226,6 @@ class ClusterSettingsWhereInput(object):
         self.default_storage_policy_replica_num_lte = kwargs.get("default_storage_policy_replica_num_lte", None)
         self.default_storage_policy_replica_num_not = kwargs.get("default_storage_policy_replica_num_not", None)
         self.default_storage_policy_replica_num_not_in = kwargs.get("default_storage_policy_replica_num_not_in", None)
-        self.default_storage_policy_stripe_num = kwargs.get("default_storage_policy_stripe_num", None)
-        self.default_storage_policy_stripe_num_gt = kwargs.get("default_storage_policy_stripe_num_gt", None)
-        self.default_storage_policy_stripe_num_gte = kwargs.get("default_storage_policy_stripe_num_gte", None)
-        self.default_storage_policy_stripe_num_in = kwargs.get("default_storage_policy_stripe_num_in", None)
-        self.default_storage_policy_stripe_num_lt = kwargs.get("default_storage_policy_stripe_num_lt", None)
-        self.default_storage_policy_stripe_num_lte = kwargs.get("default_storage_policy_stripe_num_lte", None)
-        self.default_storage_policy_stripe_num_not = kwargs.get("default_storage_policy_stripe_num_not", None)
-        self.default_storage_policy_stripe_num_not_in = kwargs.get("default_storage_policy_stripe_num_not_in", None)
         self.default_storage_policy_thin_provision = kwargs.get("default_storage_policy_thin_provision", None)
         self.default_storage_policy_thin_provision_not = kwargs.get("default_storage_policy_thin_provision_not", None)
         self.enabled_iscsi = kwargs.get("enabled_iscsi", None)
@@ -990,174 +958,6 @@ class ClusterSettingsWhereInput(object):
         """
 
         self._default_storage_policy_replica_num_not_in = default_storage_policy_replica_num_not_in
-
-    @property
-    def default_storage_policy_stripe_num(self):
-        """Gets the default_storage_policy_stripe_num of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num
-
-    @default_storage_policy_stripe_num.setter
-    def default_storage_policy_stripe_num(self, default_storage_policy_stripe_num):
-        """Sets the default_storage_policy_stripe_num of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num: The default_storage_policy_stripe_num of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num: int
-        """
-
-        self._default_storage_policy_stripe_num = default_storage_policy_stripe_num
-
-    @property
-    def default_storage_policy_stripe_num_gt(self):
-        """Gets the default_storage_policy_stripe_num_gt of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_gt of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num_gt
-
-    @default_storage_policy_stripe_num_gt.setter
-    def default_storage_policy_stripe_num_gt(self, default_storage_policy_stripe_num_gt):
-        """Sets the default_storage_policy_stripe_num_gt of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_gt: The default_storage_policy_stripe_num_gt of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_gt: int
-        """
-
-        self._default_storage_policy_stripe_num_gt = default_storage_policy_stripe_num_gt
-
-    @property
-    def default_storage_policy_stripe_num_gte(self):
-        """Gets the default_storage_policy_stripe_num_gte of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_gte of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num_gte
-
-    @default_storage_policy_stripe_num_gte.setter
-    def default_storage_policy_stripe_num_gte(self, default_storage_policy_stripe_num_gte):
-        """Sets the default_storage_policy_stripe_num_gte of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_gte: The default_storage_policy_stripe_num_gte of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_gte: int
-        """
-
-        self._default_storage_policy_stripe_num_gte = default_storage_policy_stripe_num_gte
-
-    @property
-    def default_storage_policy_stripe_num_in(self):
-        """Gets the default_storage_policy_stripe_num_in of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_in of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._default_storage_policy_stripe_num_in
-
-    @default_storage_policy_stripe_num_in.setter
-    def default_storage_policy_stripe_num_in(self, default_storage_policy_stripe_num_in):
-        """Sets the default_storage_policy_stripe_num_in of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_in: The default_storage_policy_stripe_num_in of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_in: list[int]
-        """
-
-        self._default_storage_policy_stripe_num_in = default_storage_policy_stripe_num_in
-
-    @property
-    def default_storage_policy_stripe_num_lt(self):
-        """Gets the default_storage_policy_stripe_num_lt of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_lt of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num_lt
-
-    @default_storage_policy_stripe_num_lt.setter
-    def default_storage_policy_stripe_num_lt(self, default_storage_policy_stripe_num_lt):
-        """Sets the default_storage_policy_stripe_num_lt of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_lt: The default_storage_policy_stripe_num_lt of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_lt: int
-        """
-
-        self._default_storage_policy_stripe_num_lt = default_storage_policy_stripe_num_lt
-
-    @property
-    def default_storage_policy_stripe_num_lte(self):
-        """Gets the default_storage_policy_stripe_num_lte of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_lte of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num_lte
-
-    @default_storage_policy_stripe_num_lte.setter
-    def default_storage_policy_stripe_num_lte(self, default_storage_policy_stripe_num_lte):
-        """Sets the default_storage_policy_stripe_num_lte of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_lte: The default_storage_policy_stripe_num_lte of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_lte: int
-        """
-
-        self._default_storage_policy_stripe_num_lte = default_storage_policy_stripe_num_lte
-
-    @property
-    def default_storage_policy_stripe_num_not(self):
-        """Gets the default_storage_policy_stripe_num_not of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_not of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_storage_policy_stripe_num_not
-
-    @default_storage_policy_stripe_num_not.setter
-    def default_storage_policy_stripe_num_not(self, default_storage_policy_stripe_num_not):
-        """Sets the default_storage_policy_stripe_num_not of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_not: The default_storage_policy_stripe_num_not of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_not: int
-        """
-
-        self._default_storage_policy_stripe_num_not = default_storage_policy_stripe_num_not
-
-    @property
-    def default_storage_policy_stripe_num_not_in(self):
-        """Gets the default_storage_policy_stripe_num_not_in of this ClusterSettingsWhereInput.  # noqa: E501
-
-
-        :return: The default_storage_policy_stripe_num_not_in of this ClusterSettingsWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._default_storage_policy_stripe_num_not_in
-
-    @default_storage_policy_stripe_num_not_in.setter
-    def default_storage_policy_stripe_num_not_in(self, default_storage_policy_stripe_num_not_in):
-        """Sets the default_storage_policy_stripe_num_not_in of this ClusterSettingsWhereInput.
-
-
-        :param default_storage_policy_stripe_num_not_in: The default_storage_policy_stripe_num_not_in of this ClusterSettingsWhereInput.  # noqa: E501
-        :type default_storage_policy_stripe_num_not_in: list[int]
-        """
-
-        self._default_storage_policy_stripe_num_not_in = default_storage_policy_stripe_num_not_in
 
     @property
     def default_storage_policy_thin_provision(self):

@@ -23,9 +23,8 @@ class PciDeviceUsage(object):
     MDEV = "MDEV"
     PASS_THROUGH = "PASS_THROUGH"
     SRIOV_VF = "SRIOV_VF"
-    UNKNOWN = "UNKNOWN"
 
-    allowable_values = [MDEV, PASS_THROUGH, SRIOV_VF, UNKNOWN]  # noqa: E501
+    allowable_values = [MDEV, PASS_THROUGH, SRIOV_VF]  # noqa: E501
 
     """
     Attributes:

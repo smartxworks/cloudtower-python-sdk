@@ -79,14 +79,6 @@ class VmVolumeSnapshotWhereInput(object):
         'elf_storage_policy_replica_num_lte': 'int',
         'elf_storage_policy_replica_num_not': 'int',
         'elf_storage_policy_replica_num_not_in': 'list[int]',
-        'elf_storage_policy_stripe_num': 'int',
-        'elf_storage_policy_stripe_num_gt': 'int',
-        'elf_storage_policy_stripe_num_gte': 'int',
-        'elf_storage_policy_stripe_num_in': 'list[int]',
-        'elf_storage_policy_stripe_num_lt': 'int',
-        'elf_storage_policy_stripe_num_lte': 'int',
-        'elf_storage_policy_stripe_num_not': 'int',
-        'elf_storage_policy_stripe_num_not_in': 'list[int]',
         'elf_storage_policy_thin_provision': 'bool',
         'elf_storage_policy_thin_provision_not': 'bool',
         'entity_async_status': 'EntityAsyncStatus',
@@ -258,14 +250,6 @@ class VmVolumeSnapshotWhereInput(object):
         'elf_storage_policy_replica_num_lte': 'elf_storage_policy_replica_num_lte',
         'elf_storage_policy_replica_num_not': 'elf_storage_policy_replica_num_not',
         'elf_storage_policy_replica_num_not_in': 'elf_storage_policy_replica_num_not_in',
-        'elf_storage_policy_stripe_num': 'elf_storage_policy_stripe_num',
-        'elf_storage_policy_stripe_num_gt': 'elf_storage_policy_stripe_num_gt',
-        'elf_storage_policy_stripe_num_gte': 'elf_storage_policy_stripe_num_gte',
-        'elf_storage_policy_stripe_num_in': 'elf_storage_policy_stripe_num_in',
-        'elf_storage_policy_stripe_num_lt': 'elf_storage_policy_stripe_num_lt',
-        'elf_storage_policy_stripe_num_lte': 'elf_storage_policy_stripe_num_lte',
-        'elf_storage_policy_stripe_num_not': 'elf_storage_policy_stripe_num_not',
-        'elf_storage_policy_stripe_num_not_in': 'elf_storage_policy_stripe_num_not_in',
         'elf_storage_policy_thin_provision': 'elf_storage_policy_thin_provision',
         'elf_storage_policy_thin_provision_not': 'elf_storage_policy_thin_provision_not',
         'entity_async_status': 'entityAsyncStatus',
@@ -440,14 +424,6 @@ class VmVolumeSnapshotWhereInput(object):
         self._elf_storage_policy_replica_num_lte = None
         self._elf_storage_policy_replica_num_not = None
         self._elf_storage_policy_replica_num_not_in = None
-        self._elf_storage_policy_stripe_num = None
-        self._elf_storage_policy_stripe_num_gt = None
-        self._elf_storage_policy_stripe_num_gte = None
-        self._elf_storage_policy_stripe_num_in = None
-        self._elf_storage_policy_stripe_num_lt = None
-        self._elf_storage_policy_stripe_num_lte = None
-        self._elf_storage_policy_stripe_num_not = None
-        self._elf_storage_policy_stripe_num_not_in = None
         self._elf_storage_policy_thin_provision = None
         self._elf_storage_policy_thin_provision_not = None
         self._entity_async_status = None
@@ -618,14 +594,6 @@ class VmVolumeSnapshotWhereInput(object):
         self.elf_storage_policy_replica_num_lte = kwargs.get("elf_storage_policy_replica_num_lte", None)
         self.elf_storage_policy_replica_num_not = kwargs.get("elf_storage_policy_replica_num_not", None)
         self.elf_storage_policy_replica_num_not_in = kwargs.get("elf_storage_policy_replica_num_not_in", None)
-        self.elf_storage_policy_stripe_num = kwargs.get("elf_storage_policy_stripe_num", None)
-        self.elf_storage_policy_stripe_num_gt = kwargs.get("elf_storage_policy_stripe_num_gt", None)
-        self.elf_storage_policy_stripe_num_gte = kwargs.get("elf_storage_policy_stripe_num_gte", None)
-        self.elf_storage_policy_stripe_num_in = kwargs.get("elf_storage_policy_stripe_num_in", None)
-        self.elf_storage_policy_stripe_num_lt = kwargs.get("elf_storage_policy_stripe_num_lt", None)
-        self.elf_storage_policy_stripe_num_lte = kwargs.get("elf_storage_policy_stripe_num_lte", None)
-        self.elf_storage_policy_stripe_num_not = kwargs.get("elf_storage_policy_stripe_num_not", None)
-        self.elf_storage_policy_stripe_num_not_in = kwargs.get("elf_storage_policy_stripe_num_not_in", None)
         self.elf_storage_policy_thin_provision = kwargs.get("elf_storage_policy_thin_provision", None)
         self.elf_storage_policy_thin_provision_not = kwargs.get("elf_storage_policy_thin_provision_not", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
@@ -1874,174 +1842,6 @@ class VmVolumeSnapshotWhereInput(object):
         """
 
         self._elf_storage_policy_replica_num_not_in = elf_storage_policy_replica_num_not_in
-
-    @property
-    def elf_storage_policy_stripe_num(self):
-        """Gets the elf_storage_policy_stripe_num of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num
-
-    @elf_storage_policy_stripe_num.setter
-    def elf_storage_policy_stripe_num(self, elf_storage_policy_stripe_num):
-        """Sets the elf_storage_policy_stripe_num of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num: The elf_storage_policy_stripe_num of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num: int
-        """
-
-        self._elf_storage_policy_stripe_num = elf_storage_policy_stripe_num
-
-    @property
-    def elf_storage_policy_stripe_num_gt(self):
-        """Gets the elf_storage_policy_stripe_num_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num_gt
-
-    @elf_storage_policy_stripe_num_gt.setter
-    def elf_storage_policy_stripe_num_gt(self, elf_storage_policy_stripe_num_gt):
-        """Sets the elf_storage_policy_stripe_num_gt of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_gt: The elf_storage_policy_stripe_num_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_gt: int
-        """
-
-        self._elf_storage_policy_stripe_num_gt = elf_storage_policy_stripe_num_gt
-
-    @property
-    def elf_storage_policy_stripe_num_gte(self):
-        """Gets the elf_storage_policy_stripe_num_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num_gte
-
-    @elf_storage_policy_stripe_num_gte.setter
-    def elf_storage_policy_stripe_num_gte(self, elf_storage_policy_stripe_num_gte):
-        """Sets the elf_storage_policy_stripe_num_gte of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_gte: The elf_storage_policy_stripe_num_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_gte: int
-        """
-
-        self._elf_storage_policy_stripe_num_gte = elf_storage_policy_stripe_num_gte
-
-    @property
-    def elf_storage_policy_stripe_num_in(self):
-        """Gets the elf_storage_policy_stripe_num_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._elf_storage_policy_stripe_num_in
-
-    @elf_storage_policy_stripe_num_in.setter
-    def elf_storage_policy_stripe_num_in(self, elf_storage_policy_stripe_num_in):
-        """Sets the elf_storage_policy_stripe_num_in of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_in: The elf_storage_policy_stripe_num_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_in: list[int]
-        """
-
-        self._elf_storage_policy_stripe_num_in = elf_storage_policy_stripe_num_in
-
-    @property
-    def elf_storage_policy_stripe_num_lt(self):
-        """Gets the elf_storage_policy_stripe_num_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num_lt
-
-    @elf_storage_policy_stripe_num_lt.setter
-    def elf_storage_policy_stripe_num_lt(self, elf_storage_policy_stripe_num_lt):
-        """Sets the elf_storage_policy_stripe_num_lt of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_lt: The elf_storage_policy_stripe_num_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_lt: int
-        """
-
-        self._elf_storage_policy_stripe_num_lt = elf_storage_policy_stripe_num_lt
-
-    @property
-    def elf_storage_policy_stripe_num_lte(self):
-        """Gets the elf_storage_policy_stripe_num_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num_lte
-
-    @elf_storage_policy_stripe_num_lte.setter
-    def elf_storage_policy_stripe_num_lte(self, elf_storage_policy_stripe_num_lte):
-        """Sets the elf_storage_policy_stripe_num_lte of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_lte: The elf_storage_policy_stripe_num_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_lte: int
-        """
-
-        self._elf_storage_policy_stripe_num_lte = elf_storage_policy_stripe_num_lte
-
-    @property
-    def elf_storage_policy_stripe_num_not(self):
-        """Gets the elf_storage_policy_stripe_num_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: int
-        """
-        return self._elf_storage_policy_stripe_num_not
-
-    @elf_storage_policy_stripe_num_not.setter
-    def elf_storage_policy_stripe_num_not(self, elf_storage_policy_stripe_num_not):
-        """Sets the elf_storage_policy_stripe_num_not of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_not: The elf_storage_policy_stripe_num_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_not: int
-        """
-
-        self._elf_storage_policy_stripe_num_not = elf_storage_policy_stripe_num_not
-
-    @property
-    def elf_storage_policy_stripe_num_not_in(self):
-        """Gets the elf_storage_policy_stripe_num_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-
-
-        :return: The elf_storage_policy_stripe_num_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._elf_storage_policy_stripe_num_not_in
-
-    @elf_storage_policy_stripe_num_not_in.setter
-    def elf_storage_policy_stripe_num_not_in(self, elf_storage_policy_stripe_num_not_in):
-        """Sets the elf_storage_policy_stripe_num_not_in of this VmVolumeSnapshotWhereInput.
-
-
-        :param elf_storage_policy_stripe_num_not_in: The elf_storage_policy_stripe_num_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
-        :type elf_storage_policy_stripe_num_not_in: list[int]
-        """
-
-        self._elf_storage_policy_stripe_num_not_in = elf_storage_policy_stripe_num_not_in
 
     @property
     def elf_storage_policy_thin_provision(self):

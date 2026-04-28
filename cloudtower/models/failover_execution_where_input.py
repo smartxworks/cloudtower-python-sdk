@@ -63,8 +63,6 @@ class FailoverExecutionWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
-        'is_sync_replication': 'bool',
-        'is_sync_replication_not': 'bool',
         'is_test_mode': 'bool',
         'is_test_mode_not': 'bool',
         'replication_failover_target_executions_every': 'ReplicationFailoverTargetExecutionWhereInput',
@@ -152,8 +150,6 @@ class FailoverExecutionWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
-        'is_sync_replication': 'is_sync_replication',
-        'is_sync_replication_not': 'is_sync_replication_not',
         'is_test_mode': 'is_test_mode',
         'is_test_mode_not': 'is_test_mode_not',
         'replication_failover_target_executions_every': 'replication_failover_target_executions_every',
@@ -244,8 +240,6 @@ class FailoverExecutionWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
-        self._is_sync_replication = None
-        self._is_sync_replication_not = None
         self._is_test_mode = None
         self._is_test_mode_not = None
         self._replication_failover_target_executions_every = None
@@ -332,8 +326,6 @@ class FailoverExecutionWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.is_sync_replication = kwargs.get("is_sync_replication", None)
-        self.is_sync_replication_not = kwargs.get("is_sync_replication_not", None)
         self.is_test_mode = kwargs.get("is_test_mode", None)
         self.is_test_mode_not = kwargs.get("is_test_mode_not", None)
         self.replication_failover_target_executions_every = kwargs.get("replication_failover_target_executions_every", None)
@@ -1178,48 +1170,6 @@ class FailoverExecutionWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
-
-    @property
-    def is_sync_replication(self):
-        """Gets the is_sync_replication of this FailoverExecutionWhereInput.  # noqa: E501
-
-
-        :return: The is_sync_replication of this FailoverExecutionWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_sync_replication
-
-    @is_sync_replication.setter
-    def is_sync_replication(self, is_sync_replication):
-        """Sets the is_sync_replication of this FailoverExecutionWhereInput.
-
-
-        :param is_sync_replication: The is_sync_replication of this FailoverExecutionWhereInput.  # noqa: E501
-        :type is_sync_replication: bool
-        """
-
-        self._is_sync_replication = is_sync_replication
-
-    @property
-    def is_sync_replication_not(self):
-        """Gets the is_sync_replication_not of this FailoverExecutionWhereInput.  # noqa: E501
-
-
-        :return: The is_sync_replication_not of this FailoverExecutionWhereInput.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_sync_replication_not
-
-    @is_sync_replication_not.setter
-    def is_sync_replication_not(self, is_sync_replication_not):
-        """Sets the is_sync_replication_not of this FailoverExecutionWhereInput.
-
-
-        :param is_sync_replication_not: The is_sync_replication_not of this FailoverExecutionWhereInput.  # noqa: E501
-        :type is_sync_replication_not: bool
-        """
-
-        self._is_sync_replication_not = is_sync_replication_not
 
     @property
     def is_test_mode(self):

@@ -176,10 +176,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         'size_lte': 'int',
         'size_not': 'int',
         'size_not_in': 'list[int]',
-        'usage': 'ContentLibraryVmTemplateUsage',
-        'usage_in': 'list[ContentLibraryVmTemplateUsage]',
-        'usage_not': 'ContentLibraryVmTemplateUsage',
-        'usage_not_in': 'list[ContentLibraryVmTemplateUsage]',
         'vcpu': 'int',
         'vcpu_gt': 'int',
         'vcpu_gte': 'int',
@@ -361,10 +357,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         'size_lte': 'size_lte',
         'size_not': 'size_not',
         'size_not_in': 'size_not_in',
-        'usage': 'usage',
-        'usage_in': 'usage_in',
-        'usage_not': 'usage_not',
-        'usage_not_in': 'usage_not_in',
         'vcpu': 'vcpu',
         'vcpu_gt': 'vcpu_gt',
         'vcpu_gte': 'vcpu_gte',
@@ -549,10 +541,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._size_lte = None
         self._size_not = None
         self._size_not_in = None
-        self._usage = None
-        self._usage_in = None
-        self._usage_not = None
-        self._usage_not_in = None
         self._vcpu = None
         self._vcpu_gt = None
         self._vcpu_gte = None
@@ -733,10 +721,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.size_lte = kwargs.get("size_lte", None)
         self.size_not = kwargs.get("size_not", None)
         self.size_not_in = kwargs.get("size_not_in", None)
-        self.usage = kwargs.get("usage", None)
-        self.usage_in = kwargs.get("usage_in", None)
-        self.usage_not = kwargs.get("usage_not", None)
-        self.usage_not_in = kwargs.get("usage_not_in", None)
         self.vcpu = kwargs.get("vcpu", None)
         self.vcpu_gt = kwargs.get("vcpu_gt", None)
         self.vcpu_gte = kwargs.get("vcpu_gte", None)
@@ -3935,90 +3919,6 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._size_not_in = size_not_in
-
-    @property
-    def usage(self):
-        """Gets the usage of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The usage of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: ContentLibraryVmTemplateUsage
-        """
-        return self._usage
-
-    @usage.setter
-    def usage(self, usage):
-        """Sets the usage of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param usage: The usage of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type usage: ContentLibraryVmTemplateUsage
-        """
-
-        self._usage = usage
-
-    @property
-    def usage_in(self):
-        """Gets the usage_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The usage_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: list[ContentLibraryVmTemplateUsage]
-        """
-        return self._usage_in
-
-    @usage_in.setter
-    def usage_in(self, usage_in):
-        """Sets the usage_in of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param usage_in: The usage_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type usage_in: list[ContentLibraryVmTemplateUsage]
-        """
-
-        self._usage_in = usage_in
-
-    @property
-    def usage_not(self):
-        """Gets the usage_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The usage_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: ContentLibraryVmTemplateUsage
-        """
-        return self._usage_not
-
-    @usage_not.setter
-    def usage_not(self, usage_not):
-        """Sets the usage_not of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param usage_not: The usage_not of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type usage_not: ContentLibraryVmTemplateUsage
-        """
-
-        self._usage_not = usage_not
-
-    @property
-    def usage_not_in(self):
-        """Gets the usage_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-
-
-        :return: The usage_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :rtype: list[ContentLibraryVmTemplateUsage]
-        """
-        return self._usage_not_in
-
-    @usage_not_in.setter
-    def usage_not_in(self, usage_not_in):
-        """Sets the usage_not_in of this ContentLibraryVmTemplateWhereInput.
-
-
-        :param usage_not_in: The usage_not_in of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
-        :type usage_not_in: list[ContentLibraryVmTemplateUsage]
-        """
-
-        self._usage_not_in = usage_not_in
 
     @property
     def vcpu(self):

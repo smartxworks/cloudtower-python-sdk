@@ -21,12 +21,11 @@ class ConnectState(object):
     allowed enum values
     """
     CONNECTED = "CONNECTED"
-    CONNECTED_ERROR = "CONNECTED_ERROR"
     DISCONNECTED = "DISCONNECTED"
     INITIALIZING = "INITIALIZING"
     REMOVING = "REMOVING"
 
-    allowable_values = [CONNECTED, CONNECTED_ERROR, DISCONNECTED, INITIALIZING, REMOVING]  # noqa: E501
+    allowable_values = [CONNECTED, DISCONNECTED, INITIALIZING, REMOVING]  # noqa: E501
 
     """
     Attributes:

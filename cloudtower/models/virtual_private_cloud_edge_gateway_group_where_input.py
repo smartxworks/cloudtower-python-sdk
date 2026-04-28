@@ -90,8 +90,7 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'primary_edge_gateway_id_not_ends_with': 'str',
         'primary_edge_gateway_id_not_in': 'list[str]',
         'primary_edge_gateway_id_not_starts_with': 'str',
-        'primary_edge_gateway_id_starts_with': 'str',
-        'vpc_service': 'VirtualPrivateCloudServiceWhereInput'
+        'primary_edge_gateway_id_starts_with': 'str'
     }
 
     attribute_map = {
@@ -160,8 +159,7 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         'primary_edge_gateway_id_not_ends_with': 'primary_edge_gateway_id_not_ends_with',
         'primary_edge_gateway_id_not_in': 'primary_edge_gateway_id_not_in',
         'primary_edge_gateway_id_not_starts_with': 'primary_edge_gateway_id_not_starts_with',
-        'primary_edge_gateway_id_starts_with': 'primary_edge_gateway_id_starts_with',
-        'vpc_service': 'vpc_service'
+        'primary_edge_gateway_id_starts_with': 'primary_edge_gateway_id_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -234,7 +232,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self._primary_edge_gateway_id_not_in = None
         self._primary_edge_gateway_id_not_starts_with = None
         self._primary_edge_gateway_id_starts_with = None
-        self._vpc_service = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
@@ -303,7 +300,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         self.primary_edge_gateway_id_not_in = kwargs.get("primary_edge_gateway_id_not_in", None)
         self.primary_edge_gateway_id_not_starts_with = kwargs.get("primary_edge_gateway_id_not_starts_with", None)
         self.primary_edge_gateway_id_starts_with = kwargs.get("primary_edge_gateway_id_starts_with", None)
-        self.vpc_service = kwargs.get("vpc_service", None)
 
     @property
     def _and(self):
@@ -1690,27 +1686,6 @@ class VirtualPrivateCloudEdgeGatewayGroupWhereInput(object):
         """
 
         self._primary_edge_gateway_id_starts_with = primary_edge_gateway_id_starts_with
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :rtype: VirtualPrivateCloudServiceWhereInput
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudEdgeGatewayGroupWhereInput.  # noqa: E501
-        :type vpc_service: VirtualPrivateCloudServiceWhereInput
-        """
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

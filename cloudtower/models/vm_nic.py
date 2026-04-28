@@ -25,14 +25,11 @@ class VmNic(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'dpi_enabled': 'bool',
         'egress_rate_limit_burst_in_bit': 'float',
         'egress_rate_limit_enabled': 'bool',
         'egress_rate_limit_max_rate_in_bitps': 'float',
         'enabled': 'bool',
         'gateway': 'str',
-        'guest_info_ip_addresses': 'list[str]',
-        'guest_info_ip_addresses_v6': 'list[str]',
         'id': 'str',
         'ingress_rate_limit_burst_in_bit': 'float',
         'ingress_rate_limit_enabled': 'bool',
@@ -53,14 +50,11 @@ class VmNic(object):
     }
 
     attribute_map = {
-        'dpi_enabled': 'dpi_enabled',
         'egress_rate_limit_burst_in_bit': 'egress_rate_limit_burst_in_bit',
         'egress_rate_limit_enabled': 'egress_rate_limit_enabled',
         'egress_rate_limit_max_rate_in_bitps': 'egress_rate_limit_max_rate_in_bitps',
         'enabled': 'enabled',
         'gateway': 'gateway',
-        'guest_info_ip_addresses': 'guest_info_ip_addresses',
-        'guest_info_ip_addresses_v6': 'guest_info_ip_addresses_v6',
         'id': 'id',
         'ingress_rate_limit_burst_in_bit': 'ingress_rate_limit_burst_in_bit',
         'ingress_rate_limit_enabled': 'ingress_rate_limit_enabled',
@@ -84,14 +78,11 @@ class VmNic(object):
         """VmNic - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self._dpi_enabled = None
         self._egress_rate_limit_burst_in_bit = None
         self._egress_rate_limit_enabled = None
         self._egress_rate_limit_max_rate_in_bitps = None
         self._enabled = None
         self._gateway = None
-        self._guest_info_ip_addresses = None
-        self._guest_info_ip_addresses_v6 = None
         self._id = None
         self._ingress_rate_limit_burst_in_bit = None
         self._ingress_rate_limit_enabled = None
@@ -111,16 +102,11 @@ class VmNic(object):
         self._vpc_nic = None
         self.discriminator = None
 
-        self.dpi_enabled = kwargs.get("dpi_enabled", None)
         self.egress_rate_limit_burst_in_bit = kwargs.get("egress_rate_limit_burst_in_bit", None)
         self.egress_rate_limit_enabled = kwargs.get("egress_rate_limit_enabled", None)
         self.egress_rate_limit_max_rate_in_bitps = kwargs.get("egress_rate_limit_max_rate_in_bitps", None)
         self.enabled = kwargs.get("enabled", None)
         self.gateway = kwargs.get("gateway", None)
-        if "guest_info_ip_addresses" in kwargs:
-            self.guest_info_ip_addresses = kwargs["guest_info_ip_addresses"]
-        if "guest_info_ip_addresses_v6" in kwargs:
-            self.guest_info_ip_addresses_v6 = kwargs["guest_info_ip_addresses_v6"]
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.ingress_rate_limit_burst_in_bit = kwargs.get("ingress_rate_limit_burst_in_bit", None)
@@ -141,27 +127,6 @@ class VmNic(object):
         if "vm" in kwargs:
             self.vm = kwargs["vm"]
         self.vpc_nic = kwargs.get("vpc_nic", None)
-
-    @property
-    def dpi_enabled(self):
-        """Gets the dpi_enabled of this VmNic.  # noqa: E501
-
-
-        :return: The dpi_enabled of this VmNic.  # noqa: E501
-        :rtype: bool
-        """
-        return self._dpi_enabled
-
-    @dpi_enabled.setter
-    def dpi_enabled(self, dpi_enabled):
-        """Sets the dpi_enabled of this VmNic.
-
-
-        :param dpi_enabled: The dpi_enabled of this VmNic.  # noqa: E501
-        :type dpi_enabled: bool
-        """
-
-        self._dpi_enabled = dpi_enabled
 
     @property
     def egress_rate_limit_burst_in_bit(self):
@@ -267,52 +232,6 @@ class VmNic(object):
         """
 
         self._gateway = gateway
-
-    @property
-    def guest_info_ip_addresses(self):
-        """Gets the guest_info_ip_addresses of this VmNic.  # noqa: E501
-
-
-        :return: The guest_info_ip_addresses of this VmNic.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._guest_info_ip_addresses
-
-    @guest_info_ip_addresses.setter
-    def guest_info_ip_addresses(self, guest_info_ip_addresses):
-        """Sets the guest_info_ip_addresses of this VmNic.
-
-
-        :param guest_info_ip_addresses: The guest_info_ip_addresses of this VmNic.  # noqa: E501
-        :type guest_info_ip_addresses: list[str]
-        """
-        if self.local_vars_configuration.client_side_validation and guest_info_ip_addresses is None:  # noqa: E501
-            raise ValueError("Invalid value for `guest_info_ip_addresses`, must not be `None`")  # noqa: E501
-
-        self._guest_info_ip_addresses = guest_info_ip_addresses
-
-    @property
-    def guest_info_ip_addresses_v6(self):
-        """Gets the guest_info_ip_addresses_v6 of this VmNic.  # noqa: E501
-
-
-        :return: The guest_info_ip_addresses_v6 of this VmNic.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._guest_info_ip_addresses_v6
-
-    @guest_info_ip_addresses_v6.setter
-    def guest_info_ip_addresses_v6(self, guest_info_ip_addresses_v6):
-        """Sets the guest_info_ip_addresses_v6 of this VmNic.
-
-
-        :param guest_info_ip_addresses_v6: The guest_info_ip_addresses_v6 of this VmNic.  # noqa: E501
-        :type guest_info_ip_addresses_v6: list[str]
-        """
-        if self.local_vars_configuration.client_side_validation and guest_info_ip_addresses_v6 is None:  # noqa: E501
-            raise ValueError("Invalid value for `guest_info_ip_addresses_v6`, must not be `None`")  # noqa: E501
-
-        self._guest_info_ip_addresses_v6 = guest_info_ip_addresses_v6
 
     @property
     def id(self):

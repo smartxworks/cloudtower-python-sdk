@@ -42,8 +42,10 @@ class NestedEverouteControllerInstance(object):
         self._vlan = None
         self.discriminator = None
 
-        self.ip_addr = kwargs.get("ip_addr", None)
-        self.vlan = kwargs.get("vlan", None)
+        if "ip_addr" in kwargs:
+            self.ip_addr = kwargs["ip_addr"]
+        if "vlan" in kwargs:
+            self.vlan = kwargs["vlan"]
 
     @property
     def ip_addr(self):
@@ -63,6 +65,8 @@ class NestedEverouteControllerInstance(object):
         :param ip_addr: The ip_addr of this NestedEverouteControllerInstance.  # noqa: E501
         :type ip_addr: str
         """
+        if self.local_vars_configuration.client_side_validation and ip_addr is None:  # noqa: E501
+            raise ValueError("Invalid value for `ip_addr`, must not be `None`")  # noqa: E501
 
         self._ip_addr = ip_addr
 
@@ -84,6 +88,8 @@ class NestedEverouteControllerInstance(object):
         :param vlan: The vlan of this NestedEverouteControllerInstance.  # noqa: E501
         :type vlan: str
         """
+        if self.local_vars_configuration.client_side_validation and vlan is None:  # noqa: E501
+            raise ValueError("Invalid value for `vlan`, must not be `None`")  # noqa: E501
 
         self._vlan = vlan
 

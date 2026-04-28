@@ -429,6 +429,14 @@ class ClusterWhereInput(object):
         'overall_efficiency_lte': 'float',
         'overall_efficiency_not': 'float',
         'overall_efficiency_not_in': 'list[float]',
+        'overprovision_ratio': 'float',
+        'overprovision_ratio_gt': 'float',
+        'overprovision_ratio_gte': 'float',
+        'overprovision_ratio_in': 'list[float]',
+        'overprovision_ratio_lt': 'float',
+        'overprovision_ratio_lte': 'float',
+        'overprovision_ratio_not': 'float',
+        'overprovision_ratio_not_in': 'list[float]',
         'perf_allocated_data_space': 'int',
         'perf_allocated_data_space_gt': 'int',
         'perf_allocated_data_space_gte': 'int',
@@ -1166,6 +1174,14 @@ class ClusterWhereInput(object):
         'overall_efficiency_lte': 'overall_efficiency_lte',
         'overall_efficiency_not': 'overall_efficiency_not',
         'overall_efficiency_not_in': 'overall_efficiency_not_in',
+        'overprovision_ratio': 'overprovision_ratio',
+        'overprovision_ratio_gt': 'overprovision_ratio_gt',
+        'overprovision_ratio_gte': 'overprovision_ratio_gte',
+        'overprovision_ratio_in': 'overprovision_ratio_in',
+        'overprovision_ratio_lt': 'overprovision_ratio_lt',
+        'overprovision_ratio_lte': 'overprovision_ratio_lte',
+        'overprovision_ratio_not': 'overprovision_ratio_not',
+        'overprovision_ratio_not_in': 'overprovision_ratio_not_in',
         'perf_allocated_data_space': 'perf_allocated_data_space',
         'perf_allocated_data_space_gt': 'perf_allocated_data_space_gt',
         'perf_allocated_data_space_gte': 'perf_allocated_data_space_gte',
@@ -1906,6 +1922,14 @@ class ClusterWhereInput(object):
         self._overall_efficiency_lte = None
         self._overall_efficiency_not = None
         self._overall_efficiency_not_in = None
+        self._overprovision_ratio = None
+        self._overprovision_ratio_gt = None
+        self._overprovision_ratio_gte = None
+        self._overprovision_ratio_in = None
+        self._overprovision_ratio_lt = None
+        self._overprovision_ratio_lte = None
+        self._overprovision_ratio_not = None
+        self._overprovision_ratio_not_in = None
         self._perf_allocated_data_space = None
         self._perf_allocated_data_space_gt = None
         self._perf_allocated_data_space_gte = None
@@ -2642,6 +2666,14 @@ class ClusterWhereInput(object):
         self.overall_efficiency_lte = kwargs.get("overall_efficiency_lte", None)
         self.overall_efficiency_not = kwargs.get("overall_efficiency_not", None)
         self.overall_efficiency_not_in = kwargs.get("overall_efficiency_not_in", None)
+        self.overprovision_ratio = kwargs.get("overprovision_ratio", None)
+        self.overprovision_ratio_gt = kwargs.get("overprovision_ratio_gt", None)
+        self.overprovision_ratio_gte = kwargs.get("overprovision_ratio_gte", None)
+        self.overprovision_ratio_in = kwargs.get("overprovision_ratio_in", None)
+        self.overprovision_ratio_lt = kwargs.get("overprovision_ratio_lt", None)
+        self.overprovision_ratio_lte = kwargs.get("overprovision_ratio_lte", None)
+        self.overprovision_ratio_not = kwargs.get("overprovision_ratio_not", None)
+        self.overprovision_ratio_not_in = kwargs.get("overprovision_ratio_not_in", None)
         self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
         self.perf_allocated_data_space_gt = kwargs.get("perf_allocated_data_space_gt", None)
         self.perf_allocated_data_space_gte = kwargs.get("perf_allocated_data_space_gte", None)
@@ -11456,6 +11488,174 @@ class ClusterWhereInput(object):
         """
 
         self._overall_efficiency_not_in = overall_efficiency_not_in
+
+    @property
+    def overprovision_ratio(self):
+        """Gets the overprovision_ratio of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio
+
+    @overprovision_ratio.setter
+    def overprovision_ratio(self, overprovision_ratio):
+        """Sets the overprovision_ratio of this ClusterWhereInput.
+
+
+        :param overprovision_ratio: The overprovision_ratio of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio: float
+        """
+
+        self._overprovision_ratio = overprovision_ratio
+
+    @property
+    def overprovision_ratio_gt(self):
+        """Gets the overprovision_ratio_gt of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_gt of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio_gt
+
+    @overprovision_ratio_gt.setter
+    def overprovision_ratio_gt(self, overprovision_ratio_gt):
+        """Sets the overprovision_ratio_gt of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_gt: The overprovision_ratio_gt of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_gt: float
+        """
+
+        self._overprovision_ratio_gt = overprovision_ratio_gt
+
+    @property
+    def overprovision_ratio_gte(self):
+        """Gets the overprovision_ratio_gte of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_gte of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio_gte
+
+    @overprovision_ratio_gte.setter
+    def overprovision_ratio_gte(self, overprovision_ratio_gte):
+        """Sets the overprovision_ratio_gte of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_gte: The overprovision_ratio_gte of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_gte: float
+        """
+
+        self._overprovision_ratio_gte = overprovision_ratio_gte
+
+    @property
+    def overprovision_ratio_in(self):
+        """Gets the overprovision_ratio_in of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_in of this ClusterWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._overprovision_ratio_in
+
+    @overprovision_ratio_in.setter
+    def overprovision_ratio_in(self, overprovision_ratio_in):
+        """Sets the overprovision_ratio_in of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_in: The overprovision_ratio_in of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_in: list[float]
+        """
+
+        self._overprovision_ratio_in = overprovision_ratio_in
+
+    @property
+    def overprovision_ratio_lt(self):
+        """Gets the overprovision_ratio_lt of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_lt of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio_lt
+
+    @overprovision_ratio_lt.setter
+    def overprovision_ratio_lt(self, overprovision_ratio_lt):
+        """Sets the overprovision_ratio_lt of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_lt: The overprovision_ratio_lt of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_lt: float
+        """
+
+        self._overprovision_ratio_lt = overprovision_ratio_lt
+
+    @property
+    def overprovision_ratio_lte(self):
+        """Gets the overprovision_ratio_lte of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_lte of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio_lte
+
+    @overprovision_ratio_lte.setter
+    def overprovision_ratio_lte(self, overprovision_ratio_lte):
+        """Sets the overprovision_ratio_lte of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_lte: The overprovision_ratio_lte of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_lte: float
+        """
+
+        self._overprovision_ratio_lte = overprovision_ratio_lte
+
+    @property
+    def overprovision_ratio_not(self):
+        """Gets the overprovision_ratio_not of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_not of this ClusterWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio_not
+
+    @overprovision_ratio_not.setter
+    def overprovision_ratio_not(self, overprovision_ratio_not):
+        """Sets the overprovision_ratio_not of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_not: The overprovision_ratio_not of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_not: float
+        """
+
+        self._overprovision_ratio_not = overprovision_ratio_not
+
+    @property
+    def overprovision_ratio_not_in(self):
+        """Gets the overprovision_ratio_not_in of this ClusterWhereInput.  # noqa: E501
+
+
+        :return: The overprovision_ratio_not_in of this ClusterWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._overprovision_ratio_not_in
+
+    @overprovision_ratio_not_in.setter
+    def overprovision_ratio_not_in(self, overprovision_ratio_not_in):
+        """Sets the overprovision_ratio_not_in of this ClusterWhereInput.
+
+
+        :param overprovision_ratio_not_in: The overprovision_ratio_not_in of this ClusterWhereInput.  # noqa: E501
+        :type overprovision_ratio_not_in: list[float]
+        """
+
+        self._overprovision_ratio_not_in = overprovision_ratio_not_in
 
     @property
     def perf_allocated_data_space(self):

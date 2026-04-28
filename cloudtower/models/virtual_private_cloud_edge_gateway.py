@@ -26,24 +26,20 @@ class VirtualPrivateCloudEdgeGateway(object):
     """
     openapi_types = {
         'description': 'str',
-        'edge_gateway_group': 'NestedVirtualPrivateCloudEdgeGatewayGroup',
         'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'name': 'str',
         'status': 'NestedVirtualPrivateCloudEdgeGatewayStatus',
-        'vdses': 'list[NestedVds]',
-        'vpc_service': 'NestedVirtualPrivateCloudService'
+        'vdses': 'list[NestedVds]'
     }
 
     attribute_map = {
         'description': 'description',
-        'edge_gateway_group': 'edge_gateway_group',
         'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'name': 'name',
         'status': 'status',
-        'vdses': 'vdses',
-        'vpc_service': 'vpc_service'
+        'vdses': 'vdses'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -51,17 +47,14 @@ class VirtualPrivateCloudEdgeGateway(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._description = None
-        self._edge_gateway_group = None
         self._entity_async_status = None
         self._id = None
         self._name = None
         self._status = None
         self._vdses = None
-        self._vpc_service = None
         self.discriminator = None
 
         self.description = kwargs.get("description", None)
-        self.edge_gateway_group = kwargs.get("edge_gateway_group", None)
         self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
@@ -69,8 +62,6 @@ class VirtualPrivateCloudEdgeGateway(object):
             self.name = kwargs["name"]
         self.status = kwargs.get("status", None)
         self.vdses = kwargs.get("vdses", None)
-        if "vpc_service" in kwargs:
-            self.vpc_service = kwargs["vpc_service"]
 
     @property
     def description(self):
@@ -92,27 +83,6 @@ class VirtualPrivateCloudEdgeGateway(object):
         """
 
         self._description = description
-
-    @property
-    def edge_gateway_group(self):
-        """Gets the edge_gateway_group of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-
-
-        :return: The edge_gateway_group of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-        :rtype: NestedVirtualPrivateCloudEdgeGatewayGroup
-        """
-        return self._edge_gateway_group
-
-    @edge_gateway_group.setter
-    def edge_gateway_group(self, edge_gateway_group):
-        """Sets the edge_gateway_group of this VirtualPrivateCloudEdgeGateway.
-
-
-        :param edge_gateway_group: The edge_gateway_group of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-        :type edge_gateway_group: NestedVirtualPrivateCloudEdgeGatewayGroup
-        """
-
-        self._edge_gateway_group = edge_gateway_group
 
     @property
     def entity_async_status(self):
@@ -222,29 +192,6 @@ class VirtualPrivateCloudEdgeGateway(object):
         """
 
         self._vdses = vdses
-
-    @property
-    def vpc_service(self):
-        """Gets the vpc_service of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-
-
-        :return: The vpc_service of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-        :rtype: NestedVirtualPrivateCloudService
-        """
-        return self._vpc_service
-
-    @vpc_service.setter
-    def vpc_service(self, vpc_service):
-        """Sets the vpc_service of this VirtualPrivateCloudEdgeGateway.
-
-
-        :param vpc_service: The vpc_service of this VirtualPrivateCloudEdgeGateway.  # noqa: E501
-        :type vpc_service: NestedVirtualPrivateCloudService
-        """
-        if self.local_vars_configuration.client_side_validation and vpc_service is None:  # noqa: E501
-            raise ValueError("Invalid value for `vpc_service`, must not be `None`")  # noqa: E501
-
-        self._vpc_service = vpc_service
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
