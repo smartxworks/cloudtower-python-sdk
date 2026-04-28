@@ -22,8 +22,9 @@ class EncryptMethod(object):
     """
     AES256_CTR = "AES256_CTR"
     PLAIN_TEXT = "PLAIN_TEXT"
+    SM4_CTR = "SM4_CTR"
 
-    allowable_values = [AES256_CTR, PLAIN_TEXT]  # noqa: E501
+    allowable_values = [AES256_CTR, PLAIN_TEXT, SM4_CTR]  # noqa: E501
 
     """
     Attributes:
