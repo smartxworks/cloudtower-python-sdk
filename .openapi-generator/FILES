@@ -1,7 +1,6 @@
 .gitignore
 LICENSE
 README.md
-README.md
 cloudtower/__init__.py
 cloudtower/api/__init__.py
 cloudtower/api/alert_api.py

@@ -3,22 +3,21 @@
 Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 
 - [源码地址](https://github.com/smartxworks/cloudtower-python-sdk)
-- [下载地址](https://github.com/smartxworks/cloudtower-python-sdk/releases)
-- [通用指南](https://cloudtower-api-doc.vercel.app)
+- [下载地址](https://github.com/smartxworks/cloudtower-python-sdk)
 
 ## 安装
 
 - ### whl
 
   ```shell
-  pip install cloudtower_sdk-2.21.0-py2.py3-none-any.whl
+  pip install cloudtower_sdk-2.21.1-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf cloudtower-sdk-2.21.0.tar.gz
-  cd cloudtower-sdk-2.21.0
+  tar xvzf cloudtower-sdk--2.21.1.tar.gz
+  cd cloudtower-sdk--2.21.1
   python setup.py install
   ```
 
@@ -133,7 +132,7 @@ try:
  wait_tasks([res.task_id for res in start_res], api_client)
 except ApiException as e:
  # 处理错误
-else:
+ 
  # task完成后的回调
 ```
 
