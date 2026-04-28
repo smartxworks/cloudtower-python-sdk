@@ -1,5 +1,13 @@
 # RELEASE NOTE
 
+## release 日期 2026-04-28
+
+v2.22.1 release (tower version 4.8.1)
+
+### features
+
+- [Cluster] 新增字段 overprovision_ratio
+
 ## release 日期 2026-02-09
 
 v2.22.0 release (tower version 4.8.0)

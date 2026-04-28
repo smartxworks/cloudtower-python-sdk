@@ -1,5 +1,5 @@
 .gitignore
-LICENSE.mustache
+LICENSE
 README.md
 cloudtower/__init__.py
 cloudtower/api/__init__.py

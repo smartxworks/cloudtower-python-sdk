@@ -85,6 +85,7 @@ class Cluster(object):
         'nvme_over_tcp_enabled': 'bool',
         'nvmf_enabled': 'bool',
         'overall_efficiency': 'float',
+        'overprovision_ratio': 'float',
         'perf_allocated_data_space': 'int',
         'perf_failure_data_space': 'int',
         'perf_total_data_capacity': 'int',
@@ -201,6 +202,7 @@ class Cluster(object):
         'nvme_over_tcp_enabled': 'nvme_over_tcp_enabled',
         'nvmf_enabled': 'nvmf_enabled',
         'overall_efficiency': 'overall_efficiency',
+        'overprovision_ratio': 'overprovision_ratio',
         'perf_allocated_data_space': 'perf_allocated_data_space',
         'perf_failure_data_space': 'perf_failure_data_space',
         'perf_total_data_capacity': 'perf_total_data_capacity',
@@ -320,6 +322,7 @@ class Cluster(object):
         self._nvme_over_tcp_enabled = None
         self._nvmf_enabled = None
         self._overall_efficiency = None
+        self._overprovision_ratio = None
         self._perf_allocated_data_space = None
         self._perf_failure_data_space = None
         self._perf_total_data_capacity = None
@@ -442,6 +445,7 @@ class Cluster(object):
         self.nvme_over_tcp_enabled = kwargs.get("nvme_over_tcp_enabled", None)
         self.nvmf_enabled = kwargs.get("nvmf_enabled", None)
         self.overall_efficiency = kwargs.get("overall_efficiency", None)
+        self.overprovision_ratio = kwargs.get("overprovision_ratio", None)
         self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
         self.perf_failure_data_space = kwargs.get("perf_failure_data_space", None)
         self.perf_total_data_capacity = kwargs.get("perf_total_data_capacity", None)
@@ -1773,6 +1777,27 @@ class Cluster(object):
         """
 
         self._overall_efficiency = overall_efficiency
+
+    @property
+    def overprovision_ratio(self):
+        """Gets the overprovision_ratio of this Cluster.  # noqa: E501
+
+
+        :return: The overprovision_ratio of this Cluster.  # noqa: E501
+        :rtype: float
+        """
+        return self._overprovision_ratio
+
+    @overprovision_ratio.setter
+    def overprovision_ratio(self, overprovision_ratio):
+        """Sets the overprovision_ratio of this Cluster.
+
+
+        :param overprovision_ratio: The overprovision_ratio of this Cluster.  # noqa: E501
+        :type overprovision_ratio: float
+        """
+
+        self._overprovision_ratio = overprovision_ratio
 
     @property
     def perf_allocated_data_space(self):

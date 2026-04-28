@@ -28,6 +28,14 @@ class ReplicationTargetExecutionWhereInput(object):
         '_and': 'list[ReplicationTargetExecutionWhereInput]',
         '_not': 'list[ReplicationTargetExecutionWhereInput]',
         '_or': 'list[ReplicationTargetExecutionWhereInput]',
+        'created_at': 'str',
+        'created_at_gt': 'str',
+        'created_at_gte': 'str',
+        'created_at_in': 'list[str]',
+        'created_at_lt': 'str',
+        'created_at_lte': 'str',
+        'created_at_not': 'str',
+        'created_at_not_in': 'list[str]',
         'creation': 'ReplicationTargetExecutionCreation',
         'creation_in': 'list[ReplicationTargetExecutionCreation]',
         'creation_not': 'ReplicationTargetExecutionCreation',
@@ -99,13 +107,29 @@ class ReplicationTargetExecutionWhereInput(object):
         'type': 'BackupExecutionType',
         'type_in': 'list[BackupExecutionType]',
         'type_not': 'BackupExecutionType',
-        'type_not_in': 'list[BackupExecutionType]'
+        'type_not_in': 'list[BackupExecutionType]',
+        'updated_at': 'str',
+        'updated_at_gt': 'str',
+        'updated_at_gte': 'str',
+        'updated_at_in': 'list[str]',
+        'updated_at_lt': 'str',
+        'updated_at_lte': 'str',
+        'updated_at_not': 'str',
+        'updated_at_not_in': 'list[str]'
     }
 
     attribute_map = {
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
+        'created_at': 'createdAt',
+        'created_at_gt': 'createdAt_gt',
+        'created_at_gte': 'createdAt_gte',
+        'created_at_in': 'createdAt_in',
+        'created_at_lt': 'createdAt_lt',
+        'created_at_lte': 'createdAt_lte',
+        'created_at_not': 'createdAt_not',
+        'created_at_not_in': 'createdAt_not_in',
         'creation': 'creation',
         'creation_in': 'creation_in',
         'creation_not': 'creation_not',
@@ -177,7 +201,15 @@ class ReplicationTargetExecutionWhereInput(object):
         'type': 'type',
         'type_in': 'type_in',
         'type_not': 'type_not',
-        'type_not_in': 'type_not_in'
+        'type_not_in': 'type_not_in',
+        'updated_at': 'updatedAt',
+        'updated_at_gt': 'updatedAt_gt',
+        'updated_at_gte': 'updatedAt_gte',
+        'updated_at_in': 'updatedAt_in',
+        'updated_at_lt': 'updatedAt_lt',
+        'updated_at_lte': 'updatedAt_lte',
+        'updated_at_not': 'updatedAt_not',
+        'updated_at_not_in': 'updatedAt_not_in'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -187,6 +219,14 @@ class ReplicationTargetExecutionWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
+        self._created_at = None
+        self._created_at_gt = None
+        self._created_at_gte = None
+        self._created_at_in = None
+        self._created_at_lt = None
+        self._created_at_lte = None
+        self._created_at_not = None
+        self._created_at_not_in = None
         self._creation = None
         self._creation_in = None
         self._creation_not = None
@@ -259,11 +299,27 @@ class ReplicationTargetExecutionWhereInput(object):
         self._type_in = None
         self._type_not = None
         self._type_not_in = None
+        self._updated_at = None
+        self._updated_at_gt = None
+        self._updated_at_gte = None
+        self._updated_at_in = None
+        self._updated_at_lt = None
+        self._updated_at_lte = None
+        self._updated_at_not = None
+        self._updated_at_not_in = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.created_at = kwargs.get("created_at", None)
+        self.created_at_gt = kwargs.get("created_at_gt", None)
+        self.created_at_gte = kwargs.get("created_at_gte", None)
+        self.created_at_in = kwargs.get("created_at_in", None)
+        self.created_at_lt = kwargs.get("created_at_lt", None)
+        self.created_at_lte = kwargs.get("created_at_lte", None)
+        self.created_at_not = kwargs.get("created_at_not", None)
+        self.created_at_not_in = kwargs.get("created_at_not_in", None)
         self.creation = kwargs.get("creation", None)
         self.creation_in = kwargs.get("creation_in", None)
         self.creation_not = kwargs.get("creation_not", None)
@@ -336,6 +392,14 @@ class ReplicationTargetExecutionWhereInput(object):
         self.type_in = kwargs.get("type_in", None)
         self.type_not = kwargs.get("type_not", None)
         self.type_not_in = kwargs.get("type_not_in", None)
+        self.updated_at = kwargs.get("updated_at", None)
+        self.updated_at_gt = kwargs.get("updated_at_gt", None)
+        self.updated_at_gte = kwargs.get("updated_at_gte", None)
+        self.updated_at_in = kwargs.get("updated_at_in", None)
+        self.updated_at_lt = kwargs.get("updated_at_lt", None)
+        self.updated_at_lte = kwargs.get("updated_at_lte", None)
+        self.updated_at_not = kwargs.get("updated_at_not", None)
+        self.updated_at_not_in = kwargs.get("updated_at_not_in", None)
 
     @property
     def _and(self):
@@ -399,6 +463,174 @@ class ReplicationTargetExecutionWhereInput(object):
         """
 
         self.__or = _or
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at: The created_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at: str
+        """
+
+        self._created_at = created_at
+
+    @property
+    def created_at_gt(self):
+        """Gets the created_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gt
+
+    @created_at_gt.setter
+    def created_at_gt(self, created_at_gt):
+        """Sets the created_at_gt of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_gt: The created_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_gt: str
+        """
+
+        self._created_at_gt = created_at_gt
+
+    @property
+    def created_at_gte(self):
+        """Gets the created_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_gte
+
+    @created_at_gte.setter
+    def created_at_gte(self, created_at_gte):
+        """Sets the created_at_gte of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_gte: The created_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_gte: str
+        """
+
+        self._created_at_gte = created_at_gte
+
+    @property
+    def created_at_in(self):
+        """Gets the created_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_in
+
+    @created_at_in.setter
+    def created_at_in(self, created_at_in):
+        """Sets the created_at_in of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_in: The created_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_in: list[str]
+        """
+
+        self._created_at_in = created_at_in
+
+    @property
+    def created_at_lt(self):
+        """Gets the created_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lt
+
+    @created_at_lt.setter
+    def created_at_lt(self, created_at_lt):
+        """Sets the created_at_lt of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_lt: The created_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_lt: str
+        """
+
+        self._created_at_lt = created_at_lt
+
+    @property
+    def created_at_lte(self):
+        """Gets the created_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_lte
+
+    @created_at_lte.setter
+    def created_at_lte(self, created_at_lte):
+        """Sets the created_at_lte of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_lte: The created_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_lte: str
+        """
+
+        self._created_at_lte = created_at_lte
+
+    @property
+    def created_at_not(self):
+        """Gets the created_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_at_not
+
+    @created_at_not.setter
+    def created_at_not(self, created_at_not):
+        """Sets the created_at_not of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_not: The created_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_not: str
+        """
+
+        self._created_at_not = created_at_not
+
+    @property
+    def created_at_not_in(self):
+        """Gets the created_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The created_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._created_at_not_in
+
+    @created_at_not_in.setter
+    def created_at_not_in(self, created_at_not_in):
+        """Sets the created_at_not_in of this ReplicationTargetExecutionWhereInput.
+
+
+        :param created_at_not_in: The created_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type created_at_not_in: list[str]
+        """
+
+        self._created_at_not_in = created_at_not_in
 
     @property
     def creation(self):
@@ -1911,6 +2143,174 @@ class ReplicationTargetExecutionWhereInput(object):
         """
 
         self._type_not_in = type_not_in
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at: The updated_at of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at: str
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def updated_at_gt(self):
+        """Gets the updated_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at_gt
+
+    @updated_at_gt.setter
+    def updated_at_gt(self, updated_at_gt):
+        """Sets the updated_at_gt of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_gt: The updated_at_gt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_gt: str
+        """
+
+        self._updated_at_gt = updated_at_gt
+
+    @property
+    def updated_at_gte(self):
+        """Gets the updated_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at_gte
+
+    @updated_at_gte.setter
+    def updated_at_gte(self, updated_at_gte):
+        """Sets the updated_at_gte of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_gte: The updated_at_gte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_gte: str
+        """
+
+        self._updated_at_gte = updated_at_gte
+
+    @property
+    def updated_at_in(self):
+        """Gets the updated_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._updated_at_in
+
+    @updated_at_in.setter
+    def updated_at_in(self, updated_at_in):
+        """Sets the updated_at_in of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_in: The updated_at_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_in: list[str]
+        """
+
+        self._updated_at_in = updated_at_in
+
+    @property
+    def updated_at_lt(self):
+        """Gets the updated_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at_lt
+
+    @updated_at_lt.setter
+    def updated_at_lt(self, updated_at_lt):
+        """Sets the updated_at_lt of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_lt: The updated_at_lt of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_lt: str
+        """
+
+        self._updated_at_lt = updated_at_lt
+
+    @property
+    def updated_at_lte(self):
+        """Gets the updated_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at_lte
+
+    @updated_at_lte.setter
+    def updated_at_lte(self, updated_at_lte):
+        """Sets the updated_at_lte of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_lte: The updated_at_lte of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_lte: str
+        """
+
+        self._updated_at_lte = updated_at_lte
+
+    @property
+    def updated_at_not(self):
+        """Gets the updated_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._updated_at_not
+
+    @updated_at_not.setter
+    def updated_at_not(self, updated_at_not):
+        """Sets the updated_at_not of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_not: The updated_at_not of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_not: str
+        """
+
+        self._updated_at_not = updated_at_not
+
+    @property
+    def updated_at_not_in(self):
+        """Gets the updated_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+
+
+        :return: The updated_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._updated_at_not_in
+
+    @updated_at_not_in.setter
+    def updated_at_not_in(self, updated_at_not_in):
+        """Sets the updated_at_not_in of this ReplicationTargetExecutionWhereInput.
+
+
+        :param updated_at_not_in: The updated_at_not_in of this ReplicationTargetExecutionWhereInput.  # noqa: E501
+        :type updated_at_not_in: list[str]
+        """
+
+        self._updated_at_not_in = updated_at_not_in
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
