@@ -139,6 +139,8 @@ from cloudtower.api.zone_topo_api import ZoneTopoApi
 
 # import ApiClient
 from cloudtower.api_client import ApiClient
+from cloudtower.active_passive_client import ActivePassiveApiClient
+from cloudtower.active_passive_client import FailoverStrategy
 from cloudtower.configuration import Configuration
 from cloudtower.exceptions import OpenApiException
 from cloudtower.exceptions import ApiTypeError
