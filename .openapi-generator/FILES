@@ -2,6 +2,7 @@
 LICENSE
 README.md
 cloudtower/__init__.py
+cloudtower/active_passive_client.py
 cloudtower/api/__init__.py
 cloudtower/api/alert_api.py
 cloudtower/api/alert_notifier_api.py
@@ -1492,6 +1493,7 @@ cloudtower/models/security_group.py
 cloudtower/models/security_group_connection.py
 cloudtower/models/security_group_create_params.py
 cloudtower/models/security_group_delete_params.py
+cloudtower/models/security_group_member_type.py
 cloudtower/models/security_group_order_by_input.py
 cloudtower/models/security_group_update_body.py
 cloudtower/models/security_group_update_params.py
@@ -2133,4 +2135,5 @@ setup.cfg
 setup.py
 setup.py
 test-requirements.txt
+test/test_active_passive_client.py
 tox.ini

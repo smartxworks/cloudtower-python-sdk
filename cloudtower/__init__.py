@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.22.1"
+__version__ = "2.23.1"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -139,6 +139,8 @@ from cloudtower.api.zone_topo_api import ZoneTopoApi
 
 # import ApiClient
 from cloudtower.api_client import ApiClient
+from cloudtower.active_passive_client import ActivePassiveApiClient
+from cloudtower.active_passive_client import FailoverStrategy
 from cloudtower.configuration import Configuration
 from cloudtower.exceptions import OpenApiException
 from cloudtower.exceptions import ApiTypeError
@@ -1501,6 +1503,7 @@ from cloudtower.models.security_group import SecurityGroup
 from cloudtower.models.security_group_connection import SecurityGroupConnection
 from cloudtower.models.security_group_create_params import SecurityGroupCreateParams
 from cloudtower.models.security_group_delete_params import SecurityGroupDeleteParams
+from cloudtower.models.security_group_member_type import SecurityGroupMemberType
 from cloudtower.models.security_group_order_by_input import SecurityGroupOrderByInput
 from cloudtower.models.security_group_update_body import SecurityGroupUpdateBody
 from cloudtower.models.security_group_update_params import SecurityGroupUpdateParams

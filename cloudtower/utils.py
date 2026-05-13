@@ -97,17 +97,17 @@ def login(api_client, username, password, source="LOCAL"):
     :params api_client: (required) api client to set up login status
     :type api_client: ApiClient
     :param username: (required) username to login
-    :type username: str    
+    :type username: str
     :param password: (required) password to login
     :type password: str
     :param source: login user's source, default is local
-    :type password: UserSource
+    :type source: UserSource
     """
     user_api = UserApi(api_client)
     login_params = {
         "username": username,
         "password": password,
-        "source": source
+        "source": source,
     }
     if source == UserSource.LDAP:
         host = api_client.configuration.host
@@ -132,7 +132,6 @@ def login(api_client, username, password, source="LOCAL"):
             pass
     login_res = user_api.login(login_params)
     api_client.configuration.api_key["Authorization"] = login_res.data.token
-    return
 
 
 def get_svt_image_version(path):
