@@ -46,6 +46,7 @@ class ReplicationService(object):
         'replication_plans': 'list[NestedReplicationPlan]',
         'retry_interval': 'int',
         'storage_network': 'NestedReplicationServiceNetwork',
+        'sync_replication_plans': 'list[NestedSyncReplicationPlan]',
         'updated_at': 'str'
     }
 
@@ -71,6 +72,7 @@ class ReplicationService(object):
         'replication_plans': 'replication_plans',
         'retry_interval': 'retry_interval',
         'storage_network': 'storage_network',
+        'sync_replication_plans': 'sync_replication_plans',
         'updated_at': 'updatedAt'
     }
 
@@ -99,6 +101,7 @@ class ReplicationService(object):
         self._replication_plans = None
         self._retry_interval = None
         self._storage_network = None
+        self._sync_replication_plans = None
         self._updated_at = None
         self.discriminator = None
 
@@ -131,6 +134,7 @@ class ReplicationService(object):
         self.retry_interval = kwargs.get("retry_interval", None)
         if "storage_network" in kwargs:
             self.storage_network = kwargs["storage_network"]
+        self.sync_replication_plans = kwargs.get("sync_replication_plans", None)
         if "updated_at" in kwargs:
             self.updated_at = kwargs["updated_at"]
 
@@ -590,6 +594,27 @@ class ReplicationService(object):
             raise ValueError("Invalid value for `storage_network`, must not be `None`")  # noqa: E501
 
         self._storage_network = storage_network
+
+    @property
+    def sync_replication_plans(self):
+        """Gets the sync_replication_plans of this ReplicationService.  # noqa: E501
+
+
+        :return: The sync_replication_plans of this ReplicationService.  # noqa: E501
+        :rtype: list[NestedSyncReplicationPlan]
+        """
+        return self._sync_replication_plans
+
+    @sync_replication_plans.setter
+    def sync_replication_plans(self, sync_replication_plans):
+        """Sets the sync_replication_plans of this ReplicationService.
+
+
+        :param sync_replication_plans: The sync_replication_plans of this ReplicationService.  # noqa: E501
+        :type sync_replication_plans: list[NestedSyncReplicationPlan]
+        """
+
+        self._sync_replication_plans = sync_replication_plans
 
     @property
     def updated_at(self):

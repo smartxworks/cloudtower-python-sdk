@@ -2,6 +2,7 @@
 LICENSE
 README.md
 cloudtower/__init__.py
+cloudtower/active_passive_client.py
 cloudtower/api/__init__.py
 cloudtower/api/alert_api.py
 cloudtower/api/alert_notifier_api.py
@@ -91,6 +92,7 @@ cloudtower/api/snapshot_plan_task_api.py
 cloudtower/api/snmp_transport_api.py
 cloudtower/api/snmp_trap_receiver_api.py
 cloudtower/api/svt_image_api.py
+cloudtower/api/sync_replication_plan_api.py
 cloudtower/api/system_audit_log_api.py
 cloudtower/api/table_reporter_api.py
 cloudtower/api/task_api.py
@@ -750,6 +752,8 @@ cloudtower/models/get_snmp_trap_receivers_connection_request_body.py
 cloudtower/models/get_snmp_trap_receivers_request_body.py
 cloudtower/models/get_svt_images_connection_request_body.py
 cloudtower/models/get_svt_images_request_body.py
+cloudtower/models/get_sync_replication_plans_connection_request_body.py
+cloudtower/models/get_sync_replication_plans_request_body.py
 cloudtower/models/get_system_audit_logs_connection_request_body.py
 cloudtower/models/get_system_audit_logs_request_body.py
 cloudtower/models/get_tasks_connection_request_body.py
@@ -1085,6 +1089,7 @@ cloudtower/models/nested_aggregate_snapshot_plan_task.py
 cloudtower/models/nested_aggregate_snmp_transport.py
 cloudtower/models/nested_aggregate_snmp_trap_receiver.py
 cloudtower/models/nested_aggregate_svt_image.py
+cloudtower/models/nested_aggregate_sync_replication_plan.py
 cloudtower/models/nested_aggregate_system_audit_log.py
 cloudtower/models/nested_aggregate_task.py
 cloudtower/models/nested_aggregate_upload_task.py
@@ -1255,6 +1260,7 @@ cloudtower/models/nested_snapshot_plan_task.py
 cloudtower/models/nested_step.py
 cloudtower/models/nested_storage_policy_config.py
 cloudtower/models/nested_svt_image.py
+cloudtower/models/nested_sync_replication_plan.py
 cloudtower/models/nested_tag_position.py
 cloudtower/models/nested_task.py
 cloudtower/models/nested_template_config.py
@@ -1390,6 +1396,9 @@ cloudtower/models/nvmf_subsystem_policy_type.py
 cloudtower/models/nvmf_subsystem_updation_params.py
 cloudtower/models/nvmf_subsystem_updation_params_data.py
 cloudtower/models/nvmf_subsystem_where_input.py
+cloudtower/models/nvram_download_response.py
+cloudtower/models/nvram_download_response_data.py
+cloudtower/models/nvram_params.py
 cloudtower/models/observability_connected_system_service_type.py
 cloudtower/models/operate_action_enum.py
 cloudtower/models/operate_host_power_data.py
@@ -1448,6 +1457,7 @@ cloudtower/models/replica_vm_state.py
 cloudtower/models/replica_vm_where_input.py
 cloudtower/models/replication_failback_target_execution_where_input.py
 cloudtower/models/replication_failover_target_execution_where_input.py
+cloudtower/models/replication_method.py
 cloudtower/models/replication_object_type.py
 cloudtower/models/replication_plan.py
 cloudtower/models/replication_plan_connection.py
@@ -1492,6 +1502,7 @@ cloudtower/models/security_group.py
 cloudtower/models/security_group_connection.py
 cloudtower/models/security_group_create_params.py
 cloudtower/models/security_group_delete_params.py
+cloudtower/models/security_group_member_type.py
 cloudtower/models/security_group_order_by_input.py
 cloudtower/models/security_group_update_body.py
 cloudtower/models/security_group_update_params.py
@@ -1576,7 +1587,12 @@ cloudtower/models/svt_image.py
 cloudtower/models/svt_image_connection.py
 cloudtower/models/svt_image_order_by_input.py
 cloudtower/models/svt_image_where_input.py
+cloudtower/models/sync_replication_object_status.py
+cloudtower/models/sync_replication_plan.py
+cloudtower/models/sync_replication_plan_connection.py
+cloudtower/models/sync_replication_plan_order_by_input.py
 cloudtower/models/sync_replication_plan_where_input.py
+cloudtower/models/sync_replication_status.py
 cloudtower/models/system_audit_log.py
 cloudtower/models/system_audit_log_connection.py
 cloudtower/models/system_audit_log_order_by_input.py
@@ -2133,4 +2149,5 @@ setup.cfg
 setup.py
 setup.py
 test-requirements.txt
+test/test_active_passive_client.py
 tox.ini

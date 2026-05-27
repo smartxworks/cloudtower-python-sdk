@@ -26,12 +26,14 @@ class GlobalSettings(object):
     """
     openapi_types = {
         'auth': 'NestedAuthSettings',
+        'entity_async_status': 'EntityAsyncStatus',
         'id': 'str',
         'vm_recycle_bin': 'NestedVmRecycleBin'
     }
 
     attribute_map = {
         'auth': 'auth',
+        'entity_async_status': 'entityAsyncStatus',
         'id': 'id',
         'vm_recycle_bin': 'vm_recycle_bin'
     }
@@ -41,11 +43,13 @@ class GlobalSettings(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._auth = None
+        self._entity_async_status = None
         self._id = None
         self._vm_recycle_bin = None
         self.discriminator = None
 
         self.auth = kwargs.get("auth", None)
+        self.entity_async_status = kwargs.get("entity_async_status", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "vm_recycle_bin" in kwargs:
@@ -71,6 +75,27 @@ class GlobalSettings(object):
         """
 
         self._auth = auth
+
+    @property
+    def entity_async_status(self):
+        """Gets the entity_async_status of this GlobalSettings.  # noqa: E501
+
+
+        :return: The entity_async_status of this GlobalSettings.  # noqa: E501
+        :rtype: EntityAsyncStatus
+        """
+        return self._entity_async_status
+
+    @entity_async_status.setter
+    def entity_async_status(self, entity_async_status):
+        """Sets the entity_async_status of this GlobalSettings.
+
+
+        :param entity_async_status: The entity_async_status of this GlobalSettings.  # noqa: E501
+        :type entity_async_status: EntityAsyncStatus
+        """
+
+        self._entity_async_status = entity_async_status
 
     @property
     def id(self):

@@ -34,6 +34,10 @@ class ReplicaVm(object):
         'id': 'str',
         'inbound': 'bool',
         'iscsi_lun': 'NestedIscsiLun',
+        'last_out_of_sync_at': 'str',
+        'last_out_of_sync_reason': 'str',
+        'last_synced_at': 'str',
+        'method': 'ReplicationMethod',
         'object_descriptor': 'NestedReplicationObjectDescriptor',
         'origin_iscsi_lun': 'NestedIscsiLun',
         'origin_object_descriptor': 'NestedReplicationObjectDescriptor',
@@ -47,8 +51,12 @@ class ReplicaVm(object):
         'replication_plan': 'NestedReplicationPlan',
         'replication_service': 'NestedReplicationService',
         'replication_target_executions': 'list[NestedReplicationTargetExecution]',
+        'resource_version': 'int',
         'restore_points': 'list[NestedReplicationRestorePoint]',
         'state': 'ReplicaVmState',
+        'sync_replication_object_status': 'SyncReplicationObjectStatus',
+        'sync_replication_plan': 'NestedSyncReplicationPlan',
+        'sync_replication_status': 'SyncReplicationStatus',
         'targets_deletable': 'bool',
         'type': 'ReplicationObjectType',
         'updated_at': 'str',
@@ -65,6 +73,10 @@ class ReplicaVm(object):
         'id': 'id',
         'inbound': 'inbound',
         'iscsi_lun': 'iscsi_lun',
+        'last_out_of_sync_at': 'last_out_of_sync_at',
+        'last_out_of_sync_reason': 'last_out_of_sync_reason',
+        'last_synced_at': 'last_synced_at',
+        'method': 'method',
         'object_descriptor': 'object_descriptor',
         'origin_iscsi_lun': 'origin_iscsi_lun',
         'origin_object_descriptor': 'origin_object_descriptor',
@@ -78,8 +90,12 @@ class ReplicaVm(object):
         'replication_plan': 'replication_plan',
         'replication_service': 'replication_service',
         'replication_target_executions': 'replication_target_executions',
+        'resource_version': 'resource_version',
         'restore_points': 'restore_points',
         'state': 'state',
+        'sync_replication_object_status': 'sync_replication_object_status',
+        'sync_replication_plan': 'sync_replication_plan',
+        'sync_replication_status': 'sync_replication_status',
         'targets_deletable': 'targets_deletable',
         'type': 'type',
         'updated_at': 'updatedAt',
@@ -99,6 +115,10 @@ class ReplicaVm(object):
         self._id = None
         self._inbound = None
         self._iscsi_lun = None
+        self._last_out_of_sync_at = None
+        self._last_out_of_sync_reason = None
+        self._last_synced_at = None
+        self._method = None
         self._object_descriptor = None
         self._origin_iscsi_lun = None
         self._origin_object_descriptor = None
@@ -112,8 +132,12 @@ class ReplicaVm(object):
         self._replication_plan = None
         self._replication_service = None
         self._replication_target_executions = None
+        self._resource_version = None
         self._restore_points = None
         self._state = None
+        self._sync_replication_object_status = None
+        self._sync_replication_plan = None
+        self._sync_replication_status = None
         self._targets_deletable = None
         self._type = None
         self._updated_at = None
@@ -131,6 +155,11 @@ class ReplicaVm(object):
             self.id = kwargs["id"]
         self.inbound = kwargs.get("inbound", None)
         self.iscsi_lun = kwargs.get("iscsi_lun", None)
+        self.last_out_of_sync_at = kwargs.get("last_out_of_sync_at", None)
+        self.last_out_of_sync_reason = kwargs.get("last_out_of_sync_reason", None)
+        self.last_synced_at = kwargs.get("last_synced_at", None)
+        if "method" in kwargs:
+            self.method = kwargs["method"]
         self.object_descriptor = kwargs.get("object_descriptor", None)
         self.origin_iscsi_lun = kwargs.get("origin_iscsi_lun", None)
         if "origin_object_descriptor" in kwargs:
@@ -146,9 +175,13 @@ class ReplicaVm(object):
         if "replication_service" in kwargs:
             self.replication_service = kwargs["replication_service"]
         self.replication_target_executions = kwargs.get("replication_target_executions", None)
+        self.resource_version = kwargs.get("resource_version", None)
         self.restore_points = kwargs.get("restore_points", None)
         if "state" in kwargs:
             self.state = kwargs["state"]
+        self.sync_replication_object_status = kwargs.get("sync_replication_object_status", None)
+        self.sync_replication_plan = kwargs.get("sync_replication_plan", None)
+        self.sync_replication_status = kwargs.get("sync_replication_status", None)
         self.targets_deletable = kwargs.get("targets_deletable", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
@@ -348,6 +381,92 @@ class ReplicaVm(object):
         """
 
         self._iscsi_lun = iscsi_lun
+
+    @property
+    def last_out_of_sync_at(self):
+        """Gets the last_out_of_sync_at of this ReplicaVm.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at of this ReplicaVm.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at
+
+    @last_out_of_sync_at.setter
+    def last_out_of_sync_at(self, last_out_of_sync_at):
+        """Sets the last_out_of_sync_at of this ReplicaVm.
+
+
+        :param last_out_of_sync_at: The last_out_of_sync_at of this ReplicaVm.  # noqa: E501
+        :type last_out_of_sync_at: str
+        """
+
+        self._last_out_of_sync_at = last_out_of_sync_at
+
+    @property
+    def last_out_of_sync_reason(self):
+        """Gets the last_out_of_sync_reason of this ReplicaVm.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason of this ReplicaVm.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason
+
+    @last_out_of_sync_reason.setter
+    def last_out_of_sync_reason(self, last_out_of_sync_reason):
+        """Sets the last_out_of_sync_reason of this ReplicaVm.
+
+
+        :param last_out_of_sync_reason: The last_out_of_sync_reason of this ReplicaVm.  # noqa: E501
+        :type last_out_of_sync_reason: str
+        """
+
+        self._last_out_of_sync_reason = last_out_of_sync_reason
+
+    @property
+    def last_synced_at(self):
+        """Gets the last_synced_at of this ReplicaVm.  # noqa: E501
+
+
+        :return: The last_synced_at of this ReplicaVm.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at
+
+    @last_synced_at.setter
+    def last_synced_at(self, last_synced_at):
+        """Sets the last_synced_at of this ReplicaVm.
+
+
+        :param last_synced_at: The last_synced_at of this ReplicaVm.  # noqa: E501
+        :type last_synced_at: str
+        """
+
+        self._last_synced_at = last_synced_at
+
+    @property
+    def method(self):
+        """Gets the method of this ReplicaVm.  # noqa: E501
+
+
+        :return: The method of this ReplicaVm.  # noqa: E501
+        :rtype: ReplicationMethod
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """Sets the method of this ReplicaVm.
+
+
+        :param method: The method of this ReplicaVm.  # noqa: E501
+        :type method: ReplicationMethod
+        """
+        if self.local_vars_configuration.client_side_validation and method is None:  # noqa: E501
+            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
+
+        self._method = method
 
     @property
     def object_descriptor(self):
@@ -627,6 +746,27 @@ class ReplicaVm(object):
         self._replication_target_executions = replication_target_executions
 
     @property
+    def resource_version(self):
+        """Gets the resource_version of this ReplicaVm.  # noqa: E501
+
+
+        :return: The resource_version of this ReplicaVm.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version
+
+    @resource_version.setter
+    def resource_version(self, resource_version):
+        """Sets the resource_version of this ReplicaVm.
+
+
+        :param resource_version: The resource_version of this ReplicaVm.  # noqa: E501
+        :type resource_version: int
+        """
+
+        self._resource_version = resource_version
+
+    @property
     def restore_points(self):
         """Gets the restore_points of this ReplicaVm.  # noqa: E501
 
@@ -669,6 +809,69 @@ class ReplicaVm(object):
             raise ValueError("Invalid value for `state`, must not be `None`")  # noqa: E501
 
         self._state = state
+
+    @property
+    def sync_replication_object_status(self):
+        """Gets the sync_replication_object_status of this ReplicaVm.  # noqa: E501
+
+
+        :return: The sync_replication_object_status of this ReplicaVm.  # noqa: E501
+        :rtype: SyncReplicationObjectStatus
+        """
+        return self._sync_replication_object_status
+
+    @sync_replication_object_status.setter
+    def sync_replication_object_status(self, sync_replication_object_status):
+        """Sets the sync_replication_object_status of this ReplicaVm.
+
+
+        :param sync_replication_object_status: The sync_replication_object_status of this ReplicaVm.  # noqa: E501
+        :type sync_replication_object_status: SyncReplicationObjectStatus
+        """
+
+        self._sync_replication_object_status = sync_replication_object_status
+
+    @property
+    def sync_replication_plan(self):
+        """Gets the sync_replication_plan of this ReplicaVm.  # noqa: E501
+
+
+        :return: The sync_replication_plan of this ReplicaVm.  # noqa: E501
+        :rtype: NestedSyncReplicationPlan
+        """
+        return self._sync_replication_plan
+
+    @sync_replication_plan.setter
+    def sync_replication_plan(self, sync_replication_plan):
+        """Sets the sync_replication_plan of this ReplicaVm.
+
+
+        :param sync_replication_plan: The sync_replication_plan of this ReplicaVm.  # noqa: E501
+        :type sync_replication_plan: NestedSyncReplicationPlan
+        """
+
+        self._sync_replication_plan = sync_replication_plan
+
+    @property
+    def sync_replication_status(self):
+        """Gets the sync_replication_status of this ReplicaVm.  # noqa: E501
+
+
+        :return: The sync_replication_status of this ReplicaVm.  # noqa: E501
+        :rtype: SyncReplicationStatus
+        """
+        return self._sync_replication_status
+
+    @sync_replication_status.setter
+    def sync_replication_status(self, sync_replication_status):
+        """Sets the sync_replication_status of this ReplicaVm.
+
+
+        :param sync_replication_status: The sync_replication_status of this ReplicaVm.  # noqa: E501
+        :type sync_replication_status: SyncReplicationStatus
+        """
+
+        self._sync_replication_status = sync_replication_status
 
     @property
     def targets_deletable(self):

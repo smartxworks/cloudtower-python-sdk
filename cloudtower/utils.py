@@ -6,6 +6,26 @@ from cloudtower.api.task_api import TaskApi
 from cloudtower.api.user_api import UserApi
 
 
+def _build_auth_api_url(configuration):
+    host = configuration.host
+    if host.endswith("/"):
+        host = host[:-1]
+
+    api_path = getattr(configuration, "api_path", None)
+    if api_path:
+        api_path = api_path.strip()
+        if api_path and api_path != "/":
+            if not api_path.startswith("/"):
+                api_path = "/" + api_path
+            api_path = api_path.rstrip("/")
+            if host.endswith(api_path):
+                return host[:-len(api_path)] + "/api"
+
+    if host.endswith("/v2/api"):
+        return host[:-7] + "/api"
+    return host
+
+
 def wait_task(id, api_client, interval=5, timeout=300):
     """wait_task # noqa: E501
       this method will poll task status until it is completed or timeout
@@ -97,25 +117,20 @@ def login(api_client, username, password, source="LOCAL"):
     :params api_client: (required) api client to set up login status
     :type api_client: ApiClient
     :param username: (required) username to login
-    :type username: str    
+    :type username: str
     :param password: (required) password to login
     :type password: str
     :param source: login user's source, default is local
-    :type password: UserSource
+    :type source: UserSource
     """
     user_api = UserApi(api_client)
     login_params = {
         "username": username,
         "password": password,
-        "source": source
+        "source": source,
     }
     if source == UserSource.LDAP:
-        host = api_client.configuration.host
-        if host.endswith("/"):  # remove trailing slash
-            host = host[:-1]
-        if host.endswith("/v2/api"):
-            # replace v2/api with api
-            host = host[:-7] + "/api"
+        host = _build_auth_api_url(api_client.configuration)
         try:
             resp = api_client.request("POST", host, body={
                 "query": "{authnStrategies{id type}}",
@@ -132,7 +147,6 @@ def login(api_client, username, password, source="LOCAL"):
             pass
     login_res = user_api.login(login_params)
     api_client.configuration.api_key["Authorization"] = login_res.data.token
-    return
 
 
 def get_svt_image_version(path):

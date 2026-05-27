@@ -157,6 +157,9 @@ class ReplicationServiceWhereInput(object):
         'retry_interval_lte': 'int',
         'retry_interval_not': 'int',
         'retry_interval_not_in': 'list[int]',
+        'sync_replication_plans_every': 'SyncReplicationPlanWhereInput',
+        'sync_replication_plans_none': 'SyncReplicationPlanWhereInput',
+        'sync_replication_plans_some': 'SyncReplicationPlanWhereInput',
         'updated_at': 'str',
         'updated_at_gt': 'str',
         'updated_at_gte': 'str',
@@ -300,6 +303,9 @@ class ReplicationServiceWhereInput(object):
         'retry_interval_lte': 'retry_interval_lte',
         'retry_interval_not': 'retry_interval_not',
         'retry_interval_not_in': 'retry_interval_not_in',
+        'sync_replication_plans_every': 'sync_replication_plans_every',
+        'sync_replication_plans_none': 'sync_replication_plans_none',
+        'sync_replication_plans_some': 'sync_replication_plans_some',
         'updated_at': 'updatedAt',
         'updated_at_gt': 'updatedAt_gt',
         'updated_at_gte': 'updatedAt_gte',
@@ -446,6 +452,9 @@ class ReplicationServiceWhereInput(object):
         self._retry_interval_lte = None
         self._retry_interval_not = None
         self._retry_interval_not_in = None
+        self._sync_replication_plans_every = None
+        self._sync_replication_plans_none = None
+        self._sync_replication_plans_some = None
         self._updated_at = None
         self._updated_at_gt = None
         self._updated_at_gte = None
@@ -588,6 +597,9 @@ class ReplicationServiceWhereInput(object):
         self.retry_interval_lte = kwargs.get("retry_interval_lte", None)
         self.retry_interval_not = kwargs.get("retry_interval_not", None)
         self.retry_interval_not_in = kwargs.get("retry_interval_not_in", None)
+        self.sync_replication_plans_every = kwargs.get("sync_replication_plans_every", None)
+        self.sync_replication_plans_none = kwargs.get("sync_replication_plans_none", None)
+        self.sync_replication_plans_some = kwargs.get("sync_replication_plans_some", None)
         self.updated_at = kwargs.get("updated_at", None)
         self.updated_at_gt = kwargs.get("updated_at_gt", None)
         self.updated_at_gte = kwargs.get("updated_at_gte", None)
@@ -3368,6 +3380,69 @@ class ReplicationServiceWhereInput(object):
         """
 
         self._retry_interval_not_in = retry_interval_not_in
+
+    @property
+    def sync_replication_plans_every(self):
+        """Gets the sync_replication_plans_every of this ReplicationServiceWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plans_every of this ReplicationServiceWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plans_every
+
+    @sync_replication_plans_every.setter
+    def sync_replication_plans_every(self, sync_replication_plans_every):
+        """Sets the sync_replication_plans_every of this ReplicationServiceWhereInput.
+
+
+        :param sync_replication_plans_every: The sync_replication_plans_every of this ReplicationServiceWhereInput.  # noqa: E501
+        :type sync_replication_plans_every: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plans_every = sync_replication_plans_every
+
+    @property
+    def sync_replication_plans_none(self):
+        """Gets the sync_replication_plans_none of this ReplicationServiceWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plans_none of this ReplicationServiceWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plans_none
+
+    @sync_replication_plans_none.setter
+    def sync_replication_plans_none(self, sync_replication_plans_none):
+        """Sets the sync_replication_plans_none of this ReplicationServiceWhereInput.
+
+
+        :param sync_replication_plans_none: The sync_replication_plans_none of this ReplicationServiceWhereInput.  # noqa: E501
+        :type sync_replication_plans_none: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plans_none = sync_replication_plans_none
+
+    @property
+    def sync_replication_plans_some(self):
+        """Gets the sync_replication_plans_some of this ReplicationServiceWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plans_some of this ReplicationServiceWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plans_some
+
+    @sync_replication_plans_some.setter
+    def sync_replication_plans_some(self, sync_replication_plans_some):
+        """Sets the sync_replication_plans_some of this ReplicationServiceWhereInput.
+
+
+        :param sync_replication_plans_some: The sync_replication_plans_some of this ReplicationServiceWhereInput.  # noqa: E501
+        :type sync_replication_plans_some: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plans_some = sync_replication_plans_some
 
     @property
     def updated_at(self):
