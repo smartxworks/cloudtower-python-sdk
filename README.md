@@ -10,14 +10,14 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 - ### whl
 
   ```shell
-  pip install cloudtower_sdk-2.22.1-py2.py3-none-any.whl
+  pip install cloudtower_sdk-2.23.0-py2.py3-none-any.whl
   ```
 
 - ### tar.gz
 
   ```shell
-  tar xvzf cloudtower-sdk-2.22.1.tar.gz
-  cd cloudtower-sdk-2.22.1
+  tar xvzf cloudtower-sdk-2.23.0.tar.gz
+  cd cloudtower-sdk-2.23.0
   python setup.py install
   ```
 
@@ -50,14 +50,14 @@ Python 环境下的 Cloudtower SDK，适用于 2.7 与 3.4 以上版本。
 from cloudtower.configuration import Configuration
 from cloudtower import ApiClient
 # 配置 operation-api endpoint
-configuration = Configuration(host="http://192.168.96.133/v2/api")
+configuration = Configuration(host="http://tower.example.com/v2/api")
 client = ApiClient(configuration)
 ```
 
 > 如果需要使用 https，可以安装证书，或者忽略证书验证
 
 ```python
-configuration = Configuration(host="https://192.168.96.133/v2/api")
+configuration = Configuration(host="https://tower.example.com/v2/api")
 configuration.verify_ssl = False
 client = ApiClient(configuration)
 ```
@@ -79,7 +79,7 @@ vm_api = VmApi(client)
 from cloudtower.utils import wait_tasks, login
 conf = Configuration(host="http://api-test.dev-cloudtower.smartx.com/v2/api")
 api_client = ApiClient(conf)
-login(api_client, "your_username", "your_password") # 默认使用 LOCAL 作为 usersource
+login(api_client, "<username>", "<password>") # 默认使用 LOCAL 作为 usersource
 ```
 
 > 也可以直接将 token 应用置 `configuration` 的 `api_key` 中
@@ -90,8 +90,8 @@ from cloudtower.models import UserSource
 # 通过 UserApi 中的 login 方法来获得 token。
 user_api = UserApi(client)
 login_res = user_api.login({
-    "username": "your_username",
-    "password": "your_password",
+    "username": "<username>",
+    "password": "<password>",
     "source": UserSource.LOCAL
 })
 # 将 token 配置在 configuration.api_key["Authorization"] 中，
@@ -201,6 +201,45 @@ alerts = alert_api.get_alerts(
 
 #### 其他
 
+##### 创建 `ActivePassiveApiClient` 实例
+
+CloudTower 在 4.9.0 引入了多管理 IP 主备部署，如果需要访问此类 CloudTower，可以使用 `ActivePassiveApiClient` 配置同一个主备集群的多个 endpoint。同一时间预期最多只有一个 active endpoint，传入顺序不代表主备关系，客户端会通过探测结果选择当前 active endpoint。
+
+```python
+from cloudtower import ActivePassiveApiClient
+
+client = ActivePassiveApiClient(
+    endpoints=["https://tower-a.example.com", "https://tower-b.example.com"],
+    user_config={
+        "name": "<username>",
+        "password": "<password>",
+    },
+)
+```
+
+##### 故障切换策略
+
+`ActivePassiveApiClient` 支持以下故障切换策略：
+
+- `AUTO_FAILOVER`：默认的策略，当没有缓存的 active endpoint 时，会尝试探测并缓存当前 active endpoint；请求返回 307 后自动重新探测并重试一次；请求发生网络 I/O 异常后清空缓存，但不会自动重试。
+- `MANUAL_FAILOVER`：请求返回 307 后不自动重新探测和重试，清空缓存由调用方处理故障切换，其余业务逻辑和 `AUTO_FAILOVER` 一致。
+- `ALWAYS_PROBE`：不缓存 active endpoint，每次请求前都重新探测 active endpoint；请求返回 307 后不自动重试。
+
+如果需要指定故障切换策略，可以在创建实例时传入：
+
+```python
+from cloudtower import ActivePassiveApiClient, FailoverStrategy
+
+client = ActivePassiveApiClient(
+    endpoints=["https://tower-a.example.com", "https://tower-b.example.com"],
+    user_config={
+        "name": "<username>",
+        "password": "<password>",
+    },
+    failover_strategy=FailoverStrategy.MANUAL_FAILOVER,
+)
+```
+
 ##### 发送异步请求
 
 > 上述请求的发送都是同步的请求，会堵塞当前进程。如果需要使用异步请求，请在对应请求的关键字参数中加上 `async_req=True`。
@@ -233,7 +272,7 @@ client.close()
 ```python
 from cloudtower import ApiClient, Configuration, VmApi
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -246,7 +285,7 @@ vms = vm_api.get_vms({})
 ```python
 from cloudtower import ApiClient, Configuration, VmApi
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -262,7 +301,7 @@ vms_from_51_to_100 = vm_api.get_vms({
 ```python
 from cloudtower import ApiClient, Configuration, VmApi, VmStatus
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -281,7 +320,7 @@ running_vms = vm_api.get_vms(
 ```python
 from cloudtower import ApiClient, Configuration, VmApi
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -300,7 +339,7 @@ vms_name_contains = vm_api.get_vms(
 ```python
 from cloudtower import ApiClient, Configuration, VmApi
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -590,7 +629,7 @@ from cloudtower import (
 )
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -642,7 +681,7 @@ from cloudtower import (
 )
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -693,7 +732,7 @@ from cloudtower import (
 )
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -747,7 +786,7 @@ from cloudtower import (
 )
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -804,7 +843,7 @@ from cloudtower import (
 )
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -851,7 +890,7 @@ created_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -888,7 +927,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -922,7 +961,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -953,7 +992,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, Bus, VmVolumeElfStoragePolicyType, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -994,7 +1033,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, Bus, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -1032,7 +1071,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmVolumeElfStoragePolicyType, Bus, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 vm_api = VmApi(api_client)
@@ -1063,7 +1102,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi, VmNicModel
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1104,7 +1143,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1136,7 +1175,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1167,7 +1206,7 @@ updated_vm = vm_api.get_vms({
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1191,7 +1230,7 @@ wait_tasks([with_task_vm.task_id], api_client)
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1216,7 +1255,7 @@ wait_tasks([with_task_vm.task_id], api_client)
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1238,7 +1277,7 @@ opened_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1262,7 +1301,7 @@ opened_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1289,7 +1328,7 @@ opened_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1311,7 +1350,7 @@ closed_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1336,7 +1375,7 @@ closed_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1358,7 +1397,7 @@ closed_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-conf = Configuration(host="http://192.168.96.133/v2/api")
+conf = Configuration(host="http://tower.example.com/v2/api")
 conf.api_key["Authorization"] = "token"
 api_client = ApiClient(conf)
 
@@ -1384,7 +1423,7 @@ closed_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vm = vm_api.restart_vm({
@@ -1404,7 +1443,7 @@ restarted_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vms = vm_api.restart_vm({
@@ -1427,7 +1466,7 @@ restarted_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vm = vm_api.force_restart_vm({
@@ -1447,7 +1486,7 @@ restarted_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vms = vm_api.force_restart_vm({
@@ -1472,7 +1511,7 @@ restarted_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vm = vm_api.suspend_vm({
@@ -1492,7 +1531,7 @@ suspended_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vms = vm_api.suspend_vm({
@@ -1517,7 +1556,7 @@ suspended_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vm = vm_api.resume_vm({
@@ -1537,7 +1576,7 @@ resumed_vm = vm_api.get_vms({"where": {"id": with_task_vm.data.id}})[0]
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_vms = vm_api.resume_vm({
@@ -1564,7 +1603,7 @@ resumed_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_delete_vms = vm_api.move_vm_to_recycle_bin({
@@ -1587,7 +1626,7 @@ vm_moved_to_recycle_bin = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_delete_vms = vm_api.recover_vm_from_recycle_bin({
@@ -1610,7 +1649,7 @@ recovered_vms = vm_api.get_vms({"where": {"id_in": ids}})
 from cloudtower import ApiClient, Configuration, VmApi
 from cloudtower.utils import wait_tasks
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 vm_api = VmApi(api_client)
 with_task_delete_vms = vm_api.delete_vm({
@@ -1713,7 +1752,7 @@ from cloudtower.configuration import Configuration
 from cloudtower.models import SeverityEnum, ClusterType, Hypervisor, DiskType, DiskUsageStatus, DiskHealthStatus
 from cloudtower.api import VmApi, ClusterApi, AlertApi, HostApi, DiskApi, ClusterSettingsApi, GlobalSettingsApi
 
-api_client = ApiClient(Configuration(host="http://192.168.96.133/v2/api"))
+api_client = ApiClient(Configuration(host="http://tower.example.com/v2/api"))
 
 byte_units = ["B", "KiB", "MiB", "GiB", "TiB", "PiB"]
 hz_units = ["Hz", "KHz", "MHz", "GHz", "THz"]

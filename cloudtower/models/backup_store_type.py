@@ -20,11 +20,12 @@ class BackupStoreType(object):
     """
     allowed enum values
     """
+    BOOSTFS = "BOOSTFS"
     ISCSI = "ISCSI"
     NFS3 = "NFS3"
     NFS4 = "NFS4"
 
-    allowable_values = [ISCSI, NFS3, NFS4]  # noqa: E501
+    allowable_values = [BOOSTFS, ISCSI, NFS3, NFS4]  # noqa: E501
 
     """
     Attributes:

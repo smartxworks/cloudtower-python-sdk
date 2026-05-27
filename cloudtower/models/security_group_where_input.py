@@ -25,1350 +25,386 @@ class SecurityGroupWhereInput(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        '_and': 'list[SecurityGroupWhereInput]',
-        '_not': 'list[SecurityGroupWhereInput]',
-        '_or': 'list[SecurityGroupWhereInput]',
-        'description': 'str',
-        'description_contains': 'str',
-        'description_ends_with': 'str',
-        'description_gt': 'str',
-        'description_gte': 'str',
-        'description_in': 'list[str]',
-        'description_lt': 'str',
-        'description_lte': 'str',
-        'description_not': 'str',
-        'description_not_contains': 'str',
-        'description_not_ends_with': 'str',
-        'description_not_in': 'list[str]',
-        'description_not_starts_with': 'str',
-        'description_starts_with': 'str',
-        'everoute_cluster': 'EverouteClusterWhereInput',
-        'id': 'str',
-        'id_contains': 'str',
-        'id_ends_with': 'str',
-        'id_gt': 'str',
-        'id_gte': 'str',
-        'id_in': 'list[str]',
-        'id_lt': 'str',
-        'id_lte': 'str',
-        'id_not': 'str',
-        'id_not_contains': 'str',
-        'id_not_ends_with': 'str',
-        'id_not_in': 'list[str]',
-        'id_not_starts_with': 'str',
-        'id_starts_with': 'str',
-        'isolation_policies_every': 'IsolationPolicyWhereInput',
-        'isolation_policies_none': 'IsolationPolicyWhereInput',
-        'isolation_policies_some': 'IsolationPolicyWhereInput',
-        'name': 'str',
-        'name_contains': 'str',
-        'name_ends_with': 'str',
-        'name_gt': 'str',
-        'name_gte': 'str',
-        'name_in': 'list[str]',
-        'name_lt': 'str',
-        'name_lte': 'str',
-        'name_not': 'str',
-        'name_not_contains': 'str',
-        'name_not_ends_with': 'str',
-        'name_not_in': 'list[str]',
-        'name_not_starts_with': 'str',
-        'name_starts_with': 'str',
-        'security_policies_every': 'SecurityPolicyWhereInput',
-        'security_policies_none': 'SecurityPolicyWhereInput',
-        'security_policies_some': 'SecurityPolicyWhereInput',
-        'vms_every': 'VmWhereInput',
+        'vms_some': 'VmWhereInput',
         'vms_none': 'VmWhereInput',
-        'vms_some': 'VmWhereInput'
+        'vms_every': 'VmWhereInput',
+        'security_policies_some': 'SecurityPolicyWhereInput',
+        'security_policies_none': 'SecurityPolicyWhereInput',
+        'security_policies_every': 'SecurityPolicyWhereInput',
+        'name_starts_with': 'str',
+        'name_not_starts_with': 'str',
+        'name_not_in': 'list[str]',
+        'name_not_ends_with': 'str',
+        'name_not_contains': 'str',
+        'name_not': 'str',
+        'name_lte': 'str',
+        'name_lt': 'str',
+        'name_in': 'list[str]',
+        'name_gte': 'str',
+        'name_gt': 'str',
+        'name_ends_with': 'str',
+        'name_contains': 'str',
+        'name': 'str',
+        'member_type_not_in': 'list[SecurityGroupMemberType]',
+        'member_type_not': 'SecurityGroupMemberType',
+        'member_type_in': 'list[SecurityGroupMemberType]',
+        'member_type': 'SecurityGroupMemberType',
+        'isolation_policies_some': 'IsolationPolicyWhereInput',
+        'isolation_policies_none': 'IsolationPolicyWhereInput',
+        'isolation_policies_every': 'IsolationPolicyWhereInput',
+        'ips_starts_with': 'str',
+        'ips_not_starts_with': 'str',
+        'ips_not_in': 'list[str]',
+        'ips_not_ends_with': 'str',
+        'ips_not_contains': 'str',
+        'ips_not': 'str',
+        'ips_lte': 'str',
+        'ips_lt': 'str',
+        'ips_in': 'list[str]',
+        'ips_gte': 'str',
+        'ips_gt': 'str',
+        'ips_ends_with': 'str',
+        'ips_contains': 'str',
+        'ips': 'str',
+        'id_starts_with': 'str',
+        'id_not_starts_with': 'str',
+        'id_not_in': 'list[str]',
+        'id_not_ends_with': 'str',
+        'id_not_contains': 'str',
+        'id_not': 'str',
+        'id_lte': 'str',
+        'id_lt': 'str',
+        'id_in': 'list[str]',
+        'id_gte': 'str',
+        'id_gt': 'str',
+        'id_ends_with': 'str',
+        'id_contains': 'str',
+        'id': 'str',
+        'exclude_ips_starts_with': 'str',
+        'exclude_ips_not_starts_with': 'str',
+        'exclude_ips_not_in': 'list[str]',
+        'exclude_ips_not_ends_with': 'str',
+        'exclude_ips_not_contains': 'str',
+        'exclude_ips_not': 'str',
+        'exclude_ips_lte': 'str',
+        'exclude_ips_lt': 'str',
+        'exclude_ips_in': 'list[str]',
+        'exclude_ips_gte': 'str',
+        'exclude_ips_gt': 'str',
+        'exclude_ips_ends_with': 'str',
+        'exclude_ips_contains': 'str',
+        'exclude_ips': 'str',
+        'everoute_cluster': 'EverouteClusterWhereInput',
+        'description_starts_with': 'str',
+        'description_not_starts_with': 'str',
+        'description_not_in': 'list[str]',
+        'description_not_ends_with': 'str',
+        'description_not_contains': 'str',
+        'description_not': 'str',
+        'description_lte': 'str',
+        'description_lt': 'str',
+        'description_in': 'list[str]',
+        'description_gte': 'str',
+        'description_gt': 'str',
+        'description_ends_with': 'str',
+        'description_contains': 'str',
+        'description': 'str',
+        '_or': 'list[SecurityGroupWhereInput]',
+        '_not': 'list[SecurityGroupWhereInput]',
+        '_and': 'list[SecurityGroupWhereInput]'
     }
 
     attribute_map = {
-        '_and': 'AND',
-        '_not': 'NOT',
-        '_or': 'OR',
-        'description': 'description',
-        'description_contains': 'description_contains',
-        'description_ends_with': 'description_ends_with',
-        'description_gt': 'description_gt',
-        'description_gte': 'description_gte',
-        'description_in': 'description_in',
-        'description_lt': 'description_lt',
-        'description_lte': 'description_lte',
-        'description_not': 'description_not',
-        'description_not_contains': 'description_not_contains',
-        'description_not_ends_with': 'description_not_ends_with',
-        'description_not_in': 'description_not_in',
-        'description_not_starts_with': 'description_not_starts_with',
-        'description_starts_with': 'description_starts_with',
-        'everoute_cluster': 'everoute_cluster',
-        'id': 'id',
-        'id_contains': 'id_contains',
-        'id_ends_with': 'id_ends_with',
-        'id_gt': 'id_gt',
-        'id_gte': 'id_gte',
-        'id_in': 'id_in',
-        'id_lt': 'id_lt',
-        'id_lte': 'id_lte',
-        'id_not': 'id_not',
-        'id_not_contains': 'id_not_contains',
-        'id_not_ends_with': 'id_not_ends_with',
-        'id_not_in': 'id_not_in',
-        'id_not_starts_with': 'id_not_starts_with',
-        'id_starts_with': 'id_starts_with',
-        'isolation_policies_every': 'isolation_policies_every',
-        'isolation_policies_none': 'isolation_policies_none',
-        'isolation_policies_some': 'isolation_policies_some',
-        'name': 'name',
-        'name_contains': 'name_contains',
-        'name_ends_with': 'name_ends_with',
-        'name_gt': 'name_gt',
-        'name_gte': 'name_gte',
-        'name_in': 'name_in',
-        'name_lt': 'name_lt',
-        'name_lte': 'name_lte',
-        'name_not': 'name_not',
-        'name_not_contains': 'name_not_contains',
-        'name_not_ends_with': 'name_not_ends_with',
-        'name_not_in': 'name_not_in',
-        'name_not_starts_with': 'name_not_starts_with',
-        'name_starts_with': 'name_starts_with',
-        'security_policies_every': 'security_policies_every',
-        'security_policies_none': 'security_policies_none',
-        'security_policies_some': 'security_policies_some',
-        'vms_every': 'vms_every',
+        'vms_some': 'vms_some',
         'vms_none': 'vms_none',
-        'vms_some': 'vms_some'
+        'vms_every': 'vms_every',
+        'security_policies_some': 'security_policies_some',
+        'security_policies_none': 'security_policies_none',
+        'security_policies_every': 'security_policies_every',
+        'name_starts_with': 'name_starts_with',
+        'name_not_starts_with': 'name_not_starts_with',
+        'name_not_in': 'name_not_in',
+        'name_not_ends_with': 'name_not_ends_with',
+        'name_not_contains': 'name_not_contains',
+        'name_not': 'name_not',
+        'name_lte': 'name_lte',
+        'name_lt': 'name_lt',
+        'name_in': 'name_in',
+        'name_gte': 'name_gte',
+        'name_gt': 'name_gt',
+        'name_ends_with': 'name_ends_with',
+        'name_contains': 'name_contains',
+        'name': 'name',
+        'member_type_not_in': 'member_type_not_in',
+        'member_type_not': 'member_type_not',
+        'member_type_in': 'member_type_in',
+        'member_type': 'member_type',
+        'isolation_policies_some': 'isolation_policies_some',
+        'isolation_policies_none': 'isolation_policies_none',
+        'isolation_policies_every': 'isolation_policies_every',
+        'ips_starts_with': 'ips_starts_with',
+        'ips_not_starts_with': 'ips_not_starts_with',
+        'ips_not_in': 'ips_not_in',
+        'ips_not_ends_with': 'ips_not_ends_with',
+        'ips_not_contains': 'ips_not_contains',
+        'ips_not': 'ips_not',
+        'ips_lte': 'ips_lte',
+        'ips_lt': 'ips_lt',
+        'ips_in': 'ips_in',
+        'ips_gte': 'ips_gte',
+        'ips_gt': 'ips_gt',
+        'ips_ends_with': 'ips_ends_with',
+        'ips_contains': 'ips_contains',
+        'ips': 'ips',
+        'id_starts_with': 'id_starts_with',
+        'id_not_starts_with': 'id_not_starts_with',
+        'id_not_in': 'id_not_in',
+        'id_not_ends_with': 'id_not_ends_with',
+        'id_not_contains': 'id_not_contains',
+        'id_not': 'id_not',
+        'id_lte': 'id_lte',
+        'id_lt': 'id_lt',
+        'id_in': 'id_in',
+        'id_gte': 'id_gte',
+        'id_gt': 'id_gt',
+        'id_ends_with': 'id_ends_with',
+        'id_contains': 'id_contains',
+        'id': 'id',
+        'exclude_ips_starts_with': 'exclude_ips_starts_with',
+        'exclude_ips_not_starts_with': 'exclude_ips_not_starts_with',
+        'exclude_ips_not_in': 'exclude_ips_not_in',
+        'exclude_ips_not_ends_with': 'exclude_ips_not_ends_with',
+        'exclude_ips_not_contains': 'exclude_ips_not_contains',
+        'exclude_ips_not': 'exclude_ips_not',
+        'exclude_ips_lte': 'exclude_ips_lte',
+        'exclude_ips_lt': 'exclude_ips_lt',
+        'exclude_ips_in': 'exclude_ips_in',
+        'exclude_ips_gte': 'exclude_ips_gte',
+        'exclude_ips_gt': 'exclude_ips_gt',
+        'exclude_ips_ends_with': 'exclude_ips_ends_with',
+        'exclude_ips_contains': 'exclude_ips_contains',
+        'exclude_ips': 'exclude_ips',
+        'everoute_cluster': 'everoute_cluster',
+        'description_starts_with': 'description_starts_with',
+        'description_not_starts_with': 'description_not_starts_with',
+        'description_not_in': 'description_not_in',
+        'description_not_ends_with': 'description_not_ends_with',
+        'description_not_contains': 'description_not_contains',
+        'description_not': 'description_not',
+        'description_lte': 'description_lte',
+        'description_lt': 'description_lt',
+        'description_in': 'description_in',
+        'description_gte': 'description_gte',
+        'description_gt': 'description_gt',
+        'description_ends_with': 'description_ends_with',
+        'description_contains': 'description_contains',
+        'description': 'description',
+        '_or': 'OR',
+        '_not': 'NOT',
+        '_and': 'AND'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
         """SecurityGroupWhereInput - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
-        self.__and = None
-        self.__not = None
-        self.__or = None
-        self._description = None
-        self._description_contains = None
-        self._description_ends_with = None
-        self._description_gt = None
-        self._description_gte = None
-        self._description_in = None
-        self._description_lt = None
-        self._description_lte = None
-        self._description_not = None
-        self._description_not_contains = None
-        self._description_not_ends_with = None
-        self._description_not_in = None
-        self._description_not_starts_with = None
-        self._description_starts_with = None
-        self._everoute_cluster = None
-        self._id = None
-        self._id_contains = None
-        self._id_ends_with = None
-        self._id_gt = None
-        self._id_gte = None
-        self._id_in = None
-        self._id_lt = None
-        self._id_lte = None
-        self._id_not = None
-        self._id_not_contains = None
-        self._id_not_ends_with = None
-        self._id_not_in = None
-        self._id_not_starts_with = None
-        self._id_starts_with = None
-        self._isolation_policies_every = None
-        self._isolation_policies_none = None
-        self._isolation_policies_some = None
-        self._name = None
-        self._name_contains = None
-        self._name_ends_with = None
-        self._name_gt = None
-        self._name_gte = None
-        self._name_in = None
-        self._name_lt = None
-        self._name_lte = None
-        self._name_not = None
-        self._name_not_contains = None
-        self._name_not_ends_with = None
-        self._name_not_in = None
-        self._name_not_starts_with = None
-        self._name_starts_with = None
-        self._security_policies_every = None
-        self._security_policies_none = None
-        self._security_policies_some = None
-        self._vms_every = None
-        self._vms_none = None
         self._vms_some = None
+        self._vms_none = None
+        self._vms_every = None
+        self._security_policies_some = None
+        self._security_policies_none = None
+        self._security_policies_every = None
+        self._name_starts_with = None
+        self._name_not_starts_with = None
+        self._name_not_in = None
+        self._name_not_ends_with = None
+        self._name_not_contains = None
+        self._name_not = None
+        self._name_lte = None
+        self._name_lt = None
+        self._name_in = None
+        self._name_gte = None
+        self._name_gt = None
+        self._name_ends_with = None
+        self._name_contains = None
+        self._name = None
+        self._member_type_not_in = None
+        self._member_type_not = None
+        self._member_type_in = None
+        self._member_type = None
+        self._isolation_policies_some = None
+        self._isolation_policies_none = None
+        self._isolation_policies_every = None
+        self._ips_starts_with = None
+        self._ips_not_starts_with = None
+        self._ips_not_in = None
+        self._ips_not_ends_with = None
+        self._ips_not_contains = None
+        self._ips_not = None
+        self._ips_lte = None
+        self._ips_lt = None
+        self._ips_in = None
+        self._ips_gte = None
+        self._ips_gt = None
+        self._ips_ends_with = None
+        self._ips_contains = None
+        self._ips = None
+        self._id_starts_with = None
+        self._id_not_starts_with = None
+        self._id_not_in = None
+        self._id_not_ends_with = None
+        self._id_not_contains = None
+        self._id_not = None
+        self._id_lte = None
+        self._id_lt = None
+        self._id_in = None
+        self._id_gte = None
+        self._id_gt = None
+        self._id_ends_with = None
+        self._id_contains = None
+        self._id = None
+        self._exclude_ips_starts_with = None
+        self._exclude_ips_not_starts_with = None
+        self._exclude_ips_not_in = None
+        self._exclude_ips_not_ends_with = None
+        self._exclude_ips_not_contains = None
+        self._exclude_ips_not = None
+        self._exclude_ips_lte = None
+        self._exclude_ips_lt = None
+        self._exclude_ips_in = None
+        self._exclude_ips_gte = None
+        self._exclude_ips_gt = None
+        self._exclude_ips_ends_with = None
+        self._exclude_ips_contains = None
+        self._exclude_ips = None
+        self._everoute_cluster = None
+        self._description_starts_with = None
+        self._description_not_starts_with = None
+        self._description_not_in = None
+        self._description_not_ends_with = None
+        self._description_not_contains = None
+        self._description_not = None
+        self._description_lte = None
+        self._description_lt = None
+        self._description_in = None
+        self._description_gte = None
+        self._description_gt = None
+        self._description_ends_with = None
+        self._description_contains = None
+        self._description = None
+        self.__or = None
+        self.__not = None
+        self.__and = None
         self.discriminator = None
 
-        self._and = kwargs.get("_and", None)
-        self._not = kwargs.get("_not", None)
-        self._or = kwargs.get("_or", None)
-        self.description = kwargs.get("description", None)
-        self.description_contains = kwargs.get("description_contains", None)
-        self.description_ends_with = kwargs.get("description_ends_with", None)
-        self.description_gt = kwargs.get("description_gt", None)
-        self.description_gte = kwargs.get("description_gte", None)
-        self.description_in = kwargs.get("description_in", None)
-        self.description_lt = kwargs.get("description_lt", None)
-        self.description_lte = kwargs.get("description_lte", None)
-        self.description_not = kwargs.get("description_not", None)
-        self.description_not_contains = kwargs.get("description_not_contains", None)
-        self.description_not_ends_with = kwargs.get("description_not_ends_with", None)
-        self.description_not_in = kwargs.get("description_not_in", None)
-        self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
-        self.description_starts_with = kwargs.get("description_starts_with", None)
-        self.everoute_cluster = kwargs.get("everoute_cluster", None)
-        self.id = kwargs.get("id", None)
-        self.id_contains = kwargs.get("id_contains", None)
-        self.id_ends_with = kwargs.get("id_ends_with", None)
-        self.id_gt = kwargs.get("id_gt", None)
-        self.id_gte = kwargs.get("id_gte", None)
-        self.id_in = kwargs.get("id_in", None)
-        self.id_lt = kwargs.get("id_lt", None)
-        self.id_lte = kwargs.get("id_lte", None)
-        self.id_not = kwargs.get("id_not", None)
-        self.id_not_contains = kwargs.get("id_not_contains", None)
-        self.id_not_ends_with = kwargs.get("id_not_ends_with", None)
-        self.id_not_in = kwargs.get("id_not_in", None)
-        self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
-        self.id_starts_with = kwargs.get("id_starts_with", None)
-        self.isolation_policies_every = kwargs.get("isolation_policies_every", None)
-        self.isolation_policies_none = kwargs.get("isolation_policies_none", None)
-        self.isolation_policies_some = kwargs.get("isolation_policies_some", None)
-        self.name = kwargs.get("name", None)
-        self.name_contains = kwargs.get("name_contains", None)
-        self.name_ends_with = kwargs.get("name_ends_with", None)
-        self.name_gt = kwargs.get("name_gt", None)
-        self.name_gte = kwargs.get("name_gte", None)
-        self.name_in = kwargs.get("name_in", None)
-        self.name_lt = kwargs.get("name_lt", None)
-        self.name_lte = kwargs.get("name_lte", None)
-        self.name_not = kwargs.get("name_not", None)
-        self.name_not_contains = kwargs.get("name_not_contains", None)
-        self.name_not_ends_with = kwargs.get("name_not_ends_with", None)
-        self.name_not_in = kwargs.get("name_not_in", None)
-        self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
-        self.name_starts_with = kwargs.get("name_starts_with", None)
-        self.security_policies_every = kwargs.get("security_policies_every", None)
-        self.security_policies_none = kwargs.get("security_policies_none", None)
-        self.security_policies_some = kwargs.get("security_policies_some", None)
-        self.vms_every = kwargs.get("vms_every", None)
-        self.vms_none = kwargs.get("vms_none", None)
         self.vms_some = kwargs.get("vms_some", None)
+        self.vms_none = kwargs.get("vms_none", None)
+        self.vms_every = kwargs.get("vms_every", None)
+        self.security_policies_some = kwargs.get("security_policies_some", None)
+        self.security_policies_none = kwargs.get("security_policies_none", None)
+        self.security_policies_every = kwargs.get("security_policies_every", None)
+        self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
+        self.name_not_in = kwargs.get("name_not_in", None)
+        self.name_not_ends_with = kwargs.get("name_not_ends_with", None)
+        self.name_not_contains = kwargs.get("name_not_contains", None)
+        self.name_not = kwargs.get("name_not", None)
+        self.name_lte = kwargs.get("name_lte", None)
+        self.name_lt = kwargs.get("name_lt", None)
+        self.name_in = kwargs.get("name_in", None)
+        self.name_gte = kwargs.get("name_gte", None)
+        self.name_gt = kwargs.get("name_gt", None)
+        self.name_ends_with = kwargs.get("name_ends_with", None)
+        self.name_contains = kwargs.get("name_contains", None)
+        self.name = kwargs.get("name", None)
+        self.member_type_not_in = kwargs.get("member_type_not_in", None)
+        self.member_type_not = kwargs.get("member_type_not", None)
+        self.member_type_in = kwargs.get("member_type_in", None)
+        self.member_type = kwargs.get("member_type", None)
+        self.isolation_policies_some = kwargs.get("isolation_policies_some", None)
+        self.isolation_policies_none = kwargs.get("isolation_policies_none", None)
+        self.isolation_policies_every = kwargs.get("isolation_policies_every", None)
+        self.ips_starts_with = kwargs.get("ips_starts_with", None)
+        self.ips_not_starts_with = kwargs.get("ips_not_starts_with", None)
+        self.ips_not_in = kwargs.get("ips_not_in", None)
+        self.ips_not_ends_with = kwargs.get("ips_not_ends_with", None)
+        self.ips_not_contains = kwargs.get("ips_not_contains", None)
+        self.ips_not = kwargs.get("ips_not", None)
+        self.ips_lte = kwargs.get("ips_lte", None)
+        self.ips_lt = kwargs.get("ips_lt", None)
+        self.ips_in = kwargs.get("ips_in", None)
+        self.ips_gte = kwargs.get("ips_gte", None)
+        self.ips_gt = kwargs.get("ips_gt", None)
+        self.ips_ends_with = kwargs.get("ips_ends_with", None)
+        self.ips_contains = kwargs.get("ips_contains", None)
+        self.ips = kwargs.get("ips", None)
+        self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
+        self.id_not_in = kwargs.get("id_not_in", None)
+        self.id_not_ends_with = kwargs.get("id_not_ends_with", None)
+        self.id_not_contains = kwargs.get("id_not_contains", None)
+        self.id_not = kwargs.get("id_not", None)
+        self.id_lte = kwargs.get("id_lte", None)
+        self.id_lt = kwargs.get("id_lt", None)
+        self.id_in = kwargs.get("id_in", None)
+        self.id_gte = kwargs.get("id_gte", None)
+        self.id_gt = kwargs.get("id_gt", None)
+        self.id_ends_with = kwargs.get("id_ends_with", None)
+        self.id_contains = kwargs.get("id_contains", None)
+        self.id = kwargs.get("id", None)
+        self.exclude_ips_starts_with = kwargs.get("exclude_ips_starts_with", None)
+        self.exclude_ips_not_starts_with = kwargs.get("exclude_ips_not_starts_with", None)
+        self.exclude_ips_not_in = kwargs.get("exclude_ips_not_in", None)
+        self.exclude_ips_not_ends_with = kwargs.get("exclude_ips_not_ends_with", None)
+        self.exclude_ips_not_contains = kwargs.get("exclude_ips_not_contains", None)
+        self.exclude_ips_not = kwargs.get("exclude_ips_not", None)
+        self.exclude_ips_lte = kwargs.get("exclude_ips_lte", None)
+        self.exclude_ips_lt = kwargs.get("exclude_ips_lt", None)
+        self.exclude_ips_in = kwargs.get("exclude_ips_in", None)
+        self.exclude_ips_gte = kwargs.get("exclude_ips_gte", None)
+        self.exclude_ips_gt = kwargs.get("exclude_ips_gt", None)
+        self.exclude_ips_ends_with = kwargs.get("exclude_ips_ends_with", None)
+        self.exclude_ips_contains = kwargs.get("exclude_ips_contains", None)
+        self.exclude_ips = kwargs.get("exclude_ips", None)
+        self.everoute_cluster = kwargs.get("everoute_cluster", None)
+        self.description_starts_with = kwargs.get("description_starts_with", None)
+        self.description_not_starts_with = kwargs.get("description_not_starts_with", None)
+        self.description_not_in = kwargs.get("description_not_in", None)
+        self.description_not_ends_with = kwargs.get("description_not_ends_with", None)
+        self.description_not_contains = kwargs.get("description_not_contains", None)
+        self.description_not = kwargs.get("description_not", None)
+        self.description_lte = kwargs.get("description_lte", None)
+        self.description_lt = kwargs.get("description_lt", None)
+        self.description_in = kwargs.get("description_in", None)
+        self.description_gte = kwargs.get("description_gte", None)
+        self.description_gt = kwargs.get("description_gt", None)
+        self.description_ends_with = kwargs.get("description_ends_with", None)
+        self.description_contains = kwargs.get("description_contains", None)
+        self.description = kwargs.get("description", None)
+        self._or = kwargs.get("_or", None)
+        self._not = kwargs.get("_not", None)
+        self._and = kwargs.get("_and", None)
 
     @property
-    def _and(self):
-        """Gets the _and of this SecurityGroupWhereInput.  # noqa: E501
+    def vms_some(self):
+        """Gets the vms_some of this SecurityGroupWhereInput.  # noqa: E501
 
 
-        :return: The _and of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[SecurityGroupWhereInput]
-        """
-        return self.__and
-
-    @_and.setter
-    def _and(self, _and):
-        """Sets the _and of this SecurityGroupWhereInput.
-
-
-        :param _and: The _and of this SecurityGroupWhereInput.  # noqa: E501
-        :type _and: list[SecurityGroupWhereInput]
-        """
-
-        self.__and = _and
-
-    @property
-    def _not(self):
-        """Gets the _not of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The _not of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[SecurityGroupWhereInput]
-        """
-        return self.__not
-
-    @_not.setter
-    def _not(self, _not):
-        """Sets the _not of this SecurityGroupWhereInput.
-
-
-        :param _not: The _not of this SecurityGroupWhereInput.  # noqa: E501
-        :type _not: list[SecurityGroupWhereInput]
-        """
-
-        self.__not = _not
-
-    @property
-    def _or(self):
-        """Gets the _or of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The _or of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[SecurityGroupWhereInput]
-        """
-        return self.__or
-
-    @_or.setter
-    def _or(self, _or):
-        """Sets the _or of this SecurityGroupWhereInput.
-
-
-        :param _or: The _or of this SecurityGroupWhereInput.  # noqa: E501
-        :type _or: list[SecurityGroupWhereInput]
-        """
-
-        self.__or = _or
-
-    @property
-    def description(self):
-        """Gets the description of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this SecurityGroupWhereInput.
-
-
-        :param description: The description of this SecurityGroupWhereInput.  # noqa: E501
-        :type description: str
-        """
-
-        self._description = description
-
-    @property
-    def description_contains(self):
-        """Gets the description_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_contains
-
-    @description_contains.setter
-    def description_contains(self, description_contains):
-        """Sets the description_contains of this SecurityGroupWhereInput.
-
-
-        :param description_contains: The description_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_contains: str
-        """
-
-        self._description_contains = description_contains
-
-    @property
-    def description_ends_with(self):
-        """Gets the description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_ends_with
-
-    @description_ends_with.setter
-    def description_ends_with(self, description_ends_with):
-        """Sets the description_ends_with of this SecurityGroupWhereInput.
-
-
-        :param description_ends_with: The description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_ends_with: str
-        """
-
-        self._description_ends_with = description_ends_with
-
-    @property
-    def description_gt(self):
-        """Gets the description_gt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_gt
-
-    @description_gt.setter
-    def description_gt(self, description_gt):
-        """Sets the description_gt of this SecurityGroupWhereInput.
-
-
-        :param description_gt: The description_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_gt: str
-        """
-
-        self._description_gt = description_gt
-
-    @property
-    def description_gte(self):
-        """Gets the description_gte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_gte
-
-    @description_gte.setter
-    def description_gte(self, description_gte):
-        """Sets the description_gte of this SecurityGroupWhereInput.
-
-
-        :param description_gte: The description_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_gte: str
-        """
-
-        self._description_gte = description_gte
-
-    @property
-    def description_in(self):
-        """Gets the description_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description_in
-
-    @description_in.setter
-    def description_in(self, description_in):
-        """Sets the description_in of this SecurityGroupWhereInput.
-
-
-        :param description_in: The description_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_in: list[str]
-        """
-
-        self._description_in = description_in
-
-    @property
-    def description_lt(self):
-        """Gets the description_lt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_lt
-
-    @description_lt.setter
-    def description_lt(self, description_lt):
-        """Sets the description_lt of this SecurityGroupWhereInput.
-
-
-        :param description_lt: The description_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_lt: str
-        """
-
-        self._description_lt = description_lt
-
-    @property
-    def description_lte(self):
-        """Gets the description_lte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_lte
-
-    @description_lte.setter
-    def description_lte(self, description_lte):
-        """Sets the description_lte of this SecurityGroupWhereInput.
-
-
-        :param description_lte: The description_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_lte: str
-        """
-
-        self._description_lte = description_lte
-
-    @property
-    def description_not(self):
-        """Gets the description_not of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_not of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_not
-
-    @description_not.setter
-    def description_not(self, description_not):
-        """Sets the description_not of this SecurityGroupWhereInput.
-
-
-        :param description_not: The description_not of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_not: str
-        """
-
-        self._description_not = description_not
-
-    @property
-    def description_not_contains(self):
-        """Gets the description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_not_contains
-
-    @description_not_contains.setter
-    def description_not_contains(self, description_not_contains):
-        """Sets the description_not_contains of this SecurityGroupWhereInput.
-
-
-        :param description_not_contains: The description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_not_contains: str
-        """
-
-        self._description_not_contains = description_not_contains
-
-    @property
-    def description_not_ends_with(self):
-        """Gets the description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_not_ends_with
-
-    @description_not_ends_with.setter
-    def description_not_ends_with(self, description_not_ends_with):
-        """Sets the description_not_ends_with of this SecurityGroupWhereInput.
-
-
-        :param description_not_ends_with: The description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_not_ends_with: str
-        """
-
-        self._description_not_ends_with = description_not_ends_with
-
-    @property
-    def description_not_in(self):
-        """Gets the description_not_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description_not_in
-
-    @description_not_in.setter
-    def description_not_in(self, description_not_in):
-        """Sets the description_not_in of this SecurityGroupWhereInput.
-
-
-        :param description_not_in: The description_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_not_in: list[str]
-        """
-
-        self._description_not_in = description_not_in
-
-    @property
-    def description_not_starts_with(self):
-        """Gets the description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_not_starts_with
-
-    @description_not_starts_with.setter
-    def description_not_starts_with(self, description_not_starts_with):
-        """Sets the description_not_starts_with of this SecurityGroupWhereInput.
-
-
-        :param description_not_starts_with: The description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_not_starts_with: str
-        """
-
-        self._description_not_starts_with = description_not_starts_with
-
-    @property
-    def description_starts_with(self):
-        """Gets the description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_starts_with
-
-    @description_starts_with.setter
-    def description_starts_with(self, description_starts_with):
-        """Sets the description_starts_with of this SecurityGroupWhereInput.
-
-
-        :param description_starts_with: The description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type description_starts_with: str
-        """
-
-        self._description_starts_with = description_starts_with
-
-    @property
-    def everoute_cluster(self):
-        """Gets the everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: EverouteClusterWhereInput
-        """
-        return self._everoute_cluster
-
-    @everoute_cluster.setter
-    def everoute_cluster(self, everoute_cluster):
-        """Sets the everoute_cluster of this SecurityGroupWhereInput.
-
-
-        :param everoute_cluster: The everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
-        :type everoute_cluster: EverouteClusterWhereInput
-        """
-
-        self._everoute_cluster = everoute_cluster
-
-    @property
-    def id(self):
-        """Gets the id of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this SecurityGroupWhereInput.
-
-
-        :param id: The id of this SecurityGroupWhereInput.  # noqa: E501
-        :type id: str
-        """
-
-        self._id = id
-
-    @property
-    def id_contains(self):
-        """Gets the id_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_contains
-
-    @id_contains.setter
-    def id_contains(self, id_contains):
-        """Sets the id_contains of this SecurityGroupWhereInput.
-
-
-        :param id_contains: The id_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_contains: str
-        """
-
-        self._id_contains = id_contains
-
-    @property
-    def id_ends_with(self):
-        """Gets the id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_ends_with
-
-    @id_ends_with.setter
-    def id_ends_with(self, id_ends_with):
-        """Sets the id_ends_with of this SecurityGroupWhereInput.
-
-
-        :param id_ends_with: The id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_ends_with: str
-        """
-
-        self._id_ends_with = id_ends_with
-
-    @property
-    def id_gt(self):
-        """Gets the id_gt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_gt
-
-    @id_gt.setter
-    def id_gt(self, id_gt):
-        """Sets the id_gt of this SecurityGroupWhereInput.
-
-
-        :param id_gt: The id_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_gt: str
-        """
-
-        self._id_gt = id_gt
-
-    @property
-    def id_gte(self):
-        """Gets the id_gte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_gte
-
-    @id_gte.setter
-    def id_gte(self, id_gte):
-        """Sets the id_gte of this SecurityGroupWhereInput.
-
-
-        :param id_gte: The id_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_gte: str
-        """
-
-        self._id_gte = id_gte
-
-    @property
-    def id_in(self):
-        """Gets the id_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._id_in
-
-    @id_in.setter
-    def id_in(self, id_in):
-        """Sets the id_in of this SecurityGroupWhereInput.
-
-
-        :param id_in: The id_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_in: list[str]
-        """
-
-        self._id_in = id_in
-
-    @property
-    def id_lt(self):
-        """Gets the id_lt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_lt
-
-    @id_lt.setter
-    def id_lt(self, id_lt):
-        """Sets the id_lt of this SecurityGroupWhereInput.
-
-
-        :param id_lt: The id_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_lt: str
-        """
-
-        self._id_lt = id_lt
-
-    @property
-    def id_lte(self):
-        """Gets the id_lte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_lte
-
-    @id_lte.setter
-    def id_lte(self, id_lte):
-        """Sets the id_lte of this SecurityGroupWhereInput.
-
-
-        :param id_lte: The id_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_lte: str
-        """
-
-        self._id_lte = id_lte
-
-    @property
-    def id_not(self):
-        """Gets the id_not of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_not of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_not
-
-    @id_not.setter
-    def id_not(self, id_not):
-        """Sets the id_not of this SecurityGroupWhereInput.
-
-
-        :param id_not: The id_not of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_not: str
-        """
-
-        self._id_not = id_not
-
-    @property
-    def id_not_contains(self):
-        """Gets the id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_not_contains
-
-    @id_not_contains.setter
-    def id_not_contains(self, id_not_contains):
-        """Sets the id_not_contains of this SecurityGroupWhereInput.
-
-
-        :param id_not_contains: The id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_not_contains: str
-        """
-
-        self._id_not_contains = id_not_contains
-
-    @property
-    def id_not_ends_with(self):
-        """Gets the id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_not_ends_with
-
-    @id_not_ends_with.setter
-    def id_not_ends_with(self, id_not_ends_with):
-        """Sets the id_not_ends_with of this SecurityGroupWhereInput.
-
-
-        :param id_not_ends_with: The id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_not_ends_with: str
-        """
-
-        self._id_not_ends_with = id_not_ends_with
-
-    @property
-    def id_not_in(self):
-        """Gets the id_not_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._id_not_in
-
-    @id_not_in.setter
-    def id_not_in(self, id_not_in):
-        """Sets the id_not_in of this SecurityGroupWhereInput.
-
-
-        :param id_not_in: The id_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_not_in: list[str]
-        """
-
-        self._id_not_in = id_not_in
-
-    @property
-    def id_not_starts_with(self):
-        """Gets the id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_not_starts_with
-
-    @id_not_starts_with.setter
-    def id_not_starts_with(self, id_not_starts_with):
-        """Sets the id_not_starts_with of this SecurityGroupWhereInput.
-
-
-        :param id_not_starts_with: The id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_not_starts_with: str
-        """
-
-        self._id_not_starts_with = id_not_starts_with
-
-    @property
-    def id_starts_with(self):
-        """Gets the id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._id_starts_with
-
-    @id_starts_with.setter
-    def id_starts_with(self, id_starts_with):
-        """Sets the id_starts_with of this SecurityGroupWhereInput.
-
-
-        :param id_starts_with: The id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type id_starts_with: str
-        """
-
-        self._id_starts_with = id_starts_with
-
-    @property
-    def isolation_policies_every(self):
-        """Gets the isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: IsolationPolicyWhereInput
-        """
-        return self._isolation_policies_every
-
-    @isolation_policies_every.setter
-    def isolation_policies_every(self, isolation_policies_every):
-        """Sets the isolation_policies_every of this SecurityGroupWhereInput.
-
-
-        :param isolation_policies_every: The isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-        :type isolation_policies_every: IsolationPolicyWhereInput
-        """
-
-        self._isolation_policies_every = isolation_policies_every
-
-    @property
-    def isolation_policies_none(self):
-        """Gets the isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: IsolationPolicyWhereInput
-        """
-        return self._isolation_policies_none
-
-    @isolation_policies_none.setter
-    def isolation_policies_none(self, isolation_policies_none):
-        """Sets the isolation_policies_none of this SecurityGroupWhereInput.
-
-
-        :param isolation_policies_none: The isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-        :type isolation_policies_none: IsolationPolicyWhereInput
-        """
-
-        self._isolation_policies_none = isolation_policies_none
-
-    @property
-    def isolation_policies_some(self):
-        """Gets the isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: IsolationPolicyWhereInput
-        """
-        return self._isolation_policies_some
-
-    @isolation_policies_some.setter
-    def isolation_policies_some(self, isolation_policies_some):
-        """Sets the isolation_policies_some of this SecurityGroupWhereInput.
-
-
-        :param isolation_policies_some: The isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-        :type isolation_policies_some: IsolationPolicyWhereInput
-        """
-
-        self._isolation_policies_some = isolation_policies_some
-
-    @property
-    def name(self):
-        """Gets the name of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this SecurityGroupWhereInput.
-
-
-        :param name: The name of this SecurityGroupWhereInput.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def name_contains(self):
-        """Gets the name_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_contains
-
-    @name_contains.setter
-    def name_contains(self, name_contains):
-        """Sets the name_contains of this SecurityGroupWhereInput.
-
-
-        :param name_contains: The name_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_contains: str
-        """
-
-        self._name_contains = name_contains
-
-    @property
-    def name_ends_with(self):
-        """Gets the name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_ends_with
-
-    @name_ends_with.setter
-    def name_ends_with(self, name_ends_with):
-        """Sets the name_ends_with of this SecurityGroupWhereInput.
-
-
-        :param name_ends_with: The name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_ends_with: str
-        """
-
-        self._name_ends_with = name_ends_with
-
-    @property
-    def name_gt(self):
-        """Gets the name_gt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_gt
-
-    @name_gt.setter
-    def name_gt(self, name_gt):
-        """Sets the name_gt of this SecurityGroupWhereInput.
-
-
-        :param name_gt: The name_gt of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_gt: str
-        """
-
-        self._name_gt = name_gt
-
-    @property
-    def name_gte(self):
-        """Gets the name_gte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_gte
-
-    @name_gte.setter
-    def name_gte(self, name_gte):
-        """Sets the name_gte of this SecurityGroupWhereInput.
-
-
-        :param name_gte: The name_gte of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_gte: str
-        """
-
-        self._name_gte = name_gte
-
-    @property
-    def name_in(self):
-        """Gets the name_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._name_in
-
-    @name_in.setter
-    def name_in(self, name_in):
-        """Sets the name_in of this SecurityGroupWhereInput.
-
-
-        :param name_in: The name_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_in: list[str]
-        """
-
-        self._name_in = name_in
-
-    @property
-    def name_lt(self):
-        """Gets the name_lt of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_lt
-
-    @name_lt.setter
-    def name_lt(self, name_lt):
-        """Sets the name_lt of this SecurityGroupWhereInput.
-
-
-        :param name_lt: The name_lt of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_lt: str
-        """
-
-        self._name_lt = name_lt
-
-    @property
-    def name_lte(self):
-        """Gets the name_lte of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_lte
-
-    @name_lte.setter
-    def name_lte(self, name_lte):
-        """Sets the name_lte of this SecurityGroupWhereInput.
-
-
-        :param name_lte: The name_lte of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_lte: str
-        """
-
-        self._name_lte = name_lte
-
-    @property
-    def name_not(self):
-        """Gets the name_not of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_not of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_not
-
-    @name_not.setter
-    def name_not(self, name_not):
-        """Sets the name_not of this SecurityGroupWhereInput.
-
-
-        :param name_not: The name_not of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_not: str
-        """
-
-        self._name_not = name_not
-
-    @property
-    def name_not_contains(self):
-        """Gets the name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_not_contains
-
-    @name_not_contains.setter
-    def name_not_contains(self, name_not_contains):
-        """Sets the name_not_contains of this SecurityGroupWhereInput.
-
-
-        :param name_not_contains: The name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_not_contains: str
-        """
-
-        self._name_not_contains = name_not_contains
-
-    @property
-    def name_not_ends_with(self):
-        """Gets the name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_not_ends_with
-
-    @name_not_ends_with.setter
-    def name_not_ends_with(self, name_not_ends_with):
-        """Sets the name_not_ends_with of this SecurityGroupWhereInput.
-
-
-        :param name_not_ends_with: The name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_not_ends_with: str
-        """
-
-        self._name_not_ends_with = name_not_ends_with
-
-    @property
-    def name_not_in(self):
-        """Gets the name_not_in of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._name_not_in
-
-    @name_not_in.setter
-    def name_not_in(self, name_not_in):
-        """Sets the name_not_in of this SecurityGroupWhereInput.
-
-
-        :param name_not_in: The name_not_in of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_not_in: list[str]
-        """
-
-        self._name_not_in = name_not_in
-
-    @property
-    def name_not_starts_with(self):
-        """Gets the name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_not_starts_with
-
-    @name_not_starts_with.setter
-    def name_not_starts_with(self, name_not_starts_with):
-        """Sets the name_not_starts_with of this SecurityGroupWhereInput.
-
-
-        :param name_not_starts_with: The name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_not_starts_with: str
-        """
-
-        self._name_not_starts_with = name_not_starts_with
-
-    @property
-    def name_starts_with(self):
-        """Gets the name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_starts_with
-
-    @name_starts_with.setter
-    def name_starts_with(self, name_starts_with):
-        """Sets the name_starts_with of this SecurityGroupWhereInput.
-
-
-        :param name_starts_with: The name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
-        :type name_starts_with: str
-        """
-
-        self._name_starts_with = name_starts_with
-
-    @property
-    def security_policies_every(self):
-        """Gets the security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: SecurityPolicyWhereInput
-        """
-        return self._security_policies_every
-
-    @security_policies_every.setter
-    def security_policies_every(self, security_policies_every):
-        """Sets the security_policies_every of this SecurityGroupWhereInput.
-
-
-        :param security_policies_every: The security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
-        :type security_policies_every: SecurityPolicyWhereInput
-        """
-
-        self._security_policies_every = security_policies_every
-
-    @property
-    def security_policies_none(self):
-        """Gets the security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: SecurityPolicyWhereInput
-        """
-        return self._security_policies_none
-
-    @security_policies_none.setter
-    def security_policies_none(self, security_policies_none):
-        """Sets the security_policies_none of this SecurityGroupWhereInput.
-
-
-        :param security_policies_none: The security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
-        :type security_policies_none: SecurityPolicyWhereInput
-        """
-
-        self._security_policies_none = security_policies_none
-
-    @property
-    def security_policies_some(self):
-        """Gets the security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-        :rtype: SecurityPolicyWhereInput
-        """
-        return self._security_policies_some
-
-    @security_policies_some.setter
-    def security_policies_some(self, security_policies_some):
-        """Sets the security_policies_some of this SecurityGroupWhereInput.
-
-
-        :param security_policies_some: The security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
-        :type security_policies_some: SecurityPolicyWhereInput
-        """
-
-        self._security_policies_some = security_policies_some
-
-    @property
-    def vms_every(self):
-        """Gets the vms_every of this SecurityGroupWhereInput.  # noqa: E501
-
-
-        :return: The vms_every of this SecurityGroupWhereInput.  # noqa: E501
+        :return: The vms_some of this SecurityGroupWhereInput.  # noqa: E501
         :rtype: VmWhereInput
         """
-        return self._vms_every
+        return self._vms_some
 
-    @vms_every.setter
-    def vms_every(self, vms_every):
-        """Sets the vms_every of this SecurityGroupWhereInput.
+    @vms_some.setter
+    def vms_some(self, vms_some):
+        """Sets the vms_some of this SecurityGroupWhereInput.
 
 
-        :param vms_every: The vms_every of this SecurityGroupWhereInput.  # noqa: E501
-        :type vms_every: VmWhereInput
+        :param vms_some: The vms_some of this SecurityGroupWhereInput.  # noqa: E501
+        :type vms_some: VmWhereInput
         """
 
-        self._vms_every = vms_every
+        self._vms_some = vms_some
 
     @property
     def vms_none(self):
@@ -1392,25 +428,1789 @@ class SecurityGroupWhereInput(object):
         self._vms_none = vms_none
 
     @property
-    def vms_some(self):
-        """Gets the vms_some of this SecurityGroupWhereInput.  # noqa: E501
+    def vms_every(self):
+        """Gets the vms_every of this SecurityGroupWhereInput.  # noqa: E501
 
 
-        :return: The vms_some of this SecurityGroupWhereInput.  # noqa: E501
+        :return: The vms_every of this SecurityGroupWhereInput.  # noqa: E501
         :rtype: VmWhereInput
         """
-        return self._vms_some
+        return self._vms_every
 
-    @vms_some.setter
-    def vms_some(self, vms_some):
-        """Sets the vms_some of this SecurityGroupWhereInput.
+    @vms_every.setter
+    def vms_every(self, vms_every):
+        """Sets the vms_every of this SecurityGroupWhereInput.
 
 
-        :param vms_some: The vms_some of this SecurityGroupWhereInput.  # noqa: E501
-        :type vms_some: VmWhereInput
+        :param vms_every: The vms_every of this SecurityGroupWhereInput.  # noqa: E501
+        :type vms_every: VmWhereInput
         """
 
-        self._vms_some = vms_some
+        self._vms_every = vms_every
+
+    @property
+    def security_policies_some(self):
+        """Gets the security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: SecurityPolicyWhereInput
+        """
+        return self._security_policies_some
+
+    @security_policies_some.setter
+    def security_policies_some(self, security_policies_some):
+        """Sets the security_policies_some of this SecurityGroupWhereInput.
+
+
+        :param security_policies_some: The security_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+        :type security_policies_some: SecurityPolicyWhereInput
+        """
+
+        self._security_policies_some = security_policies_some
+
+    @property
+    def security_policies_none(self):
+        """Gets the security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: SecurityPolicyWhereInput
+        """
+        return self._security_policies_none
+
+    @security_policies_none.setter
+    def security_policies_none(self, security_policies_none):
+        """Sets the security_policies_none of this SecurityGroupWhereInput.
+
+
+        :param security_policies_none: The security_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+        :type security_policies_none: SecurityPolicyWhereInput
+        """
+
+        self._security_policies_none = security_policies_none
+
+    @property
+    def security_policies_every(self):
+        """Gets the security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: SecurityPolicyWhereInput
+        """
+        return self._security_policies_every
+
+    @security_policies_every.setter
+    def security_policies_every(self, security_policies_every):
+        """Sets the security_policies_every of this SecurityGroupWhereInput.
+
+
+        :param security_policies_every: The security_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+        :type security_policies_every: SecurityPolicyWhereInput
+        """
+
+        self._security_policies_every = security_policies_every
+
+    @property
+    def name_starts_with(self):
+        """Gets the name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_starts_with
+
+    @name_starts_with.setter
+    def name_starts_with(self, name_starts_with):
+        """Sets the name_starts_with of this SecurityGroupWhereInput.
+
+
+        :param name_starts_with: The name_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_starts_with: str
+        """
+
+        self._name_starts_with = name_starts_with
+
+    @property
+    def name_not_starts_with(self):
+        """Gets the name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_starts_with
+
+    @name_not_starts_with.setter
+    def name_not_starts_with(self, name_not_starts_with):
+        """Sets the name_not_starts_with of this SecurityGroupWhereInput.
+
+
+        :param name_not_starts_with: The name_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_not_starts_with: str
+        """
+
+        self._name_not_starts_with = name_not_starts_with
+
+    @property
+    def name_not_in(self):
+        """Gets the name_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._name_not_in
+
+    @name_not_in.setter
+    def name_not_in(self, name_not_in):
+        """Sets the name_not_in of this SecurityGroupWhereInput.
+
+
+        :param name_not_in: The name_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_not_in: list[str]
+        """
+
+        self._name_not_in = name_not_in
+
+    @property
+    def name_not_ends_with(self):
+        """Gets the name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_ends_with
+
+    @name_not_ends_with.setter
+    def name_not_ends_with(self, name_not_ends_with):
+        """Sets the name_not_ends_with of this SecurityGroupWhereInput.
+
+
+        :param name_not_ends_with: The name_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_not_ends_with: str
+        """
+
+        self._name_not_ends_with = name_not_ends_with
+
+    @property
+    def name_not_contains(self):
+        """Gets the name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not_contains
+
+    @name_not_contains.setter
+    def name_not_contains(self, name_not_contains):
+        """Sets the name_not_contains of this SecurityGroupWhereInput.
+
+
+        :param name_not_contains: The name_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_not_contains: str
+        """
+
+        self._name_not_contains = name_not_contains
+
+    @property
+    def name_not(self):
+        """Gets the name_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_not
+
+    @name_not.setter
+    def name_not(self, name_not):
+        """Sets the name_not of this SecurityGroupWhereInput.
+
+
+        :param name_not: The name_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_not: str
+        """
+
+        self._name_not = name_not
+
+    @property
+    def name_lte(self):
+        """Gets the name_lte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_lte
+
+    @name_lte.setter
+    def name_lte(self, name_lte):
+        """Sets the name_lte of this SecurityGroupWhereInput.
+
+
+        :param name_lte: The name_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_lte: str
+        """
+
+        self._name_lte = name_lte
+
+    @property
+    def name_lt(self):
+        """Gets the name_lt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_lt
+
+    @name_lt.setter
+    def name_lt(self, name_lt):
+        """Sets the name_lt of this SecurityGroupWhereInput.
+
+
+        :param name_lt: The name_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_lt: str
+        """
+
+        self._name_lt = name_lt
+
+    @property
+    def name_in(self):
+        """Gets the name_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._name_in
+
+    @name_in.setter
+    def name_in(self, name_in):
+        """Sets the name_in of this SecurityGroupWhereInput.
+
+
+        :param name_in: The name_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_in: list[str]
+        """
+
+        self._name_in = name_in
+
+    @property
+    def name_gte(self):
+        """Gets the name_gte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_gte
+
+    @name_gte.setter
+    def name_gte(self, name_gte):
+        """Sets the name_gte of this SecurityGroupWhereInput.
+
+
+        :param name_gte: The name_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_gte: str
+        """
+
+        self._name_gte = name_gte
+
+    @property
+    def name_gt(self):
+        """Gets the name_gt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_gt
+
+    @name_gt.setter
+    def name_gt(self, name_gt):
+        """Sets the name_gt of this SecurityGroupWhereInput.
+
+
+        :param name_gt: The name_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_gt: str
+        """
+
+        self._name_gt = name_gt
+
+    @property
+    def name_ends_with(self):
+        """Gets the name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_ends_with
+
+    @name_ends_with.setter
+    def name_ends_with(self, name_ends_with):
+        """Sets the name_ends_with of this SecurityGroupWhereInput.
+
+
+        :param name_ends_with: The name_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_ends_with: str
+        """
+
+        self._name_ends_with = name_ends_with
+
+    @property
+    def name_contains(self):
+        """Gets the name_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name_contains
+
+    @name_contains.setter
+    def name_contains(self, name_contains):
+        """Sets the name_contains of this SecurityGroupWhereInput.
+
+
+        :param name_contains: The name_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type name_contains: str
+        """
+
+        self._name_contains = name_contains
+
+    @property
+    def name(self):
+        """Gets the name of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The name of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this SecurityGroupWhereInput.
+
+
+        :param name: The name of this SecurityGroupWhereInput.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def member_type_not_in(self):
+        """Gets the member_type_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The member_type_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupMemberType]
+        """
+        return self._member_type_not_in
+
+    @member_type_not_in.setter
+    def member_type_not_in(self, member_type_not_in):
+        """Sets the member_type_not_in of this SecurityGroupWhereInput.
+
+
+        :param member_type_not_in: The member_type_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type member_type_not_in: list[SecurityGroupMemberType]
+        """
+
+        self._member_type_not_in = member_type_not_in
+
+    @property
+    def member_type_not(self):
+        """Gets the member_type_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The member_type_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: SecurityGroupMemberType
+        """
+        return self._member_type_not
+
+    @member_type_not.setter
+    def member_type_not(self, member_type_not):
+        """Sets the member_type_not of this SecurityGroupWhereInput.
+
+
+        :param member_type_not: The member_type_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type member_type_not: SecurityGroupMemberType
+        """
+
+        self._member_type_not = member_type_not
+
+    @property
+    def member_type_in(self):
+        """Gets the member_type_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The member_type_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupMemberType]
+        """
+        return self._member_type_in
+
+    @member_type_in.setter
+    def member_type_in(self, member_type_in):
+        """Sets the member_type_in of this SecurityGroupWhereInput.
+
+
+        :param member_type_in: The member_type_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type member_type_in: list[SecurityGroupMemberType]
+        """
+
+        self._member_type_in = member_type_in
+
+    @property
+    def member_type(self):
+        """Gets the member_type of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The member_type of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: SecurityGroupMemberType
+        """
+        return self._member_type
+
+    @member_type.setter
+    def member_type(self, member_type):
+        """Sets the member_type of this SecurityGroupWhereInput.
+
+
+        :param member_type: The member_type of this SecurityGroupWhereInput.  # noqa: E501
+        :type member_type: SecurityGroupMemberType
+        """
+
+        self._member_type = member_type
+
+    @property
+    def isolation_policies_some(self):
+        """Gets the isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: IsolationPolicyWhereInput
+        """
+        return self._isolation_policies_some
+
+    @isolation_policies_some.setter
+    def isolation_policies_some(self, isolation_policies_some):
+        """Sets the isolation_policies_some of this SecurityGroupWhereInput.
+
+
+        :param isolation_policies_some: The isolation_policies_some of this SecurityGroupWhereInput.  # noqa: E501
+        :type isolation_policies_some: IsolationPolicyWhereInput
+        """
+
+        self._isolation_policies_some = isolation_policies_some
+
+    @property
+    def isolation_policies_none(self):
+        """Gets the isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: IsolationPolicyWhereInput
+        """
+        return self._isolation_policies_none
+
+    @isolation_policies_none.setter
+    def isolation_policies_none(self, isolation_policies_none):
+        """Sets the isolation_policies_none of this SecurityGroupWhereInput.
+
+
+        :param isolation_policies_none: The isolation_policies_none of this SecurityGroupWhereInput.  # noqa: E501
+        :type isolation_policies_none: IsolationPolicyWhereInput
+        """
+
+        self._isolation_policies_none = isolation_policies_none
+
+    @property
+    def isolation_policies_every(self):
+        """Gets the isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: IsolationPolicyWhereInput
+        """
+        return self._isolation_policies_every
+
+    @isolation_policies_every.setter
+    def isolation_policies_every(self, isolation_policies_every):
+        """Sets the isolation_policies_every of this SecurityGroupWhereInput.
+
+
+        :param isolation_policies_every: The isolation_policies_every of this SecurityGroupWhereInput.  # noqa: E501
+        :type isolation_policies_every: IsolationPolicyWhereInput
+        """
+
+        self._isolation_policies_every = isolation_policies_every
+
+    @property
+    def ips_starts_with(self):
+        """Gets the ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_starts_with
+
+    @ips_starts_with.setter
+    def ips_starts_with(self, ips_starts_with):
+        """Sets the ips_starts_with of this SecurityGroupWhereInput.
+
+
+        :param ips_starts_with: The ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_starts_with: str
+        """
+
+        self._ips_starts_with = ips_starts_with
+
+    @property
+    def ips_not_starts_with(self):
+        """Gets the ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_not_starts_with
+
+    @ips_not_starts_with.setter
+    def ips_not_starts_with(self, ips_not_starts_with):
+        """Sets the ips_not_starts_with of this SecurityGroupWhereInput.
+
+
+        :param ips_not_starts_with: The ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_not_starts_with: str
+        """
+
+        self._ips_not_starts_with = ips_not_starts_with
+
+    @property
+    def ips_not_in(self):
+        """Gets the ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ips_not_in
+
+    @ips_not_in.setter
+    def ips_not_in(self, ips_not_in):
+        """Sets the ips_not_in of this SecurityGroupWhereInput.
+
+
+        :param ips_not_in: The ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_not_in: list[str]
+        """
+
+        self._ips_not_in = ips_not_in
+
+    @property
+    def ips_not_ends_with(self):
+        """Gets the ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_not_ends_with
+
+    @ips_not_ends_with.setter
+    def ips_not_ends_with(self, ips_not_ends_with):
+        """Sets the ips_not_ends_with of this SecurityGroupWhereInput.
+
+
+        :param ips_not_ends_with: The ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_not_ends_with: str
+        """
+
+        self._ips_not_ends_with = ips_not_ends_with
+
+    @property
+    def ips_not_contains(self):
+        """Gets the ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_not_contains
+
+    @ips_not_contains.setter
+    def ips_not_contains(self, ips_not_contains):
+        """Sets the ips_not_contains of this SecurityGroupWhereInput.
+
+
+        :param ips_not_contains: The ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_not_contains: str
+        """
+
+        self._ips_not_contains = ips_not_contains
+
+    @property
+    def ips_not(self):
+        """Gets the ips_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_not
+
+    @ips_not.setter
+    def ips_not(self, ips_not):
+        """Sets the ips_not of this SecurityGroupWhereInput.
+
+
+        :param ips_not: The ips_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_not: str
+        """
+
+        self._ips_not = ips_not
+
+    @property
+    def ips_lte(self):
+        """Gets the ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_lte
+
+    @ips_lte.setter
+    def ips_lte(self, ips_lte):
+        """Sets the ips_lte of this SecurityGroupWhereInput.
+
+
+        :param ips_lte: The ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_lte: str
+        """
+
+        self._ips_lte = ips_lte
+
+    @property
+    def ips_lt(self):
+        """Gets the ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_lt
+
+    @ips_lt.setter
+    def ips_lt(self, ips_lt):
+        """Sets the ips_lt of this SecurityGroupWhereInput.
+
+
+        :param ips_lt: The ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_lt: str
+        """
+
+        self._ips_lt = ips_lt
+
+    @property
+    def ips_in(self):
+        """Gets the ips_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ips_in
+
+    @ips_in.setter
+    def ips_in(self, ips_in):
+        """Sets the ips_in of this SecurityGroupWhereInput.
+
+
+        :param ips_in: The ips_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_in: list[str]
+        """
+
+        self._ips_in = ips_in
+
+    @property
+    def ips_gte(self):
+        """Gets the ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_gte
+
+    @ips_gte.setter
+    def ips_gte(self, ips_gte):
+        """Sets the ips_gte of this SecurityGroupWhereInput.
+
+
+        :param ips_gte: The ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_gte: str
+        """
+
+        self._ips_gte = ips_gte
+
+    @property
+    def ips_gt(self):
+        """Gets the ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_gt
+
+    @ips_gt.setter
+    def ips_gt(self, ips_gt):
+        """Sets the ips_gt of this SecurityGroupWhereInput.
+
+
+        :param ips_gt: The ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_gt: str
+        """
+
+        self._ips_gt = ips_gt
+
+    @property
+    def ips_ends_with(self):
+        """Gets the ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_ends_with
+
+    @ips_ends_with.setter
+    def ips_ends_with(self, ips_ends_with):
+        """Sets the ips_ends_with of this SecurityGroupWhereInput.
+
+
+        :param ips_ends_with: The ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_ends_with: str
+        """
+
+        self._ips_ends_with = ips_ends_with
+
+    @property
+    def ips_contains(self):
+        """Gets the ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips_contains
+
+    @ips_contains.setter
+    def ips_contains(self, ips_contains):
+        """Sets the ips_contains of this SecurityGroupWhereInput.
+
+
+        :param ips_contains: The ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips_contains: str
+        """
+
+        self._ips_contains = ips_contains
+
+    @property
+    def ips(self):
+        """Gets the ips of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The ips of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._ips
+
+    @ips.setter
+    def ips(self, ips):
+        """Sets the ips of this SecurityGroupWhereInput.
+
+
+        :param ips: The ips of this SecurityGroupWhereInput.  # noqa: E501
+        :type ips: str
+        """
+
+        self._ips = ips
+
+    @property
+    def id_starts_with(self):
+        """Gets the id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_starts_with
+
+    @id_starts_with.setter
+    def id_starts_with(self, id_starts_with):
+        """Sets the id_starts_with of this SecurityGroupWhereInput.
+
+
+        :param id_starts_with: The id_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_starts_with: str
+        """
+
+        self._id_starts_with = id_starts_with
+
+    @property
+    def id_not_starts_with(self):
+        """Gets the id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_not_starts_with
+
+    @id_not_starts_with.setter
+    def id_not_starts_with(self, id_not_starts_with):
+        """Sets the id_not_starts_with of this SecurityGroupWhereInput.
+
+
+        :param id_not_starts_with: The id_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_not_starts_with: str
+        """
+
+        self._id_not_starts_with = id_not_starts_with
+
+    @property
+    def id_not_in(self):
+        """Gets the id_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._id_not_in
+
+    @id_not_in.setter
+    def id_not_in(self, id_not_in):
+        """Sets the id_not_in of this SecurityGroupWhereInput.
+
+
+        :param id_not_in: The id_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_not_in: list[str]
+        """
+
+        self._id_not_in = id_not_in
+
+    @property
+    def id_not_ends_with(self):
+        """Gets the id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_not_ends_with
+
+    @id_not_ends_with.setter
+    def id_not_ends_with(self, id_not_ends_with):
+        """Sets the id_not_ends_with of this SecurityGroupWhereInput.
+
+
+        :param id_not_ends_with: The id_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_not_ends_with: str
+        """
+
+        self._id_not_ends_with = id_not_ends_with
+
+    @property
+    def id_not_contains(self):
+        """Gets the id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_not_contains
+
+    @id_not_contains.setter
+    def id_not_contains(self, id_not_contains):
+        """Sets the id_not_contains of this SecurityGroupWhereInput.
+
+
+        :param id_not_contains: The id_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_not_contains: str
+        """
+
+        self._id_not_contains = id_not_contains
+
+    @property
+    def id_not(self):
+        """Gets the id_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_not
+
+    @id_not.setter
+    def id_not(self, id_not):
+        """Sets the id_not of this SecurityGroupWhereInput.
+
+
+        :param id_not: The id_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_not: str
+        """
+
+        self._id_not = id_not
+
+    @property
+    def id_lte(self):
+        """Gets the id_lte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_lte
+
+    @id_lte.setter
+    def id_lte(self, id_lte):
+        """Sets the id_lte of this SecurityGroupWhereInput.
+
+
+        :param id_lte: The id_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_lte: str
+        """
+
+        self._id_lte = id_lte
+
+    @property
+    def id_lt(self):
+        """Gets the id_lt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_lt
+
+    @id_lt.setter
+    def id_lt(self, id_lt):
+        """Sets the id_lt of this SecurityGroupWhereInput.
+
+
+        :param id_lt: The id_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_lt: str
+        """
+
+        self._id_lt = id_lt
+
+    @property
+    def id_in(self):
+        """Gets the id_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._id_in
+
+    @id_in.setter
+    def id_in(self, id_in):
+        """Sets the id_in of this SecurityGroupWhereInput.
+
+
+        :param id_in: The id_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_in: list[str]
+        """
+
+        self._id_in = id_in
+
+    @property
+    def id_gte(self):
+        """Gets the id_gte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_gte
+
+    @id_gte.setter
+    def id_gte(self, id_gte):
+        """Sets the id_gte of this SecurityGroupWhereInput.
+
+
+        :param id_gte: The id_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_gte: str
+        """
+
+        self._id_gte = id_gte
+
+    @property
+    def id_gt(self):
+        """Gets the id_gt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_gt
+
+    @id_gt.setter
+    def id_gt(self, id_gt):
+        """Sets the id_gt of this SecurityGroupWhereInput.
+
+
+        :param id_gt: The id_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_gt: str
+        """
+
+        self._id_gt = id_gt
+
+    @property
+    def id_ends_with(self):
+        """Gets the id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_ends_with
+
+    @id_ends_with.setter
+    def id_ends_with(self, id_ends_with):
+        """Sets the id_ends_with of this SecurityGroupWhereInput.
+
+
+        :param id_ends_with: The id_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_ends_with: str
+        """
+
+        self._id_ends_with = id_ends_with
+
+    @property
+    def id_contains(self):
+        """Gets the id_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id_contains
+
+    @id_contains.setter
+    def id_contains(self, id_contains):
+        """Sets the id_contains of this SecurityGroupWhereInput.
+
+
+        :param id_contains: The id_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type id_contains: str
+        """
+
+        self._id_contains = id_contains
+
+    @property
+    def id(self):
+        """Gets the id of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The id of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this SecurityGroupWhereInput.
+
+
+        :param id: The id of this SecurityGroupWhereInput.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
+
+    @property
+    def exclude_ips_starts_with(self):
+        """Gets the exclude_ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_starts_with
+
+    @exclude_ips_starts_with.setter
+    def exclude_ips_starts_with(self, exclude_ips_starts_with):
+        """Sets the exclude_ips_starts_with of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_starts_with: The exclude_ips_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_starts_with: str
+        """
+
+        self._exclude_ips_starts_with = exclude_ips_starts_with
+
+    @property
+    def exclude_ips_not_starts_with(self):
+        """Gets the exclude_ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_not_starts_with
+
+    @exclude_ips_not_starts_with.setter
+    def exclude_ips_not_starts_with(self, exclude_ips_not_starts_with):
+        """Sets the exclude_ips_not_starts_with of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_not_starts_with: The exclude_ips_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_not_starts_with: str
+        """
+
+        self._exclude_ips_not_starts_with = exclude_ips_not_starts_with
+
+    @property
+    def exclude_ips_not_in(self):
+        """Gets the exclude_ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._exclude_ips_not_in
+
+    @exclude_ips_not_in.setter
+    def exclude_ips_not_in(self, exclude_ips_not_in):
+        """Sets the exclude_ips_not_in of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_not_in: The exclude_ips_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_not_in: list[str]
+        """
+
+        self._exclude_ips_not_in = exclude_ips_not_in
+
+    @property
+    def exclude_ips_not_ends_with(self):
+        """Gets the exclude_ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_not_ends_with
+
+    @exclude_ips_not_ends_with.setter
+    def exclude_ips_not_ends_with(self, exclude_ips_not_ends_with):
+        """Sets the exclude_ips_not_ends_with of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_not_ends_with: The exclude_ips_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_not_ends_with: str
+        """
+
+        self._exclude_ips_not_ends_with = exclude_ips_not_ends_with
+
+    @property
+    def exclude_ips_not_contains(self):
+        """Gets the exclude_ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_not_contains
+
+    @exclude_ips_not_contains.setter
+    def exclude_ips_not_contains(self, exclude_ips_not_contains):
+        """Sets the exclude_ips_not_contains of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_not_contains: The exclude_ips_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_not_contains: str
+        """
+
+        self._exclude_ips_not_contains = exclude_ips_not_contains
+
+    @property
+    def exclude_ips_not(self):
+        """Gets the exclude_ips_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_not
+
+    @exclude_ips_not.setter
+    def exclude_ips_not(self, exclude_ips_not):
+        """Sets the exclude_ips_not of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_not: The exclude_ips_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_not: str
+        """
+
+        self._exclude_ips_not = exclude_ips_not
+
+    @property
+    def exclude_ips_lte(self):
+        """Gets the exclude_ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_lte
+
+    @exclude_ips_lte.setter
+    def exclude_ips_lte(self, exclude_ips_lte):
+        """Sets the exclude_ips_lte of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_lte: The exclude_ips_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_lte: str
+        """
+
+        self._exclude_ips_lte = exclude_ips_lte
+
+    @property
+    def exclude_ips_lt(self):
+        """Gets the exclude_ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_lt
+
+    @exclude_ips_lt.setter
+    def exclude_ips_lt(self, exclude_ips_lt):
+        """Sets the exclude_ips_lt of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_lt: The exclude_ips_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_lt: str
+        """
+
+        self._exclude_ips_lt = exclude_ips_lt
+
+    @property
+    def exclude_ips_in(self):
+        """Gets the exclude_ips_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._exclude_ips_in
+
+    @exclude_ips_in.setter
+    def exclude_ips_in(self, exclude_ips_in):
+        """Sets the exclude_ips_in of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_in: The exclude_ips_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_in: list[str]
+        """
+
+        self._exclude_ips_in = exclude_ips_in
+
+    @property
+    def exclude_ips_gte(self):
+        """Gets the exclude_ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_gte
+
+    @exclude_ips_gte.setter
+    def exclude_ips_gte(self, exclude_ips_gte):
+        """Sets the exclude_ips_gte of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_gte: The exclude_ips_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_gte: str
+        """
+
+        self._exclude_ips_gte = exclude_ips_gte
+
+    @property
+    def exclude_ips_gt(self):
+        """Gets the exclude_ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_gt
+
+    @exclude_ips_gt.setter
+    def exclude_ips_gt(self, exclude_ips_gt):
+        """Sets the exclude_ips_gt of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_gt: The exclude_ips_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_gt: str
+        """
+
+        self._exclude_ips_gt = exclude_ips_gt
+
+    @property
+    def exclude_ips_ends_with(self):
+        """Gets the exclude_ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_ends_with
+
+    @exclude_ips_ends_with.setter
+    def exclude_ips_ends_with(self, exclude_ips_ends_with):
+        """Sets the exclude_ips_ends_with of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_ends_with: The exclude_ips_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_ends_with: str
+        """
+
+        self._exclude_ips_ends_with = exclude_ips_ends_with
+
+    @property
+    def exclude_ips_contains(self):
+        """Gets the exclude_ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips_contains
+
+    @exclude_ips_contains.setter
+    def exclude_ips_contains(self, exclude_ips_contains):
+        """Sets the exclude_ips_contains of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips_contains: The exclude_ips_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips_contains: str
+        """
+
+        self._exclude_ips_contains = exclude_ips_contains
+
+    @property
+    def exclude_ips(self):
+        """Gets the exclude_ips of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The exclude_ips of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._exclude_ips
+
+    @exclude_ips.setter
+    def exclude_ips(self, exclude_ips):
+        """Sets the exclude_ips of this SecurityGroupWhereInput.
+
+
+        :param exclude_ips: The exclude_ips of this SecurityGroupWhereInput.  # noqa: E501
+        :type exclude_ips: str
+        """
+
+        self._exclude_ips = exclude_ips
+
+    @property
+    def everoute_cluster(self):
+        """Gets the everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: EverouteClusterWhereInput
+        """
+        return self._everoute_cluster
+
+    @everoute_cluster.setter
+    def everoute_cluster(self, everoute_cluster):
+        """Sets the everoute_cluster of this SecurityGroupWhereInput.
+
+
+        :param everoute_cluster: The everoute_cluster of this SecurityGroupWhereInput.  # noqa: E501
+        :type everoute_cluster: EverouteClusterWhereInput
+        """
+
+        self._everoute_cluster = everoute_cluster
+
+    @property
+    def description_starts_with(self):
+        """Gets the description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_starts_with
+
+    @description_starts_with.setter
+    def description_starts_with(self, description_starts_with):
+        """Sets the description_starts_with of this SecurityGroupWhereInput.
+
+
+        :param description_starts_with: The description_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_starts_with: str
+        """
+
+        self._description_starts_with = description_starts_with
+
+    @property
+    def description_not_starts_with(self):
+        """Gets the description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_not_starts_with
+
+    @description_not_starts_with.setter
+    def description_not_starts_with(self, description_not_starts_with):
+        """Sets the description_not_starts_with of this SecurityGroupWhereInput.
+
+
+        :param description_not_starts_with: The description_not_starts_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_not_starts_with: str
+        """
+
+        self._description_not_starts_with = description_not_starts_with
+
+    @property
+    def description_not_in(self):
+        """Gets the description_not_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description_not_in
+
+    @description_not_in.setter
+    def description_not_in(self, description_not_in):
+        """Sets the description_not_in of this SecurityGroupWhereInput.
+
+
+        :param description_not_in: The description_not_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_not_in: list[str]
+        """
+
+        self._description_not_in = description_not_in
+
+    @property
+    def description_not_ends_with(self):
+        """Gets the description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_not_ends_with
+
+    @description_not_ends_with.setter
+    def description_not_ends_with(self, description_not_ends_with):
+        """Sets the description_not_ends_with of this SecurityGroupWhereInput.
+
+
+        :param description_not_ends_with: The description_not_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_not_ends_with: str
+        """
+
+        self._description_not_ends_with = description_not_ends_with
+
+    @property
+    def description_not_contains(self):
+        """Gets the description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_not_contains
+
+    @description_not_contains.setter
+    def description_not_contains(self, description_not_contains):
+        """Sets the description_not_contains of this SecurityGroupWhereInput.
+
+
+        :param description_not_contains: The description_not_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_not_contains: str
+        """
+
+        self._description_not_contains = description_not_contains
+
+    @property
+    def description_not(self):
+        """Gets the description_not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_not
+
+    @description_not.setter
+    def description_not(self, description_not):
+        """Sets the description_not of this SecurityGroupWhereInput.
+
+
+        :param description_not: The description_not of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_not: str
+        """
+
+        self._description_not = description_not
+
+    @property
+    def description_lte(self):
+        """Gets the description_lte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_lte
+
+    @description_lte.setter
+    def description_lte(self, description_lte):
+        """Sets the description_lte of this SecurityGroupWhereInput.
+
+
+        :param description_lte: The description_lte of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_lte: str
+        """
+
+        self._description_lte = description_lte
+
+    @property
+    def description_lt(self):
+        """Gets the description_lt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_lt
+
+    @description_lt.setter
+    def description_lt(self, description_lt):
+        """Sets the description_lt of this SecurityGroupWhereInput.
+
+
+        :param description_lt: The description_lt of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_lt: str
+        """
+
+        self._description_lt = description_lt
+
+    @property
+    def description_in(self):
+        """Gets the description_in of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_in of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description_in
+
+    @description_in.setter
+    def description_in(self, description_in):
+        """Sets the description_in of this SecurityGroupWhereInput.
+
+
+        :param description_in: The description_in of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_in: list[str]
+        """
+
+        self._description_in = description_in
+
+    @property
+    def description_gte(self):
+        """Gets the description_gte of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_gte
+
+    @description_gte.setter
+    def description_gte(self, description_gte):
+        """Sets the description_gte of this SecurityGroupWhereInput.
+
+
+        :param description_gte: The description_gte of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_gte: str
+        """
+
+        self._description_gte = description_gte
+
+    @property
+    def description_gt(self):
+        """Gets the description_gt of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_gt
+
+    @description_gt.setter
+    def description_gt(self, description_gt):
+        """Sets the description_gt of this SecurityGroupWhereInput.
+
+
+        :param description_gt: The description_gt of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_gt: str
+        """
+
+        self._description_gt = description_gt
+
+    @property
+    def description_ends_with(self):
+        """Gets the description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_ends_with
+
+    @description_ends_with.setter
+    def description_ends_with(self, description_ends_with):
+        """Sets the description_ends_with of this SecurityGroupWhereInput.
+
+
+        :param description_ends_with: The description_ends_with of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_ends_with: str
+        """
+
+        self._description_ends_with = description_ends_with
+
+    @property
+    def description_contains(self):
+        """Gets the description_contains of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description_contains
+
+    @description_contains.setter
+    def description_contains(self, description_contains):
+        """Sets the description_contains of this SecurityGroupWhereInput.
+
+
+        :param description_contains: The description_contains of this SecurityGroupWhereInput.  # noqa: E501
+        :type description_contains: str
+        """
+
+        self._description_contains = description_contains
+
+    @property
+    def description(self):
+        """Gets the description of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The description of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this SecurityGroupWhereInput.
+
+
+        :param description: The description of this SecurityGroupWhereInput.  # noqa: E501
+        :type description: str
+        """
+
+        self._description = description
+
+    @property
+    def _or(self):
+        """Gets the _or of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The _or of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupWhereInput]
+        """
+        return self.__or
+
+    @_or.setter
+    def _or(self, _or):
+        """Sets the _or of this SecurityGroupWhereInput.
+
+
+        :param _or: The _or of this SecurityGroupWhereInput.  # noqa: E501
+        :type _or: list[SecurityGroupWhereInput]
+        """
+
+        self.__or = _or
+
+    @property
+    def _not(self):
+        """Gets the _not of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The _not of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupWhereInput]
+        """
+        return self.__not
+
+    @_not.setter
+    def _not(self, _not):
+        """Sets the _not of this SecurityGroupWhereInput.
+
+
+        :param _not: The _not of this SecurityGroupWhereInput.  # noqa: E501
+        :type _not: list[SecurityGroupWhereInput]
+        """
+
+        self.__not = _not
+
+    @property
+    def _and(self):
+        """Gets the _and of this SecurityGroupWhereInput.  # noqa: E501
+
+
+        :return: The _and of this SecurityGroupWhereInput.  # noqa: E501
+        :rtype: list[SecurityGroupWhereInput]
+        """
+        return self.__and
+
+    @_and.setter
+    def _and(self, _and):
+        """Sets the _and of this SecurityGroupWhereInput.
+
+
+        :param _and: The _and of this SecurityGroupWhereInput.  # noqa: E501
+        :type _and: list[SecurityGroupWhereInput]
+        """
+
+        self.__and = _and
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -91,6 +91,7 @@ from cloudtower.api.snapshot_plan_task_api import SnapshotPlanTaskApi
 from cloudtower.api.snmp_transport_api import SnmpTransportApi
 from cloudtower.api.snmp_trap_receiver_api import SnmpTrapReceiverApi
 from cloudtower.api.svt_image_api import SvtImageApi
+from cloudtower.api.sync_replication_plan_api import SyncReplicationPlanApi
 from cloudtower.api.system_audit_log_api import SystemAuditLogApi
 from cloudtower.api.table_reporter_api import TableReporterApi
 from cloudtower.api.task_api import TaskApi

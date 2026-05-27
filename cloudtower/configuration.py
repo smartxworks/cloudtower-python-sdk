@@ -9,8 +9,12 @@ import urllib3
 
 import six
 from six.moves import http_client as httplib
+from six.moves.urllib.parse import urlparse, urlunparse
 from cloudtower.exceptions import ApiValueError
 
+
+DEFAULT_API_PATH = "/v2/api"
+DEFAULT_PROBE_PATH = "/api/healthz"
 
 JSON_SCHEMA_VALIDATION_KEYWORDS = {
     'multipleOf', 'maximum', 'exclusiveMaximum',
@@ -58,15 +62,6 @@ class Configuration(object):
       disabled. This can be useful to troubleshoot data validation problem, such as
       when the OpenAPI document validation rules do not match the actual API data
       received by the server.
-    :param server_index: Index to servers configuration.
-    :param server_variables: Mapping with string values to replace variables in
-      templated server configuration. The validation of enums is performed for
-      variables with defined enum values before.
-    :param server_operation_index: Mapping from operation ID to an index to server
-      configuration.
-    :param server_operation_variables: Mapping from operation ID to a mapping with
-      string values to replace variables in templated server configuration.
-      The validation of enums is performed for variables with defined enum values before.
     :param ssl_ca_cert: str - the path to a file of concatenated CA certificates
       in PEM format
 
@@ -115,22 +110,167 @@ conf = cloudtower.Configuration(
                  username=None, password=None,
                  discard_unknown_keys=False,
                  disabled_client_side_validations="",
-                 server_index=None, server_variables=None,
-                 server_operation_index=None, server_operation_variables=None,
                  ssl_ca_cert=None,
+                 base_url=None,
+                 root_url=None,
+                 api_path=None,
+                 probe_path=None,
+                 scheme=None,
                  ):
         """Constructor
         """
-        self._base_path = "http://localhost" if host is None else host
+        self._scheme = None
+        self._base_url = None
+        self._root_url = None
+        self._api_path = ""
+        self._probe_path = DEFAULT_PROBE_PATH
+        self._probe_url = None
+        self._base_path = None
+        has_endpoint_config = any(
+            v is not None for v in (
+                base_url, root_url, api_path, probe_path, scheme
+            )
+        )
+        self.scheme = scheme
+        if host is None and not has_endpoint_config:
+            host = "http://localhost"
+
+        probe_path = probe_path or DEFAULT_PROBE_PATH
+        probe_path = probe_path.strip()
+        if not probe_path or probe_path == "/":
+            probe_path = ""
+        elif not probe_path.startswith("/"):
+            probe_path = "/" + probe_path
+        probe_path = probe_path.rstrip("/")
+
+        if root_url is not None or base_url is not None:
+            if root_url is not None and base_url is not None:
+                parsed_root_url = urlparse(root_url)
+                if not parsed_root_url.scheme and not parsed_root_url.netloc:
+                    endpoint_root_url = base_url.strip()
+                    parsed_base_url = urlparse(endpoint_root_url)
+                    if not parsed_base_url.scheme and scheme:
+                        endpoint_root_url = "{}://{}".format(
+                            scheme, endpoint_root_url.lstrip("/")
+                        )
+                        parsed_base_url = urlparse(endpoint_root_url)
+                    if parsed_base_url.scheme and parsed_base_url.netloc:
+                        base_path = parsed_base_url.path.strip("/")
+                        endpoint_root_path = root_url.strip("/")
+                        if base_path and endpoint_root_path:
+                            path = "/" + base_path + "/" + endpoint_root_path
+                        elif base_path:
+                            path = "/" + base_path
+                        elif endpoint_root_path:
+                            path = "/" + endpoint_root_path
+                        else:
+                            path = ""
+                        endpoint_root_url = urlunparse(
+                            (
+                                parsed_base_url.scheme,
+                                parsed_base_url.netloc,
+                                path,
+                                "",
+                                "",
+                                "",
+                            )
+                        )
+                    elif root_url.strip():
+                        endpoint_root_url = (
+                            endpoint_root_url.rstrip("/") + "/" +
+                            root_url.strip("/")
+                        )
+                else:
+                    endpoint_root_url = root_url.strip()
+            else:
+                endpoint_root_url = (
+                    root_url if root_url is not None else base_url
+                ).strip()
+
+            parsed = urlparse(endpoint_root_url)
+            if not parsed.scheme and scheme:
+                endpoint_root_url = "{}://{}".format(
+                    scheme, endpoint_root_url.lstrip("/")
+                )
+                parsed = urlparse(endpoint_root_url)
+            if parsed.scheme and parsed.netloc:
+                root_path = parsed.path.strip("/")
+                endpoint_root_url = urlunparse(
+                    (
+                        parsed.scheme,
+                        parsed.netloc,
+                        "/" + root_path if root_path else "",
+                        "",
+                        "",
+                        "",
+                    )
+                ).rstrip("/")
+            api_path = api_path or DEFAULT_API_PATH
+            api_path = api_path.strip()
+            if not api_path or api_path == "/":
+                api_path = ""
+            elif not api_path.startswith("/"):
+                api_path = "/" + api_path
+            api_path = api_path.rstrip("/")
+            parsed = urlparse(endpoint_root_url)
+            self.scheme = parsed.scheme or scheme
+            self.base_url = endpoint_root_url
+            self.root_url = endpoint_root_url
+            self.api_path = api_path
+            self.probe_path = probe_path
+            self._base_path = self.root_url.rstrip("/") + self.api_path
+            self.probe_url = self.root_url.rstrip("/") + self.probe_path
+        else:
+            if host is None:
+                host = getattr(self, "_base_path", None) or "http://localhost"
+            host = host.strip()
+            parsed = urlparse(host)
+            if not parsed.scheme and scheme:
+                host = "{}://{}".format(scheme, host.lstrip("/"))
+                parsed = urlparse(host)
+            if parsed.scheme and parsed.netloc:
+                host_path = parsed.path.strip("/")
+                host = urlunparse(
+                    (
+                        parsed.scheme,
+                        parsed.netloc,
+                        "/" + host_path if host_path else "",
+                        "",
+                        "",
+                        "",
+                    )
+                ).rstrip("/")
+            parsed = urlparse(host)
+            if not parsed.scheme or not parsed.netloc:
+                self.scheme = scheme
+                self.base_url = host
+                self.root_url = host
+                self.api_path = api_path or ""
+                self.probe_path = probe_path
+                self._base_path = host
+                self.probe_url = host
+            else:
+                origin = urlunparse(
+                    (parsed.scheme, parsed.netloc, "", "", "", "")
+                )
+                self.scheme = parsed.scheme
+                self.base_url = origin
+                self.root_url = origin
+                self.api_path = (
+                    api_path if api_path is not None else parsed.path
+                )
+                self.api_path = self.api_path.strip()
+                if self.api_path and self.api_path != "/":
+                    if not self.api_path.startswith("/"):
+                        self.api_path = "/" + self.api_path
+                    self.api_path = self.api_path.rstrip("/")
+                else:
+                    self.api_path = ""
+                self.probe_path = probe_path
+                self._base_path = self.root_url.rstrip("/") + self.api_path
+                self.probe_url = self.root_url.rstrip("/") + self.probe_path
+
         """Default Base url
-        """
-        self.server_index = 0 if server_index is None and host is None else server_index
-        self.server_operation_index = server_operation_index or {}
-        """Default server index
-        """
-        self.server_variables = server_variables or {}
-        self.server_operation_variables = server_operation_variables or {}
-        """Default server variables
         """
         self.temp_folder_path = None
         """Temp file folder for downloading files
@@ -421,68 +561,194 @@ conf = cloudtower.Configuration(
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 2.22.1\n"\
-               "SDK Package Version: 2.22.1".\
+               "Version of the API: 2.23.0\n"\
+               "SDK Package Version: 2.23.0".\
                format(env=sys.platform, pyversion=sys.version)
 
-    def get_host_settings(self):
-        """Gets an array of host settings
+    @property
+    def scheme(self):
+        return self._scheme
 
-        :return: An array of host settings
-        """
-        return [
-            {
-                'url': "",
-                'description': "No description provided",
-            }
-        ]
+    @scheme.setter
+    def scheme(self, value):
+        self._scheme = value
+        if not value:
+            return
+        for attr in ("_base_url", "_root_url"):
+            url = getattr(self, attr, None)
+            if not url:
+                continue
+            parsed = urlparse(url)
+            if parsed.scheme and parsed.netloc:
+                path = parsed.path.strip("/")
+                object.__setattr__(
+                    self,
+                    attr,
+                    urlunparse(
+                        (
+                            value,
+                            parsed.netloc,
+                            "/" + path if path else "",
+                            "",
+                            "",
+                            "",
+                        )
+                    ).rstrip("/")
+                )
+            elif not parsed.scheme and not parsed.netloc:
+                object.__setattr__(
+                    self, attr, "{}://{}".format(value, url.lstrip("/"))
+                )
+        if self._root_url is not None:
+            self._base_path = (
+                self._root_url.rstrip("/") + (self._api_path or "")
+            )
+            self._probe_url = (
+                self._root_url.rstrip("/") + (self._probe_path or "")
+            )
 
-    def get_host_from_settings(self, index, variables=None, servers=None):
-        """Gets host URL based on the index and variables
-        :param index: array index of the host settings
-        :param variables: hash of variable and the corresponding value
-        :param servers: an array of host settings or None
-        :return: URL based on host settings
-        """
-        if index is None:
-            return self._base_path
+    @property
+    def base_url(self):
+        return self._base_url
 
-        variables = {} if variables is None else variables
-        servers = self.get_host_settings() if servers is None else servers
+    @base_url.setter
+    def base_url(self, value):
+        if value is None:
+            self._base_url = None
+            return
+        value = value.strip()
+        parsed = urlparse(value)
+        if not parsed.scheme and self._scheme:
+            value = "{}://{}".format(self._scheme, value.lstrip("/"))
+            parsed = urlparse(value)
+        if parsed.scheme and parsed.netloc:
+            path = parsed.path.strip("/")
+            value = urlunparse(
+                (
+                    parsed.scheme,
+                    parsed.netloc,
+                    "/" + path if path else "",
+                    "",
+                    "",
+                    "",
+                )
+            ).rstrip("/")
+            self._scheme = parsed.scheme
+        self._base_url = value
+        self._root_url = value
+        self._base_path = self._root_url.rstrip("/") + (self._api_path or "")
+        self._probe_url = (
+            self._root_url.rstrip("/") + (self._probe_path or "")
+        )
 
-        try:
-            server = servers[index]
-        except IndexError:
-            raise ValueError(
-                "Invalid index {0} when selecting the host settings. "
-                "Must be less than {1}".format(index, len(servers)))
+    @property
+    def root_url(self):
+        return self._root_url
 
-        url = server['url']
+    @root_url.setter
+    def root_url(self, value):
+        if value is None:
+            self._root_url = None
+            return
+        value = value.strip()
+        parsed = urlparse(value)
+        if not parsed.scheme and self._scheme:
+            value = "{}://{}".format(self._scheme, value.lstrip("/"))
+            parsed = urlparse(value)
+        if parsed.scheme and parsed.netloc:
+            path = parsed.path.strip("/")
+            value = urlunparse(
+                (
+                    parsed.scheme,
+                    parsed.netloc,
+                    "/" + path if path else "",
+                    "",
+                    "",
+                    "",
+                )
+            ).rstrip("/")
+            self._scheme = parsed.scheme
+        self._root_url = value
+        self._base_url = value
+        self._base_path = self._root_url.rstrip("/") + (self._api_path or "")
+        self._probe_url = (
+            self._root_url.rstrip("/") + (self._probe_path or "")
+        )
 
-        # go through variables and replace placeholders
-        for variable_name, variable in server.get('variables', {}).items():
-            used_value = variables.get(
-                variable_name, variable['default_value'])
+    @property
+    def api_path(self):
+        return self._api_path
 
-            if 'enum_values' in variable \
-                    and used_value not in variable['enum_values']:
-                raise ValueError(
-                    "The variable `{0}` in the host URL has invalid value "
-                    "{1}. Must be {2}.".format(
-                        variable_name, variables[variable_name],
-                        variable['enum_values']))
+    @api_path.setter
+    def api_path(self, value):
+        if value is None:
+            value = DEFAULT_API_PATH
+        value = value.strip()
+        if not value or value == "/":
+            value = ""
+        elif not value.startswith("/"):
+            value = "/" + value
+        self._api_path = value.rstrip("/")
+        if self._root_url is not None:
+            self._base_path = (
+                self._root_url.rstrip("/") + (self._api_path or "")
+            )
 
-            url = url.replace("{" + variable_name + "}", used_value)
+    @property
+    def probe_path(self):
+        return self._probe_path
 
-        return url
+    @probe_path.setter
+    def probe_path(self, value):
+        if value is None:
+            value = DEFAULT_PROBE_PATH
+        value = value.strip()
+        if not value or value == "/":
+            value = ""
+        elif not value.startswith("/"):
+            value = "/" + value
+        self._probe_path = value.rstrip("/")
+        if self._root_url is not None:
+            self._probe_url = (
+                self._root_url.rstrip("/") + (self._probe_path or "")
+            )
+
+    @property
+    def probe_url(self):
+        return self._probe_url
+
+    @probe_url.setter
+    def probe_url(self, value):
+        self._probe_url = value.strip() if value is not None else None
 
     @property
     def host(self):
-        """Return generated host."""
-        return self.get_host_from_settings(self.server_index, variables=self.server_variables)
+        """Deprecated: use root_url and api_path for new code."""
+        return self._base_path
 
     @host.setter
     def host(self, value):
-        """Fix base path."""
+        """Deprecated: set root_url and api_path for new code."""
+        value = value.strip()
+        parsed = urlparse(value)
+        if parsed.scheme and parsed.netloc:
+            path = parsed.path.strip("/")
+            value = urlunparse(
+                (
+                    parsed.scheme,
+                    parsed.netloc,
+                    "/" + path if path else "",
+                    "",
+                    "",
+                    "",
+                )
+            ).rstrip("/")
+            self.scheme = parsed.scheme
+            self.base_url = urlunparse(
+                (parsed.scheme, parsed.netloc, "", "", "", "")
+            )
+            self.root_url = self.base_url
+            self.api_path = "/" + path if path else ""
+            self.probe_path = DEFAULT_PROBE_PATH
+            self.probe_url = self.root_url.rstrip("/") + self.probe_path
         self._base_path = value
-        self.server_index = None

@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.22.1"
+__version__ = "2.23.0"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -94,6 +94,7 @@ from cloudtower.api.snapshot_plan_task_api import SnapshotPlanTaskApi
 from cloudtower.api.snmp_transport_api import SnmpTransportApi
 from cloudtower.api.snmp_trap_receiver_api import SnmpTrapReceiverApi
 from cloudtower.api.svt_image_api import SvtImageApi
+from cloudtower.api.sync_replication_plan_api import SyncReplicationPlanApi
 from cloudtower.api.system_audit_log_api import SystemAuditLogApi
 from cloudtower.api.table_reporter_api import TableReporterApi
 from cloudtower.api.task_api import TaskApi
@@ -139,6 +140,8 @@ from cloudtower.api.zone_topo_api import ZoneTopoApi
 
 # import ApiClient
 from cloudtower.api_client import ApiClient
+from cloudtower.active_passive_client import ActivePassiveApiClient
+from cloudtower.active_passive_client import FailoverStrategy
 from cloudtower.configuration import Configuration
 from cloudtower.exceptions import OpenApiException
 from cloudtower.exceptions import ApiTypeError
@@ -759,6 +762,8 @@ from cloudtower.models.get_snmp_trap_receivers_connection_request_body import Ge
 from cloudtower.models.get_snmp_trap_receivers_request_body import GetSnmpTrapReceiversRequestBody
 from cloudtower.models.get_svt_images_connection_request_body import GetSvtImagesConnectionRequestBody
 from cloudtower.models.get_svt_images_request_body import GetSvtImagesRequestBody
+from cloudtower.models.get_sync_replication_plans_connection_request_body import GetSyncReplicationPlansConnectionRequestBody
+from cloudtower.models.get_sync_replication_plans_request_body import GetSyncReplicationPlansRequestBody
 from cloudtower.models.get_system_audit_logs_connection_request_body import GetSystemAuditLogsConnectionRequestBody
 from cloudtower.models.get_system_audit_logs_request_body import GetSystemAuditLogsRequestBody
 from cloudtower.models.get_tasks_connection_request_body import GetTasksConnectionRequestBody
@@ -1094,6 +1099,7 @@ from cloudtower.models.nested_aggregate_snapshot_plan_task import NestedAggregat
 from cloudtower.models.nested_aggregate_snmp_transport import NestedAggregateSnmpTransport
 from cloudtower.models.nested_aggregate_snmp_trap_receiver import NestedAggregateSnmpTrapReceiver
 from cloudtower.models.nested_aggregate_svt_image import NestedAggregateSvtImage
+from cloudtower.models.nested_aggregate_sync_replication_plan import NestedAggregateSyncReplicationPlan
 from cloudtower.models.nested_aggregate_system_audit_log import NestedAggregateSystemAuditLog
 from cloudtower.models.nested_aggregate_task import NestedAggregateTask
 from cloudtower.models.nested_aggregate_upload_task import NestedAggregateUploadTask
@@ -1264,6 +1270,7 @@ from cloudtower.models.nested_snapshot_plan_task import NestedSnapshotPlanTask
 from cloudtower.models.nested_step import NestedStep
 from cloudtower.models.nested_storage_policy_config import NestedStoragePolicyConfig
 from cloudtower.models.nested_svt_image import NestedSvtImage
+from cloudtower.models.nested_sync_replication_plan import NestedSyncReplicationPlan
 from cloudtower.models.nested_tag_position import NestedTagPosition
 from cloudtower.models.nested_task import NestedTask
 from cloudtower.models.nested_template_config import NestedTemplateConfig
@@ -1399,6 +1406,9 @@ from cloudtower.models.nvmf_subsystem_policy_type import NvmfSubsystemPolicyType
 from cloudtower.models.nvmf_subsystem_updation_params import NvmfSubsystemUpdationParams
 from cloudtower.models.nvmf_subsystem_updation_params_data import NvmfSubsystemUpdationParamsData
 from cloudtower.models.nvmf_subsystem_where_input import NvmfSubsystemWhereInput
+from cloudtower.models.nvram_download_response import NvramDownloadResponse
+from cloudtower.models.nvram_download_response_data import NvramDownloadResponseData
+from cloudtower.models.nvram_params import NvramParams
 from cloudtower.models.observability_connected_system_service_type import ObservabilityConnectedSystemServiceType
 from cloudtower.models.operate_action_enum import OperateActionEnum
 from cloudtower.models.operate_host_power_data import OperateHostPowerData
@@ -1458,6 +1468,7 @@ from cloudtower.models.replica_vm_state import ReplicaVmState
 from cloudtower.models.replica_vm_where_input import ReplicaVmWhereInput
 from cloudtower.models.replication_failback_target_execution_where_input import ReplicationFailbackTargetExecutionWhereInput
 from cloudtower.models.replication_failover_target_execution_where_input import ReplicationFailoverTargetExecutionWhereInput
+from cloudtower.models.replication_method import ReplicationMethod
 from cloudtower.models.replication_object_type import ReplicationObjectType
 from cloudtower.models.replication_plan import ReplicationPlan
 from cloudtower.models.replication_plan_connection import ReplicationPlanConnection
@@ -1501,6 +1512,7 @@ from cloudtower.models.security_group import SecurityGroup
 from cloudtower.models.security_group_connection import SecurityGroupConnection
 from cloudtower.models.security_group_create_params import SecurityGroupCreateParams
 from cloudtower.models.security_group_delete_params import SecurityGroupDeleteParams
+from cloudtower.models.security_group_member_type import SecurityGroupMemberType
 from cloudtower.models.security_group_order_by_input import SecurityGroupOrderByInput
 from cloudtower.models.security_group_update_body import SecurityGroupUpdateBody
 from cloudtower.models.security_group_update_params import SecurityGroupUpdateParams
@@ -1585,7 +1597,12 @@ from cloudtower.models.svt_image import SvtImage
 from cloudtower.models.svt_image_connection import SvtImageConnection
 from cloudtower.models.svt_image_order_by_input import SvtImageOrderByInput
 from cloudtower.models.svt_image_where_input import SvtImageWhereInput
+from cloudtower.models.sync_replication_object_status import SyncReplicationObjectStatus
+from cloudtower.models.sync_replication_plan import SyncReplicationPlan
+from cloudtower.models.sync_replication_plan_connection import SyncReplicationPlanConnection
+from cloudtower.models.sync_replication_plan_order_by_input import SyncReplicationPlanOrderByInput
 from cloudtower.models.sync_replication_plan_where_input import SyncReplicationPlanWhereInput
+from cloudtower.models.sync_replication_status import SyncReplicationStatus
 from cloudtower.models.system_audit_log import SystemAuditLog
 from cloudtower.models.system_audit_log_connection import SystemAuditLogConnection
 from cloudtower.models.system_audit_log_order_by_input import SystemAuditLogOrderByInput

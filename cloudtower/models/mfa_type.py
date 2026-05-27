@@ -22,8 +22,10 @@ class MfaType(object):
     """
     MAIL = "Mail"
     SMS = "Sms"
+    TOTP = "Totp"
+    TOTPRECOVERYCODE = "TotpRecoveryCode"
 
-    allowable_values = [MAIL, SMS]  # noqa: E501
+    allowable_values = [MAIL, SMS, TOTP, TOTPRECOVERYCODE]  # noqa: E501
 
     """
     Attributes:

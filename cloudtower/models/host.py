@@ -103,6 +103,7 @@ class Host(object):
         'total_cpu_hz': 'int',
         'total_cpu_sockets': 'int',
         'total_data_capacity': 'int',
+        'total_logical_cpu_cores': 'int',
         'total_memory_bytes': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
         'used_cache_space': 'int',
@@ -198,6 +199,7 @@ class Host(object):
         'total_cpu_hz': 'total_cpu_hz',
         'total_cpu_sockets': 'total_cpu_sockets',
         'total_data_capacity': 'total_data_capacity',
+        'total_logical_cpu_cores': 'total_logical_cpu_cores',
         'total_memory_bytes': 'total_memory_bytes',
         'usb_devices': 'usb_devices',
         'used_cache_space': 'used_cache_space',
@@ -296,6 +298,7 @@ class Host(object):
         self._total_cpu_hz = None
         self._total_cpu_sockets = None
         self._total_data_capacity = None
+        self._total_logical_cpu_cores = None
         self._total_memory_bytes = None
         self._usb_devices = None
         self._used_cache_space = None
@@ -424,6 +427,7 @@ class Host(object):
         self.total_cpu_sockets = kwargs.get("total_cpu_sockets", None)
         if "total_data_capacity" in kwargs:
             self.total_data_capacity = kwargs["total_data_capacity"]
+        self.total_logical_cpu_cores = kwargs.get("total_logical_cpu_cores", None)
         if "total_memory_bytes" in kwargs:
             self.total_memory_bytes = kwargs["total_memory_bytes"]
         self.usb_devices = kwargs.get("usb_devices", None)
@@ -2146,6 +2150,27 @@ class Host(object):
             raise ValueError("Invalid value for `total_data_capacity`, must not be `None`")  # noqa: E501
 
         self._total_data_capacity = total_data_capacity
+
+    @property
+    def total_logical_cpu_cores(self):
+        """Gets the total_logical_cpu_cores of this Host.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores
+
+    @total_logical_cpu_cores.setter
+    def total_logical_cpu_cores(self, total_logical_cpu_cores):
+        """Sets the total_logical_cpu_cores of this Host.
+
+
+        :param total_logical_cpu_cores: The total_logical_cpu_cores of this Host.  # noqa: E501
+        :type total_logical_cpu_cores: int
+        """
+
+        self._total_logical_cpu_cores = total_logical_cpu_cores
 
     @property
     def total_memory_bytes(self):

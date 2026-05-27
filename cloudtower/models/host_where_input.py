@@ -626,6 +626,14 @@ class HostWhereInput(object):
         'total_data_capacity_lte': 'int',
         'total_data_capacity_not': 'int',
         'total_data_capacity_not_in': 'list[int]',
+        'total_logical_cpu_cores': 'int',
+        'total_logical_cpu_cores_gt': 'int',
+        'total_logical_cpu_cores_gte': 'int',
+        'total_logical_cpu_cores_in': 'list[int]',
+        'total_logical_cpu_cores_lt': 'int',
+        'total_logical_cpu_cores_lte': 'int',
+        'total_logical_cpu_cores_not': 'int',
+        'total_logical_cpu_cores_not_in': 'list[int]',
         'total_memory_bytes': 'int',
         'total_memory_bytes_gt': 'int',
         'total_memory_bytes_gte': 'int',
@@ -1318,6 +1326,14 @@ class HostWhereInput(object):
         'total_data_capacity_lte': 'total_data_capacity_lte',
         'total_data_capacity_not': 'total_data_capacity_not',
         'total_data_capacity_not_in': 'total_data_capacity_not_in',
+        'total_logical_cpu_cores': 'total_logical_cpu_cores',
+        'total_logical_cpu_cores_gt': 'total_logical_cpu_cores_gt',
+        'total_logical_cpu_cores_gte': 'total_logical_cpu_cores_gte',
+        'total_logical_cpu_cores_in': 'total_logical_cpu_cores_in',
+        'total_logical_cpu_cores_lt': 'total_logical_cpu_cores_lt',
+        'total_logical_cpu_cores_lte': 'total_logical_cpu_cores_lte',
+        'total_logical_cpu_cores_not': 'total_logical_cpu_cores_not',
+        'total_logical_cpu_cores_not_in': 'total_logical_cpu_cores_not_in',
         'total_memory_bytes': 'total_memory_bytes',
         'total_memory_bytes_gt': 'total_memory_bytes_gt',
         'total_memory_bytes_gte': 'total_memory_bytes_gte',
@@ -2013,6 +2029,14 @@ class HostWhereInput(object):
         self._total_data_capacity_lte = None
         self._total_data_capacity_not = None
         self._total_data_capacity_not_in = None
+        self._total_logical_cpu_cores = None
+        self._total_logical_cpu_cores_gt = None
+        self._total_logical_cpu_cores_gte = None
+        self._total_logical_cpu_cores_in = None
+        self._total_logical_cpu_cores_lt = None
+        self._total_logical_cpu_cores_lte = None
+        self._total_logical_cpu_cores_not = None
+        self._total_logical_cpu_cores_not_in = None
         self._total_memory_bytes = None
         self._total_memory_bytes_gt = None
         self._total_memory_bytes_gte = None
@@ -2704,6 +2728,14 @@ class HostWhereInput(object):
         self.total_data_capacity_lte = kwargs.get("total_data_capacity_lte", None)
         self.total_data_capacity_not = kwargs.get("total_data_capacity_not", None)
         self.total_data_capacity_not_in = kwargs.get("total_data_capacity_not_in", None)
+        self.total_logical_cpu_cores = kwargs.get("total_logical_cpu_cores", None)
+        self.total_logical_cpu_cores_gt = kwargs.get("total_logical_cpu_cores_gt", None)
+        self.total_logical_cpu_cores_gte = kwargs.get("total_logical_cpu_cores_gte", None)
+        self.total_logical_cpu_cores_in = kwargs.get("total_logical_cpu_cores_in", None)
+        self.total_logical_cpu_cores_lt = kwargs.get("total_logical_cpu_cores_lt", None)
+        self.total_logical_cpu_cores_lte = kwargs.get("total_logical_cpu_cores_lte", None)
+        self.total_logical_cpu_cores_not = kwargs.get("total_logical_cpu_cores_not", None)
+        self.total_logical_cpu_cores_not_in = kwargs.get("total_logical_cpu_cores_not_in", None)
         self.total_memory_bytes = kwargs.get("total_memory_bytes", None)
         self.total_memory_bytes_gt = kwargs.get("total_memory_bytes_gt", None)
         self.total_memory_bytes_gte = kwargs.get("total_memory_bytes_gte", None)
@@ -15413,6 +15445,174 @@ class HostWhereInput(object):
         """
 
         self._total_data_capacity_not_in = total_data_capacity_not_in
+
+    @property
+    def total_logical_cpu_cores(self):
+        """Gets the total_logical_cpu_cores of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores
+
+    @total_logical_cpu_cores.setter
+    def total_logical_cpu_cores(self, total_logical_cpu_cores):
+        """Sets the total_logical_cpu_cores of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores: The total_logical_cpu_cores of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores: int
+        """
+
+        self._total_logical_cpu_cores = total_logical_cpu_cores
+
+    @property
+    def total_logical_cpu_cores_gt(self):
+        """Gets the total_logical_cpu_cores_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores_gt
+
+    @total_logical_cpu_cores_gt.setter
+    def total_logical_cpu_cores_gt(self, total_logical_cpu_cores_gt):
+        """Sets the total_logical_cpu_cores_gt of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_gt: The total_logical_cpu_cores_gt of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_gt: int
+        """
+
+        self._total_logical_cpu_cores_gt = total_logical_cpu_cores_gt
+
+    @property
+    def total_logical_cpu_cores_gte(self):
+        """Gets the total_logical_cpu_cores_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores_gte
+
+    @total_logical_cpu_cores_gte.setter
+    def total_logical_cpu_cores_gte(self, total_logical_cpu_cores_gte):
+        """Sets the total_logical_cpu_cores_gte of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_gte: The total_logical_cpu_cores_gte of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_gte: int
+        """
+
+        self._total_logical_cpu_cores_gte = total_logical_cpu_cores_gte
+
+    @property
+    def total_logical_cpu_cores_in(self):
+        """Gets the total_logical_cpu_cores_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_logical_cpu_cores_in
+
+    @total_logical_cpu_cores_in.setter
+    def total_logical_cpu_cores_in(self, total_logical_cpu_cores_in):
+        """Sets the total_logical_cpu_cores_in of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_in: The total_logical_cpu_cores_in of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_in: list[int]
+        """
+
+        self._total_logical_cpu_cores_in = total_logical_cpu_cores_in
+
+    @property
+    def total_logical_cpu_cores_lt(self):
+        """Gets the total_logical_cpu_cores_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores_lt
+
+    @total_logical_cpu_cores_lt.setter
+    def total_logical_cpu_cores_lt(self, total_logical_cpu_cores_lt):
+        """Sets the total_logical_cpu_cores_lt of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_lt: The total_logical_cpu_cores_lt of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_lt: int
+        """
+
+        self._total_logical_cpu_cores_lt = total_logical_cpu_cores_lt
+
+    @property
+    def total_logical_cpu_cores_lte(self):
+        """Gets the total_logical_cpu_cores_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores_lte
+
+    @total_logical_cpu_cores_lte.setter
+    def total_logical_cpu_cores_lte(self, total_logical_cpu_cores_lte):
+        """Sets the total_logical_cpu_cores_lte of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_lte: The total_logical_cpu_cores_lte of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_lte: int
+        """
+
+        self._total_logical_cpu_cores_lte = total_logical_cpu_cores_lte
+
+    @property
+    def total_logical_cpu_cores_not(self):
+        """Gets the total_logical_cpu_cores_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_logical_cpu_cores_not
+
+    @total_logical_cpu_cores_not.setter
+    def total_logical_cpu_cores_not(self, total_logical_cpu_cores_not):
+        """Sets the total_logical_cpu_cores_not of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_not: The total_logical_cpu_cores_not of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_not: int
+        """
+
+        self._total_logical_cpu_cores_not = total_logical_cpu_cores_not
+
+    @property
+    def total_logical_cpu_cores_not_in(self):
+        """Gets the total_logical_cpu_cores_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_logical_cpu_cores_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_logical_cpu_cores_not_in
+
+    @total_logical_cpu_cores_not_in.setter
+    def total_logical_cpu_cores_not_in(self, total_logical_cpu_cores_not_in):
+        """Sets the total_logical_cpu_cores_not_in of this HostWhereInput.
+
+
+        :param total_logical_cpu_cores_not_in: The total_logical_cpu_cores_not_in of this HostWhereInput.  # noqa: E501
+        :type total_logical_cpu_cores_not_in: list[int]
+        """
+
+        self._total_logical_cpu_cores_not_in = total_logical_cpu_cores_not_in
 
     @property
     def total_memory_bytes(self):

@@ -32,6 +32,8 @@ class Cluster(object):
         'applications': 'list[NestedApplication]',
         'architecture': 'Architecture',
         'auto_converge': 'bool',
+        'cap_snapshot_unique_size': 'int',
+        'cap_volume_unique_size': 'int',
         'commited_memory_bytes': 'int',
         'connect_state': 'ConnectState',
         'consistency_groups': 'list[NestedConsistencyGroup]',
@@ -149,6 +151,8 @@ class Cluster(object):
         'applications': 'applications',
         'architecture': 'architecture',
         'auto_converge': 'auto_converge',
+        'cap_snapshot_unique_size': 'cap_snapshot_unique_size',
+        'cap_volume_unique_size': 'cap_volume_unique_size',
         'commited_memory_bytes': 'commited_memory_bytes',
         'connect_state': 'connect_state',
         'consistency_groups': 'consistency_groups',
@@ -269,6 +273,8 @@ class Cluster(object):
         self._applications = None
         self._architecture = None
         self._auto_converge = None
+        self._cap_snapshot_unique_size = None
+        self._cap_volume_unique_size = None
         self._commited_memory_bytes = None
         self._connect_state = None
         self._consistency_groups = None
@@ -386,6 +392,8 @@ class Cluster(object):
         if "architecture" in kwargs:
             self.architecture = kwargs["architecture"]
         self.auto_converge = kwargs.get("auto_converge", None)
+        self.cap_snapshot_unique_size = kwargs.get("cap_snapshot_unique_size", None)
+        self.cap_volume_unique_size = kwargs.get("cap_volume_unique_size", None)
         self.commited_memory_bytes = kwargs.get("commited_memory_bytes", None)
         if "connect_state" in kwargs:
             self.connect_state = kwargs["connect_state"]
@@ -652,6 +660,48 @@ class Cluster(object):
         """
 
         self._auto_converge = auto_converge
+
+    @property
+    def cap_snapshot_unique_size(self):
+        """Gets the cap_snapshot_unique_size of this Cluster.  # noqa: E501
+
+
+        :return: The cap_snapshot_unique_size of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._cap_snapshot_unique_size
+
+    @cap_snapshot_unique_size.setter
+    def cap_snapshot_unique_size(self, cap_snapshot_unique_size):
+        """Sets the cap_snapshot_unique_size of this Cluster.
+
+
+        :param cap_snapshot_unique_size: The cap_snapshot_unique_size of this Cluster.  # noqa: E501
+        :type cap_snapshot_unique_size: int
+        """
+
+        self._cap_snapshot_unique_size = cap_snapshot_unique_size
+
+    @property
+    def cap_volume_unique_size(self):
+        """Gets the cap_volume_unique_size of this Cluster.  # noqa: E501
+
+
+        :return: The cap_volume_unique_size of this Cluster.  # noqa: E501
+        :rtype: int
+        """
+        return self._cap_volume_unique_size
+
+    @cap_volume_unique_size.setter
+    def cap_volume_unique_size(self, cap_volume_unique_size):
+        """Sets the cap_volume_unique_size of this Cluster.
+
+
+        :param cap_volume_unique_size: The cap_volume_unique_size of this Cluster.  # noqa: E501
+        :type cap_volume_unique_size: int
+        """
+
+        self._cap_volume_unique_size = cap_volume_unique_size
 
     @property
     def commited_memory_bytes(self):

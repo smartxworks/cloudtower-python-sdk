@@ -73,6 +73,40 @@ class ReplicaVmWhereInput(object):
         'inbound': 'bool',
         'inbound_not': 'bool',
         'iscsi_lun': 'IscsiLunWhereInput',
+        'last_out_of_sync_at': 'str',
+        'last_out_of_sync_at_gt': 'str',
+        'last_out_of_sync_at_gte': 'str',
+        'last_out_of_sync_at_in': 'list[str]',
+        'last_out_of_sync_at_lt': 'str',
+        'last_out_of_sync_at_lte': 'str',
+        'last_out_of_sync_at_not': 'str',
+        'last_out_of_sync_at_not_in': 'list[str]',
+        'last_out_of_sync_reason': 'str',
+        'last_out_of_sync_reason_contains': 'str',
+        'last_out_of_sync_reason_ends_with': 'str',
+        'last_out_of_sync_reason_gt': 'str',
+        'last_out_of_sync_reason_gte': 'str',
+        'last_out_of_sync_reason_in': 'list[str]',
+        'last_out_of_sync_reason_lt': 'str',
+        'last_out_of_sync_reason_lte': 'str',
+        'last_out_of_sync_reason_not': 'str',
+        'last_out_of_sync_reason_not_contains': 'str',
+        'last_out_of_sync_reason_not_ends_with': 'str',
+        'last_out_of_sync_reason_not_in': 'list[str]',
+        'last_out_of_sync_reason_not_starts_with': 'str',
+        'last_out_of_sync_reason_starts_with': 'str',
+        'last_synced_at': 'str',
+        'last_synced_at_gt': 'str',
+        'last_synced_at_gte': 'str',
+        'last_synced_at_in': 'list[str]',
+        'last_synced_at_lt': 'str',
+        'last_synced_at_lte': 'str',
+        'last_synced_at_not': 'str',
+        'last_synced_at_not_in': 'list[str]',
+        'method': 'ReplicationMethod',
+        'method_in': 'list[ReplicationMethod]',
+        'method_not': 'ReplicationMethod',
+        'method_not_in': 'list[ReplicationMethod]',
         'origin_iscsi_lun': 'IscsiLunWhereInput',
         'origin_vm': 'VmWhereInput',
         'origin_vm_cluster_local_id': 'str',
@@ -164,6 +198,14 @@ class ReplicaVmWhereInput(object):
         'replication_target_executions_every': 'ReplicationTargetExecutionWhereInput',
         'replication_target_executions_none': 'ReplicationTargetExecutionWhereInput',
         'replication_target_executions_some': 'ReplicationTargetExecutionWhereInput',
+        'resource_version': 'int',
+        'resource_version_gt': 'int',
+        'resource_version_gte': 'int',
+        'resource_version_in': 'list[int]',
+        'resource_version_lt': 'int',
+        'resource_version_lte': 'int',
+        'resource_version_not': 'int',
+        'resource_version_not_in': 'list[int]',
         'restore_points_every': 'ReplicationRestorePointWhereInput',
         'restore_points_none': 'ReplicationRestorePointWhereInput',
         'restore_points_some': 'ReplicationRestorePointWhereInput',
@@ -171,6 +213,15 @@ class ReplicaVmWhereInput(object):
         'state_in': 'list[ReplicaVmState]',
         'state_not': 'ReplicaVmState',
         'state_not_in': 'list[ReplicaVmState]',
+        'sync_replication_object_status': 'SyncReplicationObjectStatus',
+        'sync_replication_object_status_in': 'list[SyncReplicationObjectStatus]',
+        'sync_replication_object_status_not': 'SyncReplicationObjectStatus',
+        'sync_replication_object_status_not_in': 'list[SyncReplicationObjectStatus]',
+        'sync_replication_plan': 'SyncReplicationPlanWhereInput',
+        'sync_replication_status': 'SyncReplicationStatus',
+        'sync_replication_status_in': 'list[SyncReplicationStatus]',
+        'sync_replication_status_not': 'SyncReplicationStatus',
+        'sync_replication_status_not_in': 'list[SyncReplicationStatus]',
         'targets_deletable': 'bool',
         'targets_deletable_not': 'bool',
         'type': 'ReplicationObjectType',
@@ -237,6 +288,40 @@ class ReplicaVmWhereInput(object):
         'inbound': 'inbound',
         'inbound_not': 'inbound_not',
         'iscsi_lun': 'iscsi_lun',
+        'last_out_of_sync_at': 'last_out_of_sync_at',
+        'last_out_of_sync_at_gt': 'last_out_of_sync_at_gt',
+        'last_out_of_sync_at_gte': 'last_out_of_sync_at_gte',
+        'last_out_of_sync_at_in': 'last_out_of_sync_at_in',
+        'last_out_of_sync_at_lt': 'last_out_of_sync_at_lt',
+        'last_out_of_sync_at_lte': 'last_out_of_sync_at_lte',
+        'last_out_of_sync_at_not': 'last_out_of_sync_at_not',
+        'last_out_of_sync_at_not_in': 'last_out_of_sync_at_not_in',
+        'last_out_of_sync_reason': 'last_out_of_sync_reason',
+        'last_out_of_sync_reason_contains': 'last_out_of_sync_reason_contains',
+        'last_out_of_sync_reason_ends_with': 'last_out_of_sync_reason_ends_with',
+        'last_out_of_sync_reason_gt': 'last_out_of_sync_reason_gt',
+        'last_out_of_sync_reason_gte': 'last_out_of_sync_reason_gte',
+        'last_out_of_sync_reason_in': 'last_out_of_sync_reason_in',
+        'last_out_of_sync_reason_lt': 'last_out_of_sync_reason_lt',
+        'last_out_of_sync_reason_lte': 'last_out_of_sync_reason_lte',
+        'last_out_of_sync_reason_not': 'last_out_of_sync_reason_not',
+        'last_out_of_sync_reason_not_contains': 'last_out_of_sync_reason_not_contains',
+        'last_out_of_sync_reason_not_ends_with': 'last_out_of_sync_reason_not_ends_with',
+        'last_out_of_sync_reason_not_in': 'last_out_of_sync_reason_not_in',
+        'last_out_of_sync_reason_not_starts_with': 'last_out_of_sync_reason_not_starts_with',
+        'last_out_of_sync_reason_starts_with': 'last_out_of_sync_reason_starts_with',
+        'last_synced_at': 'last_synced_at',
+        'last_synced_at_gt': 'last_synced_at_gt',
+        'last_synced_at_gte': 'last_synced_at_gte',
+        'last_synced_at_in': 'last_synced_at_in',
+        'last_synced_at_lt': 'last_synced_at_lt',
+        'last_synced_at_lte': 'last_synced_at_lte',
+        'last_synced_at_not': 'last_synced_at_not',
+        'last_synced_at_not_in': 'last_synced_at_not_in',
+        'method': 'method',
+        'method_in': 'method_in',
+        'method_not': 'method_not',
+        'method_not_in': 'method_not_in',
         'origin_iscsi_lun': 'origin_iscsi_lun',
         'origin_vm': 'origin_vm',
         'origin_vm_cluster_local_id': 'origin_vm_cluster_local_id',
@@ -328,6 +413,14 @@ class ReplicaVmWhereInput(object):
         'replication_target_executions_every': 'replication_target_executions_every',
         'replication_target_executions_none': 'replication_target_executions_none',
         'replication_target_executions_some': 'replication_target_executions_some',
+        'resource_version': 'resource_version',
+        'resource_version_gt': 'resource_version_gt',
+        'resource_version_gte': 'resource_version_gte',
+        'resource_version_in': 'resource_version_in',
+        'resource_version_lt': 'resource_version_lt',
+        'resource_version_lte': 'resource_version_lte',
+        'resource_version_not': 'resource_version_not',
+        'resource_version_not_in': 'resource_version_not_in',
         'restore_points_every': 'restore_points_every',
         'restore_points_none': 'restore_points_none',
         'restore_points_some': 'restore_points_some',
@@ -335,6 +428,15 @@ class ReplicaVmWhereInput(object):
         'state_in': 'state_in',
         'state_not': 'state_not',
         'state_not_in': 'state_not_in',
+        'sync_replication_object_status': 'sync_replication_object_status',
+        'sync_replication_object_status_in': 'sync_replication_object_status_in',
+        'sync_replication_object_status_not': 'sync_replication_object_status_not',
+        'sync_replication_object_status_not_in': 'sync_replication_object_status_not_in',
+        'sync_replication_plan': 'sync_replication_plan',
+        'sync_replication_status': 'sync_replication_status',
+        'sync_replication_status_in': 'sync_replication_status_in',
+        'sync_replication_status_not': 'sync_replication_status_not',
+        'sync_replication_status_not_in': 'sync_replication_status_not_in',
         'targets_deletable': 'targets_deletable',
         'targets_deletable_not': 'targets_deletable_not',
         'type': 'type',
@@ -404,6 +506,40 @@ class ReplicaVmWhereInput(object):
         self._inbound = None
         self._inbound_not = None
         self._iscsi_lun = None
+        self._last_out_of_sync_at = None
+        self._last_out_of_sync_at_gt = None
+        self._last_out_of_sync_at_gte = None
+        self._last_out_of_sync_at_in = None
+        self._last_out_of_sync_at_lt = None
+        self._last_out_of_sync_at_lte = None
+        self._last_out_of_sync_at_not = None
+        self._last_out_of_sync_at_not_in = None
+        self._last_out_of_sync_reason = None
+        self._last_out_of_sync_reason_contains = None
+        self._last_out_of_sync_reason_ends_with = None
+        self._last_out_of_sync_reason_gt = None
+        self._last_out_of_sync_reason_gte = None
+        self._last_out_of_sync_reason_in = None
+        self._last_out_of_sync_reason_lt = None
+        self._last_out_of_sync_reason_lte = None
+        self._last_out_of_sync_reason_not = None
+        self._last_out_of_sync_reason_not_contains = None
+        self._last_out_of_sync_reason_not_ends_with = None
+        self._last_out_of_sync_reason_not_in = None
+        self._last_out_of_sync_reason_not_starts_with = None
+        self._last_out_of_sync_reason_starts_with = None
+        self._last_synced_at = None
+        self._last_synced_at_gt = None
+        self._last_synced_at_gte = None
+        self._last_synced_at_in = None
+        self._last_synced_at_lt = None
+        self._last_synced_at_lte = None
+        self._last_synced_at_not = None
+        self._last_synced_at_not_in = None
+        self._method = None
+        self._method_in = None
+        self._method_not = None
+        self._method_not_in = None
         self._origin_iscsi_lun = None
         self._origin_vm = None
         self._origin_vm_cluster_local_id = None
@@ -495,6 +631,14 @@ class ReplicaVmWhereInput(object):
         self._replication_target_executions_every = None
         self._replication_target_executions_none = None
         self._replication_target_executions_some = None
+        self._resource_version = None
+        self._resource_version_gt = None
+        self._resource_version_gte = None
+        self._resource_version_in = None
+        self._resource_version_lt = None
+        self._resource_version_lte = None
+        self._resource_version_not = None
+        self._resource_version_not_in = None
         self._restore_points_every = None
         self._restore_points_none = None
         self._restore_points_some = None
@@ -502,6 +646,15 @@ class ReplicaVmWhereInput(object):
         self._state_in = None
         self._state_not = None
         self._state_not_in = None
+        self._sync_replication_object_status = None
+        self._sync_replication_object_status_in = None
+        self._sync_replication_object_status_not = None
+        self._sync_replication_object_status_not_in = None
+        self._sync_replication_plan = None
+        self._sync_replication_status = None
+        self._sync_replication_status_in = None
+        self._sync_replication_status_not = None
+        self._sync_replication_status_not_in = None
         self._targets_deletable = None
         self._targets_deletable_not = None
         self._type = None
@@ -567,6 +720,40 @@ class ReplicaVmWhereInput(object):
         self.inbound = kwargs.get("inbound", None)
         self.inbound_not = kwargs.get("inbound_not", None)
         self.iscsi_lun = kwargs.get("iscsi_lun", None)
+        self.last_out_of_sync_at = kwargs.get("last_out_of_sync_at", None)
+        self.last_out_of_sync_at_gt = kwargs.get("last_out_of_sync_at_gt", None)
+        self.last_out_of_sync_at_gte = kwargs.get("last_out_of_sync_at_gte", None)
+        self.last_out_of_sync_at_in = kwargs.get("last_out_of_sync_at_in", None)
+        self.last_out_of_sync_at_lt = kwargs.get("last_out_of_sync_at_lt", None)
+        self.last_out_of_sync_at_lte = kwargs.get("last_out_of_sync_at_lte", None)
+        self.last_out_of_sync_at_not = kwargs.get("last_out_of_sync_at_not", None)
+        self.last_out_of_sync_at_not_in = kwargs.get("last_out_of_sync_at_not_in", None)
+        self.last_out_of_sync_reason = kwargs.get("last_out_of_sync_reason", None)
+        self.last_out_of_sync_reason_contains = kwargs.get("last_out_of_sync_reason_contains", None)
+        self.last_out_of_sync_reason_ends_with = kwargs.get("last_out_of_sync_reason_ends_with", None)
+        self.last_out_of_sync_reason_gt = kwargs.get("last_out_of_sync_reason_gt", None)
+        self.last_out_of_sync_reason_gte = kwargs.get("last_out_of_sync_reason_gte", None)
+        self.last_out_of_sync_reason_in = kwargs.get("last_out_of_sync_reason_in", None)
+        self.last_out_of_sync_reason_lt = kwargs.get("last_out_of_sync_reason_lt", None)
+        self.last_out_of_sync_reason_lte = kwargs.get("last_out_of_sync_reason_lte", None)
+        self.last_out_of_sync_reason_not = kwargs.get("last_out_of_sync_reason_not", None)
+        self.last_out_of_sync_reason_not_contains = kwargs.get("last_out_of_sync_reason_not_contains", None)
+        self.last_out_of_sync_reason_not_ends_with = kwargs.get("last_out_of_sync_reason_not_ends_with", None)
+        self.last_out_of_sync_reason_not_in = kwargs.get("last_out_of_sync_reason_not_in", None)
+        self.last_out_of_sync_reason_not_starts_with = kwargs.get("last_out_of_sync_reason_not_starts_with", None)
+        self.last_out_of_sync_reason_starts_with = kwargs.get("last_out_of_sync_reason_starts_with", None)
+        self.last_synced_at = kwargs.get("last_synced_at", None)
+        self.last_synced_at_gt = kwargs.get("last_synced_at_gt", None)
+        self.last_synced_at_gte = kwargs.get("last_synced_at_gte", None)
+        self.last_synced_at_in = kwargs.get("last_synced_at_in", None)
+        self.last_synced_at_lt = kwargs.get("last_synced_at_lt", None)
+        self.last_synced_at_lte = kwargs.get("last_synced_at_lte", None)
+        self.last_synced_at_not = kwargs.get("last_synced_at_not", None)
+        self.last_synced_at_not_in = kwargs.get("last_synced_at_not_in", None)
+        self.method = kwargs.get("method", None)
+        self.method_in = kwargs.get("method_in", None)
+        self.method_not = kwargs.get("method_not", None)
+        self.method_not_in = kwargs.get("method_not_in", None)
         self.origin_iscsi_lun = kwargs.get("origin_iscsi_lun", None)
         self.origin_vm = kwargs.get("origin_vm", None)
         self.origin_vm_cluster_local_id = kwargs.get("origin_vm_cluster_local_id", None)
@@ -658,6 +845,14 @@ class ReplicaVmWhereInput(object):
         self.replication_target_executions_every = kwargs.get("replication_target_executions_every", None)
         self.replication_target_executions_none = kwargs.get("replication_target_executions_none", None)
         self.replication_target_executions_some = kwargs.get("replication_target_executions_some", None)
+        self.resource_version = kwargs.get("resource_version", None)
+        self.resource_version_gt = kwargs.get("resource_version_gt", None)
+        self.resource_version_gte = kwargs.get("resource_version_gte", None)
+        self.resource_version_in = kwargs.get("resource_version_in", None)
+        self.resource_version_lt = kwargs.get("resource_version_lt", None)
+        self.resource_version_lte = kwargs.get("resource_version_lte", None)
+        self.resource_version_not = kwargs.get("resource_version_not", None)
+        self.resource_version_not_in = kwargs.get("resource_version_not_in", None)
         self.restore_points_every = kwargs.get("restore_points_every", None)
         self.restore_points_none = kwargs.get("restore_points_none", None)
         self.restore_points_some = kwargs.get("restore_points_some", None)
@@ -665,6 +860,15 @@ class ReplicaVmWhereInput(object):
         self.state_in = kwargs.get("state_in", None)
         self.state_not = kwargs.get("state_not", None)
         self.state_not_in = kwargs.get("state_not_in", None)
+        self.sync_replication_object_status = kwargs.get("sync_replication_object_status", None)
+        self.sync_replication_object_status_in = kwargs.get("sync_replication_object_status_in", None)
+        self.sync_replication_object_status_not = kwargs.get("sync_replication_object_status_not", None)
+        self.sync_replication_object_status_not_in = kwargs.get("sync_replication_object_status_not_in", None)
+        self.sync_replication_plan = kwargs.get("sync_replication_plan", None)
+        self.sync_replication_status = kwargs.get("sync_replication_status", None)
+        self.sync_replication_status_in = kwargs.get("sync_replication_status_in", None)
+        self.sync_replication_status_not = kwargs.get("sync_replication_status_not", None)
+        self.sync_replication_status_not_in = kwargs.get("sync_replication_status_not_in", None)
         self.targets_deletable = kwargs.get("targets_deletable", None)
         self.targets_deletable_not = kwargs.get("targets_deletable_not", None)
         self.type = kwargs.get("type", None)
@@ -1688,6 +1892,720 @@ class ReplicaVmWhereInput(object):
         """
 
         self._iscsi_lun = iscsi_lun
+
+    @property
+    def last_out_of_sync_at(self):
+        """Gets the last_out_of_sync_at of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at
+
+    @last_out_of_sync_at.setter
+    def last_out_of_sync_at(self, last_out_of_sync_at):
+        """Sets the last_out_of_sync_at of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at: The last_out_of_sync_at of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at: str
+        """
+
+        self._last_out_of_sync_at = last_out_of_sync_at
+
+    @property
+    def last_out_of_sync_at_gt(self):
+        """Gets the last_out_of_sync_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at_gt
+
+    @last_out_of_sync_at_gt.setter
+    def last_out_of_sync_at_gt(self, last_out_of_sync_at_gt):
+        """Sets the last_out_of_sync_at_gt of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_gt: The last_out_of_sync_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_gt: str
+        """
+
+        self._last_out_of_sync_at_gt = last_out_of_sync_at_gt
+
+    @property
+    def last_out_of_sync_at_gte(self):
+        """Gets the last_out_of_sync_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at_gte
+
+    @last_out_of_sync_at_gte.setter
+    def last_out_of_sync_at_gte(self, last_out_of_sync_at_gte):
+        """Sets the last_out_of_sync_at_gte of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_gte: The last_out_of_sync_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_gte: str
+        """
+
+        self._last_out_of_sync_at_gte = last_out_of_sync_at_gte
+
+    @property
+    def last_out_of_sync_at_in(self):
+        """Gets the last_out_of_sync_at_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_out_of_sync_at_in
+
+    @last_out_of_sync_at_in.setter
+    def last_out_of_sync_at_in(self, last_out_of_sync_at_in):
+        """Sets the last_out_of_sync_at_in of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_in: The last_out_of_sync_at_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_in: list[str]
+        """
+
+        self._last_out_of_sync_at_in = last_out_of_sync_at_in
+
+    @property
+    def last_out_of_sync_at_lt(self):
+        """Gets the last_out_of_sync_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at_lt
+
+    @last_out_of_sync_at_lt.setter
+    def last_out_of_sync_at_lt(self, last_out_of_sync_at_lt):
+        """Sets the last_out_of_sync_at_lt of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_lt: The last_out_of_sync_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_lt: str
+        """
+
+        self._last_out_of_sync_at_lt = last_out_of_sync_at_lt
+
+    @property
+    def last_out_of_sync_at_lte(self):
+        """Gets the last_out_of_sync_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at_lte
+
+    @last_out_of_sync_at_lte.setter
+    def last_out_of_sync_at_lte(self, last_out_of_sync_at_lte):
+        """Sets the last_out_of_sync_at_lte of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_lte: The last_out_of_sync_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_lte: str
+        """
+
+        self._last_out_of_sync_at_lte = last_out_of_sync_at_lte
+
+    @property
+    def last_out_of_sync_at_not(self):
+        """Gets the last_out_of_sync_at_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_at_not
+
+    @last_out_of_sync_at_not.setter
+    def last_out_of_sync_at_not(self, last_out_of_sync_at_not):
+        """Sets the last_out_of_sync_at_not of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_not: The last_out_of_sync_at_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_not: str
+        """
+
+        self._last_out_of_sync_at_not = last_out_of_sync_at_not
+
+    @property
+    def last_out_of_sync_at_not_in(self):
+        """Gets the last_out_of_sync_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_out_of_sync_at_not_in
+
+    @last_out_of_sync_at_not_in.setter
+    def last_out_of_sync_at_not_in(self, last_out_of_sync_at_not_in):
+        """Sets the last_out_of_sync_at_not_in of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_at_not_in: The last_out_of_sync_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_at_not_in: list[str]
+        """
+
+        self._last_out_of_sync_at_not_in = last_out_of_sync_at_not_in
+
+    @property
+    def last_out_of_sync_reason(self):
+        """Gets the last_out_of_sync_reason of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason
+
+    @last_out_of_sync_reason.setter
+    def last_out_of_sync_reason(self, last_out_of_sync_reason):
+        """Sets the last_out_of_sync_reason of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason: The last_out_of_sync_reason of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason: str
+        """
+
+        self._last_out_of_sync_reason = last_out_of_sync_reason
+
+    @property
+    def last_out_of_sync_reason_contains(self):
+        """Gets the last_out_of_sync_reason_contains of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_contains of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_contains
+
+    @last_out_of_sync_reason_contains.setter
+    def last_out_of_sync_reason_contains(self, last_out_of_sync_reason_contains):
+        """Sets the last_out_of_sync_reason_contains of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_contains: The last_out_of_sync_reason_contains of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_contains: str
+        """
+
+        self._last_out_of_sync_reason_contains = last_out_of_sync_reason_contains
+
+    @property
+    def last_out_of_sync_reason_ends_with(self):
+        """Gets the last_out_of_sync_reason_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_ends_with
+
+    @last_out_of_sync_reason_ends_with.setter
+    def last_out_of_sync_reason_ends_with(self, last_out_of_sync_reason_ends_with):
+        """Sets the last_out_of_sync_reason_ends_with of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_ends_with: The last_out_of_sync_reason_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_ends_with: str
+        """
+
+        self._last_out_of_sync_reason_ends_with = last_out_of_sync_reason_ends_with
+
+    @property
+    def last_out_of_sync_reason_gt(self):
+        """Gets the last_out_of_sync_reason_gt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_gt
+
+    @last_out_of_sync_reason_gt.setter
+    def last_out_of_sync_reason_gt(self, last_out_of_sync_reason_gt):
+        """Sets the last_out_of_sync_reason_gt of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_gt: The last_out_of_sync_reason_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_gt: str
+        """
+
+        self._last_out_of_sync_reason_gt = last_out_of_sync_reason_gt
+
+    @property
+    def last_out_of_sync_reason_gte(self):
+        """Gets the last_out_of_sync_reason_gte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_gte
+
+    @last_out_of_sync_reason_gte.setter
+    def last_out_of_sync_reason_gte(self, last_out_of_sync_reason_gte):
+        """Sets the last_out_of_sync_reason_gte of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_gte: The last_out_of_sync_reason_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_gte: str
+        """
+
+        self._last_out_of_sync_reason_gte = last_out_of_sync_reason_gte
+
+    @property
+    def last_out_of_sync_reason_in(self):
+        """Gets the last_out_of_sync_reason_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_out_of_sync_reason_in
+
+    @last_out_of_sync_reason_in.setter
+    def last_out_of_sync_reason_in(self, last_out_of_sync_reason_in):
+        """Sets the last_out_of_sync_reason_in of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_in: The last_out_of_sync_reason_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_in: list[str]
+        """
+
+        self._last_out_of_sync_reason_in = last_out_of_sync_reason_in
+
+    @property
+    def last_out_of_sync_reason_lt(self):
+        """Gets the last_out_of_sync_reason_lt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_lt
+
+    @last_out_of_sync_reason_lt.setter
+    def last_out_of_sync_reason_lt(self, last_out_of_sync_reason_lt):
+        """Sets the last_out_of_sync_reason_lt of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_lt: The last_out_of_sync_reason_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_lt: str
+        """
+
+        self._last_out_of_sync_reason_lt = last_out_of_sync_reason_lt
+
+    @property
+    def last_out_of_sync_reason_lte(self):
+        """Gets the last_out_of_sync_reason_lte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_lte
+
+    @last_out_of_sync_reason_lte.setter
+    def last_out_of_sync_reason_lte(self, last_out_of_sync_reason_lte):
+        """Sets the last_out_of_sync_reason_lte of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_lte: The last_out_of_sync_reason_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_lte: str
+        """
+
+        self._last_out_of_sync_reason_lte = last_out_of_sync_reason_lte
+
+    @property
+    def last_out_of_sync_reason_not(self):
+        """Gets the last_out_of_sync_reason_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_not
+
+    @last_out_of_sync_reason_not.setter
+    def last_out_of_sync_reason_not(self, last_out_of_sync_reason_not):
+        """Sets the last_out_of_sync_reason_not of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_not: The last_out_of_sync_reason_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_not: str
+        """
+
+        self._last_out_of_sync_reason_not = last_out_of_sync_reason_not
+
+    @property
+    def last_out_of_sync_reason_not_contains(self):
+        """Gets the last_out_of_sync_reason_not_contains of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_not_contains of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_not_contains
+
+    @last_out_of_sync_reason_not_contains.setter
+    def last_out_of_sync_reason_not_contains(self, last_out_of_sync_reason_not_contains):
+        """Sets the last_out_of_sync_reason_not_contains of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_not_contains: The last_out_of_sync_reason_not_contains of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_not_contains: str
+        """
+
+        self._last_out_of_sync_reason_not_contains = last_out_of_sync_reason_not_contains
+
+    @property
+    def last_out_of_sync_reason_not_ends_with(self):
+        """Gets the last_out_of_sync_reason_not_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_not_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_not_ends_with
+
+    @last_out_of_sync_reason_not_ends_with.setter
+    def last_out_of_sync_reason_not_ends_with(self, last_out_of_sync_reason_not_ends_with):
+        """Sets the last_out_of_sync_reason_not_ends_with of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_not_ends_with: The last_out_of_sync_reason_not_ends_with of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_not_ends_with: str
+        """
+
+        self._last_out_of_sync_reason_not_ends_with = last_out_of_sync_reason_not_ends_with
+
+    @property
+    def last_out_of_sync_reason_not_in(self):
+        """Gets the last_out_of_sync_reason_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_out_of_sync_reason_not_in
+
+    @last_out_of_sync_reason_not_in.setter
+    def last_out_of_sync_reason_not_in(self, last_out_of_sync_reason_not_in):
+        """Sets the last_out_of_sync_reason_not_in of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_not_in: The last_out_of_sync_reason_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_not_in: list[str]
+        """
+
+        self._last_out_of_sync_reason_not_in = last_out_of_sync_reason_not_in
+
+    @property
+    def last_out_of_sync_reason_not_starts_with(self):
+        """Gets the last_out_of_sync_reason_not_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_not_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_not_starts_with
+
+    @last_out_of_sync_reason_not_starts_with.setter
+    def last_out_of_sync_reason_not_starts_with(self, last_out_of_sync_reason_not_starts_with):
+        """Sets the last_out_of_sync_reason_not_starts_with of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_not_starts_with: The last_out_of_sync_reason_not_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_not_starts_with: str
+        """
+
+        self._last_out_of_sync_reason_not_starts_with = last_out_of_sync_reason_not_starts_with
+
+    @property
+    def last_out_of_sync_reason_starts_with(self):
+        """Gets the last_out_of_sync_reason_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_out_of_sync_reason_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_out_of_sync_reason_starts_with
+
+    @last_out_of_sync_reason_starts_with.setter
+    def last_out_of_sync_reason_starts_with(self, last_out_of_sync_reason_starts_with):
+        """Sets the last_out_of_sync_reason_starts_with of this ReplicaVmWhereInput.
+
+
+        :param last_out_of_sync_reason_starts_with: The last_out_of_sync_reason_starts_with of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_out_of_sync_reason_starts_with: str
+        """
+
+        self._last_out_of_sync_reason_starts_with = last_out_of_sync_reason_starts_with
+
+    @property
+    def last_synced_at(self):
+        """Gets the last_synced_at of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at
+
+    @last_synced_at.setter
+    def last_synced_at(self, last_synced_at):
+        """Sets the last_synced_at of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at: The last_synced_at of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at: str
+        """
+
+        self._last_synced_at = last_synced_at
+
+    @property
+    def last_synced_at_gt(self):
+        """Gets the last_synced_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at_gt
+
+    @last_synced_at_gt.setter
+    def last_synced_at_gt(self, last_synced_at_gt):
+        """Sets the last_synced_at_gt of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_gt: The last_synced_at_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_gt: str
+        """
+
+        self._last_synced_at_gt = last_synced_at_gt
+
+    @property
+    def last_synced_at_gte(self):
+        """Gets the last_synced_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at_gte
+
+    @last_synced_at_gte.setter
+    def last_synced_at_gte(self, last_synced_at_gte):
+        """Sets the last_synced_at_gte of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_gte: The last_synced_at_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_gte: str
+        """
+
+        self._last_synced_at_gte = last_synced_at_gte
+
+    @property
+    def last_synced_at_in(self):
+        """Gets the last_synced_at_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_synced_at_in
+
+    @last_synced_at_in.setter
+    def last_synced_at_in(self, last_synced_at_in):
+        """Sets the last_synced_at_in of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_in: The last_synced_at_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_in: list[str]
+        """
+
+        self._last_synced_at_in = last_synced_at_in
+
+    @property
+    def last_synced_at_lt(self):
+        """Gets the last_synced_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at_lt
+
+    @last_synced_at_lt.setter
+    def last_synced_at_lt(self, last_synced_at_lt):
+        """Sets the last_synced_at_lt of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_lt: The last_synced_at_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_lt: str
+        """
+
+        self._last_synced_at_lt = last_synced_at_lt
+
+    @property
+    def last_synced_at_lte(self):
+        """Gets the last_synced_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at_lte
+
+    @last_synced_at_lte.setter
+    def last_synced_at_lte(self, last_synced_at_lte):
+        """Sets the last_synced_at_lte of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_lte: The last_synced_at_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_lte: str
+        """
+
+        self._last_synced_at_lte = last_synced_at_lte
+
+    @property
+    def last_synced_at_not(self):
+        """Gets the last_synced_at_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_synced_at_not
+
+    @last_synced_at_not.setter
+    def last_synced_at_not(self, last_synced_at_not):
+        """Sets the last_synced_at_not of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_not: The last_synced_at_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_not: str
+        """
+
+        self._last_synced_at_not = last_synced_at_not
+
+    @property
+    def last_synced_at_not_in(self):
+        """Gets the last_synced_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The last_synced_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._last_synced_at_not_in
+
+    @last_synced_at_not_in.setter
+    def last_synced_at_not_in(self, last_synced_at_not_in):
+        """Sets the last_synced_at_not_in of this ReplicaVmWhereInput.
+
+
+        :param last_synced_at_not_in: The last_synced_at_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type last_synced_at_not_in: list[str]
+        """
+
+        self._last_synced_at_not_in = last_synced_at_not_in
+
+    @property
+    def method(self):
+        """Gets the method of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The method of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: ReplicationMethod
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """Sets the method of this ReplicaVmWhereInput.
+
+
+        :param method: The method of this ReplicaVmWhereInput.  # noqa: E501
+        :type method: ReplicationMethod
+        """
+
+        self._method = method
+
+    @property
+    def method_in(self):
+        """Gets the method_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The method_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[ReplicationMethod]
+        """
+        return self._method_in
+
+    @method_in.setter
+    def method_in(self, method_in):
+        """Sets the method_in of this ReplicaVmWhereInput.
+
+
+        :param method_in: The method_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type method_in: list[ReplicationMethod]
+        """
+
+        self._method_in = method_in
+
+    @property
+    def method_not(self):
+        """Gets the method_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The method_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: ReplicationMethod
+        """
+        return self._method_not
+
+    @method_not.setter
+    def method_not(self, method_not):
+        """Sets the method_not of this ReplicaVmWhereInput.
+
+
+        :param method_not: The method_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type method_not: ReplicationMethod
+        """
+
+        self._method_not = method_not
+
+    @property
+    def method_not_in(self):
+        """Gets the method_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The method_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[ReplicationMethod]
+        """
+        return self._method_not_in
+
+    @method_not_in.setter
+    def method_not_in(self, method_not_in):
+        """Sets the method_not_in of this ReplicaVmWhereInput.
+
+
+        :param method_not_in: The method_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type method_not_in: list[ReplicationMethod]
+        """
+
+        self._method_not_in = method_not_in
 
     @property
     def origin_iscsi_lun(self):
@@ -3601,6 +4519,174 @@ class ReplicaVmWhereInput(object):
         self._replication_target_executions_some = replication_target_executions_some
 
     @property
+    def resource_version(self):
+        """Gets the resource_version of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version
+
+    @resource_version.setter
+    def resource_version(self, resource_version):
+        """Sets the resource_version of this ReplicaVmWhereInput.
+
+
+        :param resource_version: The resource_version of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version: int
+        """
+
+        self._resource_version = resource_version
+
+    @property
+    def resource_version_gt(self):
+        """Gets the resource_version_gt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version_gt
+
+    @resource_version_gt.setter
+    def resource_version_gt(self, resource_version_gt):
+        """Sets the resource_version_gt of this ReplicaVmWhereInput.
+
+
+        :param resource_version_gt: The resource_version_gt of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_gt: int
+        """
+
+        self._resource_version_gt = resource_version_gt
+
+    @property
+    def resource_version_gte(self):
+        """Gets the resource_version_gte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version_gte
+
+    @resource_version_gte.setter
+    def resource_version_gte(self, resource_version_gte):
+        """Sets the resource_version_gte of this ReplicaVmWhereInput.
+
+
+        :param resource_version_gte: The resource_version_gte of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_gte: int
+        """
+
+        self._resource_version_gte = resource_version_gte
+
+    @property
+    def resource_version_in(self):
+        """Gets the resource_version_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._resource_version_in
+
+    @resource_version_in.setter
+    def resource_version_in(self, resource_version_in):
+        """Sets the resource_version_in of this ReplicaVmWhereInput.
+
+
+        :param resource_version_in: The resource_version_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_in: list[int]
+        """
+
+        self._resource_version_in = resource_version_in
+
+    @property
+    def resource_version_lt(self):
+        """Gets the resource_version_lt of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version_lt
+
+    @resource_version_lt.setter
+    def resource_version_lt(self, resource_version_lt):
+        """Sets the resource_version_lt of this ReplicaVmWhereInput.
+
+
+        :param resource_version_lt: The resource_version_lt of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_lt: int
+        """
+
+        self._resource_version_lt = resource_version_lt
+
+    @property
+    def resource_version_lte(self):
+        """Gets the resource_version_lte of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version_lte
+
+    @resource_version_lte.setter
+    def resource_version_lte(self, resource_version_lte):
+        """Sets the resource_version_lte of this ReplicaVmWhereInput.
+
+
+        :param resource_version_lte: The resource_version_lte of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_lte: int
+        """
+
+        self._resource_version_lte = resource_version_lte
+
+    @property
+    def resource_version_not(self):
+        """Gets the resource_version_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._resource_version_not
+
+    @resource_version_not.setter
+    def resource_version_not(self, resource_version_not):
+        """Sets the resource_version_not of this ReplicaVmWhereInput.
+
+
+        :param resource_version_not: The resource_version_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_not: int
+        """
+
+        self._resource_version_not = resource_version_not
+
+    @property
+    def resource_version_not_in(self):
+        """Gets the resource_version_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The resource_version_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._resource_version_not_in
+
+    @resource_version_not_in.setter
+    def resource_version_not_in(self, resource_version_not_in):
+        """Sets the resource_version_not_in of this ReplicaVmWhereInput.
+
+
+        :param resource_version_not_in: The resource_version_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type resource_version_not_in: list[int]
+        """
+
+        self._resource_version_not_in = resource_version_not_in
+
+    @property
     def restore_points_every(self):
         """Gets the restore_points_every of this ReplicaVmWhereInput.  # noqa: E501
 
@@ -3746,6 +4832,195 @@ class ReplicaVmWhereInput(object):
         """
 
         self._state_not_in = state_not_in
+
+    @property
+    def sync_replication_object_status(self):
+        """Gets the sync_replication_object_status of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_object_status of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: SyncReplicationObjectStatus
+        """
+        return self._sync_replication_object_status
+
+    @sync_replication_object_status.setter
+    def sync_replication_object_status(self, sync_replication_object_status):
+        """Sets the sync_replication_object_status of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_object_status: The sync_replication_object_status of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_object_status: SyncReplicationObjectStatus
+        """
+
+        self._sync_replication_object_status = sync_replication_object_status
+
+    @property
+    def sync_replication_object_status_in(self):
+        """Gets the sync_replication_object_status_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_object_status_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[SyncReplicationObjectStatus]
+        """
+        return self._sync_replication_object_status_in
+
+    @sync_replication_object_status_in.setter
+    def sync_replication_object_status_in(self, sync_replication_object_status_in):
+        """Sets the sync_replication_object_status_in of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_object_status_in: The sync_replication_object_status_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_object_status_in: list[SyncReplicationObjectStatus]
+        """
+
+        self._sync_replication_object_status_in = sync_replication_object_status_in
+
+    @property
+    def sync_replication_object_status_not(self):
+        """Gets the sync_replication_object_status_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_object_status_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: SyncReplicationObjectStatus
+        """
+        return self._sync_replication_object_status_not
+
+    @sync_replication_object_status_not.setter
+    def sync_replication_object_status_not(self, sync_replication_object_status_not):
+        """Sets the sync_replication_object_status_not of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_object_status_not: The sync_replication_object_status_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_object_status_not: SyncReplicationObjectStatus
+        """
+
+        self._sync_replication_object_status_not = sync_replication_object_status_not
+
+    @property
+    def sync_replication_object_status_not_in(self):
+        """Gets the sync_replication_object_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_object_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[SyncReplicationObjectStatus]
+        """
+        return self._sync_replication_object_status_not_in
+
+    @sync_replication_object_status_not_in.setter
+    def sync_replication_object_status_not_in(self, sync_replication_object_status_not_in):
+        """Sets the sync_replication_object_status_not_in of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_object_status_not_in: The sync_replication_object_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_object_status_not_in: list[SyncReplicationObjectStatus]
+        """
+
+        self._sync_replication_object_status_not_in = sync_replication_object_status_not_in
+
+    @property
+    def sync_replication_plan(self):
+        """Gets the sync_replication_plan of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_plan of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: SyncReplicationPlanWhereInput
+        """
+        return self._sync_replication_plan
+
+    @sync_replication_plan.setter
+    def sync_replication_plan(self, sync_replication_plan):
+        """Sets the sync_replication_plan of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_plan: The sync_replication_plan of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_plan: SyncReplicationPlanWhereInput
+        """
+
+        self._sync_replication_plan = sync_replication_plan
+
+    @property
+    def sync_replication_status(self):
+        """Gets the sync_replication_status of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_status of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: SyncReplicationStatus
+        """
+        return self._sync_replication_status
+
+    @sync_replication_status.setter
+    def sync_replication_status(self, sync_replication_status):
+        """Sets the sync_replication_status of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_status: The sync_replication_status of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_status: SyncReplicationStatus
+        """
+
+        self._sync_replication_status = sync_replication_status
+
+    @property
+    def sync_replication_status_in(self):
+        """Gets the sync_replication_status_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_status_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[SyncReplicationStatus]
+        """
+        return self._sync_replication_status_in
+
+    @sync_replication_status_in.setter
+    def sync_replication_status_in(self, sync_replication_status_in):
+        """Sets the sync_replication_status_in of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_status_in: The sync_replication_status_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_status_in: list[SyncReplicationStatus]
+        """
+
+        self._sync_replication_status_in = sync_replication_status_in
+
+    @property
+    def sync_replication_status_not(self):
+        """Gets the sync_replication_status_not of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_status_not of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: SyncReplicationStatus
+        """
+        return self._sync_replication_status_not
+
+    @sync_replication_status_not.setter
+    def sync_replication_status_not(self, sync_replication_status_not):
+        """Sets the sync_replication_status_not of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_status_not: The sync_replication_status_not of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_status_not: SyncReplicationStatus
+        """
+
+        self._sync_replication_status_not = sync_replication_status_not
+
+    @property
+    def sync_replication_status_not_in(self):
+        """Gets the sync_replication_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :rtype: list[SyncReplicationStatus]
+        """
+        return self._sync_replication_status_not_in
+
+    @sync_replication_status_not_in.setter
+    def sync_replication_status_not_in(self, sync_replication_status_not_in):
+        """Sets the sync_replication_status_not_in of this ReplicaVmWhereInput.
+
+
+        :param sync_replication_status_not_in: The sync_replication_status_not_in of this ReplicaVmWhereInput.  # noqa: E501
+        :type sync_replication_status_not_in: list[SyncReplicationStatus]
+        """
+
+        self._sync_replication_status_not_in = sync_replication_status_not_in
 
     @property
     def targets_deletable(self):

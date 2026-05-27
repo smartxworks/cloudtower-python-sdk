@@ -219,9 +219,6 @@ class SyncReplicationPlanWhereInput(object):
         'replication_restore_points_every': 'ReplicationRestorePointWhereInput',
         'replication_restore_points_none': 'ReplicationRestorePointWhereInput',
         'replication_restore_points_some': 'ReplicationRestorePointWhereInput',
-        'replication_target_executions_every': 'ReplicationTargetExecutionWhereInput',
-        'replication_target_executions_none': 'ReplicationTargetExecutionWhereInput',
-        'replication_target_executions_some': 'ReplicationTargetExecutionWhereInput',
         'resiliency_type': 'ResiliencyType',
         'resiliency_type_in': 'list[ResiliencyType]',
         'resiliency_type_not': 'ResiliencyType',
@@ -464,9 +461,6 @@ class SyncReplicationPlanWhereInput(object):
         'replication_restore_points_every': 'replication_restore_points_every',
         'replication_restore_points_none': 'replication_restore_points_none',
         'replication_restore_points_some': 'replication_restore_points_some',
-        'replication_target_executions_every': 'replication_target_executions_every',
-        'replication_target_executions_none': 'replication_target_executions_none',
-        'replication_target_executions_some': 'replication_target_executions_some',
         'resiliency_type': 'resiliency_type',
         'resiliency_type_in': 'resiliency_type_in',
         'resiliency_type_not': 'resiliency_type_not',
@@ -712,9 +706,6 @@ class SyncReplicationPlanWhereInput(object):
         self._replication_restore_points_every = None
         self._replication_restore_points_none = None
         self._replication_restore_points_some = None
-        self._replication_target_executions_every = None
-        self._replication_target_executions_none = None
-        self._replication_target_executions_some = None
         self._resiliency_type = None
         self._resiliency_type_in = None
         self._resiliency_type_not = None
@@ -956,9 +947,6 @@ class SyncReplicationPlanWhereInput(object):
         self.replication_restore_points_every = kwargs.get("replication_restore_points_every", None)
         self.replication_restore_points_none = kwargs.get("replication_restore_points_none", None)
         self.replication_restore_points_some = kwargs.get("replication_restore_points_some", None)
-        self.replication_target_executions_every = kwargs.get("replication_target_executions_every", None)
-        self.replication_target_executions_none = kwargs.get("replication_target_executions_none", None)
-        self.replication_target_executions_some = kwargs.get("replication_target_executions_some", None)
         self.resiliency_type = kwargs.get("resiliency_type", None)
         self.resiliency_type_in = kwargs.get("resiliency_type_in", None)
         self.resiliency_type_not = kwargs.get("resiliency_type_not", None)
@@ -5078,69 +5066,6 @@ class SyncReplicationPlanWhereInput(object):
         """
 
         self._replication_restore_points_some = replication_restore_points_some
-
-    @property
-    def replication_target_executions_every(self):
-        """Gets the replication_target_executions_every of this SyncReplicationPlanWhereInput.  # noqa: E501
-
-
-        :return: The replication_target_executions_every of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :rtype: ReplicationTargetExecutionWhereInput
-        """
-        return self._replication_target_executions_every
-
-    @replication_target_executions_every.setter
-    def replication_target_executions_every(self, replication_target_executions_every):
-        """Sets the replication_target_executions_every of this SyncReplicationPlanWhereInput.
-
-
-        :param replication_target_executions_every: The replication_target_executions_every of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :type replication_target_executions_every: ReplicationTargetExecutionWhereInput
-        """
-
-        self._replication_target_executions_every = replication_target_executions_every
-
-    @property
-    def replication_target_executions_none(self):
-        """Gets the replication_target_executions_none of this SyncReplicationPlanWhereInput.  # noqa: E501
-
-
-        :return: The replication_target_executions_none of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :rtype: ReplicationTargetExecutionWhereInput
-        """
-        return self._replication_target_executions_none
-
-    @replication_target_executions_none.setter
-    def replication_target_executions_none(self, replication_target_executions_none):
-        """Sets the replication_target_executions_none of this SyncReplicationPlanWhereInput.
-
-
-        :param replication_target_executions_none: The replication_target_executions_none of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :type replication_target_executions_none: ReplicationTargetExecutionWhereInput
-        """
-
-        self._replication_target_executions_none = replication_target_executions_none
-
-    @property
-    def replication_target_executions_some(self):
-        """Gets the replication_target_executions_some of this SyncReplicationPlanWhereInput.  # noqa: E501
-
-
-        :return: The replication_target_executions_some of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :rtype: ReplicationTargetExecutionWhereInput
-        """
-        return self._replication_target_executions_some
-
-    @replication_target_executions_some.setter
-    def replication_target_executions_some(self, replication_target_executions_some):
-        """Sets the replication_target_executions_some of this SyncReplicationPlanWhereInput.
-
-
-        :param replication_target_executions_some: The replication_target_executions_some of this SyncReplicationPlanWhereInput.  # noqa: E501
-        :type replication_target_executions_some: ReplicationTargetExecutionWhereInput
-        """
-
-        self._replication_target_executions_some = replication_target_executions_some
 
     @property
     def resiliency_type(self):
