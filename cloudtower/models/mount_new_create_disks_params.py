@@ -25,6 +25,7 @@ class MountNewCreateDisksParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_config': 'StorageConfig',
         'max_bandwidth_policy': 'VmDiskIoRestrictType',
         'max_bandwidth_unit': 'BPSUnit',
         'max_bandwidth': 'int',
@@ -38,6 +39,7 @@ class MountNewCreateDisksParams(object):
     }
 
     attribute_map = {
+        'storage_config': 'storage_config',
         'max_bandwidth_policy': 'max_bandwidth_policy',
         'max_bandwidth_unit': 'max_bandwidth_unit',
         'max_bandwidth': 'max_bandwidth',
@@ -54,6 +56,7 @@ class MountNewCreateDisksParams(object):
         """MountNewCreateDisksParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_config = None
         self._max_bandwidth_policy = None
         self._max_bandwidth_unit = None
         self._max_bandwidth = None
@@ -66,6 +69,8 @@ class MountNewCreateDisksParams(object):
         self._boot = None
         self.discriminator = None
 
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "max_bandwidth_policy" in kwargs:
             self.max_bandwidth_policy = kwargs["max_bandwidth_policy"]
         if "max_bandwidth_unit" in kwargs:
@@ -86,6 +91,27 @@ class MountNewCreateDisksParams(object):
             self.bus = kwargs["bus"]
         if "boot" in kwargs:
             self.boot = kwargs["boot"]
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this MountNewCreateDisksParams.  # noqa: E501
+
+
+        :return: The storage_config of this MountNewCreateDisksParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this MountNewCreateDisksParams.
+
+
+        :param storage_config: The storage_config of this MountNewCreateDisksParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def max_bandwidth_policy(self):

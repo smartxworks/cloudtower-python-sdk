@@ -26,12 +26,14 @@ class NestedVmFolder(object):
     """
     openapi_types = {
         'id': 'str',
-        'name': 'str'
+        'name': 'str',
+        'path': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'name': 'name'
+        'name': 'name',
+        'path': 'path'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -40,12 +42,14 @@ class NestedVmFolder(object):
 
         self._id = None
         self._name = None
+        self._path = None
         self.discriminator = None
 
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.path = kwargs.get("path", None)
 
     @property
     def id(self):
@@ -92,6 +96,27 @@ class NestedVmFolder(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def path(self):
+        """Gets the path of this NestedVmFolder.  # noqa: E501
+
+
+        :return: The path of this NestedVmFolder.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this NestedVmFolder.
+
+
+        :param path: The path of this NestedVmFolder.  # noqa: E501
+        :type path: str
+        """
+
+        self._path = path
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

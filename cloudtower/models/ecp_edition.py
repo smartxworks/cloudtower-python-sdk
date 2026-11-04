@@ -21,11 +21,13 @@ class EcpEdition(object):
     allowed enum values
     """
     ADVANCED = "ECP_ADVANCED"
+    COMPUTE = "ECP_COMPUTE"
     ESSENTIAL = "ECP_ESSENTIAL"
     STANDARD = "ECP_STANDARD"
     VDI_ESSENTIAL = "ECP_VDI_ESSENTIAL"
+    VDI_STANDARD = "ECP_VDI_STANDARD"
 
-    allowable_values = [ADVANCED, ESSENTIAL, STANDARD, VDI_ESSENTIAL]  # noqa: E501
+    allowable_values = [ADVANCED, COMPUTE, ESSENTIAL, STANDARD, VDI_ESSENTIAL, VDI_STANDARD]  # noqa: E501
 
     """
     Attributes:

@@ -29,7 +29,8 @@ class VmdkCdromModify(object):
         'content_library_image_id': 'str',
         'elf_image_id': 'str',
         'boot': 'int',
-        'index': 'int'
+        'index': 'int',
+        'storage_config': 'StorageConfig'
     }
 
     attribute_map = {
@@ -37,7 +38,8 @@ class VmdkCdromModify(object):
         'content_library_image_id': 'content_library_image_id',
         'elf_image_id': 'elf_image_id',
         'boot': 'boot',
-        'index': 'index'
+        'index': 'index',
+        'storage_config': 'storage_config'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -49,6 +51,7 @@ class VmdkCdromModify(object):
         self._elf_image_id = None
         self._boot = None
         self._index = None
+        self._storage_config = None
         self.discriminator = None
 
         if "removed" in kwargs:
@@ -61,6 +64,8 @@ class VmdkCdromModify(object):
             self.boot = kwargs["boot"]
         if "index" in kwargs:
             self.index = kwargs["index"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
 
     @property
     def removed(self):
@@ -168,6 +173,27 @@ class VmdkCdromModify(object):
             raise ValueError("Invalid value for `index`, must not be `None`")  # noqa: E501
 
         self._index = index
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmdkCdromModify.  # noqa: E501
+
+
+        :return: The storage_config of this VmdkCdromModify.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmdkCdromModify.
+
+
+        :param storage_config: The storage_config of this VmdkCdromModify.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

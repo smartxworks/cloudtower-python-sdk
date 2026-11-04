@@ -26,11 +26,13 @@ class NestedCluster(object):
     """
     openapi_types = {
         'id': 'str',
+        'local_id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'local_id': 'local_id',
         'name': 'name'
     }
 
@@ -39,11 +41,13 @@ class NestedCluster(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._id = None
+        self._local_id = None
         self._name = None
         self.discriminator = None
 
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.local_id = kwargs.get("local_id", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
 
@@ -69,6 +73,27 @@ class NestedCluster(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def local_id(self):
+        """Gets the local_id of this NestedCluster.  # noqa: E501
+
+
+        :return: The local_id of this NestedCluster.  # noqa: E501
+        :rtype: str
+        """
+        return self._local_id
+
+    @local_id.setter
+    def local_id(self, local_id):
+        """Sets the local_id of this NestedCluster.
+
+
+        :param local_id: The local_id of this NestedCluster.  # noqa: E501
+        :type local_id: str
+        """
+
+        self._local_id = local_id
 
     @property
     def name(self):

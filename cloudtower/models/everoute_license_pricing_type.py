@@ -20,11 +20,12 @@ class EverouteLicensePricingType(object):
     """
     allowed enum values
     """
+    CORE_NUM = "CORE_NUM"
     CPU_SLOT_NUM = "CPU_SLOT_NUM"
     VCPU_NUM = "VCPU_NUM"
     VM_NUM = "VM_NUM"
 
-    allowable_values = [CPU_SLOT_NUM, VCPU_NUM, VM_NUM]  # noqa: E501
+    allowable_values = [CORE_NUM, CPU_SLOT_NUM, VCPU_NUM, VM_NUM]  # noqa: E501
 
     """
     Attributes:

@@ -26,12 +26,14 @@ class VmMigrateAcrossClusterParamsData(object):
     """
     openapi_types = {
         'vm_config': 'MigrateVmConfig',
+        'storage_config': 'StorageConfig',
         'cluster_id': 'str',
         'host_id': 'str'
     }
 
     attribute_map = {
         'vm_config': 'vm_config',
+        'storage_config': 'storage_config',
         'cluster_id': 'cluster_id',
         'host_id': 'host_id'
     }
@@ -41,12 +43,15 @@ class VmMigrateAcrossClusterParamsData(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._vm_config = None
+        self._storage_config = None
         self._cluster_id = None
         self._host_id = None
         self.discriminator = None
 
         if "vm_config" in kwargs:
             self.vm_config = kwargs["vm_config"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
         if "host_id" in kwargs:
@@ -74,6 +79,27 @@ class VmMigrateAcrossClusterParamsData(object):
             raise ValueError("Invalid value for `vm_config`, must not be `None`")  # noqa: E501
 
         self._vm_config = vm_config
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmMigrateAcrossClusterParamsData.  # noqa: E501
+
+
+        :return: The storage_config of this VmMigrateAcrossClusterParamsData.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmMigrateAcrossClusterParamsData.
+
+
+        :param storage_config: The storage_config of this VmMigrateAcrossClusterParamsData.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def cluster_id(self):

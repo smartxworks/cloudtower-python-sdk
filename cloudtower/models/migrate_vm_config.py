@@ -28,6 +28,8 @@ class MigrateVmConfig(object):
         'remove_unmovable_devices': 'bool',
         'new_name': 'str',
         'network_mapping': 'list[VlanMapping]',
+        'provision_policy': 'VmVolumeProvisionPolicy',
+        'migrate_mode': 'MigrateMode',
         'migrate_type': 'MigrateType',
         'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
         'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
@@ -39,6 +41,8 @@ class MigrateVmConfig(object):
         'remove_unmovable_devices': 'remove_unmovable_devices',
         'new_name': 'new_name',
         'network_mapping': 'network_mapping',
+        'provision_policy': 'provision_policy',
+        'migrate_mode': 'migrate_mode',
         'migrate_type': 'migrate_type',
         'elf_ec_storage_policy': 'elf_ec_storage_policy',
         'elf_replica_storage_policy': 'elf_replica_storage_policy',
@@ -53,6 +57,8 @@ class MigrateVmConfig(object):
         self._remove_unmovable_devices = None
         self._new_name = None
         self._network_mapping = None
+        self._provision_policy = None
+        self._migrate_mode = None
         self._migrate_type = None
         self._elf_ec_storage_policy = None
         self._elf_replica_storage_policy = None
@@ -66,6 +72,10 @@ class MigrateVmConfig(object):
             self.new_name = kwargs["new_name"]
         if "network_mapping" in kwargs:
             self.network_mapping = kwargs["network_mapping"]
+        if "provision_policy" in kwargs:
+            self.provision_policy = kwargs["provision_policy"]
+        if "migrate_mode" in kwargs:
+            self.migrate_mode = kwargs["migrate_mode"]
         if "migrate_type" in kwargs:
             self.migrate_type = kwargs["migrate_type"]
         if "elf_ec_storage_policy" in kwargs:
@@ -141,6 +151,48 @@ class MigrateVmConfig(object):
             raise ValueError("Invalid value for `network_mapping`, must not be `None`")  # noqa: E501
 
         self._network_mapping = network_mapping
+
+    @property
+    def provision_policy(self):
+        """Gets the provision_policy of this MigrateVmConfig.  # noqa: E501
+
+
+        :return: The provision_policy of this MigrateVmConfig.  # noqa: E501
+        :rtype: VmVolumeProvisionPolicy
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this MigrateVmConfig.
+
+
+        :param provision_policy: The provision_policy of this MigrateVmConfig.  # noqa: E501
+        :type provision_policy: VmVolumeProvisionPolicy
+        """
+
+        self._provision_policy = provision_policy
+
+    @property
+    def migrate_mode(self):
+        """Gets the migrate_mode of this MigrateVmConfig.  # noqa: E501
+
+
+        :return: The migrate_mode of this MigrateVmConfig.  # noqa: E501
+        :rtype: MigrateMode
+        """
+        return self._migrate_mode
+
+    @migrate_mode.setter
+    def migrate_mode(self, migrate_mode):
+        """Sets the migrate_mode of this MigrateVmConfig.
+
+
+        :param migrate_mode: The migrate_mode of this MigrateVmConfig.  # noqa: E501
+        :type migrate_mode: MigrateMode
+        """
+
+        self._migrate_mode = migrate_mode
 
     @property
     def migrate_type(self):

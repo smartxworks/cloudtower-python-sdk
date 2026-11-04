@@ -146,6 +146,20 @@ class VmVolumeSnapshotWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
+        'provision_policy': 'str',
+        'provision_policy_contains': 'str',
+        'provision_policy_ends_with': 'str',
+        'provision_policy_gt': 'str',
+        'provision_policy_gte': 'str',
+        'provision_policy_in': 'list[str]',
+        'provision_policy_lt': 'str',
+        'provision_policy_lte': 'str',
+        'provision_policy_not': 'str',
+        'provision_policy_not_contains': 'str',
+        'provision_policy_not_ends_with': 'str',
+        'provision_policy_not_in': 'list[str]',
+        'provision_policy_not_starts_with': 'str',
+        'provision_policy_starts_with': 'str',
         'resident_in_cache': 'bool',
         'resident_in_cache_not': 'bool',
         'shared_size': 'float',
@@ -164,6 +178,7 @@ class VmVolumeSnapshotWhereInput(object):
         'size_lte': 'float',
         'size_not': 'float',
         'size_not_in': 'list[float]',
+        'storage_cluster_config': 'StorageClusterConfigWhereInput',
         'type': 'VmVolumeSnapshotType',
         'type_in': 'list[VmVolumeSnapshotType]',
         'type_not': 'VmVolumeSnapshotType',
@@ -325,6 +340,20 @@ class VmVolumeSnapshotWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
+        'provision_policy': 'provision_policy',
+        'provision_policy_contains': 'provision_policy_contains',
+        'provision_policy_ends_with': 'provision_policy_ends_with',
+        'provision_policy_gt': 'provision_policy_gt',
+        'provision_policy_gte': 'provision_policy_gte',
+        'provision_policy_in': 'provision_policy_in',
+        'provision_policy_lt': 'provision_policy_lt',
+        'provision_policy_lte': 'provision_policy_lte',
+        'provision_policy_not': 'provision_policy_not',
+        'provision_policy_not_contains': 'provision_policy_not_contains',
+        'provision_policy_not_ends_with': 'provision_policy_not_ends_with',
+        'provision_policy_not_in': 'provision_policy_not_in',
+        'provision_policy_not_starts_with': 'provision_policy_not_starts_with',
+        'provision_policy_starts_with': 'provision_policy_starts_with',
         'resident_in_cache': 'resident_in_cache',
         'resident_in_cache_not': 'resident_in_cache_not',
         'shared_size': 'shared_size',
@@ -343,6 +372,7 @@ class VmVolumeSnapshotWhereInput(object):
         'size_lte': 'size_lte',
         'size_not': 'size_not',
         'size_not_in': 'size_not_in',
+        'storage_cluster_config': 'storage_cluster_config',
         'type': 'type',
         'type_in': 'type_in',
         'type_not': 'type_not',
@@ -507,6 +537,20 @@ class VmVolumeSnapshotWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
+        self._provision_policy = None
+        self._provision_policy_contains = None
+        self._provision_policy_ends_with = None
+        self._provision_policy_gt = None
+        self._provision_policy_gte = None
+        self._provision_policy_in = None
+        self._provision_policy_lt = None
+        self._provision_policy_lte = None
+        self._provision_policy_not = None
+        self._provision_policy_not_contains = None
+        self._provision_policy_not_ends_with = None
+        self._provision_policy_not_in = None
+        self._provision_policy_not_starts_with = None
+        self._provision_policy_starts_with = None
         self._resident_in_cache = None
         self._resident_in_cache_not = None
         self._shared_size = None
@@ -525,6 +569,7 @@ class VmVolumeSnapshotWhereInput(object):
         self._size_lte = None
         self._size_not = None
         self._size_not_in = None
+        self._storage_cluster_config = None
         self._type = None
         self._type_in = None
         self._type_not = None
@@ -685,6 +730,20 @@ class VmVolumeSnapshotWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.provision_policy = kwargs.get("provision_policy", None)
+        self.provision_policy_contains = kwargs.get("provision_policy_contains", None)
+        self.provision_policy_ends_with = kwargs.get("provision_policy_ends_with", None)
+        self.provision_policy_gt = kwargs.get("provision_policy_gt", None)
+        self.provision_policy_gte = kwargs.get("provision_policy_gte", None)
+        self.provision_policy_in = kwargs.get("provision_policy_in", None)
+        self.provision_policy_lt = kwargs.get("provision_policy_lt", None)
+        self.provision_policy_lte = kwargs.get("provision_policy_lte", None)
+        self.provision_policy_not = kwargs.get("provision_policy_not", None)
+        self.provision_policy_not_contains = kwargs.get("provision_policy_not_contains", None)
+        self.provision_policy_not_ends_with = kwargs.get("provision_policy_not_ends_with", None)
+        self.provision_policy_not_in = kwargs.get("provision_policy_not_in", None)
+        self.provision_policy_not_starts_with = kwargs.get("provision_policy_not_starts_with", None)
+        self.provision_policy_starts_with = kwargs.get("provision_policy_starts_with", None)
         self.resident_in_cache = kwargs.get("resident_in_cache", None)
         self.resident_in_cache_not = kwargs.get("resident_in_cache_not", None)
         self.shared_size = kwargs.get("shared_size", None)
@@ -703,6 +762,7 @@ class VmVolumeSnapshotWhereInput(object):
         self.size_lte = kwargs.get("size_lte", None)
         self.size_not = kwargs.get("size_not", None)
         self.size_not_in = kwargs.get("size_not_in", None)
+        self.storage_cluster_config = kwargs.get("storage_cluster_config", None)
         self.type = kwargs.get("type", None)
         self.type_in = kwargs.get("type_in", None)
         self.type_not = kwargs.get("type_not", None)
@@ -3283,6 +3343,300 @@ class VmVolumeSnapshotWhereInput(object):
         self._name_starts_with = name_starts_with
 
     @property
+    def provision_policy(self):
+        """Gets the provision_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy: The provision_policy of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy: str
+        """
+
+        self._provision_policy = provision_policy
+
+    @property
+    def provision_policy_contains(self):
+        """Gets the provision_policy_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_contains
+
+    @provision_policy_contains.setter
+    def provision_policy_contains(self, provision_policy_contains):
+        """Sets the provision_policy_contains of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_contains: The provision_policy_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_contains: str
+        """
+
+        self._provision_policy_contains = provision_policy_contains
+
+    @property
+    def provision_policy_ends_with(self):
+        """Gets the provision_policy_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_ends_with
+
+    @provision_policy_ends_with.setter
+    def provision_policy_ends_with(self, provision_policy_ends_with):
+        """Sets the provision_policy_ends_with of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_ends_with: The provision_policy_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_ends_with: str
+        """
+
+        self._provision_policy_ends_with = provision_policy_ends_with
+
+    @property
+    def provision_policy_gt(self):
+        """Gets the provision_policy_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_gt
+
+    @provision_policy_gt.setter
+    def provision_policy_gt(self, provision_policy_gt):
+        """Sets the provision_policy_gt of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_gt: The provision_policy_gt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_gt: str
+        """
+
+        self._provision_policy_gt = provision_policy_gt
+
+    @property
+    def provision_policy_gte(self):
+        """Gets the provision_policy_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_gte
+
+    @provision_policy_gte.setter
+    def provision_policy_gte(self, provision_policy_gte):
+        """Sets the provision_policy_gte of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_gte: The provision_policy_gte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_gte: str
+        """
+
+        self._provision_policy_gte = provision_policy_gte
+
+    @property
+    def provision_policy_in(self):
+        """Gets the provision_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._provision_policy_in
+
+    @provision_policy_in.setter
+    def provision_policy_in(self, provision_policy_in):
+        """Sets the provision_policy_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_in: The provision_policy_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_in: list[str]
+        """
+
+        self._provision_policy_in = provision_policy_in
+
+    @property
+    def provision_policy_lt(self):
+        """Gets the provision_policy_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_lt
+
+    @provision_policy_lt.setter
+    def provision_policy_lt(self, provision_policy_lt):
+        """Sets the provision_policy_lt of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_lt: The provision_policy_lt of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_lt: str
+        """
+
+        self._provision_policy_lt = provision_policy_lt
+
+    @property
+    def provision_policy_lte(self):
+        """Gets the provision_policy_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_lte
+
+    @provision_policy_lte.setter
+    def provision_policy_lte(self, provision_policy_lte):
+        """Sets the provision_policy_lte of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_lte: The provision_policy_lte of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_lte: str
+        """
+
+        self._provision_policy_lte = provision_policy_lte
+
+    @property
+    def provision_policy_not(self):
+        """Gets the provision_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_not
+
+    @provision_policy_not.setter
+    def provision_policy_not(self, provision_policy_not):
+        """Sets the provision_policy_not of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_not: The provision_policy_not of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_not: str
+        """
+
+        self._provision_policy_not = provision_policy_not
+
+    @property
+    def provision_policy_not_contains(self):
+        """Gets the provision_policy_not_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_not_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_not_contains
+
+    @provision_policy_not_contains.setter
+    def provision_policy_not_contains(self, provision_policy_not_contains):
+        """Sets the provision_policy_not_contains of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_not_contains: The provision_policy_not_contains of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_not_contains: str
+        """
+
+        self._provision_policy_not_contains = provision_policy_not_contains
+
+    @property
+    def provision_policy_not_ends_with(self):
+        """Gets the provision_policy_not_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_not_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_not_ends_with
+
+    @provision_policy_not_ends_with.setter
+    def provision_policy_not_ends_with(self, provision_policy_not_ends_with):
+        """Sets the provision_policy_not_ends_with of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_not_ends_with: The provision_policy_not_ends_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_not_ends_with: str
+        """
+
+        self._provision_policy_not_ends_with = provision_policy_not_ends_with
+
+    @property
+    def provision_policy_not_in(self):
+        """Gets the provision_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._provision_policy_not_in
+
+    @provision_policy_not_in.setter
+    def provision_policy_not_in(self, provision_policy_not_in):
+        """Sets the provision_policy_not_in of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_not_in: The provision_policy_not_in of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_not_in: list[str]
+        """
+
+        self._provision_policy_not_in = provision_policy_not_in
+
+    @property
+    def provision_policy_not_starts_with(self):
+        """Gets the provision_policy_not_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_not_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_not_starts_with
+
+    @provision_policy_not_starts_with.setter
+    def provision_policy_not_starts_with(self, provision_policy_not_starts_with):
+        """Sets the provision_policy_not_starts_with of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_not_starts_with: The provision_policy_not_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_not_starts_with: str
+        """
+
+        self._provision_policy_not_starts_with = provision_policy_not_starts_with
+
+    @property
+    def provision_policy_starts_with(self):
+        """Gets the provision_policy_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The provision_policy_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy_starts_with
+
+    @provision_policy_starts_with.setter
+    def provision_policy_starts_with(self, provision_policy_starts_with):
+        """Sets the provision_policy_starts_with of this VmVolumeSnapshotWhereInput.
+
+
+        :param provision_policy_starts_with: The provision_policy_starts_with of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type provision_policy_starts_with: str
+        """
+
+        self._provision_policy_starts_with = provision_policy_starts_with
+
+    @property
     def resident_in_cache(self):
         """Gets the resident_in_cache of this VmVolumeSnapshotWhereInput.  # noqa: E501
 
@@ -3659,6 +4013,27 @@ class VmVolumeSnapshotWhereInput(object):
         """
 
         self._size_not_in = size_not_in
+
+    @property
+    def storage_cluster_config(self):
+        """Gets the storage_cluster_config of this VmVolumeSnapshotWhereInput.  # noqa: E501
+
+
+        :return: The storage_cluster_config of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :rtype: StorageClusterConfigWhereInput
+        """
+        return self._storage_cluster_config
+
+    @storage_cluster_config.setter
+    def storage_cluster_config(self, storage_cluster_config):
+        """Sets the storage_cluster_config of this VmVolumeSnapshotWhereInput.
+
+
+        :param storage_cluster_config: The storage_cluster_config of this VmVolumeSnapshotWhereInput.  # noqa: E501
+        :type storage_cluster_config: StorageClusterConfigWhereInput
+        """
+
+        self._storage_cluster_config = storage_cluster_config
 
     @property
     def type(self):

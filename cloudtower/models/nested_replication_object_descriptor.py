@@ -32,6 +32,7 @@ class NestedReplicationObjectDescriptor(object):
         'parent_object_local_id': 'str',
         'parent_object_name': 'str',
         'tower_deploy_id': 'str',
+        'type': 'ReplicationObjectType',
         'zbs_volume_id': 'str'
     }
 
@@ -43,6 +44,7 @@ class NestedReplicationObjectDescriptor(object):
         'parent_object_local_id': 'parent_object_local_id',
         'parent_object_name': 'parent_object_name',
         'tower_deploy_id': 'tower_deploy_id',
+        'type': 'type',
         'zbs_volume_id': 'zbs_volume_id'
     }
 
@@ -57,6 +59,7 @@ class NestedReplicationObjectDescriptor(object):
         self._parent_object_local_id = None
         self._parent_object_name = None
         self._tower_deploy_id = None
+        self._type = None
         self._zbs_volume_id = None
         self.discriminator = None
 
@@ -69,6 +72,8 @@ class NestedReplicationObjectDescriptor(object):
         self.parent_object_local_id = kwargs.get("parent_object_local_id", None)
         self.parent_object_name = kwargs.get("parent_object_name", None)
         self.tower_deploy_id = kwargs.get("tower_deploy_id", None)
+        if "type" in kwargs:
+            self.type = kwargs["type"]
         self.zbs_volume_id = kwargs.get("zbs_volume_id", None)
 
     @property
@@ -221,6 +226,29 @@ class NestedReplicationObjectDescriptor(object):
         """
 
         self._tower_deploy_id = tower_deploy_id
+
+    @property
+    def type(self):
+        """Gets the type of this NestedReplicationObjectDescriptor.  # noqa: E501
+
+
+        :return: The type of this NestedReplicationObjectDescriptor.  # noqa: E501
+        :rtype: ReplicationObjectType
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this NestedReplicationObjectDescriptor.
+
+
+        :param type: The type of this NestedReplicationObjectDescriptor.  # noqa: E501
+        :type type: ReplicationObjectType
+        """
+        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
 
     @property
     def zbs_volume_id(self):

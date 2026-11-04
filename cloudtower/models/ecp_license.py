@@ -25,13 +25,24 @@ class EcpLicense(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'async_replication': 'str',
+        'backup': 'str',
+        'brand': 'str',
         'cluster': 'NestedCluster',
         'cluster_local_id': 'str',
+        'dfw': 'str',
         'ecp_edition': 'EcpEdition',
         'expire_date': 'str',
+        'external_storage': 'bool',
+        'file_storage': 'str',
         'has_metrox': 'bool',
         'has_remote_backup': 'bool',
         'id': 'str',
+        'k8s_bare_metal': 'str',
+        'k8s_service': 'str',
+        'lb': 'str',
+        'license_payload': 'str',
+        'license_signature': 'str',
         'license_type': 'LicenseType',
         'max_core_num': 'int',
         'max_physical_data_capacity': 'float',
@@ -41,18 +52,32 @@ class EcpLicense(object):
         'sign_date': 'str',
         'subscription_expire_date': 'str',
         'subscription_start_date': 'str',
+        'sync_replication': 'str',
+        'traffic_visualization': 'str',
         'vendor': 'str',
-        'version': 'int'
+        'version': 'int',
+        'vpc': 'str'
     }
 
     attribute_map = {
+        'async_replication': 'async_replication',
+        'backup': 'backup',
+        'brand': 'brand',
         'cluster': 'cluster',
         'cluster_local_id': 'cluster_local_id',
+        'dfw': 'dfw',
         'ecp_edition': 'ecp_edition',
         'expire_date': 'expire_date',
+        'external_storage': 'external_storage',
+        'file_storage': 'file_storage',
         'has_metrox': 'has_metrox',
         'has_remote_backup': 'has_remote_backup',
         'id': 'id',
+        'k8s_bare_metal': 'k8s_bare_metal',
+        'k8s_service': 'k8s_service',
+        'lb': 'lb',
+        'license_payload': 'license_payload',
+        'license_signature': 'license_signature',
         'license_type': 'license_type',
         'max_core_num': 'max_core_num',
         'max_physical_data_capacity': 'max_physical_data_capacity',
@@ -62,21 +87,35 @@ class EcpLicense(object):
         'sign_date': 'sign_date',
         'subscription_expire_date': 'subscription_expire_date',
         'subscription_start_date': 'subscription_start_date',
+        'sync_replication': 'sync_replication',
+        'traffic_visualization': 'traffic_visualization',
         'vendor': 'vendor',
-        'version': 'version'
+        'version': 'version',
+        'vpc': 'vpc'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
         """EcpLicense - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._async_replication = None
+        self._backup = None
+        self._brand = None
         self._cluster = None
         self._cluster_local_id = None
+        self._dfw = None
         self._ecp_edition = None
         self._expire_date = None
+        self._external_storage = None
+        self._file_storage = None
         self._has_metrox = None
         self._has_remote_backup = None
         self._id = None
+        self._k8s_bare_metal = None
+        self._k8s_service = None
+        self._lb = None
+        self._license_payload = None
+        self._license_signature = None
         self._license_type = None
         self._max_core_num = None
         self._max_physical_data_capacity = None
@@ -86,20 +125,34 @@ class EcpLicense(object):
         self._sign_date = None
         self._subscription_expire_date = None
         self._subscription_start_date = None
+        self._sync_replication = None
+        self._traffic_visualization = None
         self._vendor = None
         self._version = None
+        self._vpc = None
         self.discriminator = None
 
+        self.async_replication = kwargs.get("async_replication", None)
+        self.backup = kwargs.get("backup", None)
+        self.brand = kwargs.get("brand", None)
         self.cluster = kwargs.get("cluster", None)
         if "cluster_local_id" in kwargs:
             self.cluster_local_id = kwargs["cluster_local_id"]
+        self.dfw = kwargs.get("dfw", None)
         if "ecp_edition" in kwargs:
             self.ecp_edition = kwargs["ecp_edition"]
         self.expire_date = kwargs.get("expire_date", None)
+        self.external_storage = kwargs.get("external_storage", None)
+        self.file_storage = kwargs.get("file_storage", None)
         self.has_metrox = kwargs.get("has_metrox", None)
         self.has_remote_backup = kwargs.get("has_remote_backup", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.k8s_bare_metal = kwargs.get("k8s_bare_metal", None)
+        self.k8s_service = kwargs.get("k8s_service", None)
+        self.lb = kwargs.get("lb", None)
+        self.license_payload = kwargs.get("license_payload", None)
+        self.license_signature = kwargs.get("license_signature", None)
         self.license_type = kwargs.get("license_type", None)
         if "max_core_num" in kwargs:
             self.max_core_num = kwargs["max_core_num"]
@@ -113,9 +166,75 @@ class EcpLicense(object):
             self.sign_date = kwargs["sign_date"]
         self.subscription_expire_date = kwargs.get("subscription_expire_date", None)
         self.subscription_start_date = kwargs.get("subscription_start_date", None)
+        self.sync_replication = kwargs.get("sync_replication", None)
+        self.traffic_visualization = kwargs.get("traffic_visualization", None)
         self.vendor = kwargs.get("vendor", None)
         if "version" in kwargs:
             self.version = kwargs["version"]
+        self.vpc = kwargs.get("vpc", None)
+
+    @property
+    def async_replication(self):
+        """Gets the async_replication of this EcpLicense.  # noqa: E501
+
+
+        :return: The async_replication of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication
+
+    @async_replication.setter
+    def async_replication(self, async_replication):
+        """Sets the async_replication of this EcpLicense.
+
+
+        :param async_replication: The async_replication of this EcpLicense.  # noqa: E501
+        :type async_replication: str
+        """
+
+        self._async_replication = async_replication
+
+    @property
+    def backup(self):
+        """Gets the backup of this EcpLicense.  # noqa: E501
+
+
+        :return: The backup of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup
+
+    @backup.setter
+    def backup(self, backup):
+        """Sets the backup of this EcpLicense.
+
+
+        :param backup: The backup of this EcpLicense.  # noqa: E501
+        :type backup: str
+        """
+
+        self._backup = backup
+
+    @property
+    def brand(self):
+        """Gets the brand of this EcpLicense.  # noqa: E501
+
+
+        :return: The brand of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand
+
+    @brand.setter
+    def brand(self, brand):
+        """Sets the brand of this EcpLicense.
+
+
+        :param brand: The brand of this EcpLicense.  # noqa: E501
+        :type brand: str
+        """
+
+        self._brand = brand
 
     @property
     def cluster(self):
@@ -162,6 +281,27 @@ class EcpLicense(object):
         self._cluster_local_id = cluster_local_id
 
     @property
+    def dfw(self):
+        """Gets the dfw of this EcpLicense.  # noqa: E501
+
+
+        :return: The dfw of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw
+
+    @dfw.setter
+    def dfw(self, dfw):
+        """Sets the dfw of this EcpLicense.
+
+
+        :param dfw: The dfw of this EcpLicense.  # noqa: E501
+        :type dfw: str
+        """
+
+        self._dfw = dfw
+
+    @property
     def ecp_edition(self):
         """Gets the ecp_edition of this EcpLicense.  # noqa: E501
 
@@ -204,6 +344,48 @@ class EcpLicense(object):
         """
 
         self._expire_date = expire_date
+
+    @property
+    def external_storage(self):
+        """Gets the external_storage of this EcpLicense.  # noqa: E501
+
+
+        :return: The external_storage of this EcpLicense.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_storage
+
+    @external_storage.setter
+    def external_storage(self, external_storage):
+        """Sets the external_storage of this EcpLicense.
+
+
+        :param external_storage: The external_storage of this EcpLicense.  # noqa: E501
+        :type external_storage: bool
+        """
+
+        self._external_storage = external_storage
+
+    @property
+    def file_storage(self):
+        """Gets the file_storage of this EcpLicense.  # noqa: E501
+
+
+        :return: The file_storage of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage
+
+    @file_storage.setter
+    def file_storage(self, file_storage):
+        """Sets the file_storage of this EcpLicense.
+
+
+        :param file_storage: The file_storage of this EcpLicense.  # noqa: E501
+        :type file_storage: str
+        """
+
+        self._file_storage = file_storage
 
     @property
     def has_metrox(self):
@@ -269,6 +451,111 @@ class EcpLicense(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def k8s_bare_metal(self):
+        """Gets the k8s_bare_metal of this EcpLicense.  # noqa: E501
+
+
+        :return: The k8s_bare_metal of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal
+
+    @k8s_bare_metal.setter
+    def k8s_bare_metal(self, k8s_bare_metal):
+        """Sets the k8s_bare_metal of this EcpLicense.
+
+
+        :param k8s_bare_metal: The k8s_bare_metal of this EcpLicense.  # noqa: E501
+        :type k8s_bare_metal: str
+        """
+
+        self._k8s_bare_metal = k8s_bare_metal
+
+    @property
+    def k8s_service(self):
+        """Gets the k8s_service of this EcpLicense.  # noqa: E501
+
+
+        :return: The k8s_service of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service
+
+    @k8s_service.setter
+    def k8s_service(self, k8s_service):
+        """Sets the k8s_service of this EcpLicense.
+
+
+        :param k8s_service: The k8s_service of this EcpLicense.  # noqa: E501
+        :type k8s_service: str
+        """
+
+        self._k8s_service = k8s_service
+
+    @property
+    def lb(self):
+        """Gets the lb of this EcpLicense.  # noqa: E501
+
+
+        :return: The lb of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb
+
+    @lb.setter
+    def lb(self, lb):
+        """Sets the lb of this EcpLicense.
+
+
+        :param lb: The lb of this EcpLicense.  # noqa: E501
+        :type lb: str
+        """
+
+        self._lb = lb
+
+    @property
+    def license_payload(self):
+        """Gets the license_payload of this EcpLicense.  # noqa: E501
+
+
+        :return: The license_payload of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload
+
+    @license_payload.setter
+    def license_payload(self, license_payload):
+        """Sets the license_payload of this EcpLicense.
+
+
+        :param license_payload: The license_payload of this EcpLicense.  # noqa: E501
+        :type license_payload: str
+        """
+
+        self._license_payload = license_payload
+
+    @property
+    def license_signature(self):
+        """Gets the license_signature of this EcpLicense.  # noqa: E501
+
+
+        :return: The license_signature of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature
+
+    @license_signature.setter
+    def license_signature(self, license_signature):
+        """Sets the license_signature of this EcpLicense.
+
+
+        :param license_signature: The license_signature of this EcpLicense.  # noqa: E501
+        :type license_signature: str
+        """
+
+        self._license_signature = license_signature
 
     @property
     def license_type(self):
@@ -468,6 +755,48 @@ class EcpLicense(object):
         self._subscription_start_date = subscription_start_date
 
     @property
+    def sync_replication(self):
+        """Gets the sync_replication of this EcpLicense.  # noqa: E501
+
+
+        :return: The sync_replication of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication
+
+    @sync_replication.setter
+    def sync_replication(self, sync_replication):
+        """Sets the sync_replication of this EcpLicense.
+
+
+        :param sync_replication: The sync_replication of this EcpLicense.  # noqa: E501
+        :type sync_replication: str
+        """
+
+        self._sync_replication = sync_replication
+
+    @property
+    def traffic_visualization(self):
+        """Gets the traffic_visualization of this EcpLicense.  # noqa: E501
+
+
+        :return: The traffic_visualization of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization
+
+    @traffic_visualization.setter
+    def traffic_visualization(self, traffic_visualization):
+        """Sets the traffic_visualization of this EcpLicense.
+
+
+        :param traffic_visualization: The traffic_visualization of this EcpLicense.  # noqa: E501
+        :type traffic_visualization: str
+        """
+
+        self._traffic_visualization = traffic_visualization
+
+    @property
     def vendor(self):
         """Gets the vendor of this EcpLicense.  # noqa: E501
 
@@ -510,6 +839,27 @@ class EcpLicense(object):
             raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
+
+    @property
+    def vpc(self):
+        """Gets the vpc of this EcpLicense.  # noqa: E501
+
+
+        :return: The vpc of this EcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc
+
+    @vpc.setter
+    def vpc(self, vpc):
+        """Sets the vpc of this EcpLicense.
+
+
+        :param vpc: The vpc of this EcpLicense.  # noqa: E501
+        :type vpc: str
+        """
+
+        self._vpc = vpc
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

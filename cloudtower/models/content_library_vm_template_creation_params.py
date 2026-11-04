@@ -25,6 +25,7 @@ class ContentLibraryVmTemplateCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_configs': 'list[ContentLibraryVmTemplateStoragePlacement]',
         'clusters': 'ClusterWhereInput',
         'cloud_init_supported': 'bool',
         'vm': 'VmWhereUniqueInput',
@@ -33,6 +34,7 @@ class ContentLibraryVmTemplateCreationParams(object):
     }
 
     attribute_map = {
+        'storage_configs': 'storage_configs',
         'clusters': 'clusters',
         'cloud_init_supported': 'cloud_init_supported',
         'vm': 'vm',
@@ -44,6 +46,7 @@ class ContentLibraryVmTemplateCreationParams(object):
         """ContentLibraryVmTemplateCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_configs = None
         self._clusters = None
         self._cloud_init_supported = None
         self._vm = None
@@ -51,6 +54,8 @@ class ContentLibraryVmTemplateCreationParams(object):
         self._name = None
         self.discriminator = None
 
+        if "storage_configs" in kwargs:
+            self.storage_configs = kwargs["storage_configs"]
         if "clusters" in kwargs:
             self.clusters = kwargs["clusters"]
         if "cloud_init_supported" in kwargs:
@@ -61,6 +66,29 @@ class ContentLibraryVmTemplateCreationParams(object):
             self.description = kwargs["description"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def storage_configs(self):
+        """Gets the storage_configs of this ContentLibraryVmTemplateCreationParams.  # noqa: E501
+
+        Template file placements. Provide nonempty storage_configs or clusters.  # noqa: E501
+
+        :return: The storage_configs of this ContentLibraryVmTemplateCreationParams.  # noqa: E501
+        :rtype: list[ContentLibraryVmTemplateStoragePlacement]
+        """
+        return self._storage_configs
+
+    @storage_configs.setter
+    def storage_configs(self, storage_configs):
+        """Sets the storage_configs of this ContentLibraryVmTemplateCreationParams.
+
+        Template file placements. Provide nonempty storage_configs or clusters.  # noqa: E501
+
+        :param storage_configs: The storage_configs of this ContentLibraryVmTemplateCreationParams.  # noqa: E501
+        :type storage_configs: list[ContentLibraryVmTemplateStoragePlacement]
+        """
+
+        self._storage_configs = storage_configs
 
     @property
     def clusters(self):
@@ -80,8 +108,6 @@ class ContentLibraryVmTemplateCreationParams(object):
         :param clusters: The clusters of this ContentLibraryVmTemplateCreationParams.  # noqa: E501
         :type clusters: ClusterWhereInput
         """
-        if self.local_vars_configuration.client_side_validation and clusters is None:  # noqa: E501
-            raise ValueError("Invalid value for `clusters`, must not be `None`")  # noqa: E501
 
         self._clusters = clusters
 

@@ -28,6 +28,48 @@ class EcpLicenseWhereInput(object):
         '_and': 'list[EcpLicenseWhereInput]',
         '_not': 'list[EcpLicenseWhereInput]',
         '_or': 'list[EcpLicenseWhereInput]',
+        'async_replication': 'str',
+        'async_replication_contains': 'str',
+        'async_replication_ends_with': 'str',
+        'async_replication_gt': 'str',
+        'async_replication_gte': 'str',
+        'async_replication_in': 'list[str]',
+        'async_replication_lt': 'str',
+        'async_replication_lte': 'str',
+        'async_replication_not': 'str',
+        'async_replication_not_contains': 'str',
+        'async_replication_not_ends_with': 'str',
+        'async_replication_not_in': 'list[str]',
+        'async_replication_not_starts_with': 'str',
+        'async_replication_starts_with': 'str',
+        'backup': 'str',
+        'backup_contains': 'str',
+        'backup_ends_with': 'str',
+        'backup_gt': 'str',
+        'backup_gte': 'str',
+        'backup_in': 'list[str]',
+        'backup_lt': 'str',
+        'backup_lte': 'str',
+        'backup_not': 'str',
+        'backup_not_contains': 'str',
+        'backup_not_ends_with': 'str',
+        'backup_not_in': 'list[str]',
+        'backup_not_starts_with': 'str',
+        'backup_starts_with': 'str',
+        'brand': 'str',
+        'brand_contains': 'str',
+        'brand_ends_with': 'str',
+        'brand_gt': 'str',
+        'brand_gte': 'str',
+        'brand_in': 'list[str]',
+        'brand_lt': 'str',
+        'brand_lte': 'str',
+        'brand_not': 'str',
+        'brand_not_contains': 'str',
+        'brand_not_ends_with': 'str',
+        'brand_not_in': 'list[str]',
+        'brand_not_starts_with': 'str',
+        'brand_starts_with': 'str',
         'cluster': 'ClusterWhereInput',
         'cluster_local_id': 'str',
         'cluster_local_id_contains': 'str',
@@ -43,6 +85,20 @@ class EcpLicenseWhereInput(object):
         'cluster_local_id_not_in': 'list[str]',
         'cluster_local_id_not_starts_with': 'str',
         'cluster_local_id_starts_with': 'str',
+        'dfw': 'str',
+        'dfw_contains': 'str',
+        'dfw_ends_with': 'str',
+        'dfw_gt': 'str',
+        'dfw_gte': 'str',
+        'dfw_in': 'list[str]',
+        'dfw_lt': 'str',
+        'dfw_lte': 'str',
+        'dfw_not': 'str',
+        'dfw_not_contains': 'str',
+        'dfw_not_ends_with': 'str',
+        'dfw_not_in': 'list[str]',
+        'dfw_not_starts_with': 'str',
+        'dfw_starts_with': 'str',
         'ecp_edition': 'EcpEdition',
         'ecp_edition_in': 'list[EcpEdition]',
         'ecp_edition_not': 'EcpEdition',
@@ -55,6 +111,22 @@ class EcpLicenseWhereInput(object):
         'expire_date_lte': 'str',
         'expire_date_not': 'str',
         'expire_date_not_in': 'list[str]',
+        'external_storage': 'bool',
+        'external_storage_not': 'bool',
+        'file_storage': 'str',
+        'file_storage_contains': 'str',
+        'file_storage_ends_with': 'str',
+        'file_storage_gt': 'str',
+        'file_storage_gte': 'str',
+        'file_storage_in': 'list[str]',
+        'file_storage_lt': 'str',
+        'file_storage_lte': 'str',
+        'file_storage_not': 'str',
+        'file_storage_not_contains': 'str',
+        'file_storage_not_ends_with': 'str',
+        'file_storage_not_in': 'list[str]',
+        'file_storage_not_starts_with': 'str',
+        'file_storage_starts_with': 'str',
         'has_metrox': 'bool',
         'has_metrox_not': 'bool',
         'has_remote_backup': 'bool',
@@ -73,6 +145,76 @@ class EcpLicenseWhereInput(object):
         'id_not_in': 'list[str]',
         'id_not_starts_with': 'str',
         'id_starts_with': 'str',
+        'k8s_bare_metal': 'str',
+        'k8s_bare_metal_contains': 'str',
+        'k8s_bare_metal_ends_with': 'str',
+        'k8s_bare_metal_gt': 'str',
+        'k8s_bare_metal_gte': 'str',
+        'k8s_bare_metal_in': 'list[str]',
+        'k8s_bare_metal_lt': 'str',
+        'k8s_bare_metal_lte': 'str',
+        'k8s_bare_metal_not': 'str',
+        'k8s_bare_metal_not_contains': 'str',
+        'k8s_bare_metal_not_ends_with': 'str',
+        'k8s_bare_metal_not_in': 'list[str]',
+        'k8s_bare_metal_not_starts_with': 'str',
+        'k8s_bare_metal_starts_with': 'str',
+        'k8s_service': 'str',
+        'k8s_service_contains': 'str',
+        'k8s_service_ends_with': 'str',
+        'k8s_service_gt': 'str',
+        'k8s_service_gte': 'str',
+        'k8s_service_in': 'list[str]',
+        'k8s_service_lt': 'str',
+        'k8s_service_lte': 'str',
+        'k8s_service_not': 'str',
+        'k8s_service_not_contains': 'str',
+        'k8s_service_not_ends_with': 'str',
+        'k8s_service_not_in': 'list[str]',
+        'k8s_service_not_starts_with': 'str',
+        'k8s_service_starts_with': 'str',
+        'lb': 'str',
+        'lb_contains': 'str',
+        'lb_ends_with': 'str',
+        'lb_gt': 'str',
+        'lb_gte': 'str',
+        'lb_in': 'list[str]',
+        'lb_lt': 'str',
+        'lb_lte': 'str',
+        'lb_not': 'str',
+        'lb_not_contains': 'str',
+        'lb_not_ends_with': 'str',
+        'lb_not_in': 'list[str]',
+        'lb_not_starts_with': 'str',
+        'lb_starts_with': 'str',
+        'license_payload': 'str',
+        'license_payload_contains': 'str',
+        'license_payload_ends_with': 'str',
+        'license_payload_gt': 'str',
+        'license_payload_gte': 'str',
+        'license_payload_in': 'list[str]',
+        'license_payload_lt': 'str',
+        'license_payload_lte': 'str',
+        'license_payload_not': 'str',
+        'license_payload_not_contains': 'str',
+        'license_payload_not_ends_with': 'str',
+        'license_payload_not_in': 'list[str]',
+        'license_payload_not_starts_with': 'str',
+        'license_payload_starts_with': 'str',
+        'license_signature': 'str',
+        'license_signature_contains': 'str',
+        'license_signature_ends_with': 'str',
+        'license_signature_gt': 'str',
+        'license_signature_gte': 'str',
+        'license_signature_in': 'list[str]',
+        'license_signature_lt': 'str',
+        'license_signature_lte': 'str',
+        'license_signature_not': 'str',
+        'license_signature_not_contains': 'str',
+        'license_signature_not_ends_with': 'str',
+        'license_signature_not_in': 'list[str]',
+        'license_signature_not_starts_with': 'str',
+        'license_signature_starts_with': 'str',
         'license_type': 'LicenseType',
         'license_type_in': 'list[LicenseType]',
         'license_type_not': 'LicenseType',
@@ -159,6 +301,34 @@ class EcpLicenseWhereInput(object):
         'subscription_start_date_lte': 'str',
         'subscription_start_date_not': 'str',
         'subscription_start_date_not_in': 'list[str]',
+        'sync_replication': 'str',
+        'sync_replication_contains': 'str',
+        'sync_replication_ends_with': 'str',
+        'sync_replication_gt': 'str',
+        'sync_replication_gte': 'str',
+        'sync_replication_in': 'list[str]',
+        'sync_replication_lt': 'str',
+        'sync_replication_lte': 'str',
+        'sync_replication_not': 'str',
+        'sync_replication_not_contains': 'str',
+        'sync_replication_not_ends_with': 'str',
+        'sync_replication_not_in': 'list[str]',
+        'sync_replication_not_starts_with': 'str',
+        'sync_replication_starts_with': 'str',
+        'traffic_visualization': 'str',
+        'traffic_visualization_contains': 'str',
+        'traffic_visualization_ends_with': 'str',
+        'traffic_visualization_gt': 'str',
+        'traffic_visualization_gte': 'str',
+        'traffic_visualization_in': 'list[str]',
+        'traffic_visualization_lt': 'str',
+        'traffic_visualization_lte': 'str',
+        'traffic_visualization_not': 'str',
+        'traffic_visualization_not_contains': 'str',
+        'traffic_visualization_not_ends_with': 'str',
+        'traffic_visualization_not_in': 'list[str]',
+        'traffic_visualization_not_starts_with': 'str',
+        'traffic_visualization_starts_with': 'str',
         'vendor': 'str',
         'vendor_contains': 'str',
         'vendor_ends_with': 'str',
@@ -180,13 +350,69 @@ class EcpLicenseWhereInput(object):
         'version_lt': 'int',
         'version_lte': 'int',
         'version_not': 'int',
-        'version_not_in': 'list[int]'
+        'version_not_in': 'list[int]',
+        'vpc': 'str',
+        'vpc_contains': 'str',
+        'vpc_ends_with': 'str',
+        'vpc_gt': 'str',
+        'vpc_gte': 'str',
+        'vpc_in': 'list[str]',
+        'vpc_lt': 'str',
+        'vpc_lte': 'str',
+        'vpc_not': 'str',
+        'vpc_not_contains': 'str',
+        'vpc_not_ends_with': 'str',
+        'vpc_not_in': 'list[str]',
+        'vpc_not_starts_with': 'str',
+        'vpc_starts_with': 'str'
     }
 
     attribute_map = {
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
+        'async_replication': 'async_replication',
+        'async_replication_contains': 'async_replication_contains',
+        'async_replication_ends_with': 'async_replication_ends_with',
+        'async_replication_gt': 'async_replication_gt',
+        'async_replication_gte': 'async_replication_gte',
+        'async_replication_in': 'async_replication_in',
+        'async_replication_lt': 'async_replication_lt',
+        'async_replication_lte': 'async_replication_lte',
+        'async_replication_not': 'async_replication_not',
+        'async_replication_not_contains': 'async_replication_not_contains',
+        'async_replication_not_ends_with': 'async_replication_not_ends_with',
+        'async_replication_not_in': 'async_replication_not_in',
+        'async_replication_not_starts_with': 'async_replication_not_starts_with',
+        'async_replication_starts_with': 'async_replication_starts_with',
+        'backup': 'backup',
+        'backup_contains': 'backup_contains',
+        'backup_ends_with': 'backup_ends_with',
+        'backup_gt': 'backup_gt',
+        'backup_gte': 'backup_gte',
+        'backup_in': 'backup_in',
+        'backup_lt': 'backup_lt',
+        'backup_lte': 'backup_lte',
+        'backup_not': 'backup_not',
+        'backup_not_contains': 'backup_not_contains',
+        'backup_not_ends_with': 'backup_not_ends_with',
+        'backup_not_in': 'backup_not_in',
+        'backup_not_starts_with': 'backup_not_starts_with',
+        'backup_starts_with': 'backup_starts_with',
+        'brand': 'brand',
+        'brand_contains': 'brand_contains',
+        'brand_ends_with': 'brand_ends_with',
+        'brand_gt': 'brand_gt',
+        'brand_gte': 'brand_gte',
+        'brand_in': 'brand_in',
+        'brand_lt': 'brand_lt',
+        'brand_lte': 'brand_lte',
+        'brand_not': 'brand_not',
+        'brand_not_contains': 'brand_not_contains',
+        'brand_not_ends_with': 'brand_not_ends_with',
+        'brand_not_in': 'brand_not_in',
+        'brand_not_starts_with': 'brand_not_starts_with',
+        'brand_starts_with': 'brand_starts_with',
         'cluster': 'cluster',
         'cluster_local_id': 'cluster_local_id',
         'cluster_local_id_contains': 'cluster_local_id_contains',
@@ -202,6 +428,20 @@ class EcpLicenseWhereInput(object):
         'cluster_local_id_not_in': 'cluster_local_id_not_in',
         'cluster_local_id_not_starts_with': 'cluster_local_id_not_starts_with',
         'cluster_local_id_starts_with': 'cluster_local_id_starts_with',
+        'dfw': 'dfw',
+        'dfw_contains': 'dfw_contains',
+        'dfw_ends_with': 'dfw_ends_with',
+        'dfw_gt': 'dfw_gt',
+        'dfw_gte': 'dfw_gte',
+        'dfw_in': 'dfw_in',
+        'dfw_lt': 'dfw_lt',
+        'dfw_lte': 'dfw_lte',
+        'dfw_not': 'dfw_not',
+        'dfw_not_contains': 'dfw_not_contains',
+        'dfw_not_ends_with': 'dfw_not_ends_with',
+        'dfw_not_in': 'dfw_not_in',
+        'dfw_not_starts_with': 'dfw_not_starts_with',
+        'dfw_starts_with': 'dfw_starts_with',
         'ecp_edition': 'ecp_edition',
         'ecp_edition_in': 'ecp_edition_in',
         'ecp_edition_not': 'ecp_edition_not',
@@ -214,6 +454,22 @@ class EcpLicenseWhereInput(object):
         'expire_date_lte': 'expire_date_lte',
         'expire_date_not': 'expire_date_not',
         'expire_date_not_in': 'expire_date_not_in',
+        'external_storage': 'external_storage',
+        'external_storage_not': 'external_storage_not',
+        'file_storage': 'file_storage',
+        'file_storage_contains': 'file_storage_contains',
+        'file_storage_ends_with': 'file_storage_ends_with',
+        'file_storage_gt': 'file_storage_gt',
+        'file_storage_gte': 'file_storage_gte',
+        'file_storage_in': 'file_storage_in',
+        'file_storage_lt': 'file_storage_lt',
+        'file_storage_lte': 'file_storage_lte',
+        'file_storage_not': 'file_storage_not',
+        'file_storage_not_contains': 'file_storage_not_contains',
+        'file_storage_not_ends_with': 'file_storage_not_ends_with',
+        'file_storage_not_in': 'file_storage_not_in',
+        'file_storage_not_starts_with': 'file_storage_not_starts_with',
+        'file_storage_starts_with': 'file_storage_starts_with',
         'has_metrox': 'has_metrox',
         'has_metrox_not': 'has_metrox_not',
         'has_remote_backup': 'has_remote_backup',
@@ -232,6 +488,76 @@ class EcpLicenseWhereInput(object):
         'id_not_in': 'id_not_in',
         'id_not_starts_with': 'id_not_starts_with',
         'id_starts_with': 'id_starts_with',
+        'k8s_bare_metal': 'k8s_bare_metal',
+        'k8s_bare_metal_contains': 'k8s_bare_metal_contains',
+        'k8s_bare_metal_ends_with': 'k8s_bare_metal_ends_with',
+        'k8s_bare_metal_gt': 'k8s_bare_metal_gt',
+        'k8s_bare_metal_gte': 'k8s_bare_metal_gte',
+        'k8s_bare_metal_in': 'k8s_bare_metal_in',
+        'k8s_bare_metal_lt': 'k8s_bare_metal_lt',
+        'k8s_bare_metal_lte': 'k8s_bare_metal_lte',
+        'k8s_bare_metal_not': 'k8s_bare_metal_not',
+        'k8s_bare_metal_not_contains': 'k8s_bare_metal_not_contains',
+        'k8s_bare_metal_not_ends_with': 'k8s_bare_metal_not_ends_with',
+        'k8s_bare_metal_not_in': 'k8s_bare_metal_not_in',
+        'k8s_bare_metal_not_starts_with': 'k8s_bare_metal_not_starts_with',
+        'k8s_bare_metal_starts_with': 'k8s_bare_metal_starts_with',
+        'k8s_service': 'k8s_service',
+        'k8s_service_contains': 'k8s_service_contains',
+        'k8s_service_ends_with': 'k8s_service_ends_with',
+        'k8s_service_gt': 'k8s_service_gt',
+        'k8s_service_gte': 'k8s_service_gte',
+        'k8s_service_in': 'k8s_service_in',
+        'k8s_service_lt': 'k8s_service_lt',
+        'k8s_service_lte': 'k8s_service_lte',
+        'k8s_service_not': 'k8s_service_not',
+        'k8s_service_not_contains': 'k8s_service_not_contains',
+        'k8s_service_not_ends_with': 'k8s_service_not_ends_with',
+        'k8s_service_not_in': 'k8s_service_not_in',
+        'k8s_service_not_starts_with': 'k8s_service_not_starts_with',
+        'k8s_service_starts_with': 'k8s_service_starts_with',
+        'lb': 'lb',
+        'lb_contains': 'lb_contains',
+        'lb_ends_with': 'lb_ends_with',
+        'lb_gt': 'lb_gt',
+        'lb_gte': 'lb_gte',
+        'lb_in': 'lb_in',
+        'lb_lt': 'lb_lt',
+        'lb_lte': 'lb_lte',
+        'lb_not': 'lb_not',
+        'lb_not_contains': 'lb_not_contains',
+        'lb_not_ends_with': 'lb_not_ends_with',
+        'lb_not_in': 'lb_not_in',
+        'lb_not_starts_with': 'lb_not_starts_with',
+        'lb_starts_with': 'lb_starts_with',
+        'license_payload': 'license_payload',
+        'license_payload_contains': 'license_payload_contains',
+        'license_payload_ends_with': 'license_payload_ends_with',
+        'license_payload_gt': 'license_payload_gt',
+        'license_payload_gte': 'license_payload_gte',
+        'license_payload_in': 'license_payload_in',
+        'license_payload_lt': 'license_payload_lt',
+        'license_payload_lte': 'license_payload_lte',
+        'license_payload_not': 'license_payload_not',
+        'license_payload_not_contains': 'license_payload_not_contains',
+        'license_payload_not_ends_with': 'license_payload_not_ends_with',
+        'license_payload_not_in': 'license_payload_not_in',
+        'license_payload_not_starts_with': 'license_payload_not_starts_with',
+        'license_payload_starts_with': 'license_payload_starts_with',
+        'license_signature': 'license_signature',
+        'license_signature_contains': 'license_signature_contains',
+        'license_signature_ends_with': 'license_signature_ends_with',
+        'license_signature_gt': 'license_signature_gt',
+        'license_signature_gte': 'license_signature_gte',
+        'license_signature_in': 'license_signature_in',
+        'license_signature_lt': 'license_signature_lt',
+        'license_signature_lte': 'license_signature_lte',
+        'license_signature_not': 'license_signature_not',
+        'license_signature_not_contains': 'license_signature_not_contains',
+        'license_signature_not_ends_with': 'license_signature_not_ends_with',
+        'license_signature_not_in': 'license_signature_not_in',
+        'license_signature_not_starts_with': 'license_signature_not_starts_with',
+        'license_signature_starts_with': 'license_signature_starts_with',
         'license_type': 'license_type',
         'license_type_in': 'license_type_in',
         'license_type_not': 'license_type_not',
@@ -318,6 +644,34 @@ class EcpLicenseWhereInput(object):
         'subscription_start_date_lte': 'subscription_start_date_lte',
         'subscription_start_date_not': 'subscription_start_date_not',
         'subscription_start_date_not_in': 'subscription_start_date_not_in',
+        'sync_replication': 'sync_replication',
+        'sync_replication_contains': 'sync_replication_contains',
+        'sync_replication_ends_with': 'sync_replication_ends_with',
+        'sync_replication_gt': 'sync_replication_gt',
+        'sync_replication_gte': 'sync_replication_gte',
+        'sync_replication_in': 'sync_replication_in',
+        'sync_replication_lt': 'sync_replication_lt',
+        'sync_replication_lte': 'sync_replication_lte',
+        'sync_replication_not': 'sync_replication_not',
+        'sync_replication_not_contains': 'sync_replication_not_contains',
+        'sync_replication_not_ends_with': 'sync_replication_not_ends_with',
+        'sync_replication_not_in': 'sync_replication_not_in',
+        'sync_replication_not_starts_with': 'sync_replication_not_starts_with',
+        'sync_replication_starts_with': 'sync_replication_starts_with',
+        'traffic_visualization': 'traffic_visualization',
+        'traffic_visualization_contains': 'traffic_visualization_contains',
+        'traffic_visualization_ends_with': 'traffic_visualization_ends_with',
+        'traffic_visualization_gt': 'traffic_visualization_gt',
+        'traffic_visualization_gte': 'traffic_visualization_gte',
+        'traffic_visualization_in': 'traffic_visualization_in',
+        'traffic_visualization_lt': 'traffic_visualization_lt',
+        'traffic_visualization_lte': 'traffic_visualization_lte',
+        'traffic_visualization_not': 'traffic_visualization_not',
+        'traffic_visualization_not_contains': 'traffic_visualization_not_contains',
+        'traffic_visualization_not_ends_with': 'traffic_visualization_not_ends_with',
+        'traffic_visualization_not_in': 'traffic_visualization_not_in',
+        'traffic_visualization_not_starts_with': 'traffic_visualization_not_starts_with',
+        'traffic_visualization_starts_with': 'traffic_visualization_starts_with',
         'vendor': 'vendor',
         'vendor_contains': 'vendor_contains',
         'vendor_ends_with': 'vendor_ends_with',
@@ -339,7 +693,21 @@ class EcpLicenseWhereInput(object):
         'version_lt': 'version_lt',
         'version_lte': 'version_lte',
         'version_not': 'version_not',
-        'version_not_in': 'version_not_in'
+        'version_not_in': 'version_not_in',
+        'vpc': 'vpc',
+        'vpc_contains': 'vpc_contains',
+        'vpc_ends_with': 'vpc_ends_with',
+        'vpc_gt': 'vpc_gt',
+        'vpc_gte': 'vpc_gte',
+        'vpc_in': 'vpc_in',
+        'vpc_lt': 'vpc_lt',
+        'vpc_lte': 'vpc_lte',
+        'vpc_not': 'vpc_not',
+        'vpc_not_contains': 'vpc_not_contains',
+        'vpc_not_ends_with': 'vpc_not_ends_with',
+        'vpc_not_in': 'vpc_not_in',
+        'vpc_not_starts_with': 'vpc_not_starts_with',
+        'vpc_starts_with': 'vpc_starts_with'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -349,6 +717,48 @@ class EcpLicenseWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
+        self._async_replication = None
+        self._async_replication_contains = None
+        self._async_replication_ends_with = None
+        self._async_replication_gt = None
+        self._async_replication_gte = None
+        self._async_replication_in = None
+        self._async_replication_lt = None
+        self._async_replication_lte = None
+        self._async_replication_not = None
+        self._async_replication_not_contains = None
+        self._async_replication_not_ends_with = None
+        self._async_replication_not_in = None
+        self._async_replication_not_starts_with = None
+        self._async_replication_starts_with = None
+        self._backup = None
+        self._backup_contains = None
+        self._backup_ends_with = None
+        self._backup_gt = None
+        self._backup_gte = None
+        self._backup_in = None
+        self._backup_lt = None
+        self._backup_lte = None
+        self._backup_not = None
+        self._backup_not_contains = None
+        self._backup_not_ends_with = None
+        self._backup_not_in = None
+        self._backup_not_starts_with = None
+        self._backup_starts_with = None
+        self._brand = None
+        self._brand_contains = None
+        self._brand_ends_with = None
+        self._brand_gt = None
+        self._brand_gte = None
+        self._brand_in = None
+        self._brand_lt = None
+        self._brand_lte = None
+        self._brand_not = None
+        self._brand_not_contains = None
+        self._brand_not_ends_with = None
+        self._brand_not_in = None
+        self._brand_not_starts_with = None
+        self._brand_starts_with = None
         self._cluster = None
         self._cluster_local_id = None
         self._cluster_local_id_contains = None
@@ -364,6 +774,20 @@ class EcpLicenseWhereInput(object):
         self._cluster_local_id_not_in = None
         self._cluster_local_id_not_starts_with = None
         self._cluster_local_id_starts_with = None
+        self._dfw = None
+        self._dfw_contains = None
+        self._dfw_ends_with = None
+        self._dfw_gt = None
+        self._dfw_gte = None
+        self._dfw_in = None
+        self._dfw_lt = None
+        self._dfw_lte = None
+        self._dfw_not = None
+        self._dfw_not_contains = None
+        self._dfw_not_ends_with = None
+        self._dfw_not_in = None
+        self._dfw_not_starts_with = None
+        self._dfw_starts_with = None
         self._ecp_edition = None
         self._ecp_edition_in = None
         self._ecp_edition_not = None
@@ -376,6 +800,22 @@ class EcpLicenseWhereInput(object):
         self._expire_date_lte = None
         self._expire_date_not = None
         self._expire_date_not_in = None
+        self._external_storage = None
+        self._external_storage_not = None
+        self._file_storage = None
+        self._file_storage_contains = None
+        self._file_storage_ends_with = None
+        self._file_storage_gt = None
+        self._file_storage_gte = None
+        self._file_storage_in = None
+        self._file_storage_lt = None
+        self._file_storage_lte = None
+        self._file_storage_not = None
+        self._file_storage_not_contains = None
+        self._file_storage_not_ends_with = None
+        self._file_storage_not_in = None
+        self._file_storage_not_starts_with = None
+        self._file_storage_starts_with = None
         self._has_metrox = None
         self._has_metrox_not = None
         self._has_remote_backup = None
@@ -394,6 +834,76 @@ class EcpLicenseWhereInput(object):
         self._id_not_in = None
         self._id_not_starts_with = None
         self._id_starts_with = None
+        self._k8s_bare_metal = None
+        self._k8s_bare_metal_contains = None
+        self._k8s_bare_metal_ends_with = None
+        self._k8s_bare_metal_gt = None
+        self._k8s_bare_metal_gte = None
+        self._k8s_bare_metal_in = None
+        self._k8s_bare_metal_lt = None
+        self._k8s_bare_metal_lte = None
+        self._k8s_bare_metal_not = None
+        self._k8s_bare_metal_not_contains = None
+        self._k8s_bare_metal_not_ends_with = None
+        self._k8s_bare_metal_not_in = None
+        self._k8s_bare_metal_not_starts_with = None
+        self._k8s_bare_metal_starts_with = None
+        self._k8s_service = None
+        self._k8s_service_contains = None
+        self._k8s_service_ends_with = None
+        self._k8s_service_gt = None
+        self._k8s_service_gte = None
+        self._k8s_service_in = None
+        self._k8s_service_lt = None
+        self._k8s_service_lte = None
+        self._k8s_service_not = None
+        self._k8s_service_not_contains = None
+        self._k8s_service_not_ends_with = None
+        self._k8s_service_not_in = None
+        self._k8s_service_not_starts_with = None
+        self._k8s_service_starts_with = None
+        self._lb = None
+        self._lb_contains = None
+        self._lb_ends_with = None
+        self._lb_gt = None
+        self._lb_gte = None
+        self._lb_in = None
+        self._lb_lt = None
+        self._lb_lte = None
+        self._lb_not = None
+        self._lb_not_contains = None
+        self._lb_not_ends_with = None
+        self._lb_not_in = None
+        self._lb_not_starts_with = None
+        self._lb_starts_with = None
+        self._license_payload = None
+        self._license_payload_contains = None
+        self._license_payload_ends_with = None
+        self._license_payload_gt = None
+        self._license_payload_gte = None
+        self._license_payload_in = None
+        self._license_payload_lt = None
+        self._license_payload_lte = None
+        self._license_payload_not = None
+        self._license_payload_not_contains = None
+        self._license_payload_not_ends_with = None
+        self._license_payload_not_in = None
+        self._license_payload_not_starts_with = None
+        self._license_payload_starts_with = None
+        self._license_signature = None
+        self._license_signature_contains = None
+        self._license_signature_ends_with = None
+        self._license_signature_gt = None
+        self._license_signature_gte = None
+        self._license_signature_in = None
+        self._license_signature_lt = None
+        self._license_signature_lte = None
+        self._license_signature_not = None
+        self._license_signature_not_contains = None
+        self._license_signature_not_ends_with = None
+        self._license_signature_not_in = None
+        self._license_signature_not_starts_with = None
+        self._license_signature_starts_with = None
         self._license_type = None
         self._license_type_in = None
         self._license_type_not = None
@@ -480,6 +990,34 @@ class EcpLicenseWhereInput(object):
         self._subscription_start_date_lte = None
         self._subscription_start_date_not = None
         self._subscription_start_date_not_in = None
+        self._sync_replication = None
+        self._sync_replication_contains = None
+        self._sync_replication_ends_with = None
+        self._sync_replication_gt = None
+        self._sync_replication_gte = None
+        self._sync_replication_in = None
+        self._sync_replication_lt = None
+        self._sync_replication_lte = None
+        self._sync_replication_not = None
+        self._sync_replication_not_contains = None
+        self._sync_replication_not_ends_with = None
+        self._sync_replication_not_in = None
+        self._sync_replication_not_starts_with = None
+        self._sync_replication_starts_with = None
+        self._traffic_visualization = None
+        self._traffic_visualization_contains = None
+        self._traffic_visualization_ends_with = None
+        self._traffic_visualization_gt = None
+        self._traffic_visualization_gte = None
+        self._traffic_visualization_in = None
+        self._traffic_visualization_lt = None
+        self._traffic_visualization_lte = None
+        self._traffic_visualization_not = None
+        self._traffic_visualization_not_contains = None
+        self._traffic_visualization_not_ends_with = None
+        self._traffic_visualization_not_in = None
+        self._traffic_visualization_not_starts_with = None
+        self._traffic_visualization_starts_with = None
         self._vendor = None
         self._vendor_contains = None
         self._vendor_ends_with = None
@@ -502,11 +1040,67 @@ class EcpLicenseWhereInput(object):
         self._version_lte = None
         self._version_not = None
         self._version_not_in = None
+        self._vpc = None
+        self._vpc_contains = None
+        self._vpc_ends_with = None
+        self._vpc_gt = None
+        self._vpc_gte = None
+        self._vpc_in = None
+        self._vpc_lt = None
+        self._vpc_lte = None
+        self._vpc_not = None
+        self._vpc_not_contains = None
+        self._vpc_not_ends_with = None
+        self._vpc_not_in = None
+        self._vpc_not_starts_with = None
+        self._vpc_starts_with = None
         self.discriminator = None
 
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.async_replication = kwargs.get("async_replication", None)
+        self.async_replication_contains = kwargs.get("async_replication_contains", None)
+        self.async_replication_ends_with = kwargs.get("async_replication_ends_with", None)
+        self.async_replication_gt = kwargs.get("async_replication_gt", None)
+        self.async_replication_gte = kwargs.get("async_replication_gte", None)
+        self.async_replication_in = kwargs.get("async_replication_in", None)
+        self.async_replication_lt = kwargs.get("async_replication_lt", None)
+        self.async_replication_lte = kwargs.get("async_replication_lte", None)
+        self.async_replication_not = kwargs.get("async_replication_not", None)
+        self.async_replication_not_contains = kwargs.get("async_replication_not_contains", None)
+        self.async_replication_not_ends_with = kwargs.get("async_replication_not_ends_with", None)
+        self.async_replication_not_in = kwargs.get("async_replication_not_in", None)
+        self.async_replication_not_starts_with = kwargs.get("async_replication_not_starts_with", None)
+        self.async_replication_starts_with = kwargs.get("async_replication_starts_with", None)
+        self.backup = kwargs.get("backup", None)
+        self.backup_contains = kwargs.get("backup_contains", None)
+        self.backup_ends_with = kwargs.get("backup_ends_with", None)
+        self.backup_gt = kwargs.get("backup_gt", None)
+        self.backup_gte = kwargs.get("backup_gte", None)
+        self.backup_in = kwargs.get("backup_in", None)
+        self.backup_lt = kwargs.get("backup_lt", None)
+        self.backup_lte = kwargs.get("backup_lte", None)
+        self.backup_not = kwargs.get("backup_not", None)
+        self.backup_not_contains = kwargs.get("backup_not_contains", None)
+        self.backup_not_ends_with = kwargs.get("backup_not_ends_with", None)
+        self.backup_not_in = kwargs.get("backup_not_in", None)
+        self.backup_not_starts_with = kwargs.get("backup_not_starts_with", None)
+        self.backup_starts_with = kwargs.get("backup_starts_with", None)
+        self.brand = kwargs.get("brand", None)
+        self.brand_contains = kwargs.get("brand_contains", None)
+        self.brand_ends_with = kwargs.get("brand_ends_with", None)
+        self.brand_gt = kwargs.get("brand_gt", None)
+        self.brand_gte = kwargs.get("brand_gte", None)
+        self.brand_in = kwargs.get("brand_in", None)
+        self.brand_lt = kwargs.get("brand_lt", None)
+        self.brand_lte = kwargs.get("brand_lte", None)
+        self.brand_not = kwargs.get("brand_not", None)
+        self.brand_not_contains = kwargs.get("brand_not_contains", None)
+        self.brand_not_ends_with = kwargs.get("brand_not_ends_with", None)
+        self.brand_not_in = kwargs.get("brand_not_in", None)
+        self.brand_not_starts_with = kwargs.get("brand_not_starts_with", None)
+        self.brand_starts_with = kwargs.get("brand_starts_with", None)
         self.cluster = kwargs.get("cluster", None)
         self.cluster_local_id = kwargs.get("cluster_local_id", None)
         self.cluster_local_id_contains = kwargs.get("cluster_local_id_contains", None)
@@ -522,6 +1116,20 @@ class EcpLicenseWhereInput(object):
         self.cluster_local_id_not_in = kwargs.get("cluster_local_id_not_in", None)
         self.cluster_local_id_not_starts_with = kwargs.get("cluster_local_id_not_starts_with", None)
         self.cluster_local_id_starts_with = kwargs.get("cluster_local_id_starts_with", None)
+        self.dfw = kwargs.get("dfw", None)
+        self.dfw_contains = kwargs.get("dfw_contains", None)
+        self.dfw_ends_with = kwargs.get("dfw_ends_with", None)
+        self.dfw_gt = kwargs.get("dfw_gt", None)
+        self.dfw_gte = kwargs.get("dfw_gte", None)
+        self.dfw_in = kwargs.get("dfw_in", None)
+        self.dfw_lt = kwargs.get("dfw_lt", None)
+        self.dfw_lte = kwargs.get("dfw_lte", None)
+        self.dfw_not = kwargs.get("dfw_not", None)
+        self.dfw_not_contains = kwargs.get("dfw_not_contains", None)
+        self.dfw_not_ends_with = kwargs.get("dfw_not_ends_with", None)
+        self.dfw_not_in = kwargs.get("dfw_not_in", None)
+        self.dfw_not_starts_with = kwargs.get("dfw_not_starts_with", None)
+        self.dfw_starts_with = kwargs.get("dfw_starts_with", None)
         self.ecp_edition = kwargs.get("ecp_edition", None)
         self.ecp_edition_in = kwargs.get("ecp_edition_in", None)
         self.ecp_edition_not = kwargs.get("ecp_edition_not", None)
@@ -534,6 +1142,22 @@ class EcpLicenseWhereInput(object):
         self.expire_date_lte = kwargs.get("expire_date_lte", None)
         self.expire_date_not = kwargs.get("expire_date_not", None)
         self.expire_date_not_in = kwargs.get("expire_date_not_in", None)
+        self.external_storage = kwargs.get("external_storage", None)
+        self.external_storage_not = kwargs.get("external_storage_not", None)
+        self.file_storage = kwargs.get("file_storage", None)
+        self.file_storage_contains = kwargs.get("file_storage_contains", None)
+        self.file_storage_ends_with = kwargs.get("file_storage_ends_with", None)
+        self.file_storage_gt = kwargs.get("file_storage_gt", None)
+        self.file_storage_gte = kwargs.get("file_storage_gte", None)
+        self.file_storage_in = kwargs.get("file_storage_in", None)
+        self.file_storage_lt = kwargs.get("file_storage_lt", None)
+        self.file_storage_lte = kwargs.get("file_storage_lte", None)
+        self.file_storage_not = kwargs.get("file_storage_not", None)
+        self.file_storage_not_contains = kwargs.get("file_storage_not_contains", None)
+        self.file_storage_not_ends_with = kwargs.get("file_storage_not_ends_with", None)
+        self.file_storage_not_in = kwargs.get("file_storage_not_in", None)
+        self.file_storage_not_starts_with = kwargs.get("file_storage_not_starts_with", None)
+        self.file_storage_starts_with = kwargs.get("file_storage_starts_with", None)
         self.has_metrox = kwargs.get("has_metrox", None)
         self.has_metrox_not = kwargs.get("has_metrox_not", None)
         self.has_remote_backup = kwargs.get("has_remote_backup", None)
@@ -552,6 +1176,76 @@ class EcpLicenseWhereInput(object):
         self.id_not_in = kwargs.get("id_not_in", None)
         self.id_not_starts_with = kwargs.get("id_not_starts_with", None)
         self.id_starts_with = kwargs.get("id_starts_with", None)
+        self.k8s_bare_metal = kwargs.get("k8s_bare_metal", None)
+        self.k8s_bare_metal_contains = kwargs.get("k8s_bare_metal_contains", None)
+        self.k8s_bare_metal_ends_with = kwargs.get("k8s_bare_metal_ends_with", None)
+        self.k8s_bare_metal_gt = kwargs.get("k8s_bare_metal_gt", None)
+        self.k8s_bare_metal_gte = kwargs.get("k8s_bare_metal_gte", None)
+        self.k8s_bare_metal_in = kwargs.get("k8s_bare_metal_in", None)
+        self.k8s_bare_metal_lt = kwargs.get("k8s_bare_metal_lt", None)
+        self.k8s_bare_metal_lte = kwargs.get("k8s_bare_metal_lte", None)
+        self.k8s_bare_metal_not = kwargs.get("k8s_bare_metal_not", None)
+        self.k8s_bare_metal_not_contains = kwargs.get("k8s_bare_metal_not_contains", None)
+        self.k8s_bare_metal_not_ends_with = kwargs.get("k8s_bare_metal_not_ends_with", None)
+        self.k8s_bare_metal_not_in = kwargs.get("k8s_bare_metal_not_in", None)
+        self.k8s_bare_metal_not_starts_with = kwargs.get("k8s_bare_metal_not_starts_with", None)
+        self.k8s_bare_metal_starts_with = kwargs.get("k8s_bare_metal_starts_with", None)
+        self.k8s_service = kwargs.get("k8s_service", None)
+        self.k8s_service_contains = kwargs.get("k8s_service_contains", None)
+        self.k8s_service_ends_with = kwargs.get("k8s_service_ends_with", None)
+        self.k8s_service_gt = kwargs.get("k8s_service_gt", None)
+        self.k8s_service_gte = kwargs.get("k8s_service_gte", None)
+        self.k8s_service_in = kwargs.get("k8s_service_in", None)
+        self.k8s_service_lt = kwargs.get("k8s_service_lt", None)
+        self.k8s_service_lte = kwargs.get("k8s_service_lte", None)
+        self.k8s_service_not = kwargs.get("k8s_service_not", None)
+        self.k8s_service_not_contains = kwargs.get("k8s_service_not_contains", None)
+        self.k8s_service_not_ends_with = kwargs.get("k8s_service_not_ends_with", None)
+        self.k8s_service_not_in = kwargs.get("k8s_service_not_in", None)
+        self.k8s_service_not_starts_with = kwargs.get("k8s_service_not_starts_with", None)
+        self.k8s_service_starts_with = kwargs.get("k8s_service_starts_with", None)
+        self.lb = kwargs.get("lb", None)
+        self.lb_contains = kwargs.get("lb_contains", None)
+        self.lb_ends_with = kwargs.get("lb_ends_with", None)
+        self.lb_gt = kwargs.get("lb_gt", None)
+        self.lb_gte = kwargs.get("lb_gte", None)
+        self.lb_in = kwargs.get("lb_in", None)
+        self.lb_lt = kwargs.get("lb_lt", None)
+        self.lb_lte = kwargs.get("lb_lte", None)
+        self.lb_not = kwargs.get("lb_not", None)
+        self.lb_not_contains = kwargs.get("lb_not_contains", None)
+        self.lb_not_ends_with = kwargs.get("lb_not_ends_with", None)
+        self.lb_not_in = kwargs.get("lb_not_in", None)
+        self.lb_not_starts_with = kwargs.get("lb_not_starts_with", None)
+        self.lb_starts_with = kwargs.get("lb_starts_with", None)
+        self.license_payload = kwargs.get("license_payload", None)
+        self.license_payload_contains = kwargs.get("license_payload_contains", None)
+        self.license_payload_ends_with = kwargs.get("license_payload_ends_with", None)
+        self.license_payload_gt = kwargs.get("license_payload_gt", None)
+        self.license_payload_gte = kwargs.get("license_payload_gte", None)
+        self.license_payload_in = kwargs.get("license_payload_in", None)
+        self.license_payload_lt = kwargs.get("license_payload_lt", None)
+        self.license_payload_lte = kwargs.get("license_payload_lte", None)
+        self.license_payload_not = kwargs.get("license_payload_not", None)
+        self.license_payload_not_contains = kwargs.get("license_payload_not_contains", None)
+        self.license_payload_not_ends_with = kwargs.get("license_payload_not_ends_with", None)
+        self.license_payload_not_in = kwargs.get("license_payload_not_in", None)
+        self.license_payload_not_starts_with = kwargs.get("license_payload_not_starts_with", None)
+        self.license_payload_starts_with = kwargs.get("license_payload_starts_with", None)
+        self.license_signature = kwargs.get("license_signature", None)
+        self.license_signature_contains = kwargs.get("license_signature_contains", None)
+        self.license_signature_ends_with = kwargs.get("license_signature_ends_with", None)
+        self.license_signature_gt = kwargs.get("license_signature_gt", None)
+        self.license_signature_gte = kwargs.get("license_signature_gte", None)
+        self.license_signature_in = kwargs.get("license_signature_in", None)
+        self.license_signature_lt = kwargs.get("license_signature_lt", None)
+        self.license_signature_lte = kwargs.get("license_signature_lte", None)
+        self.license_signature_not = kwargs.get("license_signature_not", None)
+        self.license_signature_not_contains = kwargs.get("license_signature_not_contains", None)
+        self.license_signature_not_ends_with = kwargs.get("license_signature_not_ends_with", None)
+        self.license_signature_not_in = kwargs.get("license_signature_not_in", None)
+        self.license_signature_not_starts_with = kwargs.get("license_signature_not_starts_with", None)
+        self.license_signature_starts_with = kwargs.get("license_signature_starts_with", None)
         self.license_type = kwargs.get("license_type", None)
         self.license_type_in = kwargs.get("license_type_in", None)
         self.license_type_not = kwargs.get("license_type_not", None)
@@ -638,6 +1332,34 @@ class EcpLicenseWhereInput(object):
         self.subscription_start_date_lte = kwargs.get("subscription_start_date_lte", None)
         self.subscription_start_date_not = kwargs.get("subscription_start_date_not", None)
         self.subscription_start_date_not_in = kwargs.get("subscription_start_date_not_in", None)
+        self.sync_replication = kwargs.get("sync_replication", None)
+        self.sync_replication_contains = kwargs.get("sync_replication_contains", None)
+        self.sync_replication_ends_with = kwargs.get("sync_replication_ends_with", None)
+        self.sync_replication_gt = kwargs.get("sync_replication_gt", None)
+        self.sync_replication_gte = kwargs.get("sync_replication_gte", None)
+        self.sync_replication_in = kwargs.get("sync_replication_in", None)
+        self.sync_replication_lt = kwargs.get("sync_replication_lt", None)
+        self.sync_replication_lte = kwargs.get("sync_replication_lte", None)
+        self.sync_replication_not = kwargs.get("sync_replication_not", None)
+        self.sync_replication_not_contains = kwargs.get("sync_replication_not_contains", None)
+        self.sync_replication_not_ends_with = kwargs.get("sync_replication_not_ends_with", None)
+        self.sync_replication_not_in = kwargs.get("sync_replication_not_in", None)
+        self.sync_replication_not_starts_with = kwargs.get("sync_replication_not_starts_with", None)
+        self.sync_replication_starts_with = kwargs.get("sync_replication_starts_with", None)
+        self.traffic_visualization = kwargs.get("traffic_visualization", None)
+        self.traffic_visualization_contains = kwargs.get("traffic_visualization_contains", None)
+        self.traffic_visualization_ends_with = kwargs.get("traffic_visualization_ends_with", None)
+        self.traffic_visualization_gt = kwargs.get("traffic_visualization_gt", None)
+        self.traffic_visualization_gte = kwargs.get("traffic_visualization_gte", None)
+        self.traffic_visualization_in = kwargs.get("traffic_visualization_in", None)
+        self.traffic_visualization_lt = kwargs.get("traffic_visualization_lt", None)
+        self.traffic_visualization_lte = kwargs.get("traffic_visualization_lte", None)
+        self.traffic_visualization_not = kwargs.get("traffic_visualization_not", None)
+        self.traffic_visualization_not_contains = kwargs.get("traffic_visualization_not_contains", None)
+        self.traffic_visualization_not_ends_with = kwargs.get("traffic_visualization_not_ends_with", None)
+        self.traffic_visualization_not_in = kwargs.get("traffic_visualization_not_in", None)
+        self.traffic_visualization_not_starts_with = kwargs.get("traffic_visualization_not_starts_with", None)
+        self.traffic_visualization_starts_with = kwargs.get("traffic_visualization_starts_with", None)
         self.vendor = kwargs.get("vendor", None)
         self.vendor_contains = kwargs.get("vendor_contains", None)
         self.vendor_ends_with = kwargs.get("vendor_ends_with", None)
@@ -660,6 +1382,20 @@ class EcpLicenseWhereInput(object):
         self.version_lte = kwargs.get("version_lte", None)
         self.version_not = kwargs.get("version_not", None)
         self.version_not_in = kwargs.get("version_not_in", None)
+        self.vpc = kwargs.get("vpc", None)
+        self.vpc_contains = kwargs.get("vpc_contains", None)
+        self.vpc_ends_with = kwargs.get("vpc_ends_with", None)
+        self.vpc_gt = kwargs.get("vpc_gt", None)
+        self.vpc_gte = kwargs.get("vpc_gte", None)
+        self.vpc_in = kwargs.get("vpc_in", None)
+        self.vpc_lt = kwargs.get("vpc_lt", None)
+        self.vpc_lte = kwargs.get("vpc_lte", None)
+        self.vpc_not = kwargs.get("vpc_not", None)
+        self.vpc_not_contains = kwargs.get("vpc_not_contains", None)
+        self.vpc_not_ends_with = kwargs.get("vpc_not_ends_with", None)
+        self.vpc_not_in = kwargs.get("vpc_not_in", None)
+        self.vpc_not_starts_with = kwargs.get("vpc_not_starts_with", None)
+        self.vpc_starts_with = kwargs.get("vpc_starts_with", None)
 
     @property
     def _and(self):
@@ -723,6 +1459,888 @@ class EcpLicenseWhereInput(object):
         """
 
         self.__or = _or
+
+    @property
+    def async_replication(self):
+        """Gets the async_replication of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication
+
+    @async_replication.setter
+    def async_replication(self, async_replication):
+        """Sets the async_replication of this EcpLicenseWhereInput.
+
+
+        :param async_replication: The async_replication of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication: str
+        """
+
+        self._async_replication = async_replication
+
+    @property
+    def async_replication_contains(self):
+        """Gets the async_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_contains
+
+    @async_replication_contains.setter
+    def async_replication_contains(self, async_replication_contains):
+        """Sets the async_replication_contains of this EcpLicenseWhereInput.
+
+
+        :param async_replication_contains: The async_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_contains: str
+        """
+
+        self._async_replication_contains = async_replication_contains
+
+    @property
+    def async_replication_ends_with(self):
+        """Gets the async_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_ends_with
+
+    @async_replication_ends_with.setter
+    def async_replication_ends_with(self, async_replication_ends_with):
+        """Sets the async_replication_ends_with of this EcpLicenseWhereInput.
+
+
+        :param async_replication_ends_with: The async_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_ends_with: str
+        """
+
+        self._async_replication_ends_with = async_replication_ends_with
+
+    @property
+    def async_replication_gt(self):
+        """Gets the async_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_gt
+
+    @async_replication_gt.setter
+    def async_replication_gt(self, async_replication_gt):
+        """Sets the async_replication_gt of this EcpLicenseWhereInput.
+
+
+        :param async_replication_gt: The async_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_gt: str
+        """
+
+        self._async_replication_gt = async_replication_gt
+
+    @property
+    def async_replication_gte(self):
+        """Gets the async_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_gte
+
+    @async_replication_gte.setter
+    def async_replication_gte(self, async_replication_gte):
+        """Sets the async_replication_gte of this EcpLicenseWhereInput.
+
+
+        :param async_replication_gte: The async_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_gte: str
+        """
+
+        self._async_replication_gte = async_replication_gte
+
+    @property
+    def async_replication_in(self):
+        """Gets the async_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._async_replication_in
+
+    @async_replication_in.setter
+    def async_replication_in(self, async_replication_in):
+        """Sets the async_replication_in of this EcpLicenseWhereInput.
+
+
+        :param async_replication_in: The async_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_in: list[str]
+        """
+
+        self._async_replication_in = async_replication_in
+
+    @property
+    def async_replication_lt(self):
+        """Gets the async_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_lt
+
+    @async_replication_lt.setter
+    def async_replication_lt(self, async_replication_lt):
+        """Sets the async_replication_lt of this EcpLicenseWhereInput.
+
+
+        :param async_replication_lt: The async_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_lt: str
+        """
+
+        self._async_replication_lt = async_replication_lt
+
+    @property
+    def async_replication_lte(self):
+        """Gets the async_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_lte
+
+    @async_replication_lte.setter
+    def async_replication_lte(self, async_replication_lte):
+        """Sets the async_replication_lte of this EcpLicenseWhereInput.
+
+
+        :param async_replication_lte: The async_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_lte: str
+        """
+
+        self._async_replication_lte = async_replication_lte
+
+    @property
+    def async_replication_not(self):
+        """Gets the async_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_not
+
+    @async_replication_not.setter
+    def async_replication_not(self, async_replication_not):
+        """Sets the async_replication_not of this EcpLicenseWhereInput.
+
+
+        :param async_replication_not: The async_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_not: str
+        """
+
+        self._async_replication_not = async_replication_not
+
+    @property
+    def async_replication_not_contains(self):
+        """Gets the async_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_not_contains
+
+    @async_replication_not_contains.setter
+    def async_replication_not_contains(self, async_replication_not_contains):
+        """Sets the async_replication_not_contains of this EcpLicenseWhereInput.
+
+
+        :param async_replication_not_contains: The async_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_not_contains: str
+        """
+
+        self._async_replication_not_contains = async_replication_not_contains
+
+    @property
+    def async_replication_not_ends_with(self):
+        """Gets the async_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_not_ends_with
+
+    @async_replication_not_ends_with.setter
+    def async_replication_not_ends_with(self, async_replication_not_ends_with):
+        """Sets the async_replication_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param async_replication_not_ends_with: The async_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_not_ends_with: str
+        """
+
+        self._async_replication_not_ends_with = async_replication_not_ends_with
+
+    @property
+    def async_replication_not_in(self):
+        """Gets the async_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._async_replication_not_in
+
+    @async_replication_not_in.setter
+    def async_replication_not_in(self, async_replication_not_in):
+        """Sets the async_replication_not_in of this EcpLicenseWhereInput.
+
+
+        :param async_replication_not_in: The async_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_not_in: list[str]
+        """
+
+        self._async_replication_not_in = async_replication_not_in
+
+    @property
+    def async_replication_not_starts_with(self):
+        """Gets the async_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_not_starts_with
+
+    @async_replication_not_starts_with.setter
+    def async_replication_not_starts_with(self, async_replication_not_starts_with):
+        """Sets the async_replication_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param async_replication_not_starts_with: The async_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_not_starts_with: str
+        """
+
+        self._async_replication_not_starts_with = async_replication_not_starts_with
+
+    @property
+    def async_replication_starts_with(self):
+        """Gets the async_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The async_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication_starts_with
+
+    @async_replication_starts_with.setter
+    def async_replication_starts_with(self, async_replication_starts_with):
+        """Sets the async_replication_starts_with of this EcpLicenseWhereInput.
+
+
+        :param async_replication_starts_with: The async_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type async_replication_starts_with: str
+        """
+
+        self._async_replication_starts_with = async_replication_starts_with
+
+    @property
+    def backup(self):
+        """Gets the backup of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup
+
+    @backup.setter
+    def backup(self, backup):
+        """Sets the backup of this EcpLicenseWhereInput.
+
+
+        :param backup: The backup of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup: str
+        """
+
+        self._backup = backup
+
+    @property
+    def backup_contains(self):
+        """Gets the backup_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_contains
+
+    @backup_contains.setter
+    def backup_contains(self, backup_contains):
+        """Sets the backup_contains of this EcpLicenseWhereInput.
+
+
+        :param backup_contains: The backup_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_contains: str
+        """
+
+        self._backup_contains = backup_contains
+
+    @property
+    def backup_ends_with(self):
+        """Gets the backup_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_ends_with
+
+    @backup_ends_with.setter
+    def backup_ends_with(self, backup_ends_with):
+        """Sets the backup_ends_with of this EcpLicenseWhereInput.
+
+
+        :param backup_ends_with: The backup_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_ends_with: str
+        """
+
+        self._backup_ends_with = backup_ends_with
+
+    @property
+    def backup_gt(self):
+        """Gets the backup_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_gt
+
+    @backup_gt.setter
+    def backup_gt(self, backup_gt):
+        """Sets the backup_gt of this EcpLicenseWhereInput.
+
+
+        :param backup_gt: The backup_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_gt: str
+        """
+
+        self._backup_gt = backup_gt
+
+    @property
+    def backup_gte(self):
+        """Gets the backup_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_gte
+
+    @backup_gte.setter
+    def backup_gte(self, backup_gte):
+        """Sets the backup_gte of this EcpLicenseWhereInput.
+
+
+        :param backup_gte: The backup_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_gte: str
+        """
+
+        self._backup_gte = backup_gte
+
+    @property
+    def backup_in(self):
+        """Gets the backup_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._backup_in
+
+    @backup_in.setter
+    def backup_in(self, backup_in):
+        """Sets the backup_in of this EcpLicenseWhereInput.
+
+
+        :param backup_in: The backup_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_in: list[str]
+        """
+
+        self._backup_in = backup_in
+
+    @property
+    def backup_lt(self):
+        """Gets the backup_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_lt
+
+    @backup_lt.setter
+    def backup_lt(self, backup_lt):
+        """Sets the backup_lt of this EcpLicenseWhereInput.
+
+
+        :param backup_lt: The backup_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_lt: str
+        """
+
+        self._backup_lt = backup_lt
+
+    @property
+    def backup_lte(self):
+        """Gets the backup_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_lte
+
+    @backup_lte.setter
+    def backup_lte(self, backup_lte):
+        """Sets the backup_lte of this EcpLicenseWhereInput.
+
+
+        :param backup_lte: The backup_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_lte: str
+        """
+
+        self._backup_lte = backup_lte
+
+    @property
+    def backup_not(self):
+        """Gets the backup_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_not
+
+    @backup_not.setter
+    def backup_not(self, backup_not):
+        """Sets the backup_not of this EcpLicenseWhereInput.
+
+
+        :param backup_not: The backup_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_not: str
+        """
+
+        self._backup_not = backup_not
+
+    @property
+    def backup_not_contains(self):
+        """Gets the backup_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_not_contains
+
+    @backup_not_contains.setter
+    def backup_not_contains(self, backup_not_contains):
+        """Sets the backup_not_contains of this EcpLicenseWhereInput.
+
+
+        :param backup_not_contains: The backup_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_not_contains: str
+        """
+
+        self._backup_not_contains = backup_not_contains
+
+    @property
+    def backup_not_ends_with(self):
+        """Gets the backup_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_not_ends_with
+
+    @backup_not_ends_with.setter
+    def backup_not_ends_with(self, backup_not_ends_with):
+        """Sets the backup_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param backup_not_ends_with: The backup_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_not_ends_with: str
+        """
+
+        self._backup_not_ends_with = backup_not_ends_with
+
+    @property
+    def backup_not_in(self):
+        """Gets the backup_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._backup_not_in
+
+    @backup_not_in.setter
+    def backup_not_in(self, backup_not_in):
+        """Sets the backup_not_in of this EcpLicenseWhereInput.
+
+
+        :param backup_not_in: The backup_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_not_in: list[str]
+        """
+
+        self._backup_not_in = backup_not_in
+
+    @property
+    def backup_not_starts_with(self):
+        """Gets the backup_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_not_starts_with
+
+    @backup_not_starts_with.setter
+    def backup_not_starts_with(self, backup_not_starts_with):
+        """Sets the backup_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param backup_not_starts_with: The backup_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_not_starts_with: str
+        """
+
+        self._backup_not_starts_with = backup_not_starts_with
+
+    @property
+    def backup_starts_with(self):
+        """Gets the backup_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The backup_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup_starts_with
+
+    @backup_starts_with.setter
+    def backup_starts_with(self, backup_starts_with):
+        """Sets the backup_starts_with of this EcpLicenseWhereInput.
+
+
+        :param backup_starts_with: The backup_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type backup_starts_with: str
+        """
+
+        self._backup_starts_with = backup_starts_with
+
+    @property
+    def brand(self):
+        """Gets the brand of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand
+
+    @brand.setter
+    def brand(self, brand):
+        """Sets the brand of this EcpLicenseWhereInput.
+
+
+        :param brand: The brand of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand: str
+        """
+
+        self._brand = brand
+
+    @property
+    def brand_contains(self):
+        """Gets the brand_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_contains
+
+    @brand_contains.setter
+    def brand_contains(self, brand_contains):
+        """Sets the brand_contains of this EcpLicenseWhereInput.
+
+
+        :param brand_contains: The brand_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_contains: str
+        """
+
+        self._brand_contains = brand_contains
+
+    @property
+    def brand_ends_with(self):
+        """Gets the brand_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_ends_with
+
+    @brand_ends_with.setter
+    def brand_ends_with(self, brand_ends_with):
+        """Sets the brand_ends_with of this EcpLicenseWhereInput.
+
+
+        :param brand_ends_with: The brand_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_ends_with: str
+        """
+
+        self._brand_ends_with = brand_ends_with
+
+    @property
+    def brand_gt(self):
+        """Gets the brand_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_gt
+
+    @brand_gt.setter
+    def brand_gt(self, brand_gt):
+        """Sets the brand_gt of this EcpLicenseWhereInput.
+
+
+        :param brand_gt: The brand_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_gt: str
+        """
+
+        self._brand_gt = brand_gt
+
+    @property
+    def brand_gte(self):
+        """Gets the brand_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_gte
+
+    @brand_gte.setter
+    def brand_gte(self, brand_gte):
+        """Sets the brand_gte of this EcpLicenseWhereInput.
+
+
+        :param brand_gte: The brand_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_gte: str
+        """
+
+        self._brand_gte = brand_gte
+
+    @property
+    def brand_in(self):
+        """Gets the brand_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._brand_in
+
+    @brand_in.setter
+    def brand_in(self, brand_in):
+        """Sets the brand_in of this EcpLicenseWhereInput.
+
+
+        :param brand_in: The brand_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_in: list[str]
+        """
+
+        self._brand_in = brand_in
+
+    @property
+    def brand_lt(self):
+        """Gets the brand_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_lt
+
+    @brand_lt.setter
+    def brand_lt(self, brand_lt):
+        """Sets the brand_lt of this EcpLicenseWhereInput.
+
+
+        :param brand_lt: The brand_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_lt: str
+        """
+
+        self._brand_lt = brand_lt
+
+    @property
+    def brand_lte(self):
+        """Gets the brand_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_lte
+
+    @brand_lte.setter
+    def brand_lte(self, brand_lte):
+        """Sets the brand_lte of this EcpLicenseWhereInput.
+
+
+        :param brand_lte: The brand_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_lte: str
+        """
+
+        self._brand_lte = brand_lte
+
+    @property
+    def brand_not(self):
+        """Gets the brand_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_not
+
+    @brand_not.setter
+    def brand_not(self, brand_not):
+        """Sets the brand_not of this EcpLicenseWhereInput.
+
+
+        :param brand_not: The brand_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_not: str
+        """
+
+        self._brand_not = brand_not
+
+    @property
+    def brand_not_contains(self):
+        """Gets the brand_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_not_contains
+
+    @brand_not_contains.setter
+    def brand_not_contains(self, brand_not_contains):
+        """Sets the brand_not_contains of this EcpLicenseWhereInput.
+
+
+        :param brand_not_contains: The brand_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_not_contains: str
+        """
+
+        self._brand_not_contains = brand_not_contains
+
+    @property
+    def brand_not_ends_with(self):
+        """Gets the brand_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_not_ends_with
+
+    @brand_not_ends_with.setter
+    def brand_not_ends_with(self, brand_not_ends_with):
+        """Sets the brand_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param brand_not_ends_with: The brand_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_not_ends_with: str
+        """
+
+        self._brand_not_ends_with = brand_not_ends_with
+
+    @property
+    def brand_not_in(self):
+        """Gets the brand_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._brand_not_in
+
+    @brand_not_in.setter
+    def brand_not_in(self, brand_not_in):
+        """Sets the brand_not_in of this EcpLicenseWhereInput.
+
+
+        :param brand_not_in: The brand_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_not_in: list[str]
+        """
+
+        self._brand_not_in = brand_not_in
+
+    @property
+    def brand_not_starts_with(self):
+        """Gets the brand_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_not_starts_with
+
+    @brand_not_starts_with.setter
+    def brand_not_starts_with(self, brand_not_starts_with):
+        """Sets the brand_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param brand_not_starts_with: The brand_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_not_starts_with: str
+        """
+
+        self._brand_not_starts_with = brand_not_starts_with
+
+    @property
+    def brand_starts_with(self):
+        """Gets the brand_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The brand_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand_starts_with
+
+    @brand_starts_with.setter
+    def brand_starts_with(self, brand_starts_with):
+        """Sets the brand_starts_with of this EcpLicenseWhereInput.
+
+
+        :param brand_starts_with: The brand_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type brand_starts_with: str
+        """
+
+        self._brand_starts_with = brand_starts_with
 
     @property
     def cluster(self):
@@ -1040,6 +2658,300 @@ class EcpLicenseWhereInput(object):
         self._cluster_local_id_starts_with = cluster_local_id_starts_with
 
     @property
+    def dfw(self):
+        """Gets the dfw of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw
+
+    @dfw.setter
+    def dfw(self, dfw):
+        """Sets the dfw of this EcpLicenseWhereInput.
+
+
+        :param dfw: The dfw of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw: str
+        """
+
+        self._dfw = dfw
+
+    @property
+    def dfw_contains(self):
+        """Gets the dfw_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_contains
+
+    @dfw_contains.setter
+    def dfw_contains(self, dfw_contains):
+        """Sets the dfw_contains of this EcpLicenseWhereInput.
+
+
+        :param dfw_contains: The dfw_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_contains: str
+        """
+
+        self._dfw_contains = dfw_contains
+
+    @property
+    def dfw_ends_with(self):
+        """Gets the dfw_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_ends_with
+
+    @dfw_ends_with.setter
+    def dfw_ends_with(self, dfw_ends_with):
+        """Sets the dfw_ends_with of this EcpLicenseWhereInput.
+
+
+        :param dfw_ends_with: The dfw_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_ends_with: str
+        """
+
+        self._dfw_ends_with = dfw_ends_with
+
+    @property
+    def dfw_gt(self):
+        """Gets the dfw_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_gt
+
+    @dfw_gt.setter
+    def dfw_gt(self, dfw_gt):
+        """Sets the dfw_gt of this EcpLicenseWhereInput.
+
+
+        :param dfw_gt: The dfw_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_gt: str
+        """
+
+        self._dfw_gt = dfw_gt
+
+    @property
+    def dfw_gte(self):
+        """Gets the dfw_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_gte
+
+    @dfw_gte.setter
+    def dfw_gte(self, dfw_gte):
+        """Sets the dfw_gte of this EcpLicenseWhereInput.
+
+
+        :param dfw_gte: The dfw_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_gte: str
+        """
+
+        self._dfw_gte = dfw_gte
+
+    @property
+    def dfw_in(self):
+        """Gets the dfw_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._dfw_in
+
+    @dfw_in.setter
+    def dfw_in(self, dfw_in):
+        """Sets the dfw_in of this EcpLicenseWhereInput.
+
+
+        :param dfw_in: The dfw_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_in: list[str]
+        """
+
+        self._dfw_in = dfw_in
+
+    @property
+    def dfw_lt(self):
+        """Gets the dfw_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_lt
+
+    @dfw_lt.setter
+    def dfw_lt(self, dfw_lt):
+        """Sets the dfw_lt of this EcpLicenseWhereInput.
+
+
+        :param dfw_lt: The dfw_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_lt: str
+        """
+
+        self._dfw_lt = dfw_lt
+
+    @property
+    def dfw_lte(self):
+        """Gets the dfw_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_lte
+
+    @dfw_lte.setter
+    def dfw_lte(self, dfw_lte):
+        """Sets the dfw_lte of this EcpLicenseWhereInput.
+
+
+        :param dfw_lte: The dfw_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_lte: str
+        """
+
+        self._dfw_lte = dfw_lte
+
+    @property
+    def dfw_not(self):
+        """Gets the dfw_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_not
+
+    @dfw_not.setter
+    def dfw_not(self, dfw_not):
+        """Sets the dfw_not of this EcpLicenseWhereInput.
+
+
+        :param dfw_not: The dfw_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_not: str
+        """
+
+        self._dfw_not = dfw_not
+
+    @property
+    def dfw_not_contains(self):
+        """Gets the dfw_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_not_contains
+
+    @dfw_not_contains.setter
+    def dfw_not_contains(self, dfw_not_contains):
+        """Sets the dfw_not_contains of this EcpLicenseWhereInput.
+
+
+        :param dfw_not_contains: The dfw_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_not_contains: str
+        """
+
+        self._dfw_not_contains = dfw_not_contains
+
+    @property
+    def dfw_not_ends_with(self):
+        """Gets the dfw_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_not_ends_with
+
+    @dfw_not_ends_with.setter
+    def dfw_not_ends_with(self, dfw_not_ends_with):
+        """Sets the dfw_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param dfw_not_ends_with: The dfw_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_not_ends_with: str
+        """
+
+        self._dfw_not_ends_with = dfw_not_ends_with
+
+    @property
+    def dfw_not_in(self):
+        """Gets the dfw_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._dfw_not_in
+
+    @dfw_not_in.setter
+    def dfw_not_in(self, dfw_not_in):
+        """Sets the dfw_not_in of this EcpLicenseWhereInput.
+
+
+        :param dfw_not_in: The dfw_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_not_in: list[str]
+        """
+
+        self._dfw_not_in = dfw_not_in
+
+    @property
+    def dfw_not_starts_with(self):
+        """Gets the dfw_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_not_starts_with
+
+    @dfw_not_starts_with.setter
+    def dfw_not_starts_with(self, dfw_not_starts_with):
+        """Sets the dfw_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param dfw_not_starts_with: The dfw_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_not_starts_with: str
+        """
+
+        self._dfw_not_starts_with = dfw_not_starts_with
+
+    @property
+    def dfw_starts_with(self):
+        """Gets the dfw_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The dfw_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw_starts_with
+
+    @dfw_starts_with.setter
+    def dfw_starts_with(self, dfw_starts_with):
+        """Sets the dfw_starts_with of this EcpLicenseWhereInput.
+
+
+        :param dfw_starts_with: The dfw_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type dfw_starts_with: str
+        """
+
+        self._dfw_starts_with = dfw_starts_with
+
+    @property
     def ecp_edition(self):
         """Gets the ecp_edition of this EcpLicenseWhereInput.  # noqa: E501
 
@@ -1290,6 +3202,342 @@ class EcpLicenseWhereInput(object):
         """
 
         self._expire_date_not_in = expire_date_not_in
+
+    @property
+    def external_storage(self):
+        """Gets the external_storage of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The external_storage of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_storage
+
+    @external_storage.setter
+    def external_storage(self, external_storage):
+        """Sets the external_storage of this EcpLicenseWhereInput.
+
+
+        :param external_storage: The external_storage of this EcpLicenseWhereInput.  # noqa: E501
+        :type external_storage: bool
+        """
+
+        self._external_storage = external_storage
+
+    @property
+    def external_storage_not(self):
+        """Gets the external_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The external_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_storage_not
+
+    @external_storage_not.setter
+    def external_storage_not(self, external_storage_not):
+        """Sets the external_storage_not of this EcpLicenseWhereInput.
+
+
+        :param external_storage_not: The external_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type external_storage_not: bool
+        """
+
+        self._external_storage_not = external_storage_not
+
+    @property
+    def file_storage(self):
+        """Gets the file_storage of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage
+
+    @file_storage.setter
+    def file_storage(self, file_storage):
+        """Sets the file_storage of this EcpLicenseWhereInput.
+
+
+        :param file_storage: The file_storage of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage: str
+        """
+
+        self._file_storage = file_storage
+
+    @property
+    def file_storage_contains(self):
+        """Gets the file_storage_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_contains
+
+    @file_storage_contains.setter
+    def file_storage_contains(self, file_storage_contains):
+        """Sets the file_storage_contains of this EcpLicenseWhereInput.
+
+
+        :param file_storage_contains: The file_storage_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_contains: str
+        """
+
+        self._file_storage_contains = file_storage_contains
+
+    @property
+    def file_storage_ends_with(self):
+        """Gets the file_storage_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_ends_with
+
+    @file_storage_ends_with.setter
+    def file_storage_ends_with(self, file_storage_ends_with):
+        """Sets the file_storage_ends_with of this EcpLicenseWhereInput.
+
+
+        :param file_storage_ends_with: The file_storage_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_ends_with: str
+        """
+
+        self._file_storage_ends_with = file_storage_ends_with
+
+    @property
+    def file_storage_gt(self):
+        """Gets the file_storage_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_gt
+
+    @file_storage_gt.setter
+    def file_storage_gt(self, file_storage_gt):
+        """Sets the file_storage_gt of this EcpLicenseWhereInput.
+
+
+        :param file_storage_gt: The file_storage_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_gt: str
+        """
+
+        self._file_storage_gt = file_storage_gt
+
+    @property
+    def file_storage_gte(self):
+        """Gets the file_storage_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_gte
+
+    @file_storage_gte.setter
+    def file_storage_gte(self, file_storage_gte):
+        """Sets the file_storage_gte of this EcpLicenseWhereInput.
+
+
+        :param file_storage_gte: The file_storage_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_gte: str
+        """
+
+        self._file_storage_gte = file_storage_gte
+
+    @property
+    def file_storage_in(self):
+        """Gets the file_storage_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._file_storage_in
+
+    @file_storage_in.setter
+    def file_storage_in(self, file_storage_in):
+        """Sets the file_storage_in of this EcpLicenseWhereInput.
+
+
+        :param file_storage_in: The file_storage_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_in: list[str]
+        """
+
+        self._file_storage_in = file_storage_in
+
+    @property
+    def file_storage_lt(self):
+        """Gets the file_storage_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_lt
+
+    @file_storage_lt.setter
+    def file_storage_lt(self, file_storage_lt):
+        """Sets the file_storage_lt of this EcpLicenseWhereInput.
+
+
+        :param file_storage_lt: The file_storage_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_lt: str
+        """
+
+        self._file_storage_lt = file_storage_lt
+
+    @property
+    def file_storage_lte(self):
+        """Gets the file_storage_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_lte
+
+    @file_storage_lte.setter
+    def file_storage_lte(self, file_storage_lte):
+        """Sets the file_storage_lte of this EcpLicenseWhereInput.
+
+
+        :param file_storage_lte: The file_storage_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_lte: str
+        """
+
+        self._file_storage_lte = file_storage_lte
+
+    @property
+    def file_storage_not(self):
+        """Gets the file_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_not
+
+    @file_storage_not.setter
+    def file_storage_not(self, file_storage_not):
+        """Sets the file_storage_not of this EcpLicenseWhereInput.
+
+
+        :param file_storage_not: The file_storage_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_not: str
+        """
+
+        self._file_storage_not = file_storage_not
+
+    @property
+    def file_storage_not_contains(self):
+        """Gets the file_storage_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_not_contains
+
+    @file_storage_not_contains.setter
+    def file_storage_not_contains(self, file_storage_not_contains):
+        """Sets the file_storage_not_contains of this EcpLicenseWhereInput.
+
+
+        :param file_storage_not_contains: The file_storage_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_not_contains: str
+        """
+
+        self._file_storage_not_contains = file_storage_not_contains
+
+    @property
+    def file_storage_not_ends_with(self):
+        """Gets the file_storage_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_not_ends_with
+
+    @file_storage_not_ends_with.setter
+    def file_storage_not_ends_with(self, file_storage_not_ends_with):
+        """Sets the file_storage_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param file_storage_not_ends_with: The file_storage_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_not_ends_with: str
+        """
+
+        self._file_storage_not_ends_with = file_storage_not_ends_with
+
+    @property
+    def file_storage_not_in(self):
+        """Gets the file_storage_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._file_storage_not_in
+
+    @file_storage_not_in.setter
+    def file_storage_not_in(self, file_storage_not_in):
+        """Sets the file_storage_not_in of this EcpLicenseWhereInput.
+
+
+        :param file_storage_not_in: The file_storage_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_not_in: list[str]
+        """
+
+        self._file_storage_not_in = file_storage_not_in
+
+    @property
+    def file_storage_not_starts_with(self):
+        """Gets the file_storage_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_not_starts_with
+
+    @file_storage_not_starts_with.setter
+    def file_storage_not_starts_with(self, file_storage_not_starts_with):
+        """Sets the file_storage_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param file_storage_not_starts_with: The file_storage_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_not_starts_with: str
+        """
+
+        self._file_storage_not_starts_with = file_storage_not_starts_with
+
+    @property
+    def file_storage_starts_with(self):
+        """Gets the file_storage_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The file_storage_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage_starts_with
+
+    @file_storage_starts_with.setter
+    def file_storage_starts_with(self, file_storage_starts_with):
+        """Sets the file_storage_starts_with of this EcpLicenseWhereInput.
+
+
+        :param file_storage_starts_with: The file_storage_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type file_storage_starts_with: str
+        """
+
+        self._file_storage_starts_with = file_storage_starts_with
 
     @property
     def has_metrox(self):
@@ -1668,6 +3916,1476 @@ class EcpLicenseWhereInput(object):
         """
 
         self._id_starts_with = id_starts_with
+
+    @property
+    def k8s_bare_metal(self):
+        """Gets the k8s_bare_metal of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal
+
+    @k8s_bare_metal.setter
+    def k8s_bare_metal(self, k8s_bare_metal):
+        """Sets the k8s_bare_metal of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal: The k8s_bare_metal of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal: str
+        """
+
+        self._k8s_bare_metal = k8s_bare_metal
+
+    @property
+    def k8s_bare_metal_contains(self):
+        """Gets the k8s_bare_metal_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_contains
+
+    @k8s_bare_metal_contains.setter
+    def k8s_bare_metal_contains(self, k8s_bare_metal_contains):
+        """Sets the k8s_bare_metal_contains of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_contains: The k8s_bare_metal_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_contains: str
+        """
+
+        self._k8s_bare_metal_contains = k8s_bare_metal_contains
+
+    @property
+    def k8s_bare_metal_ends_with(self):
+        """Gets the k8s_bare_metal_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_ends_with
+
+    @k8s_bare_metal_ends_with.setter
+    def k8s_bare_metal_ends_with(self, k8s_bare_metal_ends_with):
+        """Sets the k8s_bare_metal_ends_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_ends_with: The k8s_bare_metal_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_ends_with: str
+        """
+
+        self._k8s_bare_metal_ends_with = k8s_bare_metal_ends_with
+
+    @property
+    def k8s_bare_metal_gt(self):
+        """Gets the k8s_bare_metal_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_gt
+
+    @k8s_bare_metal_gt.setter
+    def k8s_bare_metal_gt(self, k8s_bare_metal_gt):
+        """Sets the k8s_bare_metal_gt of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_gt: The k8s_bare_metal_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_gt: str
+        """
+
+        self._k8s_bare_metal_gt = k8s_bare_metal_gt
+
+    @property
+    def k8s_bare_metal_gte(self):
+        """Gets the k8s_bare_metal_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_gte
+
+    @k8s_bare_metal_gte.setter
+    def k8s_bare_metal_gte(self, k8s_bare_metal_gte):
+        """Sets the k8s_bare_metal_gte of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_gte: The k8s_bare_metal_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_gte: str
+        """
+
+        self._k8s_bare_metal_gte = k8s_bare_metal_gte
+
+    @property
+    def k8s_bare_metal_in(self):
+        """Gets the k8s_bare_metal_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._k8s_bare_metal_in
+
+    @k8s_bare_metal_in.setter
+    def k8s_bare_metal_in(self, k8s_bare_metal_in):
+        """Sets the k8s_bare_metal_in of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_in: The k8s_bare_metal_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_in: list[str]
+        """
+
+        self._k8s_bare_metal_in = k8s_bare_metal_in
+
+    @property
+    def k8s_bare_metal_lt(self):
+        """Gets the k8s_bare_metal_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_lt
+
+    @k8s_bare_metal_lt.setter
+    def k8s_bare_metal_lt(self, k8s_bare_metal_lt):
+        """Sets the k8s_bare_metal_lt of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_lt: The k8s_bare_metal_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_lt: str
+        """
+
+        self._k8s_bare_metal_lt = k8s_bare_metal_lt
+
+    @property
+    def k8s_bare_metal_lte(self):
+        """Gets the k8s_bare_metal_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_lte
+
+    @k8s_bare_metal_lte.setter
+    def k8s_bare_metal_lte(self, k8s_bare_metal_lte):
+        """Sets the k8s_bare_metal_lte of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_lte: The k8s_bare_metal_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_lte: str
+        """
+
+        self._k8s_bare_metal_lte = k8s_bare_metal_lte
+
+    @property
+    def k8s_bare_metal_not(self):
+        """Gets the k8s_bare_metal_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_not
+
+    @k8s_bare_metal_not.setter
+    def k8s_bare_metal_not(self, k8s_bare_metal_not):
+        """Sets the k8s_bare_metal_not of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_not: The k8s_bare_metal_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_not: str
+        """
+
+        self._k8s_bare_metal_not = k8s_bare_metal_not
+
+    @property
+    def k8s_bare_metal_not_contains(self):
+        """Gets the k8s_bare_metal_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_not_contains
+
+    @k8s_bare_metal_not_contains.setter
+    def k8s_bare_metal_not_contains(self, k8s_bare_metal_not_contains):
+        """Sets the k8s_bare_metal_not_contains of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_not_contains: The k8s_bare_metal_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_not_contains: str
+        """
+
+        self._k8s_bare_metal_not_contains = k8s_bare_metal_not_contains
+
+    @property
+    def k8s_bare_metal_not_ends_with(self):
+        """Gets the k8s_bare_metal_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_not_ends_with
+
+    @k8s_bare_metal_not_ends_with.setter
+    def k8s_bare_metal_not_ends_with(self, k8s_bare_metal_not_ends_with):
+        """Sets the k8s_bare_metal_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_not_ends_with: The k8s_bare_metal_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_not_ends_with: str
+        """
+
+        self._k8s_bare_metal_not_ends_with = k8s_bare_metal_not_ends_with
+
+    @property
+    def k8s_bare_metal_not_in(self):
+        """Gets the k8s_bare_metal_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._k8s_bare_metal_not_in
+
+    @k8s_bare_metal_not_in.setter
+    def k8s_bare_metal_not_in(self, k8s_bare_metal_not_in):
+        """Sets the k8s_bare_metal_not_in of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_not_in: The k8s_bare_metal_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_not_in: list[str]
+        """
+
+        self._k8s_bare_metal_not_in = k8s_bare_metal_not_in
+
+    @property
+    def k8s_bare_metal_not_starts_with(self):
+        """Gets the k8s_bare_metal_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_not_starts_with
+
+    @k8s_bare_metal_not_starts_with.setter
+    def k8s_bare_metal_not_starts_with(self, k8s_bare_metal_not_starts_with):
+        """Sets the k8s_bare_metal_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_not_starts_with: The k8s_bare_metal_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_not_starts_with: str
+        """
+
+        self._k8s_bare_metal_not_starts_with = k8s_bare_metal_not_starts_with
+
+    @property
+    def k8s_bare_metal_starts_with(self):
+        """Gets the k8s_bare_metal_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_bare_metal_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal_starts_with
+
+    @k8s_bare_metal_starts_with.setter
+    def k8s_bare_metal_starts_with(self, k8s_bare_metal_starts_with):
+        """Sets the k8s_bare_metal_starts_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_bare_metal_starts_with: The k8s_bare_metal_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_bare_metal_starts_with: str
+        """
+
+        self._k8s_bare_metal_starts_with = k8s_bare_metal_starts_with
+
+    @property
+    def k8s_service(self):
+        """Gets the k8s_service of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service
+
+    @k8s_service.setter
+    def k8s_service(self, k8s_service):
+        """Sets the k8s_service of this EcpLicenseWhereInput.
+
+
+        :param k8s_service: The k8s_service of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service: str
+        """
+
+        self._k8s_service = k8s_service
+
+    @property
+    def k8s_service_contains(self):
+        """Gets the k8s_service_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_contains
+
+    @k8s_service_contains.setter
+    def k8s_service_contains(self, k8s_service_contains):
+        """Sets the k8s_service_contains of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_contains: The k8s_service_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_contains: str
+        """
+
+        self._k8s_service_contains = k8s_service_contains
+
+    @property
+    def k8s_service_ends_with(self):
+        """Gets the k8s_service_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_ends_with
+
+    @k8s_service_ends_with.setter
+    def k8s_service_ends_with(self, k8s_service_ends_with):
+        """Sets the k8s_service_ends_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_ends_with: The k8s_service_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_ends_with: str
+        """
+
+        self._k8s_service_ends_with = k8s_service_ends_with
+
+    @property
+    def k8s_service_gt(self):
+        """Gets the k8s_service_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_gt
+
+    @k8s_service_gt.setter
+    def k8s_service_gt(self, k8s_service_gt):
+        """Sets the k8s_service_gt of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_gt: The k8s_service_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_gt: str
+        """
+
+        self._k8s_service_gt = k8s_service_gt
+
+    @property
+    def k8s_service_gte(self):
+        """Gets the k8s_service_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_gte
+
+    @k8s_service_gte.setter
+    def k8s_service_gte(self, k8s_service_gte):
+        """Sets the k8s_service_gte of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_gte: The k8s_service_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_gte: str
+        """
+
+        self._k8s_service_gte = k8s_service_gte
+
+    @property
+    def k8s_service_in(self):
+        """Gets the k8s_service_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._k8s_service_in
+
+    @k8s_service_in.setter
+    def k8s_service_in(self, k8s_service_in):
+        """Sets the k8s_service_in of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_in: The k8s_service_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_in: list[str]
+        """
+
+        self._k8s_service_in = k8s_service_in
+
+    @property
+    def k8s_service_lt(self):
+        """Gets the k8s_service_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_lt
+
+    @k8s_service_lt.setter
+    def k8s_service_lt(self, k8s_service_lt):
+        """Sets the k8s_service_lt of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_lt: The k8s_service_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_lt: str
+        """
+
+        self._k8s_service_lt = k8s_service_lt
+
+    @property
+    def k8s_service_lte(self):
+        """Gets the k8s_service_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_lte
+
+    @k8s_service_lte.setter
+    def k8s_service_lte(self, k8s_service_lte):
+        """Sets the k8s_service_lte of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_lte: The k8s_service_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_lte: str
+        """
+
+        self._k8s_service_lte = k8s_service_lte
+
+    @property
+    def k8s_service_not(self):
+        """Gets the k8s_service_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_not
+
+    @k8s_service_not.setter
+    def k8s_service_not(self, k8s_service_not):
+        """Sets the k8s_service_not of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_not: The k8s_service_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_not: str
+        """
+
+        self._k8s_service_not = k8s_service_not
+
+    @property
+    def k8s_service_not_contains(self):
+        """Gets the k8s_service_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_not_contains
+
+    @k8s_service_not_contains.setter
+    def k8s_service_not_contains(self, k8s_service_not_contains):
+        """Sets the k8s_service_not_contains of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_not_contains: The k8s_service_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_not_contains: str
+        """
+
+        self._k8s_service_not_contains = k8s_service_not_contains
+
+    @property
+    def k8s_service_not_ends_with(self):
+        """Gets the k8s_service_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_not_ends_with
+
+    @k8s_service_not_ends_with.setter
+    def k8s_service_not_ends_with(self, k8s_service_not_ends_with):
+        """Sets the k8s_service_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_not_ends_with: The k8s_service_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_not_ends_with: str
+        """
+
+        self._k8s_service_not_ends_with = k8s_service_not_ends_with
+
+    @property
+    def k8s_service_not_in(self):
+        """Gets the k8s_service_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._k8s_service_not_in
+
+    @k8s_service_not_in.setter
+    def k8s_service_not_in(self, k8s_service_not_in):
+        """Sets the k8s_service_not_in of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_not_in: The k8s_service_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_not_in: list[str]
+        """
+
+        self._k8s_service_not_in = k8s_service_not_in
+
+    @property
+    def k8s_service_not_starts_with(self):
+        """Gets the k8s_service_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_not_starts_with
+
+    @k8s_service_not_starts_with.setter
+    def k8s_service_not_starts_with(self, k8s_service_not_starts_with):
+        """Sets the k8s_service_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_not_starts_with: The k8s_service_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_not_starts_with: str
+        """
+
+        self._k8s_service_not_starts_with = k8s_service_not_starts_with
+
+    @property
+    def k8s_service_starts_with(self):
+        """Gets the k8s_service_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The k8s_service_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service_starts_with
+
+    @k8s_service_starts_with.setter
+    def k8s_service_starts_with(self, k8s_service_starts_with):
+        """Sets the k8s_service_starts_with of this EcpLicenseWhereInput.
+
+
+        :param k8s_service_starts_with: The k8s_service_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type k8s_service_starts_with: str
+        """
+
+        self._k8s_service_starts_with = k8s_service_starts_with
+
+    @property
+    def lb(self):
+        """Gets the lb of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb
+
+    @lb.setter
+    def lb(self, lb):
+        """Sets the lb of this EcpLicenseWhereInput.
+
+
+        :param lb: The lb of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb: str
+        """
+
+        self._lb = lb
+
+    @property
+    def lb_contains(self):
+        """Gets the lb_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_contains
+
+    @lb_contains.setter
+    def lb_contains(self, lb_contains):
+        """Sets the lb_contains of this EcpLicenseWhereInput.
+
+
+        :param lb_contains: The lb_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_contains: str
+        """
+
+        self._lb_contains = lb_contains
+
+    @property
+    def lb_ends_with(self):
+        """Gets the lb_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_ends_with
+
+    @lb_ends_with.setter
+    def lb_ends_with(self, lb_ends_with):
+        """Sets the lb_ends_with of this EcpLicenseWhereInput.
+
+
+        :param lb_ends_with: The lb_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_ends_with: str
+        """
+
+        self._lb_ends_with = lb_ends_with
+
+    @property
+    def lb_gt(self):
+        """Gets the lb_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_gt
+
+    @lb_gt.setter
+    def lb_gt(self, lb_gt):
+        """Sets the lb_gt of this EcpLicenseWhereInput.
+
+
+        :param lb_gt: The lb_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_gt: str
+        """
+
+        self._lb_gt = lb_gt
+
+    @property
+    def lb_gte(self):
+        """Gets the lb_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_gte
+
+    @lb_gte.setter
+    def lb_gte(self, lb_gte):
+        """Sets the lb_gte of this EcpLicenseWhereInput.
+
+
+        :param lb_gte: The lb_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_gte: str
+        """
+
+        self._lb_gte = lb_gte
+
+    @property
+    def lb_in(self):
+        """Gets the lb_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._lb_in
+
+    @lb_in.setter
+    def lb_in(self, lb_in):
+        """Sets the lb_in of this EcpLicenseWhereInput.
+
+
+        :param lb_in: The lb_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_in: list[str]
+        """
+
+        self._lb_in = lb_in
+
+    @property
+    def lb_lt(self):
+        """Gets the lb_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_lt
+
+    @lb_lt.setter
+    def lb_lt(self, lb_lt):
+        """Sets the lb_lt of this EcpLicenseWhereInput.
+
+
+        :param lb_lt: The lb_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_lt: str
+        """
+
+        self._lb_lt = lb_lt
+
+    @property
+    def lb_lte(self):
+        """Gets the lb_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_lte
+
+    @lb_lte.setter
+    def lb_lte(self, lb_lte):
+        """Sets the lb_lte of this EcpLicenseWhereInput.
+
+
+        :param lb_lte: The lb_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_lte: str
+        """
+
+        self._lb_lte = lb_lte
+
+    @property
+    def lb_not(self):
+        """Gets the lb_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_not
+
+    @lb_not.setter
+    def lb_not(self, lb_not):
+        """Sets the lb_not of this EcpLicenseWhereInput.
+
+
+        :param lb_not: The lb_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_not: str
+        """
+
+        self._lb_not = lb_not
+
+    @property
+    def lb_not_contains(self):
+        """Gets the lb_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_not_contains
+
+    @lb_not_contains.setter
+    def lb_not_contains(self, lb_not_contains):
+        """Sets the lb_not_contains of this EcpLicenseWhereInput.
+
+
+        :param lb_not_contains: The lb_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_not_contains: str
+        """
+
+        self._lb_not_contains = lb_not_contains
+
+    @property
+    def lb_not_ends_with(self):
+        """Gets the lb_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_not_ends_with
+
+    @lb_not_ends_with.setter
+    def lb_not_ends_with(self, lb_not_ends_with):
+        """Sets the lb_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param lb_not_ends_with: The lb_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_not_ends_with: str
+        """
+
+        self._lb_not_ends_with = lb_not_ends_with
+
+    @property
+    def lb_not_in(self):
+        """Gets the lb_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._lb_not_in
+
+    @lb_not_in.setter
+    def lb_not_in(self, lb_not_in):
+        """Sets the lb_not_in of this EcpLicenseWhereInput.
+
+
+        :param lb_not_in: The lb_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_not_in: list[str]
+        """
+
+        self._lb_not_in = lb_not_in
+
+    @property
+    def lb_not_starts_with(self):
+        """Gets the lb_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_not_starts_with
+
+    @lb_not_starts_with.setter
+    def lb_not_starts_with(self, lb_not_starts_with):
+        """Sets the lb_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param lb_not_starts_with: The lb_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_not_starts_with: str
+        """
+
+        self._lb_not_starts_with = lb_not_starts_with
+
+    @property
+    def lb_starts_with(self):
+        """Gets the lb_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The lb_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb_starts_with
+
+    @lb_starts_with.setter
+    def lb_starts_with(self, lb_starts_with):
+        """Sets the lb_starts_with of this EcpLicenseWhereInput.
+
+
+        :param lb_starts_with: The lb_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type lb_starts_with: str
+        """
+
+        self._lb_starts_with = lb_starts_with
+
+    @property
+    def license_payload(self):
+        """Gets the license_payload of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload
+
+    @license_payload.setter
+    def license_payload(self, license_payload):
+        """Sets the license_payload of this EcpLicenseWhereInput.
+
+
+        :param license_payload: The license_payload of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload: str
+        """
+
+        self._license_payload = license_payload
+
+    @property
+    def license_payload_contains(self):
+        """Gets the license_payload_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_contains
+
+    @license_payload_contains.setter
+    def license_payload_contains(self, license_payload_contains):
+        """Sets the license_payload_contains of this EcpLicenseWhereInput.
+
+
+        :param license_payload_contains: The license_payload_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_contains: str
+        """
+
+        self._license_payload_contains = license_payload_contains
+
+    @property
+    def license_payload_ends_with(self):
+        """Gets the license_payload_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_ends_with
+
+    @license_payload_ends_with.setter
+    def license_payload_ends_with(self, license_payload_ends_with):
+        """Sets the license_payload_ends_with of this EcpLicenseWhereInput.
+
+
+        :param license_payload_ends_with: The license_payload_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_ends_with: str
+        """
+
+        self._license_payload_ends_with = license_payload_ends_with
+
+    @property
+    def license_payload_gt(self):
+        """Gets the license_payload_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_gt
+
+    @license_payload_gt.setter
+    def license_payload_gt(self, license_payload_gt):
+        """Sets the license_payload_gt of this EcpLicenseWhereInput.
+
+
+        :param license_payload_gt: The license_payload_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_gt: str
+        """
+
+        self._license_payload_gt = license_payload_gt
+
+    @property
+    def license_payload_gte(self):
+        """Gets the license_payload_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_gte
+
+    @license_payload_gte.setter
+    def license_payload_gte(self, license_payload_gte):
+        """Sets the license_payload_gte of this EcpLicenseWhereInput.
+
+
+        :param license_payload_gte: The license_payload_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_gte: str
+        """
+
+        self._license_payload_gte = license_payload_gte
+
+    @property
+    def license_payload_in(self):
+        """Gets the license_payload_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license_payload_in
+
+    @license_payload_in.setter
+    def license_payload_in(self, license_payload_in):
+        """Sets the license_payload_in of this EcpLicenseWhereInput.
+
+
+        :param license_payload_in: The license_payload_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_in: list[str]
+        """
+
+        self._license_payload_in = license_payload_in
+
+    @property
+    def license_payload_lt(self):
+        """Gets the license_payload_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_lt
+
+    @license_payload_lt.setter
+    def license_payload_lt(self, license_payload_lt):
+        """Sets the license_payload_lt of this EcpLicenseWhereInput.
+
+
+        :param license_payload_lt: The license_payload_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_lt: str
+        """
+
+        self._license_payload_lt = license_payload_lt
+
+    @property
+    def license_payload_lte(self):
+        """Gets the license_payload_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_lte
+
+    @license_payload_lte.setter
+    def license_payload_lte(self, license_payload_lte):
+        """Sets the license_payload_lte of this EcpLicenseWhereInput.
+
+
+        :param license_payload_lte: The license_payload_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_lte: str
+        """
+
+        self._license_payload_lte = license_payload_lte
+
+    @property
+    def license_payload_not(self):
+        """Gets the license_payload_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_not
+
+    @license_payload_not.setter
+    def license_payload_not(self, license_payload_not):
+        """Sets the license_payload_not of this EcpLicenseWhereInput.
+
+
+        :param license_payload_not: The license_payload_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_not: str
+        """
+
+        self._license_payload_not = license_payload_not
+
+    @property
+    def license_payload_not_contains(self):
+        """Gets the license_payload_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_not_contains
+
+    @license_payload_not_contains.setter
+    def license_payload_not_contains(self, license_payload_not_contains):
+        """Sets the license_payload_not_contains of this EcpLicenseWhereInput.
+
+
+        :param license_payload_not_contains: The license_payload_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_not_contains: str
+        """
+
+        self._license_payload_not_contains = license_payload_not_contains
+
+    @property
+    def license_payload_not_ends_with(self):
+        """Gets the license_payload_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_not_ends_with
+
+    @license_payload_not_ends_with.setter
+    def license_payload_not_ends_with(self, license_payload_not_ends_with):
+        """Sets the license_payload_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param license_payload_not_ends_with: The license_payload_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_not_ends_with: str
+        """
+
+        self._license_payload_not_ends_with = license_payload_not_ends_with
+
+    @property
+    def license_payload_not_in(self):
+        """Gets the license_payload_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license_payload_not_in
+
+    @license_payload_not_in.setter
+    def license_payload_not_in(self, license_payload_not_in):
+        """Sets the license_payload_not_in of this EcpLicenseWhereInput.
+
+
+        :param license_payload_not_in: The license_payload_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_not_in: list[str]
+        """
+
+        self._license_payload_not_in = license_payload_not_in
+
+    @property
+    def license_payload_not_starts_with(self):
+        """Gets the license_payload_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_not_starts_with
+
+    @license_payload_not_starts_with.setter
+    def license_payload_not_starts_with(self, license_payload_not_starts_with):
+        """Sets the license_payload_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param license_payload_not_starts_with: The license_payload_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_not_starts_with: str
+        """
+
+        self._license_payload_not_starts_with = license_payload_not_starts_with
+
+    @property
+    def license_payload_starts_with(self):
+        """Gets the license_payload_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_payload_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload_starts_with
+
+    @license_payload_starts_with.setter
+    def license_payload_starts_with(self, license_payload_starts_with):
+        """Sets the license_payload_starts_with of this EcpLicenseWhereInput.
+
+
+        :param license_payload_starts_with: The license_payload_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_payload_starts_with: str
+        """
+
+        self._license_payload_starts_with = license_payload_starts_with
+
+    @property
+    def license_signature(self):
+        """Gets the license_signature of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature
+
+    @license_signature.setter
+    def license_signature(self, license_signature):
+        """Sets the license_signature of this EcpLicenseWhereInput.
+
+
+        :param license_signature: The license_signature of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature: str
+        """
+
+        self._license_signature = license_signature
+
+    @property
+    def license_signature_contains(self):
+        """Gets the license_signature_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_contains
+
+    @license_signature_contains.setter
+    def license_signature_contains(self, license_signature_contains):
+        """Sets the license_signature_contains of this EcpLicenseWhereInput.
+
+
+        :param license_signature_contains: The license_signature_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_contains: str
+        """
+
+        self._license_signature_contains = license_signature_contains
+
+    @property
+    def license_signature_ends_with(self):
+        """Gets the license_signature_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_ends_with
+
+    @license_signature_ends_with.setter
+    def license_signature_ends_with(self, license_signature_ends_with):
+        """Sets the license_signature_ends_with of this EcpLicenseWhereInput.
+
+
+        :param license_signature_ends_with: The license_signature_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_ends_with: str
+        """
+
+        self._license_signature_ends_with = license_signature_ends_with
+
+    @property
+    def license_signature_gt(self):
+        """Gets the license_signature_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_gt
+
+    @license_signature_gt.setter
+    def license_signature_gt(self, license_signature_gt):
+        """Sets the license_signature_gt of this EcpLicenseWhereInput.
+
+
+        :param license_signature_gt: The license_signature_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_gt: str
+        """
+
+        self._license_signature_gt = license_signature_gt
+
+    @property
+    def license_signature_gte(self):
+        """Gets the license_signature_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_gte
+
+    @license_signature_gte.setter
+    def license_signature_gte(self, license_signature_gte):
+        """Sets the license_signature_gte of this EcpLicenseWhereInput.
+
+
+        :param license_signature_gte: The license_signature_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_gte: str
+        """
+
+        self._license_signature_gte = license_signature_gte
+
+    @property
+    def license_signature_in(self):
+        """Gets the license_signature_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license_signature_in
+
+    @license_signature_in.setter
+    def license_signature_in(self, license_signature_in):
+        """Sets the license_signature_in of this EcpLicenseWhereInput.
+
+
+        :param license_signature_in: The license_signature_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_in: list[str]
+        """
+
+        self._license_signature_in = license_signature_in
+
+    @property
+    def license_signature_lt(self):
+        """Gets the license_signature_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_lt
+
+    @license_signature_lt.setter
+    def license_signature_lt(self, license_signature_lt):
+        """Sets the license_signature_lt of this EcpLicenseWhereInput.
+
+
+        :param license_signature_lt: The license_signature_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_lt: str
+        """
+
+        self._license_signature_lt = license_signature_lt
+
+    @property
+    def license_signature_lte(self):
+        """Gets the license_signature_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_lte
+
+    @license_signature_lte.setter
+    def license_signature_lte(self, license_signature_lte):
+        """Sets the license_signature_lte of this EcpLicenseWhereInput.
+
+
+        :param license_signature_lte: The license_signature_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_lte: str
+        """
+
+        self._license_signature_lte = license_signature_lte
+
+    @property
+    def license_signature_not(self):
+        """Gets the license_signature_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_not
+
+    @license_signature_not.setter
+    def license_signature_not(self, license_signature_not):
+        """Sets the license_signature_not of this EcpLicenseWhereInput.
+
+
+        :param license_signature_not: The license_signature_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_not: str
+        """
+
+        self._license_signature_not = license_signature_not
+
+    @property
+    def license_signature_not_contains(self):
+        """Gets the license_signature_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_not_contains
+
+    @license_signature_not_contains.setter
+    def license_signature_not_contains(self, license_signature_not_contains):
+        """Sets the license_signature_not_contains of this EcpLicenseWhereInput.
+
+
+        :param license_signature_not_contains: The license_signature_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_not_contains: str
+        """
+
+        self._license_signature_not_contains = license_signature_not_contains
+
+    @property
+    def license_signature_not_ends_with(self):
+        """Gets the license_signature_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_not_ends_with
+
+    @license_signature_not_ends_with.setter
+    def license_signature_not_ends_with(self, license_signature_not_ends_with):
+        """Sets the license_signature_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param license_signature_not_ends_with: The license_signature_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_not_ends_with: str
+        """
+
+        self._license_signature_not_ends_with = license_signature_not_ends_with
+
+    @property
+    def license_signature_not_in(self):
+        """Gets the license_signature_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license_signature_not_in
+
+    @license_signature_not_in.setter
+    def license_signature_not_in(self, license_signature_not_in):
+        """Sets the license_signature_not_in of this EcpLicenseWhereInput.
+
+
+        :param license_signature_not_in: The license_signature_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_not_in: list[str]
+        """
+
+        self._license_signature_not_in = license_signature_not_in
+
+    @property
+    def license_signature_not_starts_with(self):
+        """Gets the license_signature_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_not_starts_with
+
+    @license_signature_not_starts_with.setter
+    def license_signature_not_starts_with(self, license_signature_not_starts_with):
+        """Sets the license_signature_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param license_signature_not_starts_with: The license_signature_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_not_starts_with: str
+        """
+
+        self._license_signature_not_starts_with = license_signature_not_starts_with
+
+    @property
+    def license_signature_starts_with(self):
+        """Gets the license_signature_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The license_signature_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature_starts_with
+
+    @license_signature_starts_with.setter
+    def license_signature_starts_with(self, license_signature_starts_with):
+        """Sets the license_signature_starts_with of this EcpLicenseWhereInput.
+
+
+        :param license_signature_starts_with: The license_signature_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type license_signature_starts_with: str
+        """
+
+        self._license_signature_starts_with = license_signature_starts_with
 
     @property
     def license_type(self):
@@ -3476,6 +7194,594 @@ class EcpLicenseWhereInput(object):
         self._subscription_start_date_not_in = subscription_start_date_not_in
 
     @property
+    def sync_replication(self):
+        """Gets the sync_replication of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication
+
+    @sync_replication.setter
+    def sync_replication(self, sync_replication):
+        """Sets the sync_replication of this EcpLicenseWhereInput.
+
+
+        :param sync_replication: The sync_replication of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication: str
+        """
+
+        self._sync_replication = sync_replication
+
+    @property
+    def sync_replication_contains(self):
+        """Gets the sync_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_contains
+
+    @sync_replication_contains.setter
+    def sync_replication_contains(self, sync_replication_contains):
+        """Sets the sync_replication_contains of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_contains: The sync_replication_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_contains: str
+        """
+
+        self._sync_replication_contains = sync_replication_contains
+
+    @property
+    def sync_replication_ends_with(self):
+        """Gets the sync_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_ends_with
+
+    @sync_replication_ends_with.setter
+    def sync_replication_ends_with(self, sync_replication_ends_with):
+        """Sets the sync_replication_ends_with of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_ends_with: The sync_replication_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_ends_with: str
+        """
+
+        self._sync_replication_ends_with = sync_replication_ends_with
+
+    @property
+    def sync_replication_gt(self):
+        """Gets the sync_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_gt
+
+    @sync_replication_gt.setter
+    def sync_replication_gt(self, sync_replication_gt):
+        """Sets the sync_replication_gt of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_gt: The sync_replication_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_gt: str
+        """
+
+        self._sync_replication_gt = sync_replication_gt
+
+    @property
+    def sync_replication_gte(self):
+        """Gets the sync_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_gte
+
+    @sync_replication_gte.setter
+    def sync_replication_gte(self, sync_replication_gte):
+        """Sets the sync_replication_gte of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_gte: The sync_replication_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_gte: str
+        """
+
+        self._sync_replication_gte = sync_replication_gte
+
+    @property
+    def sync_replication_in(self):
+        """Gets the sync_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._sync_replication_in
+
+    @sync_replication_in.setter
+    def sync_replication_in(self, sync_replication_in):
+        """Sets the sync_replication_in of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_in: The sync_replication_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_in: list[str]
+        """
+
+        self._sync_replication_in = sync_replication_in
+
+    @property
+    def sync_replication_lt(self):
+        """Gets the sync_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_lt
+
+    @sync_replication_lt.setter
+    def sync_replication_lt(self, sync_replication_lt):
+        """Sets the sync_replication_lt of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_lt: The sync_replication_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_lt: str
+        """
+
+        self._sync_replication_lt = sync_replication_lt
+
+    @property
+    def sync_replication_lte(self):
+        """Gets the sync_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_lte
+
+    @sync_replication_lte.setter
+    def sync_replication_lte(self, sync_replication_lte):
+        """Sets the sync_replication_lte of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_lte: The sync_replication_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_lte: str
+        """
+
+        self._sync_replication_lte = sync_replication_lte
+
+    @property
+    def sync_replication_not(self):
+        """Gets the sync_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_not
+
+    @sync_replication_not.setter
+    def sync_replication_not(self, sync_replication_not):
+        """Sets the sync_replication_not of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_not: The sync_replication_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_not: str
+        """
+
+        self._sync_replication_not = sync_replication_not
+
+    @property
+    def sync_replication_not_contains(self):
+        """Gets the sync_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_not_contains
+
+    @sync_replication_not_contains.setter
+    def sync_replication_not_contains(self, sync_replication_not_contains):
+        """Sets the sync_replication_not_contains of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_not_contains: The sync_replication_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_not_contains: str
+        """
+
+        self._sync_replication_not_contains = sync_replication_not_contains
+
+    @property
+    def sync_replication_not_ends_with(self):
+        """Gets the sync_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_not_ends_with
+
+    @sync_replication_not_ends_with.setter
+    def sync_replication_not_ends_with(self, sync_replication_not_ends_with):
+        """Sets the sync_replication_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_not_ends_with: The sync_replication_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_not_ends_with: str
+        """
+
+        self._sync_replication_not_ends_with = sync_replication_not_ends_with
+
+    @property
+    def sync_replication_not_in(self):
+        """Gets the sync_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._sync_replication_not_in
+
+    @sync_replication_not_in.setter
+    def sync_replication_not_in(self, sync_replication_not_in):
+        """Sets the sync_replication_not_in of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_not_in: The sync_replication_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_not_in: list[str]
+        """
+
+        self._sync_replication_not_in = sync_replication_not_in
+
+    @property
+    def sync_replication_not_starts_with(self):
+        """Gets the sync_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_not_starts_with
+
+    @sync_replication_not_starts_with.setter
+    def sync_replication_not_starts_with(self, sync_replication_not_starts_with):
+        """Sets the sync_replication_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_not_starts_with: The sync_replication_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_not_starts_with: str
+        """
+
+        self._sync_replication_not_starts_with = sync_replication_not_starts_with
+
+    @property
+    def sync_replication_starts_with(self):
+        """Gets the sync_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The sync_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication_starts_with
+
+    @sync_replication_starts_with.setter
+    def sync_replication_starts_with(self, sync_replication_starts_with):
+        """Sets the sync_replication_starts_with of this EcpLicenseWhereInput.
+
+
+        :param sync_replication_starts_with: The sync_replication_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type sync_replication_starts_with: str
+        """
+
+        self._sync_replication_starts_with = sync_replication_starts_with
+
+    @property
+    def traffic_visualization(self):
+        """Gets the traffic_visualization of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization
+
+    @traffic_visualization.setter
+    def traffic_visualization(self, traffic_visualization):
+        """Sets the traffic_visualization of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization: The traffic_visualization of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization: str
+        """
+
+        self._traffic_visualization = traffic_visualization
+
+    @property
+    def traffic_visualization_contains(self):
+        """Gets the traffic_visualization_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_contains
+
+    @traffic_visualization_contains.setter
+    def traffic_visualization_contains(self, traffic_visualization_contains):
+        """Sets the traffic_visualization_contains of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_contains: The traffic_visualization_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_contains: str
+        """
+
+        self._traffic_visualization_contains = traffic_visualization_contains
+
+    @property
+    def traffic_visualization_ends_with(self):
+        """Gets the traffic_visualization_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_ends_with
+
+    @traffic_visualization_ends_with.setter
+    def traffic_visualization_ends_with(self, traffic_visualization_ends_with):
+        """Sets the traffic_visualization_ends_with of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_ends_with: The traffic_visualization_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_ends_with: str
+        """
+
+        self._traffic_visualization_ends_with = traffic_visualization_ends_with
+
+    @property
+    def traffic_visualization_gt(self):
+        """Gets the traffic_visualization_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_gt
+
+    @traffic_visualization_gt.setter
+    def traffic_visualization_gt(self, traffic_visualization_gt):
+        """Sets the traffic_visualization_gt of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_gt: The traffic_visualization_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_gt: str
+        """
+
+        self._traffic_visualization_gt = traffic_visualization_gt
+
+    @property
+    def traffic_visualization_gte(self):
+        """Gets the traffic_visualization_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_gte
+
+    @traffic_visualization_gte.setter
+    def traffic_visualization_gte(self, traffic_visualization_gte):
+        """Sets the traffic_visualization_gte of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_gte: The traffic_visualization_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_gte: str
+        """
+
+        self._traffic_visualization_gte = traffic_visualization_gte
+
+    @property
+    def traffic_visualization_in(self):
+        """Gets the traffic_visualization_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._traffic_visualization_in
+
+    @traffic_visualization_in.setter
+    def traffic_visualization_in(self, traffic_visualization_in):
+        """Sets the traffic_visualization_in of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_in: The traffic_visualization_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_in: list[str]
+        """
+
+        self._traffic_visualization_in = traffic_visualization_in
+
+    @property
+    def traffic_visualization_lt(self):
+        """Gets the traffic_visualization_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_lt
+
+    @traffic_visualization_lt.setter
+    def traffic_visualization_lt(self, traffic_visualization_lt):
+        """Sets the traffic_visualization_lt of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_lt: The traffic_visualization_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_lt: str
+        """
+
+        self._traffic_visualization_lt = traffic_visualization_lt
+
+    @property
+    def traffic_visualization_lte(self):
+        """Gets the traffic_visualization_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_lte
+
+    @traffic_visualization_lte.setter
+    def traffic_visualization_lte(self, traffic_visualization_lte):
+        """Sets the traffic_visualization_lte of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_lte: The traffic_visualization_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_lte: str
+        """
+
+        self._traffic_visualization_lte = traffic_visualization_lte
+
+    @property
+    def traffic_visualization_not(self):
+        """Gets the traffic_visualization_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_not
+
+    @traffic_visualization_not.setter
+    def traffic_visualization_not(self, traffic_visualization_not):
+        """Sets the traffic_visualization_not of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_not: The traffic_visualization_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_not: str
+        """
+
+        self._traffic_visualization_not = traffic_visualization_not
+
+    @property
+    def traffic_visualization_not_contains(self):
+        """Gets the traffic_visualization_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_not_contains
+
+    @traffic_visualization_not_contains.setter
+    def traffic_visualization_not_contains(self, traffic_visualization_not_contains):
+        """Sets the traffic_visualization_not_contains of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_not_contains: The traffic_visualization_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_not_contains: str
+        """
+
+        self._traffic_visualization_not_contains = traffic_visualization_not_contains
+
+    @property
+    def traffic_visualization_not_ends_with(self):
+        """Gets the traffic_visualization_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_not_ends_with
+
+    @traffic_visualization_not_ends_with.setter
+    def traffic_visualization_not_ends_with(self, traffic_visualization_not_ends_with):
+        """Sets the traffic_visualization_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_not_ends_with: The traffic_visualization_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_not_ends_with: str
+        """
+
+        self._traffic_visualization_not_ends_with = traffic_visualization_not_ends_with
+
+    @property
+    def traffic_visualization_not_in(self):
+        """Gets the traffic_visualization_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._traffic_visualization_not_in
+
+    @traffic_visualization_not_in.setter
+    def traffic_visualization_not_in(self, traffic_visualization_not_in):
+        """Sets the traffic_visualization_not_in of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_not_in: The traffic_visualization_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_not_in: list[str]
+        """
+
+        self._traffic_visualization_not_in = traffic_visualization_not_in
+
+    @property
+    def traffic_visualization_not_starts_with(self):
+        """Gets the traffic_visualization_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_not_starts_with
+
+    @traffic_visualization_not_starts_with.setter
+    def traffic_visualization_not_starts_with(self, traffic_visualization_not_starts_with):
+        """Sets the traffic_visualization_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_not_starts_with: The traffic_visualization_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_not_starts_with: str
+        """
+
+        self._traffic_visualization_not_starts_with = traffic_visualization_not_starts_with
+
+    @property
+    def traffic_visualization_starts_with(self):
+        """Gets the traffic_visualization_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The traffic_visualization_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization_starts_with
+
+    @traffic_visualization_starts_with.setter
+    def traffic_visualization_starts_with(self, traffic_visualization_starts_with):
+        """Sets the traffic_visualization_starts_with of this EcpLicenseWhereInput.
+
+
+        :param traffic_visualization_starts_with: The traffic_visualization_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type traffic_visualization_starts_with: str
+        """
+
+        self._traffic_visualization_starts_with = traffic_visualization_starts_with
+
+    @property
     def vendor(self):
         """Gets the vendor of this EcpLicenseWhereInput.  # noqa: E501
 
@@ -3936,6 +8242,300 @@ class EcpLicenseWhereInput(object):
         """
 
         self._version_not_in = version_not_in
+
+    @property
+    def vpc(self):
+        """Gets the vpc of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc
+
+    @vpc.setter
+    def vpc(self, vpc):
+        """Sets the vpc of this EcpLicenseWhereInput.
+
+
+        :param vpc: The vpc of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc: str
+        """
+
+        self._vpc = vpc
+
+    @property
+    def vpc_contains(self):
+        """Gets the vpc_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_contains
+
+    @vpc_contains.setter
+    def vpc_contains(self, vpc_contains):
+        """Sets the vpc_contains of this EcpLicenseWhereInput.
+
+
+        :param vpc_contains: The vpc_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_contains: str
+        """
+
+        self._vpc_contains = vpc_contains
+
+    @property
+    def vpc_ends_with(self):
+        """Gets the vpc_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_ends_with
+
+    @vpc_ends_with.setter
+    def vpc_ends_with(self, vpc_ends_with):
+        """Sets the vpc_ends_with of this EcpLicenseWhereInput.
+
+
+        :param vpc_ends_with: The vpc_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_ends_with: str
+        """
+
+        self._vpc_ends_with = vpc_ends_with
+
+    @property
+    def vpc_gt(self):
+        """Gets the vpc_gt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_gt
+
+    @vpc_gt.setter
+    def vpc_gt(self, vpc_gt):
+        """Sets the vpc_gt of this EcpLicenseWhereInput.
+
+
+        :param vpc_gt: The vpc_gt of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_gt: str
+        """
+
+        self._vpc_gt = vpc_gt
+
+    @property
+    def vpc_gte(self):
+        """Gets the vpc_gte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_gte
+
+    @vpc_gte.setter
+    def vpc_gte(self, vpc_gte):
+        """Sets the vpc_gte of this EcpLicenseWhereInput.
+
+
+        :param vpc_gte: The vpc_gte of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_gte: str
+        """
+
+        self._vpc_gte = vpc_gte
+
+    @property
+    def vpc_in(self):
+        """Gets the vpc_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._vpc_in
+
+    @vpc_in.setter
+    def vpc_in(self, vpc_in):
+        """Sets the vpc_in of this EcpLicenseWhereInput.
+
+
+        :param vpc_in: The vpc_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_in: list[str]
+        """
+
+        self._vpc_in = vpc_in
+
+    @property
+    def vpc_lt(self):
+        """Gets the vpc_lt of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_lt
+
+    @vpc_lt.setter
+    def vpc_lt(self, vpc_lt):
+        """Sets the vpc_lt of this EcpLicenseWhereInput.
+
+
+        :param vpc_lt: The vpc_lt of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_lt: str
+        """
+
+        self._vpc_lt = vpc_lt
+
+    @property
+    def vpc_lte(self):
+        """Gets the vpc_lte of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_lte
+
+    @vpc_lte.setter
+    def vpc_lte(self, vpc_lte):
+        """Sets the vpc_lte of this EcpLicenseWhereInput.
+
+
+        :param vpc_lte: The vpc_lte of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_lte: str
+        """
+
+        self._vpc_lte = vpc_lte
+
+    @property
+    def vpc_not(self):
+        """Gets the vpc_not of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_not of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_not
+
+    @vpc_not.setter
+    def vpc_not(self, vpc_not):
+        """Sets the vpc_not of this EcpLicenseWhereInput.
+
+
+        :param vpc_not: The vpc_not of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_not: str
+        """
+
+        self._vpc_not = vpc_not
+
+    @property
+    def vpc_not_contains(self):
+        """Gets the vpc_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_not_contains
+
+    @vpc_not_contains.setter
+    def vpc_not_contains(self, vpc_not_contains):
+        """Sets the vpc_not_contains of this EcpLicenseWhereInput.
+
+
+        :param vpc_not_contains: The vpc_not_contains of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_not_contains: str
+        """
+
+        self._vpc_not_contains = vpc_not_contains
+
+    @property
+    def vpc_not_ends_with(self):
+        """Gets the vpc_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_not_ends_with
+
+    @vpc_not_ends_with.setter
+    def vpc_not_ends_with(self, vpc_not_ends_with):
+        """Sets the vpc_not_ends_with of this EcpLicenseWhereInput.
+
+
+        :param vpc_not_ends_with: The vpc_not_ends_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_not_ends_with: str
+        """
+
+        self._vpc_not_ends_with = vpc_not_ends_with
+
+    @property
+    def vpc_not_in(self):
+        """Gets the vpc_not_in of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._vpc_not_in
+
+    @vpc_not_in.setter
+    def vpc_not_in(self, vpc_not_in):
+        """Sets the vpc_not_in of this EcpLicenseWhereInput.
+
+
+        :param vpc_not_in: The vpc_not_in of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_not_in: list[str]
+        """
+
+        self._vpc_not_in = vpc_not_in
+
+    @property
+    def vpc_not_starts_with(self):
+        """Gets the vpc_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_not_starts_with
+
+    @vpc_not_starts_with.setter
+    def vpc_not_starts_with(self, vpc_not_starts_with):
+        """Sets the vpc_not_starts_with of this EcpLicenseWhereInput.
+
+
+        :param vpc_not_starts_with: The vpc_not_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_not_starts_with: str
+        """
+
+        self._vpc_not_starts_with = vpc_not_starts_with
+
+    @property
+    def vpc_starts_with(self):
+        """Gets the vpc_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+
+
+        :return: The vpc_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc_starts_with
+
+    @vpc_starts_with.setter
+    def vpc_starts_with(self, vpc_starts_with):
+        """Sets the vpc_starts_with of this EcpLicenseWhereInput.
+
+
+        :param vpc_starts_with: The vpc_starts_with of this EcpLicenseWhereInput.  # noqa: E501
+        :type vpc_starts_with: str
+        """
+
+        self._vpc_starts_with = vpc_starts_with
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""
