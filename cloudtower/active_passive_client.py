@@ -245,7 +245,7 @@ class ActivePassiveApiClient(ApiClient):
         if header_name is not None:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
-        self.user_agent = 'OpenAPI-Generator/2.23.0/python'
+        self.user_agent = 'OpenAPI-Generator/v2.24.0/python'
         self.client_side_validation = configuration.client_side_validation
         self._api_clients_by_root_url = {}
         for root_url, endpoint in self._endpoints_by_root_url.items():

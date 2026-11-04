@@ -25,8 +25,9 @@ class DiskUsage(object):
     CACHE_AND_META = "CACHE_AND_META"
     DATA = "DATA"
     DATA_AND_META = "DATA_AND_META"
+    UNKNOWN = "UNKNOWN"
 
-    allowable_values = [BOOT, CACHE, CACHE_AND_META, DATA, DATA_AND_META]  # noqa: E501
+    allowable_values = [BOOT, CACHE, CACHE_AND_META, DATA, DATA_AND_META, UNKNOWN]  # noqa: E501
 
     """
     Attributes:

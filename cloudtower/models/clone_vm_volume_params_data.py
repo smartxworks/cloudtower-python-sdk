@@ -25,11 +25,13 @@ class CloneVmVolumeParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'provision_policy': 'VmVolumeProvisionPolicy',
         'description': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'provision_policy': 'provision_policy',
         'description': 'description',
         'name': 'name'
     }
@@ -38,14 +40,38 @@ class CloneVmVolumeParamsData(object):
         """CloneVmVolumeParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._provision_policy = None
         self._description = None
         self._name = None
         self.discriminator = None
 
+        if "provision_policy" in kwargs:
+            self.provision_policy = kwargs["provision_policy"]
         if "description" in kwargs:
             self.description = kwargs["description"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def provision_policy(self):
+        """Gets the provision_policy of this CloneVmVolumeParamsData.  # noqa: E501
+
+
+        :return: The provision_policy of this CloneVmVolumeParamsData.  # noqa: E501
+        :rtype: VmVolumeProvisionPolicy
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this CloneVmVolumeParamsData.
+
+
+        :param provision_policy: The provision_policy of this CloneVmVolumeParamsData.  # noqa: E501
+        :type provision_policy: VmVolumeProvisionPolicy
+        """
+
+        self._provision_policy = provision_policy
 
     @property
     def description(self):

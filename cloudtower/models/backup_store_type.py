@@ -22,10 +22,11 @@ class BackupStoreType(object):
     """
     BOOSTFS = "BOOSTFS"
     ISCSI = "ISCSI"
+    NETBACKUP = "NETBACKUP"
     NFS3 = "NFS3"
     NFS4 = "NFS4"
 
-    allowable_values = [BOOSTFS, ISCSI, NFS3, NFS4]  # noqa: E501
+    allowable_values = [BOOSTFS, ISCSI, NETBACKUP, NFS3, NFS4]  # noqa: E501
 
     """
     Attributes:

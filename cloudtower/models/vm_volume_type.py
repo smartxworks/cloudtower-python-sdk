@@ -22,8 +22,9 @@ class VmVolumeType(object):
     """
     VOLUME = "KVM_VOLUME"
     VOLUME_ISCSI = "KVM_VOLUME_ISCSI"
+    VOLUME_VCFS = "KVM_VOLUME_VCFS"
 
-    allowable_values = [VOLUME, VOLUME_ISCSI]  # noqa: E501
+    allowable_values = [VOLUME, VOLUME_ISCSI, VOLUME_VCFS]  # noqa: E501
 
     """
     Attributes:

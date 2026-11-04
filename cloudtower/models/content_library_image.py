@@ -27,6 +27,7 @@ class ContentLibraryImage(object):
     openapi_types = {
         'clusters': 'list[NestedCluster]',
         'created_at': 'str',
+        'datastores': 'list[NestedDatastore]',
         'description': 'str',
         'elf_image_uuids': 'list[str]',
         'elf_images': 'list[NestedElfImage]',
@@ -45,6 +46,7 @@ class ContentLibraryImage(object):
     attribute_map = {
         'clusters': 'clusters',
         'created_at': 'createdAt',
+        'datastores': 'datastores',
         'description': 'description',
         'elf_image_uuids': 'elf_image_uuids',
         'elf_images': 'elf_images',
@@ -66,6 +68,7 @@ class ContentLibraryImage(object):
 
         self._clusters = None
         self._created_at = None
+        self._datastores = None
         self._description = None
         self._elf_image_uuids = None
         self._elf_images = None
@@ -84,6 +87,7 @@ class ContentLibraryImage(object):
         self.clusters = kwargs.get("clusters", None)
         if "created_at" in kwargs:
             self.created_at = kwargs["created_at"]
+        self.datastores = kwargs.get("datastores", None)
         if "description" in kwargs:
             self.description = kwargs["description"]
         if "elf_image_uuids" in kwargs:
@@ -147,6 +151,27 @@ class ContentLibraryImage(object):
             raise ValueError("Invalid value for `created_at`, must not be `None`")  # noqa: E501
 
         self._created_at = created_at
+
+    @property
+    def datastores(self):
+        """Gets the datastores of this ContentLibraryImage.  # noqa: E501
+
+
+        :return: The datastores of this ContentLibraryImage.  # noqa: E501
+        :rtype: list[NestedDatastore]
+        """
+        return self._datastores
+
+    @datastores.setter
+    def datastores(self, datastores):
+        """Sets the datastores of this ContentLibraryImage.
+
+
+        :param datastores: The datastores of this ContentLibraryImage.  # noqa: E501
+        :type datastores: list[NestedDatastore]
+        """
+
+        self._datastores = datastores
 
     @property
     def description(self):

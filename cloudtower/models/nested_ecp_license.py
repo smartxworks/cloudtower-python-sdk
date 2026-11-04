@@ -25,22 +25,204 @@ class NestedEcpLicense(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str'
+        'async_replication': 'str',
+        'backup': 'str',
+        'brand': 'str',
+        'dfw': 'str',
+        'external_storage': 'bool',
+        'file_storage': 'str',
+        'id': 'str',
+        'k8s_bare_metal': 'str',
+        'k8s_service': 'str',
+        'lb': 'str',
+        'license_payload': 'str',
+        'license_signature': 'str',
+        'sync_replication': 'str',
+        'traffic_visualization': 'str',
+        'vpc': 'str'
     }
 
     attribute_map = {
-        'id': 'id'
+        'async_replication': 'async_replication',
+        'backup': 'backup',
+        'brand': 'brand',
+        'dfw': 'dfw',
+        'external_storage': 'external_storage',
+        'file_storage': 'file_storage',
+        'id': 'id',
+        'k8s_bare_metal': 'k8s_bare_metal',
+        'k8s_service': 'k8s_service',
+        'lb': 'lb',
+        'license_payload': 'license_payload',
+        'license_signature': 'license_signature',
+        'sync_replication': 'sync_replication',
+        'traffic_visualization': 'traffic_visualization',
+        'vpc': 'vpc'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
         """NestedEcpLicense - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._async_replication = None
+        self._backup = None
+        self._brand = None
+        self._dfw = None
+        self._external_storage = None
+        self._file_storage = None
         self._id = None
+        self._k8s_bare_metal = None
+        self._k8s_service = None
+        self._lb = None
+        self._license_payload = None
+        self._license_signature = None
+        self._sync_replication = None
+        self._traffic_visualization = None
+        self._vpc = None
         self.discriminator = None
 
+        self.async_replication = kwargs.get("async_replication", None)
+        self.backup = kwargs.get("backup", None)
+        self.brand = kwargs.get("brand", None)
+        self.dfw = kwargs.get("dfw", None)
+        self.external_storage = kwargs.get("external_storage", None)
+        self.file_storage = kwargs.get("file_storage", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
+        self.k8s_bare_metal = kwargs.get("k8s_bare_metal", None)
+        self.k8s_service = kwargs.get("k8s_service", None)
+        self.lb = kwargs.get("lb", None)
+        self.license_payload = kwargs.get("license_payload", None)
+        self.license_signature = kwargs.get("license_signature", None)
+        self.sync_replication = kwargs.get("sync_replication", None)
+        self.traffic_visualization = kwargs.get("traffic_visualization", None)
+        self.vpc = kwargs.get("vpc", None)
+
+    @property
+    def async_replication(self):
+        """Gets the async_replication of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The async_replication of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._async_replication
+
+    @async_replication.setter
+    def async_replication(self, async_replication):
+        """Sets the async_replication of this NestedEcpLicense.
+
+
+        :param async_replication: The async_replication of this NestedEcpLicense.  # noqa: E501
+        :type async_replication: str
+        """
+
+        self._async_replication = async_replication
+
+    @property
+    def backup(self):
+        """Gets the backup of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The backup of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._backup
+
+    @backup.setter
+    def backup(self, backup):
+        """Sets the backup of this NestedEcpLicense.
+
+
+        :param backup: The backup of this NestedEcpLicense.  # noqa: E501
+        :type backup: str
+        """
+
+        self._backup = backup
+
+    @property
+    def brand(self):
+        """Gets the brand of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The brand of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._brand
+
+    @brand.setter
+    def brand(self, brand):
+        """Sets the brand of this NestedEcpLicense.
+
+
+        :param brand: The brand of this NestedEcpLicense.  # noqa: E501
+        :type brand: str
+        """
+
+        self._brand = brand
+
+    @property
+    def dfw(self):
+        """Gets the dfw of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The dfw of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._dfw
+
+    @dfw.setter
+    def dfw(self, dfw):
+        """Sets the dfw of this NestedEcpLicense.
+
+
+        :param dfw: The dfw of this NestedEcpLicense.  # noqa: E501
+        :type dfw: str
+        """
+
+        self._dfw = dfw
+
+    @property
+    def external_storage(self):
+        """Gets the external_storage of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The external_storage of this NestedEcpLicense.  # noqa: E501
+        :rtype: bool
+        """
+        return self._external_storage
+
+    @external_storage.setter
+    def external_storage(self, external_storage):
+        """Sets the external_storage of this NestedEcpLicense.
+
+
+        :param external_storage: The external_storage of this NestedEcpLicense.  # noqa: E501
+        :type external_storage: bool
+        """
+
+        self._external_storage = external_storage
+
+    @property
+    def file_storage(self):
+        """Gets the file_storage of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The file_storage of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._file_storage
+
+    @file_storage.setter
+    def file_storage(self, file_storage):
+        """Sets the file_storage of this NestedEcpLicense.
+
+
+        :param file_storage: The file_storage of this NestedEcpLicense.  # noqa: E501
+        :type file_storage: str
+        """
+
+        self._file_storage = file_storage
 
     @property
     def id(self):
@@ -64,6 +246,174 @@ class NestedEcpLicense(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def k8s_bare_metal(self):
+        """Gets the k8s_bare_metal of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The k8s_bare_metal of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_bare_metal
+
+    @k8s_bare_metal.setter
+    def k8s_bare_metal(self, k8s_bare_metal):
+        """Sets the k8s_bare_metal of this NestedEcpLicense.
+
+
+        :param k8s_bare_metal: The k8s_bare_metal of this NestedEcpLicense.  # noqa: E501
+        :type k8s_bare_metal: str
+        """
+
+        self._k8s_bare_metal = k8s_bare_metal
+
+    @property
+    def k8s_service(self):
+        """Gets the k8s_service of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The k8s_service of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_service
+
+    @k8s_service.setter
+    def k8s_service(self, k8s_service):
+        """Sets the k8s_service of this NestedEcpLicense.
+
+
+        :param k8s_service: The k8s_service of this NestedEcpLicense.  # noqa: E501
+        :type k8s_service: str
+        """
+
+        self._k8s_service = k8s_service
+
+    @property
+    def lb(self):
+        """Gets the lb of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The lb of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._lb
+
+    @lb.setter
+    def lb(self, lb):
+        """Sets the lb of this NestedEcpLicense.
+
+
+        :param lb: The lb of this NestedEcpLicense.  # noqa: E501
+        :type lb: str
+        """
+
+        self._lb = lb
+
+    @property
+    def license_payload(self):
+        """Gets the license_payload of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The license_payload of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_payload
+
+    @license_payload.setter
+    def license_payload(self, license_payload):
+        """Sets the license_payload of this NestedEcpLicense.
+
+
+        :param license_payload: The license_payload of this NestedEcpLicense.  # noqa: E501
+        :type license_payload: str
+        """
+
+        self._license_payload = license_payload
+
+    @property
+    def license_signature(self):
+        """Gets the license_signature of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The license_signature of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._license_signature
+
+    @license_signature.setter
+    def license_signature(self, license_signature):
+        """Sets the license_signature of this NestedEcpLicense.
+
+
+        :param license_signature: The license_signature of this NestedEcpLicense.  # noqa: E501
+        :type license_signature: str
+        """
+
+        self._license_signature = license_signature
+
+    @property
+    def sync_replication(self):
+        """Gets the sync_replication of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The sync_replication of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._sync_replication
+
+    @sync_replication.setter
+    def sync_replication(self, sync_replication):
+        """Sets the sync_replication of this NestedEcpLicense.
+
+
+        :param sync_replication: The sync_replication of this NestedEcpLicense.  # noqa: E501
+        :type sync_replication: str
+        """
+
+        self._sync_replication = sync_replication
+
+    @property
+    def traffic_visualization(self):
+        """Gets the traffic_visualization of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The traffic_visualization of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._traffic_visualization
+
+    @traffic_visualization.setter
+    def traffic_visualization(self, traffic_visualization):
+        """Sets the traffic_visualization of this NestedEcpLicense.
+
+
+        :param traffic_visualization: The traffic_visualization of this NestedEcpLicense.  # noqa: E501
+        :type traffic_visualization: str
+        """
+
+        self._traffic_visualization = traffic_visualization
+
+    @property
+    def vpc(self):
+        """Gets the vpc of this NestedEcpLicense.  # noqa: E501
+
+
+        :return: The vpc of this NestedEcpLicense.  # noqa: E501
+        :rtype: str
+        """
+        return self._vpc
+
+    @vpc.setter
+    def vpc(self, vpc):
+        """Sets the vpc of this NestedEcpLicense.
+
+
+        :param vpc: The vpc of this NestedEcpLicense.  # noqa: E501
+        :type vpc: str
+        """
+
+        self._vpc = vpc
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

@@ -192,12 +192,9 @@ class BackupPlan(object):
         if "enable_window" in kwargs:
             self.enable_window = kwargs["enable_window"]
         self.entity_async_status = kwargs.get("entity_async_status", None)
-        if "full_interval" in kwargs:
-            self.full_interval = kwargs["full_interval"]
-        if "full_period" in kwargs:
-            self.full_period = kwargs["full_period"]
-        if "full_time_point" in kwargs:
-            self.full_time_point = kwargs["full_time_point"]
+        self.full_interval = kwargs.get("full_interval", None)
+        self.full_period = kwargs.get("full_period", None)
+        self.full_time_point = kwargs.get("full_time_point", None)
         if "id" in kwargs:
             self.id = kwargs["id"]
         self.incremental_interval = kwargs.get("incremental_interval", None)
@@ -559,8 +556,6 @@ class BackupPlan(object):
         :param full_interval: The full_interval of this BackupPlan.  # noqa: E501
         :type full_interval: int
         """
-        if self.local_vars_configuration.client_side_validation and full_interval is None:  # noqa: E501
-            raise ValueError("Invalid value for `full_interval`, must not be `None`")  # noqa: E501
 
         self._full_interval = full_interval
 
@@ -582,8 +577,6 @@ class BackupPlan(object):
         :param full_period: The full_period of this BackupPlan.  # noqa: E501
         :type full_period: BackupPlanPeriod
         """
-        if self.local_vars_configuration.client_side_validation and full_period is None:  # noqa: E501
-            raise ValueError("Invalid value for `full_period`, must not be `None`")  # noqa: E501
 
         self._full_period = full_period
 
@@ -605,8 +598,6 @@ class BackupPlan(object):
         :param full_time_point: The full_time_point of this BackupPlan.  # noqa: E501
         :type full_time_point: NestedBackupPlanTimePoint
         """
-        if self.local_vars_configuration.client_side_validation and full_time_point is None:  # noqa: E501
-            raise ValueError("Invalid value for `full_time_point`, must not be `None`")  # noqa: E501
 
         self._full_time_point = full_time_point
 

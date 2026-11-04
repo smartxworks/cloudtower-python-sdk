@@ -22,8 +22,9 @@ class VmVolumeSnapshotType(object):
     """
     ISCSI_SNAPSHOT = "KVM_VOLUME_ISCSI_SNAPSHOT"
     SNAPSHOT = "KVM_VOLUME_SNAPSHOT"
+    VCFS_SNAPSHOT = "KVM_VOLUME_VCFS_SNAPSHOT"
 
-    allowable_values = [ISCSI_SNAPSHOT, SNAPSHOT]  # noqa: E501
+    allowable_values = [ISCSI_SNAPSHOT, SNAPSHOT, VCFS_SNAPSHOT]  # noqa: E501
 
     """
     Attributes:

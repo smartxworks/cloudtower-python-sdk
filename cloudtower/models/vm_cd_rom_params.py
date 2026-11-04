@@ -25,6 +25,7 @@ class VmCdRomParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_config': 'StorageConfig',
         'content_library_image_id': 'str',
         'elf_image_id': 'str',
         'index': 'int',
@@ -33,6 +34,7 @@ class VmCdRomParams(object):
     }
 
     attribute_map = {
+        'storage_config': 'storage_config',
         'content_library_image_id': 'content_library_image_id',
         'elf_image_id': 'elf_image_id',
         'index': 'index',
@@ -44,6 +46,7 @@ class VmCdRomParams(object):
         """VmCdRomParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_config = None
         self._content_library_image_id = None
         self._elf_image_id = None
         self._index = None
@@ -51,6 +54,8 @@ class VmCdRomParams(object):
         self._boot = None
         self.discriminator = None
 
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "content_library_image_id" in kwargs:
             self.content_library_image_id = kwargs["content_library_image_id"]
         if "elf_image_id" in kwargs:
@@ -61,6 +66,27 @@ class VmCdRomParams(object):
             self.key = kwargs["key"]
         if "boot" in kwargs:
             self.boot = kwargs["boot"]
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmCdRomParams.  # noqa: E501
+
+
+        :return: The storage_config of this VmCdRomParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmCdRomParams.
+
+
+        :param storage_config: The storage_config of this VmCdRomParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def content_library_image_id(self):

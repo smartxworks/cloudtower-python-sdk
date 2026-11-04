@@ -58,6 +58,14 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'int',
         'allocatable_memory_bytes_not': 'int',
         'allocatable_memory_bytes_not_in': 'list[int]',
+        'allocated_memory_bytes': 'int',
+        'allocated_memory_bytes_gt': 'int',
+        'allocated_memory_bytes_gte': 'int',
+        'allocated_memory_bytes_in': 'list[int]',
+        'allocated_memory_bytes_lt': 'int',
+        'allocated_memory_bytes_lte': 'int',
+        'allocated_memory_bytes_not': 'int',
+        'allocated_memory_bytes_not_in': 'list[int]',
         'allocated_prioritized_space': 'int',
         'allocated_prioritized_space_gt': 'int',
         'allocated_prioritized_space_gte': 'int',
@@ -169,6 +177,9 @@ class HostWhereInput(object):
         'data_ip_not_in': 'list[str]',
         'data_ip_not_starts_with': 'str',
         'data_ip_starts_with': 'str',
+        'datastore_mounts_every': 'DatastoreMountWhereInput',
+        'datastore_mounts_none': 'DatastoreMountWhereInput',
+        'datastore_mounts_some': 'DatastoreMountWhereInput',
         'dirty_cache_space': 'int',
         'dirty_cache_space_gt': 'int',
         'dirty_cache_space_gte': 'int',
@@ -306,6 +317,16 @@ class HostWhereInput(object):
         'management_ip_not_in': 'list[str]',
         'management_ip_not_starts_with': 'str',
         'management_ip_starts_with': 'str',
+        'memory_allocation_rate': 'float',
+        'memory_allocation_rate_gt': 'float',
+        'memory_allocation_rate_gte': 'float',
+        'memory_allocation_rate_in': 'list[float]',
+        'memory_allocation_rate_lt': 'float',
+        'memory_allocation_rate_lte': 'float',
+        'memory_allocation_rate_not': 'float',
+        'memory_allocation_rate_not_in': 'list[float]',
+        'memory_overcommit_enabled': 'bool',
+        'memory_overcommit_enabled_not': 'bool',
         'merged_status': 'HostMergedStatus',
         'merged_status_in': 'list[HostMergedStatus]',
         'merged_status_not': 'HostMergedStatus',
@@ -387,6 +408,30 @@ class HostWhereInput(object):
         'os_version_not_in': 'list[str]',
         'os_version_not_starts_with': 'str',
         'os_version_starts_with': 'str',
+        'overcommit_active_memory_bytes': 'int',
+        'overcommit_active_memory_bytes_gt': 'int',
+        'overcommit_active_memory_bytes_gte': 'int',
+        'overcommit_active_memory_bytes_in': 'list[int]',
+        'overcommit_active_memory_bytes_lt': 'int',
+        'overcommit_active_memory_bytes_lte': 'int',
+        'overcommit_active_memory_bytes_not': 'int',
+        'overcommit_active_memory_bytes_not_in': 'list[int]',
+        'overcommit_memory_bytes': 'int',
+        'overcommit_memory_bytes_gt': 'int',
+        'overcommit_memory_bytes_gte': 'int',
+        'overcommit_memory_bytes_in': 'list[int]',
+        'overcommit_memory_bytes_lt': 'int',
+        'overcommit_memory_bytes_lte': 'int',
+        'overcommit_memory_bytes_not': 'int',
+        'overcommit_memory_bytes_not_in': 'list[int]',
+        'overcommit_memory_ratio': 'float',
+        'overcommit_memory_ratio_gt': 'float',
+        'overcommit_memory_ratio_gte': 'float',
+        'overcommit_memory_ratio_in': 'list[float]',
+        'overcommit_memory_ratio_lt': 'float',
+        'overcommit_memory_ratio_lte': 'float',
+        'overcommit_memory_ratio_not': 'float',
+        'overcommit_memory_ratio_not_in': 'list[float]',
         'perf_allocated_data_space': 'int',
         'perf_allocated_data_space_gt': 'int',
         'perf_allocated_data_space_gte': 'int',
@@ -486,6 +531,30 @@ class HostWhereInput(object):
         'provisioned_memory_bytes_lte': 'int',
         'provisioned_memory_bytes_not': 'int',
         'provisioned_memory_bytes_not_in': 'list[int]',
+        'reserved_memory_bytes': 'int',
+        'reserved_memory_bytes_gt': 'int',
+        'reserved_memory_bytes_gte': 'int',
+        'reserved_memory_bytes_in': 'list[int]',
+        'reserved_memory_bytes_lt': 'int',
+        'reserved_memory_bytes_lte': 'int',
+        'reserved_memory_bytes_not': 'int',
+        'reserved_memory_bytes_not_in': 'list[int]',
+        'running_pause_overcommit_memory_bytes': 'int',
+        'running_pause_overcommit_memory_bytes_gt': 'int',
+        'running_pause_overcommit_memory_bytes_gte': 'int',
+        'running_pause_overcommit_memory_bytes_in': 'list[int]',
+        'running_pause_overcommit_memory_bytes_lt': 'int',
+        'running_pause_overcommit_memory_bytes_lte': 'int',
+        'running_pause_overcommit_memory_bytes_not': 'int',
+        'running_pause_overcommit_memory_bytes_not_in': 'list[int]',
+        'running_pause_reserved_memory_bytes': 'int',
+        'running_pause_reserved_memory_bytes_gt': 'int',
+        'running_pause_reserved_memory_bytes_gte': 'int',
+        'running_pause_reserved_memory_bytes_in': 'list[int]',
+        'running_pause_reserved_memory_bytes_lt': 'int',
+        'running_pause_reserved_memory_bytes_lte': 'int',
+        'running_pause_reserved_memory_bytes_not': 'int',
+        'running_pause_reserved_memory_bytes_not_in': 'list[int]',
         'running_pause_vm_memory_bytes': 'int',
         'running_pause_vm_memory_bytes_gt': 'int',
         'running_pause_vm_memory_bytes_gte': 'int',
@@ -642,6 +711,14 @@ class HostWhereInput(object):
         'total_memory_bytes_lte': 'int',
         'total_memory_bytes_not': 'int',
         'total_memory_bytes_not_in': 'list[int]',
+        'total_physical_memory_bytes': 'int',
+        'total_physical_memory_bytes_gt': 'int',
+        'total_physical_memory_bytes_gte': 'int',
+        'total_physical_memory_bytes_in': 'list[int]',
+        'total_physical_memory_bytes_lt': 'int',
+        'total_physical_memory_bytes_lte': 'int',
+        'total_physical_memory_bytes_not': 'int',
+        'total_physical_memory_bytes_not_in': 'list[int]',
         'usb_devices_every': 'UsbDeviceWhereInput',
         'usb_devices_none': 'UsbDeviceWhereInput',
         'usb_devices_some': 'UsbDeviceWhereInput',
@@ -758,6 +835,14 @@ class HostWhereInput(object):
         'allocatable_memory_bytes_lte': 'allocatable_memory_bytes_lte',
         'allocatable_memory_bytes_not': 'allocatable_memory_bytes_not',
         'allocatable_memory_bytes_not_in': 'allocatable_memory_bytes_not_in',
+        'allocated_memory_bytes': 'allocated_memory_bytes',
+        'allocated_memory_bytes_gt': 'allocated_memory_bytes_gt',
+        'allocated_memory_bytes_gte': 'allocated_memory_bytes_gte',
+        'allocated_memory_bytes_in': 'allocated_memory_bytes_in',
+        'allocated_memory_bytes_lt': 'allocated_memory_bytes_lt',
+        'allocated_memory_bytes_lte': 'allocated_memory_bytes_lte',
+        'allocated_memory_bytes_not': 'allocated_memory_bytes_not',
+        'allocated_memory_bytes_not_in': 'allocated_memory_bytes_not_in',
         'allocated_prioritized_space': 'allocated_prioritized_space',
         'allocated_prioritized_space_gt': 'allocated_prioritized_space_gt',
         'allocated_prioritized_space_gte': 'allocated_prioritized_space_gte',
@@ -869,6 +954,9 @@ class HostWhereInput(object):
         'data_ip_not_in': 'data_ip_not_in',
         'data_ip_not_starts_with': 'data_ip_not_starts_with',
         'data_ip_starts_with': 'data_ip_starts_with',
+        'datastore_mounts_every': 'datastore_mounts_every',
+        'datastore_mounts_none': 'datastore_mounts_none',
+        'datastore_mounts_some': 'datastore_mounts_some',
         'dirty_cache_space': 'dirty_cache_space',
         'dirty_cache_space_gt': 'dirty_cache_space_gt',
         'dirty_cache_space_gte': 'dirty_cache_space_gte',
@@ -1006,6 +1094,16 @@ class HostWhereInput(object):
         'management_ip_not_in': 'management_ip_not_in',
         'management_ip_not_starts_with': 'management_ip_not_starts_with',
         'management_ip_starts_with': 'management_ip_starts_with',
+        'memory_allocation_rate': 'memory_allocation_rate',
+        'memory_allocation_rate_gt': 'memory_allocation_rate_gt',
+        'memory_allocation_rate_gte': 'memory_allocation_rate_gte',
+        'memory_allocation_rate_in': 'memory_allocation_rate_in',
+        'memory_allocation_rate_lt': 'memory_allocation_rate_lt',
+        'memory_allocation_rate_lte': 'memory_allocation_rate_lte',
+        'memory_allocation_rate_not': 'memory_allocation_rate_not',
+        'memory_allocation_rate_not_in': 'memory_allocation_rate_not_in',
+        'memory_overcommit_enabled': 'memory_overcommit_enabled',
+        'memory_overcommit_enabled_not': 'memory_overcommit_enabled_not',
         'merged_status': 'merged_status',
         'merged_status_in': 'merged_status_in',
         'merged_status_not': 'merged_status_not',
@@ -1087,6 +1185,30 @@ class HostWhereInput(object):
         'os_version_not_in': 'os_version_not_in',
         'os_version_not_starts_with': 'os_version_not_starts_with',
         'os_version_starts_with': 'os_version_starts_with',
+        'overcommit_active_memory_bytes': 'overcommit_active_memory_bytes',
+        'overcommit_active_memory_bytes_gt': 'overcommit_active_memory_bytes_gt',
+        'overcommit_active_memory_bytes_gte': 'overcommit_active_memory_bytes_gte',
+        'overcommit_active_memory_bytes_in': 'overcommit_active_memory_bytes_in',
+        'overcommit_active_memory_bytes_lt': 'overcommit_active_memory_bytes_lt',
+        'overcommit_active_memory_bytes_lte': 'overcommit_active_memory_bytes_lte',
+        'overcommit_active_memory_bytes_not': 'overcommit_active_memory_bytes_not',
+        'overcommit_active_memory_bytes_not_in': 'overcommit_active_memory_bytes_not_in',
+        'overcommit_memory_bytes': 'overcommit_memory_bytes',
+        'overcommit_memory_bytes_gt': 'overcommit_memory_bytes_gt',
+        'overcommit_memory_bytes_gte': 'overcommit_memory_bytes_gte',
+        'overcommit_memory_bytes_in': 'overcommit_memory_bytes_in',
+        'overcommit_memory_bytes_lt': 'overcommit_memory_bytes_lt',
+        'overcommit_memory_bytes_lte': 'overcommit_memory_bytes_lte',
+        'overcommit_memory_bytes_not': 'overcommit_memory_bytes_not',
+        'overcommit_memory_bytes_not_in': 'overcommit_memory_bytes_not_in',
+        'overcommit_memory_ratio': 'overcommit_memory_ratio',
+        'overcommit_memory_ratio_gt': 'overcommit_memory_ratio_gt',
+        'overcommit_memory_ratio_gte': 'overcommit_memory_ratio_gte',
+        'overcommit_memory_ratio_in': 'overcommit_memory_ratio_in',
+        'overcommit_memory_ratio_lt': 'overcommit_memory_ratio_lt',
+        'overcommit_memory_ratio_lte': 'overcommit_memory_ratio_lte',
+        'overcommit_memory_ratio_not': 'overcommit_memory_ratio_not',
+        'overcommit_memory_ratio_not_in': 'overcommit_memory_ratio_not_in',
         'perf_allocated_data_space': 'perf_allocated_data_space',
         'perf_allocated_data_space_gt': 'perf_allocated_data_space_gt',
         'perf_allocated_data_space_gte': 'perf_allocated_data_space_gte',
@@ -1186,6 +1308,30 @@ class HostWhereInput(object):
         'provisioned_memory_bytes_lte': 'provisioned_memory_bytes_lte',
         'provisioned_memory_bytes_not': 'provisioned_memory_bytes_not',
         'provisioned_memory_bytes_not_in': 'provisioned_memory_bytes_not_in',
+        'reserved_memory_bytes': 'reserved_memory_bytes',
+        'reserved_memory_bytes_gt': 'reserved_memory_bytes_gt',
+        'reserved_memory_bytes_gte': 'reserved_memory_bytes_gte',
+        'reserved_memory_bytes_in': 'reserved_memory_bytes_in',
+        'reserved_memory_bytes_lt': 'reserved_memory_bytes_lt',
+        'reserved_memory_bytes_lte': 'reserved_memory_bytes_lte',
+        'reserved_memory_bytes_not': 'reserved_memory_bytes_not',
+        'reserved_memory_bytes_not_in': 'reserved_memory_bytes_not_in',
+        'running_pause_overcommit_memory_bytes': 'running_pause_overcommit_memory_bytes',
+        'running_pause_overcommit_memory_bytes_gt': 'running_pause_overcommit_memory_bytes_gt',
+        'running_pause_overcommit_memory_bytes_gte': 'running_pause_overcommit_memory_bytes_gte',
+        'running_pause_overcommit_memory_bytes_in': 'running_pause_overcommit_memory_bytes_in',
+        'running_pause_overcommit_memory_bytes_lt': 'running_pause_overcommit_memory_bytes_lt',
+        'running_pause_overcommit_memory_bytes_lte': 'running_pause_overcommit_memory_bytes_lte',
+        'running_pause_overcommit_memory_bytes_not': 'running_pause_overcommit_memory_bytes_not',
+        'running_pause_overcommit_memory_bytes_not_in': 'running_pause_overcommit_memory_bytes_not_in',
+        'running_pause_reserved_memory_bytes': 'running_pause_reserved_memory_bytes',
+        'running_pause_reserved_memory_bytes_gt': 'running_pause_reserved_memory_bytes_gt',
+        'running_pause_reserved_memory_bytes_gte': 'running_pause_reserved_memory_bytes_gte',
+        'running_pause_reserved_memory_bytes_in': 'running_pause_reserved_memory_bytes_in',
+        'running_pause_reserved_memory_bytes_lt': 'running_pause_reserved_memory_bytes_lt',
+        'running_pause_reserved_memory_bytes_lte': 'running_pause_reserved_memory_bytes_lte',
+        'running_pause_reserved_memory_bytes_not': 'running_pause_reserved_memory_bytes_not',
+        'running_pause_reserved_memory_bytes_not_in': 'running_pause_reserved_memory_bytes_not_in',
         'running_pause_vm_memory_bytes': 'running_pause_vm_memory_bytes',
         'running_pause_vm_memory_bytes_gt': 'running_pause_vm_memory_bytes_gt',
         'running_pause_vm_memory_bytes_gte': 'running_pause_vm_memory_bytes_gte',
@@ -1342,6 +1488,14 @@ class HostWhereInput(object):
         'total_memory_bytes_lte': 'total_memory_bytes_lte',
         'total_memory_bytes_not': 'total_memory_bytes_not',
         'total_memory_bytes_not_in': 'total_memory_bytes_not_in',
+        'total_physical_memory_bytes': 'total_physical_memory_bytes',
+        'total_physical_memory_bytes_gt': 'total_physical_memory_bytes_gt',
+        'total_physical_memory_bytes_gte': 'total_physical_memory_bytes_gte',
+        'total_physical_memory_bytes_in': 'total_physical_memory_bytes_in',
+        'total_physical_memory_bytes_lt': 'total_physical_memory_bytes_lt',
+        'total_physical_memory_bytes_lte': 'total_physical_memory_bytes_lte',
+        'total_physical_memory_bytes_not': 'total_physical_memory_bytes_not',
+        'total_physical_memory_bytes_not_in': 'total_physical_memory_bytes_not_in',
         'usb_devices_every': 'usb_devices_every',
         'usb_devices_none': 'usb_devices_none',
         'usb_devices_some': 'usb_devices_some',
@@ -1461,6 +1615,14 @@ class HostWhereInput(object):
         self._allocatable_memory_bytes_lte = None
         self._allocatable_memory_bytes_not = None
         self._allocatable_memory_bytes_not_in = None
+        self._allocated_memory_bytes = None
+        self._allocated_memory_bytes_gt = None
+        self._allocated_memory_bytes_gte = None
+        self._allocated_memory_bytes_in = None
+        self._allocated_memory_bytes_lt = None
+        self._allocated_memory_bytes_lte = None
+        self._allocated_memory_bytes_not = None
+        self._allocated_memory_bytes_not_in = None
         self._allocated_prioritized_space = None
         self._allocated_prioritized_space_gt = None
         self._allocated_prioritized_space_gte = None
@@ -1572,6 +1734,9 @@ class HostWhereInput(object):
         self._data_ip_not_in = None
         self._data_ip_not_starts_with = None
         self._data_ip_starts_with = None
+        self._datastore_mounts_every = None
+        self._datastore_mounts_none = None
+        self._datastore_mounts_some = None
         self._dirty_cache_space = None
         self._dirty_cache_space_gt = None
         self._dirty_cache_space_gte = None
@@ -1709,6 +1874,16 @@ class HostWhereInput(object):
         self._management_ip_not_in = None
         self._management_ip_not_starts_with = None
         self._management_ip_starts_with = None
+        self._memory_allocation_rate = None
+        self._memory_allocation_rate_gt = None
+        self._memory_allocation_rate_gte = None
+        self._memory_allocation_rate_in = None
+        self._memory_allocation_rate_lt = None
+        self._memory_allocation_rate_lte = None
+        self._memory_allocation_rate_not = None
+        self._memory_allocation_rate_not_in = None
+        self._memory_overcommit_enabled = None
+        self._memory_overcommit_enabled_not = None
         self._merged_status = None
         self._merged_status_in = None
         self._merged_status_not = None
@@ -1790,6 +1965,30 @@ class HostWhereInput(object):
         self._os_version_not_in = None
         self._os_version_not_starts_with = None
         self._os_version_starts_with = None
+        self._overcommit_active_memory_bytes = None
+        self._overcommit_active_memory_bytes_gt = None
+        self._overcommit_active_memory_bytes_gte = None
+        self._overcommit_active_memory_bytes_in = None
+        self._overcommit_active_memory_bytes_lt = None
+        self._overcommit_active_memory_bytes_lte = None
+        self._overcommit_active_memory_bytes_not = None
+        self._overcommit_active_memory_bytes_not_in = None
+        self._overcommit_memory_bytes = None
+        self._overcommit_memory_bytes_gt = None
+        self._overcommit_memory_bytes_gte = None
+        self._overcommit_memory_bytes_in = None
+        self._overcommit_memory_bytes_lt = None
+        self._overcommit_memory_bytes_lte = None
+        self._overcommit_memory_bytes_not = None
+        self._overcommit_memory_bytes_not_in = None
+        self._overcommit_memory_ratio = None
+        self._overcommit_memory_ratio_gt = None
+        self._overcommit_memory_ratio_gte = None
+        self._overcommit_memory_ratio_in = None
+        self._overcommit_memory_ratio_lt = None
+        self._overcommit_memory_ratio_lte = None
+        self._overcommit_memory_ratio_not = None
+        self._overcommit_memory_ratio_not_in = None
         self._perf_allocated_data_space = None
         self._perf_allocated_data_space_gt = None
         self._perf_allocated_data_space_gte = None
@@ -1889,6 +2088,30 @@ class HostWhereInput(object):
         self._provisioned_memory_bytes_lte = None
         self._provisioned_memory_bytes_not = None
         self._provisioned_memory_bytes_not_in = None
+        self._reserved_memory_bytes = None
+        self._reserved_memory_bytes_gt = None
+        self._reserved_memory_bytes_gte = None
+        self._reserved_memory_bytes_in = None
+        self._reserved_memory_bytes_lt = None
+        self._reserved_memory_bytes_lte = None
+        self._reserved_memory_bytes_not = None
+        self._reserved_memory_bytes_not_in = None
+        self._running_pause_overcommit_memory_bytes = None
+        self._running_pause_overcommit_memory_bytes_gt = None
+        self._running_pause_overcommit_memory_bytes_gte = None
+        self._running_pause_overcommit_memory_bytes_in = None
+        self._running_pause_overcommit_memory_bytes_lt = None
+        self._running_pause_overcommit_memory_bytes_lte = None
+        self._running_pause_overcommit_memory_bytes_not = None
+        self._running_pause_overcommit_memory_bytes_not_in = None
+        self._running_pause_reserved_memory_bytes = None
+        self._running_pause_reserved_memory_bytes_gt = None
+        self._running_pause_reserved_memory_bytes_gte = None
+        self._running_pause_reserved_memory_bytes_in = None
+        self._running_pause_reserved_memory_bytes_lt = None
+        self._running_pause_reserved_memory_bytes_lte = None
+        self._running_pause_reserved_memory_bytes_not = None
+        self._running_pause_reserved_memory_bytes_not_in = None
         self._running_pause_vm_memory_bytes = None
         self._running_pause_vm_memory_bytes_gt = None
         self._running_pause_vm_memory_bytes_gte = None
@@ -2045,6 +2268,14 @@ class HostWhereInput(object):
         self._total_memory_bytes_lte = None
         self._total_memory_bytes_not = None
         self._total_memory_bytes_not_in = None
+        self._total_physical_memory_bytes = None
+        self._total_physical_memory_bytes_gt = None
+        self._total_physical_memory_bytes_gte = None
+        self._total_physical_memory_bytes_in = None
+        self._total_physical_memory_bytes_lt = None
+        self._total_physical_memory_bytes_lte = None
+        self._total_physical_memory_bytes_not = None
+        self._total_physical_memory_bytes_not_in = None
         self._usb_devices_every = None
         self._usb_devices_none = None
         self._usb_devices_some = None
@@ -2160,6 +2391,14 @@ class HostWhereInput(object):
         self.allocatable_memory_bytes_lte = kwargs.get("allocatable_memory_bytes_lte", None)
         self.allocatable_memory_bytes_not = kwargs.get("allocatable_memory_bytes_not", None)
         self.allocatable_memory_bytes_not_in = kwargs.get("allocatable_memory_bytes_not_in", None)
+        self.allocated_memory_bytes = kwargs.get("allocated_memory_bytes", None)
+        self.allocated_memory_bytes_gt = kwargs.get("allocated_memory_bytes_gt", None)
+        self.allocated_memory_bytes_gte = kwargs.get("allocated_memory_bytes_gte", None)
+        self.allocated_memory_bytes_in = kwargs.get("allocated_memory_bytes_in", None)
+        self.allocated_memory_bytes_lt = kwargs.get("allocated_memory_bytes_lt", None)
+        self.allocated_memory_bytes_lte = kwargs.get("allocated_memory_bytes_lte", None)
+        self.allocated_memory_bytes_not = kwargs.get("allocated_memory_bytes_not", None)
+        self.allocated_memory_bytes_not_in = kwargs.get("allocated_memory_bytes_not_in", None)
         self.allocated_prioritized_space = kwargs.get("allocated_prioritized_space", None)
         self.allocated_prioritized_space_gt = kwargs.get("allocated_prioritized_space_gt", None)
         self.allocated_prioritized_space_gte = kwargs.get("allocated_prioritized_space_gte", None)
@@ -2271,6 +2510,9 @@ class HostWhereInput(object):
         self.data_ip_not_in = kwargs.get("data_ip_not_in", None)
         self.data_ip_not_starts_with = kwargs.get("data_ip_not_starts_with", None)
         self.data_ip_starts_with = kwargs.get("data_ip_starts_with", None)
+        self.datastore_mounts_every = kwargs.get("datastore_mounts_every", None)
+        self.datastore_mounts_none = kwargs.get("datastore_mounts_none", None)
+        self.datastore_mounts_some = kwargs.get("datastore_mounts_some", None)
         self.dirty_cache_space = kwargs.get("dirty_cache_space", None)
         self.dirty_cache_space_gt = kwargs.get("dirty_cache_space_gt", None)
         self.dirty_cache_space_gte = kwargs.get("dirty_cache_space_gte", None)
@@ -2408,6 +2650,16 @@ class HostWhereInput(object):
         self.management_ip_not_in = kwargs.get("management_ip_not_in", None)
         self.management_ip_not_starts_with = kwargs.get("management_ip_not_starts_with", None)
         self.management_ip_starts_with = kwargs.get("management_ip_starts_with", None)
+        self.memory_allocation_rate = kwargs.get("memory_allocation_rate", None)
+        self.memory_allocation_rate_gt = kwargs.get("memory_allocation_rate_gt", None)
+        self.memory_allocation_rate_gte = kwargs.get("memory_allocation_rate_gte", None)
+        self.memory_allocation_rate_in = kwargs.get("memory_allocation_rate_in", None)
+        self.memory_allocation_rate_lt = kwargs.get("memory_allocation_rate_lt", None)
+        self.memory_allocation_rate_lte = kwargs.get("memory_allocation_rate_lte", None)
+        self.memory_allocation_rate_not = kwargs.get("memory_allocation_rate_not", None)
+        self.memory_allocation_rate_not_in = kwargs.get("memory_allocation_rate_not_in", None)
+        self.memory_overcommit_enabled = kwargs.get("memory_overcommit_enabled", None)
+        self.memory_overcommit_enabled_not = kwargs.get("memory_overcommit_enabled_not", None)
         self.merged_status = kwargs.get("merged_status", None)
         self.merged_status_in = kwargs.get("merged_status_in", None)
         self.merged_status_not = kwargs.get("merged_status_not", None)
@@ -2489,6 +2741,30 @@ class HostWhereInput(object):
         self.os_version_not_in = kwargs.get("os_version_not_in", None)
         self.os_version_not_starts_with = kwargs.get("os_version_not_starts_with", None)
         self.os_version_starts_with = kwargs.get("os_version_starts_with", None)
+        self.overcommit_active_memory_bytes = kwargs.get("overcommit_active_memory_bytes", None)
+        self.overcommit_active_memory_bytes_gt = kwargs.get("overcommit_active_memory_bytes_gt", None)
+        self.overcommit_active_memory_bytes_gte = kwargs.get("overcommit_active_memory_bytes_gte", None)
+        self.overcommit_active_memory_bytes_in = kwargs.get("overcommit_active_memory_bytes_in", None)
+        self.overcommit_active_memory_bytes_lt = kwargs.get("overcommit_active_memory_bytes_lt", None)
+        self.overcommit_active_memory_bytes_lte = kwargs.get("overcommit_active_memory_bytes_lte", None)
+        self.overcommit_active_memory_bytes_not = kwargs.get("overcommit_active_memory_bytes_not", None)
+        self.overcommit_active_memory_bytes_not_in = kwargs.get("overcommit_active_memory_bytes_not_in", None)
+        self.overcommit_memory_bytes = kwargs.get("overcommit_memory_bytes", None)
+        self.overcommit_memory_bytes_gt = kwargs.get("overcommit_memory_bytes_gt", None)
+        self.overcommit_memory_bytes_gte = kwargs.get("overcommit_memory_bytes_gte", None)
+        self.overcommit_memory_bytes_in = kwargs.get("overcommit_memory_bytes_in", None)
+        self.overcommit_memory_bytes_lt = kwargs.get("overcommit_memory_bytes_lt", None)
+        self.overcommit_memory_bytes_lte = kwargs.get("overcommit_memory_bytes_lte", None)
+        self.overcommit_memory_bytes_not = kwargs.get("overcommit_memory_bytes_not", None)
+        self.overcommit_memory_bytes_not_in = kwargs.get("overcommit_memory_bytes_not_in", None)
+        self.overcommit_memory_ratio = kwargs.get("overcommit_memory_ratio", None)
+        self.overcommit_memory_ratio_gt = kwargs.get("overcommit_memory_ratio_gt", None)
+        self.overcommit_memory_ratio_gte = kwargs.get("overcommit_memory_ratio_gte", None)
+        self.overcommit_memory_ratio_in = kwargs.get("overcommit_memory_ratio_in", None)
+        self.overcommit_memory_ratio_lt = kwargs.get("overcommit_memory_ratio_lt", None)
+        self.overcommit_memory_ratio_lte = kwargs.get("overcommit_memory_ratio_lte", None)
+        self.overcommit_memory_ratio_not = kwargs.get("overcommit_memory_ratio_not", None)
+        self.overcommit_memory_ratio_not_in = kwargs.get("overcommit_memory_ratio_not_in", None)
         self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
         self.perf_allocated_data_space_gt = kwargs.get("perf_allocated_data_space_gt", None)
         self.perf_allocated_data_space_gte = kwargs.get("perf_allocated_data_space_gte", None)
@@ -2588,6 +2864,30 @@ class HostWhereInput(object):
         self.provisioned_memory_bytes_lte = kwargs.get("provisioned_memory_bytes_lte", None)
         self.provisioned_memory_bytes_not = kwargs.get("provisioned_memory_bytes_not", None)
         self.provisioned_memory_bytes_not_in = kwargs.get("provisioned_memory_bytes_not_in", None)
+        self.reserved_memory_bytes = kwargs.get("reserved_memory_bytes", None)
+        self.reserved_memory_bytes_gt = kwargs.get("reserved_memory_bytes_gt", None)
+        self.reserved_memory_bytes_gte = kwargs.get("reserved_memory_bytes_gte", None)
+        self.reserved_memory_bytes_in = kwargs.get("reserved_memory_bytes_in", None)
+        self.reserved_memory_bytes_lt = kwargs.get("reserved_memory_bytes_lt", None)
+        self.reserved_memory_bytes_lte = kwargs.get("reserved_memory_bytes_lte", None)
+        self.reserved_memory_bytes_not = kwargs.get("reserved_memory_bytes_not", None)
+        self.reserved_memory_bytes_not_in = kwargs.get("reserved_memory_bytes_not_in", None)
+        self.running_pause_overcommit_memory_bytes = kwargs.get("running_pause_overcommit_memory_bytes", None)
+        self.running_pause_overcommit_memory_bytes_gt = kwargs.get("running_pause_overcommit_memory_bytes_gt", None)
+        self.running_pause_overcommit_memory_bytes_gte = kwargs.get("running_pause_overcommit_memory_bytes_gte", None)
+        self.running_pause_overcommit_memory_bytes_in = kwargs.get("running_pause_overcommit_memory_bytes_in", None)
+        self.running_pause_overcommit_memory_bytes_lt = kwargs.get("running_pause_overcommit_memory_bytes_lt", None)
+        self.running_pause_overcommit_memory_bytes_lte = kwargs.get("running_pause_overcommit_memory_bytes_lte", None)
+        self.running_pause_overcommit_memory_bytes_not = kwargs.get("running_pause_overcommit_memory_bytes_not", None)
+        self.running_pause_overcommit_memory_bytes_not_in = kwargs.get("running_pause_overcommit_memory_bytes_not_in", None)
+        self.running_pause_reserved_memory_bytes = kwargs.get("running_pause_reserved_memory_bytes", None)
+        self.running_pause_reserved_memory_bytes_gt = kwargs.get("running_pause_reserved_memory_bytes_gt", None)
+        self.running_pause_reserved_memory_bytes_gte = kwargs.get("running_pause_reserved_memory_bytes_gte", None)
+        self.running_pause_reserved_memory_bytes_in = kwargs.get("running_pause_reserved_memory_bytes_in", None)
+        self.running_pause_reserved_memory_bytes_lt = kwargs.get("running_pause_reserved_memory_bytes_lt", None)
+        self.running_pause_reserved_memory_bytes_lte = kwargs.get("running_pause_reserved_memory_bytes_lte", None)
+        self.running_pause_reserved_memory_bytes_not = kwargs.get("running_pause_reserved_memory_bytes_not", None)
+        self.running_pause_reserved_memory_bytes_not_in = kwargs.get("running_pause_reserved_memory_bytes_not_in", None)
         self.running_pause_vm_memory_bytes = kwargs.get("running_pause_vm_memory_bytes", None)
         self.running_pause_vm_memory_bytes_gt = kwargs.get("running_pause_vm_memory_bytes_gt", None)
         self.running_pause_vm_memory_bytes_gte = kwargs.get("running_pause_vm_memory_bytes_gte", None)
@@ -2744,6 +3044,14 @@ class HostWhereInput(object):
         self.total_memory_bytes_lte = kwargs.get("total_memory_bytes_lte", None)
         self.total_memory_bytes_not = kwargs.get("total_memory_bytes_not", None)
         self.total_memory_bytes_not_in = kwargs.get("total_memory_bytes_not_in", None)
+        self.total_physical_memory_bytes = kwargs.get("total_physical_memory_bytes", None)
+        self.total_physical_memory_bytes_gt = kwargs.get("total_physical_memory_bytes_gt", None)
+        self.total_physical_memory_bytes_gte = kwargs.get("total_physical_memory_bytes_gte", None)
+        self.total_physical_memory_bytes_in = kwargs.get("total_physical_memory_bytes_in", None)
+        self.total_physical_memory_bytes_lt = kwargs.get("total_physical_memory_bytes_lt", None)
+        self.total_physical_memory_bytes_lte = kwargs.get("total_physical_memory_bytes_lte", None)
+        self.total_physical_memory_bytes_not = kwargs.get("total_physical_memory_bytes_not", None)
+        self.total_physical_memory_bytes_not_in = kwargs.get("total_physical_memory_bytes_not_in", None)
         self.usb_devices_every = kwargs.get("usb_devices_every", None)
         self.usb_devices_none = kwargs.get("usb_devices_none", None)
         self.usb_devices_some = kwargs.get("usb_devices_some", None)
@@ -3517,6 +3825,174 @@ class HostWhereInput(object):
         """
 
         self._allocatable_memory_bytes_not_in = allocatable_memory_bytes_not_in
+
+    @property
+    def allocated_memory_bytes(self):
+        """Gets the allocated_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes
+
+    @allocated_memory_bytes.setter
+    def allocated_memory_bytes(self, allocated_memory_bytes):
+        """Sets the allocated_memory_bytes of this HostWhereInput.
+
+
+        :param allocated_memory_bytes: The allocated_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes: int
+        """
+
+        self._allocated_memory_bytes = allocated_memory_bytes
+
+    @property
+    def allocated_memory_bytes_gt(self):
+        """Gets the allocated_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes_gt
+
+    @allocated_memory_bytes_gt.setter
+    def allocated_memory_bytes_gt(self, allocated_memory_bytes_gt):
+        """Sets the allocated_memory_bytes_gt of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_gt: The allocated_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_gt: int
+        """
+
+        self._allocated_memory_bytes_gt = allocated_memory_bytes_gt
+
+    @property
+    def allocated_memory_bytes_gte(self):
+        """Gets the allocated_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes_gte
+
+    @allocated_memory_bytes_gte.setter
+    def allocated_memory_bytes_gte(self, allocated_memory_bytes_gte):
+        """Sets the allocated_memory_bytes_gte of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_gte: The allocated_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_gte: int
+        """
+
+        self._allocated_memory_bytes_gte = allocated_memory_bytes_gte
+
+    @property
+    def allocated_memory_bytes_in(self):
+        """Gets the allocated_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocated_memory_bytes_in
+
+    @allocated_memory_bytes_in.setter
+    def allocated_memory_bytes_in(self, allocated_memory_bytes_in):
+        """Sets the allocated_memory_bytes_in of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_in: The allocated_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_in: list[int]
+        """
+
+        self._allocated_memory_bytes_in = allocated_memory_bytes_in
+
+    @property
+    def allocated_memory_bytes_lt(self):
+        """Gets the allocated_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes_lt
+
+    @allocated_memory_bytes_lt.setter
+    def allocated_memory_bytes_lt(self, allocated_memory_bytes_lt):
+        """Sets the allocated_memory_bytes_lt of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_lt: The allocated_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_lt: int
+        """
+
+        self._allocated_memory_bytes_lt = allocated_memory_bytes_lt
+
+    @property
+    def allocated_memory_bytes_lte(self):
+        """Gets the allocated_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes_lte
+
+    @allocated_memory_bytes_lte.setter
+    def allocated_memory_bytes_lte(self, allocated_memory_bytes_lte):
+        """Sets the allocated_memory_bytes_lte of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_lte: The allocated_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_lte: int
+        """
+
+        self._allocated_memory_bytes_lte = allocated_memory_bytes_lte
+
+    @property
+    def allocated_memory_bytes_not(self):
+        """Gets the allocated_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes_not
+
+    @allocated_memory_bytes_not.setter
+    def allocated_memory_bytes_not(self, allocated_memory_bytes_not):
+        """Sets the allocated_memory_bytes_not of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_not: The allocated_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_not: int
+        """
+
+        self._allocated_memory_bytes_not = allocated_memory_bytes_not
+
+    @property
+    def allocated_memory_bytes_not_in(self):
+        """Gets the allocated_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._allocated_memory_bytes_not_in
+
+    @allocated_memory_bytes_not_in.setter
+    def allocated_memory_bytes_not_in(self, allocated_memory_bytes_not_in):
+        """Sets the allocated_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param allocated_memory_bytes_not_in: The allocated_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type allocated_memory_bytes_not_in: list[int]
+        """
+
+        self._allocated_memory_bytes_not_in = allocated_memory_bytes_not_in
 
     @property
     def allocated_prioritized_space(self):
@@ -5848,6 +6324,69 @@ class HostWhereInput(object):
         """
 
         self._data_ip_starts_with = data_ip_starts_with
+
+    @property
+    def datastore_mounts_every(self):
+        """Gets the datastore_mounts_every of this HostWhereInput.  # noqa: E501
+
+
+        :return: The datastore_mounts_every of this HostWhereInput.  # noqa: E501
+        :rtype: DatastoreMountWhereInput
+        """
+        return self._datastore_mounts_every
+
+    @datastore_mounts_every.setter
+    def datastore_mounts_every(self, datastore_mounts_every):
+        """Sets the datastore_mounts_every of this HostWhereInput.
+
+
+        :param datastore_mounts_every: The datastore_mounts_every of this HostWhereInput.  # noqa: E501
+        :type datastore_mounts_every: DatastoreMountWhereInput
+        """
+
+        self._datastore_mounts_every = datastore_mounts_every
+
+    @property
+    def datastore_mounts_none(self):
+        """Gets the datastore_mounts_none of this HostWhereInput.  # noqa: E501
+
+
+        :return: The datastore_mounts_none of this HostWhereInput.  # noqa: E501
+        :rtype: DatastoreMountWhereInput
+        """
+        return self._datastore_mounts_none
+
+    @datastore_mounts_none.setter
+    def datastore_mounts_none(self, datastore_mounts_none):
+        """Sets the datastore_mounts_none of this HostWhereInput.
+
+
+        :param datastore_mounts_none: The datastore_mounts_none of this HostWhereInput.  # noqa: E501
+        :type datastore_mounts_none: DatastoreMountWhereInput
+        """
+
+        self._datastore_mounts_none = datastore_mounts_none
+
+    @property
+    def datastore_mounts_some(self):
+        """Gets the datastore_mounts_some of this HostWhereInput.  # noqa: E501
+
+
+        :return: The datastore_mounts_some of this HostWhereInput.  # noqa: E501
+        :rtype: DatastoreMountWhereInput
+        """
+        return self._datastore_mounts_some
+
+    @datastore_mounts_some.setter
+    def datastore_mounts_some(self, datastore_mounts_some):
+        """Sets the datastore_mounts_some of this HostWhereInput.
+
+
+        :param datastore_mounts_some: The datastore_mounts_some of this HostWhereInput.  # noqa: E501
+        :type datastore_mounts_some: DatastoreMountWhereInput
+        """
+
+        self._datastore_mounts_some = datastore_mounts_some
 
     @property
     def dirty_cache_space(self):
@@ -8727,6 +9266,216 @@ class HostWhereInput(object):
         self._management_ip_starts_with = management_ip_starts_with
 
     @property
+    def memory_allocation_rate(self):
+        """Gets the memory_allocation_rate of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate
+
+    @memory_allocation_rate.setter
+    def memory_allocation_rate(self, memory_allocation_rate):
+        """Sets the memory_allocation_rate of this HostWhereInput.
+
+
+        :param memory_allocation_rate: The memory_allocation_rate of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate: float
+        """
+
+        self._memory_allocation_rate = memory_allocation_rate
+
+    @property
+    def memory_allocation_rate_gt(self):
+        """Gets the memory_allocation_rate_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_gt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate_gt
+
+    @memory_allocation_rate_gt.setter
+    def memory_allocation_rate_gt(self, memory_allocation_rate_gt):
+        """Sets the memory_allocation_rate_gt of this HostWhereInput.
+
+
+        :param memory_allocation_rate_gt: The memory_allocation_rate_gt of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_gt: float
+        """
+
+        self._memory_allocation_rate_gt = memory_allocation_rate_gt
+
+    @property
+    def memory_allocation_rate_gte(self):
+        """Gets the memory_allocation_rate_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_gte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate_gte
+
+    @memory_allocation_rate_gte.setter
+    def memory_allocation_rate_gte(self, memory_allocation_rate_gte):
+        """Sets the memory_allocation_rate_gte of this HostWhereInput.
+
+
+        :param memory_allocation_rate_gte: The memory_allocation_rate_gte of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_gte: float
+        """
+
+        self._memory_allocation_rate_gte = memory_allocation_rate_gte
+
+    @property
+    def memory_allocation_rate_in(self):
+        """Gets the memory_allocation_rate_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._memory_allocation_rate_in
+
+    @memory_allocation_rate_in.setter
+    def memory_allocation_rate_in(self, memory_allocation_rate_in):
+        """Sets the memory_allocation_rate_in of this HostWhereInput.
+
+
+        :param memory_allocation_rate_in: The memory_allocation_rate_in of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_in: list[float]
+        """
+
+        self._memory_allocation_rate_in = memory_allocation_rate_in
+
+    @property
+    def memory_allocation_rate_lt(self):
+        """Gets the memory_allocation_rate_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_lt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate_lt
+
+    @memory_allocation_rate_lt.setter
+    def memory_allocation_rate_lt(self, memory_allocation_rate_lt):
+        """Sets the memory_allocation_rate_lt of this HostWhereInput.
+
+
+        :param memory_allocation_rate_lt: The memory_allocation_rate_lt of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_lt: float
+        """
+
+        self._memory_allocation_rate_lt = memory_allocation_rate_lt
+
+    @property
+    def memory_allocation_rate_lte(self):
+        """Gets the memory_allocation_rate_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_lte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate_lte
+
+    @memory_allocation_rate_lte.setter
+    def memory_allocation_rate_lte(self, memory_allocation_rate_lte):
+        """Sets the memory_allocation_rate_lte of this HostWhereInput.
+
+
+        :param memory_allocation_rate_lte: The memory_allocation_rate_lte of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_lte: float
+        """
+
+        self._memory_allocation_rate_lte = memory_allocation_rate_lte
+
+    @property
+    def memory_allocation_rate_not(self):
+        """Gets the memory_allocation_rate_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_not of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate_not
+
+    @memory_allocation_rate_not.setter
+    def memory_allocation_rate_not(self, memory_allocation_rate_not):
+        """Sets the memory_allocation_rate_not of this HostWhereInput.
+
+
+        :param memory_allocation_rate_not: The memory_allocation_rate_not of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_not: float
+        """
+
+        self._memory_allocation_rate_not = memory_allocation_rate_not
+
+    @property
+    def memory_allocation_rate_not_in(self):
+        """Gets the memory_allocation_rate_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_allocation_rate_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._memory_allocation_rate_not_in
+
+    @memory_allocation_rate_not_in.setter
+    def memory_allocation_rate_not_in(self, memory_allocation_rate_not_in):
+        """Sets the memory_allocation_rate_not_in of this HostWhereInput.
+
+
+        :param memory_allocation_rate_not_in: The memory_allocation_rate_not_in of this HostWhereInput.  # noqa: E501
+        :type memory_allocation_rate_not_in: list[float]
+        """
+
+        self._memory_allocation_rate_not_in = memory_allocation_rate_not_in
+
+    @property
+    def memory_overcommit_enabled(self):
+        """Gets the memory_overcommit_enabled of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_overcommit_enabled of this HostWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._memory_overcommit_enabled
+
+    @memory_overcommit_enabled.setter
+    def memory_overcommit_enabled(self, memory_overcommit_enabled):
+        """Sets the memory_overcommit_enabled of this HostWhereInput.
+
+
+        :param memory_overcommit_enabled: The memory_overcommit_enabled of this HostWhereInput.  # noqa: E501
+        :type memory_overcommit_enabled: bool
+        """
+
+        self._memory_overcommit_enabled = memory_overcommit_enabled
+
+    @property
+    def memory_overcommit_enabled_not(self):
+        """Gets the memory_overcommit_enabled_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The memory_overcommit_enabled_not of this HostWhereInput.  # noqa: E501
+        :rtype: bool
+        """
+        return self._memory_overcommit_enabled_not
+
+    @memory_overcommit_enabled_not.setter
+    def memory_overcommit_enabled_not(self, memory_overcommit_enabled_not):
+        """Sets the memory_overcommit_enabled_not of this HostWhereInput.
+
+
+        :param memory_overcommit_enabled_not: The memory_overcommit_enabled_not of this HostWhereInput.  # noqa: E501
+        :type memory_overcommit_enabled_not: bool
+        """
+
+        self._memory_overcommit_enabled_not = memory_overcommit_enabled_not
+
+    @property
     def merged_status(self):
         """Gets the merged_status of this HostWhereInput.  # noqa: E501
 
@@ -10426,6 +11175,510 @@ class HostWhereInput(object):
         """
 
         self._os_version_starts_with = os_version_starts_with
+
+    @property
+    def overcommit_active_memory_bytes(self):
+        """Gets the overcommit_active_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes
+
+    @overcommit_active_memory_bytes.setter
+    def overcommit_active_memory_bytes(self, overcommit_active_memory_bytes):
+        """Sets the overcommit_active_memory_bytes of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes: The overcommit_active_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes: int
+        """
+
+        self._overcommit_active_memory_bytes = overcommit_active_memory_bytes
+
+    @property
+    def overcommit_active_memory_bytes_gt(self):
+        """Gets the overcommit_active_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes_gt
+
+    @overcommit_active_memory_bytes_gt.setter
+    def overcommit_active_memory_bytes_gt(self, overcommit_active_memory_bytes_gt):
+        """Sets the overcommit_active_memory_bytes_gt of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_gt: The overcommit_active_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_gt: int
+        """
+
+        self._overcommit_active_memory_bytes_gt = overcommit_active_memory_bytes_gt
+
+    @property
+    def overcommit_active_memory_bytes_gte(self):
+        """Gets the overcommit_active_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes_gte
+
+    @overcommit_active_memory_bytes_gte.setter
+    def overcommit_active_memory_bytes_gte(self, overcommit_active_memory_bytes_gte):
+        """Sets the overcommit_active_memory_bytes_gte of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_gte: The overcommit_active_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_gte: int
+        """
+
+        self._overcommit_active_memory_bytes_gte = overcommit_active_memory_bytes_gte
+
+    @property
+    def overcommit_active_memory_bytes_in(self):
+        """Gets the overcommit_active_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._overcommit_active_memory_bytes_in
+
+    @overcommit_active_memory_bytes_in.setter
+    def overcommit_active_memory_bytes_in(self, overcommit_active_memory_bytes_in):
+        """Sets the overcommit_active_memory_bytes_in of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_in: The overcommit_active_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_in: list[int]
+        """
+
+        self._overcommit_active_memory_bytes_in = overcommit_active_memory_bytes_in
+
+    @property
+    def overcommit_active_memory_bytes_lt(self):
+        """Gets the overcommit_active_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes_lt
+
+    @overcommit_active_memory_bytes_lt.setter
+    def overcommit_active_memory_bytes_lt(self, overcommit_active_memory_bytes_lt):
+        """Sets the overcommit_active_memory_bytes_lt of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_lt: The overcommit_active_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_lt: int
+        """
+
+        self._overcommit_active_memory_bytes_lt = overcommit_active_memory_bytes_lt
+
+    @property
+    def overcommit_active_memory_bytes_lte(self):
+        """Gets the overcommit_active_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes_lte
+
+    @overcommit_active_memory_bytes_lte.setter
+    def overcommit_active_memory_bytes_lte(self, overcommit_active_memory_bytes_lte):
+        """Sets the overcommit_active_memory_bytes_lte of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_lte: The overcommit_active_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_lte: int
+        """
+
+        self._overcommit_active_memory_bytes_lte = overcommit_active_memory_bytes_lte
+
+    @property
+    def overcommit_active_memory_bytes_not(self):
+        """Gets the overcommit_active_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes_not
+
+    @overcommit_active_memory_bytes_not.setter
+    def overcommit_active_memory_bytes_not(self, overcommit_active_memory_bytes_not):
+        """Sets the overcommit_active_memory_bytes_not of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_not: The overcommit_active_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_not: int
+        """
+
+        self._overcommit_active_memory_bytes_not = overcommit_active_memory_bytes_not
+
+    @property
+    def overcommit_active_memory_bytes_not_in(self):
+        """Gets the overcommit_active_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._overcommit_active_memory_bytes_not_in
+
+    @overcommit_active_memory_bytes_not_in.setter
+    def overcommit_active_memory_bytes_not_in(self, overcommit_active_memory_bytes_not_in):
+        """Sets the overcommit_active_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param overcommit_active_memory_bytes_not_in: The overcommit_active_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_active_memory_bytes_not_in: list[int]
+        """
+
+        self._overcommit_active_memory_bytes_not_in = overcommit_active_memory_bytes_not_in
+
+    @property
+    def overcommit_memory_bytes(self):
+        """Gets the overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes
+
+    @overcommit_memory_bytes.setter
+    def overcommit_memory_bytes(self, overcommit_memory_bytes):
+        """Sets the overcommit_memory_bytes of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes: The overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes: int
+        """
+
+        self._overcommit_memory_bytes = overcommit_memory_bytes
+
+    @property
+    def overcommit_memory_bytes_gt(self):
+        """Gets the overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes_gt
+
+    @overcommit_memory_bytes_gt.setter
+    def overcommit_memory_bytes_gt(self, overcommit_memory_bytes_gt):
+        """Sets the overcommit_memory_bytes_gt of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_gt: The overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_gt: int
+        """
+
+        self._overcommit_memory_bytes_gt = overcommit_memory_bytes_gt
+
+    @property
+    def overcommit_memory_bytes_gte(self):
+        """Gets the overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes_gte
+
+    @overcommit_memory_bytes_gte.setter
+    def overcommit_memory_bytes_gte(self, overcommit_memory_bytes_gte):
+        """Sets the overcommit_memory_bytes_gte of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_gte: The overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_gte: int
+        """
+
+        self._overcommit_memory_bytes_gte = overcommit_memory_bytes_gte
+
+    @property
+    def overcommit_memory_bytes_in(self):
+        """Gets the overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._overcommit_memory_bytes_in
+
+    @overcommit_memory_bytes_in.setter
+    def overcommit_memory_bytes_in(self, overcommit_memory_bytes_in):
+        """Sets the overcommit_memory_bytes_in of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_in: The overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_in: list[int]
+        """
+
+        self._overcommit_memory_bytes_in = overcommit_memory_bytes_in
+
+    @property
+    def overcommit_memory_bytes_lt(self):
+        """Gets the overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes_lt
+
+    @overcommit_memory_bytes_lt.setter
+    def overcommit_memory_bytes_lt(self, overcommit_memory_bytes_lt):
+        """Sets the overcommit_memory_bytes_lt of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_lt: The overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_lt: int
+        """
+
+        self._overcommit_memory_bytes_lt = overcommit_memory_bytes_lt
+
+    @property
+    def overcommit_memory_bytes_lte(self):
+        """Gets the overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes_lte
+
+    @overcommit_memory_bytes_lte.setter
+    def overcommit_memory_bytes_lte(self, overcommit_memory_bytes_lte):
+        """Sets the overcommit_memory_bytes_lte of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_lte: The overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_lte: int
+        """
+
+        self._overcommit_memory_bytes_lte = overcommit_memory_bytes_lte
+
+    @property
+    def overcommit_memory_bytes_not(self):
+        """Gets the overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes_not
+
+    @overcommit_memory_bytes_not.setter
+    def overcommit_memory_bytes_not(self, overcommit_memory_bytes_not):
+        """Sets the overcommit_memory_bytes_not of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_not: The overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_not: int
+        """
+
+        self._overcommit_memory_bytes_not = overcommit_memory_bytes_not
+
+    @property
+    def overcommit_memory_bytes_not_in(self):
+        """Gets the overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._overcommit_memory_bytes_not_in
+
+    @overcommit_memory_bytes_not_in.setter
+    def overcommit_memory_bytes_not_in(self, overcommit_memory_bytes_not_in):
+        """Sets the overcommit_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param overcommit_memory_bytes_not_in: The overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_bytes_not_in: list[int]
+        """
+
+        self._overcommit_memory_bytes_not_in = overcommit_memory_bytes_not_in
+
+    @property
+    def overcommit_memory_ratio(self):
+        """Gets the overcommit_memory_ratio of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio
+
+    @overcommit_memory_ratio.setter
+    def overcommit_memory_ratio(self, overcommit_memory_ratio):
+        """Sets the overcommit_memory_ratio of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio: The overcommit_memory_ratio of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio: float
+        """
+
+        self._overcommit_memory_ratio = overcommit_memory_ratio
+
+    @property
+    def overcommit_memory_ratio_gt(self):
+        """Gets the overcommit_memory_ratio_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_gt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio_gt
+
+    @overcommit_memory_ratio_gt.setter
+    def overcommit_memory_ratio_gt(self, overcommit_memory_ratio_gt):
+        """Sets the overcommit_memory_ratio_gt of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_gt: The overcommit_memory_ratio_gt of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_gt: float
+        """
+
+        self._overcommit_memory_ratio_gt = overcommit_memory_ratio_gt
+
+    @property
+    def overcommit_memory_ratio_gte(self):
+        """Gets the overcommit_memory_ratio_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_gte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio_gte
+
+    @overcommit_memory_ratio_gte.setter
+    def overcommit_memory_ratio_gte(self, overcommit_memory_ratio_gte):
+        """Sets the overcommit_memory_ratio_gte of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_gte: The overcommit_memory_ratio_gte of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_gte: float
+        """
+
+        self._overcommit_memory_ratio_gte = overcommit_memory_ratio_gte
+
+    @property
+    def overcommit_memory_ratio_in(self):
+        """Gets the overcommit_memory_ratio_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._overcommit_memory_ratio_in
+
+    @overcommit_memory_ratio_in.setter
+    def overcommit_memory_ratio_in(self, overcommit_memory_ratio_in):
+        """Sets the overcommit_memory_ratio_in of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_in: The overcommit_memory_ratio_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_in: list[float]
+        """
+
+        self._overcommit_memory_ratio_in = overcommit_memory_ratio_in
+
+    @property
+    def overcommit_memory_ratio_lt(self):
+        """Gets the overcommit_memory_ratio_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_lt of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio_lt
+
+    @overcommit_memory_ratio_lt.setter
+    def overcommit_memory_ratio_lt(self, overcommit_memory_ratio_lt):
+        """Sets the overcommit_memory_ratio_lt of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_lt: The overcommit_memory_ratio_lt of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_lt: float
+        """
+
+        self._overcommit_memory_ratio_lt = overcommit_memory_ratio_lt
+
+    @property
+    def overcommit_memory_ratio_lte(self):
+        """Gets the overcommit_memory_ratio_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_lte of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio_lte
+
+    @overcommit_memory_ratio_lte.setter
+    def overcommit_memory_ratio_lte(self, overcommit_memory_ratio_lte):
+        """Sets the overcommit_memory_ratio_lte of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_lte: The overcommit_memory_ratio_lte of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_lte: float
+        """
+
+        self._overcommit_memory_ratio_lte = overcommit_memory_ratio_lte
+
+    @property
+    def overcommit_memory_ratio_not(self):
+        """Gets the overcommit_memory_ratio_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_not of this HostWhereInput.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio_not
+
+    @overcommit_memory_ratio_not.setter
+    def overcommit_memory_ratio_not(self, overcommit_memory_ratio_not):
+        """Sets the overcommit_memory_ratio_not of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_not: The overcommit_memory_ratio_not of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_not: float
+        """
+
+        self._overcommit_memory_ratio_not = overcommit_memory_ratio_not
+
+    @property
+    def overcommit_memory_ratio_not_in(self):
+        """Gets the overcommit_memory_ratio_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._overcommit_memory_ratio_not_in
+
+    @overcommit_memory_ratio_not_in.setter
+    def overcommit_memory_ratio_not_in(self, overcommit_memory_ratio_not_in):
+        """Sets the overcommit_memory_ratio_not_in of this HostWhereInput.
+
+
+        :param overcommit_memory_ratio_not_in: The overcommit_memory_ratio_not_in of this HostWhereInput.  # noqa: E501
+        :type overcommit_memory_ratio_not_in: list[float]
+        """
+
+        self._overcommit_memory_ratio_not_in = overcommit_memory_ratio_not_in
 
     @property
     def perf_allocated_data_space(self):
@@ -12505,6 +13758,510 @@ class HostWhereInput(object):
         """
 
         self._provisioned_memory_bytes_not_in = provisioned_memory_bytes_not_in
+
+    @property
+    def reserved_memory_bytes(self):
+        """Gets the reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes
+
+    @reserved_memory_bytes.setter
+    def reserved_memory_bytes(self, reserved_memory_bytes):
+        """Sets the reserved_memory_bytes of this HostWhereInput.
+
+
+        :param reserved_memory_bytes: The reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes: int
+        """
+
+        self._reserved_memory_bytes = reserved_memory_bytes
+
+    @property
+    def reserved_memory_bytes_gt(self):
+        """Gets the reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes_gt
+
+    @reserved_memory_bytes_gt.setter
+    def reserved_memory_bytes_gt(self, reserved_memory_bytes_gt):
+        """Sets the reserved_memory_bytes_gt of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_gt: The reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_gt: int
+        """
+
+        self._reserved_memory_bytes_gt = reserved_memory_bytes_gt
+
+    @property
+    def reserved_memory_bytes_gte(self):
+        """Gets the reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes_gte
+
+    @reserved_memory_bytes_gte.setter
+    def reserved_memory_bytes_gte(self, reserved_memory_bytes_gte):
+        """Sets the reserved_memory_bytes_gte of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_gte: The reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_gte: int
+        """
+
+        self._reserved_memory_bytes_gte = reserved_memory_bytes_gte
+
+    @property
+    def reserved_memory_bytes_in(self):
+        """Gets the reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._reserved_memory_bytes_in
+
+    @reserved_memory_bytes_in.setter
+    def reserved_memory_bytes_in(self, reserved_memory_bytes_in):
+        """Sets the reserved_memory_bytes_in of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_in: The reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_in: list[int]
+        """
+
+        self._reserved_memory_bytes_in = reserved_memory_bytes_in
+
+    @property
+    def reserved_memory_bytes_lt(self):
+        """Gets the reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes_lt
+
+    @reserved_memory_bytes_lt.setter
+    def reserved_memory_bytes_lt(self, reserved_memory_bytes_lt):
+        """Sets the reserved_memory_bytes_lt of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_lt: The reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_lt: int
+        """
+
+        self._reserved_memory_bytes_lt = reserved_memory_bytes_lt
+
+    @property
+    def reserved_memory_bytes_lte(self):
+        """Gets the reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes_lte
+
+    @reserved_memory_bytes_lte.setter
+    def reserved_memory_bytes_lte(self, reserved_memory_bytes_lte):
+        """Sets the reserved_memory_bytes_lte of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_lte: The reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_lte: int
+        """
+
+        self._reserved_memory_bytes_lte = reserved_memory_bytes_lte
+
+    @property
+    def reserved_memory_bytes_not(self):
+        """Gets the reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes_not
+
+    @reserved_memory_bytes_not.setter
+    def reserved_memory_bytes_not(self, reserved_memory_bytes_not):
+        """Sets the reserved_memory_bytes_not of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_not: The reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_not: int
+        """
+
+        self._reserved_memory_bytes_not = reserved_memory_bytes_not
+
+    @property
+    def reserved_memory_bytes_not_in(self):
+        """Gets the reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._reserved_memory_bytes_not_in
+
+    @reserved_memory_bytes_not_in.setter
+    def reserved_memory_bytes_not_in(self, reserved_memory_bytes_not_in):
+        """Sets the reserved_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param reserved_memory_bytes_not_in: The reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type reserved_memory_bytes_not_in: list[int]
+        """
+
+        self._reserved_memory_bytes_not_in = reserved_memory_bytes_not_in
+
+    @property
+    def running_pause_overcommit_memory_bytes(self):
+        """Gets the running_pause_overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes
+
+    @running_pause_overcommit_memory_bytes.setter
+    def running_pause_overcommit_memory_bytes(self, running_pause_overcommit_memory_bytes):
+        """Sets the running_pause_overcommit_memory_bytes of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes: The running_pause_overcommit_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes: int
+        """
+
+        self._running_pause_overcommit_memory_bytes = running_pause_overcommit_memory_bytes
+
+    @property
+    def running_pause_overcommit_memory_bytes_gt(self):
+        """Gets the running_pause_overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes_gt
+
+    @running_pause_overcommit_memory_bytes_gt.setter
+    def running_pause_overcommit_memory_bytes_gt(self, running_pause_overcommit_memory_bytes_gt):
+        """Sets the running_pause_overcommit_memory_bytes_gt of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_gt: The running_pause_overcommit_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_gt: int
+        """
+
+        self._running_pause_overcommit_memory_bytes_gt = running_pause_overcommit_memory_bytes_gt
+
+    @property
+    def running_pause_overcommit_memory_bytes_gte(self):
+        """Gets the running_pause_overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes_gte
+
+    @running_pause_overcommit_memory_bytes_gte.setter
+    def running_pause_overcommit_memory_bytes_gte(self, running_pause_overcommit_memory_bytes_gte):
+        """Sets the running_pause_overcommit_memory_bytes_gte of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_gte: The running_pause_overcommit_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_gte: int
+        """
+
+        self._running_pause_overcommit_memory_bytes_gte = running_pause_overcommit_memory_bytes_gte
+
+    @property
+    def running_pause_overcommit_memory_bytes_in(self):
+        """Gets the running_pause_overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._running_pause_overcommit_memory_bytes_in
+
+    @running_pause_overcommit_memory_bytes_in.setter
+    def running_pause_overcommit_memory_bytes_in(self, running_pause_overcommit_memory_bytes_in):
+        """Sets the running_pause_overcommit_memory_bytes_in of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_in: The running_pause_overcommit_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_in: list[int]
+        """
+
+        self._running_pause_overcommit_memory_bytes_in = running_pause_overcommit_memory_bytes_in
+
+    @property
+    def running_pause_overcommit_memory_bytes_lt(self):
+        """Gets the running_pause_overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes_lt
+
+    @running_pause_overcommit_memory_bytes_lt.setter
+    def running_pause_overcommit_memory_bytes_lt(self, running_pause_overcommit_memory_bytes_lt):
+        """Sets the running_pause_overcommit_memory_bytes_lt of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_lt: The running_pause_overcommit_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_lt: int
+        """
+
+        self._running_pause_overcommit_memory_bytes_lt = running_pause_overcommit_memory_bytes_lt
+
+    @property
+    def running_pause_overcommit_memory_bytes_lte(self):
+        """Gets the running_pause_overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes_lte
+
+    @running_pause_overcommit_memory_bytes_lte.setter
+    def running_pause_overcommit_memory_bytes_lte(self, running_pause_overcommit_memory_bytes_lte):
+        """Sets the running_pause_overcommit_memory_bytes_lte of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_lte: The running_pause_overcommit_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_lte: int
+        """
+
+        self._running_pause_overcommit_memory_bytes_lte = running_pause_overcommit_memory_bytes_lte
+
+    @property
+    def running_pause_overcommit_memory_bytes_not(self):
+        """Gets the running_pause_overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes_not
+
+    @running_pause_overcommit_memory_bytes_not.setter
+    def running_pause_overcommit_memory_bytes_not(self, running_pause_overcommit_memory_bytes_not):
+        """Sets the running_pause_overcommit_memory_bytes_not of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_not: The running_pause_overcommit_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_not: int
+        """
+
+        self._running_pause_overcommit_memory_bytes_not = running_pause_overcommit_memory_bytes_not
+
+    @property
+    def running_pause_overcommit_memory_bytes_not_in(self):
+        """Gets the running_pause_overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._running_pause_overcommit_memory_bytes_not_in
+
+    @running_pause_overcommit_memory_bytes_not_in.setter
+    def running_pause_overcommit_memory_bytes_not_in(self, running_pause_overcommit_memory_bytes_not_in):
+        """Sets the running_pause_overcommit_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param running_pause_overcommit_memory_bytes_not_in: The running_pause_overcommit_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes_not_in: list[int]
+        """
+
+        self._running_pause_overcommit_memory_bytes_not_in = running_pause_overcommit_memory_bytes_not_in
+
+    @property
+    def running_pause_reserved_memory_bytes(self):
+        """Gets the running_pause_reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes
+
+    @running_pause_reserved_memory_bytes.setter
+    def running_pause_reserved_memory_bytes(self, running_pause_reserved_memory_bytes):
+        """Sets the running_pause_reserved_memory_bytes of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes: The running_pause_reserved_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes: int
+        """
+
+        self._running_pause_reserved_memory_bytes = running_pause_reserved_memory_bytes
+
+    @property
+    def running_pause_reserved_memory_bytes_gt(self):
+        """Gets the running_pause_reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes_gt
+
+    @running_pause_reserved_memory_bytes_gt.setter
+    def running_pause_reserved_memory_bytes_gt(self, running_pause_reserved_memory_bytes_gt):
+        """Sets the running_pause_reserved_memory_bytes_gt of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_gt: The running_pause_reserved_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_gt: int
+        """
+
+        self._running_pause_reserved_memory_bytes_gt = running_pause_reserved_memory_bytes_gt
+
+    @property
+    def running_pause_reserved_memory_bytes_gte(self):
+        """Gets the running_pause_reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes_gte
+
+    @running_pause_reserved_memory_bytes_gte.setter
+    def running_pause_reserved_memory_bytes_gte(self, running_pause_reserved_memory_bytes_gte):
+        """Sets the running_pause_reserved_memory_bytes_gte of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_gte: The running_pause_reserved_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_gte: int
+        """
+
+        self._running_pause_reserved_memory_bytes_gte = running_pause_reserved_memory_bytes_gte
+
+    @property
+    def running_pause_reserved_memory_bytes_in(self):
+        """Gets the running_pause_reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._running_pause_reserved_memory_bytes_in
+
+    @running_pause_reserved_memory_bytes_in.setter
+    def running_pause_reserved_memory_bytes_in(self, running_pause_reserved_memory_bytes_in):
+        """Sets the running_pause_reserved_memory_bytes_in of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_in: The running_pause_reserved_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_in: list[int]
+        """
+
+        self._running_pause_reserved_memory_bytes_in = running_pause_reserved_memory_bytes_in
+
+    @property
+    def running_pause_reserved_memory_bytes_lt(self):
+        """Gets the running_pause_reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes_lt
+
+    @running_pause_reserved_memory_bytes_lt.setter
+    def running_pause_reserved_memory_bytes_lt(self, running_pause_reserved_memory_bytes_lt):
+        """Sets the running_pause_reserved_memory_bytes_lt of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_lt: The running_pause_reserved_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_lt: int
+        """
+
+        self._running_pause_reserved_memory_bytes_lt = running_pause_reserved_memory_bytes_lt
+
+    @property
+    def running_pause_reserved_memory_bytes_lte(self):
+        """Gets the running_pause_reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes_lte
+
+    @running_pause_reserved_memory_bytes_lte.setter
+    def running_pause_reserved_memory_bytes_lte(self, running_pause_reserved_memory_bytes_lte):
+        """Sets the running_pause_reserved_memory_bytes_lte of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_lte: The running_pause_reserved_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_lte: int
+        """
+
+        self._running_pause_reserved_memory_bytes_lte = running_pause_reserved_memory_bytes_lte
+
+    @property
+    def running_pause_reserved_memory_bytes_not(self):
+        """Gets the running_pause_reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes_not
+
+    @running_pause_reserved_memory_bytes_not.setter
+    def running_pause_reserved_memory_bytes_not(self, running_pause_reserved_memory_bytes_not):
+        """Sets the running_pause_reserved_memory_bytes_not of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_not: The running_pause_reserved_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_not: int
+        """
+
+        self._running_pause_reserved_memory_bytes_not = running_pause_reserved_memory_bytes_not
+
+    @property
+    def running_pause_reserved_memory_bytes_not_in(self):
+        """Gets the running_pause_reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._running_pause_reserved_memory_bytes_not_in
+
+    @running_pause_reserved_memory_bytes_not_in.setter
+    def running_pause_reserved_memory_bytes_not_in(self, running_pause_reserved_memory_bytes_not_in):
+        """Sets the running_pause_reserved_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param running_pause_reserved_memory_bytes_not_in: The running_pause_reserved_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type running_pause_reserved_memory_bytes_not_in: list[int]
+        """
+
+        self._running_pause_reserved_memory_bytes_not_in = running_pause_reserved_memory_bytes_not_in
 
     @property
     def running_pause_vm_memory_bytes(self):
@@ -15781,6 +17538,174 @@ class HostWhereInput(object):
         """
 
         self._total_memory_bytes_not_in = total_memory_bytes_not_in
+
+    @property
+    def total_physical_memory_bytes(self):
+        """Gets the total_physical_memory_bytes of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes
+
+    @total_physical_memory_bytes.setter
+    def total_physical_memory_bytes(self, total_physical_memory_bytes):
+        """Sets the total_physical_memory_bytes of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes: The total_physical_memory_bytes of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes: int
+        """
+
+        self._total_physical_memory_bytes = total_physical_memory_bytes
+
+    @property
+    def total_physical_memory_bytes_gt(self):
+        """Gets the total_physical_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes_gt
+
+    @total_physical_memory_bytes_gt.setter
+    def total_physical_memory_bytes_gt(self, total_physical_memory_bytes_gt):
+        """Sets the total_physical_memory_bytes_gt of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_gt: The total_physical_memory_bytes_gt of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_gt: int
+        """
+
+        self._total_physical_memory_bytes_gt = total_physical_memory_bytes_gt
+
+    @property
+    def total_physical_memory_bytes_gte(self):
+        """Gets the total_physical_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes_gte
+
+    @total_physical_memory_bytes_gte.setter
+    def total_physical_memory_bytes_gte(self, total_physical_memory_bytes_gte):
+        """Sets the total_physical_memory_bytes_gte of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_gte: The total_physical_memory_bytes_gte of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_gte: int
+        """
+
+        self._total_physical_memory_bytes_gte = total_physical_memory_bytes_gte
+
+    @property
+    def total_physical_memory_bytes_in(self):
+        """Gets the total_physical_memory_bytes_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_physical_memory_bytes_in
+
+    @total_physical_memory_bytes_in.setter
+    def total_physical_memory_bytes_in(self, total_physical_memory_bytes_in):
+        """Sets the total_physical_memory_bytes_in of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_in: The total_physical_memory_bytes_in of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_in: list[int]
+        """
+
+        self._total_physical_memory_bytes_in = total_physical_memory_bytes_in
+
+    @property
+    def total_physical_memory_bytes_lt(self):
+        """Gets the total_physical_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes_lt
+
+    @total_physical_memory_bytes_lt.setter
+    def total_physical_memory_bytes_lt(self, total_physical_memory_bytes_lt):
+        """Sets the total_physical_memory_bytes_lt of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_lt: The total_physical_memory_bytes_lt of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_lt: int
+        """
+
+        self._total_physical_memory_bytes_lt = total_physical_memory_bytes_lt
+
+    @property
+    def total_physical_memory_bytes_lte(self):
+        """Gets the total_physical_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes_lte
+
+    @total_physical_memory_bytes_lte.setter
+    def total_physical_memory_bytes_lte(self, total_physical_memory_bytes_lte):
+        """Sets the total_physical_memory_bytes_lte of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_lte: The total_physical_memory_bytes_lte of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_lte: int
+        """
+
+        self._total_physical_memory_bytes_lte = total_physical_memory_bytes_lte
+
+    @property
+    def total_physical_memory_bytes_not(self):
+        """Gets the total_physical_memory_bytes_not of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes_not
+
+    @total_physical_memory_bytes_not.setter
+    def total_physical_memory_bytes_not(self, total_physical_memory_bytes_not):
+        """Sets the total_physical_memory_bytes_not of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_not: The total_physical_memory_bytes_not of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_not: int
+        """
+
+        self._total_physical_memory_bytes_not = total_physical_memory_bytes_not
+
+    @property
+    def total_physical_memory_bytes_not_in(self):
+        """Gets the total_physical_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_physical_memory_bytes_not_in
+
+    @total_physical_memory_bytes_not_in.setter
+    def total_physical_memory_bytes_not_in(self, total_physical_memory_bytes_not_in):
+        """Sets the total_physical_memory_bytes_not_in of this HostWhereInput.
+
+
+        :param total_physical_memory_bytes_not_in: The total_physical_memory_bytes_not_in of this HostWhereInput.  # noqa: E501
+        :type total_physical_memory_bytes_not_in: list[int]
+        """
+
+        self._total_physical_memory_bytes_not_in = total_physical_memory_bytes_not_in
 
     @property
     def usb_devices_every(self):

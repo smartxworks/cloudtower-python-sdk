@@ -25,11 +25,13 @@ class VmFolderCreationParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'parent_id': 'str',
         'cluster_id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'parent_id': 'parent_id',
         'cluster_id': 'cluster_id',
         'name': 'name'
     }
@@ -38,14 +40,38 @@ class VmFolderCreationParams(object):
         """VmFolderCreationParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._parent_id = None
         self._cluster_id = None
         self._name = None
         self.discriminator = None
 
+        if "parent_id" in kwargs:
+            self.parent_id = kwargs["parent_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this VmFolderCreationParams.  # noqa: E501
+
+
+        :return: The parent_id of this VmFolderCreationParams.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this VmFolderCreationParams.
+
+
+        :param parent_id: The parent_id of this VmFolderCreationParams.  # noqa: E501
+        :type parent_id: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def cluster_id(self):

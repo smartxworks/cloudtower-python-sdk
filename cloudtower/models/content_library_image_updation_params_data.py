@@ -25,12 +25,14 @@ class ContentLibraryImageUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'datastores': 'DatastoreWhereInput',
         'clusters': 'ClusterWhereInput',
         'description': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'datastores': 'datastores',
         'clusters': 'clusters',
         'description': 'description',
         'name': 'name'
@@ -40,17 +42,40 @@ class ContentLibraryImageUpdationParamsData(object):
         """ContentLibraryImageUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._datastores = None
         self._clusters = None
         self._description = None
         self._name = None
         self.discriminator = None
 
+        self.datastores = kwargs.get("datastores", None)
         if "clusters" in kwargs:
             self.clusters = kwargs["clusters"]
         if "description" in kwargs:
             self.description = kwargs["description"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def datastores(self):
+        """Gets the datastores of this ContentLibraryImageUpdationParamsData.  # noqa: E501
+
+
+        :return: The datastores of this ContentLibraryImageUpdationParamsData.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores
+
+    @datastores.setter
+    def datastores(self, datastores):
+        """Sets the datastores of this ContentLibraryImageUpdationParamsData.
+
+
+        :param datastores: The datastores of this ContentLibraryImageUpdationParamsData.  # noqa: E501
+        :type datastores: DatastoreWhereInput
+        """
+
+        self._datastores = datastores
 
     @property
     def clusters(self):

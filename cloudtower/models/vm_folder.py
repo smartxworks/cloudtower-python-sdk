@@ -29,6 +29,9 @@ class VmFolder(object):
         'id': 'str',
         'local_id': 'str',
         'name': 'str',
+        'parent': 'NestedVmFolder',
+        'path': 'str',
+        'total_vm_num': 'int',
         'vm_num': 'int',
         'vms': 'list[NestedVm]'
     }
@@ -38,6 +41,9 @@ class VmFolder(object):
         'id': 'id',
         'local_id': 'local_id',
         'name': 'name',
+        'parent': 'parent',
+        'path': 'path',
+        'total_vm_num': 'total_vm_num',
         'vm_num': 'vm_num',
         'vms': 'vms'
     }
@@ -50,6 +56,9 @@ class VmFolder(object):
         self._id = None
         self._local_id = None
         self._name = None
+        self._parent = None
+        self._path = None
+        self._total_vm_num = None
         self._vm_num = None
         self._vms = None
         self.discriminator = None
@@ -61,6 +70,9 @@ class VmFolder(object):
         self.local_id = kwargs.get("local_id", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.parent = kwargs.get("parent", None)
+        self.path = kwargs.get("path", None)
+        self.total_vm_num = kwargs.get("total_vm_num", None)
         self.vm_num = kwargs.get("vm_num", None)
         self.vms = kwargs.get("vms", None)
 
@@ -153,6 +165,69 @@ class VmFolder(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def parent(self):
+        """Gets the parent of this VmFolder.  # noqa: E501
+
+
+        :return: The parent of this VmFolder.  # noqa: E501
+        :rtype: NestedVmFolder
+        """
+        return self._parent
+
+    @parent.setter
+    def parent(self, parent):
+        """Sets the parent of this VmFolder.
+
+
+        :param parent: The parent of this VmFolder.  # noqa: E501
+        :type parent: NestedVmFolder
+        """
+
+        self._parent = parent
+
+    @property
+    def path(self):
+        """Gets the path of this VmFolder.  # noqa: E501
+
+
+        :return: The path of this VmFolder.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this VmFolder.
+
+
+        :param path: The path of this VmFolder.  # noqa: E501
+        :type path: str
+        """
+
+        self._path = path
+
+    @property
+    def total_vm_num(self):
+        """Gets the total_vm_num of this VmFolder.  # noqa: E501
+
+
+        :return: The total_vm_num of this VmFolder.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num
+
+    @total_vm_num.setter
+    def total_vm_num(self, total_vm_num):
+        """Sets the total_vm_num of this VmFolder.
+
+
+        :param total_vm_num: The total_vm_num of this VmFolder.  # noqa: E501
+        :type total_vm_num: int
+        """
+
+        self._total_vm_num = total_vm_num
 
     @property
     def vm_num(self):
