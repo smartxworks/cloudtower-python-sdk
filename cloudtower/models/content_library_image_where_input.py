@@ -39,6 +39,9 @@ class ContentLibraryImageWhereInput(object):
         'created_at_lte': 'str',
         'created_at_not': 'str',
         'created_at_not_in': 'list[str]',
+        'datastores_every': 'DatastoreWhereInput',
+        'datastores_none': 'DatastoreWhereInput',
+        'datastores_some': 'DatastoreWhereInput',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -142,6 +145,9 @@ class ContentLibraryImageWhereInput(object):
         'created_at_lte': 'createdAt_lte',
         'created_at_not': 'createdAt_not',
         'created_at_not_in': 'createdAt_not_in',
+        'datastores_every': 'datastores_every',
+        'datastores_none': 'datastores_none',
+        'datastores_some': 'datastores_some',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -248,6 +254,9 @@ class ContentLibraryImageWhereInput(object):
         self._created_at_lte = None
         self._created_at_not = None
         self._created_at_not_in = None
+        self._datastores_every = None
+        self._datastores_none = None
+        self._datastores_some = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -350,6 +359,9 @@ class ContentLibraryImageWhereInput(object):
         self.created_at_lte = kwargs.get("created_at_lte", None)
         self.created_at_not = kwargs.get("created_at_not", None)
         self.created_at_not_in = kwargs.get("created_at_not_in", None)
+        self.datastores_every = kwargs.get("datastores_every", None)
+        self.datastores_none = kwargs.get("datastores_none", None)
+        self.datastores_some = kwargs.get("datastores_some", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -730,6 +742,69 @@ class ContentLibraryImageWhereInput(object):
         """
 
         self._created_at_not_in = created_at_not_in
+
+    @property
+    def datastores_every(self):
+        """Gets the datastores_every of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The datastores_every of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_every
+
+    @datastores_every.setter
+    def datastores_every(self, datastores_every):
+        """Sets the datastores_every of this ContentLibraryImageWhereInput.
+
+
+        :param datastores_every: The datastores_every of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type datastores_every: DatastoreWhereInput
+        """
+
+        self._datastores_every = datastores_every
+
+    @property
+    def datastores_none(self):
+        """Gets the datastores_none of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The datastores_none of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_none
+
+    @datastores_none.setter
+    def datastores_none(self, datastores_none):
+        """Sets the datastores_none of this ContentLibraryImageWhereInput.
+
+
+        :param datastores_none: The datastores_none of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type datastores_none: DatastoreWhereInput
+        """
+
+        self._datastores_none = datastores_none
+
+    @property
+    def datastores_some(self):
+        """Gets the datastores_some of this ContentLibraryImageWhereInput.  # noqa: E501
+
+
+        :return: The datastores_some of this ContentLibraryImageWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_some
+
+    @datastores_some.setter
+    def datastores_some(self, datastores_some):
+        """Sets the datastores_some of this ContentLibraryImageWhereInput.
+
+
+        :param datastores_some: The datastores_some of this ContentLibraryImageWhereInput.  # noqa: E501
+        :type datastores_some: DatastoreWhereInput
+        """
+
+        self._datastores_some = datastores_some
 
     @property
     def description(self):

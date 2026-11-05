@@ -71,6 +71,29 @@ class VmFolderWhereInput(object):
         'name_not_in': 'list[str]',
         'name_not_starts_with': 'str',
         'name_starts_with': 'str',
+        'parent': 'VmFolderWhereInput',
+        'path': 'str',
+        'path_contains': 'str',
+        'path_ends_with': 'str',
+        'path_gt': 'str',
+        'path_gte': 'str',
+        'path_in': 'list[str]',
+        'path_lt': 'str',
+        'path_lte': 'str',
+        'path_not': 'str',
+        'path_not_contains': 'str',
+        'path_not_ends_with': 'str',
+        'path_not_in': 'list[str]',
+        'path_not_starts_with': 'str',
+        'path_starts_with': 'str',
+        'total_vm_num': 'int',
+        'total_vm_num_gt': 'int',
+        'total_vm_num_gte': 'int',
+        'total_vm_num_in': 'list[int]',
+        'total_vm_num_lt': 'int',
+        'total_vm_num_lte': 'int',
+        'total_vm_num_not': 'int',
+        'total_vm_num_not_in': 'list[int]',
         'vm_num': 'int',
         'vm_num_gt': 'int',
         'vm_num_gte': 'int',
@@ -131,6 +154,29 @@ class VmFolderWhereInput(object):
         'name_not_in': 'name_not_in',
         'name_not_starts_with': 'name_not_starts_with',
         'name_starts_with': 'name_starts_with',
+        'parent': 'parent',
+        'path': 'path',
+        'path_contains': 'path_contains',
+        'path_ends_with': 'path_ends_with',
+        'path_gt': 'path_gt',
+        'path_gte': 'path_gte',
+        'path_in': 'path_in',
+        'path_lt': 'path_lt',
+        'path_lte': 'path_lte',
+        'path_not': 'path_not',
+        'path_not_contains': 'path_not_contains',
+        'path_not_ends_with': 'path_not_ends_with',
+        'path_not_in': 'path_not_in',
+        'path_not_starts_with': 'path_not_starts_with',
+        'path_starts_with': 'path_starts_with',
+        'total_vm_num': 'total_vm_num',
+        'total_vm_num_gt': 'total_vm_num_gt',
+        'total_vm_num_gte': 'total_vm_num_gte',
+        'total_vm_num_in': 'total_vm_num_in',
+        'total_vm_num_lt': 'total_vm_num_lt',
+        'total_vm_num_lte': 'total_vm_num_lte',
+        'total_vm_num_not': 'total_vm_num_not',
+        'total_vm_num_not_in': 'total_vm_num_not_in',
         'vm_num': 'vm_num',
         'vm_num_gt': 'vm_num_gt',
         'vm_num_gte': 'vm_num_gte',
@@ -194,6 +240,29 @@ class VmFolderWhereInput(object):
         self._name_not_in = None
         self._name_not_starts_with = None
         self._name_starts_with = None
+        self._parent = None
+        self._path = None
+        self._path_contains = None
+        self._path_ends_with = None
+        self._path_gt = None
+        self._path_gte = None
+        self._path_in = None
+        self._path_lt = None
+        self._path_lte = None
+        self._path_not = None
+        self._path_not_contains = None
+        self._path_not_ends_with = None
+        self._path_not_in = None
+        self._path_not_starts_with = None
+        self._path_starts_with = None
+        self._total_vm_num = None
+        self._total_vm_num_gt = None
+        self._total_vm_num_gte = None
+        self._total_vm_num_in = None
+        self._total_vm_num_lt = None
+        self._total_vm_num_lte = None
+        self._total_vm_num_not = None
+        self._total_vm_num_not_in = None
         self._vm_num = None
         self._vm_num_gt = None
         self._vm_num_gte = None
@@ -253,6 +322,29 @@ class VmFolderWhereInput(object):
         self.name_not_in = kwargs.get("name_not_in", None)
         self.name_not_starts_with = kwargs.get("name_not_starts_with", None)
         self.name_starts_with = kwargs.get("name_starts_with", None)
+        self.parent = kwargs.get("parent", None)
+        self.path = kwargs.get("path", None)
+        self.path_contains = kwargs.get("path_contains", None)
+        self.path_ends_with = kwargs.get("path_ends_with", None)
+        self.path_gt = kwargs.get("path_gt", None)
+        self.path_gte = kwargs.get("path_gte", None)
+        self.path_in = kwargs.get("path_in", None)
+        self.path_lt = kwargs.get("path_lt", None)
+        self.path_lte = kwargs.get("path_lte", None)
+        self.path_not = kwargs.get("path_not", None)
+        self.path_not_contains = kwargs.get("path_not_contains", None)
+        self.path_not_ends_with = kwargs.get("path_not_ends_with", None)
+        self.path_not_in = kwargs.get("path_not_in", None)
+        self.path_not_starts_with = kwargs.get("path_not_starts_with", None)
+        self.path_starts_with = kwargs.get("path_starts_with", None)
+        self.total_vm_num = kwargs.get("total_vm_num", None)
+        self.total_vm_num_gt = kwargs.get("total_vm_num_gt", None)
+        self.total_vm_num_gte = kwargs.get("total_vm_num_gte", None)
+        self.total_vm_num_in = kwargs.get("total_vm_num_in", None)
+        self.total_vm_num_lt = kwargs.get("total_vm_num_lt", None)
+        self.total_vm_num_lte = kwargs.get("total_vm_num_lte", None)
+        self.total_vm_num_not = kwargs.get("total_vm_num_not", None)
+        self.total_vm_num_not_in = kwargs.get("total_vm_num_not_in", None)
         self.vm_num = kwargs.get("vm_num", None)
         self.vm_num_gt = kwargs.get("vm_num_gt", None)
         self.vm_num_gte = kwargs.get("vm_num_gte", None)
@@ -1230,6 +1322,489 @@ class VmFolderWhereInput(object):
         """
 
         self._name_starts_with = name_starts_with
+
+    @property
+    def parent(self):
+        """Gets the parent of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The parent of this VmFolderWhereInput.  # noqa: E501
+        :rtype: VmFolderWhereInput
+        """
+        return self._parent
+
+    @parent.setter
+    def parent(self, parent):
+        """Sets the parent of this VmFolderWhereInput.
+
+
+        :param parent: The parent of this VmFolderWhereInput.  # noqa: E501
+        :type parent: VmFolderWhereInput
+        """
+
+        self._parent = parent
+
+    @property
+    def path(self):
+        """Gets the path of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this VmFolderWhereInput.
+
+
+        :param path: The path of this VmFolderWhereInput.  # noqa: E501
+        :type path: str
+        """
+
+        self._path = path
+
+    @property
+    def path_contains(self):
+        """Gets the path_contains of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_contains of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_contains
+
+    @path_contains.setter
+    def path_contains(self, path_contains):
+        """Sets the path_contains of this VmFolderWhereInput.
+
+
+        :param path_contains: The path_contains of this VmFolderWhereInput.  # noqa: E501
+        :type path_contains: str
+        """
+
+        self._path_contains = path_contains
+
+    @property
+    def path_ends_with(self):
+        """Gets the path_ends_with of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_ends_with of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_ends_with
+
+    @path_ends_with.setter
+    def path_ends_with(self, path_ends_with):
+        """Sets the path_ends_with of this VmFolderWhereInput.
+
+
+        :param path_ends_with: The path_ends_with of this VmFolderWhereInput.  # noqa: E501
+        :type path_ends_with: str
+        """
+
+        self._path_ends_with = path_ends_with
+
+    @property
+    def path_gt(self):
+        """Gets the path_gt of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_gt of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_gt
+
+    @path_gt.setter
+    def path_gt(self, path_gt):
+        """Sets the path_gt of this VmFolderWhereInput.
+
+
+        :param path_gt: The path_gt of this VmFolderWhereInput.  # noqa: E501
+        :type path_gt: str
+        """
+
+        self._path_gt = path_gt
+
+    @property
+    def path_gte(self):
+        """Gets the path_gte of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_gte of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_gte
+
+    @path_gte.setter
+    def path_gte(self, path_gte):
+        """Sets the path_gte of this VmFolderWhereInput.
+
+
+        :param path_gte: The path_gte of this VmFolderWhereInput.  # noqa: E501
+        :type path_gte: str
+        """
+
+        self._path_gte = path_gte
+
+    @property
+    def path_in(self):
+        """Gets the path_in of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_in of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._path_in
+
+    @path_in.setter
+    def path_in(self, path_in):
+        """Sets the path_in of this VmFolderWhereInput.
+
+
+        :param path_in: The path_in of this VmFolderWhereInput.  # noqa: E501
+        :type path_in: list[str]
+        """
+
+        self._path_in = path_in
+
+    @property
+    def path_lt(self):
+        """Gets the path_lt of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_lt of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_lt
+
+    @path_lt.setter
+    def path_lt(self, path_lt):
+        """Sets the path_lt of this VmFolderWhereInput.
+
+
+        :param path_lt: The path_lt of this VmFolderWhereInput.  # noqa: E501
+        :type path_lt: str
+        """
+
+        self._path_lt = path_lt
+
+    @property
+    def path_lte(self):
+        """Gets the path_lte of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_lte of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_lte
+
+    @path_lte.setter
+    def path_lte(self, path_lte):
+        """Sets the path_lte of this VmFolderWhereInput.
+
+
+        :param path_lte: The path_lte of this VmFolderWhereInput.  # noqa: E501
+        :type path_lte: str
+        """
+
+        self._path_lte = path_lte
+
+    @property
+    def path_not(self):
+        """Gets the path_not of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_not of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_not
+
+    @path_not.setter
+    def path_not(self, path_not):
+        """Sets the path_not of this VmFolderWhereInput.
+
+
+        :param path_not: The path_not of this VmFolderWhereInput.  # noqa: E501
+        :type path_not: str
+        """
+
+        self._path_not = path_not
+
+    @property
+    def path_not_contains(self):
+        """Gets the path_not_contains of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_not_contains of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_not_contains
+
+    @path_not_contains.setter
+    def path_not_contains(self, path_not_contains):
+        """Sets the path_not_contains of this VmFolderWhereInput.
+
+
+        :param path_not_contains: The path_not_contains of this VmFolderWhereInput.  # noqa: E501
+        :type path_not_contains: str
+        """
+
+        self._path_not_contains = path_not_contains
+
+    @property
+    def path_not_ends_with(self):
+        """Gets the path_not_ends_with of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_not_ends_with of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_not_ends_with
+
+    @path_not_ends_with.setter
+    def path_not_ends_with(self, path_not_ends_with):
+        """Sets the path_not_ends_with of this VmFolderWhereInput.
+
+
+        :param path_not_ends_with: The path_not_ends_with of this VmFolderWhereInput.  # noqa: E501
+        :type path_not_ends_with: str
+        """
+
+        self._path_not_ends_with = path_not_ends_with
+
+    @property
+    def path_not_in(self):
+        """Gets the path_not_in of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_not_in of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._path_not_in
+
+    @path_not_in.setter
+    def path_not_in(self, path_not_in):
+        """Sets the path_not_in of this VmFolderWhereInput.
+
+
+        :param path_not_in: The path_not_in of this VmFolderWhereInput.  # noqa: E501
+        :type path_not_in: list[str]
+        """
+
+        self._path_not_in = path_not_in
+
+    @property
+    def path_not_starts_with(self):
+        """Gets the path_not_starts_with of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_not_starts_with of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_not_starts_with
+
+    @path_not_starts_with.setter
+    def path_not_starts_with(self, path_not_starts_with):
+        """Sets the path_not_starts_with of this VmFolderWhereInput.
+
+
+        :param path_not_starts_with: The path_not_starts_with of this VmFolderWhereInput.  # noqa: E501
+        :type path_not_starts_with: str
+        """
+
+        self._path_not_starts_with = path_not_starts_with
+
+    @property
+    def path_starts_with(self):
+        """Gets the path_starts_with of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The path_starts_with of this VmFolderWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._path_starts_with
+
+    @path_starts_with.setter
+    def path_starts_with(self, path_starts_with):
+        """Sets the path_starts_with of this VmFolderWhereInput.
+
+
+        :param path_starts_with: The path_starts_with of this VmFolderWhereInput.  # noqa: E501
+        :type path_starts_with: str
+        """
+
+        self._path_starts_with = path_starts_with
+
+    @property
+    def total_vm_num(self):
+        """Gets the total_vm_num of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num
+
+    @total_vm_num.setter
+    def total_vm_num(self, total_vm_num):
+        """Sets the total_vm_num of this VmFolderWhereInput.
+
+
+        :param total_vm_num: The total_vm_num of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num: int
+        """
+
+        self._total_vm_num = total_vm_num
+
+    @property
+    def total_vm_num_gt(self):
+        """Gets the total_vm_num_gt of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_gt of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num_gt
+
+    @total_vm_num_gt.setter
+    def total_vm_num_gt(self, total_vm_num_gt):
+        """Sets the total_vm_num_gt of this VmFolderWhereInput.
+
+
+        :param total_vm_num_gt: The total_vm_num_gt of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_gt: int
+        """
+
+        self._total_vm_num_gt = total_vm_num_gt
+
+    @property
+    def total_vm_num_gte(self):
+        """Gets the total_vm_num_gte of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_gte of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num_gte
+
+    @total_vm_num_gte.setter
+    def total_vm_num_gte(self, total_vm_num_gte):
+        """Sets the total_vm_num_gte of this VmFolderWhereInput.
+
+
+        :param total_vm_num_gte: The total_vm_num_gte of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_gte: int
+        """
+
+        self._total_vm_num_gte = total_vm_num_gte
+
+    @property
+    def total_vm_num_in(self):
+        """Gets the total_vm_num_in of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_in of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_vm_num_in
+
+    @total_vm_num_in.setter
+    def total_vm_num_in(self, total_vm_num_in):
+        """Sets the total_vm_num_in of this VmFolderWhereInput.
+
+
+        :param total_vm_num_in: The total_vm_num_in of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_in: list[int]
+        """
+
+        self._total_vm_num_in = total_vm_num_in
+
+    @property
+    def total_vm_num_lt(self):
+        """Gets the total_vm_num_lt of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_lt of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num_lt
+
+    @total_vm_num_lt.setter
+    def total_vm_num_lt(self, total_vm_num_lt):
+        """Sets the total_vm_num_lt of this VmFolderWhereInput.
+
+
+        :param total_vm_num_lt: The total_vm_num_lt of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_lt: int
+        """
+
+        self._total_vm_num_lt = total_vm_num_lt
+
+    @property
+    def total_vm_num_lte(self):
+        """Gets the total_vm_num_lte of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_lte of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num_lte
+
+    @total_vm_num_lte.setter
+    def total_vm_num_lte(self, total_vm_num_lte):
+        """Sets the total_vm_num_lte of this VmFolderWhereInput.
+
+
+        :param total_vm_num_lte: The total_vm_num_lte of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_lte: int
+        """
+
+        self._total_vm_num_lte = total_vm_num_lte
+
+    @property
+    def total_vm_num_not(self):
+        """Gets the total_vm_num_not of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_not of this VmFolderWhereInput.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_vm_num_not
+
+    @total_vm_num_not.setter
+    def total_vm_num_not(self, total_vm_num_not):
+        """Sets the total_vm_num_not of this VmFolderWhereInput.
+
+
+        :param total_vm_num_not: The total_vm_num_not of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_not: int
+        """
+
+        self._total_vm_num_not = total_vm_num_not
+
+    @property
+    def total_vm_num_not_in(self):
+        """Gets the total_vm_num_not_in of this VmFolderWhereInput.  # noqa: E501
+
+
+        :return: The total_vm_num_not_in of this VmFolderWhereInput.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._total_vm_num_not_in
+
+    @total_vm_num_not_in.setter
+    def total_vm_num_not_in(self, total_vm_num_not_in):
+        """Sets the total_vm_num_not_in of this VmFolderWhereInput.
+
+
+        :param total_vm_num_not_in: The total_vm_num_not_in of this VmFolderWhereInput.  # noqa: E501
+        :type total_vm_num_not_in: list[int]
+        """
+
+        self._total_vm_num_not_in = total_vm_num_not_in
 
     @property
     def vm_num(self):

@@ -45,6 +45,7 @@ class VmImportParams(object):
         'description': 'str',
         'name': 'str',
         'host_id': 'str',
+        'storage_config': 'StorageConfig',
         'cluster_id': 'str',
         'upload_tasks': 'list[str]',
         'owner_id': 'str',
@@ -72,6 +73,7 @@ class VmImportParams(object):
         'description': 'description',
         'name': 'name',
         'host_id': 'host_id',
+        'storage_config': 'storage_config',
         'cluster_id': 'cluster_id',
         'upload_tasks': 'upload_tasks',
         'owner_id': 'owner_id',
@@ -102,6 +104,7 @@ class VmImportParams(object):
         self._description = None
         self._name = None
         self._host_id = None
+        self._storage_config = None
         self._cluster_id = None
         self._upload_tasks = None
         self._owner_id = None
@@ -148,6 +151,8 @@ class VmImportParams(object):
             self.name = kwargs["name"]
         if "host_id" in kwargs:
             self.host_id = kwargs["host_id"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
         if "upload_tasks" in kwargs:
@@ -578,6 +583,27 @@ class VmImportParams(object):
         """
 
         self._host_id = host_id
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmImportParams.  # noqa: E501
+
+
+        :return: The storage_config of this VmImportParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmImportParams.
+
+
+        :param storage_config: The storage_config of this VmImportParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def cluster_id(self):

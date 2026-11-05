@@ -21,11 +21,12 @@ class Bus(object):
     allowed enum values
     """
     IDE = "IDE"
+    SATA = "SATA"
     SCSI = "SCSI"
     USB = "USB"
     VIRTIO = "VIRTIO"
 
-    allowable_values = [IDE, SCSI, USB, VIRTIO]  # noqa: E501
+    allowable_values = [IDE, SATA, SCSI, USB, VIRTIO]  # noqa: E501
 
     """
     Attributes:

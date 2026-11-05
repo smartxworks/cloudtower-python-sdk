@@ -25,6 +25,7 @@ class License(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'bundle_type': 'str',
         'expire_date': 'str',
         'id': 'str',
         'license_serial': 'str',
@@ -38,6 +39,7 @@ class License(object):
     }
 
     attribute_map = {
+        'bundle_type': 'bundle_type',
         'expire_date': 'expire_date',
         'id': 'id',
         'license_serial': 'license_serial',
@@ -54,6 +56,7 @@ class License(object):
         """License - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._bundle_type = None
         self._expire_date = None
         self._id = None
         self._license_serial = None
@@ -66,6 +69,7 @@ class License(object):
         self._type = None
         self.discriminator = None
 
+        self.bundle_type = kwargs.get("bundle_type", None)
         if "expire_date" in kwargs:
             self.expire_date = kwargs["expire_date"]
         if "id" in kwargs:
@@ -84,6 +88,27 @@ class License(object):
             self.software_edition = kwargs["software_edition"]
         if "type" in kwargs:
             self.type = kwargs["type"]
+
+    @property
+    def bundle_type(self):
+        """Gets the bundle_type of this License.  # noqa: E501
+
+
+        :return: The bundle_type of this License.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type
+
+    @bundle_type.setter
+    def bundle_type(self, bundle_type):
+        """Sets the bundle_type of this License.
+
+
+        :param bundle_type: The bundle_type of this License.  # noqa: E501
+        :type bundle_type: str
+        """
+
+        self._bundle_type = bundle_type
 
     @property
     def expire_date(self):

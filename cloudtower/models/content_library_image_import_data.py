@@ -28,6 +28,7 @@ class ContentLibraryImageImportData(object):
         'url': 'str',
         'name': 'str',
         'description': 'str',
+        'datastore': 'DatastoreWhereInput',
         'cluster': 'ClusterWhereInput'
     }
 
@@ -35,6 +36,7 @@ class ContentLibraryImageImportData(object):
         'url': 'url',
         'name': 'name',
         'description': 'description',
+        'datastore': 'datastore',
         'cluster': 'cluster'
     }
 
@@ -45,6 +47,7 @@ class ContentLibraryImageImportData(object):
         self._url = None
         self._name = None
         self._description = None
+        self._datastore = None
         self._cluster = None
         self.discriminator = None
 
@@ -54,6 +57,7 @@ class ContentLibraryImageImportData(object):
             self.name = kwargs["name"]
         if "description" in kwargs:
             self.description = kwargs["description"]
+        self.datastore = kwargs.get("datastore", None)
         if "cluster" in kwargs:
             self.cluster = kwargs["cluster"]
 
@@ -125,6 +129,27 @@ class ContentLibraryImageImportData(object):
         self._description = description
 
     @property
+    def datastore(self):
+        """Gets the datastore of this ContentLibraryImageImportData.  # noqa: E501
+
+
+        :return: The datastore of this ContentLibraryImageImportData.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastore
+
+    @datastore.setter
+    def datastore(self, datastore):
+        """Sets the datastore of this ContentLibraryImageImportData.
+
+
+        :param datastore: The datastore of this ContentLibraryImageImportData.  # noqa: E501
+        :type datastore: DatastoreWhereInput
+        """
+
+        self._datastore = datastore
+
+    @property
     def cluster(self):
         """Gets the cluster of this ContentLibraryImageImportData.  # noqa: E501
 
@@ -142,8 +167,6 @@ class ContentLibraryImageImportData(object):
         :param cluster: The cluster of this ContentLibraryImageImportData.  # noqa: E501
         :type cluster: ClusterWhereInput
         """
-        if self.local_vars_configuration.client_side_validation and cluster is None:  # noqa: E501
-            raise ValueError("Invalid value for `cluster`, must not be `None`")  # noqa: E501
 
         self._cluster = cluster
 

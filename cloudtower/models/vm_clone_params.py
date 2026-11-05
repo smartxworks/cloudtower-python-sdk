@@ -25,6 +25,7 @@ class VmCloneParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_config': 'StorageConfig',
         'owner': 'VmOwnerParams',
         'gpu_devices': 'list[VmGpuOperationParams]',
         'is_full_copy': 'bool',
@@ -57,6 +58,7 @@ class VmCloneParams(object):
     }
 
     attribute_map = {
+        'storage_config': 'storage_config',
         'owner': 'owner',
         'gpu_devices': 'gpu_devices',
         'is_full_copy': 'is_full_copy',
@@ -92,6 +94,7 @@ class VmCloneParams(object):
         """VmCloneParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_config = None
         self._owner = None
         self._gpu_devices = None
         self._is_full_copy = None
@@ -123,6 +126,8 @@ class VmCloneParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "owner" in kwargs:
             self.owner = kwargs["owner"]
         if "gpu_devices" in kwargs:
@@ -181,6 +186,27 @@ class VmCloneParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmCloneParams.  # noqa: E501
+
+
+        :return: The storage_config of this VmCloneParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmCloneParams.
+
+
+        :param storage_config: The storage_config of this VmCloneParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def owner(self):

@@ -40,9 +40,11 @@ class VmVolumeSnapshot(object):
         'local_created_at': 'str',
         'local_id': 'str',
         'name': 'str',
+        'provision_policy': 'str',
         'resident_in_cache': 'bool',
         'shared_size': 'float',
         'size': 'float',
+        'storage_cluster_config': 'NestedStorageClusterConfig',
         'type': 'VmVolumeSnapshotType',
         'unique_size': 'float',
         'vm_volume': 'NestedVmVolume',
@@ -67,9 +69,11 @@ class VmVolumeSnapshot(object):
         'local_created_at': 'local_created_at',
         'local_id': 'local_id',
         'name': 'name',
+        'provision_policy': 'provision_policy',
         'resident_in_cache': 'resident_in_cache',
         'shared_size': 'shared_size',
         'size': 'size',
+        'storage_cluster_config': 'storage_cluster_config',
         'type': 'type',
         'unique_size': 'unique_size',
         'vm_volume': 'vm_volume',
@@ -97,9 +101,11 @@ class VmVolumeSnapshot(object):
         self._local_created_at = None
         self._local_id = None
         self._name = None
+        self._provision_policy = None
         self._resident_in_cache = None
         self._shared_size = None
         self._size = None
+        self._storage_cluster_config = None
         self._type = None
         self._unique_size = None
         self._vm_volume = None
@@ -130,9 +136,11 @@ class VmVolumeSnapshot(object):
             self.local_id = kwargs["local_id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+        self.provision_policy = kwargs.get("provision_policy", None)
         self.resident_in_cache = kwargs.get("resident_in_cache", None)
         self.shared_size = kwargs.get("shared_size", None)
         self.size = kwargs.get("size", None)
+        self.storage_cluster_config = kwargs.get("storage_cluster_config", None)
         if "type" in kwargs:
             self.type = kwargs["type"]
         self.unique_size = kwargs.get("unique_size", None)
@@ -471,6 +479,27 @@ class VmVolumeSnapshot(object):
         self._name = name
 
     @property
+    def provision_policy(self):
+        """Gets the provision_policy of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The provision_policy of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: str
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this VmVolumeSnapshot.
+
+
+        :param provision_policy: The provision_policy of this VmVolumeSnapshot.  # noqa: E501
+        :type provision_policy: str
+        """
+
+        self._provision_policy = provision_policy
+
+    @property
     def resident_in_cache(self):
         """Gets the resident_in_cache of this VmVolumeSnapshot.  # noqa: E501
 
@@ -532,6 +561,27 @@ class VmVolumeSnapshot(object):
         """
 
         self._size = size
+
+    @property
+    def storage_cluster_config(self):
+        """Gets the storage_cluster_config of this VmVolumeSnapshot.  # noqa: E501
+
+
+        :return: The storage_cluster_config of this VmVolumeSnapshot.  # noqa: E501
+        :rtype: NestedStorageClusterConfig
+        """
+        return self._storage_cluster_config
+
+    @storage_cluster_config.setter
+    def storage_cluster_config(self, storage_cluster_config):
+        """Sets the storage_cluster_config of this VmVolumeSnapshot.
+
+
+        :param storage_cluster_config: The storage_cluster_config of this VmVolumeSnapshot.  # noqa: E501
+        :type storage_cluster_config: NestedStorageClusterConfig
+        """
+
+        self._storage_cluster_config = storage_cluster_config
 
     @property
     def type(self):

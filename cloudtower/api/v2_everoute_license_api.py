@@ -327,7 +327,7 @@ class V2EverouteLicenseApi(object):
         }
 
         return self.api_client.call_api(
-            '/get-v-2-everoute-licenses-connection', 'POST',
+            '/get-v2-everoute-licenses-connection', 'POST',
             path_params,
             query_params,
             header_params,

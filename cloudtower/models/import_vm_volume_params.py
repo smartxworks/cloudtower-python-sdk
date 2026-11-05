@@ -25,6 +25,8 @@ class ImportVmVolumeParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'provision_policy': 'VmVolumeProvisionPolicy',
+        'storage_config': 'StorageConfig',
         'upload_task_id': 'str',
         'name': 'str',
         'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
@@ -34,6 +36,8 @@ class ImportVmVolumeParams(object):
     }
 
     attribute_map = {
+        'provision_policy': 'provision_policy',
+        'storage_config': 'storage_config',
         'upload_task_id': 'upload_task_id',
         'name': 'name',
         'elf_ec_storage_policy': 'elf_ec_storage_policy',
@@ -46,6 +50,8 @@ class ImportVmVolumeParams(object):
         """ImportVmVolumeParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._provision_policy = None
+        self._storage_config = None
         self._upload_task_id = None
         self._name = None
         self._elf_ec_storage_policy = None
@@ -54,6 +60,10 @@ class ImportVmVolumeParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "provision_policy" in kwargs:
+            self.provision_policy = kwargs["provision_policy"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "upload_task_id" in kwargs:
             self.upload_task_id = kwargs["upload_task_id"]
         if "name" in kwargs:
@@ -66,6 +76,48 @@ class ImportVmVolumeParams(object):
             self.storage_policy = kwargs["storage_policy"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def provision_policy(self):
+        """Gets the provision_policy of this ImportVmVolumeParams.  # noqa: E501
+
+
+        :return: The provision_policy of this ImportVmVolumeParams.  # noqa: E501
+        :rtype: VmVolumeProvisionPolicy
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this ImportVmVolumeParams.
+
+
+        :param provision_policy: The provision_policy of this ImportVmVolumeParams.  # noqa: E501
+        :type provision_policy: VmVolumeProvisionPolicy
+        """
+
+        self._provision_policy = provision_policy
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this ImportVmVolumeParams.  # noqa: E501
+
+
+        :return: The storage_config of this ImportVmVolumeParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this ImportVmVolumeParams.
+
+
+        :param storage_config: The storage_config of this ImportVmVolumeParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def upload_task_id(self):

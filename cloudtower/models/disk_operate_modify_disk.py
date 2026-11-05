@@ -25,12 +25,14 @@ class DiskOperateModifyDisk(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_config': 'StorageConfig',
         'vm_volume_id': 'str',
         'bus': 'Bus',
         'disk_index': 'int'
     }
 
     attribute_map = {
+        'storage_config': 'storage_config',
         'vm_volume_id': 'vm_volume_id',
         'bus': 'bus',
         'disk_index': 'disk_index'
@@ -40,17 +42,41 @@ class DiskOperateModifyDisk(object):
         """DiskOperateModifyDisk - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_config = None
         self._vm_volume_id = None
         self._bus = None
         self._disk_index = None
         self.discriminator = None
 
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "vm_volume_id" in kwargs:
             self.vm_volume_id = kwargs["vm_volume_id"]
         if "bus" in kwargs:
             self.bus = kwargs["bus"]
         if "disk_index" in kwargs:
             self.disk_index = kwargs["disk_index"]
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this DiskOperateModifyDisk.  # noqa: E501
+
+
+        :return: The storage_config of this DiskOperateModifyDisk.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this DiskOperateModifyDisk.
+
+
+        :param storage_config: The storage_config of this DiskOperateModifyDisk.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def vm_volume_id(self):

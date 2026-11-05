@@ -32,8 +32,11 @@ class MetricLabel(object):
         'metric_name': 'str',
         'job': 'str',
         'instance': 'str',
+        'identifier': 'str',
+        'adapter_type': 'str',
         'zone': 'str',
         'witness': 'str',
+        'volume_id': 'str',
         'volume': 'str',
         'vm': 'str',
         'to_uuid': 'str',
@@ -41,12 +44,15 @@ class MetricLabel(object):
         'scvm': 'str',
         'network': 'str',
         'mac': 'str',
+        'host_id': 'str',
         'host': 'str',
         'esxi_uuid': 'str',
         'device': 'str',
+        'datastore_id': 'str',
         'cluster': 'str',
         'cid': 'str',
         'chunk': 'str',
+        'adapter': 'str',
         'typename': 'str'
     }
 
@@ -58,8 +64,11 @@ class MetricLabel(object):
         'metric_name': 'metric_name',
         'job': 'job',
         'instance': 'instance',
+        'identifier': 'identifier',
+        'adapter_type': 'adapter_type',
         'zone': '_zone',
         'witness': '_witness',
+        'volume_id': '_volume_id',
         'volume': '_volume',
         'vm': '_vm',
         'to_uuid': '_to_uuid',
@@ -67,12 +76,15 @@ class MetricLabel(object):
         'scvm': '_scvm',
         'network': '_network',
         'mac': '_mac',
+        'host_id': '_host_id',
         'host': '_host',
         'esxi_uuid': '_esxi_uuid',
         'device': '_device',
+        'datastore_id': '_datastore_id',
         'cluster': '_cluster',
         'cid': '_cid',
         'chunk': '_chunk',
+        'adapter': '_adapter',
         'typename': '__typename'
     }
 
@@ -87,8 +99,11 @@ class MetricLabel(object):
         self._metric_name = None
         self._job = None
         self._instance = None
+        self._identifier = None
+        self._adapter_type = None
         self._zone = None
         self._witness = None
+        self._volume_id = None
         self._volume = None
         self._vm = None
         self._to_uuid = None
@@ -96,12 +111,15 @@ class MetricLabel(object):
         self._scvm = None
         self._network = None
         self._mac = None
+        self._host_id = None
         self._host = None
         self._esxi_uuid = None
         self._device = None
+        self._datastore_id = None
         self._cluster = None
         self._cid = None
         self._chunk = None
+        self._adapter = None
         self._typename = None
         self.discriminator = None
 
@@ -112,8 +130,11 @@ class MetricLabel(object):
         self.metric_name = kwargs.get("metric_name", None)
         self.job = kwargs.get("job", None)
         self.instance = kwargs.get("instance", None)
+        self.identifier = kwargs.get("identifier", None)
+        self.adapter_type = kwargs.get("adapter_type", None)
         self.zone = kwargs.get("zone", None)
         self.witness = kwargs.get("witness", None)
+        self.volume_id = kwargs.get("volume_id", None)
         self.volume = kwargs.get("volume", None)
         self.vm = kwargs.get("vm", None)
         self.to_uuid = kwargs.get("to_uuid", None)
@@ -121,12 +142,15 @@ class MetricLabel(object):
         self.scvm = kwargs.get("scvm", None)
         self.network = kwargs.get("network", None)
         self.mac = kwargs.get("mac", None)
+        self.host_id = kwargs.get("host_id", None)
         self.host = kwargs.get("host", None)
         self.esxi_uuid = kwargs.get("esxi_uuid", None)
         self.device = kwargs.get("device", None)
+        self.datastore_id = kwargs.get("datastore_id", None)
         self.cluster = kwargs.get("cluster", None)
         self.cid = kwargs.get("cid", None)
         self.chunk = kwargs.get("chunk", None)
+        self.adapter = kwargs.get("adapter", None)
         if "typename" in kwargs:
             self.typename = kwargs["typename"]
 
@@ -278,6 +302,48 @@ class MetricLabel(object):
         self._instance = instance
 
     @property
+    def identifier(self):
+        """Gets the identifier of this MetricLabel.  # noqa: E501
+
+
+        :return: The identifier of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this MetricLabel.
+
+
+        :param identifier: The identifier of this MetricLabel.  # noqa: E501
+        :type identifier: str
+        """
+
+        self._identifier = identifier
+
+    @property
+    def adapter_type(self):
+        """Gets the adapter_type of this MetricLabel.  # noqa: E501
+
+
+        :return: The adapter_type of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._adapter_type
+
+    @adapter_type.setter
+    def adapter_type(self, adapter_type):
+        """Sets the adapter_type of this MetricLabel.
+
+
+        :param adapter_type: The adapter_type of this MetricLabel.  # noqa: E501
+        :type adapter_type: str
+        """
+
+        self._adapter_type = adapter_type
+
+    @property
     def zone(self):
         """Gets the zone of this MetricLabel.  # noqa: E501
 
@@ -318,6 +384,27 @@ class MetricLabel(object):
         """
 
         self._witness = witness
+
+    @property
+    def volume_id(self):
+        """Gets the volume_id of this MetricLabel.  # noqa: E501
+
+
+        :return: The volume_id of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._volume_id
+
+    @volume_id.setter
+    def volume_id(self, volume_id):
+        """Sets the volume_id of this MetricLabel.
+
+
+        :param volume_id: The volume_id of this MetricLabel.  # noqa: E501
+        :type volume_id: str
+        """
+
+        self._volume_id = volume_id
 
     @property
     def volume(self):
@@ -467,6 +554,27 @@ class MetricLabel(object):
         self._mac = mac
 
     @property
+    def host_id(self):
+        """Gets the host_id of this MetricLabel.  # noqa: E501
+
+
+        :return: The host_id of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_id
+
+    @host_id.setter
+    def host_id(self, host_id):
+        """Sets the host_id of this MetricLabel.
+
+
+        :param host_id: The host_id of this MetricLabel.  # noqa: E501
+        :type host_id: str
+        """
+
+        self._host_id = host_id
+
+    @property
     def host(self):
         """Gets the host of this MetricLabel.  # noqa: E501
 
@@ -530,6 +638,27 @@ class MetricLabel(object):
         self._device = device
 
     @property
+    def datastore_id(self):
+        """Gets the datastore_id of this MetricLabel.  # noqa: E501
+
+
+        :return: The datastore_id of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._datastore_id
+
+    @datastore_id.setter
+    def datastore_id(self, datastore_id):
+        """Sets the datastore_id of this MetricLabel.
+
+
+        :param datastore_id: The datastore_id of this MetricLabel.  # noqa: E501
+        :type datastore_id: str
+        """
+
+        self._datastore_id = datastore_id
+
+    @property
     def cluster(self):
         """Gets the cluster of this MetricLabel.  # noqa: E501
 
@@ -591,6 +720,27 @@ class MetricLabel(object):
         """
 
         self._chunk = chunk
+
+    @property
+    def adapter(self):
+        """Gets the adapter of this MetricLabel.  # noqa: E501
+
+
+        :return: The adapter of this MetricLabel.  # noqa: E501
+        :rtype: str
+        """
+        return self._adapter
+
+    @adapter.setter
+    def adapter(self, adapter):
+        """Sets the adapter of this MetricLabel.
+
+
+        :param adapter: The adapter of this MetricLabel.  # noqa: E501
+        :type adapter: str
+        """
+
+        self._adapter = adapter
 
     @property
     def typename(self):

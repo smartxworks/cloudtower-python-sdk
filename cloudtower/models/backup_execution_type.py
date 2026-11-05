@@ -22,8 +22,9 @@ class BackupExecutionType(object):
     """
     FULL = "FULL"
     INCREMENTAL = "INCREMENTAL"
+    SYNTHETIC_FULL = "SYNTHETIC_FULL"
 
-    allowable_values = [FULL, INCREMENTAL]  # noqa: E501
+    allowable_values = [FULL, INCREMENTAL, SYNTHETIC_FULL]  # noqa: E501
 
     """
     Attributes:

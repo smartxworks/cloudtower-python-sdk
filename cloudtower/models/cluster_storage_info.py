@@ -30,6 +30,7 @@ class ClusterStorageInfo(object):
         'failure_data_space': 'int',
         'used_data_space': 'int',
         'total_data_capacity': 'int',
+        'storage_cluster_configs': 'list[ClusterStorageClusterConfig]',
         'storage_cluster': 'list[ClusterStorageInfo]',
         'stretch': 'bool',
         'type': 'ClusterType',
@@ -43,6 +44,7 @@ class ClusterStorageInfo(object):
         'failure_data_space': 'failure_data_space',
         'used_data_space': 'used_data_space',
         'total_data_capacity': 'total_data_capacity',
+        'storage_cluster_configs': 'storage_cluster_configs',
         'storage_cluster': 'storage_cluster',
         'stretch': 'stretch',
         'type': 'type',
@@ -59,6 +61,7 @@ class ClusterStorageInfo(object):
         self._failure_data_space = None
         self._used_data_space = None
         self._total_data_capacity = None
+        self._storage_cluster_configs = None
         self._storage_cluster = None
         self._stretch = None
         self._type = None
@@ -76,6 +79,8 @@ class ClusterStorageInfo(object):
             self.used_data_space = kwargs["used_data_space"]
         if "total_data_capacity" in kwargs:
             self.total_data_capacity = kwargs["total_data_capacity"]
+        if "storage_cluster_configs" in kwargs:
+            self.storage_cluster_configs = kwargs["storage_cluster_configs"]
         if "storage_cluster" in kwargs:
             self.storage_cluster = kwargs["storage_cluster"]
         if "stretch" in kwargs:
@@ -191,6 +196,27 @@ class ClusterStorageInfo(object):
         """
 
         self._total_data_capacity = total_data_capacity
+
+    @property
+    def storage_cluster_configs(self):
+        """Gets the storage_cluster_configs of this ClusterStorageInfo.  # noqa: E501
+
+
+        :return: The storage_cluster_configs of this ClusterStorageInfo.  # noqa: E501
+        :rtype: list[ClusterStorageClusterConfig]
+        """
+        return self._storage_cluster_configs
+
+    @storage_cluster_configs.setter
+    def storage_cluster_configs(self, storage_cluster_configs):
+        """Sets the storage_cluster_configs of this ClusterStorageInfo.
+
+
+        :param storage_cluster_configs: The storage_cluster_configs of this ClusterStorageInfo.  # noqa: E501
+        :type storage_cluster_configs: list[ClusterStorageClusterConfig]
+        """
+
+        self._storage_cluster_configs = storage_cluster_configs
 
     @property
     def storage_cluster(self):
