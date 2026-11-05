@@ -26,6 +26,7 @@ class MountNewCreateDisksParamsVmVolume(object):
     """
     openapi_types = {
         'resident_in_cache': 'bool',
+        'provision_policy': 'VmVolumeProvisionPolicy',
         'elf_ec_storage_policy': 'MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy',
         'elf_replica_storage_policy': 'VmVolumeElfStoragePolicyType',
         'elf_storage_policy': 'VmVolumeElfStoragePolicyType',
@@ -37,6 +38,7 @@ class MountNewCreateDisksParamsVmVolume(object):
 
     attribute_map = {
         'resident_in_cache': 'resident_in_cache',
+        'provision_policy': 'provision_policy',
         'elf_ec_storage_policy': 'elf_ec_storage_policy',
         'elf_replica_storage_policy': 'elf_replica_storage_policy',
         'elf_storage_policy': 'elf_storage_policy',
@@ -51,6 +53,7 @@ class MountNewCreateDisksParamsVmVolume(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._resident_in_cache = None
+        self._provision_policy = None
         self._elf_ec_storage_policy = None
         self._elf_replica_storage_policy = None
         self._elf_storage_policy = None
@@ -62,6 +65,8 @@ class MountNewCreateDisksParamsVmVolume(object):
 
         if "resident_in_cache" in kwargs:
             self.resident_in_cache = kwargs["resident_in_cache"]
+        if "provision_policy" in kwargs:
+            self.provision_policy = kwargs["provision_policy"]
         if "elf_ec_storage_policy" in kwargs:
             self.elf_ec_storage_policy = kwargs["elf_ec_storage_policy"]
         if "elf_replica_storage_policy" in kwargs:
@@ -97,6 +102,27 @@ class MountNewCreateDisksParamsVmVolume(object):
         """
 
         self._resident_in_cache = resident_in_cache
+
+    @property
+    def provision_policy(self):
+        """Gets the provision_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+
+
+        :return: The provision_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :rtype: VmVolumeProvisionPolicy
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this MountNewCreateDisksParamsVmVolume.
+
+
+        :param provision_policy: The provision_policy of this MountNewCreateDisksParamsVmVolume.  # noqa: E501
+        :type provision_policy: VmVolumeProvisionPolicy
+        """
+
+        self._provision_policy = provision_policy
 
     @property
     def elf_ec_storage_policy(self):

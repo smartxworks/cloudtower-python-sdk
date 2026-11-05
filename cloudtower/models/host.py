@@ -28,6 +28,7 @@ class Host(object):
         'access_ip': 'str',
         'allocable_cpu_cores_for_vm_exclusive': 'int',
         'allocatable_memory_bytes': 'int',
+        'allocated_memory_bytes': 'int',
         'allocated_prioritized_space': 'int',
         'allocated_prioritized_space_usage': 'float',
         'chunk_id': 'str',
@@ -43,6 +44,7 @@ class Host(object):
         'cpu_temperature_celsius': 'list[int]',
         'cpu_vendor': 'str',
         'data_ip': 'str',
+        'datastore_mounts': 'list[NestedDatastoreMount]',
         'dirty_cache_space': 'int',
         'dirty_cache_usage': 'float',
         'disk_pools': 'list[NestedDiskPool]',
@@ -64,6 +66,8 @@ class Host(object):
         'local_id': 'str',
         'lsm_cap_disk_safe_umount': 'bool',
         'management_ip': 'str',
+        'memory_allocation_rate': 'float',
+        'memory_overcommit_enabled': 'bool',
         'merged_status': 'HostMergedStatus',
         'model': 'str',
         'name': 'str',
@@ -73,6 +77,9 @@ class Host(object):
         'node_topo_local_id': 'str',
         'os_memory_bytes': 'int',
         'os_version': 'str',
+        'overcommit_active_memory_bytes': 'int',
+        'overcommit_memory_bytes': 'int',
+        'overcommit_memory_ratio': 'float',
         'perf_allocated_data_space': 'int',
         'perf_failure_data_space': 'int',
         'perf_total_data_capacity': 'int',
@@ -86,6 +93,9 @@ class Host(object):
         'prio_space_percentage': 'float',
         'provisioned_cpu_cores': 'int',
         'provisioned_memory_bytes': 'int',
+        'reserved_memory_bytes': 'int',
+        'running_pause_overcommit_memory_bytes': 'int',
+        'running_pause_reserved_memory_bytes': 'int',
         'running_pause_vm_memory_bytes': 'int',
         'running_vm_num': 'int',
         'scvm_cpu': 'int',
@@ -105,6 +115,7 @@ class Host(object):
         'total_data_capacity': 'int',
         'total_logical_cpu_cores': 'int',
         'total_memory_bytes': 'int',
+        'total_physical_memory_bytes': 'int',
         'usb_devices': 'list[NestedUsbDevice]',
         'used_cache_space': 'int',
         'used_cpu_hz': 'float',
@@ -124,6 +135,7 @@ class Host(object):
         'access_ip': 'access_ip',
         'allocable_cpu_cores_for_vm_exclusive': 'allocable_cpu_cores_for_vm_exclusive',
         'allocatable_memory_bytes': 'allocatable_memory_bytes',
+        'allocated_memory_bytes': 'allocated_memory_bytes',
         'allocated_prioritized_space': 'allocated_prioritized_space',
         'allocated_prioritized_space_usage': 'allocated_prioritized_space_usage',
         'chunk_id': 'chunk_id',
@@ -139,6 +151,7 @@ class Host(object):
         'cpu_temperature_celsius': 'cpu_temperature_celsius',
         'cpu_vendor': 'cpu_vendor',
         'data_ip': 'data_ip',
+        'datastore_mounts': 'datastore_mounts',
         'dirty_cache_space': 'dirty_cache_space',
         'dirty_cache_usage': 'dirty_cache_usage',
         'disk_pools': 'disk_pools',
@@ -160,6 +173,8 @@ class Host(object):
         'local_id': 'local_id',
         'lsm_cap_disk_safe_umount': 'lsm_cap_disk_safe_umount',
         'management_ip': 'management_ip',
+        'memory_allocation_rate': 'memory_allocation_rate',
+        'memory_overcommit_enabled': 'memory_overcommit_enabled',
         'merged_status': 'merged_status',
         'model': 'model',
         'name': 'name',
@@ -169,6 +184,9 @@ class Host(object):
         'node_topo_local_id': 'node_topo_local_id',
         'os_memory_bytes': 'os_memory_bytes',
         'os_version': 'os_version',
+        'overcommit_active_memory_bytes': 'overcommit_active_memory_bytes',
+        'overcommit_memory_bytes': 'overcommit_memory_bytes',
+        'overcommit_memory_ratio': 'overcommit_memory_ratio',
         'perf_allocated_data_space': 'perf_allocated_data_space',
         'perf_failure_data_space': 'perf_failure_data_space',
         'perf_total_data_capacity': 'perf_total_data_capacity',
@@ -182,6 +200,9 @@ class Host(object):
         'prio_space_percentage': 'prio_space_percentage',
         'provisioned_cpu_cores': 'provisioned_cpu_cores',
         'provisioned_memory_bytes': 'provisioned_memory_bytes',
+        'reserved_memory_bytes': 'reserved_memory_bytes',
+        'running_pause_overcommit_memory_bytes': 'running_pause_overcommit_memory_bytes',
+        'running_pause_reserved_memory_bytes': 'running_pause_reserved_memory_bytes',
         'running_pause_vm_memory_bytes': 'running_pause_vm_memory_bytes',
         'running_vm_num': 'running_vm_num',
         'scvm_cpu': 'scvm_cpu',
@@ -201,6 +222,7 @@ class Host(object):
         'total_data_capacity': 'total_data_capacity',
         'total_logical_cpu_cores': 'total_logical_cpu_cores',
         'total_memory_bytes': 'total_memory_bytes',
+        'total_physical_memory_bytes': 'total_physical_memory_bytes',
         'usb_devices': 'usb_devices',
         'used_cache_space': 'used_cache_space',
         'used_cpu_hz': 'used_cpu_hz',
@@ -223,6 +245,7 @@ class Host(object):
         self._access_ip = None
         self._allocable_cpu_cores_for_vm_exclusive = None
         self._allocatable_memory_bytes = None
+        self._allocated_memory_bytes = None
         self._allocated_prioritized_space = None
         self._allocated_prioritized_space_usage = None
         self._chunk_id = None
@@ -238,6 +261,7 @@ class Host(object):
         self._cpu_temperature_celsius = None
         self._cpu_vendor = None
         self._data_ip = None
+        self._datastore_mounts = None
         self._dirty_cache_space = None
         self._dirty_cache_usage = None
         self._disk_pools = None
@@ -259,6 +283,8 @@ class Host(object):
         self._local_id = None
         self._lsm_cap_disk_safe_umount = None
         self._management_ip = None
+        self._memory_allocation_rate = None
+        self._memory_overcommit_enabled = None
         self._merged_status = None
         self._model = None
         self._name = None
@@ -268,6 +294,9 @@ class Host(object):
         self._node_topo_local_id = None
         self._os_memory_bytes = None
         self._os_version = None
+        self._overcommit_active_memory_bytes = None
+        self._overcommit_memory_bytes = None
+        self._overcommit_memory_ratio = None
         self._perf_allocated_data_space = None
         self._perf_failure_data_space = None
         self._perf_total_data_capacity = None
@@ -281,6 +310,9 @@ class Host(object):
         self._prio_space_percentage = None
         self._provisioned_cpu_cores = None
         self._provisioned_memory_bytes = None
+        self._reserved_memory_bytes = None
+        self._running_pause_overcommit_memory_bytes = None
+        self._running_pause_reserved_memory_bytes = None
         self._running_pause_vm_memory_bytes = None
         self._running_vm_num = None
         self._scvm_cpu = None
@@ -300,6 +332,7 @@ class Host(object):
         self._total_data_capacity = None
         self._total_logical_cpu_cores = None
         self._total_memory_bytes = None
+        self._total_physical_memory_bytes = None
         self._usb_devices = None
         self._used_cache_space = None
         self._used_cpu_hz = None
@@ -319,6 +352,7 @@ class Host(object):
         self.allocable_cpu_cores_for_vm_exclusive = kwargs.get("allocable_cpu_cores_for_vm_exclusive", None)
         if "allocatable_memory_bytes" in kwargs:
             self.allocatable_memory_bytes = kwargs["allocatable_memory_bytes"]
+        self.allocated_memory_bytes = kwargs.get("allocated_memory_bytes", None)
         self.allocated_prioritized_space = kwargs.get("allocated_prioritized_space", None)
         self.allocated_prioritized_space_usage = kwargs.get("allocated_prioritized_space_usage", None)
         if "chunk_id" in kwargs:
@@ -342,6 +376,7 @@ class Host(object):
             self.cpu_temperature_celsius = kwargs["cpu_temperature_celsius"]
         self.cpu_vendor = kwargs.get("cpu_vendor", None)
         self.data_ip = kwargs.get("data_ip", None)
+        self.datastore_mounts = kwargs.get("datastore_mounts", None)
         self.dirty_cache_space = kwargs.get("dirty_cache_space", None)
         self.dirty_cache_usage = kwargs.get("dirty_cache_usage", None)
         self.disk_pools = kwargs.get("disk_pools", None)
@@ -370,6 +405,8 @@ class Host(object):
             self.lsm_cap_disk_safe_umount = kwargs["lsm_cap_disk_safe_umount"]
         if "management_ip" in kwargs:
             self.management_ip = kwargs["management_ip"]
+        self.memory_allocation_rate = kwargs.get("memory_allocation_rate", None)
+        self.memory_overcommit_enabled = kwargs.get("memory_overcommit_enabled", None)
         self.merged_status = kwargs.get("merged_status", None)
         if "model" in kwargs:
             self.model = kwargs["model"]
@@ -384,6 +421,9 @@ class Host(object):
         if "os_memory_bytes" in kwargs:
             self.os_memory_bytes = kwargs["os_memory_bytes"]
         self.os_version = kwargs.get("os_version", None)
+        self.overcommit_active_memory_bytes = kwargs.get("overcommit_active_memory_bytes", None)
+        self.overcommit_memory_bytes = kwargs.get("overcommit_memory_bytes", None)
+        self.overcommit_memory_ratio = kwargs.get("overcommit_memory_ratio", None)
         self.perf_allocated_data_space = kwargs.get("perf_allocated_data_space", None)
         self.perf_failure_data_space = kwargs.get("perf_failure_data_space", None)
         self.perf_total_data_capacity = kwargs.get("perf_total_data_capacity", None)
@@ -402,6 +442,9 @@ class Host(object):
             self.provisioned_cpu_cores = kwargs["provisioned_cpu_cores"]
         if "provisioned_memory_bytes" in kwargs:
             self.provisioned_memory_bytes = kwargs["provisioned_memory_bytes"]
+        self.reserved_memory_bytes = kwargs.get("reserved_memory_bytes", None)
+        self.running_pause_overcommit_memory_bytes = kwargs.get("running_pause_overcommit_memory_bytes", None)
+        self.running_pause_reserved_memory_bytes = kwargs.get("running_pause_reserved_memory_bytes", None)
         if "running_pause_vm_memory_bytes" in kwargs:
             self.running_pause_vm_memory_bytes = kwargs["running_pause_vm_memory_bytes"]
         self.running_vm_num = kwargs.get("running_vm_num", None)
@@ -430,6 +473,8 @@ class Host(object):
         self.total_logical_cpu_cores = kwargs.get("total_logical_cpu_cores", None)
         if "total_memory_bytes" in kwargs:
             self.total_memory_bytes = kwargs["total_memory_bytes"]
+        if "total_physical_memory_bytes" in kwargs:
+            self.total_physical_memory_bytes = kwargs["total_physical_memory_bytes"]
         self.usb_devices = kwargs.get("usb_devices", None)
         self.used_cache_space = kwargs.get("used_cache_space", None)
         self.used_cpu_hz = kwargs.get("used_cpu_hz", None)
@@ -509,6 +554,27 @@ class Host(object):
             raise ValueError("Invalid value for `allocatable_memory_bytes`, must not be `None`")  # noqa: E501
 
         self._allocatable_memory_bytes = allocatable_memory_bytes
+
+    @property
+    def allocated_memory_bytes(self):
+        """Gets the allocated_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The allocated_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._allocated_memory_bytes
+
+    @allocated_memory_bytes.setter
+    def allocated_memory_bytes(self, allocated_memory_bytes):
+        """Sets the allocated_memory_bytes of this Host.
+
+
+        :param allocated_memory_bytes: The allocated_memory_bytes of this Host.  # noqa: E501
+        :type allocated_memory_bytes: int
+        """
+
+        self._allocated_memory_bytes = allocated_memory_bytes
 
     @property
     def allocated_prioritized_space(self):
@@ -840,6 +906,27 @@ class Host(object):
         """
 
         self._data_ip = data_ip
+
+    @property
+    def datastore_mounts(self):
+        """Gets the datastore_mounts of this Host.  # noqa: E501
+
+
+        :return: The datastore_mounts of this Host.  # noqa: E501
+        :rtype: list[NestedDatastoreMount]
+        """
+        return self._datastore_mounts
+
+    @datastore_mounts.setter
+    def datastore_mounts(self, datastore_mounts):
+        """Sets the datastore_mounts of this Host.
+
+
+        :param datastore_mounts: The datastore_mounts of this Host.  # noqa: E501
+        :type datastore_mounts: list[NestedDatastoreMount]
+        """
+
+        self._datastore_mounts = datastore_mounts
 
     @property
     def dirty_cache_space(self):
@@ -1297,6 +1384,48 @@ class Host(object):
         self._management_ip = management_ip
 
     @property
+    def memory_allocation_rate(self):
+        """Gets the memory_allocation_rate of this Host.  # noqa: E501
+
+
+        :return: The memory_allocation_rate of this Host.  # noqa: E501
+        :rtype: float
+        """
+        return self._memory_allocation_rate
+
+    @memory_allocation_rate.setter
+    def memory_allocation_rate(self, memory_allocation_rate):
+        """Sets the memory_allocation_rate of this Host.
+
+
+        :param memory_allocation_rate: The memory_allocation_rate of this Host.  # noqa: E501
+        :type memory_allocation_rate: float
+        """
+
+        self._memory_allocation_rate = memory_allocation_rate
+
+    @property
+    def memory_overcommit_enabled(self):
+        """Gets the memory_overcommit_enabled of this Host.  # noqa: E501
+
+
+        :return: The memory_overcommit_enabled of this Host.  # noqa: E501
+        :rtype: bool
+        """
+        return self._memory_overcommit_enabled
+
+    @memory_overcommit_enabled.setter
+    def memory_overcommit_enabled(self, memory_overcommit_enabled):
+        """Sets the memory_overcommit_enabled of this Host.
+
+
+        :param memory_overcommit_enabled: The memory_overcommit_enabled of this Host.  # noqa: E501
+        :type memory_overcommit_enabled: bool
+        """
+
+        self._memory_overcommit_enabled = memory_overcommit_enabled
+
+    @property
     def merged_status(self):
         """Gets the merged_status of this Host.  # noqa: E501
 
@@ -1494,6 +1623,69 @@ class Host(object):
         """
 
         self._os_version = os_version
+
+    @property
+    def overcommit_active_memory_bytes(self):
+        """Gets the overcommit_active_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The overcommit_active_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_active_memory_bytes
+
+    @overcommit_active_memory_bytes.setter
+    def overcommit_active_memory_bytes(self, overcommit_active_memory_bytes):
+        """Sets the overcommit_active_memory_bytes of this Host.
+
+
+        :param overcommit_active_memory_bytes: The overcommit_active_memory_bytes of this Host.  # noqa: E501
+        :type overcommit_active_memory_bytes: int
+        """
+
+        self._overcommit_active_memory_bytes = overcommit_active_memory_bytes
+
+    @property
+    def overcommit_memory_bytes(self):
+        """Gets the overcommit_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The overcommit_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._overcommit_memory_bytes
+
+    @overcommit_memory_bytes.setter
+    def overcommit_memory_bytes(self, overcommit_memory_bytes):
+        """Sets the overcommit_memory_bytes of this Host.
+
+
+        :param overcommit_memory_bytes: The overcommit_memory_bytes of this Host.  # noqa: E501
+        :type overcommit_memory_bytes: int
+        """
+
+        self._overcommit_memory_bytes = overcommit_memory_bytes
+
+    @property
+    def overcommit_memory_ratio(self):
+        """Gets the overcommit_memory_ratio of this Host.  # noqa: E501
+
+
+        :return: The overcommit_memory_ratio of this Host.  # noqa: E501
+        :rtype: float
+        """
+        return self._overcommit_memory_ratio
+
+    @overcommit_memory_ratio.setter
+    def overcommit_memory_ratio(self, overcommit_memory_ratio):
+        """Sets the overcommit_memory_ratio of this Host.
+
+
+        :param overcommit_memory_ratio: The overcommit_memory_ratio of this Host.  # noqa: E501
+        :type overcommit_memory_ratio: float
+        """
+
+        self._overcommit_memory_ratio = overcommit_memory_ratio
 
     @property
     def perf_allocated_data_space(self):
@@ -1777,6 +1969,69 @@ class Host(object):
             raise ValueError("Invalid value for `provisioned_memory_bytes`, must not be `None`")  # noqa: E501
 
         self._provisioned_memory_bytes = provisioned_memory_bytes
+
+    @property
+    def reserved_memory_bytes(self):
+        """Gets the reserved_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The reserved_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_memory_bytes
+
+    @reserved_memory_bytes.setter
+    def reserved_memory_bytes(self, reserved_memory_bytes):
+        """Sets the reserved_memory_bytes of this Host.
+
+
+        :param reserved_memory_bytes: The reserved_memory_bytes of this Host.  # noqa: E501
+        :type reserved_memory_bytes: int
+        """
+
+        self._reserved_memory_bytes = reserved_memory_bytes
+
+    @property
+    def running_pause_overcommit_memory_bytes(self):
+        """Gets the running_pause_overcommit_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The running_pause_overcommit_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_overcommit_memory_bytes
+
+    @running_pause_overcommit_memory_bytes.setter
+    def running_pause_overcommit_memory_bytes(self, running_pause_overcommit_memory_bytes):
+        """Sets the running_pause_overcommit_memory_bytes of this Host.
+
+
+        :param running_pause_overcommit_memory_bytes: The running_pause_overcommit_memory_bytes of this Host.  # noqa: E501
+        :type running_pause_overcommit_memory_bytes: int
+        """
+
+        self._running_pause_overcommit_memory_bytes = running_pause_overcommit_memory_bytes
+
+    @property
+    def running_pause_reserved_memory_bytes(self):
+        """Gets the running_pause_reserved_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The running_pause_reserved_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._running_pause_reserved_memory_bytes
+
+    @running_pause_reserved_memory_bytes.setter
+    def running_pause_reserved_memory_bytes(self, running_pause_reserved_memory_bytes):
+        """Sets the running_pause_reserved_memory_bytes of this Host.
+
+
+        :param running_pause_reserved_memory_bytes: The running_pause_reserved_memory_bytes of this Host.  # noqa: E501
+        :type running_pause_reserved_memory_bytes: int
+        """
+
+        self._running_pause_reserved_memory_bytes = running_pause_reserved_memory_bytes
 
     @property
     def running_pause_vm_memory_bytes(self):
@@ -2194,6 +2449,29 @@ class Host(object):
             raise ValueError("Invalid value for `total_memory_bytes`, must not be `None`")  # noqa: E501
 
         self._total_memory_bytes = total_memory_bytes
+
+    @property
+    def total_physical_memory_bytes(self):
+        """Gets the total_physical_memory_bytes of this Host.  # noqa: E501
+
+
+        :return: The total_physical_memory_bytes of this Host.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_physical_memory_bytes
+
+    @total_physical_memory_bytes.setter
+    def total_physical_memory_bytes(self, total_physical_memory_bytes):
+        """Sets the total_physical_memory_bytes of this Host.
+
+
+        :param total_physical_memory_bytes: The total_physical_memory_bytes of this Host.  # noqa: E501
+        :type total_physical_memory_bytes: int
+        """
+        if self.local_vars_configuration.client_side_validation and total_physical_memory_bytes is None:  # noqa: E501
+            raise ValueError("Invalid value for `total_physical_memory_bytes`, must not be `None`")  # noqa: E501
+
+        self._total_physical_memory_bytes = total_physical_memory_bytes
 
     @property
     def usb_devices(self):

@@ -25,10 +25,12 @@ class VmFolderUpdationParamsData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'parent_id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'parent_id': 'parent_id',
         'name': 'name'
     }
 
@@ -36,11 +38,34 @@ class VmFolderUpdationParamsData(object):
         """VmFolderUpdationParamsData - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._parent_id = None
         self._name = None
         self.discriminator = None
 
+        self.parent_id = kwargs.get("parent_id", None)
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this VmFolderUpdationParamsData.  # noqa: E501
+
+
+        :return: The parent_id of this VmFolderUpdationParamsData.  # noqa: E501
+        :rtype: str
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this VmFolderUpdationParamsData.
+
+
+        :param parent_id: The parent_id of this VmFolderUpdationParamsData.  # noqa: E501
+        :type parent_id: str
+        """
+
+        self._parent_id = parent_id
 
     @property
     def name(self):
@@ -60,8 +85,6 @@ class VmFolderUpdationParamsData(object):
         :param name: The name of this VmFolderUpdationParamsData.  # noqa: E501
         :type name: str
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

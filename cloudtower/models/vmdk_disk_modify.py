@@ -31,7 +31,9 @@ class VmdkDiskModify(object):
         'bus': 'Bus',
         'volume_name': 'str',
         'boot': 'int',
-        'vmdk_name': 'str'
+        'vmdk_name': 'str',
+        'provision_policy': 'VmVolumeProvisionPolicy',
+        'storage_config': 'StorageConfig'
     }
 
     attribute_map = {
@@ -41,7 +43,9 @@ class VmdkDiskModify(object):
         'bus': 'bus',
         'volume_name': 'volume_name',
         'boot': 'boot',
-        'vmdk_name': 'vmdk_name'
+        'vmdk_name': 'vmdk_name',
+        'provision_policy': 'provision_policy',
+        'storage_config': 'storage_config'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -55,6 +59,8 @@ class VmdkDiskModify(object):
         self._volume_name = None
         self._boot = None
         self._vmdk_name = None
+        self._provision_policy = None
+        self._storage_config = None
         self.discriminator = None
 
         if "elf_ec_storage_policy" in kwargs:
@@ -71,6 +77,10 @@ class VmdkDiskModify(object):
             self.boot = kwargs["boot"]
         if "vmdk_name" in kwargs:
             self.vmdk_name = kwargs["vmdk_name"]
+        if "provision_policy" in kwargs:
+            self.provision_policy = kwargs["provision_policy"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
 
     @property
     def elf_ec_storage_policy(self):
@@ -220,6 +230,48 @@ class VmdkDiskModify(object):
             raise ValueError("Invalid value for `vmdk_name`, must not be `None`")  # noqa: E501
 
         self._vmdk_name = vmdk_name
+
+    @property
+    def provision_policy(self):
+        """Gets the provision_policy of this VmdkDiskModify.  # noqa: E501
+
+
+        :return: The provision_policy of this VmdkDiskModify.  # noqa: E501
+        :rtype: VmVolumeProvisionPolicy
+        """
+        return self._provision_policy
+
+    @provision_policy.setter
+    def provision_policy(self, provision_policy):
+        """Sets the provision_policy of this VmdkDiskModify.
+
+
+        :param provision_policy: The provision_policy of this VmdkDiskModify.  # noqa: E501
+        :type provision_policy: VmVolumeProvisionPolicy
+        """
+
+        self._provision_policy = provision_policy
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmdkDiskModify.  # noqa: E501
+
+
+        :return: The storage_config of this VmdkDiskModify.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmdkDiskModify.
+
+
+        :param storage_config: The storage_config of this VmdkDiskModify.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

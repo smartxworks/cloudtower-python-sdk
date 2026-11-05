@@ -25,11 +25,13 @@ class NestedVirtualPrivateCloudSubnet(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'cidr': 'str',
         'id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
+        'cidr': 'cidr',
         'id': 'id',
         'name': 'name'
     }
@@ -38,14 +40,40 @@ class NestedVirtualPrivateCloudSubnet(object):
         """NestedVirtualPrivateCloudSubnet - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._cidr = None
         self._id = None
         self._name = None
         self.discriminator = None
 
+        if "cidr" in kwargs:
+            self.cidr = kwargs["cidr"]
         if "id" in kwargs:
             self.id = kwargs["id"]
         if "name" in kwargs:
             self.name = kwargs["name"]
+
+    @property
+    def cidr(self):
+        """Gets the cidr of this NestedVirtualPrivateCloudSubnet.  # noqa: E501
+
+
+        :return: The cidr of this NestedVirtualPrivateCloudSubnet.  # noqa: E501
+        :rtype: str
+        """
+        return self._cidr
+
+    @cidr.setter
+    def cidr(self, cidr):
+        """Sets the cidr of this NestedVirtualPrivateCloudSubnet.
+
+
+        :param cidr: The cidr of this NestedVirtualPrivateCloudSubnet.  # noqa: E501
+        :type cidr: str
+        """
+        if self.local_vars_configuration.client_side_validation and cidr is None:  # noqa: E501
+            raise ValueError("Invalid value for `cidr`, must not be `None`")  # noqa: E501
+
+        self._cidr = cidr
 
     @property
     def id(self):

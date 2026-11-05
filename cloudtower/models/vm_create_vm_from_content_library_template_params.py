@@ -25,6 +25,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'storage_config': 'StorageConfig',
         'owner': 'VmOwnerParams',
         'gpu_devices': 'list[VmGpuOperationParams]',
         'cloud_init': 'TemplateCloudInit',
@@ -58,6 +59,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
     }
 
     attribute_map = {
+        'storage_config': 'storage_config',
         'owner': 'owner',
         'gpu_devices': 'gpu_devices',
         'cloud_init': 'cloud_init',
@@ -94,6 +96,7 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         """VmCreateVmFromContentLibraryTemplateParams - a model defined in OpenAPI"""  # noqa: E501
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
+        self._storage_config = None
         self._owner = None
         self._gpu_devices = None
         self._cloud_init = None
@@ -126,6 +129,8 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
         self._cluster_id = None
         self.discriminator = None
 
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "owner" in kwargs:
             self.owner = kwargs["owner"]
         if "gpu_devices" in kwargs:
@@ -186,6 +191,27 @@ class VmCreateVmFromContentLibraryTemplateParams(object):
             self.host_id = kwargs["host_id"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+
+
+        :return: The storage_config of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this VmCreateVmFromContentLibraryTemplateParams.
+
+
+        :param storage_config: The storage_config of this VmCreateVmFromContentLibraryTemplateParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def owner(self):

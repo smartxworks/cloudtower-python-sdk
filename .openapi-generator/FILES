@@ -146,6 +146,8 @@ cloudtower/models/add_clusters_to_datacenter_params.py
 cloudtower/models/add_clusters_to_datacenter_params_data.py
 cloudtower/models/add_labels_to_resources_params.py
 cloudtower/models/add_labels_to_resources_params_data.py
+cloudtower/models/add_vm_disk_mount_new_create_disks_params.py
+cloudtower/models/add_vm_disk_vm_volume_params.py
 cloudtower/models/alert.py
 cloudtower/models/alert_connection.py
 cloudtower/models/alert_notifier.py
@@ -186,6 +188,8 @@ cloudtower/models/application_vm_spec_status.py
 cloudtower/models/application_vm_spec_storage.py
 cloudtower/models/application_where_input.py
 cloudtower/models/architecture.py
+cloudtower/models/auth_config.py
+cloudtower/models/auth_strategy_type.py
 cloudtower/models/backup_dedup_mode.py
 cloudtower/models/backup_execution_method.py
 cloudtower/models/backup_execution_state.py
@@ -317,6 +321,7 @@ cloudtower/models/cluster_license_updation_params.py
 cloudtower/models/cluster_license_updation_params_data.py
 cloudtower/models/cluster_network_setting_updation_params.py
 cloudtower/models/cluster_network_setting_updation_params_data.py
+cloudtower/models/cluster_ntp_services_info.py
 cloudtower/models/cluster_order_by_input.py
 cloudtower/models/cluster_pin_in_performance_info.py
 cloudtower/models/cluster_recycle_bin_creation_params.py
@@ -327,6 +332,8 @@ cloudtower/models/cluster_settings.py
 cloudtower/models/cluster_settings_connection.py
 cloudtower/models/cluster_settings_order_by_input.py
 cloudtower/models/cluster_settings_where_input.py
+cloudtower/models/cluster_storage_cluster_config.py
+cloudtower/models/cluster_storage_cluster_config_datastore.py
 cloudtower/models/cluster_storage_info.py
 cloudtower/models/cluster_storage_info_ec_config.py
 cloudtower/models/cluster_topo.py
@@ -387,11 +394,14 @@ cloudtower/models/content_library_vm_template_export_params.py
 cloudtower/models/content_library_vm_template_import_params.py
 cloudtower/models/content_library_vm_template_order_by_input.py
 cloudtower/models/content_library_vm_template_ovf_disk_operate.py
+cloudtower/models/content_library_vm_template_storage_config.py
+cloudtower/models/content_library_vm_template_storage_placement.py
 cloudtower/models/content_library_vm_template_updation_cluster_params.py
 cloudtower/models/content_library_vm_template_updation_cluster_params_data.py
 cloudtower/models/content_library_vm_template_updation_params.py
 cloudtower/models/content_library_vm_template_updation_params_data.py
 cloudtower/models/content_library_vm_template_usage.py
+cloudtower/models/content_library_vm_template_volume_storage_placement.py
 cloudtower/models/content_library_vm_template_where_input.py
 cloudtower/models/content_library_vmdk_cdrom_modify.py
 cloudtower/models/content_library_vmdk_cdrom_mount.py
@@ -412,6 +422,11 @@ cloudtower/models/datacenter_updation_params.py
 cloudtower/models/datacenter_updation_params_data.py
 cloudtower/models/datacenter_where_input.py
 cloudtower/models/datacenter_where_unique_input.py
+cloudtower/models/datastore_mount_device_state.py
+cloudtower/models/datastore_mount_state.py
+cloudtower/models/datastore_mount_where_input.py
+cloudtower/models/datastore_status.py
+cloudtower/models/datastore_where_input.py
 cloudtower/models/delete_alert_notifier.py
 cloudtower/models/delete_alert_notifier_params.py
 cloudtower/models/delete_backup_plan.py
@@ -585,6 +600,8 @@ cloudtower/models/get_alerts_connection_request_body.py
 cloudtower/models/get_alerts_request_body.py
 cloudtower/models/get_applications_connection_request_body.py
 cloudtower/models/get_applications_request_body.py
+cloudtower/models/get_auth_configs_params.py
+cloudtower/models/get_auth_configs_params_where.py
 cloudtower/models/get_backup_plan_executions_connection_request_body.py
 cloudtower/models/get_backup_plan_executions_request_body.py
 cloudtower/models/get_backup_plans_connection_request_body.py
@@ -613,6 +630,7 @@ cloudtower/models/get_cloud_tower_applications_request_body.py
 cloudtower/models/get_cluster_images_connection_request_body.py
 cloudtower/models/get_cluster_images_request_body.py
 cloudtower/models/get_cluster_metric_input.py
+cloudtower/models/get_cluster_ntp_services_request_body.py
 cloudtower/models/get_cluster_pin_in_performance_info_request_body.py
 cloudtower/models/get_cluster_settingses_connection_request_body.py
 cloudtower/models/get_cluster_settingses_request_body.py
@@ -898,6 +916,7 @@ cloudtower/models/host_vds_config.py
 cloudtower/models/host_where_input.py
 cloudtower/models/host_where_unique_input.py
 cloudtower/models/hypervisor.py
+cloudtower/models/identity_verification_method.py
 cloudtower/models/import_vm_volume_params.py
 cloudtower/models/install_vmtools_params.py
 cloudtower/models/install_vmtools_params_data.py
@@ -997,6 +1016,7 @@ cloudtower/models/metric_unit.py
 cloudtower/models/metro_check_status_enum.py
 cloudtower/models/mfa_type.py
 cloudtower/models/mgt_ip_mapper.py
+cloudtower/models/migrate_mode.py
 cloudtower/models/migrate_type.py
 cloudtower/models/migrate_vm_config.py
 cloudtower/models/migration_vlan_updation_params.py
@@ -1162,6 +1182,8 @@ cloudtower/models/nested_content_library_vm_template_disk.py
 cloudtower/models/nested_content_library_vm_template_nic.py
 cloudtower/models/nested_cpu.py
 cloudtower/models/nested_datacenter.py
+cloudtower/models/nested_datastore.py
+cloudtower/models/nested_datastore_mount.py
 cloudtower/models/nested_discovered_host_dimms.py
 cloudtower/models/nested_discovered_host_disk.py
 cloudtower/models/nested_discovered_host_iface.py
@@ -1258,6 +1280,7 @@ cloudtower/models/nested_snapshot_info.py
 cloudtower/models/nested_snapshot_plan.py
 cloudtower/models/nested_snapshot_plan_task.py
 cloudtower/models/nested_step.py
+cloudtower/models/nested_storage_cluster_config.py
 cloudtower/models/nested_storage_policy_config.py
 cloudtower/models/nested_svt_image.py
 cloudtower/models/nested_sync_replication_plan.py
@@ -1308,8 +1331,12 @@ cloudtower/models/nested_vm_placement_group.py
 cloudtower/models/nested_vm_recycle_bin.py
 cloudtower/models/nested_vm_snapshot.py
 cloudtower/models/nested_vm_template.py
+cloudtower/models/nested_vm_template_config.py
+cloudtower/models/nested_vm_template_config_disk.py
 cloudtower/models/nested_vm_volume.py
 cloudtower/models/nested_vm_volume_snapshot.py
+cloudtower/models/nested_vm_volume_template_config_file.py
+cloudtower/models/nested_vm_volume_template_raw_file.py
 cloudtower/models/nested_vpc_dnat_rule_type.py
 cloudtower/models/nested_vpc_gateways_common_external_ips_type.py
 cloudtower/models/nested_vpc_router_gateway_rule_next_hops_item_type.py
@@ -1366,6 +1393,7 @@ cloudtower/models/node_topo_where_unique_input.py
 cloudtower/models/notifier_language_code.py
 cloudtower/models/notifier_security_mode.py
 cloudtower/models/ntp_mode.py
+cloudtower/models/ntp_service_info.py
 cloudtower/models/ntp_service_url.py
 cloudtower/models/nvmf_namespace.py
 cloudtower/models/nvmf_namespace_clone_params.py
@@ -1581,6 +1609,21 @@ cloudtower/models/snmp_version.py
 cloudtower/models/software_edition.py
 cloudtower/models/step_unit.py
 cloudtower/models/stop_vm_in_cutover_migration_params.py
+cloudtower/models/storage_adapter_status.py
+cloudtower/models/storage_adapter_type.py
+cloudtower/models/storage_adapter_where_input.py
+cloudtower/models/storage_cluster_config_storage_type.py
+cloudtower/models/storage_cluster_config_where_input.py
+cloudtower/models/storage_cluster_connect_state.py
+cloudtower/models/storage_cluster_error_state.py
+cloudtower/models/storage_config.py
+cloudtower/models/storage_device_host_connection_where_input.py
+cloudtower/models/storage_device_path_state.py
+cloudtower/models/storage_device_path_where_input.py
+cloudtower/models/storage_device_where_input.py
+cloudtower/models/storage_protocol.py
+cloudtower/models/storage_target_type.py
+cloudtower/models/storage_target_where_input.py
 cloudtower/models/store_connection_type.py
 cloudtower/models/store_transport_type.py
 cloudtower/models/svt_image.py
@@ -1922,6 +1965,10 @@ cloudtower/models/vm_start_params.py
 cloudtower/models/vm_start_params_data.py
 cloudtower/models/vm_status.py
 cloudtower/models/vm_template.py
+cloudtower/models/vm_template_config_disk_volume_storage_type.py
+cloudtower/models/vm_template_config_disk_where_input.py
+cloudtower/models/vm_template_config_nic_where_input.py
+cloudtower/models/vm_template_config_where_input.py
 cloudtower/models/vm_template_connection.py
 cloudtower/models/vm_template_creation_params.py
 cloudtower/models/vm_template_deletion_params.py
@@ -1952,6 +1999,8 @@ cloudtower/models/vm_update_owner_params.py
 cloudtower/models/vm_update_owner_params_data.py
 cloudtower/models/vm_update_params.py
 cloudtower/models/vm_update_params_data.py
+cloudtower/models/vm_update_sync_time_on_resume_params.py
+cloudtower/models/vm_update_sync_time_on_resume_params_data.py
 cloudtower/models/vm_update_vpc_nic_params.py
 cloudtower/models/vm_update_vpc_nic_params_data.py
 cloudtower/models/vm_usage.py
@@ -1969,6 +2018,7 @@ cloudtower/models/vm_volume_deletion_params_effect.py
 cloudtower/models/vm_volume_elf_storage_policy_type.py
 cloudtower/models/vm_volume_export_file_type.py
 cloudtower/models/vm_volume_order_by_input.py
+cloudtower/models/vm_volume_provision_policy.py
 cloudtower/models/vm_volume_rebuild_params.py
 cloudtower/models/vm_volume_rollback_params.py
 cloudtower/models/vm_volume_snapshot.py
@@ -1978,6 +2028,8 @@ cloudtower/models/vm_volume_snapshot_deletion_params.py
 cloudtower/models/vm_volume_snapshot_order_by_input.py
 cloudtower/models/vm_volume_snapshot_type.py
 cloudtower/models/vm_volume_snapshot_where_input.py
+cloudtower/models/vm_volume_template_config_file_where_input.py
+cloudtower/models/vm_volume_template_raw_file_where_input.py
 cloudtower/models/vm_volume_type.py
 cloudtower/models/vm_volume_where_input.py
 cloudtower/models/vm_volume_where_unique_input.py

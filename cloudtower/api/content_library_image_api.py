@@ -25,23 +25,23 @@ class ContentLibraryImageApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_content_library_image(self, file, clusters, **kwargs):  # noqa: E501
+    def create_content_library_image(self, file, **kwargs):  # noqa: E501
         """create_content_library_image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_content_library_image(file, clusters, async_req=True)
+        >>> thread = api.create_content_library_image(file, async_req=True)
         >>> result = thread.get()
 
         :param file: (required)
         :type file: file
-        :param clusters: (required)
-        :type clusters: str
         :param content_language:
         :type content_language: ContentLanguage
         :param external_cloudtower_id:
         :type external_cloudtower_id: str
+        :param clusters:
+        :type clusters: str
         :param name:
         :type name: str
         :param size:
@@ -52,6 +52,8 @@ class ContentLibraryImageApi(object):
         :type description: str
         :param upload_task_id:
         :type upload_task_id: str
+        :param datastores:
+        :type datastores: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -68,25 +70,25 @@ class ContentLibraryImageApi(object):
         :rtype: list[UploadTask]
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_content_library_image_with_http_info(file, clusters, **kwargs)  # noqa: E501
+        return self.create_content_library_image_with_http_info(file, **kwargs)  # noqa: E501
 
-    def create_content_library_image_with_http_info(self, file, clusters, **kwargs):  # noqa: E501
+    def create_content_library_image_with_http_info(self, file, **kwargs):  # noqa: E501
         """create_content_library_image  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_content_library_image_with_http_info(file, clusters, async_req=True)
+        >>> thread = api.create_content_library_image_with_http_info(file, async_req=True)
         >>> result = thread.get()
 
         :param file: (required)
         :type file: file
-        :param clusters: (required)
-        :type clusters: str
         :param content_language:
         :type content_language: ContentLanguage
         :param external_cloudtower_id:
         :type external_cloudtower_id: str
+        :param clusters:
+        :type clusters: str
         :param name:
         :type name: str
         :param size:
@@ -97,6 +99,8 @@ class ContentLibraryImageApi(object):
         :type description: str
         :param upload_task_id:
         :type upload_task_id: str
+        :param datastores:
+        :type datastores: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -125,14 +129,15 @@ class ContentLibraryImageApi(object):
 
         all_params = [
             'file',
-            'clusters',
             'content_language',
             'external_cloudtower_id',
+            'clusters',
             'name',
             'size',
             'size_unit',
             'description',
-            'upload_task_id'
+            'upload_task_id',
+            'datastores'
         ]
         all_params.extend(
             [
@@ -158,10 +163,6 @@ class ContentLibraryImageApi(object):
         if self.api_client.client_side_validation and ('file' not in local_var_params or  # noqa: E501
                                                         local_var_params['file'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `file` when calling `create_content_library_image`")  # noqa: E501
-        # verify the required parameter 'clusters' is set
-        if self.api_client.client_side_validation and ('clusters' not in local_var_params or  # noqa: E501
-                                                        local_var_params['clusters'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `clusters` when calling `create_content_library_image`")  # noqa: E501
 
         collection_formats = {}
 
@@ -191,6 +192,8 @@ class ContentLibraryImageApi(object):
             form_params.append(('description', local_var_params['description']))  # noqa: E501
         if 'upload_task_id' in local_var_params:
             form_params.append(('upload_task_id', local_var_params['upload_task_id']))  # noqa: E501
+        if 'datastores' in local_var_params:
+            form_params.append(('datastores', local_var_params['datastores']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -1011,6 +1014,165 @@ class ContentLibraryImageApi(object):
 
         return self.api_client.call_api(
             '/import-content-library-image', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_types_map=response_types_map,
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def import_content_library_image_v2(self, content_library_image_import_params, **kwargs):  # noqa: E501
+        """import_content_library_image_v2  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.import_content_library_image_v2(content_library_image_import_params, async_req=True)
+        >>> result = thread.get()
+
+        :param content_library_image_import_params: (required)
+        :type content_library_image_import_params: ContentLibraryImageImportParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: list[UploadTask]
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.import_content_library_image_v2_with_http_info(content_library_image_import_params, **kwargs)  # noqa: E501
+
+    def import_content_library_image_v2_with_http_info(self, content_library_image_import_params, **kwargs):  # noqa: E501
+        """import_content_library_image_v2  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.import_content_library_image_v2_with_http_info(content_library_image_import_params, async_req=True)
+        >>> result = thread.get()
+
+        :param content_library_image_import_params: (required)
+        :type content_library_image_import_params: ContentLibraryImageImportParams
+        :param content_language:
+        :type content_language: ContentLanguage
+        :param external_cloudtower_id:
+        :type external_cloudtower_id: str
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :type _content_type: string, optional: force content-type for the request
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(list[UploadTask], status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'content_library_image_import_params',
+            'content_language',
+            'external_cloudtower_id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                '_content_type',
+                '_headers'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_content_library_image_v2" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'content_library_image_import_params' is set
+        if self.api_client.client_side_validation and ('content_library_image_import_params' not in local_var_params or  # noqa: E501
+                                                        local_var_params['content_library_image_import_params'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `content_library_image_import_params` when calling `import_content_library_image_v2`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = dict(local_var_params.get('_headers', {}))
+        if 'content_language' in local_var_params:
+            header_params['content-language'] = local_var_params['content_language']  # noqa: E501
+        if 'external_cloudtower_id' in local_var_params:
+            header_params['external-cloudtower-id'] = local_var_params['external_cloudtower_id']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'content_library_image_import_params' in local_var_params:
+            body_params = local_var_params['content_library_image_import_params']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = local_var_params.get('_content_type',
+            self.api_client.select_header_content_type(
+                ['application/json'],
+                'POST', body_params))  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Authorization']  # noqa: E501
+
+        response_types_map = {
+            200: "list[UploadTask]",
+            400: "ErrorBody",
+            404: "ErrorBody",
+            500: "ErrorBody",
+        }
+
+        return self.api_client.call_api(
+            '/import-content-library-image-v2', 'POST',
             path_params,
             query_params,
             header_params,

@@ -379,6 +379,10 @@ class OvfApi(object):
         :type size_unit: str
         :param upload_task_id:
         :type upload_task_id: str
+        :param storage_cluster_id:
+        :type storage_cluster_id: str
+        :param datastore_id:
+        :type datastore_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -422,6 +426,10 @@ class OvfApi(object):
         :type size_unit: str
         :param upload_task_id:
         :type upload_task_id: str
+        :param storage_cluster_id:
+        :type storage_cluster_id: str
+        :param datastore_id:
+        :type datastore_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -456,7 +464,9 @@ class OvfApi(object):
             'name',
             'size',
             'size_unit',
-            'upload_task_id'
+            'upload_task_id',
+            'storage_cluster_id',
+            'datastore_id'
         ]
         all_params.extend(
             [
@@ -509,6 +519,10 @@ class OvfApi(object):
             form_params.append(('size_unit', local_var_params['size_unit']))  # noqa: E501
         if 'upload_task_id' in local_var_params:
             form_params.append(('upload_task_id', local_var_params['upload_task_id']))  # noqa: E501
+        if 'storage_cluster_id' in local_var_params:
+            form_params.append(('storage_cluster_id', local_var_params['storage_cluster_id']))  # noqa: E501
+        if 'datastore_id' in local_var_params:
+            form_params.append(('datastore_id', local_var_params['datastore_id']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

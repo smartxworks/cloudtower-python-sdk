@@ -25,11 +25,13 @@ class NestedReplicationService(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str'
+        'id': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'id': 'id'
+        'id': 'id',
+        'name': 'name'
     }
 
     def __init__(self, **kwargs):  # noqa: E501
@@ -37,10 +39,13 @@ class NestedReplicationService(object):
         self.local_vars_configuration = kwargs.get("local_vars_configuration", Configuration.get_default_copy())
 
         self._id = None
+        self._name = None
         self.discriminator = None
 
         if "id" in kwargs:
             self.id = kwargs["id"]
+        if "name" in kwargs:
+            self.name = kwargs["name"]
 
     @property
     def id(self):
@@ -64,6 +69,29 @@ class NestedReplicationService(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this NestedReplicationService.  # noqa: E501
+
+
+        :return: The name of this NestedReplicationService.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NestedReplicationService.
+
+
+        :param name: The name of this NestedReplicationService.  # noqa: E501
+        :type name: str
+        """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     def to_dict(self, serialize=False):
         """Returns the model properties as a dict"""

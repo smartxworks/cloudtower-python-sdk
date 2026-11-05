@@ -28,6 +28,20 @@ class LicenseWhereInput(object):
         '_and': 'list[LicenseWhereInput]',
         '_not': 'list[LicenseWhereInput]',
         '_or': 'list[LicenseWhereInput]',
+        'bundle_type': 'str',
+        'bundle_type_contains': 'str',
+        'bundle_type_ends_with': 'str',
+        'bundle_type_gt': 'str',
+        'bundle_type_gte': 'str',
+        'bundle_type_in': 'list[str]',
+        'bundle_type_lt': 'str',
+        'bundle_type_lte': 'str',
+        'bundle_type_not': 'str',
+        'bundle_type_not_contains': 'str',
+        'bundle_type_not_ends_with': 'str',
+        'bundle_type_not_in': 'list[str]',
+        'bundle_type_not_starts_with': 'str',
+        'bundle_type_starts_with': 'str',
         'expire_date': 'str',
         'expire_date_gt': 'str',
         'expire_date_gte': 'str',
@@ -118,6 +132,20 @@ class LicenseWhereInput(object):
         '_and': 'AND',
         '_not': 'NOT',
         '_or': 'OR',
+        'bundle_type': 'bundle_type',
+        'bundle_type_contains': 'bundle_type_contains',
+        'bundle_type_ends_with': 'bundle_type_ends_with',
+        'bundle_type_gt': 'bundle_type_gt',
+        'bundle_type_gte': 'bundle_type_gte',
+        'bundle_type_in': 'bundle_type_in',
+        'bundle_type_lt': 'bundle_type_lt',
+        'bundle_type_lte': 'bundle_type_lte',
+        'bundle_type_not': 'bundle_type_not',
+        'bundle_type_not_contains': 'bundle_type_not_contains',
+        'bundle_type_not_ends_with': 'bundle_type_not_ends_with',
+        'bundle_type_not_in': 'bundle_type_not_in',
+        'bundle_type_not_starts_with': 'bundle_type_not_starts_with',
+        'bundle_type_starts_with': 'bundle_type_starts_with',
         'expire_date': 'expire_date',
         'expire_date_gt': 'expire_date_gt',
         'expire_date_gte': 'expire_date_gte',
@@ -211,6 +239,20 @@ class LicenseWhereInput(object):
         self.__and = None
         self.__not = None
         self.__or = None
+        self._bundle_type = None
+        self._bundle_type_contains = None
+        self._bundle_type_ends_with = None
+        self._bundle_type_gt = None
+        self._bundle_type_gte = None
+        self._bundle_type_in = None
+        self._bundle_type_lt = None
+        self._bundle_type_lte = None
+        self._bundle_type_not = None
+        self._bundle_type_not_contains = None
+        self._bundle_type_not_ends_with = None
+        self._bundle_type_not_in = None
+        self._bundle_type_not_starts_with = None
+        self._bundle_type_starts_with = None
         self._expire_date = None
         self._expire_date_gt = None
         self._expire_date_gte = None
@@ -300,6 +342,20 @@ class LicenseWhereInput(object):
         self._and = kwargs.get("_and", None)
         self._not = kwargs.get("_not", None)
         self._or = kwargs.get("_or", None)
+        self.bundle_type = kwargs.get("bundle_type", None)
+        self.bundle_type_contains = kwargs.get("bundle_type_contains", None)
+        self.bundle_type_ends_with = kwargs.get("bundle_type_ends_with", None)
+        self.bundle_type_gt = kwargs.get("bundle_type_gt", None)
+        self.bundle_type_gte = kwargs.get("bundle_type_gte", None)
+        self.bundle_type_in = kwargs.get("bundle_type_in", None)
+        self.bundle_type_lt = kwargs.get("bundle_type_lt", None)
+        self.bundle_type_lte = kwargs.get("bundle_type_lte", None)
+        self.bundle_type_not = kwargs.get("bundle_type_not", None)
+        self.bundle_type_not_contains = kwargs.get("bundle_type_not_contains", None)
+        self.bundle_type_not_ends_with = kwargs.get("bundle_type_not_ends_with", None)
+        self.bundle_type_not_in = kwargs.get("bundle_type_not_in", None)
+        self.bundle_type_not_starts_with = kwargs.get("bundle_type_not_starts_with", None)
+        self.bundle_type_starts_with = kwargs.get("bundle_type_starts_with", None)
         self.expire_date = kwargs.get("expire_date", None)
         self.expire_date_gt = kwargs.get("expire_date_gt", None)
         self.expire_date_gte = kwargs.get("expire_date_gte", None)
@@ -447,6 +503,300 @@ class LicenseWhereInput(object):
         """
 
         self.__or = _or
+
+    @property
+    def bundle_type(self):
+        """Gets the bundle_type of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type
+
+    @bundle_type.setter
+    def bundle_type(self, bundle_type):
+        """Sets the bundle_type of this LicenseWhereInput.
+
+
+        :param bundle_type: The bundle_type of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type: str
+        """
+
+        self._bundle_type = bundle_type
+
+    @property
+    def bundle_type_contains(self):
+        """Gets the bundle_type_contains of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_contains of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_contains
+
+    @bundle_type_contains.setter
+    def bundle_type_contains(self, bundle_type_contains):
+        """Sets the bundle_type_contains of this LicenseWhereInput.
+
+
+        :param bundle_type_contains: The bundle_type_contains of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_contains: str
+        """
+
+        self._bundle_type_contains = bundle_type_contains
+
+    @property
+    def bundle_type_ends_with(self):
+        """Gets the bundle_type_ends_with of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_ends_with of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_ends_with
+
+    @bundle_type_ends_with.setter
+    def bundle_type_ends_with(self, bundle_type_ends_with):
+        """Sets the bundle_type_ends_with of this LicenseWhereInput.
+
+
+        :param bundle_type_ends_with: The bundle_type_ends_with of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_ends_with: str
+        """
+
+        self._bundle_type_ends_with = bundle_type_ends_with
+
+    @property
+    def bundle_type_gt(self):
+        """Gets the bundle_type_gt of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_gt of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_gt
+
+    @bundle_type_gt.setter
+    def bundle_type_gt(self, bundle_type_gt):
+        """Sets the bundle_type_gt of this LicenseWhereInput.
+
+
+        :param bundle_type_gt: The bundle_type_gt of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_gt: str
+        """
+
+        self._bundle_type_gt = bundle_type_gt
+
+    @property
+    def bundle_type_gte(self):
+        """Gets the bundle_type_gte of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_gte of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_gte
+
+    @bundle_type_gte.setter
+    def bundle_type_gte(self, bundle_type_gte):
+        """Sets the bundle_type_gte of this LicenseWhereInput.
+
+
+        :param bundle_type_gte: The bundle_type_gte of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_gte: str
+        """
+
+        self._bundle_type_gte = bundle_type_gte
+
+    @property
+    def bundle_type_in(self):
+        """Gets the bundle_type_in of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_in of this LicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._bundle_type_in
+
+    @bundle_type_in.setter
+    def bundle_type_in(self, bundle_type_in):
+        """Sets the bundle_type_in of this LicenseWhereInput.
+
+
+        :param bundle_type_in: The bundle_type_in of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_in: list[str]
+        """
+
+        self._bundle_type_in = bundle_type_in
+
+    @property
+    def bundle_type_lt(self):
+        """Gets the bundle_type_lt of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_lt of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_lt
+
+    @bundle_type_lt.setter
+    def bundle_type_lt(self, bundle_type_lt):
+        """Sets the bundle_type_lt of this LicenseWhereInput.
+
+
+        :param bundle_type_lt: The bundle_type_lt of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_lt: str
+        """
+
+        self._bundle_type_lt = bundle_type_lt
+
+    @property
+    def bundle_type_lte(self):
+        """Gets the bundle_type_lte of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_lte of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_lte
+
+    @bundle_type_lte.setter
+    def bundle_type_lte(self, bundle_type_lte):
+        """Sets the bundle_type_lte of this LicenseWhereInput.
+
+
+        :param bundle_type_lte: The bundle_type_lte of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_lte: str
+        """
+
+        self._bundle_type_lte = bundle_type_lte
+
+    @property
+    def bundle_type_not(self):
+        """Gets the bundle_type_not of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_not of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_not
+
+    @bundle_type_not.setter
+    def bundle_type_not(self, bundle_type_not):
+        """Sets the bundle_type_not of this LicenseWhereInput.
+
+
+        :param bundle_type_not: The bundle_type_not of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_not: str
+        """
+
+        self._bundle_type_not = bundle_type_not
+
+    @property
+    def bundle_type_not_contains(self):
+        """Gets the bundle_type_not_contains of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_not_contains of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_not_contains
+
+    @bundle_type_not_contains.setter
+    def bundle_type_not_contains(self, bundle_type_not_contains):
+        """Sets the bundle_type_not_contains of this LicenseWhereInput.
+
+
+        :param bundle_type_not_contains: The bundle_type_not_contains of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_not_contains: str
+        """
+
+        self._bundle_type_not_contains = bundle_type_not_contains
+
+    @property
+    def bundle_type_not_ends_with(self):
+        """Gets the bundle_type_not_ends_with of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_not_ends_with of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_not_ends_with
+
+    @bundle_type_not_ends_with.setter
+    def bundle_type_not_ends_with(self, bundle_type_not_ends_with):
+        """Sets the bundle_type_not_ends_with of this LicenseWhereInput.
+
+
+        :param bundle_type_not_ends_with: The bundle_type_not_ends_with of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_not_ends_with: str
+        """
+
+        self._bundle_type_not_ends_with = bundle_type_not_ends_with
+
+    @property
+    def bundle_type_not_in(self):
+        """Gets the bundle_type_not_in of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_not_in of this LicenseWhereInput.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._bundle_type_not_in
+
+    @bundle_type_not_in.setter
+    def bundle_type_not_in(self, bundle_type_not_in):
+        """Sets the bundle_type_not_in of this LicenseWhereInput.
+
+
+        :param bundle_type_not_in: The bundle_type_not_in of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_not_in: list[str]
+        """
+
+        self._bundle_type_not_in = bundle_type_not_in
+
+    @property
+    def bundle_type_not_starts_with(self):
+        """Gets the bundle_type_not_starts_with of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_not_starts_with of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_not_starts_with
+
+    @bundle_type_not_starts_with.setter
+    def bundle_type_not_starts_with(self, bundle_type_not_starts_with):
+        """Sets the bundle_type_not_starts_with of this LicenseWhereInput.
+
+
+        :param bundle_type_not_starts_with: The bundle_type_not_starts_with of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_not_starts_with: str
+        """
+
+        self._bundle_type_not_starts_with = bundle_type_not_starts_with
+
+    @property
+    def bundle_type_starts_with(self):
+        """Gets the bundle_type_starts_with of this LicenseWhereInput.  # noqa: E501
+
+
+        :return: The bundle_type_starts_with of this LicenseWhereInput.  # noqa: E501
+        :rtype: str
+        """
+        return self._bundle_type_starts_with
+
+    @bundle_type_starts_with.setter
+    def bundle_type_starts_with(self, bundle_type_starts_with):
+        """Sets the bundle_type_starts_with of this LicenseWhereInput.
+
+
+        :param bundle_type_starts_with: The bundle_type_starts_with of this LicenseWhereInput.  # noqa: E501
+        :type bundle_type_starts_with: str
+        """
+
+        self._bundle_type_starts_with = bundle_type_starts_with
 
     @property
     def expire_date(self):

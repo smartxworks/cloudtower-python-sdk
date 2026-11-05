@@ -63,6 +63,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         'created_at_lte': 'str',
         'created_at_not': 'str',
         'created_at_not_in': 'list[str]',
+        'datastores_every': 'DatastoreWhereInput',
+        'datastores_none': 'DatastoreWhereInput',
+        'datastores_some': 'DatastoreWhereInput',
         'description': 'str',
         'description_contains': 'str',
         'description_ends_with': 'str',
@@ -202,6 +205,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         'video_type_not_in': 'list[str]',
         'video_type_not_starts_with': 'str',
         'video_type_starts_with': 'str',
+        'vm_template_configs_every': 'VmTemplateConfigWhereInput',
+        'vm_template_configs_none': 'VmTemplateConfigWhereInput',
+        'vm_template_configs_some': 'VmTemplateConfigWhereInput',
         'vm_templates_every': 'VmTemplateWhereInput',
         'vm_templates_none': 'VmTemplateWhereInput',
         'vm_templates_some': 'VmTemplateWhereInput',
@@ -248,6 +254,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         'created_at_lte': 'createdAt_lte',
         'created_at_not': 'createdAt_not',
         'created_at_not_in': 'createdAt_not_in',
+        'datastores_every': 'datastores_every',
+        'datastores_none': 'datastores_none',
+        'datastores_some': 'datastores_some',
         'description': 'description',
         'description_contains': 'description_contains',
         'description_ends_with': 'description_ends_with',
@@ -387,6 +396,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         'video_type_not_in': 'video_type_not_in',
         'video_type_not_starts_with': 'video_type_not_starts_with',
         'video_type_starts_with': 'video_type_starts_with',
+        'vm_template_configs_every': 'vm_template_configs_every',
+        'vm_template_configs_none': 'vm_template_configs_none',
+        'vm_template_configs_some': 'vm_template_configs_some',
         'vm_templates_every': 'vm_templates_every',
         'vm_templates_none': 'vm_templates_none',
         'vm_templates_some': 'vm_templates_some',
@@ -436,6 +448,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._created_at_lte = None
         self._created_at_not = None
         self._created_at_not_in = None
+        self._datastores_every = None
+        self._datastores_none = None
+        self._datastores_some = None
         self._description = None
         self._description_contains = None
         self._description_ends_with = None
@@ -575,6 +590,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         self._video_type_not_in = None
         self._video_type_not_starts_with = None
         self._video_type_starts_with = None
+        self._vm_template_configs_every = None
+        self._vm_template_configs_none = None
+        self._vm_template_configs_some = None
         self._vm_templates_every = None
         self._vm_templates_none = None
         self._vm_templates_some = None
@@ -620,6 +638,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.created_at_lte = kwargs.get("created_at_lte", None)
         self.created_at_not = kwargs.get("created_at_not", None)
         self.created_at_not_in = kwargs.get("created_at_not_in", None)
+        self.datastores_every = kwargs.get("datastores_every", None)
+        self.datastores_none = kwargs.get("datastores_none", None)
+        self.datastores_some = kwargs.get("datastores_some", None)
         self.description = kwargs.get("description", None)
         self.description_contains = kwargs.get("description_contains", None)
         self.description_ends_with = kwargs.get("description_ends_with", None)
@@ -759,6 +780,9 @@ class ContentLibraryVmTemplateWhereInput(object):
         self.video_type_not_in = kwargs.get("video_type_not_in", None)
         self.video_type_not_starts_with = kwargs.get("video_type_not_starts_with", None)
         self.video_type_starts_with = kwargs.get("video_type_starts_with", None)
+        self.vm_template_configs_every = kwargs.get("vm_template_configs_every", None)
+        self.vm_template_configs_none = kwargs.get("vm_template_configs_none", None)
+        self.vm_template_configs_some = kwargs.get("vm_template_configs_some", None)
         self.vm_templates_every = kwargs.get("vm_templates_every", None)
         self.vm_templates_none = kwargs.get("vm_templates_none", None)
         self.vm_templates_some = kwargs.get("vm_templates_some", None)
@@ -1562,6 +1586,69 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._created_at_not_in = created_at_not_in
+
+    @property
+    def datastores_every(self):
+        """Gets the datastores_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The datastores_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_every
+
+    @datastores_every.setter
+    def datastores_every(self, datastores_every):
+        """Sets the datastores_every of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param datastores_every: The datastores_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type datastores_every: DatastoreWhereInput
+        """
+
+        self._datastores_every = datastores_every
+
+    @property
+    def datastores_none(self):
+        """Gets the datastores_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The datastores_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_none
+
+    @datastores_none.setter
+    def datastores_none(self, datastores_none):
+        """Sets the datastores_none of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param datastores_none: The datastores_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type datastores_none: DatastoreWhereInput
+        """
+
+        self._datastores_none = datastores_none
+
+    @property
+    def datastores_some(self):
+        """Gets the datastores_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The datastores_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: DatastoreWhereInput
+        """
+        return self._datastores_some
+
+    @datastores_some.setter
+    def datastores_some(self, datastores_some):
+        """Sets the datastores_some of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param datastores_some: The datastores_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type datastores_some: DatastoreWhereInput
+        """
+
+        self._datastores_some = datastores_some
 
     @property
     def description(self):
@@ -4481,6 +4568,69 @@ class ContentLibraryVmTemplateWhereInput(object):
         """
 
         self._video_type_starts_with = video_type_starts_with
+
+    @property
+    def vm_template_configs_every(self):
+        """Gets the vm_template_configs_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The vm_template_configs_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmTemplateConfigWhereInput
+        """
+        return self._vm_template_configs_every
+
+    @vm_template_configs_every.setter
+    def vm_template_configs_every(self, vm_template_configs_every):
+        """Sets the vm_template_configs_every of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param vm_template_configs_every: The vm_template_configs_every of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type vm_template_configs_every: VmTemplateConfigWhereInput
+        """
+
+        self._vm_template_configs_every = vm_template_configs_every
+
+    @property
+    def vm_template_configs_none(self):
+        """Gets the vm_template_configs_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The vm_template_configs_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmTemplateConfigWhereInput
+        """
+        return self._vm_template_configs_none
+
+    @vm_template_configs_none.setter
+    def vm_template_configs_none(self, vm_template_configs_none):
+        """Sets the vm_template_configs_none of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param vm_template_configs_none: The vm_template_configs_none of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type vm_template_configs_none: VmTemplateConfigWhereInput
+        """
+
+        self._vm_template_configs_none = vm_template_configs_none
+
+    @property
+    def vm_template_configs_some(self):
+        """Gets the vm_template_configs_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+
+
+        :return: The vm_template_configs_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :rtype: VmTemplateConfigWhereInput
+        """
+        return self._vm_template_configs_some
+
+    @vm_template_configs_some.setter
+    def vm_template_configs_some(self, vm_template_configs_some):
+        """Sets the vm_template_configs_some of this ContentLibraryVmTemplateWhereInput.
+
+
+        :param vm_template_configs_some: The vm_template_configs_some of this ContentLibraryVmTemplateWhereInput.  # noqa: E501
+        :type vm_template_configs_some: VmTemplateConfigWhereInput
+        """
+
+        self._vm_template_configs_some = vm_template_configs_some
 
     @property
     def vm_templates_every(self):

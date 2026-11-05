@@ -37,6 +37,8 @@ class ContentLibraryVmTemplateImportParams(object):
         'name': 'str',
         'upload_tasks': 'list[str]',
         'parsed_ovf': 'ParsedOVF',
+        'template_architecture': 'Architecture',
+        'storage_config': 'StorageConfig',
         'cluster_id': 'str'
     }
 
@@ -53,6 +55,8 @@ class ContentLibraryVmTemplateImportParams(object):
         'name': 'name',
         'upload_tasks': 'upload_tasks',
         'parsed_ovf': 'parsed_ovf',
+        'template_architecture': 'template_architecture',
+        'storage_config': 'storage_config',
         'cluster_id': 'cluster_id'
     }
 
@@ -72,6 +76,8 @@ class ContentLibraryVmTemplateImportParams(object):
         self._name = None
         self._upload_tasks = None
         self._parsed_ovf = None
+        self._template_architecture = None
+        self._storage_config = None
         self._cluster_id = None
         self.discriminator = None
 
@@ -99,6 +105,10 @@ class ContentLibraryVmTemplateImportParams(object):
             self.upload_tasks = kwargs["upload_tasks"]
         if "parsed_ovf" in kwargs:
             self.parsed_ovf = kwargs["parsed_ovf"]
+        if "template_architecture" in kwargs:
+            self.template_architecture = kwargs["template_architecture"]
+        if "storage_config" in kwargs:
+            self.storage_config = kwargs["storage_config"]
         if "cluster_id" in kwargs:
             self.cluster_id = kwargs["cluster_id"]
 
@@ -318,6 +328,7 @@ class ContentLibraryVmTemplateImportParams(object):
     def upload_tasks(self):
         """Gets the upload_tasks of this ContentLibraryVmTemplateImportParams.  # noqa: E501
 
+        Successful VMDK upload task IDs. For clustered-storage template imports, upload to the explicit or inferred storage_config.storage_cluster_id; otherwise upload to cluster_id. Use that target as cluster_id of /upload-elf-file.  # noqa: E501
 
         :return: The upload_tasks of this ContentLibraryVmTemplateImportParams.  # noqa: E501
         :rtype: list[str]
@@ -328,6 +339,7 @@ class ContentLibraryVmTemplateImportParams(object):
     def upload_tasks(self, upload_tasks):
         """Sets the upload_tasks of this ContentLibraryVmTemplateImportParams.
 
+        Successful VMDK upload task IDs. For clustered-storage template imports, upload to the explicit or inferred storage_config.storage_cluster_id; otherwise upload to cluster_id. Use that target as cluster_id of /upload-elf-file.  # noqa: E501
 
         :param upload_tasks: The upload_tasks of this ContentLibraryVmTemplateImportParams.  # noqa: E501
         :type upload_tasks: list[str]
@@ -359,6 +371,48 @@ class ContentLibraryVmTemplateImportParams(object):
             raise ValueError("Invalid value for `parsed_ovf`, must not be `None`")  # noqa: E501
 
         self._parsed_ovf = parsed_ovf
+
+    @property
+    def template_architecture(self):
+        """Gets the template_architecture of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+
+
+        :return: The template_architecture of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+        :rtype: Architecture
+        """
+        return self._template_architecture
+
+    @template_architecture.setter
+    def template_architecture(self, template_architecture):
+        """Sets the template_architecture of this ContentLibraryVmTemplateImportParams.
+
+
+        :param template_architecture: The template_architecture of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+        :type template_architecture: Architecture
+        """
+
+        self._template_architecture = template_architecture
+
+    @property
+    def storage_config(self):
+        """Gets the storage_config of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+
+
+        :return: The storage_config of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+        :rtype: StorageConfig
+        """
+        return self._storage_config
+
+    @storage_config.setter
+    def storage_config(self, storage_config):
+        """Sets the storage_config of this ContentLibraryVmTemplateImportParams.
+
+
+        :param storage_config: The storage_config of this ContentLibraryVmTemplateImportParams.  # noqa: E501
+        :type storage_config: StorageConfig
+        """
+
+        self._storage_config = storage_config
 
     @property
     def cluster_id(self):
