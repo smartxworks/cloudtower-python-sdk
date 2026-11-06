@@ -3,7 +3,7 @@
 # flake8: noqa
 from __future__ import absolute_import
 
-__version__ = "2.24.0"
+__version__ = "2.24.1"
 
 # import apis into sdk package
 from cloudtower.api.alert_api import AlertApi
@@ -156,8 +156,6 @@ from cloudtower.models.add_clusters_to_datacenter_params import AddClustersToDat
 from cloudtower.models.add_clusters_to_datacenter_params_data import AddClustersToDatacenterParamsData
 from cloudtower.models.add_labels_to_resources_params import AddLabelsToResourcesParams
 from cloudtower.models.add_labels_to_resources_params_data import AddLabelsToResourcesParamsData
-from cloudtower.models.add_vm_disk_mount_new_create_disks_params import AddVmDiskMountNewCreateDisksParams
-from cloudtower.models.add_vm_disk_vm_volume_params import AddVmDiskVmVolumeParams
 from cloudtower.models.alert import Alert
 from cloudtower.models.alert_connection import AlertConnection
 from cloudtower.models.alert_notifier import AlertNotifier

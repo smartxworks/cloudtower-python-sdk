@@ -561,8 +561,8 @@ conf = cloudtower.Configuration(
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: 2.24.0\n"\
-               "SDK Package Version: 2.24.0".\
+               "Version of the API: 2.24.1\n"\
+               "SDK Package Version: 2.24.1".\
                format(env=sys.platform, pyversion=sys.version)
 
     @property
