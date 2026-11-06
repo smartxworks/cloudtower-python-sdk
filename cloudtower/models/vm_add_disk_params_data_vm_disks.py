@@ -26,7 +26,7 @@ class VmAddDiskParamsDataVmDisks(object):
     """
     openapi_types = {
         'mount_disks': 'list[MountDisksParams]',
-        'mount_new_create_disks': 'list[AddVmDiskMountNewCreateDisksParams]'
+        'mount_new_create_disks': 'list[MountNewCreateDisksParams]'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class VmAddDiskParamsDataVmDisks(object):
 
 
         :return: The mount_new_create_disks of this VmAddDiskParamsDataVmDisks.  # noqa: E501
-        :rtype: list[AddVmDiskMountNewCreateDisksParams]
+        :rtype: list[MountNewCreateDisksParams]
         """
         return self._mount_new_create_disks
 
@@ -84,7 +84,7 @@ class VmAddDiskParamsDataVmDisks(object):
 
 
         :param mount_new_create_disks: The mount_new_create_disks of this VmAddDiskParamsDataVmDisks.  # noqa: E501
-        :type mount_new_create_disks: list[AddVmDiskMountNewCreateDisksParams]
+        :type mount_new_create_disks: list[MountNewCreateDisksParams]
         """
 
         self._mount_new_create_disks = mount_new_create_disks
